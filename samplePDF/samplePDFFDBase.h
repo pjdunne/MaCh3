@@ -205,7 +205,7 @@ public:
   // Helper function to reset histograms
   inline void ResetHistograms();
   
-#ifndef 
+#ifndef USE_PROB3
   inline cudaprob3::ProbType SwitchToCUDAProbType(CUDAProb_nu CUDAProb_nu);
 #endif 
   //===============================================================================
