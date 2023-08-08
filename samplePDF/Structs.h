@@ -3,7 +3,7 @@
 
 // Run low or high memory versions of structs
 // N.B. for 64 bit systems sizeof(float) == sizeof(double) so not a huge effect
-#define __LOW__MEMORY_STRUCTS__
+#define __LOW_MEMORY_STRUCTS__
 
 #ifdef __LOW_MEMORY_STRUCTS__
 #define __float__ float
@@ -467,11 +467,13 @@ class TSpline3_red {
       return ss.str();
     }
 
-    // Make a TSpline3 from the reduced splines
+    // Make a TSpline3 from the reduced splines 
+	/*
     inline TSpline3* ConstructTSpline3() {
       TSpline3 *spline = new TSpline3(GetName().c_str(), XPos, YResp, nPoints);
       return spline;
     }
+    */
 
     // Make a TSpline3_red
     inline TSpline3_red* ConstructTSpline3_red() {
