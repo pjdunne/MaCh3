@@ -12,9 +12,9 @@ struct fdmc_base {
   int SampleDetID;
 
   //THe x_var and y_vars that you're binning in
-  double** x_var;
-  double** y_var;
-  double **rw_etru;
+  float** x_var;
+  float** y_var;
+  float **rw_etru;
 
   // spline bins                                                               
   unsigned int *xvar_s_bin;
@@ -25,20 +25,20 @@ struct fdmc_base {
   std::list< int > *xsec_norms_bins;
 
   //DB Speedup bits
-  double Unity;
+  float Unity;
 
   int* nxsec_norm_pointers;
   const double*** xsec_norm_pointers;
 
   int* nxsec_spline_pointers;
-  const double*** xsec_spline_pointers;
+  const float*** xsec_spline_pointers;
 
-  const double** skdet_pointer;
-  const double* EScale_pointer;
+  const float** skdet_pointer;
+  const float* EScale_pointer;
 
   int* ntotal_weight_pointers;
-  double*** total_weight_pointers;
-  double* total_w;
+  float*** total_weight_pointers;
+  float* total_w;
 
   int* XBin;
   int* YBin;
@@ -48,16 +48,16 @@ struct fdmc_base {
   bool *isNC;
 
   // histo pdf bins
-  double *rw_lower_xbinedge; // lower to check if Eb has moved the erec bin
-  double *rw_lower_lower_xbinedge; // lower to check if Eb has moved the erec bin
-  double *rw_upper_xbinedge; // upper to check if Eb has moved the erec bin
-  double *rw_upper_upper_xbinedge; // upper to check if Eb has moved the erec bin
+  float *rw_lower_xbinedge; // lower to check if Eb has moved the erec bin
+  float *rw_lower_lower_xbinedge; // lower to check if Eb has moved the erec bin
+  float *rw_upper_xbinedge; // upper to check if Eb has moved the erec bin
+  float *rw_upper_upper_xbinedge; // upper to check if Eb has moved the erec bin
 
   int **mode;
 
-  double *osc_w; // oscillation weight                                        
-  double *flux_w; // not the same as beam systematics weight!                 
-  double *xsec_w;
+  float *osc_w; // oscillation weight                                        
+  float *flux_w; // not the same as beam systematics weight!                 
+  float *xsec_w;
 
   splineFDBase *splineFile; 
 

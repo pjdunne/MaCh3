@@ -146,7 +146,7 @@ bool samplePDFFDBase::IsEventSelected(std::vector< std::string > ParameterStr, s
 
 //CalcOsc for Prob3++ CPU
 #if defined (USE_PROB3) && defined (CPU_ONLY)
-double samplePDFFDBase::calcOscWeights(int sample, int nutype, int oscnutype, double en, double *oscpar)
+double samplePDFFDBase::calcOscWeights(int sample, int nutype, int oscnutype, float en, double *oscpar)
 {
   MCSamples[sample].Oscillator->SetMNS(oscpar[0], oscpar[2], oscpar[1], oscpar[3], oscpar[4], oscpar[5], en, doubled_angle, nutype);
   MCSamples[sample].Oscillator->propagateLinear(nutype , oscpar[7], oscpar[8]); 
@@ -160,7 +160,7 @@ double samplePDFFDBase::calcOscWeights(int sample, int nutype, int oscnutype, do
 extern "C" void setMNS(double x12, double x13, double x23, double m21, double m23, double Delta, bool kSquared);
 extern "C" void GetProb(int Alpha, int Beta, double Path, double Density, double *Energy, int n, double *oscw); 
 
-void samplePDFFDBase::calcOscWeights(int nutype, int oscnutype, double *en, double *w, int num, double *oscpar)
+void samplePDFFDBase::calcOscWeights(int nutype, int oscnutype, float *en, float *w, int num, double *oscpar)
 {
   setMNS(oscpar[0], oscpar[2], oscpar[1], oscpar[3], oscpar[4], oscpar[5], doubled_angle);
   GetProb(nutype, oscnutype, oscpar[7], oscpar[8], en, num, w);
@@ -175,7 +175,7 @@ void samplePDFFDBase::calcOscWeights(int nutype, int oscnutype, double *en, doub
 
 //CalcOsc for CUDAProb3 CPU/GPU
 #if not defined (USE_PROB3)
-void samplePDFFDBase::calcOscWeights(int sample, int nutype, double *w, double *oscpar)
+void samplePDFFDBase::calcOscWeights(int sample, int nutype, float *w, double *oscpar)
 {
 
   MCSamples[sample].Oscillator->setMNSMatrix(asin(sqrt(oscpar[0])),asin(sqrt(oscpar[2])), asin(sqrt(oscpar[1])), oscpar[5], nutype);
@@ -291,7 +291,7 @@ void samplePDFFDBase::fillArray() {
 	   	continue;
 	  }
 
-      MCSamples[iSample].xsec_w[iEvent] = splineweight*normweight*funcweight;
+      MCSamples[iSample].xsec_w[iEvent] = (float)splineweight*(float)normweight*(float)funcweight;
       
       //DB Set oscillation weights for NC events to 1.0
       //DB Another speedup - Why bother storing NC signal events and calculating the oscillation weights when we just throw them out anyway? Therefore they are skipped in setupMC
@@ -307,7 +307,7 @@ void samplePDFFDBase::fillArray() {
 
       //DB Total weight
       for (int iParam=0; iParam<MCSamples[iSample].ntotal_weight_pointers[iEvent] ; ++iParam) {
-		totalweight *= *(MCSamples[iSample].total_weight_pointers[iEvent][iParam]);
+		totalweight *= (double)*(MCSamples[iSample].total_weight_pointers[iEvent][iParam]);
       }
       //DB Catch negative weights and skip any event with a negative event
       if (totalweight <= 0.){
@@ -317,7 +317,7 @@ void samplePDFFDBase::fillArray() {
       
       //DB Switch on BinningOpt to allow different binning options to be implemented
       //The alternative would be to have inheritance based on BinningOpt
-      double XVar = *(MCSamples[iSample].x_var[iEvent]);
+      double XVar = (double)*(MCSamples[iSample].x_var[iEvent]);
 
       //DB Commented out by default but if we ever want to consider shifts in theta this will be needed
       //double YVar = MCSamples[iSample].rw_theta[iEvent];
@@ -496,7 +496,8 @@ void samplePDFFDBase::fillArray_MP()
 
 		//DB Total weight
 		for (int iParam=0;iParam<MCSamples[iSample].ntotal_weight_pointers[iEvent];iParam++) {
-		  totalweight *= *(MCSamples[iSample].total_weight_pointers[iEvent][iParam]);
+		  //std::cout << "Weight pointer " << iParam << " = " << *(MCSamples[iSample].total_weight_pointers[iEvent][iParam]) << std::endl;
+		  totalweight *= (double)*(MCSamples[iSample].total_weight_pointers[iEvent][iParam]);
 		}
 
 		//std::cout << "Oscillation weight is " << MCSamples[iSample].osc_w[iEvent] << std::endl;
@@ -509,7 +510,7 @@ void samplePDFFDBase::fillArray_MP()
 
 		//DB Switch on BinningOpt to allow different binning options to be implemented
 		//The alternative would be to have inheritance based on BinningOpt
-		double XVar = (*(MCSamples[iSample].x_var[iEvent]));
+		double XVar = (double)(*(MCSamples[iSample].x_var[iEvent]));
 
 		//DB Commented out by default but if we ever want to consider shifts in theta this will be needed
 		//double YVar = MCSamples[iSample].rw_theta[iEvent];
@@ -609,7 +610,7 @@ double samplePDFFDBase::CalcXsecWeightSpline(const int iSample, const int iEvent
   //DB Xsec syst
   //Loop over stored spline pointers
   for (int iSpline=0;iSpline<MCSamples[iSample].nxsec_spline_pointers[iEvent];iSpline++) {
-    xsecw *= *(MCSamples[iSample].xsec_spline_pointers[iEvent][iSpline]);
+    xsecw *= (double)*(MCSamples[iSample].xsec_spline_pointers[iEvent][iSpline]);
   }
   return xsecw;
 }
@@ -623,7 +624,7 @@ double samplePDFFDBase::CalcXsecWeightNorm(const int iSample, const int iEvent) 
   //Loop over stored normalisation and function pointers
   for (int iParam = 0;iParam < MCSamples[iSample].nxsec_norm_pointers[iEvent]; iParam++)
   {
-      xsecw *= *(MCSamples[iSample].xsec_norm_pointers[iEvent][iParam]);
+      xsecw *= (double)*(MCSamples[iSample].xsec_norm_pointers[iEvent][iParam]);
       #ifdef DEBUG
       if (TMath::IsNaN(xsecw)) std::cout << "iParam=" << iParam << "xsecweight=nan from norms" << std::endl;
       #endif
@@ -831,7 +832,12 @@ void samplePDFFDBase::SetupOscCalc(double PathLength, double Density)
 
 #if not defined (USE_PROB3)
 //if we're using CUDAProb3 then make vector of energies and convert to CUDAProb3 structs
-    std::vector<double> etruVector(*(MCSamples[iSample].rw_etru), *(MCSamples[iSample].rw_etru) + MCSamples[iSample].nEvents);
+//
+    std::vector<double> etruVector;
+    for (int i=0; i<MCSamples[iSample].nEvents; i++) {
+	  etruVector.push_back(static_cast<double>(*MCSamples[iSample].rw_etru[i]));
+	}
+    //std::vector<double> etruVector(static_cast<double>(*(MCSamples[iSample].rw_etru)), static_cast<double>(*(MCSamples[iSample].rw_etru)) + MCSamples[iSample].nEvents);
     MCSamples[iSample].ProbType = SwitchToCUDAProbType(GetCUDAProbFlavour(MCSamples[iSample].nutype, MCSamples[iSample].oscnutype));
 	// CUDAProb3 takes probType and antineutrino/neutrino separately
     if (MCSamples[iSample].nutype < 0) {MCSamples[iSample].NeutrinoType = cudaprob3::NeutrinoType::Antineutrino;}
@@ -862,6 +868,7 @@ void samplePDFFDBase::SetupOscCalc(double PathLength, double Density)
     MCSamples[iSample].Oscillator->setDensity(Density);
 #endif // CPU_ONLY
     MCSamples[iSample].Oscillator->setEnergyList(etruVector);
+	etruVector.clear();
 #endif // USE_PROB3
   }
   return;
@@ -1269,7 +1276,7 @@ double samplePDFFDBase::getEventWeight(int iSample, int iEntry)
 {
   double totalweight = 1.0;
   for (int iParam=0;iParam<MCSamples[iSample].ntotal_weight_pointers[iEntry];iParam++) {
-    totalweight *= *(MCSamples[iSample].total_weight_pointers[iEntry][iParam]);
+    totalweight *= (double)*(MCSamples[iSample].total_weight_pointers[iEntry][iParam]);
   }
 
   return totalweight;
@@ -1300,7 +1307,7 @@ void samplePDFFDBase::fillSplineBins()
     for (int j = 0; j < MCSamples[i].nEvents; ++j) {
 
       std::vector< std::vector<int> > EventSplines;
-	  double erec = *(MCSamples[i].x_var[j]);
+	  float erec = *(MCSamples[i].x_var[j]);
 	  switch (BinningOpt) {
 		case 0: // splines binned in erec
 		case 1:
@@ -1318,7 +1325,7 @@ void samplePDFFDBase::fillSplineBins()
 	  }
 
       MCSamples[i].nxsec_spline_pointers[j] = EventSplines.size();
-      MCSamples[i].xsec_spline_pointers[j] = new const double*[MCSamples[i].nxsec_spline_pointers[j]];
+      MCSamples[i].xsec_spline_pointers[j] = new const float*[MCSamples[i].nxsec_spline_pointers[j]];
 
 	  switch(BinningOpt){
 		case 0:

@@ -46,8 +46,8 @@ class splineFDBase : public splineBase
   virtual void SetupSplines(int BinningOpt){};//~~~
   void SetSplineBinning();
   void SetSplineBinning(int BinningOpt);//~~~
-  void GetSplineBins(int &nutype, bool &sig, double &enu, double &var1, unsigned int &enu_bin, unsigned int &var1_bin);
-  void GetSplineBins(int &nutype, bool &sig, double &enu, double &var1, double &var2, unsigned int &enu_bin, unsigned int &bin_var1, unsigned int &bin_var2);//~~~
+  void GetSplineBins(int &nutype, bool &sig, float &enu, float &var1, unsigned int &enu_bin, unsigned int &var1_bin);
+  void GetSplineBins(int &nutype, bool &sig, float &enu, float &var1, float &var2, unsigned int &enu_bin, unsigned int &bin_var1, unsigned int &bin_var2);//~~~
   //ETA it's nice to be able to know how many spline bins there are in samplePDFFDBase so adding these.
   //This way we can check that spline and sample binning is the same.
   int getNSplineBinsEnu() {return enu_spline->GetNbins();}
@@ -80,10 +80,10 @@ class splineFDBase : public splineBase
   std::vector< std::vector<int> > getEventSplines(int &event, int mode, unsigned int &enu_bin, unsigned int &var1_bin, unsigned int &var2_bin);
   void calcWeights();
 
-  const double* retPointer(int parambin,int modebin,int etruebin,int var1bin) {
+  const float* retPointer(int parambin,int modebin,int etruebin,int var1bin) {
 	return &dev_1D_w[parambin][modebin][etruebin][var1bin];
   }
-  const double* retPointer(int parambin,int modebin,int etruebin,int var1bin,int var2bin) {return &dev_2D_w[parambin][modebin][etruebin][var1bin][var2bin];}
+  const float* retPointer(int parambin,int modebin,int etruebin,int var1bin,int var2bin) {return &dev_2D_w[parambin][modebin][etruebin][var1bin][var2bin];}
 
   //TODO (ETA) - have a nice print function giving the modes to spline mode mapping etc.
 
@@ -119,8 +119,8 @@ class splineFDBase : public splineBase
 #endif
 
   //Store weights for each eval spline
-  std::vector< std::vector< std::vector< std::vector< double > > > > dev_1D_w;
-  std::vector< std::vector< std::vector< std::vector< std::vector< double > > > > > dev_2D_w;
+  std::vector< std::vector< std::vector< std::vector< float > > > > dev_1D_w;
+  std::vector< std::vector< std::vector< std::vector< std::vector< float > > > > > dev_2D_w;
 
   //This basically just keeps a collection of one spline parameter
   //together with the name of the spline and is used to get the

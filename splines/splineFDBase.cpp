@@ -135,6 +135,7 @@ void splineFDBase::SetSplineBinning(int opt_binning) // enu-var1-var2 version
   const int nvar2 =  hist0->GetZaxis()->GetNbins();
   const double *var2_range =  hist0->GetZaxis()->GetXbins()->GetArray();
 
+  /*
   if((netrue <= 1 || nvar1 <= 1 || nvar2 <= 1)){
 	std::cerr << "[ERROR]: " << __FILE__ << ":" << __LINE__ << " You're Setting up a 2D spline but one of the axes has only one bin or less..." << std::endl;
 	std::cerr << "netrue is " << netrue << std::endl;
@@ -142,7 +143,7 @@ void splineFDBase::SetSplineBinning(int opt_binning) // enu-var1-var2 version
 	std::cerr << "nvar2 is " << nvar2 << std::endl;
 	std::cerr << "I think you've Set up the wrong spline! Maybe you've used 1D splines by mistake?! " << std::endl;
     throw;	
-  }
+  } */
 
   var1_spline = new TAxis(nvar1, var1_range);
   var2_spline = new TAxis(nvar2, var2_range);
@@ -205,7 +206,7 @@ void splineFDBase::calcWeights(){
 
 // ---- GetSplineBins (first: original erec version, then var1-var2 version) ---- //
 
-void splineFDBase::GetSplineBins(int &nutype, bool &sig, double &enu, double &var1, unsigned int &enu_bin, unsigned int &var1_bin) // get bins for etrue-erec splines
+void splineFDBase::GetSplineBins(int &nutype, bool &sig, float &enu, float &var1, unsigned int &enu_bin, unsigned int &var1_bin) // get bins for etrue-erec splines
 {
 
   enu_bin = enu_spline->FindBin(enu)-1;
@@ -214,7 +215,7 @@ void splineFDBase::GetSplineBins(int &nutype, bool &sig, double &enu, double &va
   return;
 }
 
-void splineFDBase::GetSplineBins(int &nutype, bool &sig, double &enu, double &var1, double &var2, unsigned int &enu_bin, unsigned int &bin1, unsigned int &bin2) // get bins for etrue-var1-var2 splines
+void splineFDBase::GetSplineBins(int &nutype, bool &sig, float &enu, float &var1, float &var2, unsigned int &enu_bin, unsigned int &bin1, unsigned int &bin2) // get bins for etrue-var1-var2 splines
 {
 
   enu_bin = enu_spline->FindBin(enu)-1;

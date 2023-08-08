@@ -93,15 +93,15 @@ public:
   }; 
 
 #if defined (USE_PROB3) && defined (CPU_ONLY)
-  inline double calcOscWeights(int sample, int nutype, int oscnutype, double en, double *oscpar);
+  inline float calcOscWeights(int sample, int nutype, int oscnutype, float en, double *oscpar);
 #endif
 
 #if defined (USE_PROB3) && not defined (CPU_ONLY)
-  void calcOscWeights(int nutype, int oscnutype, double *en, double *w, int num, double *oscpar);
+  void calcOscWeights(int nutype, int oscnutype, float *en, double *w, int num, double *oscpar);
 #endif
 
 #if not defined (USE_PROB3)
-  void calcOscWeights(int sample, int nutype, double *w, double *oscpar);
+  void calcOscWeights(int sample, int nutype, float *w, double *oscpar);
 #endif
 
   std::string GetSampleName(){return samplename;}
