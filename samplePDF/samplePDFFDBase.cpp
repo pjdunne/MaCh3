@@ -191,6 +191,13 @@ void samplePDFFDBase::reweight(double *oscpar) // Reweight function - Depending 
 
   for (int i=0; i< (int)MCSamples.size(); ++i) {
 
+  if (MCSamples[i].SampleDetID == 1) {
+    for(int j = 0; j < MCSamples[i].nEvents; ++j) {
+	  MCSamples[i].osc_w[j] = 1.0;
+	}
+  }
+
+  else {
 #if defined (USE_PROB3) && defined (CPU_ONLY)
 	//Prob3 CPU needs to loop through events too
     for(int j = 0; j < MCSamples[i].nEvents; ++j) {
@@ -205,6 +212,7 @@ void samplePDFFDBase::reweight(double *oscpar) // Reweight function - Depending 
 #if not defined (USE_PROB3)
     calcOscWeights(i, MCSamples[i].nutype, MCSamples[i].osc_w, oscpar);
 #endif
+  }
   }// Sample loop
 
   //KS: Reset the histograms before reweight 
@@ -981,7 +989,7 @@ void samplePDFFDBase::FindNominalBinAndEdges1D() {
 	upper_upper_edge = _hPDF1D->GetXaxis()->GetBinLowEdge(bin+1);
       }
 
-      if ((bin-1) > 0 && (bin-1) < int(XBinEdges.size()-1)) {
+      if ((bin-1) >= 0 && (bin-1) < int(XBinEdges.size()-1)) {
 
 	MCSamples[mc_i].NomXBin[event_i] = bin-1;
       } else {
@@ -1114,7 +1122,7 @@ void samplePDFFDBase::FindNominalBinAndEdges2D() {
 	upper_upper_edge = _hPDF2D->GetXaxis()->GetBinLowEdge(bin_x+1);
       }
       
-      if ((bin_x-1) > 0 && (bin_x-1) < int(XBinEdges.size()-1)) {
+      if ((bin_x-1) >= 0 && (bin_x-1) < int(XBinEdges.size()-1)) {
 	    MCSamples[mc_i].NomXBin[event_i] = bin_x-1;
       } else {
 	MCSamples[mc_i].NomXBin[event_i] = -1;
