@@ -839,10 +839,15 @@ void covarianceBase::randomize() {
 
 // ************************************************
 // Correlate the steps by setting the proposed step of a parameter to its current value + some correlated throw
-void covarianceBase::CorrelateSteps() {
+void covarianceBase::CorrelateSteps(std::vector<double> current_step) {
 // ************************************************
   //KS: Using custom function compared to ROOT one with 8 threads we have almost factor 2 performance increase, by replacing TMatrix with just double we increase it even more
   MatrixVectorMulti(corr_throw, throwMatrixCholDecomp, randParams, size);
+
+  if((int)current_step.size()!=getNpars()){
+    MACH3LOG_ERROR("Error updated step has wrong number of parameters ({})", current_step.size());
+    throw;
+  }
 
   // If not doing PCA
   if (!pca) {
@@ -851,7 +856,7 @@ void covarianceBase::CorrelateSteps() {
 #endif
     for (int i = 0; i < size; ++i) {
       if (_fError[i] > 0.) {
-        _fPropVal[i] = _fCurrVal[i] + corr_throw[i]*_fGlobalStepScale*_fIndivStepScale[i];
+        _fPropVal[i] = current_step[i] + corr_throw[i]*_fGlobalStepScale*_fIndivStepScale[i];
       }
     }
     // If doing PCA throw uncorrelated in PCA basis (orthogonal basis by definition)
@@ -998,7 +1003,16 @@ void covarianceBase::printNominalCurrProp() {
 // fParEvalLikelihood stores if we want to evaluate the likelihood for the given parameter
 //                    true = evaluate likelihood (so run with a prior)
 //                    false = don't evaluate likelihood (so run without a prior)
+
+
 double covarianceBase::CalcLikelihood() {
+  return calcGaussianDifference(_fPropVal, _fPreFitValue, InvertCovMatrix);
+}
+
+// HW: Abstracts out a lot of the likelihood calculation so I can use
+// it for DRAM/other fun stuff
+double covarianceBase::calcGaussianDifference(std::vector<double> proposed_value, std::vector<double> central_value,
+                                              double **inv_cov_matrix, bool check_prior) {
   double logL = 0.0;
   //TStopwatch clock;
   ///clock.Start();
@@ -1007,11 +1021,11 @@ double covarianceBase::CalcLikelihood() {
   #endif
   for(int i = 0; i < size; ++i){
     for (int j = 0; j <= i; ++j) {
-      if (!_fFlatPrior[i] && !_fFlatPrior[j]) {
+      if (!_fFlatPrior[i] && !_fFlatPrior[j] && check_prior) {
         //KS: Since matrix is symmetric we can calcaute non diagonal elements only once and multiply by 2, can bring up to factor speed decrease.
         int scale = 1;
         if(i != j) scale = 2;
-        logL += scale * 0.5*(_fPropVal[i] - _fPreFitValue[i])*(_fPropVal[j] - _fPreFitValue[j])*InvertCovMatrix[i][j];
+        logL += scale * 0.5*(proposed_value[i] - central_value[i])*(proposed_value[j] - central_value[j])*inv_cov_matrix[i][j];
       }
     }
   }
@@ -1378,9 +1392,10 @@ void covarianceBase::initialiseAdaption(manager* fitMan){
               * AdaptionStartThrow [int]     :    Step we start throwing adaptive matrix from
               * AdaptionEndUpdate [int]      :    Step we stop updating adaptive matrix
               * AdaptionStartUpdate [int]    :    Do we skip the first N steps?
-              * AdaptionUpdateStep [int]     :    Number of steps between matrix updates
-              * Adaption blocks [vector<vector<int>>] : Splits the throw matrix into several block matrices
+              * AdaptionUpdateStep [int]     :    Number of steps beFindFromManagerdbool
+              * AdaptionBlocks [vector<vector<int>>] : Splits the throw matrix into several block matrices
  */
+
 
   // need to cast matrixName to string
   std::string matrixName_str(matrixName);

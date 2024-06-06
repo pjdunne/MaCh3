@@ -75,6 +75,8 @@ class covarianceBase {
   
   //LLH Related
   virtual int CheckBounds();
+  double calcGaussianDifference(std::vector<double> proposed_value, std::vector<double> central_value,
+                                  double **inv_cov_matrix, bool check_prior);
   double CalcLikelihood();
   virtual double GetLikelihood();
 
@@ -289,7 +291,18 @@ class covarianceBase {
   void ReserveMemory(const int size);
 
   void randomize();
-  void CorrelateSteps();
+
+  // HW HACK: Need to make sure DRAM works
+  void CorrelateSteps(){
+    if(!pca){
+      CorrelateSteps(_fCurrVal);
+    }
+    else{
+      CorrelateSteps(fParCurr_PCA);
+    }
+  }
+
+  void CorrelateSteps(std::vector<double> current_step);
 
   void MakePosDef(TMatrixDSym *cov = NULL);
   void makeClosestPosDef(TMatrixDSym *cov);
