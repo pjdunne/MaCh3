@@ -784,10 +784,6 @@ void covarianceBase::proposeStep() {
   // Make the random numbers for the step proposal
   randomize();
   CorrelateSteps();
-  if(use_adaptive){
-    updateAdaptiveCovariance();
-    total_steps++;
-  }
 }
 
 // ************************************************
@@ -912,6 +908,12 @@ void covarianceBase::acceptStep() {
     // Then update the parameter basis
     TransferToParam();
   }
+  // Lets move adaption somewhere sane
+  if(use_adaptive){
+    updateAdaptiveCovariance();
+    total_steps++;
+  }
+
 }
 
 // Throw the proposed parameter by mag sigma

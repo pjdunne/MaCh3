@@ -37,8 +37,12 @@ class mcmc : public FitterBase {
   /// @brief Load starting positions from the end of a previous chain
   inline void ReadParsFromFile(std::string file);
 
+  inline void initialiseChain();
+
   /// Do we reject based on hitting boundaries in systs
   bool reject;
+  bool accept; // HACK This is bad...but useful
+
   /// number of steps in chain
   unsigned int chainLength;
 
