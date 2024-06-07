@@ -108,6 +108,12 @@ void mcmc::CheckStep() {
   outTree->Fill();
 }
 
+void mcmc::acceptStep(){
+
+}
+
+
+
 // *******************
 // Run the Markov chain with all the systematic objects added
 void mcmc::runMCMC() {

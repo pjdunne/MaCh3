@@ -103,10 +103,13 @@ covarianceBase::~covarianceBase(){
   {
     delete[] InvertCovMatrix[i];
     delete[] throwMatrixCholDecomp[i];
+    delete[] InvertThrowMatrix[i];
   }
   delete[] InvertCovMatrix;
   delete[] throwMatrixCholDecomp;
-  
+
+  delete[] InvertThrowMatrix;
+
   const int nThreads = MaCh3Utils::GetNThreads();
   for (int iThread = 0;iThread < nThreads; iThread++)  delete random_number[iThread];
   delete[] random_number;
@@ -283,15 +286,18 @@ void covarianceBase::init(const char *name, const char *file)
     
   InvertCovMatrix = new double*[_fNumPar]();
   throwMatrixCholDecomp = new double*[_fNumPar]();
+  InvertThrowMatrix = new double*[_fNumPar]();
   // Set the defaults to true
   for(int i = 0; i < _fNumPar; i++)
   {
     InvertCovMatrix[i] = new double[_fNumPar]();
     throwMatrixCholDecomp[i] = new double[_fNumPar]();
+    InvertThrowMatrix[i] = new double[_fNumPar]();
     for (int j = 0; j < _fNumPar; j++)
     {
       InvertCovMatrix[i][j] = 0.;
       throwMatrixCholDecomp[i][j] = 0.;
+      InvertThrowMatrix[i][j] = 0;
     }
   }
 
@@ -348,17 +354,21 @@ void covarianceBase::init(std::vector<std::string> YAMLFile)
 
   setAdaptionDefaults();
 
+
   InvertCovMatrix = new double*[_fNumPar]();
   throwMatrixCholDecomp = new double*[_fNumPar]();
+  InvertThrowMatrix = new double*[_fNumPar]();
   // Set the defaults to true
   for(int i = 0; i < _fNumPar; i++)
   {
     InvertCovMatrix[i] = new double[_fNumPar]();
     throwMatrixCholDecomp[i] = new double[_fNumPar]();
+    InvertThrowMatrix[i] = new double[_fNumPar]();
     for (int j = 0; j < _fNumPar; j++)
     {
       InvertCovMatrix[i][j] = 0.;
       throwMatrixCholDecomp[i][j] = 0.;
+      InvertThrowMatrix[i][j] = 0;
     }
   }
 
@@ -470,17 +480,22 @@ void covarianceBase::init(TMatrixDSym* covMat) {
 
   size = covMat->GetNrows();
   _fNumPar = size;
+
+
   InvertCovMatrix = new double*[_fNumPar]();
   throwMatrixCholDecomp = new double*[_fNumPar]();
+  InvertThrowMatrix = new double*[_fNumPar]();
   // Set the defaults to true
   for(int i = 0; i < _fNumPar; i++)
   {
     InvertCovMatrix[i] = new double[_fNumPar]();
     throwMatrixCholDecomp[i] = new double[_fNumPar]();
+    InvertThrowMatrix[i] = new double[_fNumPar]();
     for (int j = 0; j < _fNumPar; j++)
     {
       InvertCovMatrix[i][j] = 0.;
       throwMatrixCholDecomp[i][j] = 0.;
+      InvertThrowMatrix[i][j] = 0;
     }
   }
 
@@ -1008,7 +1023,7 @@ void covarianceBase::printNominalCurrProp() {
 
 
 double covarianceBase::CalcLikelihood() {
-  return calcGaussianDifference(_fPropVal, _fPreFitValue, InvertCovMatrix);
+  return calcGaussianDifference(_fPropVal, _fPreFitValue, InvertCovMatrix, true);
 }
 
 // HW: Abstracts out a lot of the likelihood calculation so I can use
@@ -1328,6 +1343,12 @@ void covarianceBase::setThrowMatrix(TMatrixDSym *cov){
 
   throwMatrix_CholDecomp = new TMatrixD(TDecompChol_throwMatrix.GetU());
   throwMatrix_CholDecomp->T();
+
+  // HW: For some algorithms inverting this matrix is useful
+  // TODO: Make this optional
+  TMatrixDSym* throwMatrixInv = dynamic_cast<TMatrixDSym*>(throwMatrix->Clone());
+  throwMatrixInv->Invert();
+
 
   //KS: ROOT has bad memory management, using standard double means we can decrease most operation by factor 2 simply due to cache hits
 #ifdef MULTITHREAD

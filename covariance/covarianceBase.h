@@ -53,6 +53,16 @@ class covarianceBase {
     _fPropVal[i] = val;
     if (pca) TransferToPCA();
   };
+
+  // TODO : Make the error part of the logger
+  void setParPropVec(std::vector<double> new_prop){
+    if(new_prop.size() > getNpars()){
+      std::cerr<<"ERROR::Cannot set vector with size "<<new_prop.size()<<std::endl;
+      throw;
+    }
+    _fPropVal=new_prop;
+  }
+
   void setParameters(std::vector<double> pars = std::vector<double>());    
   void setEvalLikelihood(int i, bool eL);
   
@@ -76,7 +86,7 @@ class covarianceBase {
   //LLH Related
   virtual int CheckBounds();
   double calcGaussianDifference(std::vector<double> proposed_value, std::vector<double> central_value,
-                                  double **inv_cov_matrix, bool check_prior);
+                                  double **inv_cov_matrix, bool check_prior=true);
   double CalcLikelihood();
   virtual double GetLikelihood();
 
@@ -111,6 +121,7 @@ class covarianceBase {
 
   inline TMatrixDSym *getThrowMatrix(){return throwMatrix;}
   inline TMatrixD *getThrowMatrix_CholDecomp(){return throwMatrix_CholDecomp;}
+  inline double** getThrowMatrixInv(){return throwMatrixInv;}
   inline std::vector<double> getParameterMeans(){return par_means;}
   TH2D* GetCorrelationMatrix();
 
@@ -142,7 +153,9 @@ class covarianceBase {
   const std::vector<double>& getGeneratedValues(){return _fGenerated;}
   const std::vector<double> getProposed() const;
   inline double getParProp(const int i) { return _fPropVal[i]; }
+  inline double getParPropVec() {return _fPropVal;}
   inline double getParCurr(const int i) { return _fCurrVal[i]; }
+  inline double getParCurrVec() {return _fCurrVal;}
   inline double getParInit(const int i) { return _fPreFitValue[i]; }
 
   virtual double getNominal(const int i) { return getParInit(i); }
@@ -293,13 +306,15 @@ class covarianceBase {
   void randomize();
 
   // HW HACK: Need to make sure DRAM works
+  // TODO: Make PCA and regular steps use the same container
+  // (...and stop using pointer arrays......)
   void CorrelateSteps(){
-    if(!pca){
+    //if(!pca){
       CorrelateSteps(_fCurrVal);
-    }
-    else{
-      CorrelateSteps(fParCurr_PCA);
-    }
+///    }
+//    else{
+//      CorrelateSteps(fParCurr_PCA);
+//    }
   }
 
   void CorrelateSteps(std::vector<double> current_step);
@@ -382,6 +397,7 @@ class covarianceBase {
   TMatrixD* throwMatrix_CholDecomp;
   //Same as above but much faster as TMatrixDSym cache miss
   double **throwMatrixCholDecomp;
+  double **InvertThrowMatrix;
 
   // Adaptive Stuff
 

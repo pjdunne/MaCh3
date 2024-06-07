@@ -17,9 +17,11 @@ class DelayedRejectionMCMC : public mcmc{
   public:
     DelayedRejectionMCMC(manager * const man);
     virtual ~DelayedRejectionMCMC();
-    inline void ProposeStep();
+    void ProposeDelayeedStep();
     void runMCMC() override;
-    void CheckStep();
+    void CheckDelayedStep();
+
+
 
   protected:
     std::vector<std::vector<double>> rejected_step;
