@@ -56,14 +56,25 @@ class covarianceBase {
 
   // TODO : Make the error part of the logger
   void setParPropVec(std::vector<double> new_prop){
-    if(new_prop.size() > getNpars()){
+    if(new_prop.size() != getNpars()){
       std::cerr<<"ERROR::Cannot set vector with size "<<new_prop.size()<<std::endl;
       throw;
     }
     _fPropVal=new_prop;
   }
 
-  void setParameters(std::vector<double> pars = std::vector<double>());    
+  void setParCurrVec(std::vector<double> new_curr){
+    if(new_curr.size() != getNpars()){
+      std::cerr<<"ERROR::Cannot set vector with size "<<new_curr.size()<<std::endl;
+      throw;
+    }
+    _fCurrVal=new_curr;
+ }
+
+
+
+
+  void setParameters(std::vector<double> pars = std::vector<double>());
   void setEvalLikelihood(int i, bool eL);
   
   // set branches for output file

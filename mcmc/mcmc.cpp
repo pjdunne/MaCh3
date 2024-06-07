@@ -86,7 +86,10 @@ void mcmc::CheckStep() {
   #ifdef DEBUG
   if (debug) debugFile << " logLProp: " << logLProp << " logLCurr: " << logLCurr << " accProb: " << accProb << " fRandom: " << fRandom << std::endl;
   #endif
+}
 
+
+void mcmc::acceptStep(){
   // Update all the handlers to accept the step
   if (accept && !reject) {
     logLCurr = logLProp;
@@ -94,7 +97,7 @@ void mcmc::CheckStep() {
     if (osc) {
       osc->acceptStep();
     }
-    
+
     // Loop over systematics and accept
     for (size_t s = 0; s < systematics.size(); ++s) {
       systematics[s]->acceptStep();
@@ -106,9 +109,6 @@ void mcmc::CheckStep() {
 
   // Write step to output tree
   outTree->Fill();
-}
-
-void mcmc::acceptStep(){
 
 }
 
@@ -150,7 +150,8 @@ void mcmc::runMCMC() {
 
     // Does the MCMC accept this step?
     CheckStep();
-
+    // Now Separated out
+    acceptStep();
     // Auto save the output
     if (step % auto_save == 0) outTree->AutoSave();
   }

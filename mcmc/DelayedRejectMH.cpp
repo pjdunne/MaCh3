@@ -65,6 +65,8 @@ void runMCMC(){
       setSystStepScale(1.0); // Grow
     }
 
+    acceptStep();
+
     // Auto save the output
     if (step % auto_save == 0) outTree->AutoSave();
   }
@@ -100,7 +102,7 @@ void DelayedRejectionMCMC::ProposeDelayedStep(){
   }
 
   // Now we propose a new step based on our previously rejected one
-  logLReject = logLProb;
+  logLReject = logLProp;
   ProposeStep();
 }
 
@@ -139,7 +141,7 @@ void DelayedRejectionMCMC::CheckDelayedStep(){
   denom_alpha_x_y1 = 1-accProb;
 
   // NOW we can calculate "alpha" for our new step
-  double accProb_reject = TMath::Min(1., TMath::Exp(logLProb-logLReject));
+  double accProb_reject = TMath::Min(1., TMath::Exp(logLProp-logLReject));
 
   double accProb_full = TMath::Min(1, TMath::Exp(q_y1_y2-q_y1_x)*((1-accProb_reject)/denom_alpha_x_y1));
 
@@ -150,17 +152,17 @@ void DelayedRejectionMCMC::CheckDelayedStep(){
     accept = true;
     ++accCount;
   } else {
-    accept = false;
-  }
+    // We need to re-update our systematics
 
-  if(accept && !reject){
-    logLCurr = logLProp;
     if(osc){
-      osc->acceptStep();
+      osc->setParCurrVec(current_step[systematics.size()]);
     }
-    for(size_t s = 0; s < systematics.size(); ++s) {
-      systematics[s]->acceptStep();
+    for(unsigned int i=0; i<systematics.size(); i++){
+      systematics[i]->setParCurrVec(current_step[i]);
     }
+
+
+    accept = false;
   }
 
 }
