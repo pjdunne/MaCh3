@@ -7,6 +7,7 @@ set(HEADERS
     tune.h
     stretch.h
     MCMCProcessor.h
+    DelayedRejectMH.h
 )
 
 add_library(MCMC SHARED
@@ -19,6 +20,7 @@ add_library(MCMC SHARED
     stretch.cpp
     MCMCProcessor.cpp
     $<$<NOT:$<BOOL:${CPU_ONLY}>>:gpuMCMCProcessorUtils.cu>
+    DelayedRejectMH.cpp
 )
 
 if(NOT CPU_ONLY)

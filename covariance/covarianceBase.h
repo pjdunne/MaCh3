@@ -9,6 +9,7 @@
 // Don't forget yaml!
 #include "yaml-cpp/yaml.h"
 #include "manager/MaCh3Logger.h"
+#include <vector>
 
 #ifndef __LARGE_LOGL__
 #define __LARGE_LOGL__ 1234567890.0
@@ -56,7 +57,7 @@ class covarianceBase {
 
   // TODO : Make the error part of the logger
   void setParPropVec(std::vector<double> new_prop){
-    if(new_prop.size() != getNpars()){
+    if(new_prop.size() != (unsigned)getNpars()){
       std::cerr<<"ERROR::Cannot set vector with size "<<new_prop.size()<<std::endl;
       throw;
     }
@@ -64,7 +65,7 @@ class covarianceBase {
   }
 
   void setParCurrVec(std::vector<double> new_curr){
-    if(new_curr.size() != getNpars()){
+    if(new_curr.size() != (unsigned)getNpars()){
       std::cerr<<"ERROR::Cannot set vector with size "<<new_curr.size()<<std::endl;
       throw;
     }
@@ -132,7 +133,7 @@ class covarianceBase {
 
   inline TMatrixDSym *getThrowMatrix(){return throwMatrix;}
   inline TMatrixD *getThrowMatrix_CholDecomp(){return throwMatrix_CholDecomp;}
-  inline double** getThrowMatrixInv(){return throwMatrixInv;}
+  inline double** getThrowMatrixInv(){return InvertThrowMatrix;}
   inline std::vector<double> getParameterMeans(){return par_means;}
   TH2D* GetCorrelationMatrix();
 
@@ -164,9 +165,9 @@ class covarianceBase {
   const std::vector<double>& getGeneratedValues(){return _fGenerated;}
   const std::vector<double> getProposed() const;
   inline double getParProp(const int i) { return _fPropVal[i]; }
-  inline double getParPropVec() {return _fPropVal;}
+  inline std::vector<double> getParPropVec() {return _fPropVal;}
   inline double getParCurr(const int i) { return _fCurrVal[i]; }
-  inline double getParCurrVec() {return _fCurrVal;}
+  inline std::vector<double> getParCurrVec() {return _fCurrVal;}
   inline double getParInit(const int i) { return _fPreFitValue[i]; }
 
   virtual double getNominal(const int i) { return getParInit(i); }

@@ -20,24 +20,28 @@ class mcmc : public FitterBase {
   
   /// @brief Get name of class
   inline std::string GetName()const {return "MCMC";};
- private:
+ protected:
 
   /// @brief Process MCMC output
-  inline void ProcessMCMC();
+  void ProcessMCMC();
 
   /// @brief Propose a step
-  inline void ProposeStep();
+  void ProposeStep();
 
   /// @brief Do we accept the step
-  inline void CheckStep();
+  void CheckStep();
+
+  /// @brief Does end of step accept proceess
+  void acceptStep();
 
   /// @brief Print the progress
-  inline void PrintProgress();
+  void PrintProgress();
 
   /// @brief Load starting positions from the end of a previous chain
   inline void ReadParsFromFile(std::string file);
 
-  inline void initialiseChain();
+  /// @brief Initialise MCMC variables
+  void initialiseChain();
 
   /// Do we reject based on hitting boundaries in systs
   bool reject;

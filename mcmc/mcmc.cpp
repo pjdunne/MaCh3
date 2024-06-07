@@ -63,7 +63,7 @@ void mcmc::ReadParsFromFile(std::string file) {
 void mcmc::CheckStep() {
 // **********************
 
-  bool accept = false;
+  accept = false;
 
   // Set the acceptance probability to zero
   accProb = 0.0;
@@ -112,13 +112,8 @@ void mcmc::acceptStep(){
 
 }
 
-
-
-// *******************
-// Run the Markov chain with all the systematic objects added
-void mcmc::runMCMC() {
-  // *******************
-
+void mcmc::initialiseChain(){
+  // Some common methods
   // Save the settings into the output file
   SaveSettings();
 
@@ -132,6 +127,15 @@ void mcmc::runMCMC() {
   // Accept the first step to set logLCurr: this shouldn't affect the MCMC because we ignore the first N steps in burn-in
   logLCurr = logLProp;
 
+
+}
+
+
+// *******************
+// Run the Markov chain with all the systematic objects added
+void mcmc::runMCMC() {
+  // *******************
+  initialiseChain();
   // Begin MCMC
   for (step = stepStart; step < stepStart+chainLength; ++step)
   {

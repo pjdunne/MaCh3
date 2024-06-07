@@ -17,13 +17,15 @@ class DelayedRejectionMCMC : public mcmc{
   public:
     DelayedRejectionMCMC(manager * const man);
     virtual ~DelayedRejectionMCMC();
-    void ProposeDelayeedStep();
+    void ProposeDelayedStep();
     void runMCMC() override;
     void CheckDelayedStep();
 
 
 
   protected:
+    void setSystStepScale(double scale);
     std::vector<std::vector<double>> rejected_step;
     std::vector<std::vector<double>> current_step;
+    double logLReject;
 };
