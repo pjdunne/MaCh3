@@ -105,13 +105,6 @@ void DelayedRejectionMCMC::ProposeDelayedStep(){
 }
 
 void DelayedRejectionMCMC::CheckDelayedStep(){
-  // Now we need to do our delayed acceptance
-  accept = false;
-
-
-}
-
-double getSystLikelihoodDelay(){
   // Note we explicitly ignore annealing
   // Also since we're nicely gaussian etc. we don't need to reverse scaling!
 
@@ -148,11 +141,26 @@ double getSystLikelihoodDelay(){
   // NOW we can calculate "alpha" for our new step
   double accProb_reject = TMath::Min(1., TMath::Exp(logLProb-logLReject));
 
-  double accProb_full = TMath::Min(1, TMath::Exp(q_y1_y2-q_y1_x)*((1-accProb_reject)/denom_alpha_x_y1);
+  double accProb_full = TMath::Min(1, TMath::Exp(q_y1_y2-q_y1_x)*((1-accProb_reject)/denom_alpha_x_y1));
 
 
   double fRandom = random->Rndm();
 
+  if (fRandom <= accProb) {
+    accept = true;
+    ++accCount;
+  } else {
+    accept = false;
+  }
 
+  if(accept && !reject){
+    logLCurr = logLProp;
+    if(osc){
+      osc->acceptStep();
+    }
+    for(size_t s = 0; s < systematics.size(); ++s) {
+      systematics[s]->acceptStep();
+    }
+  }
 
 }
