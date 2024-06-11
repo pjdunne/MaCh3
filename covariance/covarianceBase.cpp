@@ -1067,7 +1067,7 @@ double covarianceBase::GetLikelihood() {
   const int NOutside = CheckBounds();
   
   if(NOutside > 0)
-    return NOutside*__LARGE_LOGL__;
+    return NOutside*_LARGE_LOGL_;
 
   return CalcLikelihood();
 }
