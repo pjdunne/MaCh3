@@ -1,7 +1,8 @@
 #pragma once
 
-#include "FitterBase.h"
+#include "mcmc/FitterBase.h"
 
+/// @brief Implementation of MR2T2 algorithm
 class mcmc : public FitterBase {
  public:
    /// @brief Constructor
@@ -20,6 +21,7 @@ class mcmc : public FitterBase {
   
   /// @brief Get name of class
   inline std::string GetName()const {return "MCMC";};
+
  protected:
 
   /// @brief Process MCMC output
