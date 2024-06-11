@@ -11,8 +11,8 @@
 #include "manager/MaCh3Logger.h"
 #include <vector>
 
-#ifndef __LARGE_LOGL__
-#define __LARGE_LOGL__ 1234567890.0
+#ifndef _LARGE_LOGL_
+#define _LARGE_LOGL_ 1234567890.0
 /// Large Likelihood is used it parameter go out of physical boundary, this indicates in MCMC that such step should eb removed
 #endif
 

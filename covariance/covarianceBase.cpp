@@ -1017,7 +1017,7 @@ void covarianceBase::printNominalCurrProp() {
 
 double covarianceBase::CalcLikelihood() {
   return calcGaussianDifference(_fPropVal, _fPreFitValue, InvertCovMatrix, true);
-
+}
 // HW: Abstracts out a lot of the likelihood calculation so I can use
 // it for DRAM/other fun stuff
 double covarianceBase::calcGaussianDifference(std::vector<double> proposed_value, std::vector<double> central_value,
@@ -1067,7 +1067,7 @@ double covarianceBase::GetLikelihood() {
   const int NOutside = CheckBounds();
   
   if(NOutside > 0)
-    return NOutside*_LARGE_LOGL_;
+    return NOutside*__LARGE_LOGL__;
 
   return CalcLikelihood();
 }
