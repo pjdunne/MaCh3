@@ -5,8 +5,8 @@ set(HEADERS
     $<$<NOT:$<BOOL:${MaCh3_MINUIT2_ENABLED}>>:MinuitFit.h>
     PSO.h
     MCMCProcessor.h
-    DelayedRejectMH.h
     SampleSummary.h
+    DelayedRejectMH.h
     StatisticalUtils.h
 )
 
