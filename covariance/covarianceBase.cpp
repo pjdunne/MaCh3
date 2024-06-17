@@ -1158,7 +1158,9 @@ void covarianceBase::setStepScale(const double scale) {
     MACH3LOG_ERROR("You are trying so set StepScale to 0 this will not work");
     throw;
   }
-  MACH3LOG_INFO("{} setStepScale() = {}", getName(), scale);
+  // if(verbose){
+  //   MACH3LOG_INFO("{} setStepScale() = {}", getName(), scale);
+  // }
   _fGlobalStepScale = scale;
 }
 
@@ -1366,9 +1368,12 @@ void covarianceBase::setThrowMatrix(TMatrixDSym *cov){
 
   // HW: For some algorithms inverting this matrix is useful
   // TODO: Make this optional
-  TMatrixDSym* throwMatrixInv = dynamic_cast<TMatrixDSym*>(throwMatrix->Clone());
+  if(!throwMatrix){
+    MACH3LOG_ERROR("Throw matrix not set!");
+    throw;
+  }
+  TMatrixDSym* throwMatrixInv = static_cast<TMatrixDSym*>(throwMatrix->Clone());
   throwMatrixInv->Invert();
-
 
   //KS: ROOT has bad memory management, using standard double means we can decrease most operation by factor 2 simply due to cache hits
 #ifdef MULTITHREAD
