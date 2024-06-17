@@ -231,10 +231,11 @@ void mcmc::ProposeStep() {
   // Initiate to false
   reject = false;
 
+
   // Propose steps for the oscillation handlers
   if (osc) {
     osc->proposeStep();
-
+    
     // Now get the likelihoods for the oscillation
     osc_llh = osc->GetLikelihood();
     
@@ -255,6 +256,8 @@ void mcmc::ProposeStep() {
     // Get the likelihood from the systematics
     syst_llh[s] = systematics[s]->GetLikelihood();
     llh += syst_llh[s];
+    
+    //    MACH3LOG_INFO("LLH after {} : {}", systematics[s]->getName(), llh);
 
     #ifdef DEBUG
     if (debug) debugFile << "LLH after " << systematics[stdIt]->getName() << " " << llh << std::endl;
@@ -269,6 +272,8 @@ void mcmc::ProposeStep() {
     if (debug) debugFile << "Rejecting based on boundary" << std::endl;
     #endif
   }
+
+  
 
   // Only reweight when we have a good parameter configuration
   // This speeds things up considerably because for every bad parameter configuration we don't have to reweight the MC

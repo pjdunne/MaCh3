@@ -15,17 +15,20 @@
 
 class DelayedRejectionMCMC : public mcmc{
   public:
+    // @brief Delayed Rejection constructor
     DelayedRejectionMCMC(manager * const man);
+    // @brief Delayed Rjection destructor
     virtual ~DelayedRejectionMCMC();
+    // @brief Step proposal if first step reject
     void ProposeDelayedStep();
-    void runMCMC() override;
+    // @brief MCMC Runner
+    void runMCMC();
+    // @brief checks if step is accepted/rejectd
     void CheckDelayedStep();
 
-
-
   protected:
+    // @brief Sets step-size for delayed step
     void setSystStepScale(double scale);
-    std::vector<std::vector<double>> rejected_step;
     std::vector<std::vector<double>> current_step;
     double logLReject;
 };

@@ -46,8 +46,8 @@ class mcmc : public FitterBase {
   void initialiseChain();
 
   /// Do we reject based on hitting boundaries in systs
-  bool reject;
-  bool accept; // HACK This is bad...but useful
+  bool reject; // Bit mislableled, flag for if step is out of bounds
+  bool accept; // HACK This is bad...but useful. Flag for accepting step
 
   /// number of steps in chain
   unsigned int chainLength;
