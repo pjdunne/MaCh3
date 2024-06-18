@@ -179,7 +179,7 @@ void covarianceOsc::proposeStep() {
   //  }
 
   // This does exactly the same as above but works on any range of values
-  _fPropVal[kDeltaCP] = std::fmod(2*TMath::Pi(), _fPropVal[kDeltaCP]);
+  _fPropVal[kDeltaCP] = std::fmod(2*TMath::Pi(), _fPropVal[kDeltaCP])-TMath::Pi();
 
   // Okay now we've done the standard steps, we can add in our nice flips
   // hierarchy flip first
