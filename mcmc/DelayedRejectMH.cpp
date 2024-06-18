@@ -139,19 +139,19 @@ void DelayedRejectionMCMC::CheckDelayedStep(){
   // TODO: Move calcGaussianDifference to covarianceUtils
   for(unsigned int i=0; i<systematics.size(); i++){
     auto syst = systematics[i];
-     q_y1_x += syst->calcGaussianDifference(syst->getParCurrVec(), syst->getParPropVec(),
-                                            syst->getThrowMatrixInv(), false);
+    q_y1_x += syst->calcGaussianDifference(syst->getParCurrVec(), syst->getParPropVec(),
+					   syst->getThrowMatrixInv());
     // Next we need to proposal probability for our rejected +accepted step
-     q_y1_y2 += syst->calcGaussianDifference(syst->getParCurrVec(), current_step[i],
-                                           syst->getThrowMatrixInv(), false);
+    q_y1_y2 += syst->calcGaussianDifference(syst->getParCurrVec(), current_step[i],
+					    syst->getThrowMatrixInv());
   }
 
   if(osc){
      q_y1_x += osc->calcGaussianDifference(osc->getParCurrVec(), osc->getParPropVec(),
-                                            osc->getThrowMatrixInv(), false);
+                                            osc->getThrowMatrixInv());
     // Next we need to proposal probability for our rejected +accepted step
      q_y1_y2 += osc->calcGaussianDifference(osc->getParCurrVec(), current_step[systematics.size()],
-                                           osc->getThrowMatrixInv(), false);
+                                           osc->getThrowMatrixInv());
   }
 
   // Now all we need is L(y2) and we have all the information we need
