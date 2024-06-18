@@ -169,17 +169,18 @@ void covarianceOsc::proposeStep() {
   //ETA
   //this won't work if abs(_fPropVal) > 2pi so we should consider
   //plonking a while here
-  //  if(_fPropVal[kDeltaCP] > TMath::Pi()) {
-    //    _fPropVal[kDeltaCP] = (-2.*TMath::Pi() + _fPropVal[kDeltaCP]);
+  // HW: This will work, but it's messy
 
-    // We're going to do this modulo 2pi and then just subtract pi!
-    
-  //  } else if (_fPropVal[kDeltaCP] < -TMath::Pi()) {
+  if(_fPropVal[kDeltaCP] > TMath::Pi()) {
+    _fPropVal[kDeltaCP] = -1*TMath::Pi() + std::fmod(_fPropVal[kDeltaCP], TMath::Pi());
+  // We're going to do this modulo 2pi and then just subtract pi!
+  
+  } else if (_fPropVal[kDeltaCP] < -TMath::Pi()) {
   //    _fPropVal[kDeltaCP] = (2.*TMath::Pi() + _fPropVal[kDeltaCP]);
-  //  }
+    _fPropVal[kDeltaCP] = -TMath::Pi() + std::fmod(_fPropVal[kDeltaCP], TMath::Pi());
+  }
 
   // This does exactly the same as above but works on any range of values
-  _fPropVal[kDeltaCP] = std::fmod(2*TMath::Pi(), _fPropVal[kDeltaCP])-TMath::Pi();
 
   // Okay now we've done the standard steps, we can add in our nice flips
   // hierarchy flip first
