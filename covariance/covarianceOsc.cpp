@@ -30,7 +30,7 @@ covarianceOsc::covarianceOsc(const char* name, const char *file)
     _fIndivStepScale[io] = fScale * (*osc_stepscale)(io);
     
     //KS: Set flat prior
-    if( (bool)((*osc_flat_prior)(io)) ) setEvalLikelihood(io, false);
+    setEvalLikelihood(io, (bool)((*osc_flat_prior)(io)));
   }
 
   kDeltaCP = -999;
@@ -169,12 +169,18 @@ void covarianceOsc::proposeStep() {
   //ETA
   //this won't work if abs(_fPropVal) > 2pi so we should consider
   //plonking a while here
-  if(_fPropVal[kDeltaCP] > TMath::Pi()) {
-    _fPropVal[kDeltaCP] = (-2.*TMath::Pi() + _fPropVal[kDeltaCP]);
-  } else if (_fPropVal[kDeltaCP] < -TMath::Pi()) {
-    _fPropVal[kDeltaCP] = (2.*TMath::Pi() + _fPropVal[kDeltaCP]);
-  }
-  
+  //  if(_fPropVal[kDeltaCP] > TMath::Pi()) {
+    //    _fPropVal[kDeltaCP] = (-2.*TMath::Pi() + _fPropVal[kDeltaCP]);
+
+    // We're going to do this modulo 2pi and then just subtract pi!
+    
+  //  } else if (_fPropVal[kDeltaCP] < -TMath::Pi()) {
+  //    _fPropVal[kDeltaCP] = (2.*TMath::Pi() + _fPropVal[kDeltaCP]);
+  //  }
+
+  // This does exactly the same as above but works on any range of values
+  _fPropVal[kDeltaCP] = std::fmod(2*TMath::Pi(), _fPropVal[kDeltaCP]);
+
   // Okay now we've done the standard steps, we can add in our nice flips
   // hierarchy flip first
   if(random_number[0]->Uniform() < 0.5 && flipdelM){

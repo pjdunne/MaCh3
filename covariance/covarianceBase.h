@@ -112,7 +112,7 @@ class covarianceBase {
   virtual int CheckBounds();
   // @brief Calculates LogL based on an abritrary gaussian
   double calcGaussianDifference(std::vector<double> proposed_value, std::vector<double> central_value,
-                                  double **inv_cov_matrix, bool check_prior=true);
+				double **inv_cov_matrix);
   /// @brief Calc penalty term based on inverted covariance matrix
   double CalcLikelihood();
   /// @brief Return CalcLikelihood if some params were thrown out of boundary return _LARGE_LOGL_

@@ -1016,12 +1016,38 @@ void covarianceBase::printNominalCurrProp() {
 
 
 double covarianceBase::CalcLikelihood() {
-  return calcGaussianDifference(_fPropVal, _fPreFitValue, InvertCovMatrix, true);
+  double logL = 0.0;
+  //TStopwatch clock;
+  ///clock.Start();
+#ifdef MULTITHREAD
+#pragma omp parallel for reduction(+:logL)
+#endif
+ 
+  for(int i = 0; i < _fNumPar; ++i){
+    for (int j = 0; j <= i; ++j) {
+      if (!_fFlatPrior[i] && !_fFlatPrior[j] ) {
+        //KS: Since matrix is symmetric we can calcaute non diagonal elements only once and multiply by 2, can bring up to factor speed decrease.
+        int scale = 1;
+        if(i != j) scale = 2;
+	
+	
+	// HACK::DELETE ME HENRY!!!
+
+        logL += scale * 0.5*(_fPropVal[i] - _fPreFitValue[i])*(_fPropVal[j] - _fPreFitValue[j])*InvertCovMatrix[i][j];
+
+      }
+    }
+    
+  }
+  return logL;
 }
+
+
+// HACK!!! This needs to be abstracted better!
 // HW: Abstracts out a lot of the likelihood calculation so I can use
 // it for DRAM/other fun stuff
 double covarianceBase::calcGaussianDifference(std::vector<double> proposed_value, std::vector<double> central_value,
-                                              double **inv_cov_matrix, bool check_prior) {
+                                              double **inv_cov_matrix) {
   double logL = 0.0;
   //TStopwatch clock;
   ///clock.Start();
@@ -1030,17 +1056,12 @@ double covarianceBase::calcGaussianDifference(std::vector<double> proposed_value
   #endif
   for(int i = 0; i < _fNumPar; ++i){
     for (int j = 0; j <= i; ++j) {
-      if (!_fFlatPrior[i] && !_fFlatPrior[j] && check_prior) {
         //KS: Since matrix is symmetric we can calcaute non diagonal elements only once and multiply by 2, can bring up to factor speed decrease.
-        int scale = 1;
+	int scale = 1;
         if(i != j) scale = 2;
         logL += scale * 0.5*(proposed_value[i] - central_value[i])*(proposed_value[j] - central_value[j])*inv_cov_matrix[i][j];
-      }
     }
   }
-  //clock.Stop();
-  //std::cout << __FILE__ << "::GetLikelihood took " << clock.RealTime() << "s" << std::endl;
-
   return logL;
 }
 // ********************************************
