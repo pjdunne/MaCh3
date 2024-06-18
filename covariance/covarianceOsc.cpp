@@ -177,7 +177,7 @@ void covarianceOsc::proposeStep() {
   
   } else if (_fPropVal[kDeltaCP] < -TMath::Pi()) {
   //    _fPropVal[kDeltaCP] = (2.*TMath::Pi() + _fPropVal[kDeltaCP]);
-    _fPropVal[kDeltaCP] = -TMath::Pi() + std::fmod(_fPropVal[kDeltaCP], TMath::Pi());
+    _fPropVal[kDeltaCP] = TMath::Pi() + std::fmod(_fPropVal[kDeltaCP], TMath::Pi());
   }
 
   // This does exactly the same as above but works on any range of values
