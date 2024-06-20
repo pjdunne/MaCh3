@@ -53,6 +53,7 @@ var menudata={children:[
 {text:"n",url:"functions_n.html#index_n"},
 {text:"o",url:"functions_o.html#index_o"},
 {text:"p",url:"functions_p.html#index_p"},
+{text:"q",url:"functions_q.html#index_q"},
 {text:"r",url:"functions_r.html#index_r"},
 {text:"s",url:"functions_s.html#index_s"},
 {text:"t",url:"functions_t.html#index_t"},
@@ -76,6 +77,7 @@ var menudata={children:[
 {text:"n",url:"functions_func_n.html#index_n"},
 {text:"o",url:"functions_func_o.html#index_o"},
 {text:"p",url:"functions_func_p.html#index_p"},
+{text:"q",url:"functions_func_q.html#index_q"},
 {text:"r",url:"functions_func_r.html#index_r"},
 {text:"s",url:"functions_func_s.html#index_s"},
 {text:"t",url:"functions_func_t.html#index_t"},
@@ -108,14 +110,13 @@ var menudata={children:[
 {text:"v",url:"functions_vars_v.html#index_v"},
 {text:"w",url:"functions_vars_w.html#index_w"},
 {text:"x",url:"functions_vars_x.html#index_x"},
-{text:"y",url:"functions_vars_y.html#index_y"}]},
-{text:"Enumerations",url:"functions_enum.html"},
-{text:"Enumerator",url:"functions_eval.html"}]}]},
+{text:"y",url:"functions_vars_y.html#index_y"}]}]}]},
 {text:"Files",url:"files.html",children:[
 {text:"File List",url:"files.html"},
 {text:"File Members",url:"globals.html",children:[
 {text:"All",url:"globals.html",children:[
 {text:"_",url:"globals.html#index__5F"},
+{text:"a",url:"globals_a.html#index_a"},
 {text:"b",url:"globals_b.html#index_b"},
 {text:"c",url:"globals_c.html#index_c"},
 {text:"d",url:"globals_d.html#index_d"},
@@ -137,6 +138,7 @@ var menudata={children:[
 {text:"x",url:"globals_x.html#index_x"},
 {text:"y",url:"globals_y.html#index_y"}]},
 {text:"Functions",url:"globals_func.html",children:[
+{text:"a",url:"globals_func.html#index_a"},
 {text:"c",url:"globals_func.html#index_c"},
 {text:"d",url:"globals_func.html#index_d"},
 {text:"f",url:"globals_func.html#index_f"},

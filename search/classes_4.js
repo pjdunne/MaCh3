@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['interfacepdfebe_0',['interfacePDFEbE',['../classinterfacePDFEbE.html',1,'']]]
+  ['likelihoodfit_0',['LikelihoodFit',['../classLikelihoodFit.html',1,'']]]
 ];

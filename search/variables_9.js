@@ -16,6 +16,7 @@ var searchData=
   ['isflux_13',['isFlux',['../classcovarianceXsec.html#a76a3fd06dd9cbe2eb6ccf560a435bf76',1,'covarianceXsec']]],
   ['islinear_14',['IsLinear',['../classOscillator.html#a646a52ceae668dc0b4cc58245d9f0939',1,'Oscillator']]],
   ['isnc_15',['isNC',['../structfdmc__base.html#a3b50812cc57ead329ccf495012cf906e',1,'fdmc_base']]],
-  ['isrhc_16',['IsRHC',['../classsamplePDFFDBase.html#aba47d043236ede872ad74c26c906998a',1,'samplePDFFDBase']]],
-  ['isxsec_17',['IsXsec',['../classMCMCProcessor.html#a2c06d64020e9246e720cc131a9f4986d',1,'MCMCProcessor']]]
+  ['ispriorpredictive_16',['isPriorPredictive',['../classSampleSummary.html#adb737e335e68edeb14a6ce2ca112dc8c',1,'SampleSummary']]],
+  ['isrhc_17',['IsRHC',['../classsamplePDFFDBase.html#aba47d043236ede872ad74c26c906998a',1,'samplePDFFDBase']]],
+  ['isxsec_18',['IsXsec',['../classMCMCProcessor.html#a2c06d64020e9246e720cc131a9f4986d',1,'MCMCProcessor']]]
 ];

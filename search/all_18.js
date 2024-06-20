@@ -1,12 +1,21 @@
 var searchData=
 [
-  ['y_0',['y',['../structCorner.html#a48b049580abddb5475f8595660129128',1,'Corner']]],
-  ['y_5fvar_1',['y_var',['../structfdmc__base.html#ac4587979647952a6ea2cf6180dcc32ee',1,'fdmc_base']]],
-  ['yamlhelper_2ecpp_2',['YamlHelper.cpp',['../YamlHelper_8cpp.html',1,'']]],
-  ['yamlhelper_2eh_3',['YamlHelper.h',['../YamlHelper_8h.html',1,'']]],
-  ['yamltostring_4',['yamltostring',['../YamlHelper_8cpp.html#aae72fb06a391f1073add5eed6c6485dd',1,'YAMLtoSTRING(const YAML::Node &amp;node):&#160;YamlHelper.cpp'],['../YamlHelper_8h.html#aae72fb06a391f1073add5eed6c6485dd',1,'YAMLtoSTRING(const YAML::Node &amp;node):&#160;YamlHelper.cpp']]],
-  ['ybin_5',['YBin',['../structfdmc__base.html#aad146de365062f4891a23018f9b2a035',1,'fdmc_base']]],
-  ['ybinedges_6',['YBinEdges',['../classsamplePDFFDBase.html#a43b9afb5ac13ecad23750acb24b29da6',1,'samplePDFFDBase']]],
-  ['yresp_7',['YResp',['../classTSpline3__red.html#ada790a4b72314766f464c62e575a4140',1,'TSpline3_red']]],
-  ['ytitleoffset_8',['yTitleOffset',['../PlotLLH_8cpp.html#a90e133c14aaf43c18c855db7a949cb3d',1,'PlotLLH.cpp']]]
+  ['x_0',['x',['../structCorner.html#a91d5d3774672bb879c8938a7e8eacdbd',1,'Corner']]],
+  ['x_5fvar_1',['x_var',['../structfdmc__base.html#a4f3b63575284bea13073812fd0bfbc5b',1,'fdmc_base']]],
+  ['xbin_2',['XBin',['../structfdmc__base.html#a8df8a4cead4cdefa450ba754b9e9dece',1,'fdmc_base']]],
+  ['xbinedges_3',['XBinEdges',['../classsamplePDFFDBase.html#a9a9e5d66ac2216095af25108118bab49',1,'samplePDFFDBase']]],
+  ['xcoeff_5farr_4',['xcoeff_arr',['../classsplineFDBase.html#a3c18430588c6c55c0b370b67e52e3448',1,'splineFDBase']]],
+  ['xpos_5',['XPos',['../classTSpline3__red.html#afe6f7a6475592c9a6986e01246a0e40b',1,'TSpline3_red']]],
+  ['xpts_6',['xPts',['../structFastSplineInfo.html#aefbec11dd80b991ec507f4dc2fbefea0',1,'FastSplineInfo']]],
+  ['xsec_7',['xsec',['../classsplineFDBase.html#a891de87b873e079f6bbdb1355a9ff153',1,'splineFDBase']]],
+  ['xsec_5fnorm_5fpointers_8',['xsec_norm_pointers',['../structfdmc__base.html#a7421ef3bf4d8d431ae6f0b833cc787cd',1,'fdmc_base']]],
+  ['xsec_5fnorms_9',['xsec_norms',['../classsamplePDFFDBase.html#ab83151b9062747f96a7c9629a63e05ed',1,'samplePDFFDBase']]],
+  ['xsec_5fnorms_5fbins_10',['xsec_norms_bins',['../structfdmc__base.html#a8410052c18d9a77efe7b706463262f27',1,'fdmc_base']]],
+  ['xsec_5fspline_5fpointers_11',['xsec_spline_pointers',['../structfdmc__base.html#a15da813f6be7afe4011a8380667fc2fb',1,'fdmc_base']]],
+  ['xsec_5fw_12',['xsec_w',['../structfdmc__base.html#a31f571addd744817766ffe4c879a0377',1,'fdmc_base']]],
+  ['xseccov_13',['XsecCov',['../classsamplePDFFDBase.html#a5648add33f6787cde8f4e3d461a17ce7',1,'samplePDFFDBase']]],
+  ['xsecnorms4_14',['XsecNorms4',['../classXsecNorms4.html',1,'']]],
+  ['xsecstartingpos_15',['XsecStartingPos',['../GetPostfitParamPlots_8cpp.html#a3bb8bb8766f5ea15aa9ac31a1c9127e8',1,'GetPostfitParamPlots.cpp']]],
+  ['xsecstruct_16',['xsecstruct',['../classXSecStruct.html#a4b5dd7adb5407409fec6c4e395d9b426',1,'XSecStruct::XSecStruct(_int_ NumberOfSplines)'],['../classXSecStruct.html#a7d1ae10909b2f292a342e10824f53aa1',1,'XSecStruct::XSecStruct()'],['../classXSecStruct.html',1,'XSecStruct&lt; T &gt;']]],
+  ['xvararray_17',['xVarArray',['../classsplineFDBase.html#ac9446e5d3737ef984dc347b9249efdcc',1,'splineFDBase']]]
 ];

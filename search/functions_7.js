@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['init_0',['init',['../classsamplePDFBase.html#af82aa921ee6e6c204d97e6b6a7cf27ae',1,'samplePDFBase::init()'],['../classsamplePDFInterface.html#aabea95f400c78b85100f548e9d8e8144',1,'samplePDFInterface::init(double pot)=0'],['../classsamplePDFInterface.html#a8188c4bd0d437cdbf52298b4a4f73560',1,'samplePDFInterface::init(double pot, std::string mc_version)=0'],['../classPSO.html#a20cba5b6be9f5996dba818220f7a3524',1,'PSO::init()'],['../classstretch.html#abf351cef5d33603cb6be70749577d9e4',1,'stretch::init()'],['../classtune.html#a38d17743a856c100ed0726bc2e8e0300',1,'tune::init()'],['../classcovarianceBase.html#abbdd5ddf5ae51c2c4113631754ec24e6',1,'covarianceBase::init(const char *name, const char *file)'],['../classcovarianceBase.html#a53d643c213a7c973145c9bd6f2ad5d88',1,'covarianceBase::init(std::vector&lt; std::string &gt; YAMLFile)'],['../classcovarianceBase.html#ab5141e2014519c1483788f4995686164',1,'covarianceBase::init(TMatrixDSym *covMat)'],['../classsamplePDFBase.html#a5d07bd30725439bad3c15039aeca5ea8',1,'samplePDFBase::init()']]],
+  ['init_0',['init',['../classsamplePDFBase.html#af82aa921ee6e6c204d97e6b6a7cf27ae',1,'samplePDFBase::init()'],['../classPSO.html#a20cba5b6be9f5996dba818220f7a3524',1,'PSO::init()'],['../classcovarianceBase.html#abbdd5ddf5ae51c2c4113631754ec24e6',1,'covarianceBase::init(const char *name, const char *file)'],['../classcovarianceBase.html#a53d643c213a7c973145c9bd6f2ad5d88',1,'covarianceBase::init(std::vector&lt; std::string &gt; YAMLFile)'],['../classcovarianceBase.html#ab5141e2014519c1483788f4995686164',1,'covarianceBase::init(TMatrixDSym *covMat)'],['../classsamplePDFBase.html#a5d07bd30725439bad3c15039aeca5ea8',1,'samplePDFBase::init()']]],
   ['initialise_1',['initialise',['../classSMonolith.html#a45cece9dcbe699e00a7b5fdff4806c1e',1,'SMonolith::Initialise()'],['../classMCMCProcessor.html#a224995a0b47bd9cbd04e099cc3ca634c',1,'MCMCProcessor::Initialise()']]],
   ['initialisearrays_2',['InitialiseArrays',['../RHat_8cpp.html#a3efe8085dcbead1e66a6cf54fc77ab5e',1,'RHat.cpp']]],
   ['initialisehistograms_3',['InitialiseHistograms',['../classOscillator.html#ad179520d34c471a982ebc9e0fd821482',1,'Oscillator']]],
@@ -13,11 +13,12 @@ var searchData=
   ['iseventselected_10',['iseventselected',['../classsamplePDFFDBase.html#a5e35856e91339009cb1744a738145781',1,'samplePDFFDBase::IsEventSelected(int iSample, int iEvent)'],['../classsamplePDFFDBase.html#a36052ef8bdd85b1e390996aad361d953',1,'samplePDFFDBase::IsEventSelected(std::vector&lt; std::string &gt; ParameterStr, int iSample, int iEvent)'],['../classsamplePDFFDBase.html#aed71380c5f2f25a5c28896ca3ac27f7f',1,'samplePDFFDBase::IsEventSelected(std::vector&lt; std::string &gt; ParameterStr, std::vector&lt; std::vector&lt; double &gt; &gt; &amp;Selection, int iSample, int iEvent)']]],
   ['isflat_11',['isFlat',['../classSMonolith.html#ac69a542d8c48acd8faf797c20cad4590',1,'SMonolith']]],
   ['islinear_12',['isLinear',['../classOscillator.html#a7f3eb39d4674724a51cb55c7daff8c20',1,'Oscillator']]],
-  ['isparameterfixed_13',['isParameterFixed',['../classcovarianceBase.html#a2424eaebd9daa92b0294b352310770a3',1,'covarianceBase']]],
-  ['isparameterfixedpca_14',['isParameterFixedPCA',['../classcovarianceBase.html#ab7cb212b7fda7f402629855b58a69cec',1,'covarianceBase']]],
-  ['isparflux_15',['IsParFlux',['../classcovarianceXsec.html#a1297bd93b010760e05122e53507dbedc',1,'covarianceXsec']]],
-  ['ispca_16',['IsPCA',['../classcovarianceBase.html#a30f3f34243be0f6bc901e525497e7f56',1,'covarianceBase']]],
-  ['isusinggpu_17',['isUsingGPU',['../classOscillator.html#a04e27d2c84837eadda34fcc36d92ab70',1,'Oscillator']]],
-  ['isvalidbox_18',['IsValidBox',['../classOscillator.html#a9aba209aecd9521e4db62b7500c147b6',1,'Oscillator']]],
-  ['isvalidsplineindex_19',['isValidSplineIndex',['../classsplineFDBase.html#ae66addf83262b03969d0b3b89737a42b',1,'splineFDBase']]]
+  ['ismode_13',['IsMode',['../structMaCh3ModeInfo.html#a9a89a0394f9f5eb780008253716836fc',1,'MaCh3ModeInfo']]],
+  ['isparameterfixed_14',['isParameterFixed',['../classcovarianceBase.html#a2424eaebd9daa92b0294b352310770a3',1,'covarianceBase']]],
+  ['isparameterfixedpca_15',['isParameterFixedPCA',['../classcovarianceBase.html#ab7cb212b7fda7f402629855b58a69cec',1,'covarianceBase']]],
+  ['isparflux_16',['IsParFlux',['../classcovarianceXsec.html#a1297bd93b010760e05122e53507dbedc',1,'covarianceXsec']]],
+  ['ispca_17',['IsPCA',['../classcovarianceBase.html#a30f3f34243be0f6bc901e525497e7f56',1,'covarianceBase']]],
+  ['isusinggpu_18',['isUsingGPU',['../classOscillator.html#a04e27d2c84837eadda34fcc36d92ab70',1,'Oscillator']]],
+  ['isvalidbox_19',['IsValidBox',['../classOscillator.html#a9aba209aecd9521e4db62b7500c147b6',1,'Oscillator']]],
+  ['isvalidsplineindex_20',['isValidSplineIndex',['../classsplineFDBase.html#ae66addf83262b03969d0b3b89737a42b',1,'splineFDBase']]]
 ];

@@ -80,6 +80,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Implementation of base Likelihood Fit class, it is mostly responsible for likelihood calculation while actual use depend on classes which inherits.  
+ <a href="classLikelihoodFit.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="LikelihoodFit_8h_source.html">LikelihoodFit.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for LikelihoodFit:</div>
@@ -87,9 +90,9 @@ Inheritance diagram for LikelihoodFit:</div>
  <div class="center">
   <img src="classLikelihoodFit.png" usemap="#LikelihoodFit_map" alt=""/>
   <map id="LikelihoodFit_map" name="LikelihoodFit_map">
-<area href="classFitterBase.html" alt="FitterBase" shape="rect" coords="46,0,129,24"/>
-<area href="classMinuitFit.html" alt="MinuitFit" shape="rect" coords="0,112,83,136"/>
-<area href="classPSO.html" alt="PSO" shape="rect" coords="93,112,176,136"/>
+<area href="classFitterBase.html" title="Base class for implementing fitting algorithms." alt="FitterBase" shape="rect" coords="46,0,129,24"/>
+<area href="classMinuitFit.html" title="Implementation of Minuit fitting algorithm." alt="MinuitFit" shape="rect" coords="0,112,83,136"/>
+<area href="classPSO.html" title="Class PSO, consist of a vector of object Class Particle and global best Takes in the size (number of ..." alt="PSO" shape="rect" coords="93,112,176,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -135,9 +138,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a018e8d09a62bca19840e1321b49df2c0 inherit pub_methods_classFitterBase" id="r_a018e8d09a62bca19840e1321b49df2c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitterBase.html#a018e8d09a62bca19840e1321b49df2c0">RunLLHScan</a> ()</td></tr>
 <tr class="memdesc:a018e8d09a62bca19840e1321b49df2c0 inherit pub_methods_classFitterBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a 1D likelihood scan.  <br /></td></tr>
 <tr class="separator:a018e8d09a62bca19840e1321b49df2c0 inherit pub_methods_classFitterBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63820450a9089d5281769288c007db55 inherit pub_methods_classFitterBase" id="r_a63820450a9089d5281769288c007db55"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitterBase.html#a63820450a9089d5281769288c007db55">GetStepScaleBasedOnLLHScan</a> ()</td></tr>
+<tr class="memdesc:a63820450a9089d5281769288c007db55 inherit pub_methods_classFitterBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">LLH scan is good first estimate of step scale.  <br /></td></tr>
+<tr class="separator:a63820450a9089d5281769288c007db55 inherit pub_methods_classFitterBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8b32ca268c20dd643eaf92dae04cd0a inherit pub_methods_classFitterBase" id="r_ab8b32ca268c20dd643eaf92dae04cd0a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitterBase.html#ab8b32ca268c20dd643eaf92dae04cd0a">Run2DLLHScan</a> ()</td></tr>
 <tr class="memdesc:ab8b32ca268c20dd643eaf92dae04cd0a inherit pub_methods_classFitterBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a 2D likelihood scan.  <br /></td></tr>
 <tr class="separator:ab8b32ca268c20dd643eaf92dae04cd0a inherit pub_methods_classFitterBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71e43b96395568e54879d9bd1b57c0f8 inherit pub_methods_classFitterBase" id="r_a71e43b96395568e54879d9bd1b57c0f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitterBase.html#a71e43b96395568e54879d9bd1b57c0f8">RunSigmaVar</a> ()</td></tr>
+<tr class="memdesc:a71e43b96395568e54879d9bd1b57c0f8 inherit pub_methods_classFitterBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a 2D and 1D sigma var for all samples.  <br /></td></tr>
+<tr class="separator:a71e43b96395568e54879d9bd1b57c0f8 inherit pub_methods_classFitterBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -145,6 +154,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memdesc:adb89956955c043bf37cad04983e4facd"><td class="mdescLeft">&#160;</td><td class="mdescRight">prepare output and perform sanity checks  <br /></td></tr>
 <tr class="separator:adb89956955c043bf37cad04983e4facd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classFitterBase"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classFitterBase')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classFitterBase.html">FitterBase</a></td></tr>
+<tr class="memitem:a1dccdac8611e70c759c47a65f2b1aea7 inherit pro_methods_classFitterBase" id="r_a1dccdac8611e70c759c47a65f2b1aea7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitterBase.html#a1dccdac8611e70c759c47a65f2b1aea7">ProcessMCMC</a> ()</td></tr>
+<tr class="memdesc:a1dccdac8611e70c759c47a65f2b1aea7 inherit pro_methods_classFitterBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process MCMC output.  <br /></td></tr>
+<tr class="separator:a1dccdac8611e70c759c47a65f2b1aea7 inherit pro_methods_classFitterBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53715760edd8c7640432f31793fd28f9 inherit pro_methods_classFitterBase" id="r_a53715760edd8c7640432f31793fd28f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitterBase.html#a53715760edd8c7640432f31793fd28f9">PrepareOutput</a> ()</td></tr>
 <tr class="memdesc:a53715760edd8c7640432f31793fd28f9 inherit pro_methods_classFitterBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare the output file.  <br /></td></tr>
 <tr class="separator:a53715760edd8c7640432f31793fd28f9 inherit pro_methods_classFitterBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -154,6 +166,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a48f38bfa8996fe00d51f35b05dd16b46 inherit pro_methods_classFitterBase" id="r_a48f38bfa8996fe00d51f35b05dd16b46"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitterBase.html#a48f38bfa8996fe00d51f35b05dd16b46">SaveSettings</a> ()</td></tr>
 <tr class="memdesc:a48f38bfa8996fe00d51f35b05dd16b46 inherit pro_methods_classFitterBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save the settings that the MCMC was run with.  <br /></td></tr>
 <tr class="separator:a48f38bfa8996fe00d51f35b05dd16b46 inherit pro_methods_classFitterBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab359728d478f69ff20bc3bbfb1e2c78c inherit pro_methods_classFitterBase" id="r_ab359728d478f69ff20bc3bbfb1e2c78c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TGraphAsymmErrors</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitterBase.html#ab359728d478f69ff20bc3bbfb1e2c78c">MakeAsymGraph</a> (<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TH1D</a> *<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">sigmaArrayLeft</a>, <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TH1D</a> *<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">sigmaArrayCentr</a>, <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TH1D</a> *<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">sigmaArrayRight</a>, std::string <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">title</a>)</td></tr>
+<tr class="memdesc:ab359728d478f69ff20bc3bbfb1e2c78c inherit pro_methods_classFitterBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used by sigma variation, check how 1 sigma changes spectra.  <br /></td></tr>
+<tr class="separator:ab359728d478f69ff20bc3bbfb1e2c78c inherit pro_methods_classFitterBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -170,6 +185,9 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a4fceb68f242feeb04a0ddf42a5a37095 inherit pro_attribs_classFitterBase" id="r_a4fceb68f242feeb04a0ddf42a5a37095"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmanager.html">manager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitterBase.html#a4fceb68f242feeb04a0ddf42a5a37095">fitMan</a></td></tr>
 <tr class="memdesc:a4fceb68f242feeb04a0ddf42a5a37095 inherit pro_attribs_classFitterBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">The manager.  <br /></td></tr>
 <tr class="separator:a4fceb68f242feeb04a0ddf42a5a37095 inherit pro_attribs_classFitterBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a004cb6e6168032d9280ce3db912f1a43 inherit pro_attribs_classFitterBase" id="r_a004cb6e6168032d9280ce3db912f1a43"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMaCh3Modes.html">MaCh3Modes</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitterBase.html#a004cb6e6168032d9280ce3db912f1a43">Modes</a></td></tr>
+<tr class="memdesc:a004cb6e6168032d9280ce3db912f1a43 inherit pro_attribs_classFitterBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">MaCh3 Modes.  <br /></td></tr>
+<tr class="separator:a004cb6e6168032d9280ce3db912f1a43 inherit pro_attribs_classFitterBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50df1bd75b20a953f81ab9c2bab6b42c inherit pro_attribs_classFitterBase" id="r_a50df1bd75b20a953f81ab9c2bab6b42c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">unsigned</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitterBase.html#a50df1bd75b20a953f81ab9c2bab6b42c">step</a></td></tr>
 <tr class="memdesc:a50df1bd75b20a953f81ab9c2bab6b42c inherit pro_attribs_classFitterBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">current state  <br /></td></tr>
 <tr class="separator:a50df1bd75b20a953f81ab9c2bab6b42c inherit pro_attribs_classFitterBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -196,6 +214,9 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:afac0dcceb1df194159c07945e8dc0069 inherit pro_attribs_classFitterBase" id="r_afac0dcceb1df194159c07945e8dc0069"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classsamplePDFBase.html">samplePDFBase</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitterBase.html#afac0dcceb1df194159c07945e8dc0069">samples</a></td></tr>
 <tr class="memdesc:afac0dcceb1df194159c07945e8dc0069 inherit pro_attribs_classFitterBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sample holder.  <br /></td></tr>
 <tr class="separator:afac0dcceb1df194159c07945e8dc0069 inherit pro_attribs_classFitterBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe9814558b8ff1bccdde3b4c894467e6 inherit pro_attribs_classFitterBase" id="r_abe9814558b8ff1bccdde3b4c894467e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">unsigned</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitterBase.html#abe9814558b8ff1bccdde3b4c894467e6">TotalNSamples</a></td></tr>
+<tr class="memdesc:abe9814558b8ff1bccdde3b4c894467e6 inherit pro_attribs_classFitterBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total number of samples used.  <br /></td></tr>
+<tr class="separator:abe9814558b8ff1bccdde3b4c894467e6 inherit pro_attribs_classFitterBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a15d2348b7bf0a639aaab52b9294bbf inherit pro_attribs_classFitterBase" id="r_a3a15d2348b7bf0a639aaab52b9294bbf"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classcovarianceBase.html">covarianceBase</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitterBase.html#a3a15d2348b7bf0a639aaab52b9294bbf">systematics</a></td></tr>
 <tr class="memdesc:a3a15d2348b7bf0a639aaab52b9294bbf inherit pro_attribs_classFitterBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Systematic holder.  <br /></td></tr>
 <tr class="separator:a3a15d2348b7bf0a639aaab52b9294bbf inherit pro_attribs_classFitterBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -230,11 +251,14 @@ Protected Attributes</h2></td></tr>
 <tr class="memdesc:ad955982e63066918cba9c53381608d09 inherit pro_attribs_classFitterBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">auto save every N steps  <br /></td></tr>
 <tr class="separator:ad955982e63066918cba9c53381608d09 inherit pro_attribs_classFitterBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada898e35bab22af470f2cd1e28af609b inherit pro_attribs_classFitterBase" id="r_ada898e35bab22af470f2cd1e28af609b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitterBase.html#ada898e35bab22af470f2cd1e28af609b">fTestLikelihood</a></td></tr>
-<tr class="memdesc:ada898e35bab22af470f2cd1e28af609b inherit pro_attribs_classFitterBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Necessary for some fitting algorithms like <a class="el" href="classPSO.html">PSO</a>.  <br /></td></tr>
+<tr class="memdesc:ada898e35bab22af470f2cd1e28af609b inherit pro_attribs_classFitterBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Necessary for some fitting algorithms like <a class="el" href="classPSO.html" title="Class PSO, consist of a vector of object Class Particle and global best Takes in the size (number of ...">PSO</a>.  <br /></td></tr>
 <tr class="separator:ada898e35bab22af470f2cd1e28af609b inherit pro_attribs_classFitterBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedd882d8e4d0da0f89cf94e3a008affe inherit pro_attribs_classFitterBase" id="r_aedd882d8e4d0da0f89cf94e3a008affe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitterBase.html#aedd882d8e4d0da0f89cf94e3a008affe">save_nominal</a></td></tr>
 <tr class="memdesc:aedd882d8e4d0da0f89cf94e3a008affe inherit pro_attribs_classFitterBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">save nominal matrix info or not  <br /></td></tr>
 <tr class="separator:aedd882d8e4d0da0f89cf94e3a008affe inherit pro_attribs_classFitterBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a490b8614c4089c6db10ff357e7aaab67 inherit pro_attribs_classFitterBase" id="r_a490b8614c4089c6db10ff357e7aaab67"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitterBase.html#a490b8614c4089c6db10ff357e7aaab67">SaveProposal</a></td></tr>
+<tr class="memdesc:a490b8614c4089c6db10ff357e7aaab67 inherit pro_attribs_classFitterBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save proposal at each step.  <br /></td></tr>
+<tr class="separator:a490b8614c4089c6db10ff357e7aaab67 inherit pro_attribs_classFitterBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a699abe6a2c89706b54544212152d613a inherit pro_attribs_classFitterBase" id="r_a699abe6a2c89706b54544212152d613a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitterBase.html#a699abe6a2c89706b54544212152d613a">FileSaved</a></td></tr>
 <tr class="memdesc:a699abe6a2c89706b54544212152d613a inherit pro_attribs_classFitterBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if file saved not repeat some operations.  <br /></td></tr>
 <tr class="separator:a699abe6a2c89706b54544212152d613a inherit pro_attribs_classFitterBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -246,8 +270,9 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a3bfd8f69df891d03bae0587cd1a1e1b7 inherit pro_attribs_classFitterBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="LikelihoodFit_8h_source.html#l00005">5</a> of file <a class="el" href="LikelihoodFit_8h_source.html">LikelihoodFit.h</a>.</p>
+<div class="textblock"><p>Implementation of base Likelihood Fit class, it is mostly responsible for likelihood calculation while actual use depend on classes which inherits. </p>
+
+<p class="definition">Definition at line <a class="el" href="LikelihoodFit_8h_source.html#l00006">6</a> of file <a class="el" href="LikelihoodFit_8h_source.html">LikelihoodFit.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a1d3cb4fbaa7a0e6e1d7f4804a434e1ea" name="a1d3cb4fbaa7a0e6e1d7f4804a434e1ea"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1d3cb4fbaa7a0e6e1d7f4804a434e1ea">&#9670;&#160;</a></span>LikelihoodFit()</h2>
@@ -274,11 +299,11 @@ Protected Attributes</h2></td></tr>
 <div class="line"><span class="lineno">    8</span>    <a class="code hl_variable" href="classLikelihoodFit.html#a0b50b7b607751e80b6c85e9db98631af">NParsPCA</a> = 0;</div>
 <div class="line"><span class="lineno">    9</span>    <a class="code hl_variable" href="classLikelihoodFit.html#ae1e5d13b373bf73e1b1003f7f9d65f00">fMirroring</a> = <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">   10</span>}</div>
-<div class="ttc" id="aYamlHelper_8h_html_a1a6adcb8b24bfbdcb936ced6812e1b0c"><div class="ttname"><a href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">GetFromManager</a></div><div class="ttdeci">Type GetFromManager(const YAML::Node &amp;node, Type defval)</div><div class="ttdef"><b>Definition</b> <a href="YamlHelper_8h_source.html#l00014">YamlHelper.h:14</a></div></div>
-<div class="ttc" id="aclassFitterBase_html"><div class="ttname"><a href="classFitterBase.html">FitterBase</a></div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00019">FitterBase.h:19</a></div></div>
-<div class="ttc" id="aclassLikelihoodFit_html_a0b50b7b607751e80b6c85e9db98631af"><div class="ttname"><a href="classLikelihoodFit.html#a0b50b7b607751e80b6c85e9db98631af">LikelihoodFit::NParsPCA</a></div><div class="ttdeci">int NParsPCA</div><div class="ttdoc">Number of all parameters from all covariances in PCA base.</div><div class="ttdef"><b>Definition</b> <a href="LikelihoodFit_8h_source.html#l00028">LikelihoodFit.h:28</a></div></div>
-<div class="ttc" id="aclassLikelihoodFit_html_ac779acfe140500d06e42a1d4ace25385"><div class="ttname"><a href="classLikelihoodFit.html#ac779acfe140500d06e42a1d4ace25385">LikelihoodFit::NPars</a></div><div class="ttdeci">int NPars</div><div class="ttdoc">Number of all parameters from all covariances.</div><div class="ttdef"><b>Definition</b> <a href="LikelihoodFit_8h_source.html#l00026">LikelihoodFit.h:26</a></div></div>
-<div class="ttc" id="aclassLikelihoodFit_html_ae1e5d13b373bf73e1b1003f7f9d65f00"><div class="ttname"><a href="classLikelihoodFit.html#ae1e5d13b373bf73e1b1003f7f9d65f00">LikelihoodFit::fMirroring</a></div><div class="ttdeci">bool fMirroring</div><div class="ttdoc">Flag telling if mirroring is used or not.</div><div class="ttdef"><b>Definition</b> <a href="LikelihoodFit_8h_source.html#l00030">LikelihoodFit.h:30</a></div></div>
+<div class="ttc" id="aYamlHelper_8h_html_a1a6adcb8b24bfbdcb936ced6812e1b0c"><div class="ttname"><a href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">GetFromManager</a></div><div class="ttdeci">Type GetFromManager(const YAML::Node &amp;node, Type defval)</div><div class="ttdoc">Get content of config file if node is not found take default value specified.</div><div class="ttdef"><b>Definition</b> <a href="YamlHelper_8h_source.html#l00018">YamlHelper.h:18</a></div></div>
+<div class="ttc" id="aclassFitterBase_html"><div class="ttname"><a href="classFitterBase.html">FitterBase</a></div><div class="ttdoc">Base class for implementing fitting algorithms.</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00022">FitterBase.h:22</a></div></div>
+<div class="ttc" id="aclassLikelihoodFit_html_a0b50b7b607751e80b6c85e9db98631af"><div class="ttname"><a href="classLikelihoodFit.html#a0b50b7b607751e80b6c85e9db98631af">LikelihoodFit::NParsPCA</a></div><div class="ttdeci">int NParsPCA</div><div class="ttdoc">Number of all parameters from all covariances in PCA base.</div><div class="ttdef"><b>Definition</b> <a href="LikelihoodFit_8h_source.html#l00029">LikelihoodFit.h:29</a></div></div>
+<div class="ttc" id="aclassLikelihoodFit_html_ac779acfe140500d06e42a1d4ace25385"><div class="ttname"><a href="classLikelihoodFit.html#ac779acfe140500d06e42a1d4ace25385">LikelihoodFit::NPars</a></div><div class="ttdeci">int NPars</div><div class="ttdoc">Number of all parameters from all covariances.</div><div class="ttdef"><b>Definition</b> <a href="LikelihoodFit_8h_source.html#l00027">LikelihoodFit.h:27</a></div></div>
+<div class="ttc" id="aclassLikelihoodFit_html_ae1e5d13b373bf73e1b1003f7f9d65f00"><div class="ttname"><a href="classLikelihoodFit.html#ae1e5d13b373bf73e1b1003f7f9d65f00">LikelihoodFit::fMirroring</a></div><div class="ttdeci">bool fMirroring</div><div class="ttdoc">Flag telling if mirroring is used or not.</div><div class="ttdef"><b>Definition</b> <a href="LikelihoodFit_8h_source.html#l00031">LikelihoodFit.h:31</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -344,133 +369,133 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classPSO.html#a42f873a16ad3d3d9809262a01bf68538">PSO</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="LikelihoodFit_8cpp_source.html#l00045">45</a> of file <a class="el" href="LikelihoodFit_8cpp_source.html">LikelihoodFit.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   45</span>                                              {</div>
-<div class="line"><span class="lineno">   46</span><span class="comment">// *******************</span></div>
-<div class="line"><span class="lineno">   47</span> </div>
-<div class="line"><span class="lineno">   48</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="classFitterBase.html#a50df1bd75b20a953f81ab9c2bab6b42c">step</a> % 10000 == 0)</div>
-<div class="line"><span class="lineno">   49</span>  {</div>
-<div class="line"><span class="lineno">   50</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;Iteration {}&quot;</span>, <a class="code hl_variable" href="classFitterBase.html#a50df1bd75b20a953f81ab9c2bab6b42c">step</a>);</div>
-<div class="line"><span class="lineno">   51</span>  }</div>
-<div class="line"><span class="lineno">   52</span> </div>
-<div class="line"><span class="lineno">   53</span>  <a class="code hl_variable" href="classFitterBase.html#a1e47b6114574f59c10ad01567ae92198">stepClock</a>-&gt;Start();</div>
-<div class="line"><span class="lineno">   54</span> </div>
-<div class="line"><span class="lineno">   55</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ParCounter</a> = 0;</div>
-<div class="line"><span class="lineno">   56</span>  <span class="keywordtype">double</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">llh</a> = 0;</div>
-<div class="line"><span class="lineno">   57</span>  <span class="keywordflow">for</span> (std::vector&lt;covarianceBase*&gt;::iterator <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">it</a> = <a class="code hl_variable" href="classFitterBase.html#a3a15d2348b7bf0a639aaab52b9294bbf">systematics</a>.begin(); <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">it</a> != <a class="code hl_variable" href="classFitterBase.html#a3a15d2348b7bf0a639aaab52b9294bbf">systematics</a>.end(); ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">it</a>)</div>
-<div class="line"><span class="lineno">   58</span>  {</div>
-<div class="line"><span class="lineno">   59</span>    <span class="keywordflow">if</span>(!(*it)-&gt;IsPCA())</div>
-<div class="line"><span class="lineno">   60</span>    {</div>
-<div class="line"><span class="lineno">   61</span>      std::vector&lt;double&gt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pars</a>;</div>
-<div class="line"><span class="lineno">   62</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">Size</a> = (*it)-&gt;getSize();</div>
-<div class="line"><span class="lineno">   63</span>      <span class="comment">//KS: Avoid push back as they are slow</span></div>
-<div class="line"><span class="lineno">   64</span>      <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pars</a>.resize(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">Size</a>);</div>
-<div class="line"><span class="lineno">   65</span>      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> = 0; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> &lt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">Size</a>; ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>, ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ParCounter</a>)</div>
-<div class="line"><span class="lineno">   66</span>      {</div>
-<div class="line"><span class="lineno">   67</span>        <span class="keywordtype">double</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ParVal</a> = x[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ParCounter</a>];</div>
-<div class="line"><span class="lineno">   68</span>        <span class="comment">//KS: Basically apply mirroring for parameters out of bounds</span></div>
-<div class="line"><span class="lineno">   69</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="classLikelihoodFit.html#ae1e5d13b373bf73e1b1003f7f9d65f00">fMirroring</a>)</div>
-<div class="line"><span class="lineno">   70</span>        {</div>
-<div class="line"><span class="lineno">   71</span>          <span class="keywordflow">if</span>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ParVal</a> &lt; (*it)-&gt;GetLowerBound(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>))</div>
-<div class="line"><span class="lineno">   72</span>          {</div>
-<div class="line"><span class="lineno">   73</span>            <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ParVal</a> = (*it)-&gt;GetLowerBound(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>) + ((*it)-&gt;GetLowerBound(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>) - <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ParVal</a>);</div>
-<div class="line"><span class="lineno">   74</span>          }</div>
-<div class="line"><span class="lineno">   75</span>          <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ParVal</a> &gt; (*it)-&gt;GetUpperBound(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>))</div>
-<div class="line"><span class="lineno">   76</span>          {</div>
-<div class="line"><span class="lineno">   77</span>            <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ParVal</a> = (*it)-&gt;GetUpperBound(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>) - ( <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ParVal</a> - (*it)-&gt;GetUpperBound(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>));</div>
-<div class="line"><span class="lineno">   78</span>          }</div>
-<div class="line"><span class="lineno">   79</span>        }</div>
-<div class="line"><span class="lineno">   80</span>        <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pars</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>] = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ParVal</a>;</div>
-<div class="line"><span class="lineno">   81</span>      }</div>
-<div class="line"><span class="lineno">   82</span>      (*it)-&gt;setParameters(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pars</a>);</div>
-<div class="line"><span class="lineno">   83</span>    }</div>
-<div class="line"><span class="lineno">   84</span>    <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   85</span>    {</div>
-<div class="line"><span class="lineno">   86</span>      std::vector&lt;double&gt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pars</a>;</div>
-<div class="line"><span class="lineno">   87</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">Size</a> = (*it)-&gt;getNpars();</div>
-<div class="line"><span class="lineno">   88</span>      <span class="comment">//KS: Avoid push back as they are slow</span></div>
-<div class="line"><span class="lineno">   89</span>      <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pars</a>.resize(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">Size</a>);</div>
-<div class="line"><span class="lineno">   90</span>      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> = 0; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> &lt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">Size</a>; ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>, ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ParCounter</a>)</div>
-<div class="line"><span class="lineno">   91</span>      {</div>
-<div class="line"><span class="lineno">   92</span>        <span class="keywordtype">double</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ParVal</a> = x[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ParCounter</a>];</div>
-<div class="line"><span class="lineno">   93</span>        <span class="comment">//KS: Basically apply mirroring for parameters out of bounds</span></div>
-<div class="line"><span class="lineno">   94</span>        <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pars</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>] = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ParVal</a>;</div>
-<div class="line"><span class="lineno">   95</span>      }</div>
-<div class="line"><span class="lineno">   96</span>      (*it)-&gt;setParameters_PCA(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pars</a>);</div>
-<div class="line"><span class="lineno">   97</span>    }</div>
-<div class="line"><span class="lineno">   98</span>    (*it)-&gt;acceptStep();</div>
-<div class="line"><span class="lineno">   99</span>  }</div>
-<div class="line"><span class="lineno">  100</span> </div>
-<div class="line"><span class="lineno">  101</span>  <span class="comment">// Loop over the systematics and propose the initial step</span></div>
-<div class="line"><span class="lineno">  102</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">stdIt</a> = 0;</div>
-<div class="line"><span class="lineno">  103</span>  <span class="keywordflow">for</span> (std::vector&lt;covarianceBase*&gt;::iterator <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">it</a> = <a class="code hl_variable" href="classFitterBase.html#a3a15d2348b7bf0a639aaab52b9294bbf">systematics</a>.begin(); <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">it</a> != <a class="code hl_variable" href="classFitterBase.html#a3a15d2348b7bf0a639aaab52b9294bbf">systematics</a>.end(); ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">it</a>, ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">stdIt</a>)</div>
-<div class="line"><span class="lineno">  104</span>  {</div>
-<div class="line"><span class="lineno">  105</span>    <span class="comment">//GetLikelihood will return LargeL if out of bounds, for minimizers this is not the problem, while calcLikelihood will return actual likelihood</span></div>
-<div class="line"><span class="lineno">  106</span>    <a class="code hl_variable" href="classFitterBase.html#ac948767a356e169c719a88315f8d1f47">syst_llh</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">stdIt</a>] = (*it)-&gt;CalcLikelihood();</div>
-<div class="line"><span class="lineno">  107</span>    <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">llh</a> += <a class="code hl_variable" href="classFitterBase.html#ac948767a356e169c719a88315f8d1f47">syst_llh</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">stdIt</a>];</div>
-<div class="line"><span class="lineno">  108</span><span class="preprocessor">    #ifdef DEBUG</span></div>
-<div class="line"><span class="lineno">  109</span>    <span class="keywordflow">if</span> (debug) debugFile &lt;&lt; <span class="stringliteral">&quot;LLH after &quot;</span> &lt;&lt; <a class="code hl_variable" href="classFitterBase.html#a3a15d2348b7bf0a639aaab52b9294bbf">systematics</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">stdIt</a>]-&gt;getName() &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">llh</a> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  110</span><span class="preprocessor">    #endif</span></div>
-<div class="line"><span class="lineno">  111</span>  }</div>
-<div class="line"><span class="lineno">  112</span>  <span class="comment">// Could multi-thread this</span></div>
-<div class="line"><span class="lineno">  113</span>  <span class="comment">// But since sample reweight is multi-threaded it&#39;s probably better to do that</span></div>
-<div class="line"><span class="lineno">  114</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> = 0; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> &lt; <a class="code hl_variable" href="classFitterBase.html#afac0dcceb1df194159c07945e8dc0069">samples</a>.size(); <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>++)</div>
-<div class="line"><span class="lineno">  115</span>  {</div>
-<div class="line"><span class="lineno">  116</span>    <span class="comment">// If we&#39;re running with different oscillation parameters for neutrino and anti-neutrino</span></div>
-<div class="line"><span class="lineno">  117</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classFitterBase.html#a0c3179f05d6846f5b796ba4c04899634">osc</a>) {</div>
-<div class="line"><span class="lineno">  118</span>      <a class="code hl_variable" href="classFitterBase.html#afac0dcceb1df194159c07945e8dc0069">samples</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>]-&gt;reweight(<a class="code hl_variable" href="classFitterBase.html#a0c3179f05d6846f5b796ba4c04899634">osc</a>-&gt;<a class="code hl_function" href="classcovarianceOsc.html#a5732a5abf9aa3d73f9dec5ba9d33217f">getPropPars</a>());</div>
-<div class="line"><span class="lineno">  119</span>      <span class="comment">// If we aren&#39;t using any oscillation</span></div>
-<div class="line"><span class="lineno">  120</span>      } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  121</span>        <span class="keywordtype">double</span>* <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">fake</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">NULL</a>;</div>
-<div class="line"><span class="lineno">  122</span>        <a class="code hl_variable" href="classFitterBase.html#afac0dcceb1df194159c07945e8dc0069">samples</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>]-&gt;reweight(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">fake</a>);</div>
-<div class="line"><span class="lineno">  123</span>    }</div>
-<div class="line"><span class="lineno">  124</span>  }</div>
-<div class="line"><span class="lineno">  125</span> </div>
-<div class="line"><span class="lineno">  126</span>  <span class="comment">//DB for atmospheric event by event sample migration, need to fully reweight all samples to allow event passing prior to likelihood evaluation</span></div>
-<div class="line"><span class="lineno">  127</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> = 0; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> &lt; <a class="code hl_variable" href="classFitterBase.html#afac0dcceb1df194159c07945e8dc0069">samples</a>.size(); <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>++) {</div>
-<div class="line"><span class="lineno">  128</span>    <span class="comment">// Get the sample likelihoods and add them</span></div>
-<div class="line"><span class="lineno">  129</span>    <a class="code hl_variable" href="classFitterBase.html#a7ca9ba6e8948f247fbff90f77b2f3091">sample_llh</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>] = <a class="code hl_variable" href="classFitterBase.html#afac0dcceb1df194159c07945e8dc0069">samples</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>]-&gt;GetLikelihood();</div>
-<div class="line"><span class="lineno">  130</span>    <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">llh</a> += <a class="code hl_variable" href="classFitterBase.html#a7ca9ba6e8948f247fbff90f77b2f3091">sample_llh</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>];</div>
-<div class="line"><span class="lineno">  131</span><span class="preprocessor">    #ifdef DEBUG</span></div>
-<div class="line"><span class="lineno">  132</span>    <span class="keywordflow">if</span> (debug) debugFile &lt;&lt; <span class="stringliteral">&quot;LLH after sample &quot;</span> &lt;&lt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">llh</a> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  133</span><span class="preprocessor">    #endif</span></div>
-<div class="line"><span class="lineno">  134</span>  }</div>
-<div class="line"><span class="lineno">  135</span> </div>
-<div class="line"><span class="lineno">  136</span>  <span class="comment">// Save the proposed likelihood (class member)</span></div>
-<div class="line"><span class="lineno">  137</span>  <a class="code hl_variable" href="classFitterBase.html#a187dd22c17f9e96e5a7e2fb2371abace">logLProp</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">llh</a>;</div>
-<div class="line"><span class="lineno">  138</span>  <a class="code hl_variable" href="classFitterBase.html#abfb6f10720764d8bbbe43754fd5cd976">logLCurr</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">llh</a>;</div>
-<div class="line"><span class="lineno">  139</span>  <a class="code hl_variable" href="classFitterBase.html#a6319d2ea50984860475bbc6c708b0d90">accProb</a> = 1;</div>
-<div class="line"><span class="lineno">  140</span> </div>
-<div class="line"><span class="lineno">  141</span>  <a class="code hl_variable" href="classFitterBase.html#a1e47b6114574f59c10ad01567ae92198">stepClock</a>-&gt;Stop();</div>
-<div class="line"><span class="lineno">  142</span>  <a class="code hl_variable" href="classFitterBase.html#a8354e9a7a9cc534277ff76ab37c9a763">stepTime</a> = <a class="code hl_variable" href="classFitterBase.html#a1e47b6114574f59c10ad01567ae92198">stepClock</a>-&gt;RealTime();</div>
-<div class="line"><span class="lineno">  143</span> </div>
-<div class="line"><span class="lineno">  144</span>  <span class="comment">// Write step to output tree</span></div>
-<div class="line"><span class="lineno">  145</span>  <a class="code hl_variable" href="classFitterBase.html#aed2032b9c4a4f2248abe548f54f8dcc8">outTree</a>-&gt;Fill();</div>
-<div class="line"><span class="lineno">  146</span> </div>
-<div class="line"><span class="lineno">  147</span>  <span class="comment">// Auto save the output</span></div>
-<div class="line"><span class="lineno">  148</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="classFitterBase.html#a50df1bd75b20a953f81ab9c2bab6b42c">step</a> % <a class="code hl_variable" href="classFitterBase.html#ad955982e63066918cba9c53381608d09">auto_save</a> == 0) <a class="code hl_variable" href="classFitterBase.html#aed2032b9c4a4f2248abe548f54f8dcc8">outTree</a>-&gt;AutoSave();</div>
-<div class="line"><span class="lineno">  149</span>  <a class="code hl_variable" href="classFitterBase.html#a50df1bd75b20a953f81ab9c2bab6b42c">step</a>++;</div>
-<div class="line"><span class="lineno">  150</span>  <a class="code hl_variable" href="classFitterBase.html#a2774f3a0047c4347ee0db05406425f79">accCount</a>++;</div>
-<div class="line"><span class="lineno">  151</span> </div>
-<div class="line"><span class="lineno">  152</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">llh</a> = 2.0*<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">llh</a>;</div>
-<div class="line"><span class="lineno">  153</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">llh</a>;</div>
-<div class="line"><span class="lineno">  154</span>}</div>
+<p class="definition">Definition at line <a class="el" href="LikelihoodFit_8cpp_source.html#l00044">44</a> of file <a class="el" href="LikelihoodFit_8cpp_source.html">LikelihoodFit.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   44</span>                                              {</div>
+<div class="line"><span class="lineno">   45</span><span class="comment">// *******************</span></div>
+<div class="line"><span class="lineno">   46</span> </div>
+<div class="line"><span class="lineno">   47</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="classFitterBase.html#a50df1bd75b20a953f81ab9c2bab6b42c">step</a> % 10000 == 0)</div>
+<div class="line"><span class="lineno">   48</span>  {</div>
+<div class="line"><span class="lineno">   49</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;Iteration {}&quot;</span>, <a class="code hl_variable" href="classFitterBase.html#a50df1bd75b20a953f81ab9c2bab6b42c">step</a>);</div>
+<div class="line"><span class="lineno">   50</span>  }</div>
+<div class="line"><span class="lineno">   51</span> </div>
+<div class="line"><span class="lineno">   52</span>  <a class="code hl_variable" href="classFitterBase.html#a1e47b6114574f59c10ad01567ae92198">stepClock</a>-&gt;Start();</div>
+<div class="line"><span class="lineno">   53</span> </div>
+<div class="line"><span class="lineno">   54</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ParCounter</a> = 0;</div>
+<div class="line"><span class="lineno">   55</span>  <span class="keywordtype">double</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">llh</a> = 0;</div>
+<div class="line"><span class="lineno">   56</span>  <span class="keywordflow">for</span> (std::vector&lt;covarianceBase*&gt;::iterator <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">it</a> = <a class="code hl_variable" href="classFitterBase.html#a3a15d2348b7bf0a639aaab52b9294bbf">systematics</a>.begin(); <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">it</a> != <a class="code hl_variable" href="classFitterBase.html#a3a15d2348b7bf0a639aaab52b9294bbf">systematics</a>.end(); ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">it</a>)</div>
+<div class="line"><span class="lineno">   57</span>  {</div>
+<div class="line"><span class="lineno">   58</span>    <span class="keywordflow">if</span>(!(*it)-&gt;IsPCA())</div>
+<div class="line"><span class="lineno">   59</span>    {</div>
+<div class="line"><span class="lineno">   60</span>      std::vector&lt;double&gt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pars</a>;</div>
+<div class="line"><span class="lineno">   61</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">Size</a> = (*it)-&gt;GetNumParams();</div>
+<div class="line"><span class="lineno">   62</span>      <span class="comment">//KS: Avoid push back as they are slow</span></div>
+<div class="line"><span class="lineno">   63</span>      <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pars</a>.resize(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">Size</a>);</div>
+<div class="line"><span class="lineno">   64</span>      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> = 0; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> &lt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">Size</a>; ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>, ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ParCounter</a>)</div>
+<div class="line"><span class="lineno">   65</span>      {</div>
+<div class="line"><span class="lineno">   66</span>        <span class="keywordtype">double</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ParVal</a> = x[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ParCounter</a>];</div>
+<div class="line"><span class="lineno">   67</span>        <span class="comment">//KS: Basically apply mirroring for parameters out of bounds</span></div>
+<div class="line"><span class="lineno">   68</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="classLikelihoodFit.html#ae1e5d13b373bf73e1b1003f7f9d65f00">fMirroring</a>)</div>
+<div class="line"><span class="lineno">   69</span>        {</div>
+<div class="line"><span class="lineno">   70</span>          <span class="keywordflow">if</span>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ParVal</a> &lt; (*it)-&gt;GetLowerBound(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>))</div>
+<div class="line"><span class="lineno">   71</span>          {</div>
+<div class="line"><span class="lineno">   72</span>            <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ParVal</a> = (*it)-&gt;GetLowerBound(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>) + ((*it)-&gt;GetLowerBound(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>) - <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ParVal</a>);</div>
+<div class="line"><span class="lineno">   73</span>          }</div>
+<div class="line"><span class="lineno">   74</span>          <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ParVal</a> &gt; (*it)-&gt;GetUpperBound(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>))</div>
+<div class="line"><span class="lineno">   75</span>          {</div>
+<div class="line"><span class="lineno">   76</span>            <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ParVal</a> = (*it)-&gt;GetUpperBound(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>) - ( <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ParVal</a> - (*it)-&gt;GetUpperBound(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>));</div>
+<div class="line"><span class="lineno">   77</span>          }</div>
+<div class="line"><span class="lineno">   78</span>        }</div>
+<div class="line"><span class="lineno">   79</span>        <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pars</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>] = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ParVal</a>;</div>
+<div class="line"><span class="lineno">   80</span>      }</div>
+<div class="line"><span class="lineno">   81</span>      (*it)-&gt;setParameters(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pars</a>);</div>
+<div class="line"><span class="lineno">   82</span>    }</div>
+<div class="line"><span class="lineno">   83</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   84</span>    {</div>
+<div class="line"><span class="lineno">   85</span>      std::vector&lt;double&gt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pars</a>;</div>
+<div class="line"><span class="lineno">   86</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">Size</a> = (*it)-&gt;getNpars();</div>
+<div class="line"><span class="lineno">   87</span>      <span class="comment">//KS: Avoid push back as they are slow</span></div>
+<div class="line"><span class="lineno">   88</span>      <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pars</a>.resize(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">Size</a>);</div>
+<div class="line"><span class="lineno">   89</span>      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> = 0; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> &lt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">Size</a>; ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>, ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ParCounter</a>)</div>
+<div class="line"><span class="lineno">   90</span>      {</div>
+<div class="line"><span class="lineno">   91</span>        <span class="keywordtype">double</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ParVal</a> = x[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ParCounter</a>];</div>
+<div class="line"><span class="lineno">   92</span>        <span class="comment">//KS: Basically apply mirroring for parameters out of bounds</span></div>
+<div class="line"><span class="lineno">   93</span>        <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pars</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>] = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ParVal</a>;</div>
+<div class="line"><span class="lineno">   94</span>      }</div>
+<div class="line"><span class="lineno">   95</span>      (*it)-&gt;setParameters_PCA(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pars</a>);</div>
+<div class="line"><span class="lineno">   96</span>    }</div>
+<div class="line"><span class="lineno">   97</span>    (*it)-&gt;acceptStep();</div>
+<div class="line"><span class="lineno">   98</span>  }</div>
+<div class="line"><span class="lineno">   99</span> </div>
+<div class="line"><span class="lineno">  100</span>  <span class="comment">// Loop over the systematics and propose the initial step</span></div>
+<div class="line"><span class="lineno">  101</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">stdIt</a> = 0;</div>
+<div class="line"><span class="lineno">  102</span>  <span class="keywordflow">for</span> (std::vector&lt;covarianceBase*&gt;::iterator <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">it</a> = <a class="code hl_variable" href="classFitterBase.html#a3a15d2348b7bf0a639aaab52b9294bbf">systematics</a>.begin(); <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">it</a> != <a class="code hl_variable" href="classFitterBase.html#a3a15d2348b7bf0a639aaab52b9294bbf">systematics</a>.end(); ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">it</a>, ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">stdIt</a>)</div>
+<div class="line"><span class="lineno">  103</span>  {</div>
+<div class="line"><span class="lineno">  104</span>    <span class="comment">//GetLikelihood will return LargeL if out of bounds, for minimizers this is not the problem, while calcLikelihood will return actual likelihood</span></div>
+<div class="line"><span class="lineno">  105</span>    <a class="code hl_variable" href="classFitterBase.html#ac948767a356e169c719a88315f8d1f47">syst_llh</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">stdIt</a>] = (*it)-&gt;CalcLikelihood();</div>
+<div class="line"><span class="lineno">  106</span>    <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">llh</a> += <a class="code hl_variable" href="classFitterBase.html#ac948767a356e169c719a88315f8d1f47">syst_llh</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">stdIt</a>];</div>
+<div class="line"><span class="lineno">  107</span><span class="preprocessor">    #ifdef DEBUG</span></div>
+<div class="line"><span class="lineno">  108</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">debug</a>) <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">debugFile</a> &lt;&lt; <span class="stringliteral">&quot;LLH after &quot;</span> &lt;&lt; <a class="code hl_variable" href="classFitterBase.html#a3a15d2348b7bf0a639aaab52b9294bbf">systematics</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">stdIt</a>]-&gt;getName() &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">llh</a> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  109</span><span class="preprocessor">    #endif</span></div>
+<div class="line"><span class="lineno">  110</span>  }</div>
+<div class="line"><span class="lineno">  111</span>  <span class="comment">// Could multi-thread this</span></div>
+<div class="line"><span class="lineno">  112</span>  <span class="comment">// But since sample reweight is multi-threaded it&#39;s probably better to do that</span></div>
+<div class="line"><span class="lineno">  113</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> = 0; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> &lt; <a class="code hl_variable" href="classFitterBase.html#afac0dcceb1df194159c07945e8dc0069">samples</a>.size(); <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>++)</div>
+<div class="line"><span class="lineno">  114</span>  {</div>
+<div class="line"><span class="lineno">  115</span>    <span class="comment">// If we&#39;re running with different oscillation parameters for neutrino and anti-neutrino</span></div>
+<div class="line"><span class="lineno">  116</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classFitterBase.html#a0c3179f05d6846f5b796ba4c04899634">osc</a>) {</div>
+<div class="line"><span class="lineno">  117</span>      <a class="code hl_variable" href="classFitterBase.html#afac0dcceb1df194159c07945e8dc0069">samples</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>]-&gt;reweight(<a class="code hl_variable" href="classFitterBase.html#a0c3179f05d6846f5b796ba4c04899634">osc</a>-&gt;<a class="code hl_function" href="classcovarianceOsc.html#a5732a5abf9aa3d73f9dec5ba9d33217f">getPropPars</a>());</div>
+<div class="line"><span class="lineno">  118</span>      <span class="comment">// If we aren&#39;t using any oscillation</span></div>
+<div class="line"><span class="lineno">  119</span>      } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  120</span>        <span class="keywordtype">double</span>* <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">fake</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">NULL</a>;</div>
+<div class="line"><span class="lineno">  121</span>        <a class="code hl_variable" href="classFitterBase.html#afac0dcceb1df194159c07945e8dc0069">samples</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>]-&gt;reweight(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">fake</a>);</div>
+<div class="line"><span class="lineno">  122</span>    }</div>
+<div class="line"><span class="lineno">  123</span>  }</div>
+<div class="line"><span class="lineno">  124</span> </div>
+<div class="line"><span class="lineno">  125</span>  <span class="comment">//DB for atmospheric event by event sample migration, need to fully reweight all samples to allow event passing prior to likelihood evaluation</span></div>
+<div class="line"><span class="lineno">  126</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> = 0; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> &lt; <a class="code hl_variable" href="classFitterBase.html#afac0dcceb1df194159c07945e8dc0069">samples</a>.size(); <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>++) {</div>
+<div class="line"><span class="lineno">  127</span>    <span class="comment">// Get the sample likelihoods and add them</span></div>
+<div class="line"><span class="lineno">  128</span>    <a class="code hl_variable" href="classFitterBase.html#a7ca9ba6e8948f247fbff90f77b2f3091">sample_llh</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>] = <a class="code hl_variable" href="classFitterBase.html#afac0dcceb1df194159c07945e8dc0069">samples</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>]-&gt;GetLikelihood();</div>
+<div class="line"><span class="lineno">  129</span>    <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">llh</a> += <a class="code hl_variable" href="classFitterBase.html#a7ca9ba6e8948f247fbff90f77b2f3091">sample_llh</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>];</div>
+<div class="line"><span class="lineno">  130</span><span class="preprocessor">    #ifdef DEBUG</span></div>
+<div class="line"><span class="lineno">  131</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">debug</a>) <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">debugFile</a> &lt;&lt; <span class="stringliteral">&quot;LLH after sample &quot;</span> &lt;&lt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">llh</a> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  132</span><span class="preprocessor">    #endif</span></div>
+<div class="line"><span class="lineno">  133</span>  }</div>
+<div class="line"><span class="lineno">  134</span> </div>
+<div class="line"><span class="lineno">  135</span>  <span class="comment">// Save the proposed likelihood (class member)</span></div>
+<div class="line"><span class="lineno">  136</span>  <a class="code hl_variable" href="classFitterBase.html#a187dd22c17f9e96e5a7e2fb2371abace">logLProp</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">llh</a>;</div>
+<div class="line"><span class="lineno">  137</span>  <a class="code hl_variable" href="classFitterBase.html#abfb6f10720764d8bbbe43754fd5cd976">logLCurr</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">llh</a>;</div>
+<div class="line"><span class="lineno">  138</span>  <a class="code hl_variable" href="classFitterBase.html#a6319d2ea50984860475bbc6c708b0d90">accProb</a> = 1;</div>
+<div class="line"><span class="lineno">  139</span> </div>
+<div class="line"><span class="lineno">  140</span>  <a class="code hl_variable" href="classFitterBase.html#a1e47b6114574f59c10ad01567ae92198">stepClock</a>-&gt;Stop();</div>
+<div class="line"><span class="lineno">  141</span>  <a class="code hl_variable" href="classFitterBase.html#a8354e9a7a9cc534277ff76ab37c9a763">stepTime</a> = <a class="code hl_variable" href="classFitterBase.html#a1e47b6114574f59c10ad01567ae92198">stepClock</a>-&gt;RealTime();</div>
+<div class="line"><span class="lineno">  142</span> </div>
+<div class="line"><span class="lineno">  143</span>  <span class="comment">// Write step to output tree</span></div>
+<div class="line"><span class="lineno">  144</span>  <a class="code hl_variable" href="classFitterBase.html#aed2032b9c4a4f2248abe548f54f8dcc8">outTree</a>-&gt;Fill();</div>
+<div class="line"><span class="lineno">  145</span> </div>
+<div class="line"><span class="lineno">  146</span>  <span class="comment">// Auto save the output</span></div>
+<div class="line"><span class="lineno">  147</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="classFitterBase.html#a50df1bd75b20a953f81ab9c2bab6b42c">step</a> % <a class="code hl_variable" href="classFitterBase.html#ad955982e63066918cba9c53381608d09">auto_save</a> == 0) <a class="code hl_variable" href="classFitterBase.html#aed2032b9c4a4f2248abe548f54f8dcc8">outTree</a>-&gt;AutoSave();</div>
+<div class="line"><span class="lineno">  148</span>  <a class="code hl_variable" href="classFitterBase.html#a50df1bd75b20a953f81ab9c2bab6b42c">step</a>++;</div>
+<div class="line"><span class="lineno">  149</span>  <a class="code hl_variable" href="classFitterBase.html#a2774f3a0047c4347ee0db05406425f79">accCount</a>++;</div>
+<div class="line"><span class="lineno">  150</span> </div>
+<div class="line"><span class="lineno">  151</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">llh</a> = 2.0*<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">llh</a>;</div>
+<div class="line"><span class="lineno">  152</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">llh</a>;</div>
+<div class="line"><span class="lineno">  153</span>}</div>
 <div class="ttc" id="aMaCh3Logger_8h_html_a95fa4dffc648e4c5536c9292c2bdcac3"><div class="ttname"><a href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a></div><div class="ttdeci">#define MACH3LOG_INFO</div><div class="ttdef"><b>Definition</b> <a href="MaCh3Logger_8h_source.html#l00009">MaCh3Logger.h:9</a></div></div>
-<div class="ttc" id="aclassFitterBase_html_a0c3179f05d6846f5b796ba4c04899634"><div class="ttname"><a href="classFitterBase.html#a0c3179f05d6846f5b796ba4c04899634">FitterBase::osc</a></div><div class="ttdeci">covarianceOsc * osc</div><div class="ttdoc">handles oscillation parameters</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00096">FitterBase.h:96</a></div></div>
-<div class="ttc" id="aclassFitterBase_html_a187dd22c17f9e96e5a7e2fb2371abace"><div class="ttname"><a href="classFitterBase.html#a187dd22c17f9e96e5a7e2fb2371abace">FitterBase::logLProp</a></div><div class="ttdeci">double logLProp</div><div class="ttdoc">proposed likelihood</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00075">FitterBase.h:75</a></div></div>
-<div class="ttc" id="aclassFitterBase_html_a1e47b6114574f59c10ad01567ae92198"><div class="ttname"><a href="classFitterBase.html#a1e47b6114574f59c10ad01567ae92198">FitterBase::stepClock</a></div><div class="ttdeci">TStopwatch * stepClock</div><div class="ttdoc">tells how long single step/fit iteration took</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00103">FitterBase.h:103</a></div></div>
-<div class="ttc" id="aclassFitterBase_html_a2774f3a0047c4347ee0db05406425f79"><div class="ttname"><a href="classFitterBase.html#a2774f3a0047c4347ee0db05406425f79">FitterBase::accCount</a></div><div class="ttdeci">int accCount</div><div class="ttdoc">counts accepted steps</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00079">FitterBase.h:79</a></div></div>
-<div class="ttc" id="aclassFitterBase_html_a3a15d2348b7bf0a639aaab52b9294bbf"><div class="ttname"><a href="classFitterBase.html#a3a15d2348b7bf0a639aaab52b9294bbf">FitterBase::systematics</a></div><div class="ttdeci">std::vector&lt; covarianceBase * &gt; systematics</div><div class="ttdoc">Systematic holder.</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00093">FitterBase.h:93</a></div></div>
-<div class="ttc" id="aclassFitterBase_html_a50df1bd75b20a953f81ab9c2bab6b42c"><div class="ttname"><a href="classFitterBase.html#a50df1bd75b20a953f81ab9c2bab6b42c">FitterBase::step</a></div><div class="ttdeci">unsigned int step</div><div class="ttdoc">current state</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00071">FitterBase.h:71</a></div></div>
-<div class="ttc" id="aclassFitterBase_html_a6319d2ea50984860475bbc6c708b0d90"><div class="ttname"><a href="classFitterBase.html#a6319d2ea50984860475bbc6c708b0d90">FitterBase::accProb</a></div><div class="ttdeci">double accProb</div><div class="ttdoc">current acceptance prob</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00077">FitterBase.h:77</a></div></div>
-<div class="ttc" id="aclassFitterBase_html_a7ca9ba6e8948f247fbff90f77b2f3091"><div class="ttname"><a href="classFitterBase.html#a7ca9ba6e8948f247fbff90f77b2f3091">FitterBase::sample_llh</a></div><div class="ttdeci">double * sample_llh</div><div class="ttdoc">store the llh breakdowns</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00085">FitterBase.h:85</a></div></div>
-<div class="ttc" id="aclassFitterBase_html_a8354e9a7a9cc534277ff76ab37c9a763"><div class="ttname"><a href="classFitterBase.html#a8354e9a7a9cc534277ff76ab37c9a763">FitterBase::stepTime</a></div><div class="ttdeci">double stepTime</div><div class="ttdoc">Time of single step.</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00105">FitterBase.h:105</a></div></div>
-<div class="ttc" id="aclassFitterBase_html_abfb6f10720764d8bbbe43754fd5cd976"><div class="ttname"><a href="classFitterBase.html#abfb6f10720764d8bbbe43754fd5cd976">FitterBase::logLCurr</a></div><div class="ttdeci">double logLCurr</div><div class="ttdoc">current likelihood</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00073">FitterBase.h:73</a></div></div>
-<div class="ttc" id="aclassFitterBase_html_ac948767a356e169c719a88315f8d1f47"><div class="ttname"><a href="classFitterBase.html#ac948767a356e169c719a88315f8d1f47">FitterBase::syst_llh</a></div><div class="ttdeci">double * syst_llh</div><div class="ttdoc">systematic llh breakdowns</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00087">FitterBase.h:87</a></div></div>
-<div class="ttc" id="aclassFitterBase_html_ad955982e63066918cba9c53381608d09"><div class="ttname"><a href="classFitterBase.html#ad955982e63066918cba9c53381608d09">FitterBase::auto_save</a></div><div class="ttdeci">int auto_save</div><div class="ttdoc">auto save every N steps</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00117">FitterBase.h:117</a></div></div>
-<div class="ttc" id="aclassFitterBase_html_aed2032b9c4a4f2248abe548f54f8dcc8"><div class="ttname"><a href="classFitterBase.html#aed2032b9c4a4f2248abe548f54f8dcc8">FitterBase::outTree</a></div><div class="ttdeci">TTree * outTree</div><div class="ttdoc">Output tree with posteriors.</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00115">FitterBase.h:115</a></div></div>
-<div class="ttc" id="aclassFitterBase_html_afac0dcceb1df194159c07945e8dc0069"><div class="ttname"><a href="classFitterBase.html#afac0dcceb1df194159c07945e8dc0069">FitterBase::samples</a></div><div class="ttdeci">std::vector&lt; samplePDFBase * &gt; samples</div><div class="ttdoc">Sample holder.</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00090">FitterBase.h:90</a></div></div>
-<div class="ttc" id="aclasscovarianceOsc_html_a5732a5abf9aa3d73f9dec5ba9d33217f"><div class="ttname"><a href="classcovarianceOsc.html#a5732a5abf9aa3d73f9dec5ba9d33217f">covarianceOsc::getPropPars</a></div><div class="ttdeci">double * getPropPars()</div><div class="ttdef"><b>Definition</b> <a href="covarianceOsc_8cpp_source.html#l00146">covarianceOsc.cpp:146</a></div></div>
+<div class="ttc" id="aclassFitterBase_html_a0c3179f05d6846f5b796ba4c04899634"><div class="ttname"><a href="classFitterBase.html#a0c3179f05d6846f5b796ba4c04899634">FitterBase::osc</a></div><div class="ttdeci">covarianceOsc * osc</div><div class="ttdoc">handles oscillation parameters</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00116">FitterBase.h:116</a></div></div>
+<div class="ttc" id="aclassFitterBase_html_a187dd22c17f9e96e5a7e2fb2371abace"><div class="ttname"><a href="classFitterBase.html#a187dd22c17f9e96e5a7e2fb2371abace">FitterBase::logLProp</a></div><div class="ttdeci">double logLProp</div><div class="ttdoc">proposed likelihood</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00093">FitterBase.h:93</a></div></div>
+<div class="ttc" id="aclassFitterBase_html_a1e47b6114574f59c10ad01567ae92198"><div class="ttname"><a href="classFitterBase.html#a1e47b6114574f59c10ad01567ae92198">FitterBase::stepClock</a></div><div class="ttdeci">TStopwatch * stepClock</div><div class="ttdoc">tells how long single step/fit iteration took</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00123">FitterBase.h:123</a></div></div>
+<div class="ttc" id="aclassFitterBase_html_a2774f3a0047c4347ee0db05406425f79"><div class="ttname"><a href="classFitterBase.html#a2774f3a0047c4347ee0db05406425f79">FitterBase::accCount</a></div><div class="ttdeci">int accCount</div><div class="ttdoc">counts accepted steps</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00097">FitterBase.h:97</a></div></div>
+<div class="ttc" id="aclassFitterBase_html_a3a15d2348b7bf0a639aaab52b9294bbf"><div class="ttname"><a href="classFitterBase.html#a3a15d2348b7bf0a639aaab52b9294bbf">FitterBase::systematics</a></div><div class="ttdeci">std::vector&lt; covarianceBase * &gt; systematics</div><div class="ttdoc">Systematic holder.</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00113">FitterBase.h:113</a></div></div>
+<div class="ttc" id="aclassFitterBase_html_a50df1bd75b20a953f81ab9c2bab6b42c"><div class="ttname"><a href="classFitterBase.html#a50df1bd75b20a953f81ab9c2bab6b42c">FitterBase::step</a></div><div class="ttdeci">unsigned int step</div><div class="ttdoc">current state</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00089">FitterBase.h:89</a></div></div>
+<div class="ttc" id="aclassFitterBase_html_a6319d2ea50984860475bbc6c708b0d90"><div class="ttname"><a href="classFitterBase.html#a6319d2ea50984860475bbc6c708b0d90">FitterBase::accProb</a></div><div class="ttdeci">double accProb</div><div class="ttdoc">current acceptance prob</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00095">FitterBase.h:95</a></div></div>
+<div class="ttc" id="aclassFitterBase_html_a7ca9ba6e8948f247fbff90f77b2f3091"><div class="ttname"><a href="classFitterBase.html#a7ca9ba6e8948f247fbff90f77b2f3091">FitterBase::sample_llh</a></div><div class="ttdeci">double * sample_llh</div><div class="ttdoc">store the llh breakdowns</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00103">FitterBase.h:103</a></div></div>
+<div class="ttc" id="aclassFitterBase_html_a8354e9a7a9cc534277ff76ab37c9a763"><div class="ttname"><a href="classFitterBase.html#a8354e9a7a9cc534277ff76ab37c9a763">FitterBase::stepTime</a></div><div class="ttdeci">double stepTime</div><div class="ttdoc">Time of single step.</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00125">FitterBase.h:125</a></div></div>
+<div class="ttc" id="aclassFitterBase_html_abfb6f10720764d8bbbe43754fd5cd976"><div class="ttname"><a href="classFitterBase.html#abfb6f10720764d8bbbe43754fd5cd976">FitterBase::logLCurr</a></div><div class="ttdeci">double logLCurr</div><div class="ttdoc">current likelihood</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00091">FitterBase.h:91</a></div></div>
+<div class="ttc" id="aclassFitterBase_html_ac948767a356e169c719a88315f8d1f47"><div class="ttname"><a href="classFitterBase.html#ac948767a356e169c719a88315f8d1f47">FitterBase::syst_llh</a></div><div class="ttdeci">double * syst_llh</div><div class="ttdoc">systematic llh breakdowns</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00105">FitterBase.h:105</a></div></div>
+<div class="ttc" id="aclassFitterBase_html_ad955982e63066918cba9c53381608d09"><div class="ttname"><a href="classFitterBase.html#ad955982e63066918cba9c53381608d09">FitterBase::auto_save</a></div><div class="ttdeci">int auto_save</div><div class="ttdoc">auto save every N steps</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00137">FitterBase.h:137</a></div></div>
+<div class="ttc" id="aclassFitterBase_html_aed2032b9c4a4f2248abe548f54f8dcc8"><div class="ttname"><a href="classFitterBase.html#aed2032b9c4a4f2248abe548f54f8dcc8">FitterBase::outTree</a></div><div class="ttdeci">TTree * outTree</div><div class="ttdoc">Output tree with posteriors.</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00135">FitterBase.h:135</a></div></div>
+<div class="ttc" id="aclassFitterBase_html_afac0dcceb1df194159c07945e8dc0069"><div class="ttname"><a href="classFitterBase.html#afac0dcceb1df194159c07945e8dc0069">FitterBase::samples</a></div><div class="ttdeci">std::vector&lt; samplePDFBase * &gt; samples</div><div class="ttdoc">Sample holder.</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00108">FitterBase.h:108</a></div></div>
+<div class="ttc" id="aclasscovarianceOsc_html_a5732a5abf9aa3d73f9dec5ba9d33217f"><div class="ttname"><a href="classcovarianceOsc.html#a5732a5abf9aa3d73f9dec5ba9d33217f">covarianceOsc::getPropPars</a></div><div class="ttdeci">double * getPropPars()</div><div class="ttdoc">Retrieves the proposed parameters.</div><div class="ttdef"><b>Definition</b> <a href="covarianceOsc_8cpp_source.html#l00147">covarianceOsc.cpp:147</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -503,8 +528,8 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classMinuitFit.html#a21eb79a3aa06baf99b0e5bd86e9d5c7c">MinuitFit</a>, and <a class="el" href="classPSO.html#a95d9cbbfdcdc4d453254a3b1477cbbab">PSO</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="LikelihoodFit_8h_source.html#l00021">21</a> of file <a class="el" href="LikelihoodFit_8h_source.html">LikelihoodFit.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   21</span>{<span class="keywordflow">return</span> <span class="stringliteral">&quot;LikelihoodFit&quot;</span>;};</div>
+<p class="definition">Definition at line <a class="el" href="LikelihoodFit_8h_source.html#l00022">22</a> of file <a class="el" href="LikelihoodFit_8h_source.html">LikelihoodFit.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   22</span>{<span class="keywordflow">return</span> <span class="stringliteral">&quot;LikelihoodFit&quot;</span>;};</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -533,8 +558,8 @@ Protected Attributes</h2></td></tr>
 
 <p>Get total number of params, this sums over all covariance objects. </p>
 
-<p class="definition">Definition at line <a class="el" href="LikelihoodFit_8h_source.html#l00015">15</a> of file <a class="el" href="LikelihoodFit_8h_source.html">LikelihoodFit.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   15</span>{<span class="keywordflow">return</span> <a class="code hl_variable" href="classLikelihoodFit.html#ac779acfe140500d06e42a1d4ace25385">NPars</a>;};</div>
+<p class="definition">Definition at line <a class="el" href="LikelihoodFit_8h_source.html#l00016">16</a> of file <a class="el" href="LikelihoodFit_8h_source.html">LikelihoodFit.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>{<span class="keywordflow">return</span> <a class="code hl_variable" href="classLikelihoodFit.html#ac779acfe140500d06e42a1d4ace25385">NPars</a>;};</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -573,21 +598,20 @@ Protected Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   27</span>  <span class="comment">// Prepare the output branches</span></div>
 <div class="line"><span class="lineno">   28</span>  <a class="code hl_function" href="classFitterBase.html#a53715760edd8c7640432f31793fd28f9">PrepareOutput</a>();</div>
 <div class="line"><span class="lineno">   29</span>  </div>
-<div class="line"><span class="lineno">   30</span>  <span class="keywordflow">for</span> (std::vector&lt;covarianceBase*&gt;::iterator <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">it</a> = <a class="code hl_variable" href="classFitterBase.html#a3a15d2348b7bf0a639aaab52b9294bbf">systematics</a>.begin(); <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">it</a> != <a class="code hl_variable" href="classFitterBase.html#a3a15d2348b7bf0a639aaab52b9294bbf">systematics</a>.end(); ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">it</a>)</div>
-<div class="line"><span class="lineno">   31</span>  {</div>
-<div class="line"><span class="lineno">   32</span>    <a class="code hl_variable" href="classLikelihoodFit.html#ac779acfe140500d06e42a1d4ace25385">NPars</a> += (*it)-&gt;getSize();</div>
-<div class="line"><span class="lineno">   33</span>    <a class="code hl_variable" href="classLikelihoodFit.html#a0b50b7b607751e80b6c85e9db98631af">NParsPCA</a> += (*it)-&gt;getNpars();</div>
-<div class="line"><span class="lineno">   34</span>  }</div>
-<div class="line"><span class="lineno">   35</span> </div>
-<div class="line"><span class="lineno">   36</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="classFitterBase.html#a0c3179f05d6846f5b796ba4c04899634">osc</a>) {</div>
-<div class="line"><span class="lineno">   37</span>    std::cerr&lt;&lt;<span class="stringliteral">&quot; Osc not supported &quot;</span>&lt;&lt;std::endl;</div>
-<div class="line"><span class="lineno">   38</span>    <span class="keywordflow">throw</span>;</div>
-<div class="line"><span class="lineno">   39</span>  }</div>
-<div class="line"><span class="lineno">   40</span>  <span class="comment">//KS: If PCA is note enabled NParsPCA == NPars</span></div>
-<div class="line"><span class="lineno">   41</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;Total number of parameters {}&quot;</span>, <a class="code hl_variable" href="classLikelihoodFit.html#a0b50b7b607751e80b6c85e9db98631af">NParsPCA</a>);</div>
-<div class="line"><span class="lineno">   42</span>}</div>
-<div class="ttc" id="aclassFitterBase_html_a48f38bfa8996fe00d51f35b05dd16b46"><div class="ttname"><a href="classFitterBase.html#a48f38bfa8996fe00d51f35b05dd16b46">FitterBase::SaveSettings</a></div><div class="ttdeci">void SaveSettings()</div><div class="ttdoc">Save the settings that the MCMC was run with.</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8cpp_source.html#l00091">FitterBase.cpp:91</a></div></div>
-<div class="ttc" id="aclassFitterBase_html_a53715760edd8c7640432f31793fd28f9"><div class="ttname"><a href="classFitterBase.html#a53715760edd8c7640432f31793fd28f9">FitterBase::PrepareOutput</a></div><div class="ttdeci">void PrepareOutput()</div><div class="ttdoc">Prepare the output file.</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8cpp_source.html#l00157">FitterBase.cpp:157</a></div></div>
+<div class="line"><span class="lineno">   30</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">s</a> = 0; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">s</a> &lt; <a class="code hl_variable" href="classFitterBase.html#a3a15d2348b7bf0a639aaab52b9294bbf">systematics</a>.size(); ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">s</a>) {</div>
+<div class="line"><span class="lineno">   31</span>    <a class="code hl_variable" href="classLikelihoodFit.html#ac779acfe140500d06e42a1d4ace25385">NPars</a> += <a class="code hl_variable" href="classFitterBase.html#a3a15d2348b7bf0a639aaab52b9294bbf">systematics</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">s</a>]-&gt;GetNumParams();</div>
+<div class="line"><span class="lineno">   32</span>    <a class="code hl_variable" href="classLikelihoodFit.html#a0b50b7b607751e80b6c85e9db98631af">NParsPCA</a> += <a class="code hl_variable" href="classFitterBase.html#a3a15d2348b7bf0a639aaab52b9294bbf">systematics</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">s</a>]-&gt;getNpars();</div>
+<div class="line"><span class="lineno">   33</span>  }</div>
+<div class="line"><span class="lineno">   34</span> </div>
+<div class="line"><span class="lineno">   35</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="classFitterBase.html#a0c3179f05d6846f5b796ba4c04899634">osc</a>) {</div>
+<div class="line"><span class="lineno">   36</span>    std::cerr&lt;&lt;<span class="stringliteral">&quot; Osc not supported &quot;</span>&lt;&lt;std::endl;</div>
+<div class="line"><span class="lineno">   37</span>    <span class="keywordflow">throw</span>;</div>
+<div class="line"><span class="lineno">   38</span>  }</div>
+<div class="line"><span class="lineno">   39</span>  <span class="comment">//KS: If PCA is note enabled NParsPCA == NPars</span></div>
+<div class="line"><span class="lineno">   40</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;Total number of parameters {}&quot;</span>, <a class="code hl_variable" href="classLikelihoodFit.html#a0b50b7b607751e80b6c85e9db98631af">NParsPCA</a>);</div>
+<div class="line"><span class="lineno">   41</span>}</div>
+<div class="ttc" id="aclassFitterBase_html_a48f38bfa8996fe00d51f35b05dd16b46"><div class="ttname"><a href="classFitterBase.html#a48f38bfa8996fe00d51f35b05dd16b46">FitterBase::SaveSettings</a></div><div class="ttdeci">void SaveSettings()</div><div class="ttdoc">Save the settings that the MCMC was run with.</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8cpp_source.html#l00107">FitterBase.cpp:107</a></div></div>
+<div class="ttc" id="aclassFitterBase_html_a53715760edd8c7640432f31793fd28f9"><div class="ttname"><a href="classFitterBase.html#a53715760edd8c7640432f31793fd28f9">FitterBase::PrepareOutput</a></div><div class="ttdeci">void PrepareOutput()</div><div class="ttdoc">Prepare the output file.</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8cpp_source.html#l00173">FitterBase.cpp:173</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -645,7 +669,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Flag telling if mirroring is used or not. </p>
 
-<p class="definition">Definition at line <a class="el" href="LikelihoodFit_8h_source.html#l00030">30</a> of file <a class="el" href="LikelihoodFit_8h_source.html">LikelihoodFit.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LikelihoodFit_8h_source.html#l00031">31</a> of file <a class="el" href="LikelihoodFit_8h_source.html">LikelihoodFit.h</a>.</p>
 
 </div>
 </div>
@@ -671,7 +695,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Number of all parameters from all covariances. </p>
 
-<p class="definition">Definition at line <a class="el" href="LikelihoodFit_8h_source.html#l00026">26</a> of file <a class="el" href="LikelihoodFit_8h_source.html">LikelihoodFit.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LikelihoodFit_8h_source.html#l00027">27</a> of file <a class="el" href="LikelihoodFit_8h_source.html">LikelihoodFit.h</a>.</p>
 
 </div>
 </div>
@@ -697,7 +721,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Number of all parameters from all covariances in PCA base. </p>
 
-<p class="definition">Definition at line <a class="el" href="LikelihoodFit_8h_source.html#l00028">28</a> of file <a class="el" href="LikelihoodFit_8h_source.html">LikelihoodFit.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LikelihoodFit_8h_source.html#l00029">29</a> of file <a class="el" href="LikelihoodFit_8h_source.html">LikelihoodFit.h</a>.</p>
 
 </div>
 </div>

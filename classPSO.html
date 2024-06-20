@@ -80,6 +80,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Class <a class="el" href="classPSO.html" title="Class PSO, consist of a vector of object Class Particle and global best Takes in the size (number of ...">PSO</a>, consist of a vector of object Class Particle and global best Takes in the size (number of particle) and number of iteration functions includes: finding global best, updating velocity, actual minimisation function.  
+ <a href="classPSO.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="PSO_8h_source.html">PSO.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for PSO:</div>
@@ -87,15 +90,19 @@ Inheritance diagram for PSO:</div>
  <div class="center">
   <img src="classPSO.png" usemap="#PSO_map" alt=""/>
   <map id="PSO_map" name="PSO_map">
-<area href="classLikelihoodFit.html" alt="LikelihoodFit" shape="rect" coords="0,56,83,80"/>
-<area href="classFitterBase.html" alt="FitterBase" shape="rect" coords="0,0,83,24"/>
+<area href="classLikelihoodFit.html" title="Implementation of base Likelihood Fit class, it is mostly responsible for likelihood calculation whil..." alt="LikelihoodFit" shape="rect" coords="0,56,83,80"/>
+<area href="classFitterBase.html" title="Base class for implementing fitting algorithms." alt="FitterBase" shape="rect" coords="0,0,83,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a14542152b9bd6e2e0f59c8ea1e1e890f" id="r_a14542152b9bd6e2e0f59c8ea1e1e890f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPSO.html#a14542152b9bd6e2e0f59c8ea1e1e890f">PSO</a> (<a class="el" href="classmanager.html">manager</a> *<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">const</a> <a class="el" href="classFitterBase.html#a4fceb68f242feeb04a0ddf42a5a37095">fitMan</a>)</td></tr>
+<tr class="memdesc:a14542152b9bd6e2e0f59c8ea1e1e890f"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor  <br /></td></tr>
 <tr class="separator:a14542152b9bd6e2e0f59c8ea1e1e890f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a120de7511935d934568360acd1a68d2f" id="r_a120de7511935d934568360acd1a68d2f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">virtual</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPSO.html#a120de7511935d934568360acd1a68d2f">~PSO</a> ()</td></tr>
+<tr class="memdesc:a120de7511935d934568360acd1a68d2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
+<tr class="separator:a120de7511935d934568360acd1a68d2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c915f7ef789c499d7f9d2e3c31fb2bf" id="r_a9c915f7ef789c499d7f9d2e3c31fb2bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classparticle.html">particle</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPSO.html#a9c915f7ef789c499d7f9d2e3c31fb2bf">get_best_particle</a> ()</td></tr>
 <tr class="separator:a9c915f7ef789c499d7f9d2e3c31fb2bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7aad43d851d0dd8e6a8ea732ad1fa12" id="r_ab7aad43d851d0dd8e6a8ea732ad1fa12"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPSO.html#ab7aad43d851d0dd8e6a8ea732ad1fa12">set_best_particle</a> (<a class="el" href="classparticle.html">particle</a> *<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">n</a>)</td></tr>
@@ -169,9 +176,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a018e8d09a62bca19840e1321b49df2c0 inherit pub_methods_classFitterBase" id="r_a018e8d09a62bca19840e1321b49df2c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitterBase.html#a018e8d09a62bca19840e1321b49df2c0">RunLLHScan</a> ()</td></tr>
 <tr class="memdesc:a018e8d09a62bca19840e1321b49df2c0 inherit pub_methods_classFitterBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a 1D likelihood scan.  <br /></td></tr>
 <tr class="separator:a018e8d09a62bca19840e1321b49df2c0 inherit pub_methods_classFitterBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63820450a9089d5281769288c007db55 inherit pub_methods_classFitterBase" id="r_a63820450a9089d5281769288c007db55"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitterBase.html#a63820450a9089d5281769288c007db55">GetStepScaleBasedOnLLHScan</a> ()</td></tr>
+<tr class="memdesc:a63820450a9089d5281769288c007db55 inherit pub_methods_classFitterBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">LLH scan is good first estimate of step scale.  <br /></td></tr>
+<tr class="separator:a63820450a9089d5281769288c007db55 inherit pub_methods_classFitterBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8b32ca268c20dd643eaf92dae04cd0a inherit pub_methods_classFitterBase" id="r_ab8b32ca268c20dd643eaf92dae04cd0a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitterBase.html#ab8b32ca268c20dd643eaf92dae04cd0a">Run2DLLHScan</a> ()</td></tr>
 <tr class="memdesc:ab8b32ca268c20dd643eaf92dae04cd0a inherit pub_methods_classFitterBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a 2D likelihood scan.  <br /></td></tr>
 <tr class="separator:ab8b32ca268c20dd643eaf92dae04cd0a inherit pub_methods_classFitterBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71e43b96395568e54879d9bd1b57c0f8 inherit pub_methods_classFitterBase" id="r_a71e43b96395568e54879d9bd1b57c0f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitterBase.html#a71e43b96395568e54879d9bd1b57c0f8">RunSigmaVar</a> ()</td></tr>
+<tr class="memdesc:a71e43b96395568e54879d9bd1b57c0f8 inherit pub_methods_classFitterBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a 2D and 1D sigma var for all samples.  <br /></td></tr>
+<tr class="separator:a71e43b96395568e54879d9bd1b57c0f8 inherit pub_methods_classFitterBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -226,6 +239,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memdesc:adb89956955c043bf37cad04983e4facd inherit pro_methods_classLikelihoodFit"><td class="mdescLeft">&#160;</td><td class="mdescRight">prepare output and perform sanity checks  <br /></td></tr>
 <tr class="separator:adb89956955c043bf37cad04983e4facd inherit pro_methods_classLikelihoodFit"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classFitterBase"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classFitterBase')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classFitterBase.html">FitterBase</a></td></tr>
+<tr class="memitem:a1dccdac8611e70c759c47a65f2b1aea7 inherit pro_methods_classFitterBase" id="r_a1dccdac8611e70c759c47a65f2b1aea7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitterBase.html#a1dccdac8611e70c759c47a65f2b1aea7">ProcessMCMC</a> ()</td></tr>
+<tr class="memdesc:a1dccdac8611e70c759c47a65f2b1aea7 inherit pro_methods_classFitterBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process MCMC output.  <br /></td></tr>
+<tr class="separator:a1dccdac8611e70c759c47a65f2b1aea7 inherit pro_methods_classFitterBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53715760edd8c7640432f31793fd28f9 inherit pro_methods_classFitterBase" id="r_a53715760edd8c7640432f31793fd28f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitterBase.html#a53715760edd8c7640432f31793fd28f9">PrepareOutput</a> ()</td></tr>
 <tr class="memdesc:a53715760edd8c7640432f31793fd28f9 inherit pro_methods_classFitterBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare the output file.  <br /></td></tr>
 <tr class="separator:a53715760edd8c7640432f31793fd28f9 inherit pro_methods_classFitterBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -235,6 +251,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a48f38bfa8996fe00d51f35b05dd16b46 inherit pro_methods_classFitterBase" id="r_a48f38bfa8996fe00d51f35b05dd16b46"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitterBase.html#a48f38bfa8996fe00d51f35b05dd16b46">SaveSettings</a> ()</td></tr>
 <tr class="memdesc:a48f38bfa8996fe00d51f35b05dd16b46 inherit pro_methods_classFitterBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save the settings that the MCMC was run with.  <br /></td></tr>
 <tr class="separator:a48f38bfa8996fe00d51f35b05dd16b46 inherit pro_methods_classFitterBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab359728d478f69ff20bc3bbfb1e2c78c inherit pro_methods_classFitterBase" id="r_ab359728d478f69ff20bc3bbfb1e2c78c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TGraphAsymmErrors</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitterBase.html#ab359728d478f69ff20bc3bbfb1e2c78c">MakeAsymGraph</a> (<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TH1D</a> *<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">sigmaArrayLeft</a>, <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TH1D</a> *<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">sigmaArrayCentr</a>, <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TH1D</a> *<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">sigmaArrayRight</a>, std::string <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">title</a>)</td></tr>
+<tr class="memdesc:ab359728d478f69ff20bc3bbfb1e2c78c inherit pro_methods_classFitterBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used by sigma variation, check how 1 sigma changes spectra.  <br /></td></tr>
+<tr class="separator:ab359728d478f69ff20bc3bbfb1e2c78c inherit pro_methods_classFitterBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classLikelihoodFit"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classLikelihoodFit')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classLikelihoodFit.html">LikelihoodFit</a></td></tr>
 <tr class="memitem:ac779acfe140500d06e42a1d4ace25385 inherit pro_attribs_classLikelihoodFit" id="r_ac779acfe140500d06e42a1d4ace25385"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLikelihoodFit.html#ac779acfe140500d06e42a1d4ace25385">NPars</a></td></tr>
 <tr class="memdesc:ac779acfe140500d06e42a1d4ace25385 inherit pro_attribs_classLikelihoodFit"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of all parameters from all covariances.  <br /></td></tr>
@@ -249,6 +268,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a4fceb68f242feeb04a0ddf42a5a37095 inherit pro_attribs_classFitterBase" id="r_a4fceb68f242feeb04a0ddf42a5a37095"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmanager.html">manager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitterBase.html#a4fceb68f242feeb04a0ddf42a5a37095">fitMan</a></td></tr>
 <tr class="memdesc:a4fceb68f242feeb04a0ddf42a5a37095 inherit pro_attribs_classFitterBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">The manager.  <br /></td></tr>
 <tr class="separator:a4fceb68f242feeb04a0ddf42a5a37095 inherit pro_attribs_classFitterBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a004cb6e6168032d9280ce3db912f1a43 inherit pro_attribs_classFitterBase" id="r_a004cb6e6168032d9280ce3db912f1a43"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMaCh3Modes.html">MaCh3Modes</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitterBase.html#a004cb6e6168032d9280ce3db912f1a43">Modes</a></td></tr>
+<tr class="memdesc:a004cb6e6168032d9280ce3db912f1a43 inherit pro_attribs_classFitterBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">MaCh3 Modes.  <br /></td></tr>
+<tr class="separator:a004cb6e6168032d9280ce3db912f1a43 inherit pro_attribs_classFitterBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50df1bd75b20a953f81ab9c2bab6b42c inherit pro_attribs_classFitterBase" id="r_a50df1bd75b20a953f81ab9c2bab6b42c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">unsigned</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitterBase.html#a50df1bd75b20a953f81ab9c2bab6b42c">step</a></td></tr>
 <tr class="memdesc:a50df1bd75b20a953f81ab9c2bab6b42c inherit pro_attribs_classFitterBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">current state  <br /></td></tr>
 <tr class="separator:a50df1bd75b20a953f81ab9c2bab6b42c inherit pro_attribs_classFitterBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -275,6 +297,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:afac0dcceb1df194159c07945e8dc0069 inherit pro_attribs_classFitterBase" id="r_afac0dcceb1df194159c07945e8dc0069"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classsamplePDFBase.html">samplePDFBase</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitterBase.html#afac0dcceb1df194159c07945e8dc0069">samples</a></td></tr>
 <tr class="memdesc:afac0dcceb1df194159c07945e8dc0069 inherit pro_attribs_classFitterBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sample holder.  <br /></td></tr>
 <tr class="separator:afac0dcceb1df194159c07945e8dc0069 inherit pro_attribs_classFitterBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe9814558b8ff1bccdde3b4c894467e6 inherit pro_attribs_classFitterBase" id="r_abe9814558b8ff1bccdde3b4c894467e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">unsigned</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitterBase.html#abe9814558b8ff1bccdde3b4c894467e6">TotalNSamples</a></td></tr>
+<tr class="memdesc:abe9814558b8ff1bccdde3b4c894467e6 inherit pro_attribs_classFitterBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total number of samples used.  <br /></td></tr>
+<tr class="separator:abe9814558b8ff1bccdde3b4c894467e6 inherit pro_attribs_classFitterBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a15d2348b7bf0a639aaab52b9294bbf inherit pro_attribs_classFitterBase" id="r_a3a15d2348b7bf0a639aaab52b9294bbf"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classcovarianceBase.html">covarianceBase</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitterBase.html#a3a15d2348b7bf0a639aaab52b9294bbf">systematics</a></td></tr>
 <tr class="memdesc:a3a15d2348b7bf0a639aaab52b9294bbf inherit pro_attribs_classFitterBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Systematic holder.  <br /></td></tr>
 <tr class="separator:a3a15d2348b7bf0a639aaab52b9294bbf inherit pro_attribs_classFitterBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -309,11 +334,14 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memdesc:ad955982e63066918cba9c53381608d09 inherit pro_attribs_classFitterBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">auto save every N steps  <br /></td></tr>
 <tr class="separator:ad955982e63066918cba9c53381608d09 inherit pro_attribs_classFitterBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada898e35bab22af470f2cd1e28af609b inherit pro_attribs_classFitterBase" id="r_ada898e35bab22af470f2cd1e28af609b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitterBase.html#ada898e35bab22af470f2cd1e28af609b">fTestLikelihood</a></td></tr>
-<tr class="memdesc:ada898e35bab22af470f2cd1e28af609b inherit pro_attribs_classFitterBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Necessary for some fitting algorithms like <a class="el" href="classPSO.html">PSO</a>.  <br /></td></tr>
+<tr class="memdesc:ada898e35bab22af470f2cd1e28af609b inherit pro_attribs_classFitterBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Necessary for some fitting algorithms like <a class="el" href="classPSO.html" title="Class PSO, consist of a vector of object Class Particle and global best Takes in the size (number of ...">PSO</a>.  <br /></td></tr>
 <tr class="separator:ada898e35bab22af470f2cd1e28af609b inherit pro_attribs_classFitterBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedd882d8e4d0da0f89cf94e3a008affe inherit pro_attribs_classFitterBase" id="r_aedd882d8e4d0da0f89cf94e3a008affe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitterBase.html#aedd882d8e4d0da0f89cf94e3a008affe">save_nominal</a></td></tr>
 <tr class="memdesc:aedd882d8e4d0da0f89cf94e3a008affe inherit pro_attribs_classFitterBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">save nominal matrix info or not  <br /></td></tr>
 <tr class="separator:aedd882d8e4d0da0f89cf94e3a008affe inherit pro_attribs_classFitterBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a490b8614c4089c6db10ff357e7aaab67 inherit pro_attribs_classFitterBase" id="r_a490b8614c4089c6db10ff357e7aaab67"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitterBase.html#a490b8614c4089c6db10ff357e7aaab67">SaveProposal</a></td></tr>
+<tr class="memdesc:a490b8614c4089c6db10ff357e7aaab67 inherit pro_attribs_classFitterBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save proposal at each step.  <br /></td></tr>
+<tr class="separator:a490b8614c4089c6db10ff357e7aaab67 inherit pro_attribs_classFitterBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a699abe6a2c89706b54544212152d613a inherit pro_attribs_classFitterBase" id="r_a699abe6a2c89706b54544212152d613a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitterBase.html#a699abe6a2c89706b54544212152d613a">FileSaved</a></td></tr>
 <tr class="memdesc:a699abe6a2c89706b54544212152d613a inherit pro_attribs_classFitterBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if file saved not repeat some operations.  <br /></td></tr>
 <tr class="separator:a699abe6a2c89706b54544212152d613a inherit pro_attribs_classFitterBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -325,8 +353,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a3bfd8f69df891d03bae0587cd1a1e1b7 inherit pro_attribs_classFitterBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00072">72</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
+<div class="textblock"><p>Class <a class="el" href="classPSO.html" title="Class PSO, consist of a vector of object Class Particle and global best Takes in the size (number of ...">PSO</a>, consist of a vector of object Class Particle and global best Takes in the size (number of particle) and number of iteration functions includes: finding global best, updating velocity, actual minimisation function. </p>
+
+<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00080">80</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a14542152b9bd6e2e0f59c8ea1e1e890f" name="a14542152b9bd6e2e0f59c8ea1e1e890f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a14542152b9bd6e2e0f59c8ea1e1e890f">&#9670;&#160;</a></span>PSO()</h2>
@@ -343,7 +372,8 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Class <a class="el" href="classPSO.html">PSO</a>, consist of a vector of object Class Particle and global best Takes in the size (number of particle) and number of iteration functions includes: finding global best, updating velocity, actual minimisation function </p>
+
+<p>constructor </p>
 
 <p class="definition">Definition at line <a class="el" href="PSO_8cpp_source.html#l00003">3</a> of file <a class="el" href="PSO_8cpp_source.html">PSO.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">    3</span>                     : <a class="code hl_class" href="classLikelihoodFit.html">LikelihoodFit</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">man</a>) {</div>
@@ -363,19 +393,49 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   17</span>      <a class="code hl_variable" href="classPSO.html#ae6c1bc89308fd18ffa8b043319029836">fDim</a> = <a class="code hl_variable" href="classFitterBase.html#a4fceb68f242feeb04a0ddf42a5a37095">fitMan</a>-&gt;<a class="code hl_function" href="classmanager.html#ab3999cc856ede72b37f68bdb28bd5520">raw</a>()[<span class="stringliteral">&quot;General&quot;</span>][<span class="stringliteral">&quot;PSO&quot;</span>][<span class="stringliteral">&quot;TestLikelihoodDim&quot;</span>].as&lt;<span class="keywordtype">int</span>&gt;();</div>
 <div class="line"><span class="lineno">   18</span>    }</div>
 <div class="line"><span class="lineno">   19</span>}</div>
-<div class="ttc" id="aYamlHelper_8h_html_a1a6adcb8b24bfbdcb936ced6812e1b0c"><div class="ttname"><a href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">GetFromManager</a></div><div class="ttdeci">Type GetFromManager(const YAML::Node &amp;node, Type defval)</div><div class="ttdef"><b>Definition</b> <a href="YamlHelper_8h_source.html#l00014">YamlHelper.h:14</a></div></div>
-<div class="ttc" id="aclassFitterBase_html_a4fceb68f242feeb04a0ddf42a5a37095"><div class="ttname"><a href="classFitterBase.html#a4fceb68f242feeb04a0ddf42a5a37095">FitterBase::fitMan</a></div><div class="ttdeci">manager * fitMan</div><div class="ttdoc">The manager.</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00068">FitterBase.h:68</a></div></div>
-<div class="ttc" id="aclassFitterBase_html_ada898e35bab22af470f2cd1e28af609b"><div class="ttname"><a href="classFitterBase.html#ada898e35bab22af470f2cd1e28af609b">FitterBase::fTestLikelihood</a></div><div class="ttdeci">bool fTestLikelihood</div><div class="ttdoc">Necessary for some fitting algorithms like PSO.</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00120">FitterBase.h:120</a></div></div>
-<div class="ttc" id="aclassLikelihoodFit_html"><div class="ttname"><a href="classLikelihoodFit.html">LikelihoodFit</a></div><div class="ttdef"><b>Definition</b> <a href="LikelihoodFit_8h_source.html#l00005">LikelihoodFit.h:5</a></div></div>
-<div class="ttc" id="aclassPSO_html_a1c7ca23e5dcdf35cd6812b85221c0d4b"><div class="ttname"><a href="classPSO.html#a1c7ca23e5dcdf35cd6812b85221c0d4b">PSO::fConstriction</a></div><div class="ttdeci">double fConstriction</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00148">PSO.h:148</a></div></div>
-<div class="ttc" id="aclassPSO_html_a56539eb264d11e1c37674ad55504d454"><div class="ttname"><a href="classPSO.html#a56539eb264d11e1c37674ad55504d454">PSO::fTwo</a></div><div class="ttdeci">double fTwo</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00145">PSO.h:145</a></div></div>
-<div class="ttc" id="aclassPSO_html_a9b3d14a97a9d838a9f009f9cc54968d3"><div class="ttname"><a href="classPSO.html#a9b3d14a97a9d838a9f009f9cc54968d3">PSO::fInertia</a></div><div class="ttdeci">double fInertia</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00143">PSO.h:143</a></div></div>
-<div class="ttc" id="aclassPSO_html_a9e9da89144237a7f3369b9b3739e73ad"><div class="ttname"><a href="classPSO.html#a9e9da89144237a7f3369b9b3739e73ad">PSO::fParticles</a></div><div class="ttdeci">int fParticles</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00151">PSO.h:151</a></div></div>
-<div class="ttc" id="aclassPSO_html_aa02f509433bb6c25126a180ab27b8277"><div class="ttname"><a href="classPSO.html#aa02f509433bb6c25126a180ab27b8277">PSO::fOne</a></div><div class="ttdeci">double fOne</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00144">PSO.h:144</a></div></div>
-<div class="ttc" id="aclassPSO_html_aa2adb0a6985424439c44b8d0c7afec08"><div class="ttname"><a href="classPSO.html#aa2adb0a6985424439c44b8d0c7afec08">PSO::fIterations</a></div><div class="ttdeci">int fIterations</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00147">PSO.h:147</a></div></div>
-<div class="ttc" id="aclassPSO_html_ac9884499d5945597cb33ef0518f6f61e"><div class="ttname"><a href="classPSO.html#ac9884499d5945597cb33ef0518f6f61e">PSO::fConvergence</a></div><div class="ttdeci">double fConvergence</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00146">PSO.h:146</a></div></div>
-<div class="ttc" id="aclassPSO_html_ae6c1bc89308fd18ffa8b043319029836"><div class="ttname"><a href="classPSO.html#ae6c1bc89308fd18ffa8b043319029836">PSO::fDim</a></div><div class="ttdeci">int fDim</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00157">PSO.h:157</a></div></div>
-<div class="ttc" id="aclassmanager_html_ab3999cc856ede72b37f68bdb28bd5520"><div class="ttname"><a href="classmanager.html#ab3999cc856ede72b37f68bdb28bd5520">manager::raw</a></div><div class="ttdeci">YAML::Node const &amp; raw()</div><div class="ttdoc">Return config.</div><div class="ttdef"><b>Definition</b> <a href="manager_8h_source.html#l00037">manager.h:37</a></div></div>
+<div class="ttc" id="aYamlHelper_8h_html_a1a6adcb8b24bfbdcb936ced6812e1b0c"><div class="ttname"><a href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">GetFromManager</a></div><div class="ttdeci">Type GetFromManager(const YAML::Node &amp;node, Type defval)</div><div class="ttdoc">Get content of config file if node is not found take default value specified.</div><div class="ttdef"><b>Definition</b> <a href="YamlHelper_8h_source.html#l00018">YamlHelper.h:18</a></div></div>
+<div class="ttc" id="aclassFitterBase_html_a4fceb68f242feeb04a0ddf42a5a37095"><div class="ttname"><a href="classFitterBase.html#a4fceb68f242feeb04a0ddf42a5a37095">FitterBase::fitMan</a></div><div class="ttdeci">manager * fitMan</div><div class="ttdoc">The manager.</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00083">FitterBase.h:83</a></div></div>
+<div class="ttc" id="aclassFitterBase_html_ada898e35bab22af470f2cd1e28af609b"><div class="ttname"><a href="classFitterBase.html#ada898e35bab22af470f2cd1e28af609b">FitterBase::fTestLikelihood</a></div><div class="ttdeci">bool fTestLikelihood</div><div class="ttdoc">Necessary for some fitting algorithms like PSO.</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00140">FitterBase.h:140</a></div></div>
+<div class="ttc" id="aclassLikelihoodFit_html"><div class="ttname"><a href="classLikelihoodFit.html">LikelihoodFit</a></div><div class="ttdoc">Implementation of base Likelihood Fit class, it is mostly responsible for likelihood calculation whil...</div><div class="ttdef"><b>Definition</b> <a href="LikelihoodFit_8h_source.html#l00006">LikelihoodFit.h:6</a></div></div>
+<div class="ttc" id="aclassPSO_html_a1c7ca23e5dcdf35cd6812b85221c0d4b"><div class="ttname"><a href="classPSO.html#a1c7ca23e5dcdf35cd6812b85221c0d4b">PSO::fConstriction</a></div><div class="ttdeci">double fConstriction</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00154">PSO.h:154</a></div></div>
+<div class="ttc" id="aclassPSO_html_a56539eb264d11e1c37674ad55504d454"><div class="ttname"><a href="classPSO.html#a56539eb264d11e1c37674ad55504d454">PSO::fTwo</a></div><div class="ttdeci">double fTwo</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00151">PSO.h:151</a></div></div>
+<div class="ttc" id="aclassPSO_html_a9b3d14a97a9d838a9f009f9cc54968d3"><div class="ttname"><a href="classPSO.html#a9b3d14a97a9d838a9f009f9cc54968d3">PSO::fInertia</a></div><div class="ttdeci">double fInertia</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00149">PSO.h:149</a></div></div>
+<div class="ttc" id="aclassPSO_html_a9e9da89144237a7f3369b9b3739e73ad"><div class="ttname"><a href="classPSO.html#a9e9da89144237a7f3369b9b3739e73ad">PSO::fParticles</a></div><div class="ttdeci">int fParticles</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00157">PSO.h:157</a></div></div>
+<div class="ttc" id="aclassPSO_html_aa02f509433bb6c25126a180ab27b8277"><div class="ttname"><a href="classPSO.html#aa02f509433bb6c25126a180ab27b8277">PSO::fOne</a></div><div class="ttdeci">double fOne</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00150">PSO.h:150</a></div></div>
+<div class="ttc" id="aclassPSO_html_aa2adb0a6985424439c44b8d0c7afec08"><div class="ttname"><a href="classPSO.html#aa2adb0a6985424439c44b8d0c7afec08">PSO::fIterations</a></div><div class="ttdeci">int fIterations</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00153">PSO.h:153</a></div></div>
+<div class="ttc" id="aclassPSO_html_ac9884499d5945597cb33ef0518f6f61e"><div class="ttname"><a href="classPSO.html#ac9884499d5945597cb33ef0518f6f61e">PSO::fConvergence</a></div><div class="ttdeci">double fConvergence</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00152">PSO.h:152</a></div></div>
+<div class="ttc" id="aclassPSO_html_ae6c1bc89308fd18ffa8b043319029836"><div class="ttname"><a href="classPSO.html#ae6c1bc89308fd18ffa8b043319029836">PSO::fDim</a></div><div class="ttdeci">int fDim</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00163">PSO.h:163</a></div></div>
+<div class="ttc" id="aclassmanager_html_ab3999cc856ede72b37f68bdb28bd5520"><div class="ttname"><a href="classmanager.html#ab3999cc856ede72b37f68bdb28bd5520">manager::raw</a></div><div class="ttdeci">YAML::Node const &amp; raw()</div><div class="ttdoc">Return config.</div><div class="ttdef"><b>Definition</b> <a href="manager_8h_source.html#l00047">manager.h:47</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a120de7511935d934568360acd1a68d2f" name="a120de7511935d934568360acd1a68d2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a120de7511935d934568360acd1a68d2f">&#9670;&#160;</a></span>~PSO()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">virtual</a> PSO::~PSO </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor. </p>
+
+<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00086">86</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   86</span>{};</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -423,7 +483,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  145</span>    std::vector&lt;std::vector&lt;double&gt;&gt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">uncertainties_list</a>;</div>
 <div class="line"><span class="lineno">  146</span>    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> = 0; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>&lt; position.size(); ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>){</div>
 <div class="line"><span class="lineno">  147</span>        std::cout &lt;&lt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  148</span>        std::vector&lt;double&gt; <a class="code hl_variable" href="classPSO.html#ad525975ef87127a49f78484366f264df">uncertainties</a>;</div>
+<div class="line"><span class="lineno">  148</span>        <span class="comment">//std::vector&lt;double&gt; uncertainties;</span></div>
 <div class="line"><span class="lineno">  149</span>        std::vector&lt;double&gt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">new_position</a> = position; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">new_position</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>] = position[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>]-<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">range</a>;</div>
 <div class="line"><span class="lineno">  150</span>        <span class="keywordtype">double</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">val_1</a> = <a class="code hl_function" href="classPSO.html#aca234a3a9776e5cbb94bd1ab57f27b01">CalcChi</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">new_position</a>)-<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">minimum</a>-1.0;</div>
 <div class="line"><span class="lineno">  151</span>        <span class="keywordflow">while</span> (<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">val_1</a>*-1.0&gt; 0.0){</div>
@@ -492,12 +552,11 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  214</span>        }</div>
 <div class="line"><span class="lineno">  215</span>        <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">uncertainties_list</a>.push_back({<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">abs</a>(position[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>]-<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">position_list</a>[1][<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>]),<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">abs</a>(position[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>]-<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">position_list_p</a>[1][<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>])});</div>
 <div class="line"><span class="lineno">  216</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;Uncertainty finished for d = &quot;</span>&lt;&lt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  217</span>        std::cout &lt;&lt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">setprecision</a>(10)&lt;&lt; <span class="stringliteral">&quot;LLR values for ± positive and negative uncertainties are &quot;</span> &lt;&lt; <a class="code hl_function" href="classPSO.html#aca234a3a9776e5cbb94bd1ab57f27b01">CalcChi</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">position_list</a>[1]) &lt;&lt; <span class="stringliteral">&quot; and &quot;</span> &lt;&lt; <a class="code hl_function" href="classPSO.html#aca234a3a9776e5cbb94bd1ab57f27b01">CalcChi</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">position_list_p</a>[1]) &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  217</span>        std::cout &lt;&lt; std::setprecision(10)&lt;&lt; <span class="stringliteral">&quot;LLR values for ± positive and negative uncertainties are &quot;</span> &lt;&lt; <a class="code hl_function" href="classPSO.html#aca234a3a9776e5cbb94bd1ab57f27b01">CalcChi</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">position_list</a>[1]) &lt;&lt; <span class="stringliteral">&quot; and &quot;</span> &lt;&lt; <a class="code hl_function" href="classPSO.html#aca234a3a9776e5cbb94bd1ab57f27b01">CalcChi</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">position_list_p</a>[1]) &lt;&lt; std::endl;</div>
 <div class="line"><span class="lineno">  218</span>    }</div>
 <div class="line"><span class="lineno">  219</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">uncertainties_list</a>;</div>
 <div class="line"><span class="lineno">  220</span>}</div>
-<div class="ttc" id="aclassPSO_html_aca234a3a9776e5cbb94bd1ab57f27b01"><div class="ttname"><a href="classPSO.html#aca234a3a9776e5cbb94bd1ab57f27b01">PSO::CalcChi</a></div><div class="ttdeci">double CalcChi(std::vector&lt; double &gt; x)</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00128">PSO.h:128</a></div></div>
-<div class="ttc" id="aclassPSO_html_ad525975ef87127a49f78484366f264df"><div class="ttname"><a href="classPSO.html#ad525975ef87127a49f78484366f264df">PSO::uncertainties</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; double &gt; &gt; uncertainties</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00149">PSO.h:149</a></div></div>
+<div class="ttc" id="aclassPSO_html_aca234a3a9776e5cbb94bd1ab57f27b01"><div class="ttname"><a href="classPSO.html#aca234a3a9776e5cbb94bd1ab57f27b01">PSO::CalcChi</a></div><div class="ttdeci">double CalcChi(std::vector&lt; double &gt; x)</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00134">PSO.h:134</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -542,55 +601,54 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  233</span>        <span class="keywordtype">double</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">start</a> = position[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>];</div>
 <div class="line"><span class="lineno">  234</span>        std::vector&lt;double&gt; x(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">num</a>);</div>
 <div class="line"><span class="lineno">  235</span>        std::vector&lt;double&gt; y(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">num</a>);</div>
-<div class="line"><span class="lineno">  236</span>        <span class="keywordtype">double</span> <a class="code hl_variable" href="classFitterBase.html#a50df1bd75b20a953f81ab9c2bab6b42c">step</a> = (<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">start</a>-<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">neg_stop</a>) / (<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">num</a> - 1);</div>
+<div class="line"><span class="lineno">  236</span>        <span class="keywordtype">double</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">StepPoint</a> = (<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">start</a>-<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">neg_stop</a>) / (<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">num</a> - 1);</div>
 <div class="line"><span class="lineno">  237</span>        <span class="keywordtype">double</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">value</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">start</a>;</div>
 <div class="line"><span class="lineno">  238</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">j</a> = 0; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">j</a> &lt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">num</a>; ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">j</a>) {</div>
-<div class="line"><span class="lineno">  239</span>            <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pos</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>] = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">value</a>;</div>
-<div class="line"><span class="lineno">  240</span>            <span class="keywordtype">double</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">LLR</a> = <a class="code hl_function" href="classPSO.html#aca234a3a9776e5cbb94bd1ab57f27b01">CalcChi</a>(position) - <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">minimum</a> - 1.0;</div>
-<div class="line"><span class="lineno">  241</span>            x[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">j</a>] = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">value</a>;</div>
-<div class="line"><span class="lineno">  242</span>            y[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">j</a>] = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">LLR</a>;</div>
-<div class="line"><span class="lineno">  243</span>            <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">value</a> -= <a class="code hl_variable" href="classFitterBase.html#a50df1bd75b20a953f81ab9c2bab6b42c">step</a>;</div>
+<div class="line"><span class="lineno">  239</span>          <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pos</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>] = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">value</a>;</div>
+<div class="line"><span class="lineno">  240</span>          <span class="keywordtype">double</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">LLR</a> = <a class="code hl_function" href="classPSO.html#aca234a3a9776e5cbb94bd1ab57f27b01">CalcChi</a>(position) - <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">minimum</a> - 1.0;</div>
+<div class="line"><span class="lineno">  241</span>          x[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">j</a>] = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">value</a>;</div>
+<div class="line"><span class="lineno">  242</span>          y[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">j</a>] = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">LLR</a>;</div>
+<div class="line"><span class="lineno">  243</span>          <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">value</a> -= <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">StepPoint</a>;</div>
 <div class="line"><span class="lineno">  244</span>        }</div>
 <div class="line"><span class="lineno">  245</span>        <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pos</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>] = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">curr_ival</a>;</div>
 <div class="line"><span class="lineno">  246</span> </div>
 <div class="line"><span class="lineno">  247</span>        <span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">closest_index</a> = 0;</div>
 <div class="line"><span class="lineno">  248</span>        <span class="keywordtype">double</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">closest_value</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">abs</a>(y[0]); <span class="comment">// Initialize with the first element</span></div>
-<div class="line"><span class="lineno">  249</span>        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> = 1; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> &lt; y.size(); ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>) {</div>
-<div class="line"><span class="lineno">  250</span>            <span class="keywordtype">double</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">abs_y</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">abs</a>(y[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>]);</div>
-<div class="line"><span class="lineno">  251</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">abs_y</a> &lt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">closest_value</a>) {</div>
-<div class="line"><span class="lineno">  252</span>                <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">closest_index</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>;</div>
-<div class="line"><span class="lineno">  253</span>                <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">closest_value</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">abs_y</a>;</div>
-<div class="line"><span class="lineno">  254</span>            }</div>
+<div class="line"><span class="lineno">  249</span>        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ii</a> = 1; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ii</a> &lt; y.size(); ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ii</a>) {</div>
+<div class="line"><span class="lineno">  250</span>          <span class="keywordtype">double</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">abs_y</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">abs</a>(y[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ii</a>]);</div>
+<div class="line"><span class="lineno">  251</span>          <span class="keywordflow">if</span> (<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">abs_y</a> &lt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">closest_value</a>) {</div>
+<div class="line"><span class="lineno">  252</span>            <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">closest_index</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ii</a>;</div>
+<div class="line"><span class="lineno">  253</span>            <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">closest_value</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">abs_y</a>;</div>
+<div class="line"><span class="lineno">  254</span>          }</div>
 <div class="line"><span class="lineno">  255</span>        }</div>
 <div class="line"><span class="lineno">  256</span>        <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">neg_uncertainty</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>] = x[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">closest_index</a>];</div>
 <div class="line"><span class="lineno">  257</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;Neg&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><span class="lineno">  258</span>        x.assign(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">num</a>, 0);</div>
 <div class="line"><span class="lineno">  259</span>        y.assign(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">num</a>, 0);</div>
-<div class="line"><span class="lineno">  260</span>        <a class="code hl_variable" href="classFitterBase.html#a50df1bd75b20a953f81ab9c2bab6b42c">step</a> = (<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pos_stop</a>-<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">start</a>) / (<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">num</a> - 1);</div>
+<div class="line"><span class="lineno">  260</span>        <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">StepPoint</a> = (<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pos_stop</a>-<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">start</a>) / (<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">num</a> - 1);</div>
 <div class="line"><span class="lineno">  261</span>        <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">value</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">start</a>;</div>
 <div class="line"><span class="lineno">  262</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">j</a> = 0; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">j</a> &lt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">num</a>; ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">j</a>) {</div>
-<div class="line"><span class="lineno">  263</span>            <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pos</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>] = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">value</a>;</div>
-<div class="line"><span class="lineno">  264</span>            <span class="keywordtype">double</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">LLR</a> = <a class="code hl_function" href="classPSO.html#aca234a3a9776e5cbb94bd1ab57f27b01">CalcChi</a>(position) - <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">minimum</a> - 1.0;</div>
-<div class="line"><span class="lineno">  265</span>            x[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">j</a>] = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">value</a>;</div>
-<div class="line"><span class="lineno">  266</span>            y[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">j</a>] = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">LLR</a>;</div>
-<div class="line"><span class="lineno">  267</span>            <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">value</a> += <a class="code hl_variable" href="classFitterBase.html#a50df1bd75b20a953f81ab9c2bab6b42c">step</a>;</div>
+<div class="line"><span class="lineno">  263</span>          <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pos</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>] = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">value</a>;</div>
+<div class="line"><span class="lineno">  264</span>          <span class="keywordtype">double</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">LLR</a> = <a class="code hl_function" href="classPSO.html#aca234a3a9776e5cbb94bd1ab57f27b01">CalcChi</a>(position) - <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">minimum</a> - 1.0;</div>
+<div class="line"><span class="lineno">  265</span>          x[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">j</a>] = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">value</a>;</div>
+<div class="line"><span class="lineno">  266</span>          y[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">j</a>] = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">LLR</a>;</div>
+<div class="line"><span class="lineno">  267</span>          <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">value</a> += <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">StepPoint</a>;</div>
 <div class="line"><span class="lineno">  268</span>        }</div>
 <div class="line"><span class="lineno">  269</span>        <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pos</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>] = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">curr_ival</a>;</div>
 <div class="line"><span class="lineno">  270</span>        <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">closest_index</a> = 0;</div>
 <div class="line"><span class="lineno">  271</span>        <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">closest_value</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">abs</a>(y[0]); <span class="comment">// Initialize with the first element</span></div>
-<div class="line"><span class="lineno">  272</span>        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> = 1; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> &lt; y.size(); ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>) {</div>
-<div class="line"><span class="lineno">  273</span>            <span class="keywordtype">double</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">abs_y</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">abs</a>(y[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>]);</div>
-<div class="line"><span class="lineno">  274</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">abs_y</a> &lt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">closest_value</a>) {</div>
-<div class="line"><span class="lineno">  275</span>                <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">closest_index</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>;</div>
-<div class="line"><span class="lineno">  276</span>                <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">closest_value</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">abs_y</a>;</div>
-<div class="line"><span class="lineno">  277</span>            }</div>
+<div class="line"><span class="lineno">  272</span>        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ii</a> = 1; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ii</a> &lt; y.size(); ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ii</a>) {</div>
+<div class="line"><span class="lineno">  273</span>          <span class="keywordtype">double</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">abs_y</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">abs</a>(y[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ii</a>]);</div>
+<div class="line"><span class="lineno">  274</span>          <span class="keywordflow">if</span> (<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">abs_y</a> &lt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">closest_value</a>) {</div>
+<div class="line"><span class="lineno">  275</span>            <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">closest_index</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ii</a>;</div>
+<div class="line"><span class="lineno">  276</span>            <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">closest_value</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">abs_y</a>;</div>
+<div class="line"><span class="lineno">  277</span>          }</div>
 <div class="line"><span class="lineno">  278</span>        } </div>
 <div class="line"><span class="lineno">  279</span>        <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pos_uncertainty</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>] = x[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">closest_index</a>];</div>
 <div class="line"><span class="lineno">  280</span>    } </div>
 <div class="line"><span class="lineno">  281</span>    std::vector&lt;std::vector&lt;double&gt;&gt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">res</a>{<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">neg_uncertainty</a>,<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pos_uncertainty</a>};</div>
 <div class="line"><span class="lineno">  282</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">res</a>;</div>
 <div class="line"><span class="lineno">  283</span>}</div>
-<div class="ttc" id="aclassFitterBase_html_a50df1bd75b20a953f81ab9c2bab6b42c"><div class="ttname"><a href="classFitterBase.html#a50df1bd75b20a953f81ab9c2bab6b42c">FitterBase::step</a></div><div class="ttdeci">unsigned int step</div><div class="ttdoc">current state</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00071">FitterBase.h:71</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -618,11 +676,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00128">128</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  128</span>                                           {</div>
-<div class="line"><span class="lineno">  129</span>            <span class="keywordtype">double</span>* a = &amp;x[0];</div>
-<div class="line"><span class="lineno">  130</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="classPSO.html#a42f873a16ad3d3d9809262a01bf68538">CalcChi2</a>(a);</div>
-<div class="line"><span class="lineno">  131</span>        };</div>
+<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00134">134</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  134</span>                                           {</div>
+<div class="line"><span class="lineno">  135</span>            <span class="keywordtype">double</span>* <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">a</a> = &amp;x[0];</div>
+<div class="line"><span class="lineno">  136</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="classPSO.html#a42f873a16ad3d3d9809262a01bf68538">CalcChi2</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">a</a>);</div>
+<div class="line"><span class="lineno">  137</span>        };</div>
 <div class="ttc" id="aclassPSO_html_a42f873a16ad3d3d9809262a01bf68538"><div class="ttname"><a href="classPSO.html#a42f873a16ad3d3d9809262a01bf68538">PSO::CalcChi2</a></div><div class="ttdeci">double CalcChi2(const double *x)</div><div class="ttdoc">Chi2 calculation over all included samples and syst objects.</div><div class="ttdef"><b>Definition</b> <a href="PSO_8cpp_source.html#l00516">PSO.cpp:516</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -668,7 +726,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  525</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="classLikelihoodFit.html#af7383703e9f93e5aebcf699d80a6fb9e">LikelihoodFit::CalcChi2</a>(x);</div>
 <div class="line"><span class="lineno">  526</span>  }</div>
 <div class="line"><span class="lineno">  527</span>}</div>
-<div class="ttc" id="aclassLikelihoodFit_html_af7383703e9f93e5aebcf699d80a6fb9e"><div class="ttname"><a href="classLikelihoodFit.html#af7383703e9f93e5aebcf699d80a6fb9e">LikelihoodFit::CalcChi2</a></div><div class="ttdeci">virtual double CalcChi2(const double *x)</div><div class="ttdoc">Chi2 calculation over all included samples and syst objects.</div><div class="ttdef"><b>Definition</b> <a href="LikelihoodFit_8cpp_source.html#l00045">LikelihoodFit.cpp:45</a></div></div>
+<div class="ttc" id="aclassLikelihoodFit_html_af7383703e9f93e5aebcf699d80a6fb9e"><div class="ttname"><a href="classLikelihoodFit.html#af7383703e9f93e5aebcf699d80a6fb9e">LikelihoodFit::CalcChi2</a></div><div class="ttdeci">virtual double CalcChi2(const double *x)</div><div class="ttdoc">Chi2 calculation over all included samples and syst objects.</div><div class="ttdef"><b>Definition</b> <a href="LikelihoodFit_8cpp_source.html#l00044">LikelihoodFit.cpp:44</a></div></div>
 <div class="ttc" id="aclassPSO_html_afa217959928bddc4afe24e6292448140"><div class="ttname"><a href="classPSO.html#afa217959928bddc4afe24e6292448140">PSO::rastriginFunc</a></div><div class="ttdeci">double rastriginFunc(const double *x)</div><div class="ttdef"><b>Definition</b> <a href="PSO_8cpp_source.html#l00531">PSO.cpp:531</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -719,13 +777,13 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00121">121</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  121</span>                                                                                                                                            {</div>
-<div class="line"><span class="lineno">  122</span>            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> = 0; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> &lt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">vec1</a>.size(); ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>) {</div>
-<div class="line"><span class="lineno">  123</span>                <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">vec1</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>] += <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">vec2</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>] + <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">vec3</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>] + <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">vec4</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>];</div>
-<div class="line"><span class="lineno">  124</span>            }</div>
-<div class="line"><span class="lineno">  125</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">vec1</a>;</div>
-<div class="line"><span class="lineno">  126</span>        };</div>
+<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00127">127</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  127</span>                                                                                                                                            {</div>
+<div class="line"><span class="lineno">  128</span>            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> = 0; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> &lt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">vec1</a>.size(); ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>) {</div>
+<div class="line"><span class="lineno">  129</span>                <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">vec1</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>] += <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">vec2</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>] + <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">vec3</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>] + <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">vec4</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>];</div>
+<div class="line"><span class="lineno">  130</span>            }</div>
+<div class="line"><span class="lineno">  131</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">vec1</a>;</div>
+<div class="line"><span class="lineno">  132</span>        };</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -752,11 +810,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00082">82</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   82</span>                                     {</div>
-<div class="line"><span class="lineno">   83</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classPSO.html#aaf8a31e5604b900ce5702910d7e12c15">best_particle</a>;</div>
-<div class="line"><span class="lineno">   84</span>        }</div>
-<div class="ttc" id="aclassPSO_html_aaf8a31e5604b900ce5702910d7e12c15"><div class="ttname"><a href="classPSO.html#aaf8a31e5604b900ce5702910d7e12c15">PSO::best_particle</a></div><div class="ttdeci">particle * best_particle</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00136">PSO.h:136</a></div></div>
+<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00088">88</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   88</span>                                     {</div>
+<div class="line"><span class="lineno">   89</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="classPSO.html#aaf8a31e5604b900ce5702910d7e12c15">best_particle</a>;</div>
+<div class="line"><span class="lineno">   90</span>        }</div>
+<div class="ttc" id="aclassPSO_html_aaf8a31e5604b900ce5702910d7e12c15"><div class="ttname"><a href="classPSO.html#aaf8a31e5604b900ce5702910d7e12c15">PSO::best_particle</a></div><div class="ttdeci">particle * best_particle</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00142">PSO.h:142</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -787,8 +845,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classLikelihoodFit.html#aff5ac0361aa016cebb24d4687e0da4ac">LikelihoodFit</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00133">133</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  133</span>{<span class="keywordflow">return</span> <span class="stringliteral">&quot;PSO&quot;</span>;};</div>
+<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00139">139</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  139</span>{<span class="keywordflow">return</span> <span class="stringliteral">&quot;PSO&quot;</span>;};</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -831,8 +889,8 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   63</span>        <span class="keywordflow">for</span> (std::vector&lt;covarianceBase*&gt;::iterator <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">it</a> = <a class="code hl_variable" href="classFitterBase.html#a3a15d2348b7bf0a639aaab52b9294bbf">systematics</a>.begin(); <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">it</a> != <a class="code hl_variable" href="classFitterBase.html#a3a15d2348b7bf0a639aaab52b9294bbf">systematics</a>.end(); ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">it</a>){</div>
 <div class="line"><span class="lineno">   64</span>            <span class="keywordflow">if</span>(!(*it)-&gt;IsPCA())</div>
 <div class="line"><span class="lineno">   65</span>            {</div>
-<div class="line"><span class="lineno">   66</span>                <a class="code hl_variable" href="classPSO.html#ae6c1bc89308fd18ffa8b043319029836">fDim</a> += (*it)-&gt;getSize();</div>
-<div class="line"><span class="lineno">   67</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> = 0; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> &lt; (*it)-&gt;getSize(); ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>)</div>
+<div class="line"><span class="lineno">   66</span>                <a class="code hl_variable" href="classPSO.html#ae6c1bc89308fd18ffa8b043319029836">fDim</a> += (*it)-&gt;GetNumParams();</div>
+<div class="line"><span class="lineno">   67</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> = 0; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> &lt; (*it)-&gt;GetNumParams(); ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>)</div>
 <div class="line"><span class="lineno">   68</span>                {</div>
 <div class="line"><span class="lineno">   69</span>                    <span class="keywordtype">double</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">curr</a> = (*it)-&gt;getParInit(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>);</div>
 <div class="line"><span class="lineno">   70</span>                    <span class="keywordtype">double</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">lim</a> = 10.0*(*it)-&gt;getDiagonalError(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>);</div>
@@ -908,16 +966,16 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  140</span>        }</div>
 <div class="line"><span class="lineno">  141</span>    }</div>
 <div class="line"><span class="lineno">  142</span>}</div>
-<div class="ttc" id="aclassFitterBase_html_a2d3be9c591eaf8454e2eb5b4e12c6e67"><div class="ttname"><a href="classFitterBase.html#a2d3be9c591eaf8454e2eb5b4e12c6e67">FitterBase::random</a></div><div class="ttdeci">TRandom3 * random</div><div class="ttdoc">Random number.</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00108">FitterBase.h:108</a></div></div>
-<div class="ttc" id="aclassFitterBase_html_a3a15d2348b7bf0a639aaab52b9294bbf"><div class="ttname"><a href="classFitterBase.html#a3a15d2348b7bf0a639aaab52b9294bbf">FitterBase::systematics</a></div><div class="ttdeci">std::vector&lt; covarianceBase * &gt; systematics</div><div class="ttdoc">Systematic holder.</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00093">FitterBase.h:93</a></div></div>
-<div class="ttc" id="aclassPSO_html_a1c5454d8b4000375138447cada8a46a2"><div class="ttname"><a href="classPSO.html#a1c5454d8b4000375138447cada8a46a2">PSO::ranges_max</a></div><div class="ttdeci">std::vector&lt; double &gt; ranges_max</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00140">PSO.h:140</a></div></div>
-<div class="ttc" id="aclassPSO_html_a90cf855167748b488851c559de49283c"><div class="ttname"><a href="classPSO.html#a90cf855167748b488851c559de49283c">PSO::fixed</a></div><div class="ttdeci">std::vector&lt; bool &gt; fixed</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00139">PSO.h:139</a></div></div>
-<div class="ttc" id="aclassPSO_html_ab7aad43d851d0dd8e6a8ea732ad1fa12"><div class="ttname"><a href="classPSO.html#ab7aad43d851d0dd8e6a8ea732ad1fa12">PSO::set_best_particle</a></div><div class="ttdeci">void set_best_particle(particle *n)</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00085">PSO.h:85</a></div></div>
-<div class="ttc" id="aclassPSO_html_ac17850adb6f660f8aded97456f52b140"><div class="ttname"><a href="classPSO.html#ac17850adb6f660f8aded97456f52b140">PSO::system</a></div><div class="ttdeci">std::vector&lt; particle * &gt; system</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00142">PSO.h:142</a></div></div>
-<div class="ttc" id="aclassPSO_html_ad28ca8bc8c7864a753b1cfa72733c148"><div class="ttname"><a href="classPSO.html#ad28ca8bc8c7864a753b1cfa72733c148">PSO::fBestValue</a></div><div class="ttdeci">double fBestValue</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00137">PSO.h:137</a></div></div>
-<div class="ttc" id="aclassPSO_html_ad9824964649e96ac13d89d47bd5a5174"><div class="ttname"><a href="classPSO.html#ad9824964649e96ac13d89d47bd5a5174">PSO::ranges_min</a></div><div class="ttdeci">std::vector&lt; double &gt; ranges_min</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00141">PSO.h:141</a></div></div>
-<div class="ttc" id="aclassPSO_html_afac1699007d3838da90d466bf4b69b31"><div class="ttname"><a href="classPSO.html#afac1699007d3838da90d466bf4b69b31">PSO::prior</a></div><div class="ttdeci">std::vector&lt; double &gt; prior</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00138">PSO.h:138</a></div></div>
-<div class="ttc" id="aclassparticle_html"><div class="ttname"><a href="classparticle.html">particle</a></div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00013">PSO.h:13</a></div></div>
+<div class="ttc" id="aclassFitterBase_html_a2d3be9c591eaf8454e2eb5b4e12c6e67"><div class="ttname"><a href="classFitterBase.html#a2d3be9c591eaf8454e2eb5b4e12c6e67">FitterBase::random</a></div><div class="ttdeci">TRandom3 * random</div><div class="ttdoc">Random number.</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00128">FitterBase.h:128</a></div></div>
+<div class="ttc" id="aclassFitterBase_html_a3a15d2348b7bf0a639aaab52b9294bbf"><div class="ttname"><a href="classFitterBase.html#a3a15d2348b7bf0a639aaab52b9294bbf">FitterBase::systematics</a></div><div class="ttdeci">std::vector&lt; covarianceBase * &gt; systematics</div><div class="ttdoc">Systematic holder.</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00113">FitterBase.h:113</a></div></div>
+<div class="ttc" id="aclassPSO_html_a1c5454d8b4000375138447cada8a46a2"><div class="ttname"><a href="classPSO.html#a1c5454d8b4000375138447cada8a46a2">PSO::ranges_max</a></div><div class="ttdeci">std::vector&lt; double &gt; ranges_max</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00146">PSO.h:146</a></div></div>
+<div class="ttc" id="aclassPSO_html_a90cf855167748b488851c559de49283c"><div class="ttname"><a href="classPSO.html#a90cf855167748b488851c559de49283c">PSO::fixed</a></div><div class="ttdeci">std::vector&lt; bool &gt; fixed</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00145">PSO.h:145</a></div></div>
+<div class="ttc" id="aclassPSO_html_ab7aad43d851d0dd8e6a8ea732ad1fa12"><div class="ttname"><a href="classPSO.html#ab7aad43d851d0dd8e6a8ea732ad1fa12">PSO::set_best_particle</a></div><div class="ttdeci">void set_best_particle(particle *n)</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00091">PSO.h:91</a></div></div>
+<div class="ttc" id="aclassPSO_html_ac17850adb6f660f8aded97456f52b140"><div class="ttname"><a href="classPSO.html#ac17850adb6f660f8aded97456f52b140">PSO::system</a></div><div class="ttdeci">std::vector&lt; particle * &gt; system</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00148">PSO.h:148</a></div></div>
+<div class="ttc" id="aclassPSO_html_ad28ca8bc8c7864a753b1cfa72733c148"><div class="ttname"><a href="classPSO.html#ad28ca8bc8c7864a753b1cfa72733c148">PSO::fBestValue</a></div><div class="ttdeci">double fBestValue</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00143">PSO.h:143</a></div></div>
+<div class="ttc" id="aclassPSO_html_ad9824964649e96ac13d89d47bd5a5174"><div class="ttname"><a href="classPSO.html#ad9824964649e96ac13d89d47bd5a5174">PSO::ranges_min</a></div><div class="ttdeci">std::vector&lt; double &gt; ranges_min</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00147">PSO.h:147</a></div></div>
+<div class="ttc" id="aclassPSO_html_afac1699007d3838da90d466bf4b69b31"><div class="ttname"><a href="classPSO.html#afac1699007d3838da90d466bf4b69b31">PSO::prior</a></div><div class="ttdeci">std::vector&lt; double &gt; prior</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00144">PSO.h:144</a></div></div>
+<div class="ttc" id="aclassparticle_html"><div class="ttname"><a href="classparticle.html">particle</a></div><div class="ttdoc">Class particle - stores the position, velocity and personal best With functions which move particle a...</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00018">PSO.h:18</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -958,9 +1016,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  548</span> </div>
 <div class="line"><span class="lineno">  549</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">llh</a>;</div>
 <div class="line"><span class="lineno">  550</span>}</div>
-<div class="ttc" id="aclassFitterBase_html_a1e47b6114574f59c10ad01567ae92198"><div class="ttname"><a href="classFitterBase.html#a1e47b6114574f59c10ad01567ae92198">FitterBase::stepClock</a></div><div class="ttdeci">TStopwatch * stepClock</div><div class="ttdoc">tells how long single step/fit iteration took</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00103">FitterBase.h:103</a></div></div>
-<div class="ttc" id="aclassFitterBase_html_a6319d2ea50984860475bbc6c708b0d90"><div class="ttname"><a href="classFitterBase.html#a6319d2ea50984860475bbc6c708b0d90">FitterBase::accProb</a></div><div class="ttdeci">double accProb</div><div class="ttdoc">current acceptance prob</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00077">FitterBase.h:77</a></div></div>
-<div class="ttc" id="aclassFitterBase_html_a8354e9a7a9cc534277ff76ab37c9a763"><div class="ttname"><a href="classFitterBase.html#a8354e9a7a9cc534277ff76ab37c9a763">FitterBase::stepTime</a></div><div class="ttdeci">double stepTime</div><div class="ttdoc">Time of single step.</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00105">FitterBase.h:105</a></div></div>
+<div class="ttc" id="aclassFitterBase_html_a1e47b6114574f59c10ad01567ae92198"><div class="ttname"><a href="classFitterBase.html#a1e47b6114574f59c10ad01567ae92198">FitterBase::stepClock</a></div><div class="ttdeci">TStopwatch * stepClock</div><div class="ttdoc">tells how long single step/fit iteration took</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00123">FitterBase.h:123</a></div></div>
+<div class="ttc" id="aclassFitterBase_html_a6319d2ea50984860475bbc6c708b0d90"><div class="ttname"><a href="classFitterBase.html#a6319d2ea50984860475bbc6c708b0d90">FitterBase::accProb</a></div><div class="ttdeci">double accProb</div><div class="ttdoc">current acceptance prob</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00095">FitterBase.h:95</a></div></div>
+<div class="ttc" id="aclassFitterBase_html_a8354e9a7a9cc534277ff76ab37c9a763"><div class="ttname"><a href="classFitterBase.html#a8354e9a7a9cc534277ff76ab37c9a763">FitterBase::stepTime</a></div><div class="ttdeci">double stepTime</div><div class="ttdoc">Time of single step.</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00125">FitterBase.h:125</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1005,7 +1063,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  403</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Current LLR = &quot;</span> &lt;&lt; <a class="code hl_variable" href="classPSO.html#ad28ca8bc8c7864a753b1cfa72733c148">fBestValue</a> &lt;&lt; std::endl;</div>
 <div class="line"><span class="lineno">  404</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Position = &quot;</span> &lt;&lt;std::endl;</div>
 <div class="line"><span class="lineno">  405</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">j</a> = 0; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">j</a>&lt; <a class="code hl_variable" href="classPSO.html#ae6c1bc89308fd18ffa8b043319029836">fDim</a>; ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">j</a>){</div>
-<div class="line"><span class="lineno">  406</span>                std::cout &lt;&lt; <span class="stringliteral">&quot;    Dim &quot;</span> &lt;&lt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">j</a> &lt;&lt; <span class="stringliteral">&quot; = &quot;</span> &lt;&lt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">setprecision</a>(10) &lt;&lt; <a class="code hl_function" href="classPSO.html#a9c915f7ef789c499d7f9d2e3c31fb2bf">get_best_particle</a>()-&gt;<a class="code hl_function" href="classparticle.html#a49e62920bb60565abfe3e186b313744e">get_personal_best_position</a>()[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">j</a>] &lt;&lt; std::endl; </div>
+<div class="line"><span class="lineno">  406</span>                std::cout &lt;&lt; <span class="stringliteral">&quot;    Dim &quot;</span> &lt;&lt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">j</a> &lt;&lt; <span class="stringliteral">&quot; = &quot;</span> &lt;&lt; std::setprecision(10) &lt;&lt; <a class="code hl_function" href="classPSO.html#a9c915f7ef789c499d7f9d2e3c31fb2bf">get_best_particle</a>()-&gt;<a class="code hl_function" href="classparticle.html#a49e62920bb60565abfe3e186b313744e">get_personal_best_position</a>()[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">j</a>] &lt;&lt; std::endl;</div>
 <div class="line"><span class="lineno">  407</span>            }</div>
 <div class="line"><span class="lineno">  408</span>            </div>
 <div class="line"><span class="lineno">  409</span>        }</div>
@@ -1022,18 +1080,20 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  420</span>    <a class="code hl_variable" href="classPSO.html#ad525975ef87127a49f78484366f264df">uncertainties</a> = <a class="code hl_function" href="classPSO.html#af45f4a02f49c33401588a12f667e7380">bisection</a>(<a class="code hl_function" href="classPSO.html#a9c915f7ef789c499d7f9d2e3c31fb2bf">get_best_particle</a>()-&gt;get_personal_best_position(),<a class="code hl_function" href="classPSO.html#a9c915f7ef789c499d7f9d2e3c31fb2bf">get_best_particle</a>()-&gt;get_personal_best_value(),0.5,0.005);</div>
 <div class="line"><span class="lineno">  421</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Position for Global Minimum = &quot;</span>&lt;&lt;std::endl;</div>
 <div class="line"><span class="lineno">  422</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> = 0; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>&lt; <a class="code hl_variable" href="classPSO.html#ae6c1bc89308fd18ffa8b043319029836">fDim</a>; ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>){</div>
-<div class="line"><span class="lineno">  423</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;    Dim &quot;</span> &lt;&lt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> &lt;&lt; <span class="stringliteral">&quot; = &quot;</span> &lt;&lt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">setprecision</a>(10) &lt;&lt; <a class="code hl_function" href="classPSO.html#a9c915f7ef789c499d7f9d2e3c31fb2bf">get_best_particle</a>()-&gt;<a class="code hl_function" href="classparticle.html#a49e62920bb60565abfe3e186b313744e">get_personal_best_position</a>()[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>]  &lt;&lt; <span class="stringliteral">&quot; +&quot;</span> &lt;&lt; <a class="code hl_variable" href="classPSO.html#ad525975ef87127a49f78484366f264df">uncertainties</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>][1] &lt;&lt; <span class="stringliteral">&quot;, -&quot;</span> &lt;&lt;  <a class="code hl_variable" href="classPSO.html#ad525975ef87127a49f78484366f264df">uncertainties</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>][0] &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  423</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;    Dim &quot;</span> &lt;&lt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> &lt;&lt; <span class="stringliteral">&quot; = &quot;</span> &lt;&lt; std::setprecision(10) &lt;&lt; <a class="code hl_function" href="classPSO.html#a9c915f7ef789c499d7f9d2e3c31fb2bf">get_best_particle</a>()-&gt;<a class="code hl_function" href="classparticle.html#a49e62920bb60565abfe3e186b313744e">get_personal_best_position</a>()[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>]  &lt;&lt; <span class="stringliteral">&quot; +&quot;</span> &lt;&lt; <a class="code hl_variable" href="classPSO.html#ad525975ef87127a49f78484366f264df">uncertainties</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>][1] &lt;&lt; <span class="stringliteral">&quot;, -&quot;</span> &lt;&lt;  <a class="code hl_variable" href="classPSO.html#ad525975ef87127a49f78484366f264df">uncertainties</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>][0] &lt;&lt; std::endl;</div>
 <div class="line"><span class="lineno">  424</span>    }</div>
 <div class="line"><span class="lineno">  425</span>}</div>
-<div class="ttc" id="aclassFitterBase_html_a2774f3a0047c4347ee0db05406425f79"><div class="ttname"><a href="classFitterBase.html#a2774f3a0047c4347ee0db05406425f79">FitterBase::accCount</a></div><div class="ttdeci">int accCount</div><div class="ttdoc">counts accepted steps</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00079">FitterBase.h:79</a></div></div>
-<div class="ttc" id="aclassFitterBase_html_abfb6f10720764d8bbbe43754fd5cd976"><div class="ttname"><a href="classFitterBase.html#abfb6f10720764d8bbbe43754fd5cd976">FitterBase::logLCurr</a></div><div class="ttdeci">double logLCurr</div><div class="ttdoc">current likelihood</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00073">FitterBase.h:73</a></div></div>
-<div class="ttc" id="aclassFitterBase_html_ad955982e63066918cba9c53381608d09"><div class="ttname"><a href="classFitterBase.html#ad955982e63066918cba9c53381608d09">FitterBase::auto_save</a></div><div class="ttdeci">int auto_save</div><div class="ttdoc">auto save every N steps</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00117">FitterBase.h:117</a></div></div>
-<div class="ttc" id="aclassFitterBase_html_aed2032b9c4a4f2248abe548f54f8dcc8"><div class="ttname"><a href="classFitterBase.html#aed2032b9c4a4f2248abe548f54f8dcc8">FitterBase::outTree</a></div><div class="ttdeci">TTree * outTree</div><div class="ttdoc">Output tree with posteriors.</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00115">FitterBase.h:115</a></div></div>
-<div class="ttc" id="aclassPSO_html_a9c915f7ef789c499d7f9d2e3c31fb2bf"><div class="ttname"><a href="classPSO.html#a9c915f7ef789c499d7f9d2e3c31fb2bf">PSO::get_best_particle</a></div><div class="ttdeci">particle * get_best_particle()</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00082">PSO.h:82</a></div></div>
+<div class="ttc" id="aclassFitterBase_html_a2774f3a0047c4347ee0db05406425f79"><div class="ttname"><a href="classFitterBase.html#a2774f3a0047c4347ee0db05406425f79">FitterBase::accCount</a></div><div class="ttdeci">int accCount</div><div class="ttdoc">counts accepted steps</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00097">FitterBase.h:97</a></div></div>
+<div class="ttc" id="aclassFitterBase_html_a50df1bd75b20a953f81ab9c2bab6b42c"><div class="ttname"><a href="classFitterBase.html#a50df1bd75b20a953f81ab9c2bab6b42c">FitterBase::step</a></div><div class="ttdeci">unsigned int step</div><div class="ttdoc">current state</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00089">FitterBase.h:89</a></div></div>
+<div class="ttc" id="aclassFitterBase_html_abfb6f10720764d8bbbe43754fd5cd976"><div class="ttname"><a href="classFitterBase.html#abfb6f10720764d8bbbe43754fd5cd976">FitterBase::logLCurr</a></div><div class="ttdeci">double logLCurr</div><div class="ttdoc">current likelihood</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00091">FitterBase.h:91</a></div></div>
+<div class="ttc" id="aclassFitterBase_html_ad955982e63066918cba9c53381608d09"><div class="ttname"><a href="classFitterBase.html#ad955982e63066918cba9c53381608d09">FitterBase::auto_save</a></div><div class="ttdeci">int auto_save</div><div class="ttdoc">auto save every N steps</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00137">FitterBase.h:137</a></div></div>
+<div class="ttc" id="aclassFitterBase_html_aed2032b9c4a4f2248abe548f54f8dcc8"><div class="ttname"><a href="classFitterBase.html#aed2032b9c4a4f2248abe548f54f8dcc8">FitterBase::outTree</a></div><div class="ttdeci">TTree * outTree</div><div class="ttdoc">Output tree with posteriors.</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00135">FitterBase.h:135</a></div></div>
+<div class="ttc" id="aclassPSO_html_a9c915f7ef789c499d7f9d2e3c31fb2bf"><div class="ttname"><a href="classPSO.html#a9c915f7ef789c499d7f9d2e3c31fb2bf">PSO::get_best_particle</a></div><div class="ttdeci">particle * get_best_particle()</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00088">PSO.h:88</a></div></div>
+<div class="ttc" id="aclassPSO_html_ad525975ef87127a49f78484366f264df"><div class="ttname"><a href="classPSO.html#ad525975ef87127a49f78484366f264df">PSO::uncertainties</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; double &gt; &gt; uncertainties</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00155">PSO.h:155</a></div></div>
 <div class="ttc" id="aclassPSO_html_af45f4a02f49c33401588a12f667e7380"><div class="ttname"><a href="classPSO.html#af45f4a02f49c33401588a12f667e7380">PSO::bisection</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; double &gt; &gt; bisection(std::vector&lt; double &gt;position, double minimum, double range, double precision)</div><div class="ttdef"><b>Definition</b> <a href="PSO_8cpp_source.html#l00144">PSO.cpp:144</a></div></div>
 <div class="ttc" id="aclassPSO_html_af7b07ec9013e1d6859d7ffa8e54086c7"><div class="ttname"><a href="classPSO.html#af7b07ec9013e1d6859d7ffa8e54086c7">PSO::swarmIterate</a></div><div class="ttdeci">double swarmIterate()</div><div class="ttdef"><b>Definition</b> <a href="PSO_8cpp_source.html#l00321">PSO.cpp:321</a></div></div>
-<div class="ttc" id="aclassparticle_html_a49e62920bb60565abfe3e186b313744e"><div class="ttname"><a href="classparticle.html#a49e62920bb60565abfe3e186b313744e">particle::get_personal_best_position</a></div><div class="ttdeci">std::vector&lt; double &gt; get_personal_best_position()</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00035">PSO.h:35</a></div></div>
-<div class="ttc" id="aclassparticle_html_a5e3ff4cfd13828939252119ad5b4637c"><div class="ttname"><a href="classparticle.html#a5e3ff4cfd13828939252119ad5b4637c">particle::get_personal_best_value</a></div><div class="ttdeci">double get_personal_best_value()</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00043">PSO.h:43</a></div></div>
+<div class="ttc" id="aclassparticle_html_a49e62920bb60565abfe3e186b313744e"><div class="ttname"><a href="classparticle.html#a49e62920bb60565abfe3e186b313744e">particle::get_personal_best_position</a></div><div class="ttdeci">std::vector&lt; double &gt; get_personal_best_position()</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00039">PSO.h:39</a></div></div>
+<div class="ttc" id="aclassparticle_html_a5e3ff4cfd13828939252119ad5b4637c"><div class="ttname"><a href="classparticle.html#a5e3ff4cfd13828939252119ad5b4637c">particle::get_personal_best_value</a></div><div class="ttdeci">double get_personal_best_value()</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00047">PSO.h:47</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1087,9 +1147,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   40</span>}</div>
 <div class="ttc" id="aclassLikelihoodFit_html_adb89956955c043bf37cad04983e4facd"><div class="ttname"><a href="classLikelihoodFit.html#adb89956955c043bf37cad04983e4facd">LikelihoodFit::PrepareFit</a></div><div class="ttdeci">void PrepareFit()</div><div class="ttdoc">prepare output and perform sanity checks</div><div class="ttdef"><b>Definition</b> <a href="LikelihoodFit_8cpp_source.html#l00021">LikelihoodFit.cpp:21</a></div></div>
 <div class="ttc" id="aclassPSO_html_a20cba5b6be9f5996dba818220f7a3524"><div class="ttname"><a href="classPSO.html#a20cba5b6be9f5996dba818220f7a3524">PSO::init</a></div><div class="ttdeci">void init()</div><div class="ttdef"><b>Definition</b> <a href="PSO_8cpp_source.html#l00043">PSO.cpp:43</a></div></div>
-<div class="ttc" id="aclassPSO_html_ab8f404ef249b9c4b385e08c483e8b38f"><div class="ttname"><a href="classPSO.html#ab8f404ef249b9c4b385e08c483e8b38f">PSO::paramlist</a></div><div class="ttdeci">std::vector&lt; double * &gt; paramlist</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00153">PSO.h:153</a></div></div>
-<div class="ttc" id="aclassPSO_html_ac361ae70f9487058ff1e02f2a6334998"><div class="ttname"><a href="classPSO.html#ac361ae70f9487058ff1e02f2a6334998">PSO::vel</a></div><div class="ttdeci">double vel[kMaxParticles]</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00154">PSO.h:154</a></div></div>
-<div class="ttc" id="aclassPSO_html_ae5eff2b0193e0d7c9c221edbc14118bd"><div class="ttname"><a href="classPSO.html#ae5eff2b0193e0d7c9c221edbc14118bd">PSO::par</a></div><div class="ttdeci">double * par</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00155">PSO.h:155</a></div></div>
+<div class="ttc" id="aclassPSO_html_ab8f404ef249b9c4b385e08c483e8b38f"><div class="ttname"><a href="classPSO.html#ab8f404ef249b9c4b385e08c483e8b38f">PSO::paramlist</a></div><div class="ttdeci">std::vector&lt; double * &gt; paramlist</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00159">PSO.h:159</a></div></div>
+<div class="ttc" id="aclassPSO_html_ac361ae70f9487058ff1e02f2a6334998"><div class="ttname"><a href="classPSO.html#ac361ae70f9487058ff1e02f2a6334998">PSO::vel</a></div><div class="ttdeci">double vel[kMaxParticles]</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00160">PSO.h:160</a></div></div>
+<div class="ttc" id="aclassPSO_html_ae5eff2b0193e0d7c9c221edbc14118bd"><div class="ttname"><a href="classPSO.html#ae5eff2b0193e0d7c9c221edbc14118bd">PSO::par</a></div><div class="ttdeci">double * par</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00161">PSO.h:161</a></div></div>
 <div class="ttc" id="aclassPSO_html_af09adc84344d8618a37c900b05fd1bd7"><div class="ttname"><a href="classPSO.html#af09adc84344d8618a37c900b05fd1bd7">PSO::run</a></div><div class="ttdeci">void run()</div><div class="ttdef"><b>Definition</b> <a href="PSO_8cpp_source.html#l00381">PSO.cpp:381</a></div></div>
 <div class="ttc" id="aclassPSO_html_af2a3d758cc67e9b6b6a9a96499345b5b"><div class="ttname"><a href="classPSO.html#af2a3d758cc67e9b6b6a9a96499345b5b">PSO::WriteOutput</a></div><div class="ttdeci">void WriteOutput()</div><div class="ttdef"><b>Definition</b> <a href="PSO_8cpp_source.html#l00427">PSO.cpp:427</a></div></div>
 </div><!-- fragment -->
@@ -1119,10 +1179,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00085">85</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   85</span>                                           {</div>
-<div class="line"><span class="lineno">   86</span>            <a class="code hl_variable" href="classPSO.html#aaf8a31e5604b900ce5702910d7e12c15">best_particle</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">n</a>;</div>
-<div class="line"><span class="lineno">   87</span>        }</div>
+<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00091">91</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   91</span>                                           {</div>
+<div class="line"><span class="lineno">   92</span>            <a class="code hl_variable" href="classPSO.html#aaf8a31e5604b900ce5702910d7e12c15">best_particle</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">n</a>;</div>
+<div class="line"><span class="lineno">   93</span>        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1201,10 +1261,10 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  377</span> </div>
 <div class="line"><span class="lineno">  378</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">mean_dist_sq</a>;</div>
 <div class="line"><span class="lineno">  379</span>}</div>
-<div class="ttc" id="aclassPSO_html_a0ade870a1dde6ec231b508e629ed1ba2"><div class="ttname"><a href="classPSO.html#a0ade870a1dde6ec231b508e629ed1ba2">PSO::vector_add</a></div><div class="ttdeci">std::vector&lt; double &gt; vector_add(std::vector&lt; double &gt; v1, std::vector&lt; double &gt; v2)</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00105">PSO.h:105</a></div></div>
-<div class="ttc" id="aclassPSO_html_a1a67501489c5cea6b871525447f09255"><div class="ttname"><a href="classPSO.html#a1a67501489c5cea6b871525447f09255">PSO::vector_subtract</a></div><div class="ttdeci">std::vector&lt; double &gt; vector_subtract(std::vector&lt; double &gt; v1, std::vector&lt; double &gt; v2)</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00110">PSO.h:110</a></div></div>
-<div class="ttc" id="aclassPSO_html_a400ceec227bfe822db4b5d4557e06a1b"><div class="ttname"><a href="classPSO.html#a400ceec227bfe822db4b5d4557e06a1b">PSO::vector_multiply</a></div><div class="ttdeci">std::vector&lt; double &gt; vector_multiply(std::vector&lt; double &gt; velocity, double mul)</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00100">PSO.h:100</a></div></div>
-<div class="ttc" id="aclassPSO_html_a440e0cb32000cf9c5d2170d0c2d08dc2"><div class="ttname"><a href="classPSO.html#a440e0cb32000cf9c5d2170d0c2d08dc2">PSO::three_vector_addition</a></div><div class="ttdeci">std::vector&lt; double &gt; three_vector_addition(std::vector&lt; double &gt; vec1, std::vector&lt; double &gt; vec2, std::vector&lt; double &gt; vec3)</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00115">PSO.h:115</a></div></div>
+<div class="ttc" id="aclassPSO_html_a0ade870a1dde6ec231b508e629ed1ba2"><div class="ttname"><a href="classPSO.html#a0ade870a1dde6ec231b508e629ed1ba2">PSO::vector_add</a></div><div class="ttdeci">std::vector&lt; double &gt; vector_add(std::vector&lt; double &gt; v1, std::vector&lt; double &gt; v2)</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00111">PSO.h:111</a></div></div>
+<div class="ttc" id="aclassPSO_html_a1a67501489c5cea6b871525447f09255"><div class="ttname"><a href="classPSO.html#a1a67501489c5cea6b871525447f09255">PSO::vector_subtract</a></div><div class="ttdeci">std::vector&lt; double &gt; vector_subtract(std::vector&lt; double &gt; v1, std::vector&lt; double &gt; v2)</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00116">PSO.h:116</a></div></div>
+<div class="ttc" id="aclassPSO_html_a400ceec227bfe822db4b5d4557e06a1b"><div class="ttname"><a href="classPSO.html#a400ceec227bfe822db4b5d4557e06a1b">PSO::vector_multiply</a></div><div class="ttdeci">std::vector&lt; double &gt; vector_multiply(std::vector&lt; double &gt; velocity, double mul)</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00106">PSO.h:106</a></div></div>
+<div class="ttc" id="aclassPSO_html_a440e0cb32000cf9c5d2170d0c2d08dc2"><div class="ttname"><a href="classPSO.html#a440e0cb32000cf9c5d2170d0c2d08dc2">PSO::three_vector_addition</a></div><div class="ttdeci">std::vector&lt; double &gt; three_vector_addition(std::vector&lt; double &gt; vec1, std::vector&lt; double &gt; vec2, std::vector&lt; double &gt; vec3)</div><div class="ttdef"><b>Definition</b> <a href="PSO_8h_source.html#l00121">PSO.h:121</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1248,13 +1308,13 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00115">115</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  115</span>                                                                                                                      {</div>
-<div class="line"><span class="lineno">  116</span>            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> = 0; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> &lt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">vec1</a>.size(); ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>) {</div>
-<div class="line"><span class="lineno">  117</span>                <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">vec1</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>] += <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">vec2</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>] + <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">vec3</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>];</div>
-<div class="line"><span class="lineno">  118</span>            }</div>
-<div class="line"><span class="lineno">  119</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">vec1</a>;</div>
-<div class="line"><span class="lineno">  120</span>        };</div>
+<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00121">121</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  121</span>                                                                                                                      {</div>
+<div class="line"><span class="lineno">  122</span>            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> = 0; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> &lt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">vec1</a>.size(); ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>) {</div>
+<div class="line"><span class="lineno">  123</span>                <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">vec1</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>] += <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">vec2</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>] + <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">vec3</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>];</div>
+<div class="line"><span class="lineno">  124</span>            }</div>
+<div class="line"><span class="lineno">  125</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">vec1</a>;</div>
+<div class="line"><span class="lineno">  126</span>        };</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1286,7 +1346,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  293</span>        <span class="keywordtype">double</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">stop</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">previous_pos</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>] + 1<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">e</a>-1;</div>
 <div class="line"><span class="lineno">  294</span>        std::vector&lt;double&gt; x(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">num</a>);</div>
 <div class="line"><span class="lineno">  295</span>        std::vector&lt;double&gt; y(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">num</a>);</div>
-<div class="line"><span class="lineno">  296</span>        <span class="keywordtype">double</span> <a class="code hl_variable" href="classFitterBase.html#a50df1bd75b20a953f81ab9c2bab6b42c">step</a> = (<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">stop</a> - <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">start</a>) / (<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">num</a> - 1);</div>
+<div class="line"><span class="lineno">  296</span>        <span class="keywordtype">double</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">StepPoint</a> = (<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">stop</a> - <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">start</a>) / (<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">num</a> - 1);</div>
 <div class="line"><span class="lineno">  297</span>        <span class="keywordtype">double</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">value</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">start</a>;</div>
 <div class="line"><span class="lineno">  298</span>        <span class="comment">// std::cout &lt;&lt; &quot;result for fDim &quot; &lt;&lt; 1 &lt;&lt; std::endl;</span></div>
 <div class="line"><span class="lineno">  299</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">j</a> =0;<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">j</a>&lt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">num</a>; ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">j</a>){</div>
@@ -1294,7 +1354,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  301</span>            <span class="keywordtype">double</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">LLR</a> = <a class="code hl_function" href="classPSO.html#aca234a3a9776e5cbb94bd1ab57f27b01">CalcChi</a>(position);</div>
 <div class="line"><span class="lineno">  302</span>            x[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">j</a>] = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">value</a>;</div>
 <div class="line"><span class="lineno">  303</span>            y[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">j</a>] = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">LLR</a>;</div>
-<div class="line"><span class="lineno">  304</span>            <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">value</a> +=<a class="code hl_variable" href="classFitterBase.html#a50df1bd75b20a953f81ab9c2bab6b42c">step</a>;</div>
+<div class="line"><span class="lineno">  304</span>            <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">value</a> += <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">StepPoint</a>;</div>
 <div class="line"><span class="lineno">  305</span>        }</div>
 <div class="line"><span class="lineno">  306</span>        position[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>] = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">curr_ival</a>;</div>
 <div class="line"><span class="lineno">  307</span>        std::cout &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; std::endl;</div>
@@ -1347,12 +1407,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00105">105</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  105</span>                                                                                {</div>
-<div class="line"><span class="lineno">  106</span>            std::vector&lt;double&gt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">v3</a>;</div>
-<div class="line"><span class="lineno">  107</span>            <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">transform</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">v1</a>.begin(), <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">v1</a>.end(), <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">v2</a>.begin(), <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">back_inserter</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">v3</a>), <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">plus&lt;double&gt;</a>());</div>
-<div class="line"><span class="lineno">  108</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">v3</a>;</div>
-<div class="line"><span class="lineno">  109</span>        };</div>
+<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00111">111</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  111</span>                                                                                {</div>
+<div class="line"><span class="lineno">  112</span>            std::vector&lt;double&gt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">v3</a>;</div>
+<div class="line"><span class="lineno">  113</span>            <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">transform</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">v1</a>.begin(), <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">v1</a>.end(), <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">v2</a>.begin(), <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">back_inserter</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">v3</a>), std::plus&lt;double&gt;());</div>
+<div class="line"><span class="lineno">  114</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">v3</a>;</div>
+<div class="line"><span class="lineno">  115</span>        };</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1390,11 +1450,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00100">100</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  100</span>                                                                                 {</div>
-<div class="line"><span class="lineno">  101</span>            <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">transform</a>(velocity.begin(),velocity.end(),velocity.begin(),std::bind1st(std::multiplies&lt;double&gt;(),<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">mul</a>));</div>
-<div class="line"><span class="lineno">  102</span>            <span class="keywordflow">return</span> velocity;</div>
-<div class="line"><span class="lineno">  103</span>        };</div>
+<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00106">106</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  106</span>                                                                                 {</div>
+<div class="line"><span class="lineno">  107</span>            <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">transform</a>(velocity.begin(),velocity.end(),velocity.begin(),std::bind1st(std::multiplies&lt;double&gt;(),<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">mul</a>));</div>
+<div class="line"><span class="lineno">  108</span>            <span class="keywordflow">return</span> velocity;</div>
+<div class="line"><span class="lineno">  109</span>        };</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1432,12 +1492,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00110">110</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  110</span>                                                                                     {</div>
-<div class="line"><span class="lineno">  111</span>            std::vector&lt;double&gt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">v3</a> ;</div>
-<div class="line"><span class="lineno">  112</span>            <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">transform</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">v1</a>.begin(), <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">v1</a>.end(), <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">v2</a>.begin(), <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">back_inserter</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">v3</a>), <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">minus&lt;double&gt;</a>());</div>
-<div class="line"><span class="lineno">  113</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">v3</a>;</div>
-<div class="line"><span class="lineno">  114</span>        };</div>
+<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00116">116</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  116</span>                                                                                     {</div>
+<div class="line"><span class="lineno">  117</span>            std::vector&lt;double&gt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">v3</a> ;</div>
+<div class="line"><span class="lineno">  118</span>            <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">transform</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">v1</a>.begin(), <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">v1</a>.end(), <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">v2</a>.begin(), <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">back_inserter</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">v3</a>), std::minus&lt;double&gt;());</div>
+<div class="line"><span class="lineno">  119</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">v3</a>;</div>
+<div class="line"><span class="lineno">  120</span>        };</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1485,7 +1545,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  452</span>        {</div>
 <div class="line"><span class="lineno">  453</span>            <span class="keywordflow">if</span>(!(*it)-&gt;IsPCA())</div>
 <div class="line"><span class="lineno">  454</span>            {</div>
-<div class="line"><span class="lineno">  455</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> = 0; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> &lt; (*it)-&gt;getSize(); ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>, ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ParCounter</a>)</div>
+<div class="line"><span class="lineno">  455</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> = 0; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> &lt; (*it)-&gt;GetNumParams(); ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>, ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ParCounter</a>)</div>
 <div class="line"><span class="lineno">  456</span>                {</div>
 <div class="line"><span class="lineno">  457</span>                    <span class="keywordtype">double</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ParVal</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">minimum</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ParCounter</a>];</div>
 <div class="line"><span class="lineno">  458</span>                    <span class="comment">//KS: Basically apply mirroring for parameters out of bounds</span></div>
@@ -1501,10 +1561,10 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  468</span>            <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">  469</span>            {</div>
 <div class="line"><span class="lineno">  470</span>                <span class="comment">//KS: We need to convert parameters from PCA to normal base</span></div>
-<div class="line"><span class="lineno">  471</span>                <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TVectorD</a> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ParVals</a>((*it)-&gt;getSize());</div>
+<div class="line"><span class="lineno">  471</span>                <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TVectorD</a> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ParVals</a>((*it)-&gt;GetNumParams());</div>
 <div class="line"><span class="lineno">  472</span>                <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TVectorD</a> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ParVals_PCA</a>((*it)-&gt;getNpars());</div>
 <div class="line"><span class="lineno">  473</span> </div>
-<div class="line"><span class="lineno">  474</span>                <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TVectorD</a> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ErrorVals</a>((*it)-&gt;getSize());</div>
+<div class="line"><span class="lineno">  474</span>                <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TVectorD</a> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ErrorVals</a>((*it)-&gt;GetNumParams());</div>
 <div class="line"><span class="lineno">  475</span>                <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TVectorD</a> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ErrorVals_PCA</a>((*it)-&gt;getNpars());</div>
 <div class="line"><span class="lineno">  476</span> </div>
 <div class="line"><span class="lineno">  477</span>                <span class="comment">//First save them</span></div>
@@ -1520,7 +1580,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  487</span> </div>
 <div class="line"><span class="lineno">  488</span>                <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ParCounter</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">StartVal</a>;</div>
 <div class="line"><span class="lineno">  489</span>                <span class="comment">//KS: Now after going from PCA to normal let&#39;;s save it</span></div>
-<div class="line"><span class="lineno">  490</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> = 0; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> &lt; (*it)-&gt;getSize(); ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>, ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ParCounter</a>)</div>
+<div class="line"><span class="lineno">  490</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> = 0; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> &lt; (*it)-&gt;GetNumParams(); ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>, ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ParCounter</a>)</div>
 <div class="line"><span class="lineno">  491</span>                {</div>
 <div class="line"><span class="lineno">  492</span>                    (*PSOParValue)(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ParCounter</a>) = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ParVals</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>);</div>
 <div class="line"><span class="lineno">  493</span>                    (*PSOParError)(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ParCounter</a>) = std::fabs(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ErrorVals</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>));</div>
@@ -1542,8 +1602,8 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  509</span>    <span class="comment">// Save all the output</span></div>
 <div class="line"><span class="lineno">  510</span>    <a class="code hl_function" href="classFitterBase.html#a418f581b688f035211107ddd83168c08">SaveOutput</a>();</div>
 <div class="line"><span class="lineno">  511</span>}</div>
-<div class="ttc" id="aclassFitterBase_html_a418f581b688f035211107ddd83168c08"><div class="ttname"><a href="classFitterBase.html#a418f581b688f035211107ddd83168c08">FitterBase::SaveOutput</a></div><div class="ttdeci">void SaveOutput()</div><div class="ttdoc">Save output and close files.</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8cpp_source.html#l00230">FitterBase.cpp:230</a></div></div>
-<div class="ttc" id="aclassFitterBase_html_a4260b312e3f35cf01fc73b02239f8990"><div class="ttname"><a href="classFitterBase.html#a4260b312e3f35cf01fc73b02239f8990">FitterBase::outputFile</a></div><div class="ttdeci">TFile * outputFile</div><div class="ttdoc">Output.</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00111">FitterBase.h:111</a></div></div>
+<div class="ttc" id="aclassFitterBase_html_a418f581b688f035211107ddd83168c08"><div class="ttname"><a href="classFitterBase.html#a418f581b688f035211107ddd83168c08">FitterBase::SaveOutput</a></div><div class="ttdeci">void SaveOutput()</div><div class="ttdoc">Save output and close files.</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8cpp_source.html#l00245">FitterBase.cpp:245</a></div></div>
+<div class="ttc" id="aclassFitterBase_html_a4260b312e3f35cf01fc73b02239f8990"><div class="ttname"><a href="classFitterBase.html#a4260b312e3f35cf01fc73b02239f8990">FitterBase::outputFile</a></div><div class="ttdeci">TFile * outputFile</div><div class="ttdoc">Output.</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00131">FitterBase.h:131</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1568,7 +1628,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00136">136</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00142">142</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
 
 </div>
 </div>
@@ -1592,7 +1652,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00137">137</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00143">143</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
 
 </div>
 </div>
@@ -1616,7 +1676,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00148">148</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00154">154</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
 
 </div>
 </div>
@@ -1640,7 +1700,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00146">146</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00152">152</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
 
 </div>
 </div>
@@ -1664,7 +1724,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00157">157</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00163">163</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
 
 </div>
 </div>
@@ -1688,7 +1748,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00143">143</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00149">149</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
 
 </div>
 </div>
@@ -1712,7 +1772,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00147">147</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00153">153</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
 
 </div>
 </div>
@@ -1736,7 +1796,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00139">139</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00145">145</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
 
 </div>
 </div>
@@ -1760,7 +1820,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00144">144</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00150">150</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
 
 </div>
 </div>
@@ -1784,7 +1844,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00151">151</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00157">157</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
 
 </div>
 </div>
@@ -1808,7 +1868,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00145">145</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00151">151</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
 
 </div>
 </div>
@@ -1832,7 +1892,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00152">152</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00158">158</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
 
 </div>
 </div>
@@ -1856,7 +1916,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00155">155</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00161">161</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
 
 </div>
 </div>
@@ -1880,7 +1940,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00153">153</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00159">159</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
 
 </div>
 </div>
@@ -1904,7 +1964,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00138">138</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00144">144</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
 
 </div>
 </div>
@@ -1928,7 +1988,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00140">140</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00146">146</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
 
 </div>
 </div>
@@ -1952,7 +2012,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00141">141</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00147">147</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
 
 </div>
 </div>
@@ -1976,7 +2036,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00142">142</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00148">148</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
 
 </div>
 </div>
@@ -2000,7 +2060,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00149">149</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00155">155</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
 
 </div>
 </div>
@@ -2024,7 +2084,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00154">154</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PSO_8h_source.html#l00160">160</a> of file <a class="el" href="PSO_8h_source.html">PSO.h</a>.</p>
 
 </div>
 </div>

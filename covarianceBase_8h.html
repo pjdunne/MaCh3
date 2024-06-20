@@ -84,35 +84,38 @@ $(function() {
 <div class="textblock"><code>#include &quot;<a class="el" href="Structs_8h_source.html">samplePDF/Structs.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="CovarianceUtils_8h_source.html">covariance/CovarianceUtils.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="ThrowParms_8h_source.html">covariance/ThrowParms.h</a>&quot;</code><br />
-<code>#include &quot;yaml-cpp/yaml.h&quot;</code><br />
-<code>#include &quot;<a class="el" href="MaCh3Logger_8h_source.html">manager/MaCh3Logger.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="manager_8h_source.html">manager/manager.h</a>&quot;</code><br />
 </div>
 <p><a href="covarianceBase_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcovarianceBase.html">covarianceBase</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class responsible for handling of systematic error parameters. Capable of using PCA or using adaptive throw matrix.  <a href="classcovarianceBase.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a949fbeb0e56580fc737cc2ccda06ccfa" id="r_a949fbeb0e56580fc737cc2ccda06ccfa"><td class="memItemLeft" align="right" valign="top">#<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">define</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="covarianceBase_8h.html#a949fbeb0e56580fc737cc2ccda06ccfa">__LARGE_LOGL__</a>&#160;&#160;&#160;1234567890.0</td></tr>
-<tr class="separator:a949fbeb0e56580fc737cc2ccda06ccfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a194098591fd0bc4afaf13b4fd8fee408" id="r_a194098591fd0bc4afaf13b4fd8fee408"><td class="memItemLeft" align="right" valign="top">#<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">define</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="covarianceBase_8h.html#a194098591fd0bc4afaf13b4fd8fee408">_LARGE_LOGL_</a>&#160;&#160;&#160;1234567890.0</td></tr>
+<tr class="memdesc:a194098591fd0bc4afaf13b4fd8fee408"><td class="mdescLeft">&#160;</td><td class="mdescRight">Large Likelihood is used it parameter go out of physical boundary, this indicates in MCMC that such step should eb removed.  <br /></td></tr>
+<tr class="separator:a194098591fd0bc4afaf13b4fd8fee408"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a949fbeb0e56580fc737cc2ccda06ccfa" name="a949fbeb0e56580fc737cc2ccda06ccfa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a949fbeb0e56580fc737cc2ccda06ccfa">&#9670;&#160;</a></span>__LARGE_LOGL__</h2>
+<a id="a194098591fd0bc4afaf13b4fd8fee408" name="a194098591fd0bc4afaf13b4fd8fee408"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a194098591fd0bc4afaf13b4fd8fee408">&#9670;&#160;</a></span>_LARGE_LOGL_</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">define</a> __LARGE_LOGL__&#160;&#160;&#160;1234567890.0</td>
+          <td class="memname">#<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">define</a> _LARGE_LOGL_&#160;&#160;&#160;1234567890.0</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00013">13</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<p>Large Likelihood is used it parameter go out of physical boundary, this indicates in MCMC that such step should eb removed. </p>
+
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00011">11</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
 
 </div>
 </div>

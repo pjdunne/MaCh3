@@ -94,27 +94,33 @@ $(function() {
 Functions</h2></td></tr>
 <tr class="memitem:a1a6adcb8b24bfbdcb936ced6812e1b0c" id="r_a1a6adcb8b24bfbdcb936ced6812e1b0c"><td class="memTemplParams" colspan="2">template&lt;typename Type &gt; </td></tr>
 <tr class="memitem:a1a6adcb8b24bfbdcb936ced6812e1b0c"><td class="memTemplItemLeft" align="right" valign="top">Type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">GetFromManager</a> (const YAML::Node &amp;node, Type defval)</td></tr>
+<tr class="memdesc:a1a6adcb8b24bfbdcb936ced6812e1b0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get content of config file if node is not found take default value specified.  <br /></td></tr>
 <tr class="separator:a1a6adcb8b24bfbdcb936ced6812e1b0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ec5eac7a7a860300203a9c418e802ee" id="r_a2ec5eac7a7a860300203a9c418e802ee"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">typename</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">T</a> &gt; </td></tr>
 <tr class="memitem:a2ec5eac7a7a860300203a9c418e802ee"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">bool</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="YamlHelper_8h.html#a2ec5eac7a7a860300203a9c418e802ee">CheckNodeExistsHelper</a> (<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">const</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">T</a> &amp;<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">node</a>)</td></tr>
+<tr class="memdesc:a2ec5eac7a7a860300203a9c418e802ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use this like this CheckNodeExists(config, "LikelihoodOptions", "TestStatistic"); KS: Base case for recursion.  <br /></td></tr>
 <tr class="separator:a2ec5eac7a7a860300203a9c418e802ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5809a38cdc84e79f861c6de8f84ae83e" id="r_a5809a38cdc84e79f861c6de8f84ae83e"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">typename</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">T</a> , typename... Args&gt; </td></tr>
 <tr class="memitem:a5809a38cdc84e79f861c6de8f84ae83e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">bool</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="YamlHelper_8h.html#a5809a38cdc84e79f861c6de8f84ae83e">CheckNodeExistsHelper</a> (<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">const</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">T</a> &amp;<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">node</a>, <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">const</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">std::string</a> &amp;<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">key</a>, Args... <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">args</a>)</td></tr>
+<tr class="memdesc:a5809a38cdc84e79f861c6de8f84ae83e"><td class="mdescLeft">&#160;</td><td class="mdescRight">KS: Recursive function to traverse YAML nodes.  <br /></td></tr>
 <tr class="separator:a5809a38cdc84e79f861c6de8f84ae83e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2340a340fd6649a6d220abc16d4757b" id="r_ad2340a340fd6649a6d220abc16d4757b"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
 <tr class="memitem:ad2340a340fd6649a6d220abc16d4757b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">bool</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="YamlHelper_8h.html#ad2340a340fd6649a6d220abc16d4757b">CheckNodeExists</a> (<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">const</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">YAML::Node</a> &amp;<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">node</a>, Args... <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">args</a>)</td></tr>
+<tr class="memdesc:ad2340a340fd6649a6d220abc16d4757b"><td class="mdescLeft">&#160;</td><td class="mdescRight">KS: Wrapper function to call the recursive helper.  <br /></td></tr>
 <tr class="separator:ad2340a340fd6649a6d220abc16d4757b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a296c2eab8cecbc8a278add0ea507da94" id="r_a296c2eab8cecbc8a278add0ea507da94"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">typename</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">T</a> &gt; </td></tr>
 <tr class="memitem:a296c2eab8cecbc8a278add0ea507da94"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">T</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="YamlHelper_8h.html#a296c2eab8cecbc8a278add0ea507da94">FindFromManagerHelper</a> (<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">const</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">YAML::Node</a> &amp;<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">node</a>)</td></tr>
-<tr class="memdesc:a296c2eab8cecbc8a278add0ea507da94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use this like this FindFromManager&lt;std::string&gt;(config, "LikelihoodOptions", "TestStatistic");.  <br /></td></tr>
 <tr class="separator:a296c2eab8cecbc8a278add0ea507da94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad047b94c4cdbbc6d7c73a75243b0a010" id="r_ad047b94c4cdbbc6d7c73a75243b0a010"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">typename</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">T</a> , typename... Args&gt; </td></tr>
 <tr class="memitem:ad047b94c4cdbbc6d7c73a75243b0a010"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">T</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="YamlHelper_8h.html#ad047b94c4cdbbc6d7c73a75243b0a010">FindFromManagerHelper</a> (<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">const</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">YAML::Node</a> &amp;<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">node</a>, <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">const</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">std::string</a> &amp;<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">key</a>, Args... <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">args</a>)</td></tr>
+<tr class="memdesc:ad047b94c4cdbbc6d7c73a75243b0a010"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recursive function to traverse YAML nodes.  <br /></td></tr>
 <tr class="separator:ad047b94c4cdbbc6d7c73a75243b0a010"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a8231c2076b91564e31e55567018f00" id="r_a2a8231c2076b91564e31e55567018f00"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">typename</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">T</a> , typename... Args&gt; </td></tr>
 <tr class="memitem:a2a8231c2076b91564e31e55567018f00"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">T</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="YamlHelper_8h.html#a2a8231c2076b91564e31e55567018f00">FindFromManager</a> (<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">const</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">YAML::Node</a> &amp;<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">node</a>, Args... <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">args</a>)</td></tr>
+<tr class="memdesc:a2a8231c2076b91564e31e55567018f00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper function to call the recursive helper.  <br /></td></tr>
 <tr class="separator:a2a8231c2076b91564e31e55567018f00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ff1f2154c0a70ad5a145fcc5891e7ec" id="r_a3ff1f2154c0a70ad5a145fcc5891e7ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">YAML::Node</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="YamlHelper_8h.html#a3ff1f2154c0a70ad5a145fcc5891e7ec">STRINGtoYAML</a> (<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">const</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">std::string</a> &amp;<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">yaml_string</a>)</td></tr>
+<tr class="memdesc:a3ff1f2154c0a70ad5a145fcc5891e7ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to convert a YAML string to a YAML node.  <br /></td></tr>
 <tr class="separator:a3ff1f2154c0a70ad5a145fcc5891e7ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae72fb06a391f1073add5eed6c6485dd" id="r_aae72fb06a391f1073add5eed6c6485dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">std::string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="YamlHelper_8h.html#aae72fb06a391f1073add5eed6c6485dd">YAMLtoSTRING</a> (<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">const</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">YAML::Node</a> &amp;<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">node</a>)</td></tr>
 <tr class="memdesc:aae72fb06a391f1073add5eed6c6485dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">KS: Convert a YAML node to a string representation.  <br /></td></tr>
@@ -155,12 +161,15 @@ template&lt;typename... Args&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="YamlHelper_8h_source.html#l00044">44</a> of file <a class="el" href="YamlHelper_8h_source.html">YamlHelper.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   44</span>                                                         {</div>
-<div class="line"><span class="lineno">   45</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="YamlHelper_8h.html#a2ec5eac7a7a860300203a9c418e802ee">CheckNodeExistsHelper</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">node</a>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">args</a>...);</div>
-<div class="line"><span class="lineno">   46</span>}</div>
-<div class="ttc" id="aYamlHelper_8h_html_a1a6adcb8b24bfbdcb936ced6812e1b0c"><div class="ttname"><a href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">GetFromManager</a></div><div class="ttdeci">Type GetFromManager(const YAML::Node &amp;node, Type defval)</div><div class="ttdef"><b>Definition</b> <a href="YamlHelper_8h_source.html#l00014">YamlHelper.h:14</a></div></div>
-<div class="ttc" id="aYamlHelper_8h_html_a2ec5eac7a7a860300203a9c418e802ee"><div class="ttname"><a href="YamlHelper_8h.html#a2ec5eac7a7a860300203a9c418e802ee">CheckNodeExistsHelper</a></div><div class="ttdeci">bool CheckNodeExistsHelper(const T &amp;node)</div><div class="ttdef"><b>Definition</b> <a href="YamlHelper_8h_source.html#l00027">YamlHelper.h:27</a></div></div>
+<p>KS: Wrapper function to call the recursive helper. </p>
+
+<p class="definition">Definition at line <a class="el" href="YamlHelper_8h_source.html#l00053">53</a> of file <a class="el" href="YamlHelper_8h_source.html">YamlHelper.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   53</span>                                                         {</div>
+<div class="line"><span class="lineno">   54</span><span class="comment">// **********************</span></div>
+<div class="line"><span class="lineno">   55</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="YamlHelper_8h.html#a2ec5eac7a7a860300203a9c418e802ee">CheckNodeExistsHelper</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">node</a>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">args</a>...);</div>
+<div class="line"><span class="lineno">   56</span>}</div>
+<div class="ttc" id="aYamlHelper_8h_html_a1a6adcb8b24bfbdcb936ced6812e1b0c"><div class="ttname"><a href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">GetFromManager</a></div><div class="ttdeci">Type GetFromManager(const YAML::Node &amp;node, Type defval)</div><div class="ttdoc">Get content of config file if node is not found take default value specified.</div><div class="ttdef"><b>Definition</b> <a href="YamlHelper_8h_source.html#l00018">YamlHelper.h:18</a></div></div>
+<div class="ttc" id="aYamlHelper_8h_html_a2ec5eac7a7a860300203a9c418e802ee"><div class="ttname"><a href="YamlHelper_8h.html#a2ec5eac7a7a860300203a9c418e802ee">CheckNodeExistsHelper</a></div><div class="ttdeci">bool CheckNodeExistsHelper(const T &amp;node)</div><div class="ttdoc">Use this like this CheckNodeExists(config, &quot;LikelihoodOptions&quot;, &quot;TestStatistic&quot;); KS: Base case for r...</div><div class="ttdef"><b>Definition</b> <a href="YamlHelper_8h_source.html#l00032">YamlHelper.h:32</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -182,11 +191,14 @@ template&lt;<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="YamlHelper_8h_source.html#l00027">27</a> of file <a class="el" href="YamlHelper_8h_source.html">YamlHelper.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   27</span>                                          {</div>
-<div class="line"><span class="lineno">   28</span>  (<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">void</a>)<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">node</a>;</div>
-<div class="line"><span class="lineno">   29</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>; <span class="comment">// Node exists, return true</span></div>
-<div class="line"><span class="lineno">   30</span>}</div>
+<p>Use this like this CheckNodeExists(config, "LikelihoodOptions", "TestStatistic"); KS: Base case for recursion. </p>
+
+<p class="definition">Definition at line <a class="el" href="YamlHelper_8h_source.html#l00032">32</a> of file <a class="el" href="YamlHelper_8h_source.html">YamlHelper.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   32</span>                                          {</div>
+<div class="line"><span class="lineno">   33</span><span class="comment">// **********************</span></div>
+<div class="line"><span class="lineno">   34</span>  (<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">void</a>)<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">node</a>;</div>
+<div class="line"><span class="lineno">   35</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>; <span class="comment">// Node exists, return true</span></div>
+<div class="line"><span class="lineno">   36</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -224,14 +236,17 @@ template&lt;<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="YamlHelper_8h_source.html#l00034">34</a> of file <a class="el" href="YamlHelper_8h_source.html">YamlHelper.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   34</span>                                                                              {</div>
-<div class="line"><span class="lineno">   35</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">node</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">key</a>]) {</div>
-<div class="line"><span class="lineno">   36</span>    <span class="comment">//std::cerr &lt;&lt; &quot;Node &quot; &lt;&lt; key &lt;&lt; &quot; doesn&#39;t exist.&quot; &lt;&lt; std::endl;</span></div>
-<div class="line"><span class="lineno">   37</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   38</span>  }</div>
-<div class="line"><span class="lineno">   39</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="YamlHelper_8h.html#a2ec5eac7a7a860300203a9c418e802ee">CheckNodeExistsHelper</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">node</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">key</a>], <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">args</a>...);</div>
-<div class="line"><span class="lineno">   40</span>}</div>
+<p>KS: Recursive function to traverse YAML nodes. </p>
+
+<p class="definition">Definition at line <a class="el" href="YamlHelper_8h_source.html#l00041">41</a> of file <a class="el" href="YamlHelper_8h_source.html">YamlHelper.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   41</span>                                                                              {\</div>
+<div class="line"><span class="lineno">   42</span><span class="comment">// **********************</span></div>
+<div class="line"><span class="lineno">   43</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">node</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">key</a>]) {</div>
+<div class="line"><span class="lineno">   44</span>    <span class="comment">//std::cerr &lt;&lt; &quot;Node &quot; &lt;&lt; key &lt;&lt; &quot; doesn&#39;t exist.&quot; &lt;&lt; std::endl;</span></div>
+<div class="line"><span class="lineno">   45</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   46</span>  }</div>
+<div class="line"><span class="lineno">   47</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="YamlHelper_8h.html#a2ec5eac7a7a860300203a9c418e802ee">CheckNodeExistsHelper</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">node</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">key</a>], <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">args</a>...);</div>
+<div class="line"><span class="lineno">   48</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -263,10 +278,13 @@ template&lt;<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="YamlHelper_8h_source.html#l00068">68</a> of file <a class="el" href="YamlHelper_8h_source.html">YamlHelper.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   68</span>                                                      {</div>
-<div class="line"><span class="lineno">   69</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">FindFromManagerHelper&lt;T&gt;</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">node</a>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">args</a>...);</div>
-<div class="line"><span class="lineno">   70</span>}</div>
+<p>Wrapper function to call the recursive helper. </p>
+
+<p class="definition">Definition at line <a class="el" href="YamlHelper_8h_source.html#l00082">82</a> of file <a class="el" href="YamlHelper_8h_source.html">YamlHelper.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   82</span>                                                      {</div>
+<div class="line"><span class="lineno">   83</span><span class="comment">// **********************</span></div>
+<div class="line"><span class="lineno">   84</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">FindFromManagerHelper&lt;T&gt;</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">node</a>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">args</a>...);</div>
+<div class="line"><span class="lineno">   85</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -287,13 +305,13 @@ template&lt;<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Use this like this FindFromManager&lt;std::string&gt;(config, "LikelihoodOptions", "TestStatistic"); Base case for recursion </p>
 
-<p>Use this like this FindFromManager&lt;std::string&gt;(config, "LikelihoodOptions", "TestStatistic");. </p>
-
-<p class="definition">Definition at line <a class="el" href="YamlHelper_8h_source.html#l00051">51</a> of file <a class="el" href="YamlHelper_8h_source.html">YamlHelper.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   51</span>                                              {</div>
-<div class="line"><span class="lineno">   52</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">node</a>.as&lt;<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">T</a>&gt;(); <span class="comment">// Convert YAML node to the specified type</span></div>
-<div class="line"><span class="lineno">   53</span>}</div>
+<p class="definition">Definition at line <a class="el" href="YamlHelper_8h_source.html#l00062">62</a> of file <a class="el" href="YamlHelper_8h_source.html">YamlHelper.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   62</span>                                              {</div>
+<div class="line"><span class="lineno">   63</span><span class="comment">// **********************</span></div>
+<div class="line"><span class="lineno">   64</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">node</a>.as&lt;<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">T</a>&gt;(); <span class="comment">// Convert YAML node to the specified type</span></div>
+<div class="line"><span class="lineno">   65</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -331,15 +349,18 @@ template&lt;<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="YamlHelper_8h_source.html#l00057">57</a> of file <a class="el" href="YamlHelper_8h_source.html">YamlHelper.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   57</span>                                                                                  {</div>
-<div class="line"><span class="lineno">   58</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">node</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">key</a>]) {</div>
-<div class="line"><span class="lineno">   59</span>    std::cerr &lt;&lt; <span class="stringliteral">&quot;Node &quot;</span> &lt;&lt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">key</a> &lt;&lt; <span class="stringliteral">&quot; doesn&#39;t exist.&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">   60</span>    <span class="keywordflow">throw</span>;</div>
-<div class="line"><span class="lineno">   61</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">T</a>();</div>
-<div class="line"><span class="lineno">   62</span>  }</div>
-<div class="line"><span class="lineno">   63</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">FindFromManagerHelper&lt;T&gt;</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">node</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">key</a>], <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">args</a>...); <span class="comment">// Recursive call</span></div>
-<div class="line"><span class="lineno">   64</span>}</div>
+<p>Recursive function to traverse YAML nodes. </p>
+
+<p class="definition">Definition at line <a class="el" href="YamlHelper_8h_source.html#l00070">70</a> of file <a class="el" href="YamlHelper_8h_source.html">YamlHelper.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   70</span>                                                                                  {</div>
+<div class="line"><span class="lineno">   71</span>  <span class="comment">// **********************</span></div>
+<div class="line"><span class="lineno">   72</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">node</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">key</a>]) {</div>
+<div class="line"><span class="lineno">   73</span>    std::cerr &lt;&lt; <span class="stringliteral">&quot;Node &quot;</span> &lt;&lt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">key</a> &lt;&lt; <span class="stringliteral">&quot; doesn&#39;t exist.&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">   74</span>    <span class="keywordflow">throw</span>;</div>
+<div class="line"><span class="lineno">   75</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">T</a>();</div>
+<div class="line"><span class="lineno">   76</span>  }</div>
+<div class="line"><span class="lineno">   77</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">FindFromManagerHelper&lt;T&gt;</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">node</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">key</a>], <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">args</a>...); <span class="comment">// Recursive call</span></div>
+<div class="line"><span class="lineno">   78</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -371,15 +392,25 @@ template&lt;typename Type &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="YamlHelper_8h_source.html#l00014">14</a> of file <a class="el" href="YamlHelper_8h_source.html">YamlHelper.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   15</span>{</div>
-<div class="line"><span class="lineno">   16</span>  YAML::Node <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">tmpNode</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">node</a>;</div>
-<div class="line"><span class="lineno">   17</span> </div>
-<div class="line"><span class="lineno">   18</span>  <span class="keywordflow">if</span>(!<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">tmpNode</a>){</div>
-<div class="line"><span class="lineno">   19</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">defval</a>;</div>
-<div class="line"><span class="lineno">   20</span>  }</div>
-<div class="line"><span class="lineno">   21</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">tmpNode</a>.as&lt;<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">Type</a>&gt;();</div>
-<div class="line"><span class="lineno">   22</span>}</div>
+<p>Get content of config file if node is not found take default value specified. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">node</td><td>Yaml node </td></tr>
+    <tr><td class="paramname">defval</td><td>Default value which will be used in case node doesn't exist </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="YamlHelper_8h_source.html#l00018">18</a> of file <a class="el" href="YamlHelper_8h_source.html">YamlHelper.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   18</span>                                                       {</div>
+<div class="line"><span class="lineno">   19</span><span class="comment">// **********************</span></div>
+<div class="line"><span class="lineno">   20</span>  YAML::Node <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">tmpNode</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">node</a>;</div>
+<div class="line"><span class="lineno">   21</span> </div>
+<div class="line"><span class="lineno">   22</span>  <span class="keywordflow">if</span>(!<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">tmpNode</a>){</div>
+<div class="line"><span class="lineno">   23</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">defval</a>;</div>
+<div class="line"><span class="lineno">   24</span>  }</div>
+<div class="line"><span class="lineno">   25</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">tmpNode</a>.as&lt;<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">Type</a>&gt;();</div>
+<div class="line"><span class="lineno">   26</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -388,6 +419,9 @@ template&lt;typename Type &gt; </div>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">YAML::Node</a> STRINGtoYAML </td>
@@ -397,19 +431,31 @@ template&lt;typename Type &gt; </div>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="YamlHelper_8cpp_source.html#l00005">5</a> of file <a class="el" href="YamlHelper_8cpp_source.html">YamlHelper.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    5</span>                                                    {</div>
-<div class="line"><span class="lineno">    6</span><span class="comment">// **********************</span></div>
-<div class="line"><span class="lineno">    7</span> </div>
-<div class="line"><span class="lineno">    8</span>  <span class="keywordflow">try</span> {</div>
-<div class="line"><span class="lineno">    9</span>    <span class="keywordflow">return</span> YAML::Load(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">yaml_string</a>);</div>
-<div class="line"><span class="lineno">   10</span>  } <span class="keywordflow">catch</span> (<span class="keyword">const</span> YAML::ParserException&amp; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">e</a>) {</div>
-<div class="line"><span class="lineno">   11</span>    std::cerr &lt;&lt; <span class="stringliteral">&quot;Error parsing YAML string: &quot;</span> &lt;&lt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">e</a>.what() &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">   12</span>    <span class="keywordflow">return</span> YAML::Node();</div>
-<div class="line"><span class="lineno">   13</span>  }</div>
-<div class="line"><span class="lineno">   14</span>}</div>
+<p>Function to convert a YAML string to a YAML node. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">yaml_string</td><td>String which will be converted to yaml node </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="YamlHelper_8h_source.html#l00090">90</a> of file <a class="el" href="YamlHelper_8h_source.html">YamlHelper.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   90</span>                                                          {</div>
+<div class="line"><span class="lineno">   91</span><span class="comment">// **********************</span></div>
+<div class="line"><span class="lineno">   92</span>  <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">   93</span>    <span class="keywordflow">return</span> YAML::Load(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">yaml_string</a>);</div>
+<div class="line"><span class="lineno">   94</span>  } <span class="keywordflow">catch</span> (<span class="keyword">const</span> YAML::ParserException&amp; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">e</a>) {</div>
+<div class="line"><span class="lineno">   95</span>    std::cerr &lt;&lt; <span class="stringliteral">&quot;Error parsing YAML string: &quot;</span> &lt;&lt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">e</a>.what() &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">   96</span>    <span class="keywordflow">return</span> YAML::Node();</div>
+<div class="line"><span class="lineno">   97</span>  }</div>
+<div class="line"><span class="lineno">   98</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -418,6 +464,9 @@ template&lt;typename Type &gt; </div>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">std::string</a> TMacroToString </td>
@@ -427,6 +476,11 @@ template&lt;typename Type &gt; </div>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>KS: Convert a ROOT TMacro object to a string representation. </p>
@@ -438,32 +492,31 @@ template&lt;typename Type &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::string The string representation of the TMacro object. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="YamlHelper_8cpp_source.html#l00028">28</a> of file <a class="el" href="YamlHelper_8cpp_source.html">YamlHelper.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   28</span>                                              {</div>
-<div class="line"><span class="lineno">   29</span><span class="comment">// **********************</span></div>
-<div class="line"><span class="lineno">   30</span> </div>
-<div class="line"><span class="lineno">   31</span>  std::stringstream <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ss</a>;</div>
-<div class="line"><span class="lineno">   32</span> </div>
-<div class="line"><span class="lineno">   33</span>  <span class="comment">// Retrieve lines from TMacro</span></div>
-<div class="line"><span class="lineno">   34</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TList</a>* <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">linesList</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">macro</a>.GetListOfLines();</div>
-<div class="line"><span class="lineno">   35</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">linesList</a>) {</div>
-<div class="line"><span class="lineno">   36</span>    std::cerr &lt;&lt; <span class="stringliteral">&quot;Error: Failed to retrieve lines from TMacro.&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">   37</span>    <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">   38</span>  }</div>
-<div class="line"><span class="lineno">   39</span> </div>
-<div class="line"><span class="lineno">   40</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TIter</a> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">nextLine</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">linesList</a>);</div>
-<div class="line"><span class="lineno">   41</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TObject</a> *<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">obj</a> = <span class="keyword">nullptr</span>;</div>
-<div class="line"><span class="lineno">   42</span>  <span class="keywordflow">while</span> ((<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">obj</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">nextLine</a>())) {</div>
-<div class="line"><span class="lineno">   43</span>    <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TObjString</a>* <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">line</a> = <span class="keyword">dynamic_cast&lt;</span><a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TObjString</a>*<span class="keyword">&gt;</span>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">obj</a>);</div>
-<div class="line"><span class="lineno">   44</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">line</a>) {</div>
-<div class="line"><span class="lineno">   45</span>      std::cerr &lt;&lt; <span class="stringliteral">&quot;Error: Failed to cast object to TObjString.&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">   46</span>      <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   47</span>    }</div>
-<div class="line"><span class="lineno">   48</span>    <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ss</a> &lt;&lt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">line</a>-&gt;GetString() &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">   49</span>  }</div>
-<div class="line"><span class="lineno">   50</span> </div>
-<div class="line"><span class="lineno">   51</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ss</a>.str();</div>
-<div class="line"><span class="lineno">   52</span>}</div>
+<p class="definition">Definition at line <a class="el" href="YamlHelper_8h_source.html#l00115">115</a> of file <a class="el" href="YamlHelper_8h_source.html">YamlHelper.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  115</span>                                                     {</div>
+<div class="line"><span class="lineno">  116</span><span class="comment">// **********************</span></div>
+<div class="line"><span class="lineno">  117</span>  std::stringstream <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ss</a>;</div>
+<div class="line"><span class="lineno">  118</span> </div>
+<div class="line"><span class="lineno">  119</span>  <span class="comment">// Retrieve lines from TMacro</span></div>
+<div class="line"><span class="lineno">  120</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TList</a>* <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">linesList</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">macro</a>.GetListOfLines();</div>
+<div class="line"><span class="lineno">  121</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">linesList</a>) {</div>
+<div class="line"><span class="lineno">  122</span>    std::cerr &lt;&lt; <span class="stringliteral">&quot;Error: Failed to retrieve lines from TMacro.&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  123</span>    <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><span class="lineno">  124</span>  }</div>
+<div class="line"><span class="lineno">  125</span> </div>
+<div class="line"><span class="lineno">  126</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TIter</a> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">nextLine</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">linesList</a>);</div>
+<div class="line"><span class="lineno">  127</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TObject</a> *<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">obj</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  128</span>  <span class="keywordflow">while</span> ((<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">obj</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">nextLine</a>())) {</div>
+<div class="line"><span class="lineno">  129</span>    <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TObjString</a>* <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">line</a> = <span class="keyword">dynamic_cast&lt;</span><a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TObjString</a>*<span class="keyword">&gt;</span>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">obj</a>);</div>
+<div class="line"><span class="lineno">  130</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">line</a>) {</div>
+<div class="line"><span class="lineno">  131</span>      std::cerr &lt;&lt; <span class="stringliteral">&quot;Error: Failed to cast object to TObjString.&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  132</span>      <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  133</span>    }</div>
+<div class="line"><span class="lineno">  134</span>    <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ss</a> &lt;&lt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">line</a>-&gt;GetString() &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  135</span>  }</div>
+<div class="line"><span class="lineno">  136</span> </div>
+<div class="line"><span class="lineno">  137</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ss</a>.str();</div>
+<div class="line"><span class="lineno">  138</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -472,6 +525,9 @@ template&lt;typename Type &gt; </div>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">YAML::Node</a> TMacroToYAML </td>
@@ -481,6 +537,11 @@ template&lt;typename Type &gt; </div>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>KS: Convert a ROOT TMacro object to a YAML node. </p>
@@ -492,19 +553,19 @@ template&lt;typename Type &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>YAML::Node The YAML node representing the TMacro object. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="YamlHelper_8cpp_source.html#l00056">56</a> of file <a class="el" href="YamlHelper_8cpp_source.html">YamlHelper.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   56</span>                                            {</div>
-<div class="line"><span class="lineno">   57</span><span class="comment">// **********************</span></div>
-<div class="line"><span class="lineno">   58</span> </div>
-<div class="line"><span class="lineno">   59</span>  std::string <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">yaml_string</a> = <a class="code hl_function" href="YamlHelper_8cpp.html#a8f274e653fbd3e5451faf71549318c24">TMacroToString</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">macro</a>);</div>
-<div class="line"><span class="lineno">   60</span> </div>
-<div class="line"><span class="lineno">   61</span>  <span class="comment">// Convert the YAML string to a YAML node</span></div>
-<div class="line"><span class="lineno">   62</span>  YAML::Node <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">yaml_node</a> = <a class="code hl_function" href="YamlHelper_8cpp.html#a3ff1f2154c0a70ad5a145fcc5891e7ec">STRINGtoYAML</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">yaml_string</a>);</div>
-<div class="line"><span class="lineno">   63</span> </div>
-<div class="line"><span class="lineno">   64</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">yaml_node</a>;</div>
-<div class="line"><span class="lineno">   65</span>}</div>
-<div class="ttc" id="aYamlHelper_8cpp_html_a3ff1f2154c0a70ad5a145fcc5891e7ec"><div class="ttname"><a href="YamlHelper_8cpp.html#a3ff1f2154c0a70ad5a145fcc5891e7ec">STRINGtoYAML</a></div><div class="ttdeci">YAML::Node STRINGtoYAML(const std::string &amp;yaml_string)</div><div class="ttdef"><b>Definition</b> <a href="YamlHelper_8cpp_source.html#l00005">YamlHelper.cpp:5</a></div></div>
-<div class="ttc" id="aYamlHelper_8cpp_html_a8f274e653fbd3e5451faf71549318c24"><div class="ttname"><a href="YamlHelper_8cpp.html#a8f274e653fbd3e5451faf71549318c24">TMacroToString</a></div><div class="ttdeci">std::string TMacroToString(const TMacro &amp;macro)</div><div class="ttdoc">KS: Convert a ROOT TMacro object to a string representation.</div><div class="ttdef"><b>Definition</b> <a href="YamlHelper_8cpp_source.html#l00028">YamlHelper.cpp:28</a></div></div>
+<p class="definition">Definition at line <a class="el" href="YamlHelper_8h_source.html#l00144">144</a> of file <a class="el" href="YamlHelper_8h_source.html">YamlHelper.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  144</span>                                                  {</div>
+<div class="line"><span class="lineno">  145</span><span class="comment">// **********************</span></div>
+<div class="line"><span class="lineno">  146</span> </div>
+<div class="line"><span class="lineno">  147</span>  std::string <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">yaml_string</a> = <a class="code hl_function" href="YamlHelper_8h.html#a8f274e653fbd3e5451faf71549318c24">TMacroToString</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">macro</a>);</div>
+<div class="line"><span class="lineno">  148</span> </div>
+<div class="line"><span class="lineno">  149</span>  <span class="comment">// Convert the YAML string to a YAML node</span></div>
+<div class="line"><span class="lineno">  150</span>  YAML::Node <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">yaml_node</a> = <a class="code hl_function" href="YamlHelper_8h.html#a3ff1f2154c0a70ad5a145fcc5891e7ec">STRINGtoYAML</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">yaml_string</a>);</div>
+<div class="line"><span class="lineno">  151</span> </div>
+<div class="line"><span class="lineno">  152</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">yaml_node</a>;</div>
+<div class="line"><span class="lineno">  153</span>}</div>
+<div class="ttc" id="aYamlHelper_8h_html_a3ff1f2154c0a70ad5a145fcc5891e7ec"><div class="ttname"><a href="YamlHelper_8h.html#a3ff1f2154c0a70ad5a145fcc5891e7ec">STRINGtoYAML</a></div><div class="ttdeci">YAML::Node STRINGtoYAML(const std::string &amp;yaml_string)</div><div class="ttdoc">Function to convert a YAML string to a YAML node.</div><div class="ttdef"><b>Definition</b> <a href="YamlHelper_8h_source.html#l00090">YamlHelper.h:90</a></div></div>
+<div class="ttc" id="aYamlHelper_8h_html_a8f274e653fbd3e5451faf71549318c24"><div class="ttname"><a href="YamlHelper_8h.html#a8f274e653fbd3e5451faf71549318c24">TMacroToString</a></div><div class="ttdeci">std::string TMacroToString(const TMacro &amp;macro)</div><div class="ttdoc">KS: Convert a ROOT TMacro object to a string representation.</div><div class="ttdef"><b>Definition</b> <a href="YamlHelper_8h_source.html#l00115">YamlHelper.h:115</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -513,6 +574,9 @@ template&lt;typename Type &gt; </div>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">std::string</a> YAMLtoSTRING </td>
@@ -522,6 +586,11 @@ template&lt;typename Type &gt; </div>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>KS: Convert a YAML node to a string representation. </p>
@@ -533,14 +602,13 @@ template&lt;typename Type &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::string The string representation of the YAML node. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="YamlHelper_8cpp_source.html#l00018">18</a> of file <a class="el" href="YamlHelper_8cpp_source.html">YamlHelper.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   18</span>                                             {</div>
-<div class="line"><span class="lineno">   19</span><span class="comment">// **********************</span></div>
-<div class="line"><span class="lineno">   20</span> </div>
-<div class="line"><span class="lineno">   21</span>  YAML::Emitter <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">emitter</a>;</div>
-<div class="line"><span class="lineno">   22</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">emitter</a> &lt;&lt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">node</a>;</div>
-<div class="line"><span class="lineno">   23</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">emitter</a>.c_str();</div>
-<div class="line"><span class="lineno">   24</span>}</div>
+<p class="definition">Definition at line <a class="el" href="YamlHelper_8h_source.html#l00104">104</a> of file <a class="el" href="YamlHelper_8h_source.html">YamlHelper.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  104</span>                                                    {</div>
+<div class="line"><span class="lineno">  105</span><span class="comment">// **********************</span></div>
+<div class="line"><span class="lineno">  106</span>  YAML::Emitter <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">emitter</a>;</div>
+<div class="line"><span class="lineno">  107</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">emitter</a> &lt;&lt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">node</a>;</div>
+<div class="line"><span class="lineno">  108</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">emitter</a>.c_str();</div>
+<div class="line"><span class="lineno">  109</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
