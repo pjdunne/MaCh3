@@ -1,7 +1,7 @@
 #pragma once
 
 #include "mcmc.h"
-
+#include <valarray>
 /*
  * HW : Delayed Rejection (...Adaptive Metropolis) implemented as described in
  * https://link.springer.com/article/10.1007/s11222-006-9438-0
@@ -29,6 +29,13 @@ class DelayedRejectionMCMC : public mcmc{
   protected:
     // @brief Sets step-size for delayed step
     void setSystStepScale(double scale);
+
+    // @brief Sets separate step scales for each systematic
+    void setSystStepScale(std::valarray<double> scale);
+
+    // @brief gets scales for each systematic
+    std::valarray<double> getSystStepScale();
+
     std::vector<std::vector<double>> current_step;
     double logLReject;
 };

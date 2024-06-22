@@ -25,20 +25,53 @@ DelayedRejectionMCMC::~DelayedRejectionMCMC(){
 // TODO: Nothing necessary rn
 }
 
+std::valarray<double> DelayedRejectionMCMC::getSystStepScale(){
+
+  // Might as well make it large enough to contain osc matrix as well
+  std::valarray<double> original_scales(1., systematics.size()+1);
+
+  for(unsigned int i=0; i<systematics.size(); i++){
+    original_scales[i] = systematics[i]->getStepScale();
+  }
+  if(osc){original_scales[systematics.size()] = osc->getStepScale();}
+
+
+  return original_scales;
+}
+
 void DelayedRejectionMCMC::setSystStepScale(double scale){
 // Lets us rescale our proposal matrices
   if(osc) osc->setStepScale(scale);
   for(auto syst : systematics) { syst->setStepScale(scale);}
 }
 
+
+void DelayedRejectionMCMC::setSystStepScale(std::valarray<double> scale){
+  /*  
+  if(scale.size() > systematics.size()+1){
+    MACH3LOG_ERROR("Systematics scale cannot be set with vector of different size");
+    MACH3LOG_ERROR("N Systs : {}", systematics.size() + (unsigned int)osc);
+    MACH3LOG_ERROR("Size of Setter : {} ", scale.size());
+    throw;
+  }
+  */
+  for(unsigned int i=0; i<systematics.size(); i++){
+    systematics[i]->setStepScale(scale[i]);
+  }
+
+  if(osc){osc->setStepScale(scale[systematics.size()]);}
+  
+}
+
+
 // *********************
 void DelayedRejectionMCMC::runMCMC(){
 // HW: TODO: Rewrite MCMC so they can use inherited structures for this!
 // ********************
   initialiseChain();
-
-    
-    // Need to initialise current_step_vec
+  
+  
+  // Need to initialise current_step_vec
  
   for(unsigned int s=0; s<systematics.size(); s++){
     current_step.push_back(systematics[s]->getParPropVec());
@@ -71,9 +104,11 @@ void DelayedRejectionMCMC::runMCMC(){
     // HW : TODO Generalise this..
     if(!accept){ 
       reject = false;
-      setSystStepScale(0.05); // Shrink
+      // HW : Hacky, need to think of a better way to do this
+      std::valarray<double> original_scale = getSystStepScale();	
+      setSystStepScale(0.05*original_scale); // Shrink
       ProposeDelayedStep();
-      setSystStepScale(1.0); // Grow
+      setSystStepScale(original_scale); // Grow
       CheckDelayedStep();
     }    
     

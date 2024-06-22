@@ -141,13 +141,25 @@ class covarianceBase {
   inline double getDiagonalError(const int i) { return std::sqrt((*covMatrix)(i,i)); }
 
   // Adaptive Step Tuning Stuff
+  /// @brief Resets all stepscales to 1
   void resetIndivStepScale();
 
+  /// @brief 
+  double getStepScale(){return _fGlobalStepScale;}
+
+  /// @brief Initialiser for adaptive mcmc
   void initialiseAdaption(manager* fitMan);
+
+  /// @brief interface for saving the adaptive covariance matrix
   void saveAdaptiveToFile(TString outFileName, TString systematicName);
+
+  /// @brief are we doing adaptiin?
   bool getDoAdaption(){return use_adaptive;}
 
+  /// @brief Lets the throw matrix be set independently 
   void setThrowMatrix(TMatrixDSym *cov);
+
+  /// @brief Updates all parameters related to setting a new throw matrix
   void updateThrowMatrix(TMatrixDSym *cov);
   inline void setNumberOfSteps(const int nsteps) {
     total_steps = nsteps;
@@ -441,11 +453,19 @@ class covarianceBase {
   double **InvertThrowMatrix;
 
   // Adaptive Stuff
-
+  /// @brief Initialises adaption settings
   void setAdaptionDefaults();
+
+  /// @brief sets up adaptive block matrix structure
   void setAdaptiveBlocks(std::vector<std::vector<int>> block_indices);
+
+  /// @brief lets throw matrix be set from an external file
   void setThrowMatrixFromFile(std::string matrix_file_name, std::string matrix_name, std::string means_name);
+
+  /// @brief Update step for adaptive MCMC
   void updateAdaptiveCovariance();
+
+  /// @brief Creates new adaptive covariance matrix
   void createNewAdaptiveCovariance();
 
   bool use_adaptive;
