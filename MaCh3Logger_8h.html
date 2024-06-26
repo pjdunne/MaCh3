@@ -82,6 +82,10 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;spdlog/spdlog.h&quot;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+<code>#include &lt;functional&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
 </div>
 <p><a href="MaCh3Logger_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -107,6 +111,10 @@ Functions</h2></td></tr>
 <tr class="memitem:aa603c55ea73cd86d1994901227883e1e" id="r_aa603c55ea73cd86d1994901227883e1e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MaCh3Logger_8h.html#aa603c55ea73cd86d1994901227883e1e">SetMaCh3LoggerFormat</a> ()</td></tr>
 <tr class="memdesc:aa603c55ea73cd86d1994901227883e1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set messaging format of the logger.  <br /></td></tr>
 <tr class="separator:aa603c55ea73cd86d1994901227883e1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a726b5a70cdadea8ec0a591a66c8ca8ef" id="r_a726b5a70cdadea8ec0a591a66c8ca8ef"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">typename</a> Func , typename... Args&gt; </td></tr>
+<tr class="memitem:a726b5a70cdadea8ec0a591a66c8ca8ef"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="MaCh3Logger_8h.html#a726b5a70cdadea8ec0a591a66c8ca8ef">LoggerPrint</a> (<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">const</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">std::string</a> &amp;<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">LibName</a>, Func &amp;&amp;<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">func</a>, <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">Args</a> &amp;&amp;... <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">args</a>)</td></tr>
+<tr class="memdesc:a726b5a70cdadea8ec0a591a66c8ca8ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">KS: This is bit convoluted but this is to allow redirecting cout and errors from external library into MaCh3 logger format.  <br /></td></tr>
+<tr class="separator:a726b5a70cdadea8ec0a591a66c8ca8ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a07ff6d6a15b24f94afc88a1b89779beb" name="a07ff6d6a15b24f94afc88a1b89779beb"></a>
@@ -121,7 +129,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="MaCh3Logger_8h_source.html#l00012">12</a> of file <a class="el" href="MaCh3Logger_8h_source.html">MaCh3Logger.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="MaCh3Logger_8h_source.html#l00016">16</a> of file <a class="el" href="MaCh3Logger_8h_source.html">MaCh3Logger.h</a>.</p>
 
 </div>
 </div>
@@ -137,7 +145,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="MaCh3Logger_8h_source.html#l00008">8</a> of file <a class="el" href="MaCh3Logger_8h_source.html">MaCh3Logger.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="MaCh3Logger_8h_source.html#l00012">12</a> of file <a class="el" href="MaCh3Logger_8h_source.html">MaCh3Logger.h</a>.</p>
 
 </div>
 </div>
@@ -153,7 +161,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="MaCh3Logger_8h_source.html#l00011">11</a> of file <a class="el" href="MaCh3Logger_8h_source.html">MaCh3Logger.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="MaCh3Logger_8h_source.html#l00015">15</a> of file <a class="el" href="MaCh3Logger_8h_source.html">MaCh3Logger.h</a>.</p>
 
 </div>
 </div>
@@ -169,7 +177,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="MaCh3Logger_8h_source.html#l00009">9</a> of file <a class="el" href="MaCh3Logger_8h_source.html">MaCh3Logger.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="MaCh3Logger_8h_source.html#l00013">13</a> of file <a class="el" href="MaCh3Logger_8h_source.html">MaCh3Logger.h</a>.</p>
 
 </div>
 </div>
@@ -185,7 +193,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="MaCh3Logger_8h_source.html#l00013">13</a> of file <a class="el" href="MaCh3Logger_8h_source.html">MaCh3Logger.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="MaCh3Logger_8h_source.html#l00017">17</a> of file <a class="el" href="MaCh3Logger_8h_source.html">MaCh3Logger.h</a>.</p>
 
 </div>
 </div>
@@ -201,7 +209,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="MaCh3Logger_8h_source.html#l00007">7</a> of file <a class="el" href="MaCh3Logger_8h_source.html">MaCh3Logger.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="MaCh3Logger_8h_source.html#l00011">11</a> of file <a class="el" href="MaCh3Logger_8h_source.html">MaCh3Logger.h</a>.</p>
 
 </div>
 </div>
@@ -217,11 +225,104 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="MaCh3Logger_8h_source.html#l00010">10</a> of file <a class="el" href="MaCh3Logger_8h_source.html">MaCh3Logger.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="MaCh3Logger_8h_source.html#l00014">14</a> of file <a class="el" href="MaCh3Logger_8h_source.html">MaCh3Logger.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a726b5a70cdadea8ec0a591a66c8ca8ef" name="a726b5a70cdadea8ec0a591a66c8ca8ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a726b5a70cdadea8ec0a591a66c8ca8ef">&#9670;&#160;</a></span>LoggerPrint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">typename</a> Func , typename... Args&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">void</a> LoggerPrint </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">const</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">std::string</a> &amp;&#160;</td>
+          <td class="paramname"><em>LibName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Func &amp;&amp;&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">Args</a> &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>KS: This is bit convoluted but this is to allow redirecting cout and errors from external library into MaCh3 logger format. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Func</td><td>The type of the function to be called. </td></tr>
+    <tr><td class="paramname">Args</td><td>The types of the arguments to be passed to the function. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">LibName</td><td>The name of the library to be included in the log output. </td></tr>
+    <tr><td class="paramname">func</td><td>The function to be called whose output needs to be captured. </td></tr>
+    <tr><td class="paramname">args</td><td>The arguments to be passed to the function. <div class="fragment"><div class="line"><span class="keywordtype">void</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ExampleFunc</a>(<span class="keywordtype">int</span> x, <span class="keyword">const</span> std::string&amp; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">str</a>) {</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Output from exampleFunc: &quot;</span> &lt;&lt; x &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">str</a> &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">    std::cerr &lt;&lt; <span class="stringliteral">&quot;Error from exampleFunc: &quot;</span> &lt;&lt; x &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">str</a> &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="CombineMaCh3Chains_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>() {</div>
+<div class="line">    <a class="code hl_function" href="MaCh3Logger_8h.html#a726b5a70cdadea8ec0a591a66c8ca8ef">LoggerPrint</a>(<span class="stringliteral">&quot;ExampleLib&quot;</span>, <span class="keyword">static_cast&lt;</span><span class="keywordtype">void</span>(*)(<span class="keywordtype">int</span>, <span class="keyword">const </span>std::string&amp;)<span class="keyword">&gt;</span>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">blarb</a>), 666, <span class="stringliteral">&quot;Number of the BEAST&quot;</span>);</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="ttc" id="aCombineMaCh3Chains_8cpp_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="CombineMaCh3Chains_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition</b> <a href="CombineMaCh3Chains_8cpp_source.html#l00269">CombineMaCh3Chains.cpp:269</a></div></div>
+<div class="ttc" id="aMaCh3Logger_8h_html_a726b5a70cdadea8ec0a591a66c8ca8ef"><div class="ttname"><a href="MaCh3Logger_8h.html#a726b5a70cdadea8ec0a591a66c8ca8ef">LoggerPrint</a></div><div class="ttdeci">void LoggerPrint(const std::string &amp;LibName, Func &amp;&amp;func, Args &amp;&amp;... args)</div><div class="ttdoc">KS: This is bit convoluted but this is to allow redirecting cout and errors from external library int...</div><div class="ttdef"><b>Definition</b> <a href="MaCh3Logger_8h_source.html#l00049">MaCh3Logger.h:49</a></div></div>
+<div class="ttc" id="aYamlHelper_8h_html_a1a6adcb8b24bfbdcb936ced6812e1b0c"><div class="ttname"><a href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">GetFromManager</a></div><div class="ttdeci">Type GetFromManager(const YAML::Node &amp;node, Type defval)</div><div class="ttdoc">Get content of config file if node is not found take default value specified.</div><div class="ttdef"><b>Definition</b> <a href="YamlHelper_8h_source.html#l00018">YamlHelper.h:18</a></div></div>
+</div><!-- fragment --> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="MaCh3Logger_8h_source.html#l00049">49</a> of file <a class="el" href="MaCh3Logger_8h_source.html">MaCh3Logger.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   50</span>{</div>
+<div class="line"><span class="lineno">   51</span>  <span class="comment">// Create a stringstream to capture the output</span></div>
+<div class="line"><span class="lineno">   52</span>  std::stringstream <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">sss</a>;</div>
+<div class="line"><span class="lineno">   53</span> </div>
+<div class="line"><span class="lineno">   54</span>  <span class="comment">// Save the original stream buffers</span></div>
+<div class="line"><span class="lineno">   55</span>  std::streambuf* <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">coutBuf</a> = std::cout.rdbuf();</div>
+<div class="line"><span class="lineno">   56</span>  std::streambuf* <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">cerrBuf</a> = std::cerr.rdbuf();</div>
+<div class="line"><span class="lineno">   57</span> </div>
+<div class="line"><span class="lineno">   58</span>  <span class="comment">// Redirect std::cout and std::cerr to the stringstream buffer</span></div>
+<div class="line"><span class="lineno">   59</span>  std::cout.rdbuf(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">sss</a>.rdbuf());</div>
+<div class="line"><span class="lineno">   60</span>  std::cerr.rdbuf(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">sss</a>.rdbuf());</div>
+<div class="line"><span class="lineno">   61</span> </div>
+<div class="line"><span class="lineno">   62</span>  <span class="comment">// Call the provided function</span></div>
+<div class="line"><span class="lineno">   63</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">func</a>(std::forward&lt;Args&gt;(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">args</a>)...);</div>
+<div class="line"><span class="lineno">   64</span> </div>
+<div class="line"><span class="lineno">   65</span>  <span class="comment">// Restore the original stream buffers</span></div>
+<div class="line"><span class="lineno">   66</span>  std::cout.rdbuf(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">coutBuf</a>);</div>
+<div class="line"><span class="lineno">   67</span>  std::cerr.rdbuf(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">cerrBuf</a>);</div>
+<div class="line"><span class="lineno">   68</span> </div>
+<div class="line"><span class="lineno">   69</span>  std::string <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">line</a>;</div>
+<div class="line"><span class="lineno">   70</span>  <span class="keywordflow">while</span> (std::getline(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">sss</a>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">line</a>))</div>
+<div class="line"><span class="lineno">   71</span>  {</div>
+<div class="line"><span class="lineno">   72</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;[{}] {}&quot;</span>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">LibName</a>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">line</a>);</div>
+<div class="line"><span class="lineno">   73</span>  }</div>
+<div class="line"><span class="lineno">   74</span>}</div>
+<div class="ttc" id="aMaCh3Logger_8h_html_a95fa4dffc648e4c5536c9292c2bdcac3"><div class="ttname"><a href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a></div><div class="ttdeci">#define MACH3LOG_INFO</div><div class="ttdef"><b>Definition</b> <a href="MaCh3Logger_8h_source.html#l00013">MaCh3Logger.h:13</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="aa603c55ea73cd86d1994901227883e1e" name="aa603c55ea73cd86d1994901227883e1e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa603c55ea73cd86d1994901227883e1e">&#9670;&#160;</a></span>SetMaCh3LoggerFormat()</h2>
 
@@ -247,16 +348,16 @@ Functions</h2></td></tr>
 
 <p>Set messaging format of the logger. </p>
 
-<p class="definition">Definition at line <a class="el" href="MaCh3Logger_8h_source.html#l00016">16</a> of file <a class="el" href="MaCh3Logger_8h_source.html">MaCh3Logger.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   17</span>{</div>
-<div class="line"><span class="lineno">   18</span>  <span class="comment">//KS: %H for hour, %M for minute, %S for second, [%s:%#] for class and line</span></div>
-<div class="line"><span class="lineno">   19</span>  <span class="comment">//For documentation see https://github.com/gabime/spdlog/wiki/3.-Custom-formatting</span></div>
-<div class="line"><span class="lineno">   20</span><span class="preprocessor">  #ifdef DEBUG</span></div>
-<div class="line"><span class="lineno">   21</span>  spdlog::set_pattern(<span class="stringliteral">&quot;[%H:%M:%S][%s:%#][%^%l%$] %v&quot;</span>);</div>
-<div class="line"><span class="lineno">   22</span><span class="preprocessor">  #else</span></div>
-<div class="line"><span class="lineno">   23</span>  spdlog::set_pattern(<span class="stringliteral">&quot;[%H:%M:%S][%s][%^%l%$] %v&quot;</span>);</div>
-<div class="line"><span class="lineno">   24</span><span class="preprocessor">  #endif</span></div>
-<div class="line"><span class="lineno">   25</span>}</div>
+<p class="definition">Definition at line <a class="el" href="MaCh3Logger_8h_source.html#l00020">20</a> of file <a class="el" href="MaCh3Logger_8h_source.html">MaCh3Logger.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   21</span>{</div>
+<div class="line"><span class="lineno">   22</span>  <span class="comment">//KS: %H for hour, %M for minute, %S for second, [%s:%#] for class and line</span></div>
+<div class="line"><span class="lineno">   23</span>  <span class="comment">//For documentation see https://github.com/gabime/spdlog/wiki/3.-Custom-formatting</span></div>
+<div class="line"><span class="lineno">   24</span><span class="preprocessor">  #ifdef DEBUG</span></div>
+<div class="line"><span class="lineno">   25</span>  spdlog::set_pattern(<span class="stringliteral">&quot;[%H:%M:%S][%s:%#][%^%l%$] %v&quot;</span>);</div>
+<div class="line"><span class="lineno">   26</span><span class="preprocessor">  #else</span></div>
+<div class="line"><span class="lineno">   27</span>  spdlog::set_pattern(<span class="stringliteral">&quot;[%H:%M:%S][%s][%^%l%$] %v&quot;</span>);</div>
+<div class="line"><span class="lineno">   28</span><span class="preprocessor">  #endif</span></div>
+<div class="line"><span class="lineno">   29</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>

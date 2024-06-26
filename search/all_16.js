@@ -7,11 +7,10 @@ var searchData=
   ['vector_5fsubtract_4',['vector_subtract',['../classPSO.html#a1a67501489c5cea6b871525447f09255',1,'PSO']]],
   ['vel_5',['vel',['../classPSO.html#ac361ae70f9487058ff1e02f2a6334998',1,'PSO']]],
   ['velocity_6',['velocity',['../classparticle.html#a7c7a70f520cbcd91e49e17f7b9406044',1,'particle']]],
-  ['verbose_7',['VERBOSE',['../RHat_8cpp.html#af99838407de1f00344ce35d8675e41a7',1,'RHat.cpp']]],
-  ['violin_8',['Violin',['../GetPostfitParamPlots_8cpp.html#a92251598dc4d11508ddb63e3ff2ba4cb',1,'GetPostfitParamPlots.cpp']]],
-  ['violin2_9',['Violin2',['../GetPostfitParamPlots_8cpp.html#abb13e28854ba4a299e5ac10ab1ac3c99',1,'GetPostfitParamPlots.cpp']]],
-  ['violinhists_5fprojectx_10',['ViolinHists_ProjectX',['../classSampleSummary.html#a7176dc4fd5368e01f00d5fcc909ee605',1,'SampleSummary']]],
-  ['violinhists_5fprojecty_11',['ViolinHists_ProjectY',['../classSampleSummary.html#af4447b09538a0138de4e11c81169f821',1,'SampleSummary']]],
-  ['violinpre_12',['ViolinPre',['../GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a',1,'GetPostfitParamPlots.cpp']]],
-  ['vs_20float_13',['double vs float?',['../md__2github_2workspace_2CONTRIBUTING.html#autotoc_md5',1,'']]]
+  ['violin_7',['Violin',['../GetPostfitParamPlots_8cpp.html#a92251598dc4d11508ddb63e3ff2ba4cb',1,'GetPostfitParamPlots.cpp']]],
+  ['violin2_8',['Violin2',['../GetPostfitParamPlots_8cpp.html#abb13e28854ba4a299e5ac10ab1ac3c99',1,'GetPostfitParamPlots.cpp']]],
+  ['violinhists_5fprojectx_9',['ViolinHists_ProjectX',['../classSampleSummary.html#a7176dc4fd5368e01f00d5fcc909ee605',1,'SampleSummary']]],
+  ['violinhists_5fprojecty_10',['ViolinHists_ProjectY',['../classSampleSummary.html#af4447b09538a0138de4e11c81169f821',1,'SampleSummary']]],
+  ['violinpre_11',['ViolinPre',['../GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a',1,'GetPostfitParamPlots.cpp']]],
+  ['vs_20float_12',['double vs float?',['../md__2github_2workspace_2CONTRIBUTING.html#autotoc_md5',1,'']]]
 ];
