@@ -21,7 +21,7 @@ var searchData=
   ['diagmcmc_18',['diagmcmc',['../classMCMCProcessor.html#a7f8faecae63616ba100cf24ae42ecc08',1,'MCMCProcessor::DiagMCMC()'],['../DiagMCMC_8cpp.html#a73b9fcbb4ef23d61a60d3a6cdb45feba',1,'DiagMCMC(std::string inputFile, std::string config):&#160;DiagMCMC.cpp']]],
   ['diagmcmc_2ecpp_19',['DiagMCMC.cpp',['../DiagMCMC_8cpp.html',1,'']]],
   ['diagnosecovariancematrix_20',['DiagnoseCovarianceMatrix',['../ProcessMCMC_8cpp.html#a0a8acd4f01586a646ce233eccd085d65',1,'ProcessMCMC.cpp']]],
-  ['diagnostic_21',['Plotting and Diagnostic',['../md__2github_2workspace_2README.html#autotoc_md21',1,'']]],
+  ['diagnostic_21',['diagnostic',['../md__2github_2workspace_2README.html#autotoc_md22',1,'Plotting and Diagnostic'],['../md__2github_2workspace_2Diagnostics_2README.html',1,'Plotting and Diagnostic']]],
   ['dimensions_22',['Dimensions',['../classsplineFDBase.html#a6c28400605049bdee229885c46463dcd',1,'splineFDBase']]],
   ['dir_23',['Dir',['../classSampleSummary.html#a916c6d1f50b54f1f4509622359b2a1b7',1,'SampleSummary']]],
   ['dobetaparam_24',['DoBetaParam',['../classSampleSummary.html#adf610d698a50c4930d95be320e99a8e8',1,'SampleSummary']]],

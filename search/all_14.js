@@ -33,7 +33,7 @@ var searchData=
   ['tmatrixintoth2d_30',['TMatrixIntoTH2D',['../ProcessMCMC_8cpp.html#abe5fa966ccba5ad5b7f7efea786894c3',1,'ProcessMCMC.cpp']]],
   ['to_20compile_31',['How to Compile',['../md__2github_2workspace_2README.html#autotoc_md11',1,'']]],
   ['to_20contribute_20code_20to_20mach3_32',['How to Contribute Code to MaCh3',['../md__2github_2workspace_2CONTRIBUTING.html',1,'']]],
-  ['to_20use_33',['How To Use',['../md__2github_2workspace_2README.html#autotoc_md19',1,'']]],
+  ['to_20use_33',['How To Use',['../md__2github_2workspace_2README.html#autotoc_md20',1,'']]],
   ['togglefixallparameters_34',['toggleFixAllParameters',['../classcovarianceBase.html#adb2d1a39cd2bd160257bc9e34e32df4c',1,'covarianceBase']]],
   ['togglefixparameter_35',['toggleFixParameter',['../classcovarianceBase.html#aafbbdc05b87df882dc341e20fe870603',1,'covarianceBase']]],
   ['total_5fllh_5fdata_5fdraw_36',['total_llh_data_draw',['../classSampleSummary.html#a2cb3d8dcbab49b62be3bc2a4a7e4d5f3',1,'SampleSummary']]],

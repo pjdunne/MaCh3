@@ -16,7 +16,7 @@ var searchData=
   ['uppercut_13',['UpperCut',['../classMCMCProcessor.html#a840c686f15f419c0156df01c4ed62931',1,'MCMCProcessor']]],
   ['ur_14',['UR',['../structBox.html#a91e3a5bc435593fa2bab7389e47bf0fd',1,'Box']]],
   ['usage_15',['usage',['../CombineMaCh3Chains_8cpp.html#a2ef30c42cbc289d899a8be5d2d8f77d0',1,'CombineMaCh3Chains.cpp']]],
-  ['use_16',['How To Use',['../md__2github_2workspace_2README.html#autotoc_md19',1,'']]],
+  ['use_16',['How To Use',['../md__2github_2workspace_2README.html#autotoc_md20',1,'']]],
   ['use_5fadaptive_17',['use_adaptive',['../classcovarianceBase.html#a838731abd6716940043b484b2b266f86',1,'covarianceBase']]],
   ['usebeta_18',['USEBETA',['../samplePDFFDBase_8h.html#aef32089fdd2db890db53022a2e7da7e8',1,'samplePDFFDBase.h']]],
   ['usebinnedoscreweighting_19',['usebinnedoscreweighting',['../classsamplePDFFDBase.html#afeec8a0e7066ead8c88ed0696e29d7a9',1,'samplePDFFDBase::UseBinnedOscReweighting(bool ans)'],['../classsamplePDFFDBase.html#a0fee963934f4918d36c55626c0fb793a',1,'samplePDFFDBase::UseBinnedOscReweighting(bool ans, int nbins, double *osc_bins)']]],

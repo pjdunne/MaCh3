@@ -18,7 +18,7 @@ var searchData=
   ['reactorprior_15',['reactorPrior',['../classcovarianceOsc.html#aab556103dbe70cb584f06c27b81f21ac',1,'covarianceOsc']]],
   ['readfdfile_16',['ReadFDFile',['../classMCMCProcessor.html#ae5ea421c8dd77ceac2e748008633b573',1,'MCMCProcessor']]],
   ['readinputcov_17',['ReadInputCov',['../classMCMCProcessor.html#afef48d4fccf7551dc1845f8f6c08864f',1,'MCMCProcessor']]],
-  ['readme_2emd_18',['README.md',['../README_8md.html',1,'']]],
+  ['readme_2emd_18',['readme.md',['../Diagnostics_2README_8md.html',1,'(Global Namespace)'],['../README_8md.html',1,'(Global Namespace)']]],
   ['readndfile_19',['ReadNDFile',['../classMCMCProcessor.html#a66dd0f1f88dbeb2b6a1976d42f77e136',1,'MCMCProcessor']]],
   ['readoscfile_20',['ReadOSCFile',['../classMCMCProcessor.html#a3733b3b753c73f79e6846bc92c4da11b',1,'MCMCProcessor']]],
   ['readparsfromfile_21',['ReadParsFromFile',['../classmcmc.html#abdc25b836c2067136ada66e6a8b7ddc3',1,'mcmc']]],
