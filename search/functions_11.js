@@ -15,10 +15,10 @@ var searchData=
   ['tmacrotoyaml_12',['TMacroToYAML',['../YamlHelper_8h.html#a7e0ade2fd295a927676c243c97d0aa64',1,'YamlHelper.h']]],
   ['tmatrixintoth2d_13',['TMatrixIntoTH2D',['../ProcessMCMC_8cpp.html#abe5fa966ccba5ad5b7f7efea786894c3',1,'ProcessMCMC.cpp']]],
   ['togglefixallparameters_14',['toggleFixAllParameters',['../classcovarianceBase.html#adb2d1a39cd2bd160257bc9e34e32df4c',1,'covarianceBase']]],
-  ['togglefixparameter_15',['toggleFixParameter',['../classcovarianceBase.html#aafbbdc05b87df882dc341e20fe870603',1,'covarianceBase']]],
+  ['togglefixparameter_15',['togglefixparameter',['../classcovarianceBase.html#a41cc8dd2185af7cee380f3c6d463e5a4',1,'covarianceBase::toggleFixParameter(const std::string &amp;name)'],['../classcovarianceBase.html#aafbbdc05b87df882dc341e20fe870603',1,'covarianceBase::toggleFixParameter(const int i)']]],
   ['transfertomonolith_16',['TransferToMonolith',['../classsplineFDBase.html#a6d1872fe4be72c735bd55fa00e1674b8',1,'splineFDBase']]],
   ['transfertoparam_17',['TransferToParam',['../classcovarianceBase.html#a65ac4956a782b01768f445732522a450',1,'covarianceBase']]],
   ['transfertopca_18',['TransferToPCA',['../classcovarianceBase.html#a651f5ecd8973918d5683606a607fa88c',1,'covarianceBase']]],
-  ['truncated_5fspline_19',['truncated_spline',['../classTruncated__Spline.html#a83c0431fb5f7a27a08ccc358b35f0f99',1,'Truncated_Spline::Truncated_Spline(TSpline3 *&amp;spline, int Param=-1)'],['../classTruncated__Spline.html#ae40da5403298aacb6b45cd7690b61420',1,'Truncated_Spline::Truncated_Spline()']]],
+  ['truncated_5fspline_19',['truncated_spline',['../classTruncated__Spline.html#ae40da5403298aacb6b45cd7690b61420',1,'Truncated_Spline::Truncated_Spline()'],['../classTruncated__Spline.html#a83c0431fb5f7a27a08ccc358b35f0f99',1,'Truncated_Spline::Truncated_Spline(TSpline3 *&amp;spline, int Param=-1)']]],
   ['tspline3_5fred_20',['tspline3_red',['../classTSpline3__red.html#ae76e72436b20a59ee33eb1d41dbe59eb',1,'TSpline3_red::TSpline3_red()'],['../classTSpline3__red.html#a46bab297c2277560912b90db4e074200',1,'TSpline3_red::TSpline3_red(TSpline3 *&amp;spline, int Param=-1, SplineInterpolation InterPolation=kTSpline3)'],['../classTSpline3__red.html#a708bedeeed1c1fd01fce928985846e61',1,'TSpline3_red::TSpline3_red(_float_ *X, _float_ *Y, _int_ N, _float_ **P, _int_ parNo)']]]
 ];

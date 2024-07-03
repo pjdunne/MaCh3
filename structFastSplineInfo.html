@@ -86,18 +86,22 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a2644b71e4993fba6cabe5f21c9ab44de" id="r_a2644b71e4993fba6cabe5f21c9ab44de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Structs_8h.html#a030da8f8f9cd4bb0517b2cc0de3a9d5f">_int_</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFastSplineInfo.html#a2644b71e4993fba6cabe5f21c9ab44de">nPts</a></td></tr>
+<tr class="memdesc:a2644b71e4993fba6cabe5f21c9ab44de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of points in spline.  <br /></td></tr>
 <tr class="separator:a2644b71e4993fba6cabe5f21c9ab44de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aefbec11dd80b991ec507f4dc2fbefea0" id="r_aefbec11dd80b991ec507f4dc2fbefea0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Structs_8h.html#a44b939bf69f41920331b7d7a74d2d436">_float_</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFastSplineInfo.html#aefbec11dd80b991ec507f4dc2fbefea0">xPts</a></td></tr>
+<tr class="memdesc:aefbec11dd80b991ec507f4dc2fbefea0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of the knots positions.  <br /></td></tr>
 <tr class="separator:aefbec11dd80b991ec507f4dc2fbefea0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abbaf75f4c41bd333cae72bf59856becb" id="r_abbaf75f4c41bd333cae72bf59856becb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Structs_8h.html#a030da8f8f9cd4bb0517b2cc0de3a9d5f">_int_</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFastSplineInfo.html#abbaf75f4c41bd333cae72bf59856becb">CurrSegment</a></td></tr>
+<tr class="memdesc:abbaf75f4c41bd333cae72bf59856becb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of what segment of spline we're currently interested in. Gets updated once per MCMC iteration.  <br /></td></tr>
 <tr class="separator:abbaf75f4c41bd333cae72bf59856becb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a768e33415a2a6b50e9019d6a74fa5509" id="r_a768e33415a2a6b50e9019d6a74fa5509"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">const</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">double</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFastSplineInfo.html#a768e33415a2a6b50e9019d6a74fa5509">splineParsPointer</a></td></tr>
+<tr class="memdesc:a768e33415a2a6b50e9019d6a74fa5509"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of the knots positions.  <br /></td></tr>
 <tr class="separator:a768e33415a2a6b50e9019d6a74fa5509"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>CW: Add a struct to hold info about the splinified xsec parameters and help with FindSplineSegment. </p>
 
-<p class="definition">Definition at line <a class="el" href="SplineStructs_8h_source.html#l00010">10</a> of file <a class="el" href="SplineStructs_8h_source.html">SplineStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SplineStructs_8h_source.html#l00009">9</a> of file <a class="el" href="SplineStructs_8h_source.html">SplineStructs.h</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="abbaf75f4c41bd333cae72bf59856becb" name="abbaf75f4c41bd333cae72bf59856becb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abbaf75f4c41bd333cae72bf59856becb">&#9670;&#160;</a></span>CurrSegment</h2>
@@ -111,7 +115,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SplineStructs_8h_source.html#l00020">20</a> of file <a class="el" href="SplineStructs_8h_source.html">SplineStructs.h</a>.</p>
+<p>Array of what segment of spline we're currently interested in. Gets updated once per MCMC iteration. </p>
+
+<p class="definition">Definition at line <a class="el" href="SplineStructs_8h_source.html#l00018">18</a> of file <a class="el" href="SplineStructs_8h_source.html">SplineStructs.h</a>.</p>
 
 </div>
 </div>
@@ -127,7 +133,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SplineStructs_8h_source.html#l00013">13</a> of file <a class="el" href="SplineStructs_8h_source.html">SplineStructs.h</a>.</p>
+<p>Number of points in spline. </p>
+
+<p class="definition">Definition at line <a class="el" href="SplineStructs_8h_source.html#l00012">12</a> of file <a class="el" href="SplineStructs_8h_source.html">SplineStructs.h</a>.</p>
 
 </div>
 </div>
@@ -143,7 +151,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SplineStructs_8h_source.html#l00023">23</a> of file <a class="el" href="SplineStructs_8h_source.html">SplineStructs.h</a>.</p>
+<p>Array of the knots positions. </p>
+
+<p class="definition">Definition at line <a class="el" href="SplineStructs_8h_source.html#l00021">21</a> of file <a class="el" href="SplineStructs_8h_source.html">SplineStructs.h</a>.</p>
 
 </div>
 </div>
@@ -159,7 +169,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SplineStructs_8h_source.html#l00016">16</a> of file <a class="el" href="SplineStructs_8h_source.html">SplineStructs.h</a>.</p>
+<p>Array of the knots positions. </p>
+
+<p class="definition">Definition at line <a class="el" href="SplineStructs_8h_source.html#l00015">15</a> of file <a class="el" href="SplineStructs_8h_source.html">SplineStructs.h</a>.</p>
 
 </div>
 </div>

@@ -35,7 +35,7 @@ var searchData=
   ['makevector_32',['MakeVector',['../Structs_8h.html#a6a7efa31950e85001a060205c7d07c97',1,'Structs.h']]],
   ['makeviolin_33',['MakeViolin',['../classMCMCProcessor.html#a04976c69f0ef0b3f39edcf5f25f90981',1,'MCMCProcessor']]],
   ['makexsecplots_34',['MakeXsecPlots',['../GetPostfitParamPlots_8cpp.html#af79360b46fcb2923363d459ca9c4a0a8',1,'GetPostfitParamPlots.cpp']]],
-  ['manager_35',['manager',['../classmanager.html#a33e8fc4162ae32f5107c3eb35a5831ec',1,'manager']]],
+  ['manager_35',['manager',['../classmanager.html#a1f70d87043901a5f3b79f9828873642c',1,'manager']]],
   ['matrixmult_36',['matrixmult',['../namespaceMaCh3Utils.html#ac4d63087b4dc0c0a0e49d375ece4cb00',1,'MaCh3Utils::MatrixMult(TMatrixD A, TMatrixD B)'],['../namespaceMaCh3Utils.html#af03aca63ae363cb51c7033e8e91ade6d',1,'MaCh3Utils::MatrixMult(double **A, double **B, int n)'],['../namespaceMaCh3Utils.html#a0cd7bf76aca73a1e36519b04e19dd6c0',1,'MaCh3Utils::MatrixMult(double *A, double *B, int n)']]],
   ['matrixvectormulti_37',['MatrixVectorMulti',['../classcovarianceBase.html#a64aaa71f81750ba27977c0405c51cd88',1,'covarianceBase']]],
   ['matrixvectormultisingle_38',['MatrixVectorMultiSingle',['../classcovarianceBase.html#a767242ffde1e52dff143889e5534b4e3',1,'covarianceBase']]],

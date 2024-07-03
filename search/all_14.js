@@ -35,7 +35,7 @@ var searchData=
   ['to_20contribute_20code_20to_20mach3_32',['How to Contribute Code to MaCh3',['../md__2github_2workspace_2CONTRIBUTING.html',1,'']]],
   ['to_20use_33',['How To Use',['../md__2github_2workspace_2README.html#autotoc_md20',1,'']]],
   ['togglefixallparameters_34',['toggleFixAllParameters',['../classcovarianceBase.html#adb2d1a39cd2bd160257bc9e34e32df4c',1,'covarianceBase']]],
-  ['togglefixparameter_35',['toggleFixParameter',['../classcovarianceBase.html#aafbbdc05b87df882dc341e20fe870603',1,'covarianceBase']]],
+  ['togglefixparameter_35',['togglefixparameter',['../classcovarianceBase.html#aafbbdc05b87df882dc341e20fe870603',1,'covarianceBase::toggleFixParameter(const int i)'],['../classcovarianceBase.html#a41cc8dd2185af7cee380f3c6d463e5a4',1,'covarianceBase::toggleFixParameter(const std::string &amp;name)']]],
   ['total_5fllh_5fdata_5fdraw_36',['total_llh_data_draw',['../classSampleSummary.html#a2cb3d8dcbab49b62be3bc2a4a7e4d5f3',1,'SampleSummary']]],
   ['total_5fllh_5fdata_5fdraw_5fprojectx_37',['total_llh_data_draw_ProjectX',['../classSampleSummary.html#a5a973692db89f52c19c9195ffe95c9a1',1,'SampleSummary']]],
   ['total_5fllh_5fdata_5fdrawfluc_38',['total_llh_data_drawfluc',['../classSampleSummary.html#a670c890357fd77997279c83c197f989c',1,'SampleSummary']]],

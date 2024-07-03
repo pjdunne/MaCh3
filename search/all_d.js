@@ -60,7 +60,7 @@ var searchData=
   ['makevector_57',['MakeVector',['../Structs_8h.html#a6a7efa31950e85001a060205c7d07c97',1,'Structs.h']]],
   ['makeviolin_58',['MakeViolin',['../classMCMCProcessor.html#a04976c69f0ef0b3f39edcf5f25f90981',1,'MCMCProcessor']]],
   ['makexsecplots_59',['MakeXsecPlots',['../GetPostfitParamPlots_8cpp.html#af79360b46fcb2923363d459ca9c4a0a8',1,'GetPostfitParamPlots.cpp']]],
-  ['manager_60',['manager',['../classmanager.html',1,'manager'],['../classmanager.html#a33e8fc4162ae32f5107c3eb35a5831ec',1,'manager::manager()']]],
+  ['manager_60',['manager',['../classmanager.html',1,'manager'],['../classmanager.html#a1f70d87043901a5f3b79f9828873642c',1,'manager::manager()']]],
   ['manager_2ecpp_61',['manager.cpp',['../manager_8cpp.html',1,'']]],
   ['manager_2eh_62',['manager.h',['../manager_8h.html',1,'']]],
   ['manycoeff_5farr_63',['manycoeff_arr',['../classsplineFDBase.html#a23afe3075f6b512384e89493de6e4667',1,'splineFDBase']]],

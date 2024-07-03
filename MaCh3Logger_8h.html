@@ -286,39 +286,39 @@ template&lt;<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 <div class="ttc" id="aCombineMaCh3Chains_8cpp_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="CombineMaCh3Chains_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition</b> <a href="CombineMaCh3Chains_8cpp_source.html#l00269">CombineMaCh3Chains.cpp:269</a></div></div>
-<div class="ttc" id="aMaCh3Logger_8h_html_a726b5a70cdadea8ec0a591a66c8ca8ef"><div class="ttname"><a href="MaCh3Logger_8h.html#a726b5a70cdadea8ec0a591a66c8ca8ef">LoggerPrint</a></div><div class="ttdeci">void LoggerPrint(const std::string &amp;LibName, Func &amp;&amp;func, Args &amp;&amp;... args)</div><div class="ttdoc">KS: This is bit convoluted but this is to allow redirecting cout and errors from external library int...</div><div class="ttdef"><b>Definition</b> <a href="MaCh3Logger_8h_source.html#l00049">MaCh3Logger.h:49</a></div></div>
+<div class="ttc" id="aMaCh3Logger_8h_html_a726b5a70cdadea8ec0a591a66c8ca8ef"><div class="ttname"><a href="MaCh3Logger_8h.html#a726b5a70cdadea8ec0a591a66c8ca8ef">LoggerPrint</a></div><div class="ttdeci">void LoggerPrint(const std::string &amp;LibName, Func &amp;&amp;func, Args &amp;&amp;... args)</div><div class="ttdoc">KS: This is bit convoluted but this is to allow redirecting cout and errors from external library int...</div><div class="ttdef"><b>Definition</b> <a href="MaCh3Logger_8h_source.html#l00051">MaCh3Logger.h:51</a></div></div>
 <div class="ttc" id="aYamlHelper_8h_html_a1a6adcb8b24bfbdcb936ced6812e1b0c"><div class="ttname"><a href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">GetFromManager</a></div><div class="ttdeci">Type GetFromManager(const YAML::Node &amp;node, Type defval)</div><div class="ttdoc">Get content of config file if node is not found take default value specified.</div><div class="ttdef"><b>Definition</b> <a href="YamlHelper_8h_source.html#l00018">YamlHelper.h:18</a></div></div>
 </div><!-- fragment --> </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="MaCh3Logger_8h_source.html#l00049">49</a> of file <a class="el" href="MaCh3Logger_8h_source.html">MaCh3Logger.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   50</span>{</div>
-<div class="line"><span class="lineno">   51</span>  <span class="comment">// Create a stringstream to capture the output</span></div>
-<div class="line"><span class="lineno">   52</span>  std::stringstream <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">sss</a>;</div>
-<div class="line"><span class="lineno">   53</span> </div>
-<div class="line"><span class="lineno">   54</span>  <span class="comment">// Save the original stream buffers</span></div>
-<div class="line"><span class="lineno">   55</span>  std::streambuf* <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">coutBuf</a> = std::cout.rdbuf();</div>
-<div class="line"><span class="lineno">   56</span>  std::streambuf* <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">cerrBuf</a> = std::cerr.rdbuf();</div>
-<div class="line"><span class="lineno">   57</span> </div>
-<div class="line"><span class="lineno">   58</span>  <span class="comment">// Redirect std::cout and std::cerr to the stringstream buffer</span></div>
-<div class="line"><span class="lineno">   59</span>  std::cout.rdbuf(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">sss</a>.rdbuf());</div>
-<div class="line"><span class="lineno">   60</span>  std::cerr.rdbuf(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">sss</a>.rdbuf());</div>
-<div class="line"><span class="lineno">   61</span> </div>
-<div class="line"><span class="lineno">   62</span>  <span class="comment">// Call the provided function</span></div>
-<div class="line"><span class="lineno">   63</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">func</a>(std::forward&lt;Args&gt;(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">args</a>)...);</div>
-<div class="line"><span class="lineno">   64</span> </div>
-<div class="line"><span class="lineno">   65</span>  <span class="comment">// Restore the original stream buffers</span></div>
-<div class="line"><span class="lineno">   66</span>  std::cout.rdbuf(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">coutBuf</a>);</div>
-<div class="line"><span class="lineno">   67</span>  std::cerr.rdbuf(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">cerrBuf</a>);</div>
-<div class="line"><span class="lineno">   68</span> </div>
-<div class="line"><span class="lineno">   69</span>  std::string <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">line</a>;</div>
-<div class="line"><span class="lineno">   70</span>  <span class="keywordflow">while</span> (std::getline(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">sss</a>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">line</a>))</div>
-<div class="line"><span class="lineno">   71</span>  {</div>
-<div class="line"><span class="lineno">   72</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;[{}] {}&quot;</span>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">LibName</a>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">line</a>);</div>
-<div class="line"><span class="lineno">   73</span>  }</div>
-<div class="line"><span class="lineno">   74</span>}</div>
+<p class="definition">Definition at line <a class="el" href="MaCh3Logger_8h_source.html#l00051">51</a> of file <a class="el" href="MaCh3Logger_8h_source.html">MaCh3Logger.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   52</span>{</div>
+<div class="line"><span class="lineno">   53</span>  <span class="comment">// Create a stringstream to capture the output</span></div>
+<div class="line"><span class="lineno">   54</span>  std::stringstream <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">sss</a>;</div>
+<div class="line"><span class="lineno">   55</span> </div>
+<div class="line"><span class="lineno">   56</span>  <span class="comment">// Save the original stream buffers</span></div>
+<div class="line"><span class="lineno">   57</span>  std::streambuf* <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">coutBuf</a> = std::cout.rdbuf();</div>
+<div class="line"><span class="lineno">   58</span>  std::streambuf* <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">cerrBuf</a> = std::cerr.rdbuf();</div>
+<div class="line"><span class="lineno">   59</span> </div>
+<div class="line"><span class="lineno">   60</span>  <span class="comment">// Redirect std::cout and std::cerr to the stringstream buffer</span></div>
+<div class="line"><span class="lineno">   61</span>  std::cout.rdbuf(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">sss</a>.rdbuf());</div>
+<div class="line"><span class="lineno">   62</span>  std::cerr.rdbuf(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">sss</a>.rdbuf());</div>
+<div class="line"><span class="lineno">   63</span> </div>
+<div class="line"><span class="lineno">   64</span>  <span class="comment">// Call the provided function</span></div>
+<div class="line"><span class="lineno">   65</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">func</a>(std::forward&lt;Args&gt;(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">args</a>)...);</div>
+<div class="line"><span class="lineno">   66</span> </div>
+<div class="line"><span class="lineno">   67</span>  <span class="comment">// Restore the original stream buffers</span></div>
+<div class="line"><span class="lineno">   68</span>  std::cout.rdbuf(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">coutBuf</a>);</div>
+<div class="line"><span class="lineno">   69</span>  std::cerr.rdbuf(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">cerrBuf</a>);</div>
+<div class="line"><span class="lineno">   70</span> </div>
+<div class="line"><span class="lineno">   71</span>  std::string <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">line</a>;</div>
+<div class="line"><span class="lineno">   72</span>  <span class="keywordflow">while</span> (std::getline(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">sss</a>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">line</a>))</div>
+<div class="line"><span class="lineno">   73</span>  {</div>
+<div class="line"><span class="lineno">   74</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;[{}] {}&quot;</span>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">LibName</a>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">line</a>);</div>
+<div class="line"><span class="lineno">   75</span>  }</div>
+<div class="line"><span class="lineno">   76</span>}</div>
 <div class="ttc" id="aMaCh3Logger_8h_html_a95fa4dffc648e4c5536c9292c2bdcac3"><div class="ttname"><a href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a></div><div class="ttdeci">#define MACH3LOG_INFO</div><div class="ttdef"><b>Definition</b> <a href="MaCh3Logger_8h_source.html#l00013">MaCh3Logger.h:13</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -353,11 +353,13 @@ template&lt;<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e
 <div class="line"><span class="lineno">   22</span>  <span class="comment">//KS: %H for hour, %M for minute, %S for second, [%s:%#] for class and line</span></div>
 <div class="line"><span class="lineno">   23</span>  <span class="comment">//For documentation see https://github.com/gabime/spdlog/wiki/3.-Custom-formatting</span></div>
 <div class="line"><span class="lineno">   24</span><span class="preprocessor">  #ifdef DEBUG</span></div>
-<div class="line"><span class="lineno">   25</span>  spdlog::set_pattern(<span class="stringliteral">&quot;[%H:%M:%S][%s:%#][%^%l%$] %v&quot;</span>);</div>
-<div class="line"><span class="lineno">   26</span><span class="preprocessor">  #else</span></div>
-<div class="line"><span class="lineno">   27</span>  spdlog::set_pattern(<span class="stringliteral">&quot;[%H:%M:%S][%s][%^%l%$] %v&quot;</span>);</div>
-<div class="line"><span class="lineno">   28</span><span class="preprocessor">  #endif</span></div>
-<div class="line"><span class="lineno">   29</span>}</div>
+<div class="line"><span class="lineno">   25</span>  <span class="comment">//spdlog::set_pattern(&quot;[%H:%M:%S][%s:%#][%^%l%$] %v&quot;);</span></div>
+<div class="line"><span class="lineno">   26</span>  spdlog::set_pattern(<span class="stringliteral">&quot;[%s:%#][%^%l%$] %v&quot;</span>);</div>
+<div class="line"><span class="lineno">   27</span><span class="preprocessor">  #else</span></div>
+<div class="line"><span class="lineno">   28</span>  <span class="comment">//spdlog::set_pattern(&quot;[%H:%M:%S][%s][%^%l%$] %v&quot;);</span></div>
+<div class="line"><span class="lineno">   29</span>  spdlog::set_pattern(<span class="stringliteral">&quot;[%s][%^%l%$] %v&quot;</span>);</div>
+<div class="line"><span class="lineno">   30</span><span class="preprocessor">  #endif</span></div>
+<div class="line"><span class="lineno">   31</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
