@@ -27,7 +27,7 @@ var searchData=
   ['isflat_24',['isflat',['../GetPenaltyTerm_8cpp.html#ae7c3a438d4508eba7ac26e26135b2c17',1,'isFlat:&#160;GetPenaltyTerm.cpp'],['../classSMonolith.html#ac69a542d8c48acd8faf797c20cad4590',1,'SMonolith::isFlat()']]],
   ['isflatarray_25',['isflatarray',['../classsplineFDBase.html#aa8a204355df78af3f79bf8f2815258d3',1,'splineFDBase']]],
   ['isflux_26',['isFlux',['../classcovarianceXsec.html#a76a3fd06dd9cbe2eb6ccf560a435bf76',1,'covarianceXsec']]],
-  ['islinear_27',['islinear',['../classOscillator.html#a7f3eb39d4674724a51cb55c7daff8c20',1,'Oscillator::isLinear()'],['../classOscillator.html#a646a52ceae668dc0b4cc58245d9f0939',1,'Oscillator::IsLinear']]],
+  ['islinear_27',['islinear',['../classOscillator.html#a646a52ceae668dc0b4cc58245d9f0939',1,'Oscillator::IsLinear'],['../classOscillator.html#a7f3eb39d4674724a51cb55c7daff8c20',1,'Oscillator::isLinear()']]],
   ['ismode_28',['IsMode',['../structMaCh3ModeInfo.html#a9a89a0394f9f5eb780008253716836fc',1,'MaCh3ModeInfo']]],
   ['isnc_29',['isNC',['../structfdmc__base.html#a3b50812cc57ead329ccf495012cf906e',1,'fdmc_base']]],
   ['isparameterfixed_30',['isparameterfixed',['../classcovarianceBase.html#a1a0ed90bcbc2f932c7a32d26090edbbb',1,'covarianceBase::isParameterFixed(const std::string &amp;name)'],['../classcovarianceBase.html#a2424eaebd9daa92b0294b352310770a3',1,'covarianceBase::isParameterFixed(const int i)']]],

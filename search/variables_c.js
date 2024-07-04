@@ -26,10 +26,10 @@ var searchData=
   ['means_5fhpd_23',['Means_HPD',['../classMCMCProcessor.html#a32657dc39a7fc0d04804f6195a3d8c3e',1,'MCMCProcessor']]],
   ['medianarr_24',['MedianArr',['../RHat_8cpp.html#a761fd0b4a970686c00ce3e4daefd7f73',1,'RHat.cpp']]],
   ['minuit_25',['minuit',['../classMinuitFit.html#a3f5a1b7de36ce6c55821e262b016cb19',1,'MinuitFit']]],
-  ['mode_26',['mode',['../structfdmc__base.html#a86b6b78f41e045592074494f960c8128',1,'fdmc_base::mode'],['../classMaCh3Modes.html#a062f961a64e9b6bebf420730f9dad9ff',1,'MaCh3Modes::Mode']]],
+  ['mode_26',['mode',['../classMaCh3Modes.html#a062f961a64e9b6bebf420730f9dad9ff',1,'MaCh3Modes::Mode'],['../structfdmc__base.html#a86b6b78f41e045592074494f960c8128',1,'fdmc_base::mode']]],
   ['modehist_27',['ModeHist',['../classSampleSummary.html#a59475a0c9460277914402850372727ea',1,'SampleSummary']]],
   ['modemap_28',['ModeMap',['../classMaCh3Modes.html#a52a226378736541ece3830f53ac851c3',1,'MaCh3Modes']]],
-  ['modes_29',['modes',['../classSampleSummary.html#a6593fed9709673a6910f96adc88fc8f2',1,'SampleSummary::Modes'],['../classFitterBase.html#a004cb6e6168032d9280ce3db912f1a43',1,'FitterBase::Modes'],['../classsamplePDFBase.html#ab4ce7691212fdc86570b98d58a333ddf',1,'samplePDFBase::Modes'],['../classmanager.html#ab30ad812780ee2152b72f942b7b91dec',1,'manager::Modes'],['../classXsecNorms4.html#ad0632d5a94a37ee5ce297698abadd844',1,'XsecNorms4::modes']]],
+  ['modes_29',['modes',['../classXsecNorms4.html#ad0632d5a94a37ee5ce297698abadd844',1,'XsecNorms4::modes'],['../classSampleSummary.html#a6593fed9709673a6910f96adc88fc8f2',1,'SampleSummary::Modes'],['../classFitterBase.html#a004cb6e6168032d9280ce3db912f1a43',1,'FitterBase::Modes'],['../classsamplePDFBase.html#ab4ce7691212fdc86570b98d58a333ddf',1,'samplePDFBase::Modes'],['../classmanager.html#ab30ad812780ee2152b72f942b7b91dec',1,'manager::Modes']]],
   ['monolithindex_30',['MonolithIndex',['../classsplineFDBase.html#addec38a8493974ccc3ee16931d5b794a',1,'splineFDBase']]],
   ['monolithsize_31',['MonolithSize',['../classsplineFDBase.html#ad1fefa7f796f2a28a69f5336f5777bce',1,'splineFDBase']]]
 ];
