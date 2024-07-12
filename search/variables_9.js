@@ -1,7 +1,7 @@
 var searchData=
 [
   ['iamvaried_0',['IamVaried',['../classMCMCProcessor.html#a95fa49737432818bc830a44898d0d850',1,'MCMCProcessor']]],
-  ['index_1',['index',['../classXsecNorms4.html#a6c45244b8c559ada13c1c886dea37cc2',1,'XsecNorms4']]],
+  ['index_1',['index',['../structXsecNorms4.html#a6c45244b8c559ada13c1c886dea37cc2',1,'XsecNorms4']]],
   ['index_5fcpu_2',['index_cpu',['../classSMonolith.html#ae9fa50f60f717558f517faea6a38d251',1,'SMonolith']]],
   ['indexvec_3',['indexvec',['../classsplineFDBase.html#ab3a4e79bfe675a4070597557e6226e12',1,'splineFDBase']]],
   ['inpfilelist_4',['inpFileList',['../CombineMaCh3Chains_8cpp.html#a92bfb809a0500604336ae74b5198373b',1,'CombineMaCh3Chains.cpp']]],

@@ -27,7 +27,7 @@ var searchData=
   ['secondaryybinedges_24',['SecondaryYBinEdges',['../classOscillator.html#a9968789998df1f14ee02de9f82867911',1,'Oscillator']]],
   ['secondaryybinevalpoints_25',['SecondaryYBinEvalPoints',['../classOscillator.html#ad970795233f7696499a1753981eb6086',1,'Oscillator']]],
   ['segments_26',['segments',['../classSMonolith.html#a53ab5b2235fd697f27556f1a1a7a5354',1,'SMonolith']]],
-  ['selection_27',['selection',['../classXsecNorms4.html#a1723c13b5d04cff5ce48718cae5b6e14',1,'XsecNorms4::Selection'],['../classsamplePDFFDBase.html#aafa0e8f399c5c22d9234e55a7289f8ed',1,'samplePDFFDBase::Selection']]],
+  ['selection_27',['selection',['../structXsecNorms4.html#a1723c13b5d04cff5ce48718cae5b6e14',1,'XsecNorms4::Selection'],['../classsamplePDFFDBase.html#aafa0e8f399c5c22d9234e55a7289f8ed',1,'samplePDFFDBase::Selection']]],
   ['selectionbounds_28',['SelectionBounds',['../classsamplePDFFDBase.html#a01553c17343ed6db1391750d7846b203',1,'samplePDFFDBase']]],
   ['selectionstr_29',['SelectionStr',['../classsamplePDFFDBase.html#a8bc9dac849f31e1281a3af0261d1b952',1,'samplePDFFDBase']]],
   ['settingssaved_30',['SettingsSaved',['../classFitterBase.html#a588678c71d816f48ba3c140543dbe916',1,'FitterBase']]],

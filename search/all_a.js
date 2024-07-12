@@ -2,7 +2,7 @@ var searchData=
 [
   ['iamvaried_0',['IamVaried',['../classMCMCProcessor.html#a95fa49737432818bc830a44898d0d850',1,'MCMCProcessor']]],
   ['img_20src_20doc_20mach3logo_20png_20alt_20mach3_20align_20center_20width_20100_1',['MaCh3 &lt;img src=&quot;Doc/mach3logo.png&quot; alt=&quot;MaCh3&quot; align=&quot;center&quot; width=&quot;100&quot;/&gt;',['../md__2github_2workspace_2README.html',1,'']]],
-  ['index_2',['index',['../classXsecNorms4.html#a6c45244b8c559ada13c1c886dea37cc2',1,'XsecNorms4']]],
+  ['index_2',['index',['../structXsecNorms4.html#a6c45244b8c559ada13c1c886dea37cc2',1,'XsecNorms4']]],
   ['index_5fcpu_3',['index_cpu',['../classSMonolith.html#ae9fa50f60f717558f517faea6a38d251',1,'SMonolith']]],
   ['indexvec_4',['indexvec',['../classsplineFDBase.html#ab3a4e79bfe675a4070597557e6226e12',1,'splineFDBase']]],
   ['init_5',['init',['../classsamplePDFBase.html#a5d07bd30725439bad3c15039aeca5ea8',1,'samplePDFBase::init(double pot)'],['../classsamplePDFBase.html#af82aa921ee6e6c204d97e6b6a7cf27ae',1,'samplePDFBase::init(double pot, std::string mc_version)'],['../classPSO.html#a20cba5b6be9f5996dba818220f7a3524',1,'PSO::init()'],['../classcovarianceBase.html#abbdd5ddf5ae51c2c4113631754ec24e6',1,'covarianceBase::init(const char *name, const char *file)'],['../classcovarianceBase.html#acec1e1c7fd83d21e1ad55a03acfeb8c4',1,'covarianceBase::init(const std::vector&lt; std::string &gt; &amp;YAMLFile)'],['../classcovarianceBase.html#ab5141e2014519c1483788f4995686164',1,'covarianceBase::init(TMatrixDSym *covMat)']]],

@@ -1,14 +1,14 @@
 var searchData=
 [
   ['handling_0',['Error handling',['../md__2github_2workspace_2CONTRIBUTING.html#autotoc_md6',1,'']]],
-  ['haskinbounds_1',['hasKinBounds',['../classXsecNorms4.html#ab5d815107d57b4f7ae22ccb3f2ae318b',1,'XsecNorms4']]],
+  ['haskinbounds_1',['hasKinBounds',['../structXsecNorms4.html#ab5d815107d57b4f7ae22ccb3f2ae318b',1,'XsecNorms4']]],
   ['hcoarsecosz_2',['hCoarseCosz',['../classOscillator.html#aa2f13d53fcfc4b0b7446088bb83d0d12',1,'Oscillator']]],
   ['hcoarseenergy_3',['hCoarseEnergy',['../classOscillator.html#a26d4b8cdeec29ce802a8534ec0bbe9e0',1,'Oscillator']]],
   ['help_20and_20guidelines_4',['Help and Guidelines',['../md__2github_2workspace_2README.html#autotoc_md21',1,'']]],
   ['hfinecosz_5',['hFineCosz',['../classOscillator.html#a7ca8c31e42729185d7a86d213ed4e080',1,'Oscillator']]],
   ['hfineenergy_6',['hFineEnergy',['../classOscillator.html#a57c4971f8da63332a6a7d9561670ca7b',1,'Oscillator']]],
   ['histogramsinitialised_7',['HistogramsInitialised',['../classOscillator.html#a3627014bbf95f278475a9975fa38d157',1,'Oscillator']]],
-  ['horncurrents_8',['horncurrents',['../classXsecNorms4.html#ad9b663a9fe71c5b3feb844179bba8822',1,'XsecNorms4']]],
+  ['horncurrents_8',['horncurrents',['../structXsecNorms4.html#ad9b663a9fe71c5b3feb844179bba8822',1,'XsecNorms4']]],
   ['how_20to_20compile_9',['How to Compile',['../md__2github_2workspace_2README.html#autotoc_md11',1,'']]],
   ['how_20to_20contribute_20code_20to_20mach3_10',['How to Contribute Code to MaCh3',['../md__2github_2workspace_2CONTRIBUTING.html',1,'']]],
   ['how_20to_20use_11',['How To Use',['../md__2github_2workspace_2README.html#autotoc_md20',1,'']]],

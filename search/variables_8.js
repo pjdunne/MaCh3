@@ -1,12 +1,12 @@
 var searchData=
 [
-  ['haskinbounds_0',['hasKinBounds',['../classXsecNorms4.html#ab5d815107d57b4f7ae22ccb3f2ae318b',1,'XsecNorms4']]],
+  ['haskinbounds_0',['hasKinBounds',['../structXsecNorms4.html#ab5d815107d57b4f7ae22ccb3f2ae318b',1,'XsecNorms4']]],
   ['hcoarsecosz_1',['hCoarseCosz',['../classOscillator.html#aa2f13d53fcfc4b0b7446088bb83d0d12',1,'Oscillator']]],
   ['hcoarseenergy_2',['hCoarseEnergy',['../classOscillator.html#a26d4b8cdeec29ce802a8534ec0bbe9e0',1,'Oscillator']]],
   ['hfinecosz_3',['hFineCosz',['../classOscillator.html#a7ca8c31e42729185d7a86d213ed4e080',1,'Oscillator']]],
   ['hfineenergy_4',['hFineEnergy',['../classOscillator.html#a57c4971f8da63332a6a7d9561670ca7b',1,'Oscillator']]],
   ['histogramsinitialised_5',['HistogramsInitialised',['../classOscillator.html#a3627014bbf95f278475a9975fa38d157',1,'Oscillator']]],
-  ['horncurrents_6',['horncurrents',['../classXsecNorms4.html#ad9b663a9fe71c5b3feb844179bba8822',1,'XsecNorms4']]],
+  ['horncurrents_6',['horncurrents',['../structXsecNorms4.html#ad9b663a9fe71c5b3feb844179bba8822',1,'XsecNorms4']]],
   ['hpost_7',['hpost',['../classMCMCProcessor.html#aa3c928a09df7d6fc431c0b879d5c40e4',1,'MCMCProcessor']]],
   ['hpost2d_8',['hpost2D',['../classMCMCProcessor.html#a0ddcfa4ba1e4dcdea366d88decc64391',1,'MCMCProcessor']]],
   ['hprimarybinning_9',['hPrimaryBinning',['../classOscillator.html#ad7da187ecbc0c6c2f39d16fe4221d97a',1,'Oscillator']]],

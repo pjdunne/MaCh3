@@ -55,7 +55,7 @@ var searchData=
   ['returnsecondaryybinedges_52',['ReturnSecondaryYBinEdges',['../classOscillator.html#adca90d4885ccce6db146892017fd901f',1,'Oscillator']]],
   ['returnunity_53',['ReturnUnity',['../classcovarianceBase.html#a3e2c11c7c0a3557068369b30e7aac17f',1,'covarianceBase']]],
   ['reweight_54',['reweight',['../classsamplePDFFDBase.html#a0e8d317f7acc7027870987461194e8ce',1,'samplePDFFDBase::reweight()'],['../classsamplePDFBase.html#a769d53f670a7c1fb21f3e4fc6eefa41c',1,'samplePDFBase::reweight()']]],
-  ['reweightprior_55',['reweightprior',['../ProcessMCMC_8cpp.html#abbd13994de9f24524b06b19aa901d73f',1,'ReweightPrior():&#160;ProcessMCMC.cpp'],['../classMCMCProcessor.html#aba9eef0afbdcff18caee2e496b6047ff',1,'MCMCProcessor::ReweightPrior()']]],
+  ['reweightprior_55',['reweightprior',['../ProcessMCMC_8cpp.html#abbd13994de9f24524b06b19aa901d73f',1,'ReweightPrior():&#160;ProcessMCMC.cpp'],['../classMCMCProcessor.html#ad3b1cfab21c7063bc29d1cf5dcca888c',1,'MCMCProcessor::ReweightPrior()']]],
   ['rhat_56',['RHat',['../RHat_8cpp.html#ab5cfb5e8741283e8d8252aae184004e4',1,'RHat.cpp']]],
   ['rhat_2ecpp_57',['RHat.cpp',['../RHat_8cpp.html',1,'']]],
   ['rhatfolded_58',['RHatFolded',['../RHat_8cpp.html#a754fbe6088f05d880121693722fe6b99',1,'RHat.cpp']]],

@@ -2,7 +2,7 @@ var searchData=
 [
   ['target_0',['Target',['../structfdmc__base.html#aff6f0d938f770de0c192d256e8da8dce',1,'fdmc_base']]],
   ['targetcompression_1',['targetCompression',['../CombineMaCh3Chains_8cpp.html#a8ea7adaa7c7b0783e5562e9e8673fbe1',1,'CombineMaCh3Chains.cpp']]],
-  ['targets_2',['targets',['../classXsecNorms4.html#a0f6b21994200f446f21c42ec1cebf9bb',1,'XsecNorms4']]],
+  ['targets_2',['targets',['../structXsecNorms4.html#a0f6b21994200f446f21c42ec1cebf9bb',1,'XsecNorms4']]],
   ['templateinputfilename_3',['TemplateInputFileName',['../classOscillator.html#a9799d325b7b716ae42aa65a7be383b73',1,'Oscillator']]],
   ['test_4',['test',['../classEnergyScale.html#a273f63de62586b798ee17592d5776257',1,'EnergyScale']]],
   ['throwmatrix_5',['throwMatrix',['../classcovarianceBase.html#a6cb3d0b4096fbb55b040f70cd5b6e32b',1,'covarianceBase']]],
