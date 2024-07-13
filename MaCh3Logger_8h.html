@@ -306,25 +306,30 @@ template&lt;<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e
 
 <p class="definition">Definition at line <a class="el" href="MaCh3Logger_8h_source.html#l00057">57</a> of file <a class="el" href="MaCh3Logger_8h_source.html">MaCh3Logger.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   58</span>{</div>
-<div class="line"><span class="lineno">   59</span>  std::stringstream <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">sss</a>;</div>
-<div class="line"><span class="lineno">   60</span>  std::streambuf* <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">coutBuf</a> = std::cout.rdbuf();</div>
-<div class="line"><span class="lineno">   61</span>  std::streambuf* <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">cerrBuf</a> = std::cerr.rdbuf();</div>
-<div class="line"><span class="lineno">   62</span> </div>
-<div class="line"><span class="lineno">   63</span>  std::cout.rdbuf(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">sss</a>.rdbuf());</div>
-<div class="line"><span class="lineno">   64</span>  std::cerr.rdbuf(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">sss</a>.rdbuf());</div>
-<div class="line"><span class="lineno">   65</span> </div>
-<div class="line"><span class="lineno">   66</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">func</a>(std::forward&lt;Args&gt;(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">args</a>)...);</div>
-<div class="line"><span class="lineno">   67</span> </div>
-<div class="line"><span class="lineno">   68</span>  std::cout.rdbuf(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">coutBuf</a>);</div>
-<div class="line"><span class="lineno">   69</span>  std::cerr.rdbuf(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">cerrBuf</a>);</div>
-<div class="line"><span class="lineno">   70</span> </div>
-<div class="line"><span class="lineno">   71</span>  std::string <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">line</a>;</div>
-<div class="line"><span class="lineno">   72</span>  <span class="keywordflow">while</span> (std::getline(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">sss</a>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">line</a>))</div>
-<div class="line"><span class="lineno">   73</span>  {</div>
-<div class="line"><span class="lineno">   74</span>    <span class="keyword">auto</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">formatted_message</a> = fmt::format(<span class="stringliteral">&quot;[{}] {}&quot;</span>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">LibName</a>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">line</a>);</div>
-<div class="line"><span class="lineno">   75</span>    <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">logFunction</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">formatted_message</a>);</div>
-<div class="line"><span class="lineno">   76</span>  }</div>
-<div class="line"><span class="lineno">   77</span>}</div>
+<div class="line"><span class="lineno">   59</span>  <span class="comment">// Create a stringstream to capture the output</span></div>
+<div class="line"><span class="lineno">   60</span>  std::stringstream <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">sss</a>;</div>
+<div class="line"><span class="lineno">   61</span>  <span class="comment">// Save the original stream buffers</span></div>
+<div class="line"><span class="lineno">   62</span>  std::streambuf* <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">coutBuf</a> = std::cout.rdbuf();</div>
+<div class="line"><span class="lineno">   63</span>  std::streambuf* <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">cerrBuf</a> = std::cerr.rdbuf();</div>
+<div class="line"><span class="lineno">   64</span> </div>
+<div class="line"><span class="lineno">   65</span>  <span class="comment">// Redirect std::cout and std::cerr to the stringstream buffer</span></div>
+<div class="line"><span class="lineno">   66</span>  std::cout.rdbuf(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">sss</a>.rdbuf());</div>
+<div class="line"><span class="lineno">   67</span>  std::cerr.rdbuf(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">sss</a>.rdbuf());</div>
+<div class="line"><span class="lineno">   68</span> </div>
+<div class="line"><span class="lineno">   69</span>  <span class="comment">// Call the provided function</span></div>
+<div class="line"><span class="lineno">   70</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">func</a>(std::forward&lt;Args&gt;(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">args</a>)...);</div>
+<div class="line"><span class="lineno">   71</span> </div>
+<div class="line"><span class="lineno">   72</span>  <span class="comment">// Restore the original stream buffers</span></div>
+<div class="line"><span class="lineno">   73</span>  std::cout.rdbuf(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">coutBuf</a>);</div>
+<div class="line"><span class="lineno">   74</span>  std::cerr.rdbuf(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">cerrBuf</a>);</div>
+<div class="line"><span class="lineno">   75</span> </div>
+<div class="line"><span class="lineno">   76</span>  std::string <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">line</a>;</div>
+<div class="line"><span class="lineno">   77</span>  <span class="keywordflow">while</span> (std::getline(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">sss</a>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">line</a>))</div>
+<div class="line"><span class="lineno">   78</span>  {</div>
+<div class="line"><span class="lineno">   79</span>    <span class="keyword">auto</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">formatted_message</a> = fmt::format(<span class="stringliteral">&quot;[{}] {}&quot;</span>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">LibName</a>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">line</a>);</div>
+<div class="line"><span class="lineno">   80</span>    <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">logFunction</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">formatted_message</a>);</div>
+<div class="line"><span class="lineno">   81</span>  }</div>
+<div class="line"><span class="lineno">   82</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
