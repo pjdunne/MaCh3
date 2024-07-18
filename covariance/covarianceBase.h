@@ -83,6 +83,11 @@ class covarianceBase {
   bool getEvalLikelihood(int i) { return fParEvalLikelihood[i]; };
   bool getDoStep(int i) { return fParDoStep[i]; };
 
+  std::vector<double> getParameters(){
+    return std::vector<double>(fParCurr, fParCurr+getNpars());
+  }
+ 
+  
   virtual double GetLikelihood();
 
   const char *getName() { return matrixName; };
