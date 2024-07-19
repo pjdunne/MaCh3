@@ -58,7 +58,7 @@ var searchData=
   ['constructpca_55',['ConstructPCA',['../classcovarianceBase.html#a8ac3a458097817eca534c23554a7635b',1,'covarianceBase']]],
   ['contribute_20code_20to_20mach3_56',['How to Contribute Code to MaCh3',['../md__2github_2workspace_2CONTRIBUTING.html',1,'']]],
   ['contributing_2emd_57',['CONTRIBUTING.md',['../CONTRIBUTING_8md.html',1,'']]],
-  ['convertth2dtoth2poly_58',['convertth2dtoth2poly',['../Structs_8cpp.html#a7b09dee9c914bc3c3dd450e4a5cd2ce5',1,'ConvertTH2DToTH2Poly(TH2D *hist):&#160;Structs.cpp'],['../Structs_8h.html#aa9cbcbd12e52cadbc498db3b78784104',1,'ConvertTH2DtoTH2Poly(TH2D *TH2Dhist):&#160;Structs.h']]],
+  ['convertth2dtoth2poly_58',['convertth2dtoth2poly',['../Structs_8h.html#aa9cbcbd12e52cadbc498db3b78784104',1,'ConvertTH2DtoTH2Poly(TH2D *TH2Dhist):&#160;Structs.h'],['../Structs_8cpp.html#a7b09dee9c914bc3c3dd450e4a5cd2ce5',1,'ConvertTH2DToTH2Poly(TH2D *hist):&#160;Structs.cpp']]],
   ['convertth2polytoth2d_59',['convertth2polytoth2d',['../Structs_8cpp.html#a1033cf3aa8abe6ab7135896aa9f3790b',1,'ConvertTH2PolyToTH2D(TH2Poly *poly, TH2D *h2dhist):&#160;Structs.cpp'],['../Structs_8h.html#af532e371f45a26f2b180d96b82b7d496',1,'ConvertTH2PolyToTH2D(TH2Poly *poly, TH2D *TH2Dhist):&#160;Structs.cpp']]],
   ['copydir_60',['CopyDir',['../CombineMaCh3Chains_8cpp.html#a1cecdc9d9c387545f811006b11f0ba71',1,'CombineMaCh3Chains.cpp']]],
   ['copypartoblockhist_61',['copyParToBlockHist',['../GetPostfitParamPlots_8cpp.html#ac9d82a2084e3fcddff1ad0ad9f2042e5',1,'GetPostfitParamPlots.cpp']]],
