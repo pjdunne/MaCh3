@@ -15,7 +15,8 @@ var searchData=
   ['xsec_5fw_12',['xsec_w',['../structfdmc__base.html#a31f571addd744817766ffe4c879a0377',1,'fdmc_base']]],
   ['xseccov_13',['XsecCov',['../classsamplePDFFDBase.html#a5648add33f6787cde8f4e3d461a17ce7',1,'samplePDFFDBase']]],
   ['xsecnorms4_14',['XsecNorms4',['../structXsecNorms4.html',1,'']]],
-  ['xsecstartingpos_15',['XsecStartingPos',['../GetPostfitParamPlots_8cpp.html#a3bb8bb8766f5ea15aa9ac31a1c9127e8',1,'GetPostfitParamPlots.cpp']]],
-  ['xsecstruct_16',['xsecstruct',['../classXSecStruct.html#a4b5dd7adb5407409fec6c4e395d9b426',1,'XSecStruct::XSecStruct(_int_ NumberOfSplines)'],['../classXSecStruct.html#a7d1ae10909b2f292a342e10824f53aa1',1,'XSecStruct::XSecStruct()'],['../classXSecStruct.html',1,'XSecStruct&lt; T &gt;']]],
-  ['xvararray_17',['xVarArray',['../classsplineFDBase.html#ac9446e5d3737ef984dc347b9249efdcc',1,'splineFDBase']]]
+  ['xsecsplines1_15',['XsecSplines1',['../structXsecSplines1.html',1,'']]],
+  ['xsecstartingpos_16',['XsecStartingPos',['../GetPostfitParamPlots_8cpp.html#a3bb8bb8766f5ea15aa9ac31a1c9127e8',1,'GetPostfitParamPlots.cpp']]],
+  ['xsecstruct_17',['xsecstruct',['../classXSecStruct.html',1,'XSecStruct&lt; T &gt;'],['../classXSecStruct.html#a4b5dd7adb5407409fec6c4e395d9b426',1,'XSecStruct::XSecStruct(_int_ NumberOfSplines)'],['../classXSecStruct.html#a7d1ae10909b2f292a342e10824f53aa1',1,'XSecStruct::XSecStruct()']]],
+  ['xvararray_18',['xVarArray',['../classsplineFDBase.html#ac9446e5d3737ef984dc347b9249efdcc',1,'splineFDBase']]]
 ];
