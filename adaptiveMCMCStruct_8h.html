@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MaCh3: /github/workspace/covariance/covarianceBase.h File Reference</title>
+<title>MaCh3: /github/workspace/covariance/adaptiveMCMCStruct.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -77,49 +77,35 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#define-members">Macros</a>  </div>
-  <div class="headertitle"><div class="title">covarianceBase.h File Reference</div></div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">adaptiveMCMCStruct.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="Structs_8h_source.html">samplePDF/Structs.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="CovarianceUtils_8h_source.html">covariance/CovarianceUtils.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="ThrowParms_8h_source.html">covariance/ThrowParms.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="manager_8h_source.html">manager/manager.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="adaptiveMCMCStruct_8h_source.html">covariance/adaptiveMCMCStruct.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="MaCh3Logger_8h_source.html">manager/MaCh3Logger.h</a>&quot;</code><br />
+<code>#include &quot;TMatrixDSym.h&quot;</code><br />
+<code>#include &lt;vector&gt;</code><br />
 </div>
-<p><a href="covarianceBase_8h_source.html">Go to the source code of this file.</a></p>
+<p><a href="adaptiveMCMCStruct_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcovarianceBase.html">covarianceBase</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class responsible for handling of systematic error parameters. Capable of using PCA or using adaptive throw matrix.  <a href="classcovarianceBase.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structadaptive__mcmc_1_1AdaptiveMCMCStruct.html">adaptive_mcmc::AdaptiveMCMCStruct</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">struct encapsulating all adaptive MCMC information  <a href="structadaptive__mcmc_1_1AdaptiveMCMCStruct.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:a194098591fd0bc4afaf13b4fd8fee408" id="r_a194098591fd0bc4afaf13b4fd8fee408"><td class="memItemLeft" align="right" valign="top">#<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">define</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="covarianceBase_8h.html#a194098591fd0bc4afaf13b4fd8fee408">_LARGE_LOGL_</a>&#160;&#160;&#160;1234567890.0</td></tr>
-<tr class="memdesc:a194098591fd0bc4afaf13b4fd8fee408"><td class="mdescLeft">&#160;</td><td class="mdescRight">Large Likelihood is used it parameter go out of physical boundary, this indicates in MCMC that such step should eb removed.  <br /></td></tr>
-<tr class="separator:a194098591fd0bc4afaf13b4fd8fee408"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespaceadaptive__mcmc" id="r_namespaceadaptive__mcmc"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceadaptive__mcmc.html">adaptive_mcmc</a></td></tr>
+<tr class="memdesc:namespaceadaptive__mcmc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains information about adaptive covariance matrix. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a58439b839521302018182a0d67935055" id="r_a58439b839521302018182a0d67935055"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceadaptive__mcmc.html#a58439b839521302018182a0d67935055">adaptive_mcmc::print_adaptive_struct</a> (<a class="el" href="structadaptive__mcmc_1_1AdaptiveMCMCStruct.html">AdaptiveMCMCStruct</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">adaptive_struct</a>)</td></tr>
+<tr class="memdesc:a58439b839521302018182a0d67935055"><td class="mdescLeft">&#160;</td><td class="mdescRight">Basic printer method for AMCMC struct.  <br /></td></tr>
+<tr class="separator:a58439b839521302018182a0d67935055"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a194098591fd0bc4afaf13b4fd8fee408" name="a194098591fd0bc4afaf13b4fd8fee408"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a194098591fd0bc4afaf13b4fd8fee408">&#9670;&#160;</a></span>_LARGE_LOGL_</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">define</a> _LARGE_LOGL_&#160;&#160;&#160;1234567890.0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Large Likelihood is used it parameter go out of physical boundary, this indicates in MCMC that such step should eb removed. </p>
-
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00012">12</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
-
-</div>
-</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

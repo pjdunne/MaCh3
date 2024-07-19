@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mach3utils_0',['MaCh3Utils',['../namespaceMaCh3Utils.html',1,'']]]
+  ['adaptive_5fmcmc_0',['adaptive_mcmc',['../namespaceadaptive__mcmc.html',1,'']]]
 ];

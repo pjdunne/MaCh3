@@ -1,5 +1,20 @@
 var searchData=
 [
-  ['oscclass_5fcudaprob3_2ecpp_0',['OscClass_CUDAProb3.cpp',['../OscClass__CUDAProb3_8cpp.html',1,'']]],
-  ['oscclass_5fcudaprob3_2eh_1',['OscClass_CUDAProb3.h',['../OscClass__CUDAProb3_8h.html',1,'']]]
+  ['mach3exception_2eh_0',['MaCh3Exception.h',['../MaCh3Exception_8h.html',1,'']]],
+  ['mach3factory_2ecpp_1',['MaCh3Factory.cpp',['../MaCh3Factory_8cpp.html',1,'']]],
+  ['mach3factory_2eh_2',['MaCh3Factory.h',['../MaCh3Factory_8h.html',1,'']]],
+  ['mach3logger_2eh_3',['MaCh3Logger.h',['../MaCh3Logger_8h.html',1,'']]],
+  ['mach3modes_2ecpp_4',['MaCh3Modes.cpp',['../MaCh3Modes_8cpp.html',1,'']]],
+  ['mach3modes_2eh_5',['MaCh3Modes.h',['../MaCh3Modes_8h.html',1,'']]],
+  ['mainpage_2emd_6',['mainpage.md',['../mainpage_8md.html',1,'']]],
+  ['manager_2ecpp_7',['manager.cpp',['../manager_8cpp.html',1,'']]],
+  ['manager_2eh_8',['manager.h',['../manager_8h.html',1,'']]],
+  ['mcmc_2ecpp_9',['mcmc.cpp',['../mcmc_8cpp.html',1,'']]],
+  ['mcmc_2eh_10',['mcmc.h',['../mcmc_8h.html',1,'']]],
+  ['mcmcprocessor_2ecpp_11',['MCMCProcessor.cpp',['../MCMCProcessor_8cpp.html',1,'']]],
+  ['mcmcprocessor_2eh_12',['MCMCProcessor.h',['../MCMCProcessor_8h.html',1,'']]],
+  ['minuitfit_2ecpp_13',['MinuitFit.cpp',['../MinuitFit_8cpp.html',1,'']]],
+  ['minuitfit_2eh_14',['MinuitFit.h',['../MinuitFit_8h.html',1,'']]],
+  ['monitor_2ecpp_15',['Monitor.cpp',['../Monitor_8cpp.html',1,'']]],
+  ['monitor_2eh_16',['Monitor.h',['../Monitor_8h.html',1,'']]]
 ];

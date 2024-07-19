@@ -53,6 +53,5 @@ var searchData=
   ['loglcurr_50',['logLCurr',['../classFitterBase.html#abfb6f10720764d8bbbe43754fd5cd976',1,'FitterBase']]],
   ['loglprop_51',['logLProp',['../classFitterBase.html#a187dd22c17f9e96e5a7e2fb2371abace',1,'FitterBase']]],
   ['logspace_52',['logspace',['../classOscillator.html#a1c8845334fcbedc588b8f6bafebe3e52',1,'Oscillator']]],
-  ['lower_5fadapt_53',['lower_adapt',['../classcovarianceBase.html#a1b5d0d1b92c39512e29a5d8ec8fdd857',1,'covarianceBase']]],
-  ['lproductionheightrange_54',['lProductionHeightRange',['../classOscillator.html#a3bd67bd51070a45ea5976f0655a48b5d',1,'Oscillator']]]
+  ['lproductionheightrange_53',['lProductionHeightRange',['../classOscillator.html#a3bd67bd51070a45ea5976f0655a48b5d',1,'Oscillator']]]
 ];

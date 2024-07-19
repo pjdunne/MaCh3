@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['basefuncpar_0',['BaseFuncPar',['../classBaseFuncPar.html',1,'']]],
-  ['box_1',['Box',['../structBox.html',1,'']]]
+  ['adaptivemcmcstruct_0',['AdaptiveMCMCStruct',['../structadaptive__mcmc_1_1AdaptiveMCMCStruct.html',1,'adaptive_mcmc']]]
 ];

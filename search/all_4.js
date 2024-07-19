@@ -14,7 +14,7 @@ var searchData=
   ['calcreweight_11',['calcReWeight',['../classcovarianceBase.html#a17fd81a6df482370d8a66098a257b756',1,'covarianceBase']]],
   ['calcrhat_12',['CalcRhat',['../RHat_8cpp.html#abd5f8455bf73bda17794dc06218e6713',1,'RHat.cpp']]],
   ['calcsavagedickey_13',['CalcSavageDickey',['../ProcessMCMC_8cpp.html#af772f7bdfdba080075141597e9c99f79',1,'ProcessMCMC.cpp']]],
-  ['calcsplineweights_14',['calcsplineweights',['../classSplineBase.html#a1ceacf5fee1fc8438501582bef93a9b5',1,'SplineBase::CalcSplineWeights()'],['../classsplineFDBase.html#a9eceab58c0aa06b58eb4e3708c00ee0e',1,'splineFDBase::CalcSplineWeights()'],['../classSMonolith.html#aa36be17828281e1412a93c0e239cdbc0',1,'SMonolith::CalcSplineWeights() override']]],
+  ['calcsplineweights_14',['calcsplineweights',['../classSMonolith.html#aa36be17828281e1412a93c0e239cdbc0',1,'SMonolith::CalcSplineWeights()'],['../classSplineBase.html#a1ceacf5fee1fc8438501582bef93a9b5',1,'SplineBase::CalcSplineWeights()'],['../classsplineFDBase.html#a9eceab58c0aa06b58eb4e3708c00ee0e',1,'splineFDBase::CalcSplineWeights()']]],
   ['calcsplineweights_5ftf1_15',['CalcSplineWeights_TF1',['../classSMonolith.html#a335ea2a499d2b2c7f1410b24b25456a1',1,'SMonolith']]],
   ['calculateenu_16',['calculateenu',['../Structs_8h.html#a2dce7c8dec7d4d7f9c61346893973421',1,'CalculateEnu(double PLep, double cosTheta, double EB, bool neutrino):&#160;Structs.cpp'],['../Structs_8cpp.html#a887ec835f8432e04f3a1eba147d796d9',1,'CalculateEnu(double PLep, double costh, double Eb, bool neutrino):&#160;Structs.cpp']]],
   ['calculateess_17',['CalculateESS',['../classMCMCProcessor.html#af576c8b4bf25ffbaa40b3939d25cf442',1,'MCMCProcessor']]],
@@ -91,9 +91,10 @@ var searchData=
   ['cpu_5ftotal_5fweights_88',['cpu_total_weights',['../classSMonolith.html#ab572dd7e0a46caf44eb925a89cbfb0cf',1,'SMonolith']]],
   ['cpu_5fweights_89',['cpu_weights',['../classSMonolith.html#a8614e8ef07431d99f62ab88d9ebdad16',1,'SMonolith']]],
   ['cpu_5fweights_5fvar_90',['cpu_weights_var',['../classSMonolith.html#ab6a29f13d8e6efb380f2b9d59cfa88fc',1,'SMonolith']]],
-  ['crosssectionparameters_91',['CrossSectionParameters',['../GetPostfitParamPlots_8cpp.html#a5307771642312031f0050189b493a621',1,'GetPostfitParamPlots.cpp']]],
-  ['cuda_92',['CUDA',['../md__2github_2workspace_2README.html#autotoc_md14',1,'']]],
-  ['cudaprob_5fnu_93',['CUDAProb_nu',['../Structs_8h.html#ae0d15be5d1316877430ecb0ce94adec7',1,'Structs.h']]],
-  ['curr_5fvalue_94',['curr_value',['../classparticle.html#a3fa66bc070aa43b66389b8e0b9754f32',1,'particle']]],
-  ['currsegment_95',['CurrSegment',['../structFastSplineInfo.html#abbaf75f4c41bd333cae72bf59856becb',1,'FastSplineInfo']]]
+  ['createnewadaptivecovariance_91',['createNewAdaptiveCovariance',['../classcovarianceBase.html#a8a79b1ecaf1e056708aa0d31ca400b34',1,'covarianceBase']]],
+  ['crosssectionparameters_92',['CrossSectionParameters',['../GetPostfitParamPlots_8cpp.html#a5307771642312031f0050189b493a621',1,'GetPostfitParamPlots.cpp']]],
+  ['cuda_93',['CUDA',['../md__2github_2workspace_2README.html#autotoc_md14',1,'']]],
+  ['cudaprob_5fnu_94',['CUDAProb_nu',['../Structs_8h.html#ae0d15be5d1316877430ecb0ce94adec7',1,'Structs.h']]],
+  ['curr_5fvalue_95',['curr_value',['../classparticle.html#a3fa66bc070aa43b66389b8e0b9754f32',1,'particle']]],
+  ['currsegment_96',['CurrSegment',['../structFastSplineInfo.html#abbaf75f4c41bd333cae72bf59856becb',1,'FastSplineInfo']]]
 ];

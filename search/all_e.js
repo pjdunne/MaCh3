@@ -53,7 +53,7 @@ var searchData=
   ['nowtalk_50',['NowTalk',['../classsamplePDFBase.html#a0d23ceb4360909007854d6aaf1272e57',1,'samplePDFBase']]],
   ['nparam_51',['nParam',['../classMCMCProcessor.html#a4200e7cbe1c8f811d3640ebfd648ca85',1,'MCMCProcessor']]],
   ['nparams_52',['nparams',['../classSMonolith.html#a4606b53f321992377d420a838c76ab3b',1,'SMonolith::nParams'],['../classXSecStruct.html#a5ff0017b93c1ba064f62cf32045e4d19',1,'XSecStruct::nParams']]],
-  ['npars_53',['npars',['../classThrowParms.html#a0a29faa43eb964a982d8da7e1511f4af',1,'ThrowParms::npars'],['../classLikelihoodFit.html#ac779acfe140500d06e42a1d4ace25385',1,'LikelihoodFit::NPars']]],
+  ['npars_53',['npars',['../classLikelihoodFit.html#ac779acfe140500d06e42a1d4ace25385',1,'LikelihoodFit::NPars'],['../classThrowParms.html#a0a29faa43eb964a982d8da7e1511f4af',1,'ThrowParms::npars']]],
   ['nparspca_54',['NParsPCA',['../classLikelihoodFit.html#a0b50b7b607751e80b6c85e9db98631af',1,'LikelihoodFit']]],
   ['npoints_55',['nPoints',['../classTSpline3__red.html#a0c32835161ae86ea22143b15b3b1904f',1,'TSpline3_red']]],
   ['nprimarybins_56',['nPrimaryBins',['../classOscillator.html#a893046dc7a3a4f9a47a67279b367eb3a',1,'Oscillator']]],
