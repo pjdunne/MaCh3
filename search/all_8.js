@@ -82,9 +82,9 @@ var searchData=
   ['getmodeerror_79',['GetModeError',['../classSampleSummary.html#a1ed7c379dc433cb1dc3b71eb7aec9713',1,'SampleSummary']]],
   ['getmodefromgenerator_80',['GetModeFromGenerator',['../classMaCh3Modes.html#af71ed4d7189fade519630fd265712cc7',1,'MaCh3Modes']]],
   ['getmodename_81',['GetModeName',['../classsamplePDFBase.html#a031399b6277a9f4da527d5169fc8c0c7',1,'samplePDFBase']]],
-  ['getname_82',['getname',['../classFitterBase.html#a3706f6d722073b447b3de8c3a6516601',1,'FitterBase::GetName()'],['../classcovarianceBase.html#a73f68a953b99aeed919a0d270788b4c0',1,'covarianceBase::getName()'],['../classMaCh3Modes.html#ae87956407701fcab662f6272163cafc7',1,'MaCh3Modes::GetName()'],['../classmanager.html#add5993e63225ab419ede0a3ba80c9f7f',1,'manager::GetName()'],['../classPSO.html#a95d9cbbfdcdc4d453254a3b1477cbbab',1,'PSO::GetName()'],['../classSplineBase.html#a2e1534f622ae1976b21df1ebf984eec5',1,'SplineBase::GetName()'],['../classSMonolith.html#ad85cab15f5dfdd47e1123b5bd1815a05',1,'SMonolith::GetName()'],['../classTF1__red.html#a8f210d3b941692f2947340dbbcdbf908',1,'TF1_red::GetName()'],['../classTSpline3__red.html#a7dfd0b2f144a8b75d0f2500df5277eac',1,'TSpline3_red::GetName()'],['../classsamplePDFBase.html#a1d89044c7ad25a5782673075842565de',1,'samplePDFBase::GetName()'],['../classLikelihoodFit.html#aff5ac0361aa016cebb24d4687e0da4ac',1,'LikelihoodFit::GetName()'],['../classmcmc.html#a0446e3c1f2af2173ffd6f017fdf6f1ba',1,'mcmc::GetName()'],['../classMinuitFit.html#a21eb79a3aa06baf99b0e5bd86e9d5c7c',1,'MinuitFit::GetName()']]],
+  ['getname_82',['getname',['../classTSpline3__red.html#a7dfd0b2f144a8b75d0f2500df5277eac',1,'TSpline3_red::GetName()'],['../classcovarianceBase.html#a73f68a953b99aeed919a0d270788b4c0',1,'covarianceBase::getName()'],['../classPSO.html#a95d9cbbfdcdc4d453254a3b1477cbbab',1,'PSO::GetName()'],['../classmcmc.html#a0446e3c1f2af2173ffd6f017fdf6f1ba',1,'mcmc::GetName()'],['../classMinuitFit.html#a21eb79a3aa06baf99b0e5bd86e9d5c7c',1,'MinuitFit::GetName()'],['../classMaCh3Modes.html#ae87956407701fcab662f6272163cafc7',1,'MaCh3Modes::GetName()'],['../classmanager.html#add5993e63225ab419ede0a3ba80c9f7f',1,'manager::GetName()'],['../classSplineBase.html#a2e1534f622ae1976b21df1ebf984eec5',1,'SplineBase::GetName()'],['../classSMonolith.html#ad85cab15f5dfdd47e1123b5bd1815a05',1,'SMonolith::GetName()'],['../classTF1__red.html#a8f210d3b941692f2947340dbbcdbf908',1,'TF1_red::GetName()'],['../classsamplePDFBase.html#a1d89044c7ad25a5782673075842565de',1,'samplePDFBase::GetName()'],['../classFitterBase.html#a3706f6d722073b447b3de8c3a6516601',1,'FitterBase::GetName()'],['../classLikelihoodFit.html#aff5ac0361aa016cebb24d4687e0da4ac',1,'LikelihoodFit::GetName()']]],
   ['getndcov_83',['GetNDCov',['../classMCMCProcessor.html#a949934e2b34901f4b8d6e44368cb0f96',1,'MCMCProcessor']]],
-  ['getndim_84',['getndim',['../classsamplePDFFDBase.html#aed3fcc9a6474fdefcc0ee30cd992c778',1,'samplePDFFDBase::GetNDim()'],['../classsplineFDBase.html#aa37a0f892b96f6b0e3b6b7aa847e94cb',1,'splineFDBase::getNDim()']]],
+  ['getndim_84',['getndim',['../classsplineFDBase.html#aa37a0f892b96f6b0e3b6b7aa847e94cb',1,'splineFDBase::getNDim()'],['../classsamplePDFFDBase.html#aed3fcc9a6474fdefcc0ee30cd992c778',1,'samplePDFFDBase::GetNDim()']]],
   ['getndsplinefileparsnamesfromdetid_85',['GetNDSplineFileParsNamesFromDetID',['../classcovarianceXsec.html#aaacc0675fa35e21adaaffa86297b23b8',1,'covarianceXsec']]],
   ['getneffective_86',['GetNeffective',['../StatisticalUtils_8h.html#aaf02981e45bb7adc146cebb4d82c6f36',1,'StatisticalUtils.h']]],
   ['getnentries_87',['GetnEntries',['../classMCMCProcessor.html#acf40fb480c198c5934e81803973451c1',1,'MCMCProcessor']]],
@@ -155,7 +155,7 @@ var searchData=
   ['getsamplenames_152',['GetSampleNames',['../classsamplePDFBase.html#aeb459a4295ed4d692e31bfd76d34e8c2',1,'samplePDFBase']]],
   ['getsavagedickey_153',['GetSavageDickey',['../classMCMCProcessor.html#ad09b1ad60fa52fdd87450ab8834e9cd9',1,'MCMCProcessor']]],
   ['getsigmavalue_154',['GetSigmaValue',['../StatisticalUtils_8h.html#a04394b98587b44b98b003bd1226606ed',1,'StatisticalUtils.h']]],
-  ['getsize_155',['getsize',['../classcovarianceBase.html#ab3c974412479cd6d891a3c325820dc1e',1,'covarianceBase::getSize()'],['../classThrowParms.html#a15d20b7bd5a244211220d74158c5cc00',1,'ThrowParms::GetSize()'],['../classTF1__red.html#af9e3b0e8d2edad0e7e08f3bf215525c9',1,'TF1_red::GetSize()']]],
+  ['getsize_155',['getsize',['../classcovarianceBase.html#ab3c974412479cd6d891a3c325820dc1e',1,'covarianceBase::getSize()'],['../classTF1__red.html#af9e3b0e8d2edad0e7e08f3bf215525c9',1,'TF1_red::GetSize()'],['../classThrowParms.html#a15d20b7bd5a244211220d74158c5cc00',1,'ThrowParms::GetSize()']]],
   ['getsplinecoeff_5fsepmany_156',['getsplinecoeff_sepmany',['../classsplineFDBase.html#aeaed416a84dc6cedc42ed9db04b4f22c',1,'splineFDBase::getSplineCoeff_SepMany()'],['../classSMonolith.html#acbbe3398718d0d02d65a1e92a91c112c',1,'SMonolith::getSplineCoeff_SepMany()']]],
   ['getsplinefileparsnamesfromdetid_157',['GetSplineFileParsNamesFromDetID',['../classcovarianceXsec.html#adb95a5704149a2c6d6573a711024e7c5',1,'covarianceXsec']]],
   ['getsplineinterpolation_158',['GetSplineInterpolation',['../classcovarianceXsec.html#a1cef7811e0441730f65087e12d8721e5',1,'covarianceXsec']]],
@@ -189,7 +189,9 @@ var searchData=
   ['gpu_5ftotal_5fweights_186',['gpu_total_weights',['../classSMonolith.html#a43ffa53dafb6006e7bd23597a402e8b4',1,'SMonolith']]],
   ['gpu_5fweights_187',['gpu_weights',['../classSMonolith.html#a1317bac1e66e5400c59bc4dd9ff3cdd9',1,'SMonolith']]],
   ['gpumcmcprocessorutils_2ecu_188',['gpuMCMCProcessorUtils.cu',['../gpuMCMCProcessorUtils_8cu.html',1,'']]],
-  ['gpusplineutils_2ecu_189',['gpuSplineUtils.cu',['../gpuSplineUtils_8cu.html',1,'']]],
-  ['gpuutils_2ecu_190',['gpuUtils.cu',['../gpuUtils_8cu.html',1,'']]],
-  ['guidelines_191',['Help and Guidelines',['../md__2github_2workspace_2README.html#autotoc_md21',1,'']]]
+  ['gpumcmcprocessorutils_2ecuh_189',['gpuMCMCProcessorUtils.cuh',['../gpuMCMCProcessorUtils_8cuh.html',1,'']]],
+  ['gpusplineutils_2ecu_190',['gpuSplineUtils.cu',['../gpuSplineUtils_8cu.html',1,'']]],
+  ['gpuutils_2ecu_191',['gpuUtils.cu',['../gpuUtils_8cu.html',1,'']]],
+  ['gpuutils_2ecuh_192',['gpuUtils.cuh',['../gpuUtils_8cuh.html',1,'']]],
+  ['guidelines_193',['Help and Guidelines',['../md__2github_2workspace_2README.html#autotoc_md21',1,'']]]
 ];
