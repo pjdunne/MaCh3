@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mach3modes_5ft_0',['MaCh3Modes_t',['../MaCh3Modes_8h.html#adf43f6c73c9598abc381855d31ef5682',1,'MaCh3Modes.h']]]
+  ['float_5ft_0',['FLOAT_T',['../OscClass__CUDAProb3_8h.html#ae859fcc828db5cc21dc6bd9611634949',1,'OscClass_CUDAProb3.h']]]
 ];

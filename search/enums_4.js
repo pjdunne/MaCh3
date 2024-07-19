@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['targetmat_0',['TargetMat',['../Structs_8h.html#a706416000041de040e97d5dbe0bdb580',1,'Structs.h']]],
-  ['teststatistic_1',['TestStatistic',['../Structs_8h.html#a960da89e33ac45a56f7bbfac3068dc67',1,'Structs.h']]]
+  ['splineinterpolation_0',['SplineInterpolation',['../Structs_8h.html#a6720d732608767153550aebebcf8fbf4',1,'Structs.h']]],
+  ['splinesegmentcoeffs_1',['SplineSegmentCoeffs',['../SplineCommon_8h.html#aac6312c7a4c683e6d016d9fccdc7d7c0',1,'SplineCommon.h']]],
+  ['systtype_2',['SystType',['../Structs_8h.html#affc27d8b7b82d3713f45af17873fde2f',1,'Structs.h']]]
 ];

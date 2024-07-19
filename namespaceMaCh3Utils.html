@@ -292,10 +292,11 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  128</span>  <span class="comment">// Print Driver Version</span></div>
 <div class="line"><span class="lineno">  129</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;Driver Version: {}&quot;</span>, <a class="code hl_function" href="namespaceMaCh3Utils.html#aeed4ea9cad38e64fc3bae7590373d42c">TerminalToString</a>(<span class="stringliteral">&quot;nvidia-smi --query-gpu=driver_version --format=csv,noheader&quot;</span>));</div>
 <div class="line"><span class="lineno">  130</span>  <span class="comment">// Print N GPU thread</span></div>
-<div class="line"><span class="lineno">  131</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;Currently used GPU has: {} threads&quot;</span>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">GetNumGPUThreads</a>());</div>
+<div class="line"><span class="lineno">  131</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;Currently used GPU has: {} threads&quot;</span>, <a class="code hl_function" href="gpuUtils_8cu.html#a6ce692705fff8744f83272e70421fbf4">GetNumGPUThreads</a>());</div>
 <div class="line"><span class="lineno">  132</span><span class="preprocessor">#endif</span></div>
 <div class="line"><span class="lineno">  133</span>  <span class="keywordflow">return</span>;</div>
 <div class="line"><span class="lineno">  134</span>}</div>
+<div class="ttc" id="agpuUtils_8cu_html_a6ce692705fff8744f83272e70421fbf4"><div class="ttname"><a href="gpuUtils_8cu.html#a6ce692705fff8744f83272e70421fbf4">GetNumGPUThreads</a></div><div class="ttdeci">int GetNumGPUThreads(const int Device)</div><div class="ttdoc">KS: Get number of GPU threads for currently used GPU.</div><div class="ttdef"><b>Definition</b> <a href="gpuUtils_8cu_source.html#l00110">gpuUtils.cu:110</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

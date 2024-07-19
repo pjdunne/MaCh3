@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['float_5ft_0',['FLOAT_T',['../OscClass__CUDAProb3_8h.html#ae859fcc828db5cc21dc6bd9611634949',1,'OscClass_CUDAProb3.h']]]
+  ['dmarray_0',['dmArray',['../probGpu_8cu.html#a3060b21ce9c77dad0cd5c09b63706d1e',1,'probGpu.cu']]]
 ];

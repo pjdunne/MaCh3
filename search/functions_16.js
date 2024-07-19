@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['yamltostring_0',['YAMLtoSTRING',['../YamlHelper_8h.html#aae72fb06a391f1073add5eed6c6485dd',1,'YamlHelper.h']]]
+  ['xsecstruct_0',['xsecstruct',['../classXSecStruct.html#a4b5dd7adb5407409fec6c4e395d9b426',1,'XSecStruct::XSecStruct(_int_ NumberOfSplines)'],['../classXSecStruct.html#a7d1ae10909b2f292a342e10824f53aa1',1,'XSecStruct::XSecStruct()']]]
 ];

@@ -521,7 +521,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno"> 1240</span><span class="comment">// *****************************************</span></div>
 <div class="line"><span class="lineno"> 1241</span> </div>
 <div class="line"><span class="lineno"> 1242</span><span class="preprocessor">#ifdef CUDA</span></div>
-<div class="line"><span class="lineno"> 1243</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">CleanupGPU_SepMany</a>(</div>
+<div class="line"><span class="lineno"> 1243</span>  <a class="code hl_function" href="gpuSplineUtils_8cu.html#ac999450ca921ec45990ab785e1d0f179">CleanupGPU_SepMany</a>(</div>
 <div class="line"><span class="lineno"> 1244</span>      <a class="code hl_variable" href="classSMonolith.html#a6aaa90b9158e01743235a465fd80caaf">gpu_paramNo_arr</a>,</div>
 <div class="line"><span class="lineno"> 1245</span>      <a class="code hl_variable" href="classSMonolith.html#a0ff9a70ffa877c13f6aa53a44e447e39">gpu_nKnots_arr</a>,</div>
 <div class="line"><span class="lineno"> 1246</span> </div>
@@ -536,7 +536,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno"> 1255</span>      <a class="code hl_variable" href="classSMonolith.html#a1317bac1e66e5400c59bc4dd9ff3cdd9">gpu_weights</a>);</div>
 <div class="line"><span class="lineno"> 1256</span>  </div>
 <div class="line"><span class="lineno"> 1257</span>  <span class="comment">//KS: Since we declared them using CUDA alloc we have to free memory using also cuda functions</span></div>
-<div class="line"><span class="lineno"> 1258</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">CleanupGPU_Segments</a>(<a class="code hl_variable" href="classSMonolith.html#a53ab5b2235fd697f27556f1a1a7a5354">segments</a>, <a class="code hl_variable" href="classSMonolith.html#aa2a793b82a6c650a6fad52510e49b6b0">vals</a>);</div>
+<div class="line"><span class="lineno"> 1258</span>  <a class="code hl_function" href="gpuSplineUtils_8cu.html#ae17e68e55fea24bcac1dde0ef11fe299">CleanupGPU_Segments</a>(<a class="code hl_variable" href="classSMonolith.html#a53ab5b2235fd697f27556f1a1a7a5354">segments</a>, <a class="code hl_variable" href="classSMonolith.html#aa2a793b82a6c650a6fad52510e49b6b0">vals</a>);</div>
 <div class="line"><span class="lineno"> 1259</span><span class="preprocessor">#else</span></div>
 <div class="line"><span class="lineno"> 1260</span>  <span class="keywordflow">if</span>(<a class="code hl_variable" href="classSMonolith.html#a53ab5b2235fd697f27556f1a1a7a5354">segments</a> != <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">NULL</a>) <span class="keyword">delete</span>[] <a class="code hl_variable" href="classSMonolith.html#a53ab5b2235fd697f27556f1a1a7a5354">segments</a>;</div>
 <div class="line"><span class="lineno"> 1261</span>  <span class="keywordflow">if</span>(<a class="code hl_variable" href="classSMonolith.html#aa2a793b82a6c650a6fad52510e49b6b0">vals</a> != <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">NULL</a>) <span class="keyword">delete</span>[] <a class="code hl_variable" href="classSMonolith.html#aa2a793b82a6c650a6fad52510e49b6b0">vals</a>;</div>
@@ -587,6 +587,8 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassSMonolith_html_ad48ce38bdd62d27df5405fdbf7dbc0c7"><div class="ttname"><a href="classSMonolith.html#ad48ce38bdd62d27df5405fdbf7dbc0c7">SMonolith::gpu_coeff_many</a></div><div class="ttdeci">float * gpu_coeff_many</div><div class="ttdoc">GPU arrays to hold other coefficients.</div><div class="ttdef"><b>Definition</b> <a href="SplineMonolith_8h_source.html#l00195">SplineMonolith.h:195</a></div></div>
 <div class="ttc" id="aclassSMonolith_html_ae9fa50f60f717558f517faea6a38d251"><div class="ttname"><a href="classSMonolith.html#ae9fa50f60f717558f517faea6a38d251">SMonolith::index_cpu</a></div><div class="ttdeci">int * index_cpu</div><div class="ttdoc">holds the index for good splines; don't do unsigned since starts with negative value!</div><div class="ttdef"><b>Definition</b> <a href="SplineMonolith_8h_source.html#l00150">SplineMonolith.h:150</a></div></div>
 <div class="ttc" id="aclassSMonolith_html_aef5fe64b8717e8e336acf95b79d3007e"><div class="ttname"><a href="classSMonolith.html#aef5fe64b8717e8e336acf95b79d3007e">SMonolith::cpu_coeff_x</a></div><div class="ttdeci">std::vector&lt; float &gt; cpu_coeff_x</div><div class="ttdoc">KS: CPU arrays to hold X coefficient.</div><div class="ttdef"><b>Definition</b> <a href="SplineMonolith_8h_source.html#l00189">SplineMonolith.h:189</a></div></div>
+<div class="ttc" id="agpuSplineUtils_8cu_html_ac999450ca921ec45990ab785e1d0f179"><div class="ttname"><a href="gpuSplineUtils_8cu.html#ac999450ca921ec45990ab785e1d0f179">CleanupGPU_SepMany</a></div><div class="ttdeci">__host__ void CleanupGPU_SepMany(short int *gpu_paramNo_arr, unsigned int *gpu_nKnots_arr, float *gpu_x_array, float *gpu_many_array, float *gpu_total_weights, unsigned int *gpu_nParamPerEvent, float *cpu_total_weights, float *gpu_weights)</div><div class="ttdoc">Clean up the {x},{ybcd} arrays.</div><div class="ttdef"><b>Definition</b> <a href="gpuSplineUtils_8cu_source.html#l00805">gpuSplineUtils.cu:805</a></div></div>
+<div class="ttc" id="agpuSplineUtils_8cu_html_ae17e68e55fea24bcac1dde0ef11fe299"><div class="ttname"><a href="gpuSplineUtils_8cu.html#ae17e68e55fea24bcac1dde0ef11fe299">CleanupGPU_Segments</a></div><div class="ttdeci">__host__ void CleanupGPU_Segments(short int *segment, float *vals)</div><div class="ttdoc">Clean up pinned variables at CPU.</div><div class="ttdef"><b>Definition</b> <a href="gpuSplineUtils_8cu_source.html#l00841">gpuSplineUtils.cu:841</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1349,8 +1351,8 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  525</span> </div>
 <div class="line"><span class="lineno">  526</span>  <span class="comment">//KS: Since we are going to copy it each step use fancy CUDA memory allocation</span></div>
 <div class="line"><span class="lineno">  527</span><span class="preprocessor">#ifdef CUDA</span></div>
-<div class="line"><span class="lineno">  528</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">InitGPU_Segments</a>(&amp;<a class="code hl_variable" href="classSMonolith.html#a53ab5b2235fd697f27556f1a1a7a5354">segments</a>);</div>
-<div class="line"><span class="lineno">  529</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">InitGPU_Vals</a>(&amp;<a class="code hl_variable" href="classSMonolith.html#aa2a793b82a6c650a6fad52510e49b6b0">vals</a>);</div>
+<div class="line"><span class="lineno">  528</span>  <a class="code hl_function" href="gpuSplineUtils_8cu.html#a619be845847738447535c5628ff72c4c">InitGPU_Segments</a>(&amp;<a class="code hl_variable" href="classSMonolith.html#a53ab5b2235fd697f27556f1a1a7a5354">segments</a>);</div>
+<div class="line"><span class="lineno">  529</span>  <a class="code hl_function" href="gpuSplineUtils_8cu.html#acc3b24da038d746b5ccfcee61ba26b90">InitGPU_Vals</a>(&amp;<a class="code hl_variable" href="classSMonolith.html#aa2a793b82a6c650a6fad52510e49b6b0">vals</a>);</div>
 <div class="line"><span class="lineno">  530</span><span class="preprocessor">#else</span></div>
 <div class="line"><span class="lineno">  531</span>  <a class="code hl_variable" href="classSMonolith.html#a53ab5b2235fd697f27556f1a1a7a5354">segments</a> = <span class="keyword">new</span> <span class="keywordtype">short</span> <span class="keywordtype">int</span>[<a class="code hl_variable" href="classSMonolith.html#a4606b53f321992377d420a838c76ab3b">nParams</a>]();</div>
 <div class="line"><span class="lineno">  532</span>  <a class="code hl_variable" href="classSMonolith.html#aa2a793b82a6c650a6fad52510e49b6b0">vals</a> = <span class="keyword">new</span> <span class="keywordtype">float</span>[<a class="code hl_variable" href="classSMonolith.html#a4606b53f321992377d420a838c76ab3b">nParams</a>]();</div>
@@ -1442,6 +1444,8 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  618</span>  <a class="code hl_function" href="classSMonolith.html#a3b2a29e485f1f35fd2bcb207c47c2469">PrepareForGPU_TSpline3</a>();</div>
 <div class="line"><span class="lineno">  619</span>}</div>
 <div class="ttc" id="aclassSMonolith_html_a3b2a29e485f1f35fd2bcb207c47c2469"><div class="ttname"><a href="classSMonolith.html#a3b2a29e485f1f35fd2bcb207c47c2469">SMonolith::PrepareForGPU_TSpline3</a></div><div class="ttdeci">void PrepareForGPU_TSpline3()</div><div class="ttdoc">CW: The shared initialiser from constructors of TSpline3 and TSpline3_red.</div><div class="ttdef"><b>Definition</b> <a href="SplineMonolith_8cpp_source.html#l00734">SplineMonolith.cpp:734</a></div></div>
+<div class="ttc" id="agpuSplineUtils_8cu_html_a619be845847738447535c5628ff72c4c"><div class="ttname"><a href="gpuSplineUtils_8cu.html#a619be845847738447535c5628ff72c4c">InitGPU_Segments</a></div><div class="ttdeci">__host__ void InitGPU_Segments(short int **segment)</div><div class="ttdef"><b>Definition</b> <a href="gpuSplineUtils_8cu_source.html#l00226">gpuSplineUtils.cu:226</a></div></div>
+<div class="ttc" id="agpuSplineUtils_8cu_html_acc3b24da038d746b5ccfcee61ba26b90"><div class="ttname"><a href="gpuSplineUtils_8cu.html#acc3b24da038d746b5ccfcee61ba26b90">InitGPU_Vals</a></div><div class="ttdeci">__host__ void InitGPU_Vals(float **vals)</div><div class="ttdef"><b>Definition</b> <a href="gpuSplineUtils_8cu_source.html#l00236">gpuSplineUtils.cu:236</a></div></div>
 <div class="ttc" id="astructFastSplineInfo_html"><div class="ttname"><a href="structFastSplineInfo.html">FastSplineInfo</a></div><div class="ttdoc">CW: Add a struct to hold info about the splinified xsec parameters and help with FindSplineSegment.</div><div class="ttdef"><b>Definition</b> <a href="SplineStructs_8h_source.html#l00009">SplineStructs.h:9</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -1600,7 +1604,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  829</span>  <span class="comment">// Make these here and only refill them for each loop, avoiding unnecessary new/delete on each reconfigure</span></div>
 <div class="line"><span class="lineno">  830</span>  <span class="comment">//KS: Since we are going to copy it each step use fancy CUDA memory allocation</span></div>
 <div class="line"><span class="lineno">  831</span><span class="preprocessor">#ifdef CUDA</span></div>
-<div class="line"><span class="lineno">  832</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">InitGPU_Vals</a>(&amp;<a class="code hl_variable" href="classSMonolith.html#aa2a793b82a6c650a6fad52510e49b6b0">vals</a>);</div>
+<div class="line"><span class="lineno">  832</span>  <a class="code hl_function" href="gpuSplineUtils_8cu.html#acc3b24da038d746b5ccfcee61ba26b90">InitGPU_Vals</a>(&amp;<a class="code hl_variable" href="classSMonolith.html#aa2a793b82a6c650a6fad52510e49b6b0">vals</a>);</div>
 <div class="line"><span class="lineno">  833</span><span class="preprocessor">#else</span></div>
 <div class="line"><span class="lineno">  834</span>  <a class="code hl_variable" href="classSMonolith.html#aa2a793b82a6c650a6fad52510e49b6b0">vals</a> = <span class="keyword">new</span> <span class="keywordtype">float</span>[<a class="code hl_variable" href="classSMonolith.html#a4606b53f321992377d420a838c76ab3b">nParams</a>]();</div>
 <div class="line"><span class="lineno">  835</span><span class="preprocessor">#endif</span></div>
@@ -1841,8 +1845,8 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  263</span>  <span class="comment">// Make these here and only refill them for each loop, avoiding unnecessary new/delete on each reconfigure</span></div>
 <div class="line"><span class="lineno">  264</span>  <span class="comment">//KS: Since we are going to copy it each step use fancy CUDA memory allocation</span></div>
 <div class="line"><span class="lineno">  265</span><span class="preprocessor">#ifdef CUDA</span></div>
-<div class="line"><span class="lineno">  266</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">InitGPU_Segments</a>(&amp;<a class="code hl_variable" href="classSMonolith.html#a53ab5b2235fd697f27556f1a1a7a5354">segments</a>);</div>
-<div class="line"><span class="lineno">  267</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">InitGPU_Vals</a>(&amp;<a class="code hl_variable" href="classSMonolith.html#aa2a793b82a6c650a6fad52510e49b6b0">vals</a>);</div>
+<div class="line"><span class="lineno">  266</span>  <a class="code hl_function" href="gpuSplineUtils_8cu.html#a619be845847738447535c5628ff72c4c">InitGPU_Segments</a>(&amp;<a class="code hl_variable" href="classSMonolith.html#a53ab5b2235fd697f27556f1a1a7a5354">segments</a>);</div>
+<div class="line"><span class="lineno">  267</span>  <a class="code hl_function" href="gpuSplineUtils_8cu.html#acc3b24da038d746b5ccfcee61ba26b90">InitGPU_Vals</a>(&amp;<a class="code hl_variable" href="classSMonolith.html#aa2a793b82a6c650a6fad52510e49b6b0">vals</a>);</div>
 <div class="line"><span class="lineno">  268</span><span class="preprocessor">#else</span></div>
 <div class="line"><span class="lineno">  269</span>  <a class="code hl_variable" href="classSMonolith.html#a53ab5b2235fd697f27556f1a1a7a5354">segments</a> = <span class="keyword">new</span> <span class="keywordtype">short</span> <span class="keywordtype">int</span>[<a class="code hl_variable" href="classSMonolith.html#a4606b53f321992377d420a838c76ab3b">nParams</a>]();</div>
 <div class="line"><span class="lineno">  270</span>  <a class="code hl_variable" href="classSMonolith.html#aa2a793b82a6c650a6fad52510e49b6b0">vals</a> = <span class="keyword">new</span> <span class="keywordtype">float</span>[<a class="code hl_variable" href="classSMonolith.html#a4606b53f321992377d420a838c76ab3b">nParams</a>]();</div>
@@ -2102,7 +2106,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno"> 1031</span>  <span class="comment">// The gpu_XY arrays don&#39;t actually need initialising, since they are only placeholders for what we&#39;ll move onto the GPU. As long as we cudaMalloc the size of the arrays correctly there shouldn&#39;t be any problems</span></div>
 <div class="line"><span class="lineno"> 1032</span>  <span class="comment">// Can probably make this a bit prettier but will do for now</span></div>
 <div class="line"><span class="lineno"> 1033</span>  <span class="comment">// Could be a lot smaller of a function...</span></div>
-<div class="line"><span class="lineno"> 1034</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">InitGPU_TF1</a>(</div>
+<div class="line"><span class="lineno"> 1034</span>  <a class="code hl_function" href="gpuSplineUtils_8cu.html#a477d39804560c8f066b91a5f79fbfa0b">InitGPU_TF1</a>(</div>
 <div class="line"><span class="lineno"> 1035</span>      &amp;<a class="code hl_variable" href="classSMonolith.html#ad48ce38bdd62d27df5405fdbf7dbc0c7">gpu_coeff_many</a>,</div>
 <div class="line"><span class="lineno"> 1036</span>      &amp;<a class="code hl_variable" href="classSMonolith.html#a6aaa90b9158e01743235a465fd80caaf">gpu_paramNo_arr</a>,</div>
 <div class="line"><span class="lineno"> 1037</span>      &amp;<a class="code hl_variable" href="classSMonolith.html#a2e36f546602e0d375dcbacd8771369c7">gpu_nPoints_arr</a>,</div>
@@ -2121,7 +2125,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno"> 1050</span>  <span class="comment">// The implementation lives in splines/gpuSplineUtils.cu</span></div>
 <div class="line"><span class="lineno"> 1051</span>  <span class="comment">// The GPU splines don&#39;t actually need declaring but is good for demonstration, kind of</span></div>
 <div class="line"><span class="lineno"> 1052</span>  <span class="comment">// fixed by passing const reference</span></div>
-<div class="line"><span class="lineno"> 1053</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">CopyToGPU_TF1</a>(</div>
+<div class="line"><span class="lineno"> 1053</span>  <a class="code hl_function" href="gpuSplineUtils_8cu.html#a44452c7b7fdb280a47e1a74f7b982816">CopyToGPU_TF1</a>(</div>
 <div class="line"><span class="lineno"> 1054</span>      <a class="code hl_variable" href="classSMonolith.html#ad48ce38bdd62d27df5405fdbf7dbc0c7">gpu_coeff_many</a>,</div>
 <div class="line"><span class="lineno"> 1055</span>      <a class="code hl_variable" href="classSMonolith.html#a6aaa90b9158e01743235a465fd80caaf">gpu_paramNo_arr</a>,</div>
 <div class="line"><span class="lineno"> 1056</span>      <a class="code hl_variable" href="classSMonolith.html#a2e36f546602e0d375dcbacd8771369c7">gpu_nPoints_arr</a>,</div>
@@ -2154,6 +2158,8 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno"> 1083</span> </div>
 <div class="line"><span class="lineno"> 1084</span>  <span class="keywordflow">return</span>;</div>
 <div class="line"><span class="lineno"> 1085</span>}</div>
+<div class="ttc" id="agpuSplineUtils_8cu_html_a44452c7b7fdb280a47e1a74f7b982816"><div class="ttname"><a href="gpuSplineUtils_8cu.html#a44452c7b7fdb280a47e1a74f7b982816">CopyToGPU_TF1</a></div><div class="ttdeci">__host__ void CopyToGPU_TF1(float *gpu_coeffs, short int *gpu_paramNo_arr, short int *gpu_nPoints_arr, std::vector&lt; float &gt; cpu_coeffs, std::vector&lt; short int &gt; paramNo_arr, std::vector&lt; short int &gt; nPoints_arr, int n_events, std::vector&lt; unsigned int &gt; cpu_nParamPerEvent, unsigned int *gpu_nParamPerEvent, int n_params, unsigned int n_splines, short int _max_knots)</div><div class="ttdoc">Copy to GPU for x array and separate ybcd array.</div><div class="ttdef"><b>Definition</b> <a href="gpuSplineUtils_8cu_source.html#l00357">gpuSplineUtils.cu:357</a></div></div>
+<div class="ttc" id="agpuSplineUtils_8cu_html_a477d39804560c8f066b91a5f79fbfa0b"><div class="ttname"><a href="gpuSplineUtils_8cu.html#a477d39804560c8f066b91a5f79fbfa0b">InitGPU_TF1</a></div><div class="ttdeci">__host__ void InitGPU_TF1(float **gpu_coeffs, short int **gpu_paramNo_arr, short int **gpu_nPoints_arr, float **gpu_weights, float **cpu_total_weights, float **gpu_total_weights, int n_events, unsigned int **gpu_nParamPerEvent, unsigned int n_splines)</div><div class="ttdoc">Initialiser when using the x array and combined y,b,c,d array.</div><div class="ttdef"><b>Definition</b> <a href="gpuSplineUtils_8cu_source.html#l00168">gpuSplineUtils.cu:168</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2205,7 +2211,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  753</span>  <span class="comment">// The gpu_XY arrays don&#39;t actually need initialising, since they are only placeholders for what we&#39;ll move onto the GPU. As long as we cudaMalloc the size of the arrays correctly there shouldn&#39;t be any problems</span></div>
 <div class="line"><span class="lineno">  754</span>  <span class="comment">// Can probably make this a bit prettier but will do for now</span></div>
 <div class="line"><span class="lineno">  755</span>  <span class="comment">// Could be a lot smaller of a function...</span></div>
-<div class="line"><span class="lineno">  756</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">InitGPU_SepMany</a>(</div>
+<div class="line"><span class="lineno">  756</span>  <a class="code hl_function" href="gpuSplineUtils_8cu.html#a1d9ccd919e57eb2e2939932bca23e205">InitGPU_SepMany</a>(</div>
 <div class="line"><span class="lineno">  757</span>      &amp;<a class="code hl_variable" href="classSMonolith.html#a3eb59435b695f7f9653f027e49e4b33f">gpu_coeff_x</a>,</div>
 <div class="line"><span class="lineno">  758</span>      &amp;<a class="code hl_variable" href="classSMonolith.html#ad48ce38bdd62d27df5405fdbf7dbc0c7">gpu_coeff_many</a>,</div>
 <div class="line"><span class="lineno">  759</span>      &amp;<a class="code hl_variable" href="classSMonolith.html#a1317bac1e66e5400c59bc4dd9ff3cdd9">gpu_weights</a>,</div>
@@ -2228,7 +2234,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  776</span>  <span class="comment">// The implementation lives in splines/gpuSplineUtils.cu</span></div>
 <div class="line"><span class="lineno">  777</span>  <span class="comment">// The GPU splines don&#39;t actually need declaring but is good for demonstration, kind of</span></div>
 <div class="line"><span class="lineno">  778</span>  <span class="comment">// fixed by passing const reference</span></div>
-<div class="line"><span class="lineno">  779</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">CopyToGPU_SepMany</a>(</div>
+<div class="line"><span class="lineno">  779</span>  <a class="code hl_function" href="gpuSplineUtils_8cu.html#a1b13a9af140a7b044a220055f2c68c3a">CopyToGPU_SepMany</a>(</div>
 <div class="line"><span class="lineno">  780</span>      <a class="code hl_variable" href="classSMonolith.html#a6aaa90b9158e01743235a465fd80caaf">gpu_paramNo_arr</a>,</div>
 <div class="line"><span class="lineno">  781</span>      <a class="code hl_variable" href="classSMonolith.html#a0ff9a70ffa877c13f6aa53a44e447e39">gpu_nKnots_arr</a>,</div>
 <div class="line"><span class="lineno">  782</span>      <a class="code hl_variable" href="classSMonolith.html#a3eb59435b695f7f9653f027e49e4b33f">gpu_coeff_x</a>,</div>
@@ -2265,6 +2271,8 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  813</span><span class="preprocessor">#endif</span></div>
 <div class="line"><span class="lineno">  814</span>  <span class="keywordflow">return</span>;</div>
 <div class="line"><span class="lineno">  815</span>}</div>
+<div class="ttc" id="agpuSplineUtils_8cu_html_a1b13a9af140a7b044a220055f2c68c3a"><div class="ttname"><a href="gpuSplineUtils_8cu.html#a1b13a9af140a7b044a220055f2c68c3a">CopyToGPU_SepMany</a></div><div class="ttdeci">__host__ void CopyToGPU_SepMany(short int *gpu_paramNo_arr, unsigned int *gpu_nKnots_arr, float *gpu_x_array, float *gpu_many_array, std::vector&lt; short int &gt; paramNo_arr, std::vector&lt; unsigned int &gt; nKnots_arr, std::vector&lt; float &gt; cpu_x_array, std::vector&lt; float &gt; cpu_many_array, int n_events, std::vector&lt; unsigned int &gt; cpu_nParamPerEvent, unsigned int *gpu_nParamPerEvent, int n_params, unsigned int n_splines, short int spline_size, unsigned int sizeof_array)</div><div class="ttdoc">Copy to GPU for x array and separate ybcd array.</div><div class="ttdef"><b>Definition</b> <a href="gpuSplineUtils_8cu_source.html#l00251">gpuSplineUtils.cu:251</a></div></div>
+<div class="ttc" id="agpuSplineUtils_8cu_html_a1d9ccd919e57eb2e2939932bca23e205"><div class="ttname"><a href="gpuSplineUtils_8cu.html#a1d9ccd919e57eb2e2939932bca23e205">InitGPU_SepMany</a></div><div class="ttdeci">__host__ void InitGPU_SepMany(float **gpu_x_array, float **gpu_many_array, float **gpu_weights, short int **gpu_paramNo_arr, unsigned int **gpu_nKnots_arr, float **cpu_total_weights, float **gpu_total_weights, int n_events, unsigned int **gpu_nParamPerEvent, unsigned int sizeof_array, unsigned int n_splines, int Eve_size)</div><div class="ttdoc">Initialiser when using the x array and combined y,b,c,d array.</div><div class="ttdef"><b>Definition</b> <a href="gpuSplineUtils_8cu_source.html#l00106">gpuSplineUtils.cu:106</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2927,10 +2935,11 @@ Additional Inherited Members</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="SplineMonolith_8h_source.html#l00041">41</a> of file <a class="el" href="SplineMonolith_8h_source.html">SplineMonolith.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   42</span>    {</div>
 <div class="line"><span class="lineno">   43</span><span class="preprocessor">      #ifdef CUDA</span></div>
-<div class="line"><span class="lineno">   44</span>      <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">SynchroniseSplines</a>();</div>
+<div class="line"><span class="lineno">   44</span>      <a class="code hl_function" href="gpuSplineUtils_8cu.html#a953e5c5aecebd908f5d8c6ad64de482c">SynchroniseSplines</a>();</div>
 <div class="line"><span class="lineno">   45</span><span class="preprocessor">      #endif</span></div>
 <div class="line"><span class="lineno">   46</span>      <span class="keywordflow">return</span>;</div>
 <div class="line"><span class="lineno">   47</span>    };</div>
+<div class="ttc" id="agpuSplineUtils_8cu_html_a953e5c5aecebd908f5d8c6ad64de482c"><div class="ttname"><a href="gpuSplineUtils_8cu.html#a953e5c5aecebd908f5d8c6ad64de482c">SynchroniseSplines</a></div><div class="ttdeci">__host__ void SynchroniseSplines()</div><div class="ttdoc">Make sure all Cuda threads finished execution.</div><div class="ttdef"><b>Definition</b> <a href="gpuSplineUtils_8cu_source.html#l00795">gpuSplineUtils.cu:795</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

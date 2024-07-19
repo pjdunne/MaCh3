@@ -1,9 +1,19 @@
 var searchData=
 [
-  ['energyscale_0',['EnergyScale',['../classEnergyScale.html#a7d616fb5f4f141861ecd383174106ed0',1,'EnergyScale']]],
-  ['ensuremodenameregistered_1',['EnsureModeNameRegistered',['../classMaCh3Modes.html#a989fa0ebe20a1e0113900972e194a543',1,'MaCh3Modes']]],
-  ['estimatedatatransferrate_2',['EstimateDataTransferRate',['../namespaceMaCh3Utils.html#a4203d9c1f43730103d429f1d6497b843',1,'MaCh3Utils']]],
-  ['eval_3',['eval',['../classXSecStruct.html#ad7cf8b1919519622c34538798197c4fb',1,'XSecStruct::Eval()'],['../classTF1__red.html#a65f9cb9ae0c695c283dbf05af07c5ce0',1,'TF1_red::Eval()'],['../classTSpline3__red.html#a870aadaf6bf97c886a3da7afb31c28d8',1,'TSpline3_red::Eval()'],['../classTruncated__Spline.html#af82c4ab57c70c99d54d05536b0c74912',1,'Truncated_Spline::Eval()']]],
-  ['evaluate_4',['evaluate',['../classSplineBase.html#a86e629f3eef59b2f3800136c86fe90c3',1,'SplineBase::Evaluate()'],['../classsplineFDBase.html#af6e248be25f753c85c4fbf2f3b72cf88',1,'splineFDBase::Evaluate()'],['../classSMonolith.html#a3d1128bb78b165d94721407a124f516b',1,'SMonolith::Evaluate() override']]],
-  ['evaluate_5ftf1_5',['Evaluate_TF1',['../classSMonolith.html#acfe89403e2b71f0691b87e5e3611ccdf',1,'SMonolith']]]
+  ['declarenewmode_0',['DeclareNewMode',['../classMaCh3Modes.html#ad32518cbc4d3c4d45c3737193e637cb8',1,'MaCh3Modes']]],
+  ['definemiscvalues_1',['DefineMiscValues',['../classOscillator.html#aef425c1c62f7dbb79c1ce229684cfcfc',1,'Oscillator']]],
+  ['definepropagatorenums_2',['DefinePropagatorEnums',['../classOscillator.html#ab69d82c06206fe62734eee146b9f01e0',1,'Oscillator']]],
+  ['deletearrays_3',['DeleteArrays',['../classOscillator.html#aba469223a88f88f6367a6ee9dd3b553f',1,'Oscillator']]],
+  ['deletehistograms_4',['DeleteHistograms',['../classOscillator.html#a3cc846e5fce770d75d81b82d930b847d',1,'Oscillator']]],
+  ['deleteoscillogram_5',['DeleteOscillogram',['../classOscillator.html#a1aec272b2f3149124302470cc0e7d501',1,'Oscillator']]],
+  ['deletepropagator_6',['DeletePropagator',['../classOscillator.html#a7bee4fc4338c3753188fd43840646462',1,'Oscillator']]],
+  ['destroyarrays_7',['DestroyArrays',['../RHat_8cpp.html#abb60917440a91d5a3507fd4059d3e23b',1,'RHat.cpp']]],
+  ['diagmcmc_8',['diagmcmc',['../classMCMCProcessor.html#a7f8faecae63616ba100cf24ae42ecc08',1,'MCMCProcessor::DiagMCMC()'],['../DiagMCMC_8cpp.html#a73b9fcbb4ef23d61a60d3a6cdb45feba',1,'DiagMCMC(std::string inputFile, std::string config):&#160;DiagMCMC.cpp']]],
+  ['diagnosecovariancematrix_9',['DiagnoseCovarianceMatrix',['../ProcessMCMC_8cpp.html#a0a8acd4f01586a646ce233eccd085d65',1,'ProcessMCMC.cpp']]],
+  ['dragrace_10',['DragRace',['../classFitterBase.html#ab3db1d0bb7364e70cd432a3e1c0a600e',1,'FitterBase']]],
+  ['drawcorrelations1d_11',['DrawCorrelations1D',['../classMCMCProcessor.html#a5b0961bcb0eea7a347e6a29ef7738d80',1,'MCMCProcessor']]],
+  ['drawcovariance_12',['DrawCovariance',['../classMCMCProcessor.html#a8d9b9c1c780a51b130fe528583dc5019',1,'MCMCProcessor']]],
+  ['drawplots_13',['DrawPlots',['../GetPostfitParamPlots_8cpp.html#a45a260b517b253fb3d54f9168537da64',1,'GetPostfitParamPlots.cpp']]],
+  ['drawpostfit_14',['DrawPostfit',['../classMCMCProcessor.html#ab420de77e598da4b02ba74cdc20f2ea9',1,'MCMCProcessor']]],
+  ['dumpweights_15',['DumpWeights',['../classsamplePDFFDBase.html#a571f6a6915c16e9bd97ac6691a8cbe1b',1,'samplePDFFDBase']]]
 ];

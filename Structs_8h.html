@@ -250,7 +250,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a7bff6c239eb0213052f3193d84a7bee0" id="r_a7bff6c239eb0213052f3193d84a7bee0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Structs_8h.html#a7bff6c239eb0213052f3193d84a7bee0">PDGToProbs</a> (<a class="el" href="Structs_8h.html#a0dfdd8cf84b8fa3495e9e5e520fe6cd2">NuPDG</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pdg</a>)</td></tr>
 <tr class="memdesc:a7bff6c239eb0213052f3193d84a7bee0"><td class="mdescLeft">&#160;</td><td class="mdescRight">ETA - Probs3++ doesn't use the PDG codes for the neutrino type so add in a small converter.  <br /></td></tr>
 <tr class="separator:a7bff6c239eb0213052f3193d84a7bee0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a602ad839195b7087a4897e8f6b603ee6" id="r_a602ad839195b7087a4897e8f6b603ee6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Structs_8h.html#a602ad839195b7087a4897e8f6b603ee6">ProbsToPDG</a> (<a class="el" href="Structs_8h.html#a5a4651943de972b89fd091d11fa7b3d7">ProbNu</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">NuType</a>)</td></tr>
+<tr class="memitem:a602ad839195b7087a4897e8f6b603ee6" id="r_a602ad839195b7087a4897e8f6b603ee6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Structs_8h.html#a602ad839195b7087a4897e8f6b603ee6">ProbsToPDG</a> (<a class="el" href="Structs_8h.html#a5a4651943de972b89fd091d11fa7b3d7">ProbNu</a> <a class="el" href="probGpu_8cu.html#a850827185885b1fbe64edea7329cb309">NuType</a>)</td></tr>
 <tr class="separator:a602ad839195b7087a4897e8f6b603ee6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe33f23691e6b5e3e0f5ab97aaeb7726" id="r_afe33f23691e6b5e3e0f5ab97aaeb7726"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">std::string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Structs_8h.html#afe33f23691e6b5e3e0f5ab97aaeb7726">TestStatistic_ToString</a> (<a class="el" href="Structs_8h.html#a960da89e33ac45a56f7bbfac3068dc67">TestStatistic</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>)</td></tr>
 <tr class="memdesc:afe33f23691e6b5e3e0f5ab97aaeb7726"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a LLH type to a string.  <br /></td></tr>
@@ -1680,7 +1680,7 @@ template&lt;<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e
 <div class="line"><span class="lineno">  307</span> </div>
 <div class="line"><span class="lineno">  308</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ReturnNuPDG</a> = -999;</div>
 <div class="line"><span class="lineno">  309</span> </div>
-<div class="line"><span class="lineno">  310</span>  <span class="keywordflow">switch</span> (<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">NuType</a>){</div>
+<div class="line"><span class="lineno">  310</span>  <span class="keywordflow">switch</span> (<a class="code hl_typedef" href="probGpu_8cu.html#a850827185885b1fbe64edea7329cb309">NuType</a>){</div>
 <div class="line"><span class="lineno">  311</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="Structs_8h.html#a5a4651943de972b89fd091d11fa7b3d7a5cd6d0de7e8784e41d9b25b568e4a910">kProbNue</a>:</div>
 <div class="line"><span class="lineno">  312</span>      <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ReturnNuPDG</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<a class="code hl_enumvalue" href="Structs_8h.html#a0dfdd8cf84b8fa3495e9e5e520fe6cd2aab024bd4737ec207f00dcd86a5d05908">kNue</a>);</div>
 <div class="line"><span class="lineno">  313</span>      <span class="keywordflow">break</span>;</div>
@@ -1706,6 +1706,7 @@ template&lt;<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e
 <div class="line"><span class="lineno">  333</span> </div>
 <div class="line"><span class="lineno">  334</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ReturnNuPDG</a>;</div>
 <div class="line"><span class="lineno">  335</span>}</div>
+<div class="ttc" id="aprobGpu_8cu_html_a850827185885b1fbe64edea7329cb309"><div class="ttname"><a href="probGpu_8cu.html#a850827185885b1fbe64edea7329cb309">NuType</a></div><div class="ttdeci">enum nu_type NuType</div></div>
 </div><!-- fragment -->
 </div>
 </div>
