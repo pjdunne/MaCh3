@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['adaptivemcmcstruct_2eh_0',['adaptiveMCMCStruct.h',['../adaptiveMCMCStruct_8h.html',1,'']]]
+  ['adaptivemcmchandler_2ecpp_0',['AdaptiveMCMCHandler.cpp',['../AdaptiveMCMCHandler_8cpp.html',1,'']]],
+  ['adaptivemcmchandler_2eh_1',['AdaptiveMCMCHandler.h',['../AdaptiveMCMCHandler_8h.html',1,'']]]
 ];

@@ -8,7 +8,7 @@ var searchData=
   ['eigen_5fvalues_5',['eigen_values',['../classcovarianceBase.html#ad4980d328fc0689fd0b4147574b5caa9',1,'covarianceBase']]],
   ['eigen_5fvalues_5fmaster_6',['eigen_values_master',['../classcovarianceBase.html#aeb4d5757fb7c531bb415ca9564f48c81',1,'covarianceBase']]],
   ['eigen_5fvectors_7',['eigen_vectors',['../classcovarianceBase.html#ac58cd28e2261429e597a8c4eb9d1c53d',1,'covarianceBase']]],
-  ['end_5fadaptive_5fupdate_8',['end_adaptive_update',['../structadaptive__mcmc_1_1AdaptiveMCMCStruct.html#a76c4127beb8ffc4bf2fb47369d4b3482',1,'adaptive_mcmc::AdaptiveMCMCStruct']]],
+  ['end_5fadaptive_5fupdate_8',['end_adaptive_update',['../classadaptive__mcmc_1_1AdaptiveMCMCHandler.html#aa7d3703d1de3c3fbf32f37cadf58be08',1,'adaptive_mcmc::AdaptiveMCMCHandler']]],
   ['errbuf_9',['errbuf',['../classsamplePDFBase.html#ace134e4f57297cc68b5b299f97821b6c',1,'samplePDFBase']]],
   ['errormessage_10',['errorMessage',['../classMaCh3Exception.html#ab556e4d4710fab4c4d75e94c4bab537d',1,'MaCh3Exception']]],
   ['errors_11',['Errors',['../classMCMCProcessor.html#a5174aaa900edf16ddc6e841ea4adae83',1,'MCMCProcessor']]],

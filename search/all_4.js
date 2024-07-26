@@ -110,7 +110,7 @@ var searchData=
   ['cpu_5ftotal_5fweights_107',['cpu_total_weights',['../classSMonolith.html#ab572dd7e0a46caf44eb925a89cbfb0cf',1,'SMonolith']]],
   ['cpu_5fweights_108',['cpu_weights',['../classSMonolith.html#a8614e8ef07431d99f62ab88d9ebdad16',1,'SMonolith']]],
   ['cpu_5fweights_5fvar_109',['cpu_weights_var',['../classSMonolith.html#ab6a29f13d8e6efb380f2b9d59cfa88fc',1,'SMonolith']]],
-  ['createnewadaptivecovariance_110',['createNewAdaptiveCovariance',['../classcovarianceBase.html#a8a79b1ecaf1e056708aa0d31ca400b34',1,'covarianceBase']]],
+  ['createnewadaptivecovariance_110',['CreateNewAdaptiveCovariance',['../classadaptive__mcmc_1_1AdaptiveMCMCHandler.html#ad7df80045651df99c2d1c375fea4ac74',1,'adaptive_mcmc::AdaptiveMCMCHandler']]],
   ['crosssectionparameters_111',['CrossSectionParameters',['../GetPostfitParamPlots_8cpp.html#a5307771642312031f0050189b493a621',1,'GetPostfitParamPlots.cpp']]],
   ['cuda_112',['CUDA',['../md__2github_2workspace_2README.html#autotoc_md14',1,'']]],
   ['cudacheckerror_113',['cudacheckerror',['../gpuUtils_8cuh.html#a0345e89c96b417069f1e64674cc77318',1,'CudaCheckError:&#160;gpuUtils.cuh'],['../probGpu_8cu.html#a0345e89c96b417069f1e64674cc77318',1,'CudaCheckError:&#160;probGpu.cu']]],

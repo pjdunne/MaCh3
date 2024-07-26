@@ -158,6 +158,15 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>KS: free memory on gpu. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ParStep_gpu</td><td>Parameter value at each step </td></tr>
+    <tr><td class="paramname">NumeratorSum_gpu</td><td>Sum used for nominator of autocorrelation calculations </td></tr>
+    <tr><td class="paramname">ParamSums_gpu</td><td>Overall sum for each parameter over all steps </td></tr>
+    <tr><td class="paramname">DenomSum_gpu</td><td>Sum used for denominator of autocorrelation calculations </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definition at line <a class="el" href="gpuMCMCProcessorUtils_8cu_source.html#l00201">201</a> of file <a class="el" href="gpuMCMCProcessorUtils_8cu_source.html">gpuMCMCProcessorUtils.cu</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  205</span>                         {</div>
@@ -170,7 +179,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  212</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">printf</a>(<span class="stringliteral">&quot; Cleared memory at GPU, I am free \n&quot;</span>);</div>
 <div class="line"><span class="lineno">  213</span>  <span class="keywordflow">return</span>;</div>
 <div class="line"><span class="lineno">  214</span>}</div>
-<div class="ttc" id="aYamlHelper_8h_html_a1a6adcb8b24bfbdcb936ced6812e1b0c"><div class="ttname"><a href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">GetFromManager</a></div><div class="ttdeci">Type GetFromManager(const YAML::Node &amp;node, Type defval)</div><div class="ttdoc">Get content of config file if node is not found take default value specified.</div><div class="ttdef"><b>Definition</b> <a href="YamlHelper_8h_source.html#l00018">YamlHelper.h:18</a></div></div>
+<div class="ttc" id="aYamlHelper_8h_html_a1a6adcb8b24bfbdcb936ced6812e1b0c"><div class="ttname"><a href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">GetFromManager</a></div><div class="ttdeci">Type GetFromManager(const YAML::Node &amp;node, Type defval)</div><div class="ttdoc">Get content of config file if node is not found take default value specified.</div><div class="ttdef"><b>Definition</b> <a href="YamlHelper_8h_source.html#l00021">YamlHelper.h:21</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -237,6 +246,19 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>KS: Copy necessary variables from CPU to GPU. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ParStep_cpu</td><td>Parameter value at each step </td></tr>
+    <tr><td class="paramname">NumeratorSum_cpu</td><td>Sum used for nominator of autocorrelation calculations </td></tr>
+    <tr><td class="paramname">ParamSums_cpu</td><td>Overall sum for each parameter over all steps </td></tr>
+    <tr><td class="paramname">DenomSum_cpu</td><td>Sum used for denominator of autocorrelation calculations </td></tr>
+    <tr><td class="paramname">ParStep_gpu</td><td>Parameter value at each step </td></tr>
+    <tr><td class="paramname">NumeratorSum_gpu</td><td>Sum used for nominator of autocorrelation calculations </td></tr>
+    <tr><td class="paramname">ParamSums_gpu</td><td>Overall sum for each parameter over all steps </td></tr>
+    <tr><td class="paramname">DenomSum_gpu</td><td>Sum used for denominator of autocorrelation calculations </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definition at line <a class="el" href="gpuMCMCProcessorUtils_8cu_source.html#l00076">76</a> of file <a class="el" href="gpuMCMCProcessorUtils_8cu_source.html">gpuMCMCProcessorUtils.cu</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   86</span>                                                 {</div>
@@ -303,6 +325,15 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Eval autocorrelations based on <a class="el" href="structBox.html">Box</a> and Jenkins. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ParStep_gpu</td><td>Parameter value at each step </td></tr>
+    <tr><td class="paramname">NumeratorSum_gpu</td><td>Sum used for nominator of autocorrelation calculations </td></tr>
+    <tr><td class="paramname">ParamSums_gpu</td><td>Overall sum for each parameter over all steps </td></tr>
+    <tr><td class="paramname">DenomSum_gpu</td><td>Sum used for denominator of autocorrelation calculations </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definition at line <a class="el" href="gpuMCMCProcessorUtils_8cu_source.html#l00112">112</a> of file <a class="el" href="gpuMCMCProcessorUtils_8cu_source.html">gpuMCMCProcessorUtils.cu</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  116</span>                          {</div>
@@ -413,6 +444,18 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>KS: Initialiser, here we allocate memory for variables and copy constants. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ParStep_gpu</td><td>Parameter value at each step </td></tr>
+    <tr><td class="paramname">NumeratorSum_gpu</td><td>Sum used for nominator of autocorrelation calculations </td></tr>
+    <tr><td class="paramname">ParamSums_gpu</td><td>Overall sum for each parameter over all steps </td></tr>
+    <tr><td class="paramname">DenomSum_gpu</td><td>Sum used for denominator of autocorrelation calculations </td></tr>
+    <tr><td class="paramname">n_Entries</td><td>Total number of entries in mcmc chain </td></tr>
+    <tr><td class="paramname">n_Pars</td><td>Number of relevant parameters </td></tr>
+    <tr><td class="paramname">n_Lags</td><td>Value of Lag in autocreation calculation </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definition at line <a class="el" href="gpuMCMCProcessorUtils_8cu_source.html#l00023">23</a> of file <a class="el" href="gpuMCMCProcessorUtils_8cu_source.html">gpuMCMCProcessorUtils.cu</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   32</span>                                            {</div>
@@ -506,6 +549,17 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>KS: This call the main kernel responsible for calculating LagL and later copy results back to CPU. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ParStep_gpu</td><td>Parameter value at each step </td></tr>
+    <tr><td class="paramname">NumeratorSum_gpu</td><td>Sum used for nominator of autocorrelation calculations </td></tr>
+    <tr><td class="paramname">ParamSums_gpu</td><td>Overall sum for each parameter over all steps </td></tr>
+    <tr><td class="paramname">DenomSum_gpu</td><td>Sum used for denominator of autocorrelation calculations </td></tr>
+    <tr><td class="paramname">NumeratorSum_cpu</td><td>Sum used for nominator of autocorrelation calculations </td></tr>
+    <tr><td class="paramname">DenomSum_cpu</td><td>Sum used for denominator of autocorrelation calculations </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definition at line <a class="el" href="gpuMCMCProcessorUtils_8cu_source.html#l00163">163</a> of file <a class="el" href="gpuMCMCProcessorUtils_8cu_source.html">gpuMCMCProcessorUtils.cu</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  169</span>                          {</div>

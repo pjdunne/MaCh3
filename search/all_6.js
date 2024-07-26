@@ -12,7 +12,7 @@ var searchData=
   ['eigen_5fvalues_5fmaster_9',['eigen_values_master',['../classcovarianceBase.html#aeb4d5757fb7c531bb415ca9564f48c81',1,'covarianceBase']]],
   ['eigen_5fvectors_10',['eigen_vectors',['../classcovarianceBase.html#ac58cd28e2261429e597a8c4eb9d1c53d',1,'covarianceBase']]],
   ['elec_11',['elec',['../probGpu_8cu.html#aa23f38cce76d30183c919076005d8cd6',1,'probGpu.cu']]],
-  ['end_5fadaptive_5fupdate_12',['end_adaptive_update',['../structadaptive__mcmc_1_1AdaptiveMCMCStruct.html#a76c4127beb8ffc4bf2fb47369d4b3482',1,'adaptive_mcmc::AdaptiveMCMCStruct']]],
+  ['end_5fadaptive_5fupdate_12',['end_adaptive_update',['../classadaptive__mcmc_1_1AdaptiveMCMCHandler.html#aa7d3703d1de3c3fbf32f37cadf58be08',1,'adaptive_mcmc::AdaptiveMCMCHandler']]],
   ['energyscale_13',['energyscale',['../classEnergyScale.html#a7d616fb5f4f141861ecd383174106ed0',1,'EnergyScale::EnergyScale()'],['../classEnergyScale.html',1,'EnergyScale']]],
   ['ensuremodenameregistered_14',['EnsureModeNameRegistered',['../classMaCh3Modes.html#a989fa0ebe20a1e0113900972e194a543',1,'MaCh3Modes']]],
   ['errbuf_15',['errbuf',['../classsamplePDFBase.html#ace134e4f57297cc68b5b299f97821b6c',1,'samplePDFBase']]],

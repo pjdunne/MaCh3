@@ -583,6 +583,13 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Check if there's been an error. </p>
+<p>This function checks if there has been any CUDA runtime API error and reports it. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>The file name where the error occurred. </td></tr>
+    <tr><td class="paramname">line</td><td>The line number where the error occurred. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definition at line <a class="el" href="probGpu_8cu_source.html#l00039">39</a> of file <a class="el" href="probGpu_8cu_source.html">probGpu.cu</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   40</span>{</div>
@@ -608,7 +615,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">   60</span> </div>
 <div class="line"><span class="lineno">   61</span>      <span class="keywordflow">return</span>;</div>
 <div class="line"><span class="lineno">   62</span>}</div>
-<div class="ttc" id="aYamlHelper_8h_html_a1a6adcb8b24bfbdcb936ced6812e1b0c"><div class="ttname"><a href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">GetFromManager</a></div><div class="ttdeci">Type GetFromManager(const YAML::Node &amp;node, Type defval)</div><div class="ttdoc">Get content of config file if node is not found take default value specified.</div><div class="ttdef"><b>Definition</b> <a href="YamlHelper_8h_source.html#l00018">YamlHelper.h:18</a></div></div>
+<div class="ttc" id="aYamlHelper_8h_html_a1a6adcb8b24bfbdcb936ced6812e1b0c"><div class="ttname"><a href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">GetFromManager</a></div><div class="ttdeci">Type GetFromManager(const YAML::Node &amp;node, Type defval)</div><div class="ttdoc">Get content of config file if node is not found take default value specified.</div><div class="ttdef"><b>Definition</b> <a href="YamlHelper_8h_source.html#l00021">YamlHelper.h:21</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -653,6 +660,14 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Check for a safe call on GPU. </p>
+<p>This function checks the error status returned by CUDA runtime API functions and reports any errors. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">err</td><td>The CUDA error code. </td></tr>
+    <tr><td class="paramname">file</td><td>The file name where the error occurred. </td></tr>
+    <tr><td class="paramname">line</td><td>The line number where the error occurred. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definition at line <a class="el" href="probGpu_8cu_source.html#l00025">25</a> of file <a class="el" href="probGpu_8cu_source.html">probGpu.cu</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   26</span>{</div>

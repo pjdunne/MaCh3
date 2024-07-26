@@ -215,6 +215,13 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Check if there's been an error. </p>
+<p>This function checks if there has been any CUDA runtime API error and reports it. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>The file name where the error occurred. </td></tr>
+    <tr><td class="paramname">line</td><td>The line number where the error occurred. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definition at line <a class="el" href="gpuUtils_8cu_source.html#l00019">19</a> of file <a class="el" href="gpuUtils_8cu_source.html">gpuUtils.cu</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   19</span>                                                          {</div>
@@ -236,7 +243,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   35</span><span class="preprocessor">#endif</span></div>
 <div class="line"><span class="lineno">   36</span>  <span class="keywordflow">return</span>;</div>
 <div class="line"><span class="lineno">   37</span>}</div>
-<div class="ttc" id="aYamlHelper_8h_html_a1a6adcb8b24bfbdcb936ced6812e1b0c"><div class="ttname"><a href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">GetFromManager</a></div><div class="ttdeci">Type GetFromManager(const YAML::Node &amp;node, Type defval)</div><div class="ttdoc">Get content of config file if node is not found take default value specified.</div><div class="ttdef"><b>Definition</b> <a href="YamlHelper_8h_source.html#l00018">YamlHelper.h:18</a></div></div>
+<div class="ttc" id="aYamlHelper_8h_html_a1a6adcb8b24bfbdcb936ced6812e1b0c"><div class="ttname"><a href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">GetFromManager</a></div><div class="ttdeci">Type GetFromManager(const YAML::Node &amp;node, Type defval)</div><div class="ttdoc">Get content of config file if node is not found take default value specified.</div><div class="ttdef"><b>Definition</b> <a href="YamlHelper_8h_source.html#l00021">YamlHelper.h:21</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -281,6 +288,14 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Check for a safe call on GPU. </p>
+<p>This function checks the error status returned by CUDA runtime API functions and reports any errors. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">err</td><td>The CUDA error code. </td></tr>
+    <tr><td class="paramname">file</td><td>The file name where the error occurred. </td></tr>
+    <tr><td class="paramname">line</td><td>The line number where the error occurred. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definition at line <a class="el" href="gpuUtils_8cu_source.html#l00006">6</a> of file <a class="el" href="gpuUtils_8cu_source.html">gpuUtils.cu</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">    6</span>                                                                       {</div>
@@ -350,6 +365,13 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>KS: Get number of GPU threads for currently used GPU. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Device</td><td>The ID of the device. Defaults to 0. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of GPU threads. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="gpuUtils_8cu_source.html#l00110">110</a> of file <a class="el" href="gpuUtils_8cu_source.html">gpuUtils.cu</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  110</span>                                       {</div>
@@ -453,6 +475,12 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>KS: Only useful if using multiple GPU. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">deviceId</td><td>The ID of the device to be set as active.</td></tr>
+  </table>
+  </dd>
+</dl>
 <p>KS: Only useful if using multiple GPU. </p>
 
 <p class="definition">Definition at line <a class="el" href="gpuUtils_8cu_source.html#l00091">91</a> of file <a class="el" href="gpuUtils_8cu_source.html">gpuUtils.cu</a>.</p>
