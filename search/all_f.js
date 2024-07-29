@@ -1,7 +1,7 @@
 var searchData=
 [
   ['operational_20systems_0',['Supported operational systems',['../md__2github_2workspace_2README.html#autotoc_md19',1,'']]],
-  ['osc_1',['osc',['../classFitterBase.html#a0c3179f05d6846f5b796ba4c04899634',1,'FitterBase::osc'],['../classsamplePDFFDBase.html#a3edf869b1304fd3316d92ea1eaeb0045',1,'samplePDFFDBase::Osc']]],
+  ['osc_1',['osc',['../classsamplePDFFDBase.html#a3edf869b1304fd3316d92ea1eaeb0045',1,'samplePDFFDBase::Osc'],['../classFitterBase.html#a0c3179f05d6846f5b796ba4c04899634',1,'FitterBase::osc']]],
   ['osc2_2',['osc2',['../classFitterBase.html#a248ca37a92c46ddd944a31d348b8c7bb',1,'FitterBase']]],
   ['osc_5fbinned_3',['osc_binned',['../classsamplePDFFDBase.html#a37591029c5d56c09083f1f094ae11836',1,'samplePDFFDBase']]],
   ['osc_5fbinned_5faxis_4',['osc_binned_axis',['../classsamplePDFFDBase.html#a3b25870ec0ac85196ddaf09fd65c9828',1,'samplePDFFDBase']]],

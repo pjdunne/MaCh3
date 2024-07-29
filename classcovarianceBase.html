@@ -216,6 +216,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a715900cc67fcc598090399ee931938e9" id="r_a715900cc67fcc598090399ee931938e9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcovarianceBase.html#a715900cc67fcc598090399ee931938e9">initialiseAdaption</a> (<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">const</a> YAML::Node &amp;<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">adapt_manager</a>)</td></tr>
 <tr class="memdesc:a715900cc67fcc598090399ee931938e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise adaptive MCMC.  <br /></td></tr>
 <tr class="separator:a715900cc67fcc598090399ee931938e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4c26e3f2a727a39e9db7ed88e72ac38" id="r_ae4c26e3f2a727a39e9db7ed88e72ac38"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcovarianceBase.html#ae4c26e3f2a727a39e9db7ed88e72ac38">saveAdaptiveToFile</a> (<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">const</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TString</a> &amp;<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">outFileName</a>, <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">const</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TString</a> &amp;<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">systematicName</a>)</td></tr>
+<tr class="memdesc:ae4c26e3f2a727a39e9db7ed88e72ac38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save adaptive throw matrix to file.  <br /></td></tr>
+<tr class="separator:ae4c26e3f2a727a39e9db7ed88e72ac38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11075f684f5d2d7eff9c222867e33bb7" id="r_a11075f684f5d2d7eff9c222867e33bb7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcovarianceBase.html#a11075f684f5d2d7eff9c222867e33bb7">getDoAdaption</a> ()</td></tr>
 <tr class="memdesc:a11075f684f5d2d7eff9c222867e33bb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do we adapt or not.  <br /></td></tr>
 <tr class="separator:a11075f684f5d2d7eff9c222867e33bb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -635,14 +638,14 @@ Protected Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   33</span>}</div>
 <div class="ttc" id="aMaCh3Logger_8h_html_a95fa4dffc648e4c5536c9292c2bdcac3"><div class="ttname"><a href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a></div><div class="ttdeci">#define MACH3LOG_INFO</div><div class="ttdef"><b>Definition</b> <a href="MaCh3Logger_8h_source.html#l00016">MaCh3Logger.h:16</a></div></div>
 <div class="ttc" id="aYamlHelper_8h_html_a1a6adcb8b24bfbdcb936ced6812e1b0c"><div class="ttname"><a href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">GetFromManager</a></div><div class="ttdeci">Type GetFromManager(const YAML::Node &amp;node, Type defval)</div><div class="ttdoc">Get content of config file if node is not found take default value specified.</div><div class="ttdef"><b>Definition</b> <a href="YamlHelper_8h_source.html#l00021">YamlHelper.h:21</a></div></div>
-<div class="ttc" id="aclasscovarianceBase_html_a47cf443e7de1d83bd979ccc8d35b8599"><div class="ttname"><a href="classcovarianceBase.html#a47cf443e7de1d83bd979ccc8d35b8599">covarianceBase::matrixName</a></div><div class="ttdeci">const char * matrixName</div><div class="ttdoc">Name of cov matrix.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00427">covarianceBase.h:427</a></div></div>
-<div class="ttc" id="aclasscovarianceBase_html_a5451d4189a9fb7591c8ce728852ba82e"><div class="ttname"><a href="classcovarianceBase.html#a5451d4189a9fb7591c8ce728852ba82e">covarianceBase::inputFile</a></div><div class="ttdeci">const std::string inputFile</div><div class="ttdoc">The input root file we read in.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00422">covarianceBase.h:422</a></div></div>
-<div class="ttc" id="aclasscovarianceBase_html_a5ebdc744b733656972a15f1657915a3f"><div class="ttname"><a href="classcovarianceBase.html#a5ebdc744b733656972a15f1657915a3f">covarianceBase::LastPCAdpar</a></div><div class="ttdeci">int LastPCAdpar</div><div class="ttdoc">Index of the last param that is being decomposed.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00487">covarianceBase.h:487</a></div></div>
+<div class="ttc" id="aclasscovarianceBase_html_a47cf443e7de1d83bd979ccc8d35b8599"><div class="ttname"><a href="classcovarianceBase.html#a47cf443e7de1d83bd979ccc8d35b8599">covarianceBase::matrixName</a></div><div class="ttdeci">const char * matrixName</div><div class="ttdoc">Name of cov matrix.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00430">covarianceBase.h:430</a></div></div>
+<div class="ttc" id="aclasscovarianceBase_html_a5451d4189a9fb7591c8ce728852ba82e"><div class="ttname"><a href="classcovarianceBase.html#a5451d4189a9fb7591c8ce728852ba82e">covarianceBase::inputFile</a></div><div class="ttdeci">const std::string inputFile</div><div class="ttdoc">The input root file we read in.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00425">covarianceBase.h:425</a></div></div>
+<div class="ttc" id="aclasscovarianceBase_html_a5ebdc744b733656972a15f1657915a3f"><div class="ttname"><a href="classcovarianceBase.html#a5ebdc744b733656972a15f1657915a3f">covarianceBase::LastPCAdpar</a></div><div class="ttdeci">int LastPCAdpar</div><div class="ttdoc">Index of the last param that is being decomposed.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00490">covarianceBase.h:490</a></div></div>
 <div class="ttc" id="aclasscovarianceBase_html_a8ac3a458097817eca534c23554a7635b"><div class="ttname"><a href="classcovarianceBase.html#a8ac3a458097817eca534c23554a7635b">covarianceBase::ConstructPCA</a></div><div class="ttdeci">void ConstructPCA()</div><div class="ttdoc">CW: Calculate eigen values, prepare transition matrices and remove param based on defined threshold.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8cpp_source.html#l00117">covarianceBase.cpp:117</a></div></div>
-<div class="ttc" id="aclasscovarianceBase_html_ab4b7f96d3e977a0b3307ceecbd0baeb4"><div class="ttname"><a href="classcovarianceBase.html#ab4b7f96d3e977a0b3307ceecbd0baeb4">covarianceBase::pca</a></div><div class="ttdeci">bool pca</div><div class="ttdoc">perform PCA or not</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00479">covarianceBase.h:479</a></div></div>
-<div class="ttc" id="aclasscovarianceBase_html_abba75182305d556818c76974a054a17d"><div class="ttname"><a href="classcovarianceBase.html#abba75182305d556818c76974a054a17d">covarianceBase::FirstPCAdpar</a></div><div class="ttdeci">int FirstPCAdpar</div><div class="ttdoc">Index of the first param that is being decomposed.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00485">covarianceBase.h:485</a></div></div>
+<div class="ttc" id="aclasscovarianceBase_html_ab4b7f96d3e977a0b3307ceecbd0baeb4"><div class="ttname"><a href="classcovarianceBase.html#ab4b7f96d3e977a0b3307ceecbd0baeb4">covarianceBase::pca</a></div><div class="ttdeci">bool pca</div><div class="ttdoc">perform PCA or not</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00482">covarianceBase.h:482</a></div></div>
+<div class="ttc" id="aclasscovarianceBase_html_abba75182305d556818c76974a054a17d"><div class="ttname"><a href="classcovarianceBase.html#abba75182305d556818c76974a054a17d">covarianceBase::FirstPCAdpar</a></div><div class="ttdeci">int FirstPCAdpar</div><div class="ttdoc">Index of the first param that is being decomposed.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00488">covarianceBase.h:488</a></div></div>
 <div class="ttc" id="aclasscovarianceBase_html_abbdd5ddf5ae51c2c4113631754ec24e6"><div class="ttname"><a href="classcovarianceBase.html#abbdd5ddf5ae51c2c4113631754ec24e6">covarianceBase::init</a></div><div class="ttdeci">void init(const char *name, const char *file)</div><div class="ttdoc">Initialisation of the class using matrix from root file.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8cpp_source.html#l00251">covarianceBase.cpp:251</a></div></div>
-<div class="ttc" id="aclasscovarianceBase_html_add54ab1ba46b723fa23d7c95dfad671a"><div class="ttname"><a href="classcovarianceBase.html#add54ab1ba46b723fa23d7c95dfad671a">covarianceBase::eigen_threshold</a></div><div class="ttdeci">double eigen_threshold</div><div class="ttdoc">CW: Threshold based on which we remove parameters in eigen base.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00481">covarianceBase.h:481</a></div></div>
+<div class="ttc" id="aclasscovarianceBase_html_add54ab1ba46b723fa23d7c95dfad671a"><div class="ttname"><a href="classcovarianceBase.html#add54ab1ba46b723fa23d7c95dfad671a">covarianceBase::eigen_threshold</a></div><div class="ttdeci">double eigen_threshold</div><div class="ttdoc">CW: Threshold based on which we remove parameters in eigen base.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00484">covarianceBase.h:484</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -906,24 +909,24 @@ Protected Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  112</span>  <span class="keyword">delete</span>[] <a class="code hl_variable" href="classcovarianceBase.html#a60dcca091a79ccddd3ad5b414ccd809b">random_number</a>;</div>
 <div class="line"><span class="lineno">  113</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="classcovarianceBase.html#a6cb3d0b4096fbb55b040f70cd5b6e32b">throwMatrix</a> != <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">NULL</a>) <span class="keyword">delete</span> <a class="code hl_variable" href="classcovarianceBase.html#a6cb3d0b4096fbb55b040f70cd5b6e32b">throwMatrix</a>;</div>
 <div class="line"><span class="lineno">  114</span>}</div>
-<div class="ttc" id="aclasscovarianceBase_html_a12f0eb31a5ef48b014baa11d4ab919e9"><div class="ttname"><a href="classcovarianceBase.html#a12f0eb31a5ef48b014baa11d4ab919e9">covarianceBase::_fPropVal</a></div><div class="ttdeci">std::vector&lt; double &gt; _fPropVal</div><div class="ttdoc">Proposed value of the parameter.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00461">covarianceBase.h:461</a></div></div>
-<div class="ttc" id="aclasscovarianceBase_html_a31e636cb6de871bd0c2c8e7e299df9e7"><div class="ttname"><a href="classcovarianceBase.html#a31e636cb6de871bd0c2c8e7e299df9e7">covarianceBase::_fUpBound</a></div><div class="ttdeci">std::vector&lt; double &gt; _fUpBound</div><div class="ttdoc">Upper physical bound, parameter will not be able to go beyond it.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00469">covarianceBase.h:469</a></div></div>
-<div class="ttc" id="aclasscovarianceBase_html_a34f877fc160b4a93a3aab1b3a8977858"><div class="ttname"><a href="classcovarianceBase.html#a34f877fc160b4a93a3aab1b3a8977858">covarianceBase::_fError</a></div><div class="ttdeci">std::vector&lt; double &gt; _fError</div><div class="ttdoc">Prior error on the parameter.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00465">covarianceBase.h:465</a></div></div>
-<div class="ttc" id="aclasscovarianceBase_html_a35c7dc7817eaf4058e9775b6bc792ebc"><div class="ttname"><a href="classcovarianceBase.html#a35c7dc7817eaf4058e9775b6bc792ebc">covarianceBase::invCovMatrix</a></div><div class="ttdeci">TMatrixDSym * invCovMatrix</div><div class="ttdoc">The inverse covariance matrix.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00431">covarianceBase.h:431</a></div></div>
-<div class="ttc" id="aclasscovarianceBase_html_a3cda39026e336a49cef482efd4062561"><div class="ttname"><a href="classcovarianceBase.html#a3cda39026e336a49cef482efd4062561">covarianceBase::_fIndivStepScale</a></div><div class="ttdeci">std::vector&lt; double &gt; _fIndivStepScale</div><div class="ttdoc">Individual step scale used by MCMC algorithm.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00471">covarianceBase.h:471</a></div></div>
-<div class="ttc" id="aclasscovarianceBase_html_a49a8341eb8e997fb090749117320edf9"><div class="ttname"><a href="classcovarianceBase.html#a49a8341eb8e997fb090749117320edf9">covarianceBase::InvertCovMatrix</a></div><div class="ttdeci">double ** InvertCovMatrix</div><div class="ttdoc">KS: Same as above but much faster as TMatrixDSym cache miss.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00433">covarianceBase.h:433</a></div></div>
-<div class="ttc" id="aclasscovarianceBase_html_a60dcca091a79ccddd3ad5b414ccd809b"><div class="ttname"><a href="classcovarianceBase.html#a60dcca091a79ccddd3ad5b414ccd809b">covarianceBase::random_number</a></div><div class="ttdeci">TRandom3 ** random_number</div><div class="ttdoc">KS: Set Random numbers for each thread so each thread has different seed.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00436">covarianceBase.h:436</a></div></div>
-<div class="ttc" id="aclasscovarianceBase_html_a6c3fe8db34c06299fd1633951ac00937"><div class="ttname"><a href="classcovarianceBase.html#a6c3fe8db34c06299fd1633951ac00937">covarianceBase::covMatrix</a></div><div class="ttdeci">TMatrixDSym * covMatrix</div><div class="ttdoc">The covariance matrix.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00429">covarianceBase.h:429</a></div></div>
-<div class="ttc" id="aclasscovarianceBase_html_a6cb3d0b4096fbb55b040f70cd5b6e32b"><div class="ttname"><a href="classcovarianceBase.html#a6cb3d0b4096fbb55b040f70cd5b6e32b">covarianceBase::throwMatrix</a></div><div class="ttdeci">TMatrixDSym * throwMatrix</div><div class="ttdoc">Matrix which we use for step proposal before Cholesky decomposition (not actually used for step propo...</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00512">covarianceBase.h:512</a></div></div>
-<div class="ttc" id="aclasscovarianceBase_html_a705e648220c06083cd1acc5fba4f2ef7"><div class="ttname"><a href="classcovarianceBase.html#a705e648220c06083cd1acc5fba4f2ef7">covarianceBase::randParams</a></div><div class="ttdeci">double * randParams</div><div class="ttdoc">Random number taken from gaussian around prior error used for corr_throw.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00439">covarianceBase.h:439</a></div></div>
-<div class="ttc" id="aclasscovarianceBase_html_a7578a2cc2e8e9100fad88310a824cb1c"><div class="ttname"><a href="classcovarianceBase.html#a7578a2cc2e8e9100fad88310a824cb1c">covarianceBase::_fPreFitValue</a></div><div class="ttdeci">std::vector&lt; double &gt; _fPreFitValue</div><div class="ttdoc">Parameter value dictated by the prior model. Based on it penalty term is calculated.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00457">covarianceBase.h:457</a></div></div>
-<div class="ttc" id="aclasscovarianceBase_html_a7b70de3f098aae1d537d80bac5969d88"><div class="ttname"><a href="classcovarianceBase.html#a7b70de3f098aae1d537d80bac5969d88">covarianceBase::corr_throw</a></div><div class="ttdeci">double * corr_throw</div><div class="ttdoc">Result of multiplication of Cholesky matrix and randParams.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00441">covarianceBase.h:441</a></div></div>
-<div class="ttc" id="aclasscovarianceBase_html_a8f1d94838f188cc85c4f82557c0b0b66"><div class="ttname"><a href="classcovarianceBase.html#a8f1d94838f188cc85c4f82557c0b0b66">covarianceBase::_fLowBound</a></div><div class="ttdeci">std::vector&lt; double &gt; _fLowBound</div><div class="ttdoc">Lowest physical bound, parameter will not be able to go beyond it.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00467">covarianceBase.h:467</a></div></div>
-<div class="ttc" id="aclasscovarianceBase_html_ab95f5e066c2dfb1d20d120bc6c85dda2"><div class="ttname"><a href="classcovarianceBase.html#ab95f5e066c2dfb1d20d120bc6c85dda2">covarianceBase::throwMatrix_CholDecomp</a></div><div class="ttdeci">TMatrixD * throwMatrix_CholDecomp</div><div class="ttdoc">Matrix which we use for step proposal after Cholesky decomposition.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00514">covarianceBase.h:514</a></div></div>
-<div class="ttc" id="aclasscovarianceBase_html_ac5d922f1a4163b38ebc7a3ef21eec376"><div class="ttname"><a href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">covarianceBase::_fNumPar</a></div><div class="ttdeci">int _fNumPar</div><div class="ttdoc">Number of systematic parameters.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00455">covarianceBase.h:455</a></div></div>
-<div class="ttc" id="aclasscovarianceBase_html_aca17e48a5fa8e353317d58c205fb89df"><div class="ttname"><a href="classcovarianceBase.html#aca17e48a5fa8e353317d58c205fb89df">covarianceBase::throwMatrixCholDecomp</a></div><div class="ttdeci">double ** throwMatrixCholDecomp</div><div class="ttdoc">Throw matrix that is being used in the fit, much faster as TMatrixDSym cache miss.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00516">covarianceBase.h:516</a></div></div>
-<div class="ttc" id="aclasscovarianceBase_html_ad9c47deb7009bff81210f666e80012eb"><div class="ttname"><a href="classcovarianceBase.html#ad9c47deb7009bff81210f666e80012eb">covarianceBase::_fFlatPrior</a></div><div class="ttdeci">std::vector&lt; bool &gt; _fFlatPrior</div><div class="ttdoc">Whether to apply flat prior or not.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00473">covarianceBase.h:473</a></div></div>
-<div class="ttc" id="aclasscovarianceBase_html_ae70f51df3976975b2dc78fd3bfc28b65"><div class="ttname"><a href="classcovarianceBase.html#ae70f51df3976975b2dc78fd3bfc28b65">covarianceBase::_fCurrVal</a></div><div class="ttdeci">std::vector&lt; double &gt; _fCurrVal</div><div class="ttdoc">Current value of the parameter.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00459">covarianceBase.h:459</a></div></div>
+<div class="ttc" id="aclasscovarianceBase_html_a12f0eb31a5ef48b014baa11d4ab919e9"><div class="ttname"><a href="classcovarianceBase.html#a12f0eb31a5ef48b014baa11d4ab919e9">covarianceBase::_fPropVal</a></div><div class="ttdeci">std::vector&lt; double &gt; _fPropVal</div><div class="ttdoc">Proposed value of the parameter.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00464">covarianceBase.h:464</a></div></div>
+<div class="ttc" id="aclasscovarianceBase_html_a31e636cb6de871bd0c2c8e7e299df9e7"><div class="ttname"><a href="classcovarianceBase.html#a31e636cb6de871bd0c2c8e7e299df9e7">covarianceBase::_fUpBound</a></div><div class="ttdeci">std::vector&lt; double &gt; _fUpBound</div><div class="ttdoc">Upper physical bound, parameter will not be able to go beyond it.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00472">covarianceBase.h:472</a></div></div>
+<div class="ttc" id="aclasscovarianceBase_html_a34f877fc160b4a93a3aab1b3a8977858"><div class="ttname"><a href="classcovarianceBase.html#a34f877fc160b4a93a3aab1b3a8977858">covarianceBase::_fError</a></div><div class="ttdeci">std::vector&lt; double &gt; _fError</div><div class="ttdoc">Prior error on the parameter.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00468">covarianceBase.h:468</a></div></div>
+<div class="ttc" id="aclasscovarianceBase_html_a35c7dc7817eaf4058e9775b6bc792ebc"><div class="ttname"><a href="classcovarianceBase.html#a35c7dc7817eaf4058e9775b6bc792ebc">covarianceBase::invCovMatrix</a></div><div class="ttdeci">TMatrixDSym * invCovMatrix</div><div class="ttdoc">The inverse covariance matrix.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00434">covarianceBase.h:434</a></div></div>
+<div class="ttc" id="aclasscovarianceBase_html_a3cda39026e336a49cef482efd4062561"><div class="ttname"><a href="classcovarianceBase.html#a3cda39026e336a49cef482efd4062561">covarianceBase::_fIndivStepScale</a></div><div class="ttdeci">std::vector&lt; double &gt; _fIndivStepScale</div><div class="ttdoc">Individual step scale used by MCMC algorithm.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00474">covarianceBase.h:474</a></div></div>
+<div class="ttc" id="aclasscovarianceBase_html_a49a8341eb8e997fb090749117320edf9"><div class="ttname"><a href="classcovarianceBase.html#a49a8341eb8e997fb090749117320edf9">covarianceBase::InvertCovMatrix</a></div><div class="ttdeci">double ** InvertCovMatrix</div><div class="ttdoc">KS: Same as above but much faster as TMatrixDSym cache miss.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00436">covarianceBase.h:436</a></div></div>
+<div class="ttc" id="aclasscovarianceBase_html_a60dcca091a79ccddd3ad5b414ccd809b"><div class="ttname"><a href="classcovarianceBase.html#a60dcca091a79ccddd3ad5b414ccd809b">covarianceBase::random_number</a></div><div class="ttdeci">TRandom3 ** random_number</div><div class="ttdoc">KS: Set Random numbers for each thread so each thread has different seed.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00439">covarianceBase.h:439</a></div></div>
+<div class="ttc" id="aclasscovarianceBase_html_a6c3fe8db34c06299fd1633951ac00937"><div class="ttname"><a href="classcovarianceBase.html#a6c3fe8db34c06299fd1633951ac00937">covarianceBase::covMatrix</a></div><div class="ttdeci">TMatrixDSym * covMatrix</div><div class="ttdoc">The covariance matrix.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00432">covarianceBase.h:432</a></div></div>
+<div class="ttc" id="aclasscovarianceBase_html_a6cb3d0b4096fbb55b040f70cd5b6e32b"><div class="ttname"><a href="classcovarianceBase.html#a6cb3d0b4096fbb55b040f70cd5b6e32b">covarianceBase::throwMatrix</a></div><div class="ttdeci">TMatrixDSym * throwMatrix</div><div class="ttdoc">Matrix which we use for step proposal before Cholesky decomposition (not actually used for step propo...</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00515">covarianceBase.h:515</a></div></div>
+<div class="ttc" id="aclasscovarianceBase_html_a705e648220c06083cd1acc5fba4f2ef7"><div class="ttname"><a href="classcovarianceBase.html#a705e648220c06083cd1acc5fba4f2ef7">covarianceBase::randParams</a></div><div class="ttdeci">double * randParams</div><div class="ttdoc">Random number taken from gaussian around prior error used for corr_throw.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00442">covarianceBase.h:442</a></div></div>
+<div class="ttc" id="aclasscovarianceBase_html_a7578a2cc2e8e9100fad88310a824cb1c"><div class="ttname"><a href="classcovarianceBase.html#a7578a2cc2e8e9100fad88310a824cb1c">covarianceBase::_fPreFitValue</a></div><div class="ttdeci">std::vector&lt; double &gt; _fPreFitValue</div><div class="ttdoc">Parameter value dictated by the prior model. Based on it penalty term is calculated.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00460">covarianceBase.h:460</a></div></div>
+<div class="ttc" id="aclasscovarianceBase_html_a7b70de3f098aae1d537d80bac5969d88"><div class="ttname"><a href="classcovarianceBase.html#a7b70de3f098aae1d537d80bac5969d88">covarianceBase::corr_throw</a></div><div class="ttdeci">double * corr_throw</div><div class="ttdoc">Result of multiplication of Cholesky matrix and randParams.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00444">covarianceBase.h:444</a></div></div>
+<div class="ttc" id="aclasscovarianceBase_html_a8f1d94838f188cc85c4f82557c0b0b66"><div class="ttname"><a href="classcovarianceBase.html#a8f1d94838f188cc85c4f82557c0b0b66">covarianceBase::_fLowBound</a></div><div class="ttdeci">std::vector&lt; double &gt; _fLowBound</div><div class="ttdoc">Lowest physical bound, parameter will not be able to go beyond it.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00470">covarianceBase.h:470</a></div></div>
+<div class="ttc" id="aclasscovarianceBase_html_ab95f5e066c2dfb1d20d120bc6c85dda2"><div class="ttname"><a href="classcovarianceBase.html#ab95f5e066c2dfb1d20d120bc6c85dda2">covarianceBase::throwMatrix_CholDecomp</a></div><div class="ttdeci">TMatrixD * throwMatrix_CholDecomp</div><div class="ttdoc">Matrix which we use for step proposal after Cholesky decomposition.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00517">covarianceBase.h:517</a></div></div>
+<div class="ttc" id="aclasscovarianceBase_html_ac5d922f1a4163b38ebc7a3ef21eec376"><div class="ttname"><a href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">covarianceBase::_fNumPar</a></div><div class="ttdeci">int _fNumPar</div><div class="ttdoc">Number of systematic parameters.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00458">covarianceBase.h:458</a></div></div>
+<div class="ttc" id="aclasscovarianceBase_html_aca17e48a5fa8e353317d58c205fb89df"><div class="ttname"><a href="classcovarianceBase.html#aca17e48a5fa8e353317d58c205fb89df">covarianceBase::throwMatrixCholDecomp</a></div><div class="ttdeci">double ** throwMatrixCholDecomp</div><div class="ttdoc">Throw matrix that is being used in the fit, much faster as TMatrixDSym cache miss.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00519">covarianceBase.h:519</a></div></div>
+<div class="ttc" id="aclasscovarianceBase_html_ad9c47deb7009bff81210f666e80012eb"><div class="ttname"><a href="classcovarianceBase.html#ad9c47deb7009bff81210f666e80012eb">covarianceBase::_fFlatPrior</a></div><div class="ttdeci">std::vector&lt; bool &gt; _fFlatPrior</div><div class="ttdoc">Whether to apply flat prior or not.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00476">covarianceBase.h:476</a></div></div>
+<div class="ttc" id="aclasscovarianceBase_html_ae70f51df3976975b2dc78fd3bfc28b65"><div class="ttname"><a href="classcovarianceBase.html#ae70f51df3976975b2dc78fd3bfc28b65">covarianceBase::_fCurrVal</a></div><div class="ttdeci">std::vector&lt; double &gt; _fCurrVal</div><div class="ttdoc">Current value of the parameter.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00462">covarianceBase.h:462</a></div></div>
 <div class="ttc" id="anamespaceMaCh3Utils_html_a5aff908b9241c673e8d05403996e2229"><div class="ttname"><a href="namespaceMaCh3Utils.html#a5aff908b9241c673e8d05403996e2229">MaCh3Utils::GetNThreads</a></div><div class="ttdeci">int GetNThreads()</div><div class="ttdoc">number of threads which we need for example for TRandom3</div><div class="ttdef"><b>Definition</b> <a href="CovarianceUtils_8h_source.html#l00028">CovarianceUtils.h:28</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -969,10 +972,10 @@ Protected Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  906</span>    <a class="code hl_function" href="classcovarianceBase.html#a65ac4956a782b01768f445732522a450">TransferToParam</a>();</div>
 <div class="line"><span class="lineno">  907</span>  }</div>
 <div class="line"><span class="lineno">  908</span>}</div>
-<div class="ttc" id="aclasscovarianceBase_html_a2e101b6b7028c82a02e617c90212e4cc"><div class="ttname"><a href="classcovarianceBase.html#a2e101b6b7028c82a02e617c90212e4cc">covarianceBase::fParProp_PCA</a></div><div class="ttdeci">TVectorD fParProp_PCA</div><div class="ttdoc">CW: Current parameter value in PCA base.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00503">covarianceBase.h:503</a></div></div>
+<div class="ttc" id="aclasscovarianceBase_html_a2e101b6b7028c82a02e617c90212e4cc"><div class="ttname"><a href="classcovarianceBase.html#a2e101b6b7028c82a02e617c90212e4cc">covarianceBase::fParProp_PCA</a></div><div class="ttdeci">TVectorD fParProp_PCA</div><div class="ttdoc">CW: Current parameter value in PCA base.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00506">covarianceBase.h:506</a></div></div>
 <div class="ttc" id="aclasscovarianceBase_html_a65ac4956a782b01768f445732522a450"><div class="ttname"><a href="classcovarianceBase.html#a65ac4956a782b01768f445732522a450">covarianceBase::TransferToParam</a></div><div class="ttdeci">void TransferToParam()</div><div class="ttdoc">Transfer param values from PCA base to normal base.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8cpp_source.html#l00587">covarianceBase.cpp:587</a></div></div>
-<div class="ttc" id="aclasscovarianceBase_html_aa96f87ab90dc26fc1b5e157149b9dfd3"><div class="ttname"><a href="classcovarianceBase.html#aa96f87ab90dc26fc1b5e157149b9dfd3">covarianceBase::fParCurr_PCA</a></div><div class="ttdeci">TVectorD fParCurr_PCA</div><div class="ttdoc">CW: Proposed parameter value in PCA base.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00505">covarianceBase.h:505</a></div></div>
-<div class="ttc" id="aclasscovarianceBase_html_ac57285a48d41ef764b4c659959a36c2d"><div class="ttname"><a href="classcovarianceBase.html#ac57285a48d41ef764b4c659959a36c2d">covarianceBase::_fNumParPCA</a></div><div class="ttdeci">int _fNumParPCA</div><div class="ttdoc">Number of parameters in PCA base.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00483">covarianceBase.h:483</a></div></div>
+<div class="ttc" id="aclasscovarianceBase_html_aa96f87ab90dc26fc1b5e157149b9dfd3"><div class="ttname"><a href="classcovarianceBase.html#aa96f87ab90dc26fc1b5e157149b9dfd3">covarianceBase::fParCurr_PCA</a></div><div class="ttdeci">TVectorD fParCurr_PCA</div><div class="ttdoc">CW: Proposed parameter value in PCA base.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00508">covarianceBase.h:508</a></div></div>
+<div class="ttc" id="aclasscovarianceBase_html_ac57285a48d41ef764b4c659959a36c2d"><div class="ttname"><a href="classcovarianceBase.html#ac57285a48d41ef764b4c659959a36c2d">covarianceBase::_fNumParPCA</a></div><div class="ttdeci">int _fNumParPCA</div><div class="ttdoc">Number of parameters in PCA base.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00486">covarianceBase.h:486</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1047,18 +1050,18 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00191">191</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  191</span>                                            {</div>
-<div class="line"><span class="lineno">  192</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">bin</a> &gt;= 0 &amp;&amp; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">bin</a> &lt; <a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>) {</div>
-<div class="line"><span class="lineno">  193</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#a12f0eb31a5ef48b014baa11d4ab919e9">_fPropVal</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">bin</a>];</div>
-<div class="line"><span class="lineno">  194</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  195</span>      <a class="code hl_define" href="MaCh3Logger_8h.html#ad5b2eb6377721e3ac95def22c2386bb1">MACH3LOG_WARN</a>(<span class="stringliteral">&quot;Specified bin is &lt;= 0 OR bin &gt; npar!&quot;</span>);</div>
-<div class="line"><span class="lineno">  196</span>      <a class="code hl_define" href="MaCh3Logger_8h.html#ad5b2eb6377721e3ac95def22c2386bb1">MACH3LOG_WARN</a>(<span class="stringliteral">&quot;bin = {}, npar = {}&quot;</span>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">bin</a>, <a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>);</div>
-<div class="line"><span class="lineno">  197</span>      <a class="code hl_define" href="MaCh3Logger_8h.html#ad5b2eb6377721e3ac95def22c2386bb1">MACH3LOG_WARN</a>(<span class="stringliteral">&quot;This won&#39;t ruin much that this step in the MCMC, but does indicate something wrong in memory!&quot;</span>);</div>
-<div class="line"><span class="lineno">  198</span>      <span class="keywordflow">return</span> 1.0;</div>
-<div class="line"><span class="lineno">  199</span>    }</div>
-<div class="line"><span class="lineno">  200</span>    <span class="keywordflow">return</span> 1.0;</div>
-<div class="line"><span class="lineno">  201</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00194">194</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  194</span>                                            {</div>
+<div class="line"><span class="lineno">  195</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">bin</a> &gt;= 0 &amp;&amp; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">bin</a> &lt; <a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>) {</div>
+<div class="line"><span class="lineno">  196</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#a12f0eb31a5ef48b014baa11d4ab919e9">_fPropVal</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">bin</a>];</div>
+<div class="line"><span class="lineno">  197</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  198</span>      <a class="code hl_define" href="MaCh3Logger_8h.html#ad5b2eb6377721e3ac95def22c2386bb1">MACH3LOG_WARN</a>(<span class="stringliteral">&quot;Specified bin is &lt;= 0 OR bin &gt; npar!&quot;</span>);</div>
+<div class="line"><span class="lineno">  199</span>      <a class="code hl_define" href="MaCh3Logger_8h.html#ad5b2eb6377721e3ac95def22c2386bb1">MACH3LOG_WARN</a>(<span class="stringliteral">&quot;bin = {}, npar = {}&quot;</span>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">bin</a>, <a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>);</div>
+<div class="line"><span class="lineno">  200</span>      <a class="code hl_define" href="MaCh3Logger_8h.html#ad5b2eb6377721e3ac95def22c2386bb1">MACH3LOG_WARN</a>(<span class="stringliteral">&quot;This won&#39;t ruin much that this step in the MCMC, but does indicate something wrong in memory!&quot;</span>);</div>
+<div class="line"><span class="lineno">  201</span>      <span class="keywordflow">return</span> 1.0;</div>
+<div class="line"><span class="lineno">  202</span>    }</div>
+<div class="line"><span class="lineno">  203</span>    <span class="keywordflow">return</span> 1.0;</div>
+<div class="line"><span class="lineno">  204</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1259,16 +1262,16 @@ Protected Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  247</span><span class="preprocessor">  #endif</span></div>
 <div class="line"><span class="lineno">  248</span>}</div>
 <div class="ttc" id="aMaCh3Logger_8h_html_a61052119a625282d0ec6d4a97adf3ee2"><div class="ttname"><a href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a></div><div class="ttdeci">#define MACH3LOG_ERROR</div><div class="ttdef"><b>Definition</b> <a href="MaCh3Logger_8h_source.html#l00018">MaCh3Logger.h:18</a></div></div>
-<div class="ttc" id="aclasscovarianceBase_html_a36379c39ddfc130b2008944471795b47"><div class="ttname"><a href="classcovarianceBase.html#a36379c39ddfc130b2008944471795b47">covarianceBase::nKeptPCApars</a></div><div class="ttdeci">int nKeptPCApars</div><div class="ttdoc">Total number that remained after applying PCA Threshold.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00489">covarianceBase.h:489</a></div></div>
-<div class="ttc" id="aclasscovarianceBase_html_a5c1a531cb84c2b7e320f6c3f8f2e3126"><div class="ttname"><a href="classcovarianceBase.html#a5c1a531cb84c2b7e320f6c3f8f2e3126">covarianceBase::TransferMatT</a></div><div class="ttdeci">TMatrixD TransferMatT</div><div class="ttdoc">Matrix used to converting from normal base to PCA base.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00501">covarianceBase.h:501</a></div></div>
-<div class="ttc" id="aclasscovarianceBase_html_a5e94f6afb5077daab30815b3ee5269c1"><div class="ttname"><a href="classcovarianceBase.html#a5e94f6afb5077daab30815b3ee5269c1">covarianceBase::TransferMat</a></div><div class="ttdeci">TMatrixD TransferMat</div><div class="ttdoc">Matrix used to converting from PCA base to normal base.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00499">covarianceBase.h:499</a></div></div>
-<div class="ttc" id="aclasscovarianceBase_html_a7b83a17de68cc7838b93de242d91d9a0"><div class="ttname"><a href="classcovarianceBase.html#a7b83a17de68cc7838b93de242d91d9a0">covarianceBase::fParSigma_PCA</a></div><div class="ttdeci">std::vector&lt; double &gt; fParSigma_PCA</div><div class="ttdoc">Tells if parameter is fixed in PCA base or not.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00507">covarianceBase.h:507</a></div></div>
-<div class="ttc" id="aclasscovarianceBase_html_a7d3922fb843ba65990c44cac324b9ccb"><div class="ttname"><a href="classcovarianceBase.html#a7d3922fb843ba65990c44cac324b9ccb">covarianceBase::size</a></div><div class="ttdeci">int size</div><div class="ttdoc">Total number of params, deprecated, please don't use it.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00425">covarianceBase.h:425</a></div></div>
-<div class="ttc" id="aclasscovarianceBase_html_ac58cd28e2261429e597a8c4eb9d1c53d"><div class="ttname"><a href="classcovarianceBase.html#ac58cd28e2261429e597a8c4eb9d1c53d">covarianceBase::eigen_vectors</a></div><div class="ttdeci">TMatrixD eigen_vectors</div><div class="ttdoc">Eigen vectors only of params which are being decomposed.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00493">covarianceBase.h:493</a></div></div>
-<div class="ttc" id="aclasscovarianceBase_html_ad4980d328fc0689fd0b4147574b5caa9"><div class="ttname"><a href="classcovarianceBase.html#ad4980d328fc0689fd0b4147574b5caa9">covarianceBase::eigen_values</a></div><div class="ttdeci">TVectorD eigen_values</div><div class="ttdoc">Eigen value only of particles which are being decomposed.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00491">covarianceBase.h:491</a></div></div>
-<div class="ttc" id="aclasscovarianceBase_html_ae6aada94037640a68e3f37898f276019"><div class="ttname"><a href="classcovarianceBase.html#ae6aada94037640a68e3f37898f276019">covarianceBase::_fPreFitValue_PCA</a></div><div class="ttdeci">std::vector&lt; double &gt; _fPreFitValue_PCA</div><div class="ttdoc">Prefit value for PCA params.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00497">covarianceBase.h:497</a></div></div>
-<div class="ttc" id="aclasscovarianceBase_html_ae9f3cb2a310874b86965903714ef2bd8"><div class="ttname"><a href="classcovarianceBase.html#ae9f3cb2a310874b86965903714ef2bd8">covarianceBase::isDecomposed_PCA</a></div><div class="ttdeci">std::vector&lt; int &gt; isDecomposed_PCA</div><div class="ttdoc">If param is decomposed this will return -1, if not this will return enumerator to param in normal bas...</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00509">covarianceBase.h:509</a></div></div>
-<div class="ttc" id="aclasscovarianceBase_html_aeb4d5757fb7c531bb415ca9564f48c81"><div class="ttname"><a href="classcovarianceBase.html#aeb4d5757fb7c531bb415ca9564f48c81">covarianceBase::eigen_values_master</a></div><div class="ttdeci">std::vector&lt; double &gt; eigen_values_master</div><div class="ttdoc">Eigen values which have dimension equal to _fNumParPCA, and can be used in CorrelateSteps.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00495">covarianceBase.h:495</a></div></div>
+<div class="ttc" id="aclasscovarianceBase_html_a36379c39ddfc130b2008944471795b47"><div class="ttname"><a href="classcovarianceBase.html#a36379c39ddfc130b2008944471795b47">covarianceBase::nKeptPCApars</a></div><div class="ttdeci">int nKeptPCApars</div><div class="ttdoc">Total number that remained after applying PCA Threshold.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00492">covarianceBase.h:492</a></div></div>
+<div class="ttc" id="aclasscovarianceBase_html_a5c1a531cb84c2b7e320f6c3f8f2e3126"><div class="ttname"><a href="classcovarianceBase.html#a5c1a531cb84c2b7e320f6c3f8f2e3126">covarianceBase::TransferMatT</a></div><div class="ttdeci">TMatrixD TransferMatT</div><div class="ttdoc">Matrix used to converting from normal base to PCA base.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00504">covarianceBase.h:504</a></div></div>
+<div class="ttc" id="aclasscovarianceBase_html_a5e94f6afb5077daab30815b3ee5269c1"><div class="ttname"><a href="classcovarianceBase.html#a5e94f6afb5077daab30815b3ee5269c1">covarianceBase::TransferMat</a></div><div class="ttdeci">TMatrixD TransferMat</div><div class="ttdoc">Matrix used to converting from PCA base to normal base.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00502">covarianceBase.h:502</a></div></div>
+<div class="ttc" id="aclasscovarianceBase_html_a7b83a17de68cc7838b93de242d91d9a0"><div class="ttname"><a href="classcovarianceBase.html#a7b83a17de68cc7838b93de242d91d9a0">covarianceBase::fParSigma_PCA</a></div><div class="ttdeci">std::vector&lt; double &gt; fParSigma_PCA</div><div class="ttdoc">Tells if parameter is fixed in PCA base or not.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00510">covarianceBase.h:510</a></div></div>
+<div class="ttc" id="aclasscovarianceBase_html_a7d3922fb843ba65990c44cac324b9ccb"><div class="ttname"><a href="classcovarianceBase.html#a7d3922fb843ba65990c44cac324b9ccb">covarianceBase::size</a></div><div class="ttdeci">int size</div><div class="ttdoc">Total number of params, deprecated, please don't use it.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00428">covarianceBase.h:428</a></div></div>
+<div class="ttc" id="aclasscovarianceBase_html_ac58cd28e2261429e597a8c4eb9d1c53d"><div class="ttname"><a href="classcovarianceBase.html#ac58cd28e2261429e597a8c4eb9d1c53d">covarianceBase::eigen_vectors</a></div><div class="ttdeci">TMatrixD eigen_vectors</div><div class="ttdoc">Eigen vectors only of params which are being decomposed.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00496">covarianceBase.h:496</a></div></div>
+<div class="ttc" id="aclasscovarianceBase_html_ad4980d328fc0689fd0b4147574b5caa9"><div class="ttname"><a href="classcovarianceBase.html#ad4980d328fc0689fd0b4147574b5caa9">covarianceBase::eigen_values</a></div><div class="ttdeci">TVectorD eigen_values</div><div class="ttdoc">Eigen value only of particles which are being decomposed.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00494">covarianceBase.h:494</a></div></div>
+<div class="ttc" id="aclasscovarianceBase_html_ae6aada94037640a68e3f37898f276019"><div class="ttname"><a href="classcovarianceBase.html#ae6aada94037640a68e3f37898f276019">covarianceBase::_fPreFitValue_PCA</a></div><div class="ttdeci">std::vector&lt; double &gt; _fPreFitValue_PCA</div><div class="ttdoc">Prefit value for PCA params.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00500">covarianceBase.h:500</a></div></div>
+<div class="ttc" id="aclasscovarianceBase_html_ae9f3cb2a310874b86965903714ef2bd8"><div class="ttname"><a href="classcovarianceBase.html#ae9f3cb2a310874b86965903714ef2bd8">covarianceBase::isDecomposed_PCA</a></div><div class="ttdeci">std::vector&lt; int &gt; isDecomposed_PCA</div><div class="ttdoc">If param is decomposed this will return -1, if not this will return enumerator to param in normal bas...</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00512">covarianceBase.h:512</a></div></div>
+<div class="ttc" id="aclasscovarianceBase_html_aeb4d5757fb7c531bb415ca9564f48c81"><div class="ttname"><a href="classcovarianceBase.html#aeb4d5757fb7c531bb415ca9564f48c81">covarianceBase::eigen_values_master</a></div><div class="ttdeci">std::vector&lt; double &gt; eigen_values_master</div><div class="ttdoc">Eigen values which have dimension equal to _fNumParPCA, and can be used in CorrelateSteps.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00498">covarianceBase.h:498</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1344,7 +1347,7 @@ Protected Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  882</span>    <a class="code hl_function" href="classcovarianceBase.html#a65ac4956a782b01768f445732522a450">TransferToParam</a>();</div>
 <div class="line"><span class="lineno">  883</span>  }</div>
 <div class="line"><span class="lineno">  884</span>}</div>
-<div class="ttc" id="aclasscovarianceBase_html_a0088413d6a15d12cd34ec06166302f5c"><div class="ttname"><a href="classcovarianceBase.html#a0088413d6a15d12cd34ec06166302f5c">covarianceBase::_fGlobalStepScale</a></div><div class="ttdeci">double _fGlobalStepScale</div><div class="ttdoc">Global step scale applied ot all params in this class.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00443">covarianceBase.h:443</a></div></div>
+<div class="ttc" id="aclasscovarianceBase_html_a0088413d6a15d12cd34ec06166302f5c"><div class="ttname"><a href="classcovarianceBase.html#a0088413d6a15d12cd34ec06166302f5c">covarianceBase::_fGlobalStepScale</a></div><div class="ttdeci">double _fGlobalStepScale</div><div class="ttdoc">Global step scale applied ot all params in this class.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00446">covarianceBase.h:446</a></div></div>
 <div class="ttc" id="aclasscovarianceBase_html_a64aaa71f81750ba27977c0405c51cd88"><div class="ttname"><a href="classcovarianceBase.html#a64aaa71f81750ba27977c0405c51cd88">covarianceBase::MatrixVectorMulti</a></div><div class="ttdeci">void MatrixVectorMulti(double *_restrict_ VecMulti, double **_restrict_ matrix, const double *_restrict_ vector, const int n)</div><div class="ttdoc">KS: Custom function to perform multiplication of matrix and vector with multithreading.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8cpp_source.html#l01223">covarianceBase.cpp:1223</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -1490,9 +1493,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Do we adapt or not. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00173">173</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  173</span>{<span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#a838731abd6716940043b484b2b266f86">use_adaptive</a>;}</div>
-<div class="ttc" id="aclasscovarianceBase_html_a838731abd6716940043b484b2b266f86"><div class="ttname"><a href="classcovarianceBase.html#a838731abd6716940043b484b2b266f86">covarianceBase::use_adaptive</a></div><div class="ttdeci">bool use_adaptive</div><div class="ttdoc">Are we using AMCMC?</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00519">covarianceBase.h:519</a></div></div>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00176">176</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  176</span>{<span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#a838731abd6716940043b484b2b266f86">use_adaptive</a>;}</div>
+<div class="ttc" id="aclasscovarianceBase_html_a838731abd6716940043b484b2b266f86"><div class="ttname"><a href="classcovarianceBase.html#a838731abd6716940043b484b2b266f86">covarianceBase::use_adaptive</a></div><div class="ttdeci">bool use_adaptive</div><div class="ttdoc">Are we using AMCMC?</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00522">covarianceBase.h:522</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1521,11 +1524,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Get eigen values for all parameters, if you want for decomposed only parameters use getEigenValuesMaster. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00274">274</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  274</span>                                         {</div>
-<div class="line"><span class="lineno">  275</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classcovarianceBase.html#ab4b7f96d3e977a0b3307ceecbd0baeb4">pca</a>) { <a class="code hl_define" href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a>(<span class="stringliteral">&quot;Am not running in PCA mode&quot;</span>); <span class="keywordflow">throw</span>; }</div>
-<div class="line"><span class="lineno">  276</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#ad4980d328fc0689fd0b4147574b5caa9">eigen_values</a>;</div>
-<div class="line"><span class="lineno">  277</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00277">277</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  277</span>                                         {</div>
+<div class="line"><span class="lineno">  278</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classcovarianceBase.html#ab4b7f96d3e977a0b3307ceecbd0baeb4">pca</a>) { <a class="code hl_define" href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a>(<span class="stringliteral">&quot;Am not running in PCA mode&quot;</span>); <span class="keywordflow">throw</span>; }</div>
+<div class="line"><span class="lineno">  279</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#ad4980d328fc0689fd0b4147574b5caa9">eigen_values</a>;</div>
+<div class="line"><span class="lineno">  280</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1554,11 +1557,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Get eigen value of only decomposed parameters, if you want for all parameters use getEigenValues. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00279">279</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  279</span>                                                        {</div>
-<div class="line"><span class="lineno">  280</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classcovarianceBase.html#ab4b7f96d3e977a0b3307ceecbd0baeb4">pca</a>) { <a class="code hl_define" href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a>(<span class="stringliteral">&quot;Am not running in PCA mode&quot;</span>); <span class="keywordflow">throw</span>; }</div>
-<div class="line"><span class="lineno">  281</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#aeb4d5757fb7c531bb415ca9564f48c81">eigen_values_master</a>;</div>
-<div class="line"><span class="lineno">  282</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00282">282</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  282</span>                                                        {</div>
+<div class="line"><span class="lineno">  283</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classcovarianceBase.html#ab4b7f96d3e977a0b3307ceecbd0baeb4">pca</a>) { <a class="code hl_define" href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a>(<span class="stringliteral">&quot;Am not running in PCA mode&quot;</span>); <span class="keywordflow">throw</span>; }</div>
+<div class="line"><span class="lineno">  284</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#aeb4d5757fb7c531bb415ca9564f48c81">eigen_values_master</a>;</div>
+<div class="line"><span class="lineno">  285</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1587,11 +1590,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Get eigen vectors of covariance matrix, only works with PCA. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00269">269</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  269</span>                                          {</div>
-<div class="line"><span class="lineno">  270</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classcovarianceBase.html#ab4b7f96d3e977a0b3307ceecbd0baeb4">pca</a>) { <a class="code hl_define" href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a>(<span class="stringliteral">&quot;Am not running in PCA mode&quot;</span>); <span class="keywordflow">throw</span>; }</div>
-<div class="line"><span class="lineno">  271</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#ac58cd28e2261429e597a8c4eb9d1c53d">eigen_vectors</a>;</div>
-<div class="line"><span class="lineno">  272</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00272">272</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  272</span>                                          {</div>
+<div class="line"><span class="lineno">  273</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classcovarianceBase.html#ab4b7f96d3e977a0b3307ceecbd0baeb4">pca</a>) { <a class="code hl_define" href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a>(<span class="stringliteral">&quot;Am not running in PCA mode&quot;</span>); <span class="keywordflow">throw</span>; }</div>
+<div class="line"><span class="lineno">  274</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#ac58cd28e2261429e597a8c4eb9d1c53d">eigen_vectors</a>;</div>
+<div class="line"><span class="lineno">  275</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1664,9 +1667,9 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00233">233</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  233</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#a9b753f52711600a9f8d648531d95b044">_fGenerated</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>];}</div>
-<div class="ttc" id="aclasscovarianceBase_html_a9b753f52711600a9f8d648531d95b044"><div class="ttname"><a href="classcovarianceBase.html#a9b753f52711600a9f8d648531d95b044">covarianceBase::_fGenerated</a></div><div class="ttdeci">std::vector&lt; double &gt; _fGenerated</div><div class="ttdoc">Generated value of the parameter.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00463">covarianceBase.h:463</a></div></div>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00236">236</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  236</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#a9b753f52711600a9f8d648531d95b044">_fGenerated</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>];}</div>
+<div class="ttc" id="aclasscovarianceBase_html_a9b753f52711600a9f8d648531d95b044"><div class="ttname"><a href="classcovarianceBase.html#a9b753f52711600a9f8d648531d95b044">covarianceBase::_fGenerated</a></div><div class="ttdeci">std::vector&lt; double &gt; _fGenerated</div><div class="ttdoc">Generated value of the parameter.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00466">covarianceBase.h:466</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1693,8 +1696,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00216">216</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  216</span>{<span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#a9b753f52711600a9f8d648531d95b044">_fGenerated</a>;}</div>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00219">219</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  219</span>{<span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#a9b753f52711600a9f8d648531d95b044">_fGenerated</a>;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1730,8 +1733,8 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00242">242</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  242</span>{<span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#a3cda39026e336a49cef482efd4062561">_fIndivStepScale</a>.at(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ParameterIndex</a>); }</div>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00245">245</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  245</span>{<span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#a3cda39026e336a49cef482efd4062561">_fIndivStepScale</a>.at(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ParameterIndex</a>); }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1872,8 +1875,8 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00239">239</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  239</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#a8f1d94838f188cc85c4f82557c0b0b66">_fLowBound</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>]; }</div>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00242">242</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  242</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#a8f1d94838f188cc85c4f82557c0b0b66">_fLowBound</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>]; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1941,9 +1944,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classcovarianceXsec.html#aea8d453c3b4bfe236faff0bf48623118">covarianceXsec</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00230">230</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  230</span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="classcovarianceBase.html#a1cede85accaac2ea7056740893d90c49">getParInit</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>); }</div>
-<div class="ttc" id="aclasscovarianceBase_html_a1cede85accaac2ea7056740893d90c49"><div class="ttname"><a href="classcovarianceBase.html#a1cede85accaac2ea7056740893d90c49">covarianceBase::getParInit</a></div><div class="ttdeci">double getParInit(const int i)</div><div class="ttdoc">Get prior parameter value.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00227">covarianceBase.h:227</a></div></div>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00233">233</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  233</span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="classcovarianceBase.html#a1cede85accaac2ea7056740893d90c49">getParInit</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>); }</div>
+<div class="ttc" id="aclasscovarianceBase_html_a1cede85accaac2ea7056740893d90c49"><div class="ttname"><a href="classcovarianceBase.html#a1cede85accaac2ea7056740893d90c49">covarianceBase::getParInit</a></div><div class="ttdeci">double getParInit(const int i)</div><div class="ttdoc">Get prior parameter value.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00230">covarianceBase.h:230</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2012,11 +2015,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Get number of params which will be different depending if using Eigen decomposition or not. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00320">320</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  320</span>                        {</div>
-<div class="line"><span class="lineno">  321</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classcovarianceBase.html#ab4b7f96d3e977a0b3307ceecbd0baeb4">pca</a>) <span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#ac57285a48d41ef764b4c659959a36c2d">_fNumParPCA</a>;</div>
-<div class="line"><span class="lineno">  322</span>    <span class="keywordflow">else</span> <span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>;</div>
-<div class="line"><span class="lineno">  323</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00323">323</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  323</span>                        {</div>
+<div class="line"><span class="lineno">  324</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classcovarianceBase.html#ab4b7f96d3e977a0b3307ceecbd0baeb4">pca</a>) <span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#ac57285a48d41ef764b4c659959a36c2d">_fNumParPCA</a>;</div>
+<div class="line"><span class="lineno">  325</span>    <span class="keywordflow">else</span> <span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>;</div>
+<div class="line"><span class="lineno">  326</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2045,8 +2048,8 @@ Protected Attributes</h2></td></tr>
 
 <p>Get total number of parameters. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00213">213</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  213</span>{<span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>;}</div>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00216">216</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  216</span>{<span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2073,10 +2076,10 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00185">185</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  185</span>{<span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#ab3833dc51a81afc9dca7c3dcbb107af7">AdaptiveHandler</a>.<a class="code hl_variable" href="classadaptive__mcmc_1_1AdaptiveMCMCHandler.html#a066984e9598e073d04edec51511cdf0a">par_means</a>;}</div>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00188">188</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  188</span>{<span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#ab3833dc51a81afc9dca7c3dcbb107af7">AdaptiveHandler</a>.<a class="code hl_variable" href="classadaptive__mcmc_1_1AdaptiveMCMCHandler.html#a066984e9598e073d04edec51511cdf0a">par_means</a>;}</div>
 <div class="ttc" id="aclassadaptive__mcmc_1_1AdaptiveMCMCHandler_html_a066984e9598e073d04edec51511cdf0a"><div class="ttname"><a href="classadaptive__mcmc_1_1AdaptiveMCMCHandler.html#a066984e9598e073d04edec51511cdf0a">adaptive_mcmc::AdaptiveMCMCHandler::par_means</a></div><div class="ttdeci">std::vector&lt; double &gt; par_means</div><div class="ttdoc">Mean values for all parameters.</div><div class="ttdef"><b>Definition</b> <a href="AdaptiveMCMCHandler_8h_source.html#l00078">AdaptiveMCMCHandler.h:78</a></div></div>
-<div class="ttc" id="aclasscovarianceBase_html_ab3833dc51a81afc9dca7c3dcbb107af7"><div class="ttname"><a href="classcovarianceBase.html#ab3833dc51a81afc9dca7c3dcbb107af7">covarianceBase::AdaptiveHandler</a></div><div class="ttdeci">adaptive_mcmc::AdaptiveMCMCHandler AdaptiveHandler</div><div class="ttdoc">Struct containing information about adaption.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00524">covarianceBase.h:524</a></div></div>
+<div class="ttc" id="aclasscovarianceBase_html_ab3833dc51a81afc9dca7c3dcbb107af7"><div class="ttname"><a href="classcovarianceBase.html#ab3833dc51a81afc9dca7c3dcbb107af7">covarianceBase::AdaptiveHandler</a></div><div class="ttdeci">adaptive_mcmc::AdaptiveMCMCHandler AdaptiveHandler</div><div class="ttdoc">Struct containing information about adaption.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00527">covarianceBase.h:527</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2112,8 +2115,8 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00224">224</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  224</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#ae70f51df3976975b2dc78fd3bfc28b65">_fCurrVal</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>]; }</div>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00227">227</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  227</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#ae70f51df3976975b2dc78fd3bfc28b65">_fCurrVal</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>]; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2149,11 +2152,11 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00252">252</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  252</span>                                            {</div>
-<div class="line"><span class="lineno">  253</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classcovarianceBase.html#ab4b7f96d3e977a0b3307ceecbd0baeb4">pca</a>) { <a class="code hl_define" href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a>(<span class="stringliteral">&quot;Am not running in PCA mode&quot;</span>); <span class="keywordflow">throw</span>; }</div>
-<div class="line"><span class="lineno">  254</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#aa96f87ab90dc26fc1b5e157149b9dfd3">fParCurr_PCA</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>);</div>
-<div class="line"><span class="lineno">  255</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00255">255</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  255</span>                                            {</div>
+<div class="line"><span class="lineno">  256</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classcovarianceBase.html#ab4b7f96d3e977a0b3307ceecbd0baeb4">pca</a>) { <a class="code hl_define" href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a>(<span class="stringliteral">&quot;Am not running in PCA mode&quot;</span>); <span class="keywordflow">throw</span>; }</div>
+<div class="line"><span class="lineno">  257</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#aa96f87ab90dc26fc1b5e157149b9dfd3">fParCurr_PCA</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>);</div>
+<div class="line"><span class="lineno">  258</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2191,7 +2194,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00154">154</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  154</span>{<span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#a973671386a2f8ea924f25f8f5404654c">_fFancyNames</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>];}</div>
-<div class="ttc" id="aclasscovarianceBase_html_a973671386a2f8ea924f25f8f5404654c"><div class="ttname"><a href="classcovarianceBase.html#a973671386a2f8ea924f25f8f5404654c">covarianceBase::_fFancyNames</a></div><div class="ttdeci">std::vector&lt; std::string &gt; _fFancyNames</div><div class="ttdoc">Fancy name for example rather than xsec_0 it is MAQE, useful for human reading.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00451">covarianceBase.h:451</a></div></div>
+<div class="ttc" id="aclasscovarianceBase_html_a973671386a2f8ea924f25f8f5404654c"><div class="ttname"><a href="classcovarianceBase.html#a973671386a2f8ea924f25f8f5404654c">covarianceBase::_fFancyNames</a></div><div class="ttdeci">std::vector&lt; std::string &gt; _fFancyNames</div><div class="ttdoc">Fancy name for example rather than xsec_0 it is MAQE, useful for human reading.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00454">covarianceBase.h:454</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2264,8 +2267,8 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00227">227</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  227</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#a7578a2cc2e8e9100fad88310a824cb1c">_fPreFitValue</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>]; }</div>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00230">230</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  230</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#a7578a2cc2e8e9100fad88310a824cb1c">_fPreFitValue</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>]; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2303,7 +2306,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00148">148</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  148</span>{<span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#a3e502d80fd2c30a7da4fe75a3e05b0da">_fNames</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>];}</div>
-<div class="ttc" id="aclasscovarianceBase_html_a3e502d80fd2c30a7da4fe75a3e05b0da"><div class="ttname"><a href="classcovarianceBase.html#a3e502d80fd2c30a7da4fe75a3e05b0da">covarianceBase::_fNames</a></div><div class="ttdeci">std::vector&lt; std::string &gt; _fNames</div><div class="ttdoc">ETA _fNames is set automatically in the covariance class to be something like xsec_i,...</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00449">covarianceBase.h:449</a></div></div>
+<div class="ttc" id="aclasscovarianceBase_html_a3e502d80fd2c30a7da4fe75a3e05b0da"><div class="ttname"><a href="classcovarianceBase.html#a3e502d80fd2c30a7da4fe75a3e05b0da">covarianceBase::_fNames</a></div><div class="ttdeci">std::vector&lt; std::string &gt; _fNames</div><div class="ttdoc">ETA _fNames is set automatically in the covariance class to be something like xsec_i,...</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00452">covarianceBase.h:452</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2376,8 +2379,8 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00221">221</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  221</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#a12f0eb31a5ef48b014baa11d4ab919e9">_fPropVal</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>]; }</div>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00224">224</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  224</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#a12f0eb31a5ef48b014baa11d4ab919e9">_fPropVal</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>]; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2413,11 +2416,11 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00245">245</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  245</span>                                            {</div>
-<div class="line"><span class="lineno">  246</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classcovarianceBase.html#ab4b7f96d3e977a0b3307ceecbd0baeb4">pca</a>) { <a class="code hl_define" href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a>(<span class="stringliteral">&quot;Am not running in PCA mode&quot;</span>); <span class="keywordflow">throw</span>; }</div>
-<div class="line"><span class="lineno">  247</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#a2e101b6b7028c82a02e617c90212e4cc">fParProp_PCA</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>);</div>
-<div class="line"><span class="lineno">  248</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00248">248</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  248</span>                                            {</div>
+<div class="line"><span class="lineno">  249</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classcovarianceBase.html#ab4b7f96d3e977a0b3307ceecbd0baeb4">pca</a>) { <a class="code hl_define" href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a>(<span class="stringliteral">&quot;Am not running in PCA mode&quot;</span>); <span class="keywordflow">throw</span>; }</div>
+<div class="line"><span class="lineno">  250</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#a2e101b6b7028c82a02e617c90212e4cc">fParProp_PCA</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>);</div>
+<div class="line"><span class="lineno">  251</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2444,8 +2447,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00215">215</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  215</span>{<span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#a7578a2cc2e8e9100fad88310a824cb1c">_fPreFitValue</a>;}</div>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00218">218</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  218</span>{<span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#a7578a2cc2e8e9100fad88310a824cb1c">_fPreFitValue</a>;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2501,8 +2504,8 @@ Protected Attributes</h2></td></tr>
 
 <p>Get number of params in normal Base, if you want something which will work with PCA as well please use <a class="el" href="classcovarianceBase.html#a261941a4c06e5d875174d8769a4d02f1" title="Get number of params which will be different depending if using Eigen decomposition or not.">getNpars()</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00318">318</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  318</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>; }</div>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00321">321</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  321</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2529,8 +2532,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00183">183</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  183</span>{<span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#a6cb3d0b4096fbb55b040f70cd5b6e32b">throwMatrix</a>;}</div>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00186">186</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  186</span>{<span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#a6cb3d0b4096fbb55b040f70cd5b6e32b">throwMatrix</a>;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2557,8 +2560,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00184">184</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  184</span>{<span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#ab95f5e066c2dfb1d20d120bc6c85dda2">throwMatrix_CholDecomp</a>;}</div>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00187">187</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  187</span>{<span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#ab95f5e066c2dfb1d20d120bc6c85dda2">throwMatrix_CholDecomp</a>;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2587,11 +2590,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Get transfer matrix allowing to go from PCA base to normal base. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00264">264</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  264</span>                                            {</div>
-<div class="line"><span class="lineno">  265</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classcovarianceBase.html#ab4b7f96d3e977a0b3307ceecbd0baeb4">pca</a>) { <a class="code hl_define" href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a>(<span class="stringliteral">&quot;Am not running in PCA mode&quot;</span>); <span class="keywordflow">throw</span>; }</div>
-<div class="line"><span class="lineno">  266</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#a5e94f6afb5077daab30815b3ee5269c1">TransferMat</a>;</div>
-<div class="line"><span class="lineno">  267</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00267">267</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  267</span>                                            {</div>
+<div class="line"><span class="lineno">  268</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classcovarianceBase.html#ab4b7f96d3e977a0b3307ceecbd0baeb4">pca</a>) { <a class="code hl_define" href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a>(<span class="stringliteral">&quot;Am not running in PCA mode&quot;</span>); <span class="keywordflow">throw</span>; }</div>
+<div class="line"><span class="lineno">  269</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#a5e94f6afb5077daab30815b3ee5269c1">TransferMat</a>;</div>
+<div class="line"><span class="lineno">  270</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2627,8 +2630,8 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00236">236</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  236</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#a31e636cb6de871bd0c2c8e7e299df9e7">_fUpBound</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>];}</div>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00239">239</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  239</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#a31e636cb6de871bd0c2c8e7e299df9e7">_fUpBound</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>];}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2742,7 +2745,7 @@ Protected Attributes</h2></td></tr>
 <div class="ttc" id="aclasscovarianceBase_html_a5f28f7294d25cca6334f7033a63596b9"><div class="ttname"><a href="classcovarianceBase.html#a5f28f7294d25cca6334f7033a63596b9">covarianceBase::setCovMatrix</a></div><div class="ttdeci">void setCovMatrix(TMatrixDSym *cov)</div><div class="ttdoc">Set covariance matrix.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8cpp_source.html#l00495">covarianceBase.cpp:495</a></div></div>
 <div class="ttc" id="aclasscovarianceBase_html_a609455bfeaf5cd0a9682a7ee4268a169"><div class="ttname"><a href="classcovarianceBase.html#a609455bfeaf5cd0a9682a7ee4268a169">covarianceBase::setName</a></div><div class="ttdeci">void setName(const char *name)</div><div class="ttdoc">Set matrix name.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00069">covarianceBase.h:69</a></div></div>
 <div class="ttc" id="aclasscovarianceBase_html_a75b5553823335bb82026ff46369fb67e"><div class="ttname"><a href="classcovarianceBase.html#a75b5553823335bb82026ff46369fb67e">covarianceBase::ReserveMemory</a></div><div class="ttdeci">void ReserveMemory(const int size)</div><div class="ttdoc">Initialise vectors with parameters information.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8cpp_source.html#l00516">covarianceBase.cpp:516</a></div></div>
-<div class="ttc" id="aclasscovarianceBase_html_a9f6180397b0e20f0eefe129638a1f10e"><div class="ttname"><a href="classcovarianceBase.html#a9f6180397b0e20f0eefe129638a1f10e">covarianceBase::PrintLength</a></div><div class="ttdeci">unsigned int PrintLength</div><div class="ttdoc">KS: This is used when printing parameters, sometimes we have super long parameters name,...</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00446">covarianceBase.h:446</a></div></div>
+<div class="ttc" id="aclasscovarianceBase_html_a9f6180397b0e20f0eefe129638a1f10e"><div class="ttname"><a href="classcovarianceBase.html#a9f6180397b0e20f0eefe129638a1f10e">covarianceBase::PrintLength</a></div><div class="ttdeci">unsigned int PrintLength</div><div class="ttdoc">KS: This is used when printing parameters, sometimes we have super long parameters name,...</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00449">covarianceBase.h:449</a></div></div>
 <div class="ttc" id="aclasscovarianceBase_html_ae2850c8e2f2d4acfe322b0ebe65b07cf"><div class="ttname"><a href="classcovarianceBase.html#ae2850c8e2f2d4acfe322b0ebe65b07cf">covarianceBase::MakePosDef</a></div><div class="ttdeci">void MakePosDef(TMatrixDSym *cov=nullptr)</div><div class="ttdoc">Make matrix positive definite by adding small values to diagonal, necessary for inverting matrix.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8cpp_source.html#l01283">covarianceBase.cpp:1283</a></div></div>
 <div class="ttc" id="aclasscovarianceBase_html_ae57e5f482c22784cf3311ff6feeb759b"><div class="ttname"><a href="classcovarianceBase.html#ae57e5f482c22784cf3311ff6feeb759b">covarianceBase::setAdaptionDefaults</a></div><div class="ttdeci">void setAdaptionDefaults()</div><div class="ttdoc">sets default values for adaptive MCMC parameters</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8cpp_source.html#l01391">covarianceBase.cpp:1391</a></div></div>
 </div><!-- fragment -->
@@ -2921,7 +2924,7 @@ Protected Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  462</span> </div>
 <div class="line"><span class="lineno">  463</span>  <span class="keywordflow">return</span>;</div>
 <div class="line"><span class="lineno">  464</span>}</div>
-<div class="ttc" id="aclasscovarianceBase_html_a933ff3dc0af99629ba3582a5d9d89d23"><div class="ttname"><a href="classcovarianceBase.html#a933ff3dc0af99629ba3582a5d9d89d23">covarianceBase::_fYAMLDoc</a></div><div class="ttdeci">YAML::Node _fYAMLDoc</div><div class="ttdoc">Stores config describing systematics.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00453">covarianceBase.h:453</a></div></div>
+<div class="ttc" id="aclasscovarianceBase_html_a933ff3dc0af99629ba3582a5d9d89d23"><div class="ttname"><a href="classcovarianceBase.html#a933ff3dc0af99629ba3582a5d9d89d23">covarianceBase::_fYAMLDoc</a></div><div class="ttdeci">YAML::Node _fYAMLDoc</div><div class="ttdoc">Stores config describing systematics.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00456">covarianceBase.h:456</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -3056,7 +3059,7 @@ Protected Attributes</h2></td></tr>
 <div class="ttc" id="aclassadaptive__mcmc_1_1AdaptiveMCMCHandler_html_adea1292df0e4fd5a1bb96b6323722ca3"><div class="ttname"><a href="classadaptive__mcmc_1_1AdaptiveMCMCHandler.html#adea1292df0e4fd5a1bb96b6323722ca3">adaptive_mcmc::AdaptiveMCMCHandler::InitFromConfig</a></div><div class="ttdeci">void InitFromConfig(const YAML::Node &amp;adapt_manager, const std::string &amp;matrix_name_str, const int Npars)</div><div class="ttdoc">Read initial values from config file.</div><div class="ttdef"><b>Definition</b> <a href="AdaptiveMCMCHandler_8cpp_source.html#l00027">AdaptiveMCMCHandler.cpp:27</a></div></div>
 <div class="ttc" id="aclassadaptive__mcmc_1_1AdaptiveMCMCHandler_html_aebd1df26766a9f106fe6ce4255ceb0d9"><div class="ttname"><a href="classadaptive__mcmc_1_1AdaptiveMCMCHandler.html#aebd1df26766a9f106fe6ce4255ceb0d9">adaptive_mcmc::AdaptiveMCMCHandler::SetThrowMatrixFromFile</a></div><div class="ttdeci">void SetThrowMatrixFromFile(const std::string &amp;matrix_file_name, const std::string &amp;matrix_name, const std::string &amp;means_name, bool &amp;use_adaptive, const int Npars)</div><div class="ttdoc">sets throw matrix from a file</div><div class="ttdef"><b>Definition</b> <a href="AdaptiveMCMCHandler_8cpp_source.html#l00130">AdaptiveMCMCHandler.cpp:130</a></div></div>
 <div class="ttc" id="aclassadaptive__mcmc_1_1AdaptiveMCMCHandler_html_afd61e64f18f5c25dbbd6bb2bd619a268"><div class="ttname"><a href="classadaptive__mcmc_1_1AdaptiveMCMCHandler.html#afd61e64f18f5c25dbbd6bb2bd619a268">adaptive_mcmc::AdaptiveMCMCHandler::adaptive_covariance</a></div><div class="ttdeci">TMatrixDSym * adaptive_covariance</div><div class="ttdoc">Full adaptive covariance matrix.</div><div class="ttdef"><b>Definition</b> <a href="AdaptiveMCMCHandler_8h_source.html#l00081">AdaptiveMCMCHandler.h:81</a></div></div>
-<div class="ttc" id="aclasscovarianceBase_html_a261941a4c06e5d875174d8769a4d02f1"><div class="ttname"><a href="classcovarianceBase.html#a261941a4c06e5d875174d8769a4d02f1">covarianceBase::getNpars</a></div><div class="ttdeci">int getNpars()</div><div class="ttdoc">Get number of params which will be different depending if using Eigen decomposition or not.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00320">covarianceBase.h:320</a></div></div>
+<div class="ttc" id="aclasscovarianceBase_html_a261941a4c06e5d875174d8769a4d02f1"><div class="ttname"><a href="classcovarianceBase.html#a261941a4c06e5d875174d8769a4d02f1">covarianceBase::getNpars</a></div><div class="ttdeci">int getNpars()</div><div class="ttdoc">Get number of params which will be different depending if using Eigen decomposition or not.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00323">covarianceBase.h:323</a></div></div>
 <div class="ttc" id="aclasscovarianceBase_html_af30ca7861452e1446e55700f4b49b608"><div class="ttname"><a href="classcovarianceBase.html#af30ca7861452e1446e55700f4b49b608">covarianceBase::setThrowMatrix</a></div><div class="ttdeci">void setThrowMatrix(TMatrixDSym *cov)</div><div class="ttdoc">Use new throw matrix, used in adaptive MCMC.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8cpp_source.html#l01340">covarianceBase.cpp:1340</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -3093,11 +3096,11 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00349">349</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  349</span>                                     {</div>
-<div class="line"><span class="lineno">  350</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classcovarianceBase.html#a34f877fc160b4a93a3aab1b3a8977858">_fError</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>] &lt; 0) { <span class="keywordflow">return</span> <span class="keyword">true</span>; }</div>
-<div class="line"><span class="lineno">  351</span>    <span class="keywordflow">else</span>                { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
-<div class="line"><span class="lineno">  352</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00352">352</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  352</span>                                     {</div>
+<div class="line"><span class="lineno">  353</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classcovarianceBase.html#a34f877fc160b4a93a3aab1b3a8977858">_fError</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>] &lt; 0) { <span class="keywordflow">return</span> <span class="keyword">true</span>; }</div>
+<div class="line"><span class="lineno">  354</span>    <span class="keywordflow">else</span>                { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="line"><span class="lineno">  355</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -3136,7 +3139,7 @@ Protected Attributes</h2></td></tr>
 <div class="line"><span class="lineno"> 1198</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#ad5b2eb6377721e3ac95def22c2386bb1">MACH3LOG_WARN</a>(<span class="stringliteral">&quot;I couldn&#39;t find parameter with name {}, therefore will not fix it&quot;</span>, name);</div>
 <div class="line"><span class="lineno"> 1199</span>  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno"> 1200</span>}</div>
-<div class="ttc" id="aclasscovarianceBase_html_a2424eaebd9daa92b0294b352310770a3"><div class="ttname"><a href="classcovarianceBase.html#a2424eaebd9daa92b0294b352310770a3">covarianceBase::isParameterFixed</a></div><div class="ttdeci">bool isParameterFixed(const int i)</div><div class="ttdoc">Is parameter fixed or not.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00349">covarianceBase.h:349</a></div></div>
+<div class="ttc" id="aclasscovarianceBase_html_a2424eaebd9daa92b0294b352310770a3"><div class="ttname"><a href="classcovarianceBase.html#a2424eaebd9daa92b0294b352310770a3">covarianceBase::isParameterFixed</a></div><div class="ttdeci">bool isParameterFixed(const int i)</div><div class="ttdoc">Is parameter fixed or not.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00352">covarianceBase.h:352</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -3172,11 +3175,11 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00259">259</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  259</span>                                               {</div>
-<div class="line"><span class="lineno">  260</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classcovarianceBase.html#a7b83a17de68cc7838b93de242d91d9a0">fParSigma_PCA</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>] &lt; 0) { <span class="keywordflow">return</span> <span class="keyword">true</span>;  }</div>
-<div class="line"><span class="lineno">  261</span>    <span class="keywordflow">else</span>                      { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
-<div class="line"><span class="lineno">  262</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00262">262</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  262</span>                                               {</div>
+<div class="line"><span class="lineno">  263</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classcovarianceBase.html#a7b83a17de68cc7838b93de242d91d9a0">fParSigma_PCA</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>] &lt; 0) { <span class="keywordflow">return</span> <span class="keyword">true</span>;  }</div>
+<div class="line"><span class="lineno">  264</span>    <span class="keywordflow">else</span>                      { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="line"><span class="lineno">  265</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -3205,8 +3208,8 @@ Protected Attributes</h2></td></tr>
 
 <p>is PCA, can use to query e.g. LLH scans </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00366">366</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  366</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#ab4b7f96d3e977a0b3307ceecbd0baeb4">pca</a>; }</div>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00369">369</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  369</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#ab4b7f96d3e977a0b3307ceecbd0baeb4">pca</a>; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -3362,7 +3365,7 @@ Protected Attributes</h2></td></tr>
 <div class="line"><span class="lineno"> 1325</span> </div>
 <div class="line"><span class="lineno"> 1326</span>  <span class="keywordflow">return</span>;</div>
 <div class="line"><span class="lineno"> 1327</span>}</div>
-<div class="ttc" id="aclasscovarianceBase_html_afa85fb6668931ef7494c4af511a7111c"><div class="ttname"><a href="classcovarianceBase.html#afa85fb6668931ef7494c4af511a7111c">covarianceBase::total_steps</a></div><div class="ttdeci">int total_steps</div><div class="ttdoc">Total number of MCMC steps.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00521">covarianceBase.h:521</a></div></div>
+<div class="ttc" id="aclasscovarianceBase_html_afa85fb6668931ef7494c4af511a7111c"><div class="ttname"><a href="classcovarianceBase.html#afa85fb6668931ef7494c4af511a7111c">covarianceBase::total_steps</a></div><div class="ttdeci">int total_steps</div><div class="ttdoc">Total number of MCMC steps.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00524">covarianceBase.h:524</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -3924,8 +3927,8 @@ Protected Attributes</h2></td></tr>
 
 <p>DB Pointer return to param position. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00209">209</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  209</span>{<span class="keywordflow">return</span> &amp;(<a class="code hl_variable" href="classcovarianceBase.html#a12f0eb31a5ef48b014baa11d4ab919e9">_fPropVal</a>.data()[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">iParam</a>]);}</div>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00212">212</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  212</span>{<span class="keywordflow">return</span> &amp;(<a class="code hl_variable" href="classcovarianceBase.html#a12f0eb31a5ef48b014baa11d4ab919e9">_fPropVal</a>.data()[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">iParam</a>]);}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -3954,9 +3957,52 @@ Protected Attributes</h2></td></tr>
 
 <p>Handy function to return 1 for any systs. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00406">406</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  406</span>{<span class="keywordflow">return</span> &amp;<a class="code hl_variable" href="classcovarianceBase.html#a7682c3de33ae5b23b23e070dc0a3f778">Unity</a>;}</div>
-<div class="ttc" id="aclasscovarianceBase_html_a7682c3de33ae5b23b23e070dc0a3f778"><div class="ttname"><a href="classcovarianceBase.html#a7682c3de33ae5b23b23e070dc0a3f778">covarianceBase::Unity</a></div><div class="ttdeci">const double Unity</div><div class="ttdoc">Unity for null systs to point back to.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00476">covarianceBase.h:476</a></div></div>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00409">409</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  409</span>{<span class="keywordflow">return</span> &amp;<a class="code hl_variable" href="classcovarianceBase.html#a7682c3de33ae5b23b23e070dc0a3f778">Unity</a>;}</div>
+<div class="ttc" id="aclasscovarianceBase_html_a7682c3de33ae5b23b23e070dc0a3f778"><div class="ttname"><a href="classcovarianceBase.html#a7682c3de33ae5b23b23e070dc0a3f778">covarianceBase::Unity</a></div><div class="ttdeci">const double Unity</div><div class="ttdoc">Unity for null systs to point back to.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00479">covarianceBase.h:479</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae4c26e3f2a727a39e9db7ed88e72ac38" name="ae4c26e3f2a727a39e9db7ed88e72ac38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4c26e3f2a727a39e9db7ed88e72ac38">&#9670;&#160;</a></span>saveAdaptiveToFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">void</a> covarianceBase::saveAdaptiveToFile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">const</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TString</a> &amp;&#160;</td>
+          <td class="paramname"><em>outFileName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">const</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TString</a> &amp;&#160;</td>
+          <td class="paramname"><em>systematicName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Save adaptive throw matrix to file. </p>
+
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00172">172</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  172</span>                                                                                     {</div>
+<div class="line"><span class="lineno">  173</span>    <a class="code hl_variable" href="classcovarianceBase.html#ab3833dc51a81afc9dca7c3dcbb107af7">AdaptiveHandler</a>.<a class="code hl_function" href="classadaptive__mcmc_1_1AdaptiveMCMCHandler.html#a752d312d5fdd755af88b58880a9845ec">SaveAdaptiveToFile</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">outFileName</a>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">systematicName</a>); }</div>
+<div class="ttc" id="aclassadaptive__mcmc_1_1AdaptiveMCMCHandler_html_a752d312d5fdd755af88b58880a9845ec"><div class="ttname"><a href="classadaptive__mcmc_1_1AdaptiveMCMCHandler.html#a752d312d5fdd755af88b58880a9845ec">adaptive_mcmc::AdaptiveMCMCHandler::SaveAdaptiveToFile</a></div><div class="ttdeci">void SaveAdaptiveToFile(const TString &amp;outFileName, const TString &amp;systematicName)</div><div class="ttdoc">HW: Save adaptive throw matrix to file.</div><div class="ttdef"><b>Definition</b> <a href="AdaptiveMCMCHandler_8cpp_source.html#l00108">AdaptiveMCMCHandler.cpp:108</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -4364,11 +4410,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Set number of MCMC step, when running adaptive MCMC it is updated with given frequency. We need number of steps to determine frequency. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00178">178</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  178</span>                                                 {</div>
-<div class="line"><span class="lineno">  179</span>    <a class="code hl_variable" href="classcovarianceBase.html#afa85fb6668931ef7494c4af511a7111c">total_steps</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">nsteps</a>;</div>
-<div class="line"><span class="lineno">  180</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="classcovarianceBase.html#afa85fb6668931ef7494c4af511a7111c">total_steps</a> &gt;= <a class="code hl_variable" href="classcovarianceBase.html#ab3833dc51a81afc9dca7c3dcbb107af7">AdaptiveHandler</a>.<a class="code hl_variable" href="classadaptive__mcmc_1_1AdaptiveMCMCHandler.html#a9708ad2c46d0e7a9ac78f5377fbf8839">start_adaptive_throw</a>) <a class="code hl_function" href="classcovarianceBase.html#a0993a1ea6c5b06ba834e9e70af87ee9e">resetIndivStepScale</a>();</div>
-<div class="line"><span class="lineno">  181</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00181">181</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  181</span>                                                 {</div>
+<div class="line"><span class="lineno">  182</span>    <a class="code hl_variable" href="classcovarianceBase.html#afa85fb6668931ef7494c4af511a7111c">total_steps</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">nsteps</a>;</div>
+<div class="line"><span class="lineno">  183</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="classcovarianceBase.html#afa85fb6668931ef7494c4af511a7111c">total_steps</a> &gt;= <a class="code hl_variable" href="classcovarianceBase.html#ab3833dc51a81afc9dca7c3dcbb107af7">AdaptiveHandler</a>.<a class="code hl_variable" href="classadaptive__mcmc_1_1AdaptiveMCMCHandler.html#a9708ad2c46d0e7a9ac78f5377fbf8839">start_adaptive_throw</a>) <a class="code hl_function" href="classcovarianceBase.html#a0993a1ea6c5b06ba834e9e70af87ee9e">resetIndivStepScale</a>();</div>
+<div class="line"><span class="lineno">  184</span>  }</div>
 <div class="ttc" id="aclassadaptive__mcmc_1_1AdaptiveMCMCHandler_html_a9708ad2c46d0e7a9ac78f5377fbf8839"><div class="ttname"><a href="classadaptive__mcmc_1_1AdaptiveMCMCHandler.html#a9708ad2c46d0e7a9ac78f5377fbf8839">adaptive_mcmc::AdaptiveMCMCHandler::start_adaptive_throw</a></div><div class="ttdeci">int start_adaptive_throw</div><div class="ttdef"><b>Definition</b> <a href="AdaptiveMCMCHandler_8h_source.html#l00059">AdaptiveMCMCHandler.h:59</a></div></div>
 <div class="ttc" id="aclasscovarianceBase_html_a0993a1ea6c5b06ba834e9e70af87ee9e"><div class="ttname"><a href="classcovarianceBase.html#a0993a1ea6c5b06ba834e9e70af87ee9e">covarianceBase::resetIndivStepScale</a></div><div class="ttdeci">void resetIndivStepScale()</div><div class="ttdoc">Adaptive Step Tuning Stuff.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8cpp_source.html#l01329">covarianceBase.cpp:1329</a></div></div>
 </div><!-- fragment -->
@@ -4519,20 +4565,20 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00304">304</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  304</span>                                                               {</div>
-<div class="line"><span class="lineno">  305</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classcovarianceBase.html#ab4b7f96d3e977a0b3307ceecbd0baeb4">pca</a>) { <a class="code hl_define" href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a>(<span class="stringliteral">&quot;Am not running in PCA mode&quot;</span>); <span class="keywordflow">throw</span>; }</div>
-<div class="line"><span class="lineno">  306</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pars</a>.size() != <span class="keywordtype">size_t</span>(<a class="code hl_variable" href="classcovarianceBase.html#ac57285a48d41ef764b4c659959a36c2d">_fNumParPCA</a>)) {</div>
-<div class="line"><span class="lineno">  307</span>      <a class="code hl_define" href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a>(<span class="stringliteral">&quot;Warning: parameter arrays of incompatible size! Not changing parameters! {} has size {} but was expecting {}&quot;</span>, <a class="code hl_variable" href="classcovarianceBase.html#a47cf443e7de1d83bd979ccc8d35b8599">matrixName</a>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pars</a>.size(), <a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>);</div>
-<div class="line"><span class="lineno">  308</span>      <span class="keywordflow">throw</span>;</div>
-<div class="line"><span class="lineno">  309</span>    }</div>
-<div class="line"><span class="lineno">  310</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">parsSize</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pars</a>.size();</div>
-<div class="line"><span class="lineno">  311</span>    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> = 0; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> &lt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">parsSize</a>; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>++) {</div>
-<div class="line"><span class="lineno">  312</span>      <a class="code hl_variable" href="classcovarianceBase.html#a2e101b6b7028c82a02e617c90212e4cc">fParProp_PCA</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>) = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pars</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>];</div>
-<div class="line"><span class="lineno">  313</span>    }</div>
-<div class="line"><span class="lineno">  314</span>    <span class="comment">//KS: Transfer to normal base</span></div>
-<div class="line"><span class="lineno">  315</span>    <a class="code hl_function" href="classcovarianceBase.html#a65ac4956a782b01768f445732522a450">TransferToParam</a>();</div>
-<div class="line"><span class="lineno">  316</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00307">307</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  307</span>                                                               {</div>
+<div class="line"><span class="lineno">  308</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classcovarianceBase.html#ab4b7f96d3e977a0b3307ceecbd0baeb4">pca</a>) { <a class="code hl_define" href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a>(<span class="stringliteral">&quot;Am not running in PCA mode&quot;</span>); <span class="keywordflow">throw</span>; }</div>
+<div class="line"><span class="lineno">  309</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pars</a>.size() != <span class="keywordtype">size_t</span>(<a class="code hl_variable" href="classcovarianceBase.html#ac57285a48d41ef764b4c659959a36c2d">_fNumParPCA</a>)) {</div>
+<div class="line"><span class="lineno">  310</span>      <a class="code hl_define" href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a>(<span class="stringliteral">&quot;Warning: parameter arrays of incompatible size! Not changing parameters! {} has size {} but was expecting {}&quot;</span>, <a class="code hl_variable" href="classcovarianceBase.html#a47cf443e7de1d83bd979ccc8d35b8599">matrixName</a>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pars</a>.size(), <a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>);</div>
+<div class="line"><span class="lineno">  311</span>      <span class="keywordflow">throw</span>;</div>
+<div class="line"><span class="lineno">  312</span>    }</div>
+<div class="line"><span class="lineno">  313</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">parsSize</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pars</a>.size();</div>
+<div class="line"><span class="lineno">  314</span>    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> = 0; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> &lt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">parsSize</a>; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>++) {</div>
+<div class="line"><span class="lineno">  315</span>      <a class="code hl_variable" href="classcovarianceBase.html#a2e101b6b7028c82a02e617c90212e4cc">fParProp_PCA</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>) = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pars</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>];</div>
+<div class="line"><span class="lineno">  316</span>    }</div>
+<div class="line"><span class="lineno">  317</span>    <span class="comment">//KS: Transfer to normal base</span></div>
+<div class="line"><span class="lineno">  318</span>    <a class="code hl_function" href="classcovarianceBase.html#a65ac4956a782b01768f445732522a450">TransferToParam</a>();</div>
+<div class="line"><span class="lineno">  319</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -4579,13 +4625,13 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00295">295</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  295</span>                                                              {</div>
-<div class="line"><span class="lineno">  296</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classcovarianceBase.html#ab4b7f96d3e977a0b3307ceecbd0baeb4">pca</a>) { <a class="code hl_define" href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a>(<span class="stringliteral">&quot;Am not running in PCA mode&quot;</span>); <span class="keywordflow">throw</span>; }</div>
-<div class="line"><span class="lineno">  297</span>    <a class="code hl_variable" href="classcovarianceBase.html#aa96f87ab90dc26fc1b5e157149b9dfd3">fParCurr_PCA</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>) = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">value</a>;</div>
-<div class="line"><span class="lineno">  298</span>    <span class="comment">// And then transfer back to the parameter basis</span></div>
-<div class="line"><span class="lineno">  299</span>    <a class="code hl_function" href="classcovarianceBase.html#a65ac4956a782b01768f445732522a450">TransferToParam</a>();</div>
-<div class="line"><span class="lineno">  300</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00298">298</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  298</span>                                                              {</div>
+<div class="line"><span class="lineno">  299</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classcovarianceBase.html#ab4b7f96d3e977a0b3307ceecbd0baeb4">pca</a>) { <a class="code hl_define" href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a>(<span class="stringliteral">&quot;Am not running in PCA mode&quot;</span>); <span class="keywordflow">throw</span>; }</div>
+<div class="line"><span class="lineno">  300</span>    <a class="code hl_variable" href="classcovarianceBase.html#aa96f87ab90dc26fc1b5e157149b9dfd3">fParCurr_PCA</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>) = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">value</a>;</div>
+<div class="line"><span class="lineno">  301</span>    <span class="comment">// And then transfer back to the parameter basis</span></div>
+<div class="line"><span class="lineno">  302</span>    <a class="code hl_function" href="classcovarianceBase.html#a65ac4956a782b01768f445732522a450">TransferToParam</a>();</div>
+<div class="line"><span class="lineno">  303</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -4778,13 +4824,13 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00286">286</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  286</span>                                                              {</div>
-<div class="line"><span class="lineno">  287</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classcovarianceBase.html#ab4b7f96d3e977a0b3307ceecbd0baeb4">pca</a>) { <a class="code hl_define" href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a>(<span class="stringliteral">&quot;Am not running in PCA mode&quot;</span>); <span class="keywordflow">throw</span>; }</div>
-<div class="line"><span class="lineno">  288</span>    <a class="code hl_variable" href="classcovarianceBase.html#a2e101b6b7028c82a02e617c90212e4cc">fParProp_PCA</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>) = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">value</a>;</div>
-<div class="line"><span class="lineno">  289</span>    <span class="comment">// And then transfer back to the parameter basis</span></div>
-<div class="line"><span class="lineno">  290</span>    <a class="code hl_function" href="classcovarianceBase.html#a65ac4956a782b01768f445732522a450">TransferToParam</a>();</div>
-<div class="line"><span class="lineno">  291</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00289">289</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  289</span>                                                              {</div>
+<div class="line"><span class="lineno">  290</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classcovarianceBase.html#ab4b7f96d3e977a0b3307ceecbd0baeb4">pca</a>) { <a class="code hl_define" href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a>(<span class="stringliteral">&quot;Am not running in PCA mode&quot;</span>); <span class="keywordflow">throw</span>; }</div>
+<div class="line"><span class="lineno">  291</span>    <a class="code hl_variable" href="classcovarianceBase.html#a2e101b6b7028c82a02e617c90212e4cc">fParProp_PCA</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>) = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">value</a>;</div>
+<div class="line"><span class="lineno">  292</span>    <span class="comment">// And then transfer back to the parameter basis</span></div>
+<div class="line"><span class="lineno">  293</span>    <a class="code hl_function" href="classcovarianceBase.html#a65ac4956a782b01768f445732522a450">TransferToParam</a>();</div>
+<div class="line"><span class="lineno">  294</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -5585,7 +5631,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Current value of the parameter. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00459">459</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00462">462</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
 
 </div>
 </div>
@@ -5611,7 +5657,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Prior error on the parameter. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00465">465</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00468">468</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
 
 </div>
 </div>
@@ -5637,7 +5683,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Fancy name for example rather than xsec_0 it is MAQE, useful for human reading. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00451">451</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00454">454</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
 
 </div>
 </div>
@@ -5663,7 +5709,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Whether to apply flat prior or not. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00473">473</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00476">476</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
 
 </div>
 </div>
@@ -5689,7 +5735,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Generated value of the parameter. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00463">463</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00466">466</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
 
 </div>
 </div>
@@ -5715,7 +5761,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Global step scale applied ot all params in this class. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00443">443</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00446">446</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
 
 </div>
 </div>
@@ -5741,7 +5787,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Individual step scale used by MCMC algorithm. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00471">471</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00474">474</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
 
 </div>
 </div>
@@ -5767,7 +5813,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Lowest physical bound, parameter will not be able to go beyond it. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00467">467</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00470">470</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
 
 </div>
 </div>
@@ -5793,7 +5839,7 @@ Protected Attributes</h2></td></tr>
 
 <p>ETA _fNames is set automatically in the covariance class to be something like xsec_i, this is currently to make things compatible with the Diagnostic tools. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00449">449</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00452">452</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
 
 </div>
 </div>
@@ -5819,7 +5865,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Number of systematic parameters. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00455">455</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00458">458</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
 
 </div>
 </div>
@@ -5845,7 +5891,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Number of parameters in PCA base. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00483">483</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00486">486</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
 
 </div>
 </div>
@@ -5871,7 +5917,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Parameter value dictated by the prior model. Based on it penalty term is calculated. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00457">457</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00460">460</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
 
 </div>
 </div>
@@ -5897,7 +5943,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Prefit value for PCA params. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00497">497</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00500">500</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
 
 </div>
 </div>
@@ -5923,7 +5969,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Proposed value of the parameter. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00461">461</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00464">464</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
 
 </div>
 </div>
@@ -5949,7 +5995,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Upper physical bound, parameter will not be able to go beyond it. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00469">469</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00472">472</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
 
 </div>
 </div>
@@ -5975,7 +6021,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Stores config describing systematics. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00453">453</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00456">456</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
 
 </div>
 </div>
@@ -6001,7 +6047,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Struct containing information about adaption. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00524">524</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00527">527</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
 
 </div>
 </div>
@@ -6027,7 +6073,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Result of multiplication of Cholesky matrix and randParams. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00441">441</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00444">444</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
 
 </div>
 </div>
@@ -6053,7 +6099,7 @@ Protected Attributes</h2></td></tr>
 
 <p>The covariance matrix. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00429">429</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00432">432</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
 
 </div>
 </div>
@@ -6079,7 +6125,7 @@ Protected Attributes</h2></td></tr>
 
 <p>CW: Threshold based on which we remove parameters in eigen base. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00481">481</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00484">484</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
 
 </div>
 </div>
@@ -6105,7 +6151,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Eigen value only of particles which are being decomposed. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00491">491</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00494">494</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
 
 </div>
 </div>
@@ -6131,7 +6177,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Eigen values which have dimension equal to _fNumParPCA, and can be used in CorrelateSteps. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00495">495</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00498">498</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
 
 </div>
 </div>
@@ -6157,7 +6203,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Eigen vectors only of params which are being decomposed. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00493">493</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00496">496</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
 
 </div>
 </div>
@@ -6183,7 +6229,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Index of the first param that is being decomposed. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00485">485</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00488">488</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
 
 </div>
 </div>
@@ -6209,7 +6255,7 @@ Protected Attributes</h2></td></tr>
 
 <p>CW: Proposed parameter value in PCA base. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00505">505</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00508">508</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
 
 </div>
 </div>
@@ -6235,7 +6281,7 @@ Protected Attributes</h2></td></tr>
 
 <p>CW: Current parameter value in PCA base. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00503">503</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00506">506</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
 
 </div>
 </div>
@@ -6261,7 +6307,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Tells if parameter is fixed in PCA base or not. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00507">507</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00510">510</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
 
 </div>
 </div>
@@ -6287,7 +6333,7 @@ Protected Attributes</h2></td></tr>
 
 <p>The input root file we read in. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00422">422</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00425">425</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
 
 </div>
 </div>
@@ -6313,7 +6359,7 @@ Protected Attributes</h2></td></tr>
 
 <p>The inverse covariance matrix. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00431">431</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00434">434</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
 
 </div>
 </div>
@@ -6339,7 +6385,7 @@ Protected Attributes</h2></td></tr>
 
 <p>KS: Same as above but much faster as TMatrixDSym cache miss. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00433">433</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00436">436</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
 
 </div>
 </div>
@@ -6365,7 +6411,7 @@ Protected Attributes</h2></td></tr>
 
 <p>If param is decomposed this will return -1, if not this will return enumerator to param in normal base. This way we can map stuff like step scale etc between normal base and undecomposed param in eigen base. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00509">509</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00512">512</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
 
 </div>
 </div>
@@ -6391,7 +6437,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Index of the last param that is being decomposed. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00487">487</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00490">490</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
 
 </div>
 </div>
@@ -6417,7 +6463,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Name of cov matrix. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00427">427</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00430">430</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
 
 </div>
 </div>
@@ -6443,7 +6489,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Total number that remained after applying PCA Threshold. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00489">489</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00492">492</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
 
 </div>
 </div>
@@ -6469,7 +6515,7 @@ Protected Attributes</h2></td></tr>
 
 <p>perform PCA or not </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00479">479</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00482">482</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
 
 </div>
 </div>
@@ -6495,7 +6541,7 @@ Protected Attributes</h2></td></tr>
 
 <p>KS: This is used when printing parameters, sometimes we have super long parameters name, we want to flexibly adjust couts. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00446">446</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00449">449</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
 
 </div>
 </div>
@@ -6521,7 +6567,7 @@ Protected Attributes</h2></td></tr>
 
 <p>KS: Set Random numbers for each thread so each thread has different seed. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00436">436</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00439">439</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
 
 </div>
 </div>
@@ -6547,7 +6593,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Random number taken from gaussian around prior error used for corr_throw. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00439">439</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00442">442</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
 
 </div>
 </div>
@@ -6573,7 +6619,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Total number of params, deprecated, please don't use it. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00425">425</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00428">428</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
 
 </div>
 </div>
@@ -6599,7 +6645,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Matrix which we use for step proposal before Cholesky decomposition (not actually used for step proposal) </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00512">512</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00515">515</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
 
 </div>
 </div>
@@ -6625,7 +6671,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Matrix which we use for step proposal after Cholesky decomposition. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00514">514</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00517">517</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
 
 </div>
 </div>
@@ -6651,7 +6697,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Throw matrix that is being used in the fit, much faster as TMatrixDSym cache miss. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00516">516</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00519">519</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
 
 </div>
 </div>
@@ -6677,7 +6723,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Total number of MCMC steps. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00521">521</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00524">524</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
 
 </div>
 </div>
@@ -6703,7 +6749,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Matrix used to converting from PCA base to normal base. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00499">499</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00502">502</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
 
 </div>
 </div>
@@ -6729,7 +6775,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Matrix used to converting from normal base to PCA base. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00501">501</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00504">504</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
 
 </div>
 </div>
@@ -6755,7 +6801,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Unity for null systs to point back to. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00476">476</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00479">479</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
 
 </div>
 </div>
@@ -6781,7 +6827,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Are we using AMCMC? </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00519">519</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceBase_8h_source.html#l00522">522</a> of file <a class="el" href="covarianceBase_8h_source.html">covarianceBase.h</a>.</p>
 
 </div>
 </div>
