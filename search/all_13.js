@@ -128,7 +128,7 @@ var searchData=
   ['setstepscale_125',['setStepScale',['../classcovarianceBase.html#a806cf53a69a35da2426169561f450b85',1,'covarianceBase']]],
   ['setth1style_126',['setTH1Style',['../GetPostfitParamPlots_8cpp.html#af8675c0ad8ab5f45bf66a34642c0cbf2',1,'GetPostfitParamPlots.cpp']]],
   ['setthrowmatrix_127',['setThrowMatrix',['../classcovarianceBase.html#af30ca7861452e1446e55700f4b49b608',1,'covarianceBase']]],
-  ['setthrowmatrixfromfile_128',['setthrowmatrixfromfile',['../classcovarianceBase.html#a5ab3d89b7fe6103ae6f750c984bcefc8',1,'covarianceBase::setThrowMatrixFromFile()'],['../classadaptive__mcmc_1_1AdaptiveMCMCHandler.html#aebd1df26766a9f106fe6ce4255ceb0d9',1,'adaptive_mcmc::AdaptiveMCMCHandler::SetThrowMatrixFromFile()']]],
+  ['setthrowmatrixfromfile_128',['setthrowmatrixfromfile',['../classadaptive__mcmc_1_1AdaptiveMCMCHandler.html#aebd1df26766a9f106fe6ce4255ceb0d9',1,'adaptive_mcmc::AdaptiveMCMCHandler::SetThrowMatrixFromFile()'],['../classcovarianceBase.html#a5ab3d89b7fe6103ae6f750c984bcefc8',1,'covarianceBase::setThrowMatrixFromFile()']]],
   ['settingssaved_129',['SettingsSaved',['../classFitterBase.html#a588678c71d816f48ba3c140543dbe916',1,'FitterBase']]],
   ['setuncertainty_130',['SetUncertainty',['../classBaseFuncPar.html#a114a593572870ff1db906046d6d555f8',1,'BaseFuncPar']]],
   ['setup_131',['setup',['../classBaseFuncPar.html#a2b2eebac000335b5f9b91ecb4089bf19',1,'BaseFuncPar']]],

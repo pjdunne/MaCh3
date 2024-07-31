@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['name_0',['name',['../structMaCh3ModeInfo.html#a8c957d49742a2ad0faa79fbc07427767',1,'MaCh3ModeInfo::Name'],['../structXsecNorms4.html#a848104ff97acc9a0df9861acc8615aa7',1,'XsecNorms4::name']]],
+  ['name_0',['name',['../structXsecNorms4.html#a848104ff97acc9a0df9861acc8615aa7',1,'XsecNorms4::name'],['../structMaCh3ModeInfo.html#a8c957d49742a2ad0faa79fbc07427767',1,'MaCh3ModeInfo::Name']]],
   ['nbatches_1',['nBatches',['../classMCMCProcessor.html#a02c5a3f849cf217705816c650c678d19',1,'MCMCProcessor']]],
   ['nbins_2',['nbins',['../GetPostfitParamPlots_8cpp.html#ae4842c1619a902b2761696f3849889a1',1,'nBins:&#160;GetPostfitParamPlots.cpp'],['../classMCMCProcessor.html#a6b74f8195bcbca0979f9e9fe43468bae',1,'MCMCProcessor::nBins']]],
   ['nbranches_3',['nBranches',['../classMCMCProcessor.html#af6ba5d9aec5350fafebbf81309e813cb',1,'MCMCProcessor']]],
@@ -53,7 +53,7 @@ var searchData=
   ['nowtalk_50',['NowTalk',['../classsamplePDFBase.html#a0d23ceb4360909007854d6aaf1272e57',1,'samplePDFBase']]],
   ['nparam_51',['nParam',['../classMCMCProcessor.html#a4200e7cbe1c8f811d3640ebfd648ca85',1,'MCMCProcessor']]],
   ['nparams_52',['nparams',['../classXSecStruct.html#a5ff0017b93c1ba064f62cf32045e4d19',1,'XSecStruct::nParams'],['../classSMonolith.html#a4606b53f321992377d420a838c76ab3b',1,'SMonolith::nParams']]],
-  ['npars_53',['npars',['../classThrowParms.html#a0a29faa43eb964a982d8da7e1511f4af',1,'ThrowParms::npars'],['../classLikelihoodFit.html#ac779acfe140500d06e42a1d4ace25385',1,'LikelihoodFit::NPars']]],
+  ['npars_53',['npars',['../classLikelihoodFit.html#ac779acfe140500d06e42a1d4ace25385',1,'LikelihoodFit::NPars'],['../classThrowParms.html#a0a29faa43eb964a982d8da7e1511f4af',1,'ThrowParms::npars']]],
   ['nparspca_54',['NParsPCA',['../classLikelihoodFit.html#a0b50b7b607751e80b6c85e9db98631af',1,'LikelihoodFit']]],
   ['npoints_55',['nPoints',['../classTSpline3__red.html#a0c32835161ae86ea22143b15b3b1904f',1,'TSpline3_red']]],
   ['nprimarybins_56',['nPrimaryBins',['../classOscillator.html#a893046dc7a3a4f9a47a67279b367eb3a',1,'Oscillator']]],

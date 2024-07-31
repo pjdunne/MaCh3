@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['name_0',['name',['../structMaCh3ModeInfo.html#a8c957d49742a2ad0faa79fbc07427767',1,'MaCh3ModeInfo::Name'],['../structXsecNorms4.html#a848104ff97acc9a0df9861acc8615aa7',1,'XsecNorms4::name']]],
+  ['name_0',['name',['../structXsecNorms4.html#a848104ff97acc9a0df9861acc8615aa7',1,'XsecNorms4::name'],['../structMaCh3ModeInfo.html#a8c957d49742a2ad0faa79fbc07427767',1,'MaCh3ModeInfo::Name']]],
   ['nbatches_1',['nBatches',['../classMCMCProcessor.html#a02c5a3f849cf217705816c650c678d19',1,'MCMCProcessor']]],
   ['nbins_2',['nbins',['../GetPostfitParamPlots_8cpp.html#ae4842c1619a902b2761696f3849889a1',1,'nBins:&#160;GetPostfitParamPlots.cpp'],['../classMCMCProcessor.html#a6b74f8195bcbca0979f9e9fe43468bae',1,'MCMCProcessor::nBins']]],
   ['nbranches_3',['nBranches',['../classMCMCProcessor.html#af6ba5d9aec5350fafebbf81309e813cb',1,'MCMCProcessor']]],
@@ -45,7 +45,7 @@ var searchData=
   ['not_5ffound_5fstr_42',['NOT_FOUND_STR',['../PlotLLH_8cpp.html#a4f80a1d1e24115848d333d2b59c238af',1,'PlotLLH.cpp']]],
   ['nparam_43',['nParam',['../classMCMCProcessor.html#a4200e7cbe1c8f811d3640ebfd648ca85',1,'MCMCProcessor']]],
   ['nparams_44',['nparams',['../classXSecStruct.html#a5ff0017b93c1ba064f62cf32045e4d19',1,'XSecStruct::nParams'],['../classSMonolith.html#a4606b53f321992377d420a838c76ab3b',1,'SMonolith::nParams']]],
-  ['npars_45',['npars',['../classLikelihoodFit.html#ac779acfe140500d06e42a1d4ace25385',1,'LikelihoodFit::NPars'],['../classThrowParms.html#a0a29faa43eb964a982d8da7e1511f4af',1,'ThrowParms::npars']]],
+  ['npars_45',['npars',['../classThrowParms.html#a0a29faa43eb964a982d8da7e1511f4af',1,'ThrowParms::npars'],['../classLikelihoodFit.html#ac779acfe140500d06e42a1d4ace25385',1,'LikelihoodFit::NPars']]],
   ['nparspca_46',['NParsPCA',['../classLikelihoodFit.html#a0b50b7b607751e80b6c85e9db98631af',1,'LikelihoodFit']]],
   ['npoints_47',['nPoints',['../classTSpline3__red.html#a0c32835161ae86ea22143b15b3b1904f',1,'TSpline3_red']]],
   ['nprimarybins_48',['nPrimaryBins',['../classOscillator.html#a893046dc7a3a4f9a47a67279b367eb3a',1,'Oscillator']]],
