@@ -15,7 +15,7 @@ var searchData=
   ['oscparametersstartingpos_12',['OscParametersStartingPos',['../GetPostfitParamPlots_8cpp.html#a3ec8e00c5c17bd6768473b08156f6c1c',1,'GetPostfitParamPlots.cpp']]],
   ['oscpars1_13',['oscpars1',['../classcovarianceOsc.html#ad93cd8b3f255a865b56b008a9e867634',1,'covarianceOsc']]],
   ['outfilename_14',['OutFileName',['../CombineMaCh3Chains_8cpp.html#a021f9f978660c299af0d70b8d3b3d74c',1,'CombineMaCh3Chains.cpp']]],
-  ['outputfile_15',['outputfile',['../classFitterBase.html#a4260b312e3f35cf01fc73b02239f8990',1,'FitterBase::outputFile'],['../classSampleSummary.html#aa7b948f290517a052f04f61dfa6af68f',1,'SampleSummary::Outputfile'],['../classMCMCProcessor.html#a62035b99df4617ab334cd1abd6ed0346',1,'MCMCProcessor::OutputFile']]],
+  ['outputfile_15',['outputfile',['../classMCMCProcessor.html#a62035b99df4617ab334cd1abd6ed0346',1,'MCMCProcessor::OutputFile'],['../classSampleSummary.html#aa7b948f290517a052f04f61dfa6af68f',1,'SampleSummary::Outputfile'],['../classFitterBase.html#a4260b312e3f35cf01fc73b02239f8990',1,'FitterBase::outputFile']]],
   ['outputname_16',['outputname',['../classMCMCProcessor.html#a3d17c1720b91d6d0361da0b5dabfbbff',1,'MCMCProcessor::OutputName'],['../classSampleSummary.html#a4463f635de4e83c7ada683768454da82',1,'SampleSummary::OutputName']]],
   ['outputprepared_17',['OutputPrepared',['../classFitterBase.html#a3bfd8f69df891d03bae0587cd1a1e1b7',1,'FitterBase']]],
   ['outputsuffix_18',['OutputSuffix',['../classMCMCProcessor.html#aa34b50ce33fb2cb7d9e9ef2d9f2f67c1',1,'MCMCProcessor']]],

@@ -2,7 +2,7 @@ var searchData=
 [
   ['l_0',['L',['../classcovarianceOsc.html#a6325f8cf5f93b542d7e6199ec0a3facb',1,'covarianceOsc']]],
   ['lagl_1',['LagL',['../classMCMCProcessor.html#a499cdae3bf94643d76648058c9160913',1,'MCMCProcessor']]],
-  ['lastpcadpar_2',['LastPCAdpar',['../classcovarianceBase.html#a5ebdc744b733656972a15f1657915a3f',1,'covarianceBase']]],
+  ['lastpcadpar_2',['lastpcadpar',['../classcovarianceBase.html#a5ebdc744b733656972a15f1657915a3f',1,'covarianceBase::LastPCAdpar'],['../classPCAHandler.html#a954eeb975f1d7f9528ed7e027a54b21a',1,'PCAHandler::LastPCAdpar']]],
   ['lcoarsecosz_3',['lCoarseCosz',['../classOscillator.html#a3e3942ecafb657261686d12d85319d0e',1,'Oscillator']]],
   ['lcoarseenergy_4',['lCoarseEnergy',['../classOscillator.html#a2c910ee2cce15ceadce370ef6dd37e36',1,'Oscillator']]],
   ['length_5',['length',['../classTF1__red.html#a8d072c5e4b4dbcad98fdd9137faf5c5f',1,'TF1_red']]],

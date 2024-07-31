@@ -16,7 +16,7 @@ var searchData=
   ['teststatistic_5ftostring_13',['TestStatistic_ToString',['../Structs_8h.html#afe33f23691e6b5e3e0f5ab97aaeb7726',1,'Structs.h']]],
   ['text_5fcoeff_5fx_14',['text_coeff_x',['../gpuSplineUtils_8cu.html#a20b9e0707c409d990103a531cee49ce0',1,'gpuSplineUtils.cu']]],
   ['text_5fnparamperevent_15',['text_nParamPerEvent',['../gpuSplineUtils_8cu.html#af7cc79856fc0663cb8fd2a9480cccfad',1,'gpuSplineUtils.cu']]],
-  ['tf1_5fred_16',['tf1_red',['../classTF1__red.html#ad2d487b894c7716e00d6381448c0b4ff',1,'TF1_red::TF1_red(TF1 *&amp;Function, int Param=-1)'],['../classTF1__red.html#aa0d1a353aa1f2064eddcad475cac7879',1,'TF1_red::TF1_red(_int_ nSize, _float_ *Array, _int_ Parameter)'],['../classTF1__red.html#a503700d13da3bc04710c6a52e14877e6',1,'TF1_red::TF1_red()'],['../classTF1__red.html',1,'TF1_red']]],
+  ['tf1_5fred_16',['tf1_red',['../classTF1__red.html#a7ee6185f2184824a190d146375522952',1,'TF1_red::TF1_red(TF1 *&amp;Function)'],['../classTF1__red.html#a767d972c8e46f4c861944098a833a9fb',1,'TF1_red::TF1_red(_int_ nSize, _float_ *Array)'],['../classTF1__red.html#a503700d13da3bc04710c6a52e14877e6',1,'TF1_red::TF1_red()'],['../classTF1__red.html',1,'TF1_red']]],
   ['three_5fvector_5faddition_17',['three_vector_addition',['../classPSO.html#a440e0cb32000cf9c5d2170d0c2d08dc2',1,'PSO']]],
   ['throwmatrix_18',['throwMatrix',['../classcovarianceBase.html#a6cb3d0b4096fbb55b040f70cd5b6e32b',1,'covarianceBase']]],
   ['throwmatrix_5fcholdecomp_19',['throwMatrix_CholDecomp',['../classcovarianceBase.html#ab95f5e066c2dfb1d20d120bc6c85dda2',1,'covarianceBase']]],
@@ -58,11 +58,11 @@ var searchData=
   ['total_5fweight_5fpointers_55',['total_weight_pointers',['../structfdmc__base.html#a4a17a196cb46bc85da5e7865b83d0f93',1,'fdmc_base']]],
   ['totalnsamples_56',['TotalNSamples',['../classFitterBase.html#abe9814558b8ff1bccdde3b4c894467e6',1,'FitterBase']]],
   ['totalonsplitplots_57',['totalOnSplitPlots',['../PlotLLH_8cpp.html#a6446498097144fc5f704c241f009d44d',1,'PlotLLH.cpp']]],
-  ['transfermat_58',['TransferMat',['../classcovarianceBase.html#a5e94f6afb5077daab30815b3ee5269c1',1,'covarianceBase']]],
-  ['transfermatt_59',['TransferMatT',['../classcovarianceBase.html#a5c1a531cb84c2b7e320f6c3f8f2e3126',1,'covarianceBase']]],
+  ['transfermat_58',['TransferMat',['../classPCAHandler.html#a1d9302633ed96ec57fbe26d25cbcee61',1,'PCAHandler']]],
+  ['transfermatt_59',['TransferMatT',['../classPCAHandler.html#a6f6443a487bb544e6a6e458d86f35f27',1,'PCAHandler']]],
   ['transfertomonolith_60',['TransferToMonolith',['../classsplineFDBase.html#a6d1872fe4be72c735bd55fa00e1674b8',1,'splineFDBase']]],
   ['transfertoparam_61',['TransferToParam',['../classcovarianceBase.html#a65ac4956a782b01768f445732522a450',1,'covarianceBase']]],
   ['transfertopca_62',['TransferToPCA',['../classcovarianceBase.html#a651f5ecd8973918d5683606a607fa88c',1,'covarianceBase']]],
-  ['truncated_5fspline_63',['truncated_spline',['../classTruncated__Spline.html#a83c0431fb5f7a27a08ccc358b35f0f99',1,'Truncated_Spline::Truncated_Spline(TSpline3 *&amp;spline, int Param=-1)'],['../classTruncated__Spline.html#ae40da5403298aacb6b45cd7690b61420',1,'Truncated_Spline::Truncated_Spline()'],['../classTruncated__Spline.html',1,'Truncated_Spline']]],
-  ['tspline3_5fred_64',['tspline3_red',['../classTSpline3__red.html#a708bedeeed1c1fd01fce928985846e61',1,'TSpline3_red::TSpline3_red(_float_ *X, _float_ *Y, _int_ N, _float_ **P, _int_ parNo)'],['../classTSpline3__red.html#a46bab297c2277560912b90db4e074200',1,'TSpline3_red::TSpline3_red(TSpline3 *&amp;spline, int Param=-1, SplineInterpolation InterPolation=kTSpline3)'],['../classTSpline3__red.html#ae76e72436b20a59ee33eb1d41dbe59eb',1,'TSpline3_red::TSpline3_red()'],['../classTSpline3__red.html',1,'TSpline3_red']]]
+  ['truncated_5fspline_63',['truncated_spline',['../classTruncated__Spline.html#a6efb9df707e8d2ca8deb2464fe78b09b',1,'Truncated_Spline::Truncated_Spline(TSpline3 *&amp;spline)'],['../classTruncated__Spline.html#ae40da5403298aacb6b45cd7690b61420',1,'Truncated_Spline::Truncated_Spline()'],['../classTruncated__Spline.html',1,'Truncated_Spline']]],
+  ['tspline3_5fred_64',['tspline3_red',['../classTSpline3__red.html#a580d22535ce1e881c53aabe7bdb7f945',1,'TSpline3_red::TSpline3_red(_float_ *X, _float_ *Y, _int_ N, _float_ **P)'],['../classTSpline3__red.html#a643d07969140e64bb55e8639552d1209',1,'TSpline3_red::TSpline3_red(TSpline3 *&amp;spline, SplineInterpolation InterPolation=kTSpline3)'],['../classTSpline3__red.html#ae76e72436b20a59ee33eb1d41dbe59eb',1,'TSpline3_red::TSpline3_red()'],['../classTSpline3__red.html',1,'TSpline3_red']]]
 ];

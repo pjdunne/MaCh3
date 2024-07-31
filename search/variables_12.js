@@ -31,6 +31,6 @@ var searchData=
   ['total_5fweight_5fpointers_28',['total_weight_pointers',['../structfdmc__base.html#a4a17a196cb46bc85da5e7865b83d0f93',1,'fdmc_base']]],
   ['totalnsamples_29',['TotalNSamples',['../classFitterBase.html#abe9814558b8ff1bccdde3b4c894467e6',1,'FitterBase']]],
   ['totalonsplitplots_30',['totalOnSplitPlots',['../PlotLLH_8cpp.html#a6446498097144fc5f704c241f009d44d',1,'PlotLLH.cpp']]],
-  ['transfermat_31',['TransferMat',['../classcovarianceBase.html#a5e94f6afb5077daab30815b3ee5269c1',1,'covarianceBase']]],
-  ['transfermatt_32',['TransferMatT',['../classcovarianceBase.html#a5c1a531cb84c2b7e320f6c3f8f2e3126',1,'covarianceBase']]]
+  ['transfermat_31',['TransferMat',['../classPCAHandler.html#a1d9302633ed96ec57fbe26d25cbcee61',1,'PCAHandler']]],
+  ['transfermatt_32',['TransferMatT',['../classPCAHandler.html#a6f6443a487bb544e6a6e458d86f35f27',1,'PCAHandler']]]
 ];

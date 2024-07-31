@@ -5,7 +5,7 @@ var searchData=
   ['mach3modes_2',['MaCh3Modes',['../classMaCh3Modes.html#a1ea9394c1498bf6b37724d41c31f2f2d',1,'MaCh3Modes']]],
   ['mach3welcome_3',['MaCh3Welcome',['../namespaceMaCh3Utils.html#ac6f4a3b6a7749967ff9a011469352f6c',1,'MaCh3Utils']]],
   ['main_4',['main',['../DiagMCMC_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;DiagMCMC.cpp'],['../CombineMaCh3Chains_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;CombineMaCh3Chains.cpp'],['../GetPenaltyTerm_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;GetPenaltyTerm.cpp'],['../GetPostfitParamPlots_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;GetPostfitParamPlots.cpp'],['../PlotLLH_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;PlotLLH.cpp'],['../ProcessMCMC_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;ProcessMCMC.cpp'],['../RHat_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;RHat.cpp']]],
-  ['makeasymgraph_5',['MakeAsymGraph',['../classFitterBase.html#ab359728d478f69ff20bc3bbfb1e2c78c',1,'FitterBase']]],
+  ['makeasymgraph_5',['MakeAsymGraph',['../classFitterBase.html#a0419055d41cb946bddf81e24f28ce0d7',1,'FitterBase']]],
   ['makechi2hists_6',['MakeChi2Hists',['../classSampleSummary.html#a316974fb99c5a775e1c7099be3bccc7b',1,'SampleSummary']]],
   ['makeclosestposdef_7',['makeClosestPosDef',['../classcovarianceBase.html#a8a709e1c6c58618cf65400eef1741cc7',1,'covarianceBase']]],
   ['makecovariance_8',['MakeCovariance',['../classMCMCProcessor.html#afc94f21ffd599b1e2dd7e62f24f6c4de',1,'MCMCProcessor']]],

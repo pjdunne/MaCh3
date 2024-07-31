@@ -20,7 +20,7 @@ var searchData=
   ['finecoarseratioenergy_17',['fineCoarseRatioEnergy',['../classOscillator.html#a03a5e7210a6023a96273f04c7489ae88',1,'Oscillator']]],
   ['finertia_18',['fInertia',['../classPSO.html#a9b3d14a97a9d838a9f009f9cc54968d3',1,'PSO']]],
   ['first_5fpass_19',['first_pass',['../classSampleSummary.html#a4ade2ccb94981d4483f0b4e6e367b1a0',1,'SampleSummary']]],
-  ['firstpcadpar_20',['FirstPCAdpar',['../classcovarianceBase.html#abba75182305d556818c76974a054a17d',1,'covarianceBase']]],
+  ['firstpcadpar_20',['firstpcadpar',['../classPCAHandler.html#afc00f628b947fd407d05790f4d0eaaec',1,'PCAHandler::FirstPCAdpar'],['../classcovarianceBase.html#abba75182305d556818c76974a054a17d',1,'covarianceBase::FirstPCAdpar']]],
   ['fiterations_21',['fIterations',['../classPSO.html#aa2adb0a6985424439c44b8d0c7afec08',1,'PSO']]],
   ['fitman_22',['fitMan',['../classFitterBase.html#a4fceb68f242feeb04a0ddf42a5a37095',1,'FitterBase']]],
   ['fixed_23',['fixed',['../classPSO.html#a90cf855167748b488851c559de49283c',1,'PSO']]],
