@@ -3,7 +3,7 @@ var searchData=
   ['samplepdfbase_0',['samplepdfbase',['../classsamplePDFBase.html#a8220847bbd2a30347e25f7a79101c3df',1,'samplePDFBase::samplePDFBase(double pot)'],['../classsamplePDFBase.html#ac45173ad344137f09c84a850f171cb92',1,'samplePDFBase::samplePDFBase()']]],
   ['samplepdffdbase_1',['samplepdffdbase',['../classsamplePDFFDBase.html#abb3f41e66e65d7af7640ff1364817303',1,'samplePDFFDBase::samplePDFFDBase()'],['../classsamplePDFFDBase.html#a5d92ac355b68fdf36e9b478b674eeaf4',1,'samplePDFFDBase::samplePDFFDBase(double pot, std::string mc_version, covarianceXsec *xsec_cov)']]],
   ['samplesummary_2',['SampleSummary',['../classSampleSummary.html#afa739654e03cce78c48eb99bcd58c99a',1,'SampleSummary']]],
-  ['saveadaptivetofile_3',['saveadaptivetofile',['../classcovarianceBase.html#ae4c26e3f2a727a39e9db7ed88e72ac38',1,'covarianceBase::saveAdaptiveToFile()'],['../classadaptive__mcmc_1_1AdaptiveMCMCHandler.html#a752d312d5fdd755af88b58880a9845ec',1,'adaptive_mcmc::AdaptiveMCMCHandler::SaveAdaptiveToFile()']]],
+  ['saveadaptivetofile_3',['saveadaptivetofile',['../classadaptive__mcmc_1_1AdaptiveMCMCHandler.html#a752d312d5fdd755af88b58880a9845ec',1,'adaptive_mcmc::AdaptiveMCMCHandler::SaveAdaptiveToFile()'],['../classcovarianceBase.html#ae4c26e3f2a727a39e9db7ed88e72ac38',1,'covarianceBase::saveAdaptiveToFile()']]],
   ['saveoscillogramstofile_4',['SaveOscillogramsToFile',['../classOscillator.html#a2907b6b25705cd6d4ddbd33b233f9364',1,'Oscillator']]],
   ['saveoutput_5',['SaveOutput',['../classFitterBase.html#a418f581b688f035211107ddd83168c08',1,'FitterBase']]],
   ['saveparams_6',['SaveParams',['../classOscillator.html#aac14f87f9a43cb976b1c68582b956d96',1,'Oscillator']]],
