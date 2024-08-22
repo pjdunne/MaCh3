@@ -24,7 +24,7 @@ var searchData=
   ['calcsplineweights_21',['calcsplineweights',['../classSMonolith.html#aa36be17828281e1412a93c0e239cdbc0',1,'SMonolith::CalcSplineWeights()'],['../classsplineFDBase.html#a9eceab58c0aa06b58eb4e3708c00ee0e',1,'splineFDBase::CalcSplineWeights()'],['../classSplineBase.html#a1ceacf5fee1fc8438501582bef93a9b5',1,'SplineBase::CalcSplineWeights()']]],
   ['calcsplineweights_5ftf1_22',['CalcSplineWeights_TF1',['../classSMonolith.html#a335ea2a499d2b2c7f1410b24b25456a1',1,'SMonolith']]],
   ['calculateenu_23',['calculateenu',['../Structs_8cpp.html#a887ec835f8432e04f3a1eba147d796d9',1,'CalculateEnu(double PLep, double costh, double Eb, bool neutrino):&#160;Structs.cpp'],['../Structs_8h.html#a2dce7c8dec7d4d7f9c61346893973421',1,'CalculateEnu(double PLep, double cosTheta, double EB, bool neutrino):&#160;Structs.cpp']]],
-  ['calculateess_24',['CalculateESS',['../classMCMCProcessor.html#af576c8b4bf25ffbaa40b3939d25cf442',1,'MCMCProcessor']]],
+  ['calculateess_24',['CalculateESS',['../classMCMCProcessor.html#add7add4eeddec946bad2645804aefd88',1,'MCMCProcessor']]],
   ['calculateq2_25',['calculateq2',['../Structs_8cpp.html#af6c0e794fc9fe6b93be0d07fc84ca67a',1,'CalculateQ2(double PLep, double PUpd, double EnuTrue, double InitialQ2):&#160;Structs.cpp'],['../Structs_8h.html#a060e41fa0e5f91ce4fcbb6a4cafeaf13',1,'CalculateQ2(double PLep, double PUpd, double EnuTrue, double InitialQ2=0.0):&#160;Structs.cpp']]],
   ['calcxsecnormsbins_26',['CalcXsecNormsBins',['../classsamplePDFFDBase.html#a4bac245c85ce274b1e7d3072df7ece2b',1,'samplePDFFDBase']]],
   ['calcxsecweightfunc_27',['CalcXsecWeightFunc',['../classsamplePDFFDBase.html#a3f9bd31096c917426dcd00c826538548',1,'samplePDFFDBase']]],

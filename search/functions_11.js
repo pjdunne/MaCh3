@@ -94,7 +94,7 @@ var searchData=
   ['setupnormparameters_91',['SetupNormParameters',['../classsamplePDFFDBase.html#a9bda6382715dc3b7d265bd7b79d206fa',1,'samplePDFFDBase']]],
   ['setuposccalc_92',['SetupOscCalc',['../classsamplePDFFDBase.html#ad2052c9178b220901224a29b474afaad',1,'samplePDFFDBase']]],
   ['setupoutput_93',['SetupOutput',['../classMCMCProcessor.html#aa4761be1345f1be3defe162b278a9d8e',1,'MCMCProcessor']]],
-  ['setupsplines_94',['setupsplines',['../classsplineFDBase.html#a91521064517b5e4f0232570e6746bdf7',1,'splineFDBase::SetupSplines(int BinningOpt)'],['../classsplineFDBase.html#a281be56a824e5057044e4ab1b073bc9d',1,'splineFDBase::SetupSplines()'],['../classsamplePDFFDBase.html#aa145eb7b1e14c10339c288959dad3d65',1,'samplePDFFDBase::setupSplines(fdmc_base *skobj, const char *splineFile, int nutype, int signal)']]],
+  ['setupsplines_94',['setupsplines',['../classsamplePDFFDBase.html#aa145eb7b1e14c10339c288959dad3d65',1,'samplePDFFDBase::setupSplines()'],['../classsplineFDBase.html#a91521064517b5e4f0232570e6746bdf7',1,'splineFDBase::SetupSplines(int BinningOpt)'],['../classsplineFDBase.html#a281be56a824e5057044e4ab1b073bc9d',1,'splineFDBase::SetupSplines()']]],
   ['setupweightpointers_95',['SetupWeightPointers',['../classsamplePDFFDBase.html#af58169bdc4b4a7e98c1f315dac96418e',1,'samplePDFFDBase']]],
   ['setxseccov_96',['SetXsecCov',['../classsamplePDFFDBase.html#a2da3da30c6de171d67ad2c346c36f160',1,'samplePDFFDBase']]],
   ['setxseconlyparameters_97',['setXsecOnlyParameters',['../classcovarianceXsec.html#afc512105a141dcf30bc5f478970aafa2',1,'covarianceXsec']]],
