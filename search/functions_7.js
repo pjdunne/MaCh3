@@ -102,7 +102,7 @@ var searchData=
   ['getnormparsfromdetid_99',['GetNormParsFromDetID',['../classcovarianceXsec.html#a98c68c6c894132a984c6bdd90c3e85dd',1,'covarianceXsec']]],
   ['getnp_100',['GetNp',['../classTSpline3__red.html#a9d09b9ada9990a6f33d9ff005c977535',1,'TSpline3_red']]],
   ['getnparams_101',['GetNParams',['../classMCMCProcessor.html#adbde2f115d983b233d0a9ea896187586',1,'MCMCProcessor']]],
-  ['getnpars_102',['getnpars',['../classLikelihoodFit.html#a18cec4a653bda51d551a779db1ccb596',1,'LikelihoodFit::GetNPars()'],['../classcovarianceBase.html#a261941a4c06e5d875174d8769a4d02f1',1,'covarianceBase::getNpars()']]],
+  ['getnpars_102',['getnpars',['../classcovarianceBase.html#a261941a4c06e5d875174d8769a4d02f1',1,'covarianceBase::getNpars()'],['../classLikelihoodFit.html#a18cec4a653bda51d551a779db1ccb596',1,'LikelihoodFit::GetNPars()']]],
   ['getnsamples_103',['GetNsamples',['../classsamplePDFBase.html#ab43c203bdf5905a7ff8b52de118cd3ff',1,'samplePDFBase']]],
   ['getnsteps_104',['GetnSteps',['../classMCMCProcessor.html#ad9ffb63b188bd9cfd56f0be2f3928ab7',1,'MCMCProcessor']]],
   ['getnthparameter_105',['GetNthParameter',['../classMCMCProcessor.html#a28dfe42f1bf6fd3a145287be1e63fb0b',1,'MCMCProcessor']]],
