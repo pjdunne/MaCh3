@@ -1,0 +1,22 @@
+<map id="PSO" name="PSO">
+<area shape="rect" id="Node000001" title="Class PSO, consist of a vector of object Class Particle and global best Takes in the size (number of ..." alt="" coords="143,450,193,476"/>
+<area shape="rect" id="Node000002" href="$classLikelihoodFit.html" title="Implementation of base Likelihood Fit class, it is mostly responsible for likelihood calculation whil..." alt="" coords="68,361,164,387"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="133,399,163,448,159,451,129,402"/>
+<area shape="rect" id="Node000003" href="$classFitterBase.html" title="Base class for implementing fitting algorithms." alt="" coords="75,286,157,312"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="119,327,119,361,113,361,113,327"/>
+<area shape="rect" id="Node000004" href="$classmanager.html" title="The manager class is responsible for managing configurations and settings." alt="" coords="80,183,152,208"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="119,224,119,286,113,286,113,224"/>
+<area shape="rect" id="Node000005" href="$classMaCh3Modes.html" title="KS: Class describing MaCh3 modes used in the analysis, it is being initialised from config." alt="" coords="5,94,107,120"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="42,134,27,170,25,189,28,207,42,231,60,252,99,284,95,288,57,256,38,234,24,209,19,189,22,168,37,132"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="75,131,110,181,106,184,71,134"/>
+<area shape="rect" id="Node000006" href="$classcovarianceOsc.html" title="Class responsible for handling of neutrino oscillation parameters." alt="" coords="175,183,284,208"/>
+<area shape="poly" id="edge6_Node000003_Node000006" title=" " alt="" coords="208,221,160,264,132,288,129,284,157,260,204,217"/>
+<area shape="rect" id="Node000007" href="$classcovarianceBase.html" title="Base class responsible for handling of systematic error parameters. Capable of using PCA or using ada..." alt="" coords="172,94,287,120"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="232,135,232,182,227,182,227,135"/>
+<area shape="rect" id="Node000008" href="$classPCAHandler.html" title=" " alt="" coords="83,5,176,31"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="157,39,217,92,214,96,153,43"/>
+<area shape="rect" id="Node000009" href="$classadaptive__mcmc_1_1AdaptiveMCMCHandler.html" title="Contains information about adaptive covariance matrix." alt="" coords="200,5,456,31"/>
+<area shape="poly" id="edge9_Node000007_Node000009" title=" " alt="" coords="305,43,245,96,241,92,301,39"/>
+<area shape="rect" id="Node000010" href="$classparticle.html" title="Class particle &#45; stores the position, velocity and personal best With functions which move particle a..." alt="" coords="188,361,252,387"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="207,402,177,451,173,448,203,399"/>
+</map>

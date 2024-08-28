@@ -31,7 +31,7 @@ var searchData=
   ['reducetspline3_28',['ReduceTSpline3',['../classSMonolith.html#a3638cd29cc7013868d75d7173a29944b',1,'SMonolith']]],
   ['reference_20documentation_29',['MaCh3 Reference Documentation',['../index.html',1,'']]],
   ['reject_30',['reject',['../classmcmc.html#a537f7c2411a6a8e65fdf57b81ce6fe4a',1,'mcmc']]],
-  ['removefitter_31',['removefitter',['../Structs_8cpp.html#afdf7434ae5f5db5d9707f49fff1307da',1,'RemoveFitter(TH1D *hist, std::string name):&#160;Structs.cpp'],['../Structs_8h.html#afdf7434ae5f5db5d9707f49fff1307da',1,'RemoveFitter(TH1D *hist, std::string name):&#160;Structs.cpp'],['../PlotMCMC__Diagnosis_8cpp.html#ad6cc7e819155d937288181eb54bae3aa',1,'RemoveFitter(TH1D *hist):&#160;PlotMCMC_Diagnosis.cpp']]],
+  ['removefitter_31',['removefitter',['../Structs_8cpp.html#a85463c0c6943e3d544d5fcb3f96bf18a',1,'RemoveFitter(TH1D *hist, const std::string &amp;name):&#160;Structs.cpp'],['../Structs_8h.html#a85463c0c6943e3d544d5fcb3f96bf18a',1,'RemoveFitter(TH1D *hist, const std::string &amp;name):&#160;Structs.cpp'],['../PlotMCMC__Diagnosis_8cpp.html#ad6cc7e819155d937288181eb54bae3aa',1,'RemoveFitter(TH1D *hist):&#160;PlotMCMC_Diagnosis.cpp']]],
   ['removeparameters_32',['RemoveParameters',['../classMCMCProcessor.html#a9a29c1cb64589ac136f7f927cafa18aa',1,'MCMCProcessor']]],
   ['reporting_20a_20vulnerability_33',['Reporting a Vulnerability',['../md__2github_2workspace_2SECURITY.html#autotoc_md25',1,'']]],
   ['requirements_34',['System Requirements',['../md__2github_2workspace_2README.html#autotoc_md18',1,'']]],

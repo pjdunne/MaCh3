@@ -1,0 +1,5 @@
+<map id="manager" name="manager">
+<area shape="rect" id="Node000001" title="The manager class is responsible for managing configurations and settings." alt="" coords="20,94,92,120"/>
+<area shape="rect" id="Node000002" href="$classMaCh3Modes.html" title="KS: Class describing MaCh3 modes used in the analysis, it is being initialised from config." alt="" coords="5,5,107,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="59,47,59,94,53,94,53,47"/>
+</map>

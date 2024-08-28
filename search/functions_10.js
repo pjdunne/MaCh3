@@ -16,7 +16,7 @@ var searchData=
   ['rebinoscillogram_13',['RebinOscillogram',['../classOscillator.html#a143025170214000c5c412cecc331e56d',1,'Oscillator']]],
   ['reducetf1_14',['ReduceTF1',['../classSMonolith.html#a8c71919669fbcd9a2b1cbc0d4a463b84',1,'SMonolith']]],
   ['reducetspline3_15',['ReduceTSpline3',['../classSMonolith.html#a3638cd29cc7013868d75d7173a29944b',1,'SMonolith']]],
-  ['removefitter_16',['removefitter',['../PlotMCMC__Diagnosis_8cpp.html#ad6cc7e819155d937288181eb54bae3aa',1,'RemoveFitter(TH1D *hist):&#160;PlotMCMC_Diagnosis.cpp'],['../Structs_8h.html#afdf7434ae5f5db5d9707f49fff1307da',1,'RemoveFitter(TH1D *hist, std::string name):&#160;Structs.cpp'],['../Structs_8cpp.html#afdf7434ae5f5db5d9707f49fff1307da',1,'RemoveFitter(TH1D *hist, std::string name):&#160;Structs.cpp']]],
+  ['removefitter_16',['removefitter',['../PlotMCMC__Diagnosis_8cpp.html#ad6cc7e819155d937288181eb54bae3aa',1,'RemoveFitter(TH1D *hist):&#160;PlotMCMC_Diagnosis.cpp'],['../Structs_8h.html#a85463c0c6943e3d544d5fcb3f96bf18a',1,'RemoveFitter(TH1D *hist, const std::string &amp;name):&#160;Structs.cpp'],['../Structs_8cpp.html#a85463c0c6943e3d544d5fcb3f96bf18a',1,'RemoveFitter(TH1D *hist, const std::string &amp;name):&#160;Structs.cpp']]],
   ['removeparameters_17',['RemoveParameters',['../classMCMCProcessor.html#a9a29c1cb64589ac136f7f927cafa18aa',1,'MCMCProcessor']]],
   ['reservememory_18',['ReserveMemory',['../classcovarianceBase.html#a75b5553823335bb82026ff46369fb67e',1,'covarianceBase']]],
   ['reset_19',['Reset',['../classOscillator.html#abb02597132a34428d02173bca66c017e',1,'Oscillator']]],

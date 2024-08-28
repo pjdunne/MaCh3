@@ -1,0 +1,8 @@
+<map id="SampleSummary" name="SampleSummary">
+<area shape="rect" id="Node000001" title="Class to calculate pvalue produce posterior predictive and many fancy Bayesian stuff." alt="" coords="16,183,136,208"/>
+<area shape="rect" id="Node000002" href="$classsamplePDFBase.html" title="Class responsible for handling implementation of samples used in analysis, reweighting and returning ..." alt="" coords="100,94,220,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="140,133,89,184,86,180,136,129"/>
+<area shape="rect" id="Node000003" href="$classMaCh3Modes.html" title="KS: Class describing MaCh3 modes used in the analysis, it is being initialised from config." alt="" coords="5,5,107,31"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="52,47,47,81,49,119,59,153,72,181,67,184,54,155,43,120,42,81,47,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="84,39,147,92,144,96,80,43"/>
+</map>

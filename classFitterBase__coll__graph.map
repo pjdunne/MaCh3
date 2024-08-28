@@ -1,0 +1,16 @@
+<map id="FitterBase" name="FitterBase">
+<area shape="rect" id="Node000001" title="Base class for implementing fitting algorithms." alt="" coords="75,286,157,312"/>
+<area shape="rect" id="Node000002" href="$classmanager.html" title="The manager class is responsible for managing configurations and settings." alt="" coords="80,183,152,208"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,224,119,286,113,286,113,224"/>
+<area shape="rect" id="Node000003" href="$classMaCh3Modes.html" title="KS: Class describing MaCh3 modes used in the analysis, it is being initialised from config." alt="" coords="5,94,107,120"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="42,134,27,170,25,189,28,207,42,231,60,252,99,284,95,288,57,256,38,234,24,209,19,189,22,168,37,132"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="75,131,110,181,106,184,71,134"/>
+<area shape="rect" id="Node000004" href="$classcovarianceOsc.html" title="Class responsible for handling of neutrino oscillation parameters." alt="" coords="175,183,284,208"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="208,221,160,264,132,288,129,284,157,260,204,217"/>
+<area shape="rect" id="Node000005" href="$classcovarianceBase.html" title="Base class responsible for handling of systematic error parameters. Capable of using PCA or using ada..." alt="" coords="172,94,287,120"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="232,135,232,182,227,182,227,135"/>
+<area shape="rect" id="Node000006" href="$classPCAHandler.html" title=" " alt="" coords="84,5,177,31"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="158,39,217,92,214,96,154,43"/>
+<area shape="rect" id="Node000007" href="$classadaptive__mcmc_1_1AdaptiveMCMCHandler.html" title="Contains information about adaptive covariance matrix." alt="" coords="202,5,457,31"/>
+<area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="306,43,245,96,241,92,302,39"/>
+</map>

@@ -88,12 +88,25 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for SMonolith:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="classSMonolith.png" usemap="#SMonolith_map" alt=""/>
-  <map id="SMonolith_map" name="SMonolith_map">
-<area href="classSplineBase.html" title="Base class for calculating weight from spline." alt="SplineBase" shape="rect" coords="0,0,75,24"/>
-  </map>
-</div></div>
+<div class="center"><img src="classSMonolith__inherit__graph.png" border="0" usemap="#aSMonolith_inherit__map" alt="Inheritance graph"/></div>
+<map name="aSMonolith_inherit__map" id="aSMonolith_inherit__map">
+<area shape="rect" title="Even&#45;by&#45;event class calculating response for spline parameters. It is possible to use GPU acceleratio..." alt="" coords="9,79,89,105"/>
+<area shape="rect" href="classSplineBase.html" title="Base class for calculating weight from spline." alt="" coords="5,5,93,31"/>
+<area shape="poly" title=" " alt="" coords="52,46,52,79,46,79,46,46"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for SMonolith:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSMonolith__coll__graph.png" border="0" usemap="#aSMonolith_coll__map" alt="Collaboration graph"/></div>
+<map name="aSMonolith_coll__map" id="aSMonolith_coll__map">
+<area shape="rect" title="Even&#45;by&#45;event class calculating response for spline parameters. It is possible to use GPU acceleratio..." alt="" coords="69,94,149,120"/>
+<area shape="rect" href="classSplineBase.html" title="Base class for calculating weight from spline." alt="" coords="5,5,93,31"/>
+<area shape="poly" title=" " alt="" coords="68,42,103,92,99,95,64,45"/>
+<area shape="rect" href="structFastSplineInfo.html" title="CW: Add a struct to hold info about the splinified xsec parameters and help with FindSplineSegment." alt="" coords="116,5,222,31"/>
+<area shape="poly" title=" " alt="" coords="154,45,119,95,115,92,150,42"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -803,7 +816,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno"> 1681</span> </div>
 <div class="line"><span class="lineno"> 1682</span>  <span class="keywordflow">return</span>;</div>
 <div class="line"><span class="lineno"> 1683</span>}</div>
-<div class="ttc" id="aStructs_8h_html_a030da8f8f9cd4bb0517b2cc0de3a9d5f"><div class="ttname"><a href="Structs_8h.html#a030da8f8f9cd4bb0517b2cc0de3a9d5f">_int_</a></div><div class="ttdeci">#define _int_</div><div class="ttdef"><b>Definition</b> <a href="Structs_8h_source.html#l00012">Structs.h:12</a></div></div>
+<div class="ttc" id="aStructs_8h_html_a030da8f8f9cd4bb0517b2cc0de3a9d5f"><div class="ttname"><a href="Structs_8h.html#a030da8f8f9cd4bb0517b2cc0de3a9d5f">_int_</a></div><div class="ttdeci">#define _int_</div><div class="ttdef"><b>Definition</b> <a href="Structs_8h_source.html#l00015">Structs.h:15</a></div></div>
 <div class="ttc" id="aclassSMonolith_html_a335ea2a499d2b2c7f1410b24b25456a1"><div class="ttname"><a href="classSMonolith.html#a335ea2a499d2b2c7f1410b24b25456a1">SMonolith::CalcSplineWeights_TF1</a></div><div class="ttdeci">void CalcSplineWeights_TF1()</div><div class="ttdoc">Same but TF1.</div><div class="ttdef"><b>Definition</b> <a href="SplineMonolith_8cpp_source.html#l01687">SplineMonolith.cpp:1687</a></div></div>
 <div class="ttc" id="aclassSMonolith_html_a4606b53f321992377d420a838c76ab3b"><div class="ttname"><a href="classSMonolith.html#a4606b53f321992377d420a838c76ab3b">SMonolith::nParams</a></div><div class="ttdeci">short int nParams</div><div class="ttdoc">Number of NIWG parameters that have splines.</div><div class="ttdef"><b>Definition</b> <a href="SplineMonolith_8h_source.html#l00146">SplineMonolith.h:146</a></div></div>
 <div class="ttc" id="aclassSMonolith_html_afa782652b0b3da923c5b20bb1319aadd"><div class="ttname"><a href="classSMonolith.html#afa782652b0b3da923c5b20bb1319aadd">SMonolith::splineParsPointer</a></div><div class="ttdeci">std::vector&lt; const double * &gt; splineParsPointer</div><div class="ttdoc">This holds pointer to parameter position which we later copy paste it to GPU.</div><div class="ttdef"><b>Definition</b> <a href="SplineMonolith_8h_source.html#l00141">SplineMonolith.h:141</a></div></div>
@@ -918,7 +931,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno"> 1591</span><span class="preprocessor">#endif</span></div>
 <div class="line"><span class="lineno"> 1592</span>  } <span class="comment">//end loop over params</span></div>
 <div class="line"><span class="lineno"> 1593</span>}</div>
-<div class="ttc" id="aStructs_8h_html_a44b939bf69f41920331b7d7a74d2d436"><div class="ttname"><a href="Structs_8h.html#a44b939bf69f41920331b7d7a74d2d436">_float_</a></div><div class="ttdeci">#define _float_</div><div class="ttdef"><b>Definition</b> <a href="Structs_8h_source.html#l00011">Structs.h:11</a></div></div>
+<div class="ttc" id="aStructs_8h_html_a44b939bf69f41920331b7d7a74d2d436"><div class="ttname"><a href="Structs_8h.html#a44b939bf69f41920331b7d7a74d2d436">_float_</a></div><div class="ttdeci">#define _float_</div><div class="ttdef"><b>Definition</b> <a href="Structs_8h_source.html#l00014">Structs.h:14</a></div></div>
 <div class="ttc" id="astructFastSplineInfo_html_a2644b71e4993fba6cabe5f21c9ab44de"><div class="ttname"><a href="structFastSplineInfo.html#a2644b71e4993fba6cabe5f21c9ab44de">FastSplineInfo::nPts</a></div><div class="ttdeci">_int_ nPts</div><div class="ttdoc">Number of points in spline.</div><div class="ttdef"><b>Definition</b> <a href="SplineStructs_8h_source.html#l00026">SplineStructs.h:26</a></div></div>
 <div class="ttc" id="astructFastSplineInfo_html_a768e33415a2a6b50e9019d6a74fa5509"><div class="ttname"><a href="structFastSplineInfo.html#a768e33415a2a6b50e9019d6a74fa5509">FastSplineInfo::splineParsPointer</a></div><div class="ttdeci">const double * splineParsPointer</div><div class="ttdoc">Array of the knots positions.</div><div class="ttdef"><b>Definition</b> <a href="SplineStructs_8h_source.html#l00035">SplineStructs.h:35</a></div></div>
 <div class="ttc" id="astructFastSplineInfo_html_abbaf75f4c41bd333cae72bf59856becb"><div class="ttname"><a href="structFastSplineInfo.html#abbaf75f4c41bd333cae72bf59856becb">FastSplineInfo::CurrSegment</a></div><div class="ttdeci">_int_ CurrSegment</div><div class="ttdoc">Array of what segment of spline we're currently interested in. Gets updated once per MCMC iteration.</div><div class="ttdef"><b>Definition</b> <a href="SplineStructs_8h_source.html#l00032">SplineStructs.h:32</a></div></div>

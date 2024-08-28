@@ -86,13 +86,40 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for MinuitFit:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="classMinuitFit.png" usemap="#MinuitFit_map" alt=""/>
-  <map id="MinuitFit_map" name="MinuitFit_map">
-<area href="classLikelihoodFit.html" title="Implementation of base Likelihood Fit class, it is mostly responsible for likelihood calculation whil..." alt="LikelihoodFit" shape="rect" coords="0,56,83,80"/>
-<area href="classFitterBase.html" title="Base class for implementing fitting algorithms." alt="FitterBase" shape="rect" coords="0,0,83,24"/>
-  </map>
-</div></div>
+<div class="center"><img src="classMinuitFit__inherit__graph.png" border="0" usemap="#aMinuitFit_inherit__map" alt="Inheritance graph"/></div>
+<map name="aMinuitFit_inherit__map" id="aMinuitFit_inherit__map">
+<area shape="rect" title="Implementation of Minuit fitting algorithm." alt="" coords="17,153,89,178"/>
+<area shape="rect" href="classLikelihoodFit.html" title="Implementation of base Likelihood Fit class, it is mostly responsible for likelihood calculation whil..." alt="" coords="5,79,101,105"/>
+<area shape="poly" title=" " alt="" coords="56,120,56,152,50,152,50,120"/>
+<area shape="rect" href="classFitterBase.html" title="Base class for implementing fitting algorithms." alt="" coords="12,5,94,31"/>
+<area shape="poly" title=" " alt="" coords="56,46,56,79,50,79,50,46"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for MinuitFit:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMinuitFit__coll__graph.png" border="0" usemap="#aMinuitFit_coll__map" alt="Collaboration graph"/></div>
+<map name="aMinuitFit_coll__map" id="aMinuitFit_coll__map">
+<area shape="rect" title="Implementation of Minuit fitting algorithm." alt="" coords="80,436,152,462"/>
+<area shape="rect" href="classLikelihoodFit.html" title="Implementation of base Likelihood Fit class, it is mostly responsible for likelihood calculation whil..." alt="" coords="68,361,164,387"/>
+<area shape="poly" title=" " alt="" coords="119,402,119,436,113,436,113,402"/>
+<area shape="rect" href="classFitterBase.html" title="Base class for implementing fitting algorithms." alt="" coords="75,286,157,312"/>
+<area shape="poly" title=" " alt="" coords="119,327,119,361,113,361,113,327"/>
+<area shape="rect" href="classmanager.html" title="The manager class is responsible for managing configurations and settings." alt="" coords="80,183,152,208"/>
+<area shape="poly" title=" " alt="" coords="119,224,119,286,113,286,113,224"/>
+<area shape="rect" href="classMaCh3Modes.html" title="KS: Class describing MaCh3 modes used in the analysis, it is being initialised from config." alt="" coords="5,94,107,120"/>
+<area shape="poly" title=" " alt="" coords="42,134,27,170,25,189,28,207,42,231,60,252,99,284,95,288,57,256,38,234,24,209,19,189,22,168,37,132"/>
+<area shape="poly" title=" " alt="" coords="75,131,110,181,106,184,71,134"/>
+<area shape="rect" href="classcovarianceOsc.html" title="Class responsible for handling of neutrino oscillation parameters." alt="" coords="175,183,284,208"/>
+<area shape="poly" title=" " alt="" coords="208,221,160,264,132,288,129,284,157,260,204,217"/>
+<area shape="rect" href="classcovarianceBase.html" title="Base class responsible for handling of systematic error parameters. Capable of using PCA or using ada..." alt="" coords="172,94,287,120"/>
+<area shape="poly" title=" " alt="" coords="232,135,232,182,227,182,227,135"/>
+<area shape="rect" href="classPCAHandler.html" title=" " alt="" coords="84,5,177,31"/>
+<area shape="poly" title=" " alt="" coords="158,39,217,92,214,96,154,43"/>
+<area shape="rect" href="classadaptive__mcmc_1_1AdaptiveMCMCHandler.html" title="Contains information about adaptive covariance matrix." alt="" coords="202,5,457,31"/>
+<area shape="poly" title=" " alt="" coords="306,43,245,96,241,92,302,39"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -349,7 +376,7 @@ Additional Inherited Members</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="MinuitFit_8cpp_source.html#l00016">16</a> of file <a class="el" href="MinuitFit_8cpp_source.html">MinuitFit.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   16</span>                      {</div>
 <div class="line"><span class="lineno">   17</span><span class="comment">// *************************</span></div>
-<div class="line"><span class="lineno">   18</span>  <span class="keywordflow">if</span>(<a class="code hl_variable" href="classMinuitFit.html#a3f5a1b7de36ce6c55821e262b016cb19">minuit</a> != <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">NULL</a>) <span class="keyword">delete</span> <a class="code hl_variable" href="classMinuitFit.html#a3f5a1b7de36ce6c55821e262b016cb19">minuit</a>;</div>
+<div class="line"><span class="lineno">   18</span>  <span class="keywordflow">if</span>(<a class="code hl_variable" href="classMinuitFit.html#a3f5a1b7de36ce6c55821e262b016cb19">minuit</a> != <span class="keyword">nullptr</span>) <span class="keyword">delete</span> <a class="code hl_variable" href="classMinuitFit.html#a3f5a1b7de36ce6c55821e262b016cb19">minuit</a>;</div>
 <div class="line"><span class="lineno">   19</span>}</div>
 </div><!-- fragment -->
 </div>
@@ -583,7 +610,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  189</span>  <a class="code hl_function" href="classFitterBase.html#a418f581b688f035211107ddd83168c08">SaveOutput</a>();</div>
 <div class="line"><span class="lineno">  190</span>}</div>
 <div class="ttc" id="aclassFitterBase_html_a3a15d2348b7bf0a639aaab52b9294bbf"><div class="ttname"><a href="classFitterBase.html#a3a15d2348b7bf0a639aaab52b9294bbf">FitterBase::systematics</a></div><div class="ttdeci">std::vector&lt; covarianceBase * &gt; systematics</div><div class="ttdoc">Systematic holder.</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00123">FitterBase.h:123</a></div></div>
-<div class="ttc" id="aclassFitterBase_html_a418f581b688f035211107ddd83168c08"><div class="ttname"><a href="classFitterBase.html#a418f581b688f035211107ddd83168c08">FitterBase::SaveOutput</a></div><div class="ttdeci">void SaveOutput()</div><div class="ttdoc">Save output and close files.</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8cpp_source.html#l00241">FitterBase.cpp:241</a></div></div>
+<div class="ttc" id="aclassFitterBase_html_a418f581b688f035211107ddd83168c08"><div class="ttname"><a href="classFitterBase.html#a418f581b688f035211107ddd83168c08">FitterBase::SaveOutput</a></div><div class="ttdeci">void SaveOutput()</div><div class="ttdoc">Save output and close files.</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8cpp_source.html#l00240">FitterBase.cpp:240</a></div></div>
 <div class="ttc" id="aclassFitterBase_html_a4260b312e3f35cf01fc73b02239f8990"><div class="ttname"><a href="classFitterBase.html#a4260b312e3f35cf01fc73b02239f8990">FitterBase::outputFile</a></div><div class="ttdeci">TFile * outputFile</div><div class="ttdoc">Output.</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00141">FitterBase.h:141</a></div></div>
 <div class="ttc" id="aclassFitterBase_html_a4fceb68f242feeb04a0ddf42a5a37095"><div class="ttname"><a href="classFitterBase.html#a4fceb68f242feeb04a0ddf42a5a37095">FitterBase::fitMan</a></div><div class="ttdeci">manager * fitMan</div><div class="ttdoc">The manager.</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00093">FitterBase.h:93</a></div></div>
 <div class="ttc" id="aclassLikelihoodFit_html_a0b50b7b607751e80b6c85e9db98631af"><div class="ttname"><a href="classLikelihoodFit.html#a0b50b7b607751e80b6c85e9db98631af">LikelihoodFit::NParsPCA</a></div><div class="ttdeci">int NParsPCA</div><div class="ttdoc">Number of all parameters from all covariances in PCA base.</div><div class="ttdef"><b>Definition</b> <a href="LikelihoodFit_8h_source.html#l00029">LikelihoodFit.h:29</a></div></div>

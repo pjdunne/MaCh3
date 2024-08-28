@@ -87,12 +87,27 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for covarianceXsec:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="classcovarianceXsec.png" usemap="#covarianceXsec_map" alt=""/>
-  <map id="covarianceXsec_map" name="covarianceXsec_map">
-<area href="classcovarianceBase.html" title="Base class responsible for handling of systematic error parameters. Capable of using PCA or using ada..." alt="covarianceBase" shape="rect" coords="0,0,105,24"/>
-  </map>
-</div></div>
+<div class="center"><img src="classcovarianceXsec__inherit__graph.png" border="0" usemap="#acovarianceXsec_inherit__map" alt="Inheritance graph"/></div>
+<map name="acovarianceXsec_inherit__map" id="acovarianceXsec_inherit__map">
+<area shape="rect" title="Class responsible for handling of systematic error parameters with different types defined in the con..." alt="" coords="5,79,120,105"/>
+<area shape="rect" href="classcovarianceBase.html" title="Base class responsible for handling of systematic error parameters. Capable of using PCA or using ada..." alt="" coords="5,5,120,31"/>
+<area shape="poly" title=" " alt="" coords="65,46,65,79,60,79,60,46"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for covarianceXsec:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcovarianceXsec__coll__graph.png" border="0" usemap="#acovarianceXsec_coll__map" alt="Collaboration graph"/></div>
+<map name="acovarianceXsec_coll__map" id="acovarianceXsec_coll__map">
+<area shape="rect" title="Class responsible for handling of systematic error parameters with different types defined in the con..." alt="" coords="94,169,208,195"/>
+<area shape="rect" href="classcovarianceBase.html" title="Base class responsible for handling of systematic error parameters. Capable of using PCA or using ada..." alt="" coords="94,94,208,120"/>
+<area shape="poly" title=" " alt="" coords="153,135,153,169,148,169,148,135"/>
+<area shape="rect" href="classPCAHandler.html" title=" " alt="" coords="5,5,99,31"/>
+<area shape="poly" title=" " alt="" coords="79,39,139,92,135,96,75,43"/>
+<area shape="rect" href="classadaptive__mcmc_1_1AdaptiveMCMCHandler.html" title="Contains information about adaptive covariance matrix." alt="" coords="123,5,378,31"/>
+<area shape="poly" title=" " alt="" coords="227,43,166,96,163,92,223,39"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -852,7 +867,7 @@ Protected Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  147</span>  }</div>
 <div class="line"><span class="lineno">  148</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">returnVec</a>;</div>
 <div class="line"><span class="lineno">  149</span>}</div>
-<div class="ttc" id="aStructs_8h_html_affc27d8b7b82d3713f45af17873fde2fa29d6ccf6cf507f6e66c72b1d3c2aed00"><div class="ttname"><a href="Structs_8h.html#affc27d8b7b82d3713f45af17873fde2fa29d6ccf6cf507f6e66c72b1d3c2aed00">kSpline</a></div><div class="ttdeci">@ kSpline</div><div class="ttdef"><b>Definition</b> <a href="Structs_8h_source.html#l00152">Structs.h:152</a></div></div>
+<div class="ttc" id="aStructs_8h_html_affc27d8b7b82d3713f45af17873fde2fa29d6ccf6cf507f6e66c72b1d3c2aed00"><div class="ttname"><a href="Structs_8h.html#affc27d8b7b82d3713f45af17873fde2fa29d6ccf6cf507f6e66c72b1d3c2aed00">kSpline</a></div><div class="ttdeci">@ kSpline</div><div class="ttdoc">For splined parameters (1D)</div><div class="ttdef"><b>Definition</b> <a href="Structs_8h_source.html#l00155">Structs.h:155</a></div></div>
 <div class="ttc" id="aclasscovarianceXsec_html_a50cca3de3274be7a57d25cc1b454e890"><div class="ttname"><a href="classcovarianceXsec.html#a50cca3de3274be7a57d25cc1b454e890">covarianceXsec::GetParamType</a></div><div class="ttdeci">SystType GetParamType(const int i) const</div><div class="ttdoc">Returns enum describing our param type.</div><div class="ttdef"><b>Definition</b> <a href="covarianceXsec_8h_source.html#l00041">covarianceXsec.h:41</a></div></div>
 <div class="ttc" id="aclasscovarianceXsec_html_aad522479b06581729efd6c1cd12d11df"><div class="ttname"><a href="classcovarianceXsec.html#aad522479b06581729efd6c1cd12d11df">covarianceXsec::GetParDetID</a></div><div class="ttdeci">int GetParDetID(const int i) const</div><div class="ttdoc">ETA - just return the int of the DetID, this can be removed to do a string comp at some point.</div><div class="ttdef"><b>Definition</b> <a href="covarianceXsec_8h_source.html#l00035">covarianceXsec.h:35</a></div></div>
 </div><!-- fragment -->
@@ -886,7 +901,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="covarianceXsec_8h_source.html#l00088">88</a> of file <a class="el" href="covarianceXsec_8h_source.html">covarianceXsec.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   88</span>{<span class="keywordflow">return</span> <a class="code hl_function" href="classcovarianceXsec.html#aa5f13d2836d1de71dec80c0746fc05ae">GetParsIndexFromDetID</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">DetID</a>, <a class="code hl_enumvalue" href="Structs_8h.html#affc27d8b7b82d3713f45af17873fde2fad9b1ac76e80f59684cfb7dc996fc870d">kFunc</a>);}</div>
-<div class="ttc" id="aStructs_8h_html_affc27d8b7b82d3713f45af17873fde2fad9b1ac76e80f59684cfb7dc996fc870d"><div class="ttname"><a href="Structs_8h.html#affc27d8b7b82d3713f45af17873fde2fad9b1ac76e80f59684cfb7dc996fc870d">kFunc</a></div><div class="ttdeci">@ kFunc</div><div class="ttdef"><b>Definition</b> <a href="Structs_8h_source.html#l00153">Structs.h:153</a></div></div>
+<div class="ttc" id="aStructs_8h_html_affc27d8b7b82d3713f45af17873fde2fad9b1ac76e80f59684cfb7dc996fc870d"><div class="ttname"><a href="Structs_8h.html#affc27d8b7b82d3713f45af17873fde2fad9b1ac76e80f59684cfb7dc996fc870d">kFunc</a></div><div class="ttdeci">@ kFunc</div><div class="ttdoc">For functional parameters.</div><div class="ttdef"><b>Definition</b> <a href="Structs_8h_source.html#l00156">Structs.h:156</a></div></div>
 <div class="ttc" id="aclasscovarianceXsec_html_aa5f13d2836d1de71dec80c0746fc05ae"><div class="ttname"><a href="classcovarianceXsec.html#aa5f13d2836d1de71dec80c0746fc05ae">covarianceXsec::GetParsIndexFromDetID</a></div><div class="ttdeci">const std::vector&lt; int &gt; GetParsIndexFromDetID(const int DetID, const SystType Type)</div><div class="ttdoc">DB Grab the parameter indices for the relevant DetID.</div><div class="ttdef"><b>Definition</b> <a href="covarianceXsec_8cpp_source.html#l00356">covarianceXsec.cpp:356</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -1076,9 +1091,9 @@ Protected Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  317</span>  }</div>
 <div class="line"><span class="lineno">  318</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">returnVec</a>;</div>
 <div class="line"><span class="lineno">  319</span>}</div>
-<div class="ttc" id="aStructs_8h_html_affc27d8b7b82d3713f45af17873fde2fa085cb29127b1cf7b1ddd429ff4440b17"><div class="ttname"><a href="Structs_8h.html#affc27d8b7b82d3713f45af17873fde2fa085cb29127b1cf7b1ddd429ff4440b17">kNorm</a></div><div class="ttdeci">@ kNorm</div><div class="ttdef"><b>Definition</b> <a href="Structs_8h_source.html#l00151">Structs.h:151</a></div></div>
+<div class="ttc" id="aStructs_8h_html_affc27d8b7b82d3713f45af17873fde2fa085cb29127b1cf7b1ddd429ff4440b17"><div class="ttname"><a href="Structs_8h.html#affc27d8b7b82d3713f45af17873fde2fa085cb29127b1cf7b1ddd429ff4440b17">kNorm</a></div><div class="ttdeci">@ kNorm</div><div class="ttdoc">For normalisation parameters.</div><div class="ttdef"><b>Definition</b> <a href="Structs_8h_source.html#l00154">Structs.h:154</a></div></div>
 <div class="ttc" id="aclasscovarianceXsec_html_acd6c2346a5b808c6917e4828bbb633f5"><div class="ttname"><a href="classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5">covarianceXsec::NormParams</a></div><div class="ttdeci">std::vector&lt; XsecNorms4 &gt; NormParams</div><div class="ttdoc">Vector containing info for normalisation systematics.</div><div class="ttdef"><b>Definition</b> <a href="covarianceXsec_8h_source.html#l00145">covarianceXsec.h:145</a></div></div>
-<div class="ttc" id="astructXsecNorms4_html"><div class="ttname"><a href="structXsecNorms4.html">XsecNorms4</a></div><div class="ttdoc">ETA - Normalisations for cross-section parameters Carrier for whether you want to apply a systematic ...</div><div class="ttdef"><b>Definition</b> <a href="Structs_8h_source.html#l00080">Structs.h:80</a></div></div>
+<div class="ttc" id="astructXsecNorms4_html"><div class="ttname"><a href="structXsecNorms4.html">XsecNorms4</a></div><div class="ttdoc">ETA - Normalisations for cross-section parameters Carrier for whether you want to apply a systematic ...</div><div class="ttdef"><b>Definition</b> <a href="Structs_8h_source.html#l00083">Structs.h:83</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1268,7 +1283,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="covarianceXsec_8h_source.html#l00038">38</a> of file <a class="el" href="covarianceXsec_8h_source.html">covarianceXsec.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   38</span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="Structs_8h.html#ad39c312dc44177340e2ebccd3d3f2d4c">SystType_ToString</a>(<a class="code hl_variable" href="classcovarianceXsec.html#aae3338ca71027adab7fdfd3e828c0f79">_fParamType</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>]); }</div>
-<div class="ttc" id="aStructs_8h_html_ad39c312dc44177340e2ebccd3d3f2d4c"><div class="ttname"><a href="Structs_8h.html#ad39c312dc44177340e2ebccd3d3f2d4c">SystType_ToString</a></div><div class="ttdeci">std::string SystType_ToString(const SystType i)</div><div class="ttdoc">Convert a Syst type type to a string.</div><div class="ttdef"><b>Definition</b> <a href="Structs_8h_source.html#l00173">Structs.h:173</a></div></div>
+<div class="ttc" id="aStructs_8h_html_ad39c312dc44177340e2ebccd3d3f2d4c"><div class="ttname"><a href="Structs_8h.html#ad39c312dc44177340e2ebccd3d3f2d4c">SystType_ToString</a></div><div class="ttdeci">std::string SystType_ToString(const SystType i)</div><div class="ttdoc">Convert a Syst type type to a string.</div><div class="ttdef"><b>Definition</b> <a href="Structs_8h_source.html#l00176">Structs.h:176</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1788,7 +1803,7 @@ Protected Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  272</span> </div>
 <div class="line"><span class="lineno">  273</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">norm</a>;</div>
 <div class="line"><span class="lineno">  274</span>}</div>
-<div class="ttc" id="astructXsecNorms4_html_a848104ff97acc9a0df9861acc8615aa7"><div class="ttname"><a href="structXsecNorms4.html#a848104ff97acc9a0df9861acc8615aa7">XsecNorms4::name</a></div><div class="ttdeci">std::string name</div><div class="ttdoc">Name of parameters.</div><div class="ttdef"><b>Definition</b> <a href="Structs_8h_source.html#l00083">Structs.h:83</a></div></div>
+<div class="ttc" id="astructXsecNorms4_html_a848104ff97acc9a0df9861acc8615aa7"><div class="ttname"><a href="structXsecNorms4.html#a848104ff97acc9a0df9861acc8615aa7">XsecNorms4::name</a></div><div class="ttdeci">std::string name</div><div class="ttdoc">Name of parameters.</div><div class="ttdef"><b>Definition</b> <a href="Structs_8h_source.html#l00086">Structs.h:86</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1845,12 +1860,12 @@ Protected Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  295</span> </div>
 <div class="line"><span class="lineno">  296</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">Spline</a>;</div>
 <div class="line"><span class="lineno">  297</span>}</div>
-<div class="ttc" id="aStructs_8h_html_a2d969ce667e41bd2492cff1775456837"><div class="ttname"><a href="Structs_8h.html#a2d969ce667e41bd2492cff1775456837">SplineInterpolation_ToString</a></div><div class="ttdeci">std::string SplineInterpolation_ToString(const SplineInterpolation i)</div><div class="ttdoc">Convert a LLH type to a string.</div><div class="ttdef"><b>Definition</b> <a href="Structs_8h_source.html#l00122">Structs.h:122</a></div></div>
-<div class="ttc" id="aStructs_8h_html_a6720d732608767153550aebebcf8fbf4"><div class="ttname"><a href="Structs_8h.html#a6720d732608767153550aebebcf8fbf4">SplineInterpolation</a></div><div class="ttdeci">SplineInterpolation</div><div class="ttdoc">Make an enum of the spline interpolation type.</div><div class="ttdef"><b>Definition</b> <a href="Structs_8h_source.html#l00112">Structs.h:112</a></div></div>
-<div class="ttc" id="aStructs_8h_html_a6720d732608767153550aebebcf8fbf4a56c886e7b34c938027a7140748999c8a"><div class="ttname"><a href="Structs_8h.html#a6720d732608767153550aebebcf8fbf4a56c886e7b34c938027a7140748999c8a">kTSpline3</a></div><div class="ttdeci">@ kTSpline3</div><div class="ttdef"><b>Definition</b> <a href="Structs_8h_source.html#l00113">Structs.h:113</a></div></div>
-<div class="ttc" id="aStructs_8h_html_a6720d732608767153550aebebcf8fbf4a9e1a345912f2baebd863ab7d40c9ab7b"><div class="ttname"><a href="Structs_8h.html#a6720d732608767153550aebebcf8fbf4a9e1a345912f2baebd863ab7d40c9ab7b">kSplineInterpolations</a></div><div class="ttdeci">@ kSplineInterpolations</div><div class="ttdef"><b>Definition</b> <a href="Structs_8h_source.html#l00118">Structs.h:117</a></div></div>
-<div class="ttc" id="astructXsecSplines1_html"><div class="ttname"><a href="structXsecSplines1.html">XsecSplines1</a></div><div class="ttdoc">KS: Struct holding info about Spline Systematics.</div><div class="ttdef"><b>Definition</b> <a href="Structs_8h_source.html#l00160">Structs.h:160</a></div></div>
-<div class="ttc" id="astructXsecSplines1_html_a39bbbbe9a0ab0e99ca5fe7b42f4e1e62"><div class="ttname"><a href="structXsecSplines1.html#a39bbbbe9a0ab0e99ca5fe7b42f4e1e62">XsecSplines1::SplineInterpolationType</a></div><div class="ttdeci">SplineInterpolation SplineInterpolationType</div><div class="ttdoc">Spline interpolation vector.</div><div class="ttdef"><b>Definition</b> <a href="Structs_8h_source.html#l00163">Structs.h:163</a></div></div>
+<div class="ttc" id="aStructs_8h_html_a2d969ce667e41bd2492cff1775456837"><div class="ttname"><a href="Structs_8h.html#a2d969ce667e41bd2492cff1775456837">SplineInterpolation_ToString</a></div><div class="ttdeci">std::string SplineInterpolation_ToString(const SplineInterpolation i)</div><div class="ttdoc">Convert a LLH type to a string.</div><div class="ttdef"><b>Definition</b> <a href="Structs_8h_source.html#l00125">Structs.h:125</a></div></div>
+<div class="ttc" id="aStructs_8h_html_a6720d732608767153550aebebcf8fbf4"><div class="ttname"><a href="Structs_8h.html#a6720d732608767153550aebebcf8fbf4">SplineInterpolation</a></div><div class="ttdeci">SplineInterpolation</div><div class="ttdoc">Make an enum of the spline interpolation type.</div><div class="ttdef"><b>Definition</b> <a href="Structs_8h_source.html#l00115">Structs.h:115</a></div></div>
+<div class="ttc" id="aStructs_8h_html_a6720d732608767153550aebebcf8fbf4a56c886e7b34c938027a7140748999c8a"><div class="ttname"><a href="Structs_8h.html#a6720d732608767153550aebebcf8fbf4a56c886e7b34c938027a7140748999c8a">kTSpline3</a></div><div class="ttdeci">@ kTSpline3</div><div class="ttdef"><b>Definition</b> <a href="Structs_8h_source.html#l00116">Structs.h:116</a></div></div>
+<div class="ttc" id="aStructs_8h_html_a6720d732608767153550aebebcf8fbf4a9e1a345912f2baebd863ab7d40c9ab7b"><div class="ttname"><a href="Structs_8h.html#a6720d732608767153550aebebcf8fbf4a9e1a345912f2baebd863ab7d40c9ab7b">kSplineInterpolations</a></div><div class="ttdeci">@ kSplineInterpolations</div><div class="ttdef"><b>Definition</b> <a href="Structs_8h_source.html#l00121">Structs.h:120</a></div></div>
+<div class="ttc" id="astructXsecSplines1_html"><div class="ttname"><a href="structXsecSplines1.html">XsecSplines1</a></div><div class="ttdoc">KS: Struct holding info about Spline Systematics.</div><div class="ttdef"><b>Definition</b> <a href="Structs_8h_source.html#l00163">Structs.h:163</a></div></div>
+<div class="ttc" id="astructXsecSplines1_html_a39bbbbe9a0ab0e99ca5fe7b42f4e1e62"><div class="ttname"><a href="structXsecSplines1.html#a39bbbbe9a0ab0e99ca5fe7b42f4e1e62">XsecSplines1::SplineInterpolationType</a></div><div class="ttdeci">SplineInterpolation SplineInterpolationType</div><div class="ttdoc">Spline interpolation vector.</div><div class="ttdef"><b>Definition</b> <a href="Structs_8h_source.html#l00166">Structs.h:166</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2016,8 +2031,8 @@ Protected Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   91</span>  <span class="keywordflow">return</span>;</div>
 <div class="line"><span class="lineno">   92</span>}</div>
 <div class="ttc" id="aMaCh3Logger_8h_html_a61052119a625282d0ec6d4a97adf3ee2"><div class="ttname"><a href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a></div><div class="ttdeci">#define MACH3LOG_ERROR</div><div class="ttdef"><b>Definition</b> <a href="MaCh3Logger_8h_source.html#l00018">MaCh3Logger.h:18</a></div></div>
-<div class="ttc" id="aStructs_8h_html_affc27d8b7b82d3713f45af17873fde2f"><div class="ttname"><a href="Structs_8h.html#affc27d8b7b82d3713f45af17873fde2f">SystType</a></div><div class="ttdeci">SystType</div><div class="ttdoc">Make an enum of systematic type recognised by covariance class.</div><div class="ttdef"><b>Definition</b> <a href="Structs_8h_source.html#l00150">Structs.h:150</a></div></div>
-<div class="ttc" id="aStructs_8h_html_affc27d8b7b82d3713f45af17873fde2fa32e7da18117f9defb24042a71776e5cb"><div class="ttname"><a href="Structs_8h.html#affc27d8b7b82d3713f45af17873fde2fa32e7da18117f9defb24042a71776e5cb">kSystTypes</a></div><div class="ttdeci">@ kSystTypes</div><div class="ttdef"><b>Definition</b> <a href="Structs_8h_source.html#l00155">Structs.h:154</a></div></div>
+<div class="ttc" id="aStructs_8h_html_affc27d8b7b82d3713f45af17873fde2f"><div class="ttname"><a href="Structs_8h.html#affc27d8b7b82d3713f45af17873fde2f">SystType</a></div><div class="ttdeci">SystType</div><div class="ttdoc">Make an enum of systematic type recognised by covariance class.</div><div class="ttdef"><b>Definition</b> <a href="Structs_8h_source.html#l00153">Structs.h:153</a></div></div>
+<div class="ttc" id="aStructs_8h_html_affc27d8b7b82d3713f45af17873fde2fa32e7da18117f9defb24042a71776e5cb"><div class="ttname"><a href="Structs_8h.html#affc27d8b7b82d3713f45af17873fde2fa32e7da18117f9defb24042a71776e5cb">kSystTypes</a></div><div class="ttdeci">@ kSystTypes</div><div class="ttdoc">This only enumerates.</div><div class="ttdef"><b>Definition</b> <a href="Structs_8h_source.html#l00158">Structs.h:157</a></div></div>
 <div class="ttc" id="aclasscovarianceBase_html_a933ff3dc0af99629ba3582a5d9d89d23"><div class="ttname"><a href="classcovarianceBase.html#a933ff3dc0af99629ba3582a5d9d89d23">covarianceBase::_fYAMLDoc</a></div><div class="ttdeci">YAML::Node _fYAMLDoc</div><div class="ttdoc">Stores config describing systematics.</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00438">covarianceBase.h:438</a></div></div>
 <div class="ttc" id="aclasscovarianceXsec_html_a68938d9079d05782eb1f415a5204284c"><div class="ttname"><a href="classcovarianceXsec.html#a68938d9079d05782eb1f415a5204284c">covarianceXsec::GetXsecNorm</a></div><div class="ttdeci">XsecNorms4 GetXsecNorm(const YAML::Node &amp;param, const int Index)</div><div class="ttdoc">Get Norm params.</div><div class="ttdef"><b>Definition</b> <a href="covarianceXsec_8cpp_source.html#l00222">covarianceXsec.cpp:222</a></div></div>
 <div class="ttc" id="aclasscovarianceXsec_html_a76a3fd06dd9cbe2eb6ccf560a435bf76"><div class="ttname"><a href="classcovarianceXsec.html#a76a3fd06dd9cbe2eb6ccf560a435bf76">covarianceXsec::isFlux</a></div><div class="ttdeci">std::vector&lt; bool &gt; isFlux</div><div class="ttdef"><b>Definition</b> <a href="covarianceXsec_8h_source.html#l00129">covarianceXsec.h:129</a></div></div>

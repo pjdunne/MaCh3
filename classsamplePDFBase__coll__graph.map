@@ -1,0 +1,5 @@
+<map id="samplePDFBase" name="samplePDFBase">
+<area shape="rect" id="Node000001" title="Class responsible for handling implementation of samples used in analysis, reweighting and returning ..." alt="" coords="5,94,125,120"/>
+<area shape="rect" id="Node000002" href="$classMaCh3Modes.html" title="KS: Class describing MaCh3 modes used in the analysis, it is being initialised from config." alt="" coords="14,5,116,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="68,47,68,94,62,94,62,47"/>
+</map>

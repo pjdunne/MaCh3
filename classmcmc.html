@@ -87,12 +87,36 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for mcmc:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="classmcmc.png" usemap="#mcmc_map" alt=""/>
-  <map id="mcmc_map" name="mcmc_map">
-<area href="classFitterBase.html" title="Base class for implementing fitting algorithms." alt="FitterBase" shape="rect" coords="0,0,69,24"/>
-  </map>
-</div></div>
+<div class="center"><img src="classmcmc__inherit__graph.png" border="0" usemap="#amcmc_inherit__map" alt="Inheritance graph"/></div>
+<map name="amcmc_inherit__map" id="amcmc_inherit__map">
+<area shape="rect" title="Implementation of MR2T2 algorithm." alt="" coords="17,79,75,105"/>
+<area shape="rect" href="classFitterBase.html" title="Base class for implementing fitting algorithms." alt="" coords="5,5,87,31"/>
+<area shape="poly" title=" " alt="" coords="49,46,49,79,43,79,43,46"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for mcmc:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmcmc__coll__graph.png" border="0" usemap="#amcmc_coll__map" alt="Collaboration graph"/></div>
+<map name="amcmc_coll__map" id="amcmc_coll__map">
+<area shape="rect" title="Implementation of MR2T2 algorithm." alt="" coords="87,361,145,387"/>
+<area shape="rect" href="classFitterBase.html" title="Base class for implementing fitting algorithms." alt="" coords="75,286,157,312"/>
+<area shape="poly" title=" " alt="" coords="119,327,119,361,113,361,113,327"/>
+<area shape="rect" href="classmanager.html" title="The manager class is responsible for managing configurations and settings." alt="" coords="80,183,152,208"/>
+<area shape="poly" title=" " alt="" coords="119,224,119,286,113,286,113,224"/>
+<area shape="rect" href="classMaCh3Modes.html" title="KS: Class describing MaCh3 modes used in the analysis, it is being initialised from config." alt="" coords="5,94,107,120"/>
+<area shape="poly" title=" " alt="" coords="42,134,27,170,25,189,28,207,42,231,60,252,99,284,95,288,57,256,38,234,24,209,19,189,22,168,37,132"/>
+<area shape="poly" title=" " alt="" coords="75,131,110,181,106,184,71,134"/>
+<area shape="rect" href="classcovarianceOsc.html" title="Class responsible for handling of neutrino oscillation parameters." alt="" coords="175,183,284,208"/>
+<area shape="poly" title=" " alt="" coords="208,221,160,264,132,288,129,284,157,260,204,217"/>
+<area shape="rect" href="classcovarianceBase.html" title="Base class responsible for handling of systematic error parameters. Capable of using PCA or using ada..." alt="" coords="172,94,287,120"/>
+<area shape="poly" title=" " alt="" coords="232,135,232,182,227,182,227,135"/>
+<area shape="rect" href="classPCAHandler.html" title=" " alt="" coords="84,5,177,31"/>
+<area shape="poly" title=" " alt="" coords="158,39,217,92,214,96,154,43"/>
+<area shape="rect" href="classadaptive__mcmc_1_1AdaptiveMCMCHandler.html" title="Contains information about adaptive covariance matrix." alt="" coords="202,5,457,31"/>
+<area shape="poly" title=" " alt="" coords="306,43,245,96,241,92,302,39"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -671,9 +695,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aclassFitterBase_html_ac7a4c5b2a90aba0e4bf6600b7af05168"><div class="ttname"><a href="classFitterBase.html#ac7a4c5b2a90aba0e4bf6600b7af05168">FitterBase::osc_llh</a></div><div class="ttdeci">double osc_llh</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00111">FitterBase.h:111</a></div></div>
 <div class="ttc" id="aclassFitterBase_html_ac948767a356e169c719a88315f8d1f47"><div class="ttname"><a href="classFitterBase.html#ac948767a356e169c719a88315f8d1f47">FitterBase::syst_llh</a></div><div class="ttdeci">double * syst_llh</div><div class="ttdoc">systematic llh breakdowns</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00115">FitterBase.h:115</a></div></div>
 <div class="ttc" id="aclassFitterBase_html_afac0dcceb1df194159c07945e8dc0069"><div class="ttname"><a href="classFitterBase.html#afac0dcceb1df194159c07945e8dc0069">FitterBase::samples</a></div><div class="ttdeci">std::vector&lt; samplePDFBase * &gt; samples</div><div class="ttdoc">Sample holder.</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00118">FitterBase.h:118</a></div></div>
-<div class="ttc" id="aclasscovarianceOsc_html_a5732a5abf9aa3d73f9dec5ba9d33217f"><div class="ttname"><a href="classcovarianceOsc.html#a5732a5abf9aa3d73f9dec5ba9d33217f">covarianceOsc::getPropPars</a></div><div class="ttdeci">double * getPropPars()</div><div class="ttdoc">Retrieves the proposed parameters.</div><div class="ttdef"><b>Definition</b> <a href="covarianceOsc_8cpp_source.html#l00147">covarianceOsc.cpp:147</a></div></div>
-<div class="ttc" id="aclasscovarianceOsc_html_a7834cf7e29c38220582047be1b592074"><div class="ttname"><a href="classcovarianceOsc.html#a7834cf7e29c38220582047be1b592074">covarianceOsc::GetLikelihood</a></div><div class="ttdeci">double GetLikelihood() override</div><div class="ttdoc">Same implementation as in base class but accounts for applying reactor prior.</div><div class="ttdef"><b>Definition</b> <a href="covarianceOsc_8cpp_source.html#l00109">covarianceOsc.cpp:109</a></div></div>
-<div class="ttc" id="aclasscovarianceOsc_html_abb8df24417b380af9b96763b8abc6b2e"><div class="ttname"><a href="classcovarianceOsc.html#abb8df24417b380af9b96763b8abc6b2e">covarianceOsc::proposeStep</a></div><div class="ttdeci">void proposeStep() override</div><div class="ttdoc">Propose MCMC step, including mass flipping.</div><div class="ttdef"><b>Definition</b> <a href="covarianceOsc_8cpp_source.html#l00165">covarianceOsc.cpp:165</a></div></div>
+<div class="ttc" id="aclasscovarianceOsc_html_a5732a5abf9aa3d73f9dec5ba9d33217f"><div class="ttname"><a href="classcovarianceOsc.html#a5732a5abf9aa3d73f9dec5ba9d33217f">covarianceOsc::getPropPars</a></div><div class="ttdeci">double * getPropPars()</div><div class="ttdoc">Retrieves the proposed parameters.</div><div class="ttdef"><b>Definition</b> <a href="covarianceOsc_8cpp_source.html#l00146">covarianceOsc.cpp:146</a></div></div>
+<div class="ttc" id="aclasscovarianceOsc_html_a7834cf7e29c38220582047be1b592074"><div class="ttname"><a href="classcovarianceOsc.html#a7834cf7e29c38220582047be1b592074">covarianceOsc::GetLikelihood</a></div><div class="ttdeci">double GetLikelihood() override</div><div class="ttdoc">Same implementation as in base class but accounts for applying reactor prior.</div><div class="ttdef"><b>Definition</b> <a href="covarianceOsc_8cpp_source.html#l00108">covarianceOsc.cpp:108</a></div></div>
+<div class="ttc" id="aclasscovarianceOsc_html_abb8df24417b380af9b96763b8abc6b2e"><div class="ttname"><a href="classcovarianceOsc.html#abb8df24417b380af9b96763b8abc6b2e">covarianceOsc::proposeStep</a></div><div class="ttdeci">void proposeStep() override</div><div class="ttdoc">Propose MCMC step, including mass flipping.</div><div class="ttdef"><b>Definition</b> <a href="covarianceOsc_8cpp_source.html#l00164">covarianceOsc.cpp:164</a></div></div>
 <div class="ttc" id="acovarianceBase_8h_html_a194098591fd0bc4afaf13b4fd8fee408"><div class="ttname"><a href="covarianceBase_8h.html#a194098591fd0bc4afaf13b4fd8fee408">_LARGE_LOGL_</a></div><div class="ttdeci">#define _LARGE_LOGL_</div><div class="ttdoc">Large Likelihood is used it parameter go out of physical boundary, this indicates in MCMC that such s...</div><div class="ttdef"><b>Definition</b> <a href="covarianceBase_8h_source.html#l00014">covarianceBase.h:14</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -807,8 +831,8 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  155</span>  <span class="comment">// Process MCMC</span></div>
 <div class="line"><span class="lineno">  156</span>  <a class="code hl_function" href="classFitterBase.html#a1dccdac8611e70c759c47a65f2b1aea7">ProcessMCMC</a>();</div>
 <div class="line"><span class="lineno">  157</span>}</div>
-<div class="ttc" id="aclassFitterBase_html_a1dccdac8611e70c759c47a65f2b1aea7"><div class="ttname"><a href="classFitterBase.html#a1dccdac8611e70c759c47a65f2b1aea7">FitterBase::ProcessMCMC</a></div><div class="ttdeci">void ProcessMCMC()</div><div class="ttdoc">Process MCMC output.</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8cpp_source.html#l00373">FitterBase.cpp:373</a></div></div>
-<div class="ttc" id="aclassFitterBase_html_a418f581b688f035211107ddd83168c08"><div class="ttname"><a href="classFitterBase.html#a418f581b688f035211107ddd83168c08">FitterBase::SaveOutput</a></div><div class="ttdeci">void SaveOutput()</div><div class="ttdoc">Save output and close files.</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8cpp_source.html#l00241">FitterBase.cpp:241</a></div></div>
+<div class="ttc" id="aclassFitterBase_html_a1dccdac8611e70c759c47a65f2b1aea7"><div class="ttname"><a href="classFitterBase.html#a1dccdac8611e70c759c47a65f2b1aea7">FitterBase::ProcessMCMC</a></div><div class="ttdeci">void ProcessMCMC()</div><div class="ttdoc">Process MCMC output.</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8cpp_source.html#l00372">FitterBase.cpp:372</a></div></div>
+<div class="ttc" id="aclassFitterBase_html_a418f581b688f035211107ddd83168c08"><div class="ttname"><a href="classFitterBase.html#a418f581b688f035211107ddd83168c08">FitterBase::SaveOutput</a></div><div class="ttdeci">void SaveOutput()</div><div class="ttdoc">Save output and close files.</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8cpp_source.html#l00240">FitterBase.cpp:240</a></div></div>
 <div class="ttc" id="aclassFitterBase_html_a48f38bfa8996fe00d51f35b05dd16b46"><div class="ttname"><a href="classFitterBase.html#a48f38bfa8996fe00d51f35b05dd16b46">FitterBase::SaveSettings</a></div><div class="ttdeci">void SaveSettings()</div><div class="ttdoc">Save the settings that the MCMC was run with.</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8cpp_source.html#l00103">FitterBase.cpp:103</a></div></div>
 <div class="ttc" id="aclassFitterBase_html_a53715760edd8c7640432f31793fd28f9"><div class="ttname"><a href="classFitterBase.html#a53715760edd8c7640432f31793fd28f9">FitterBase::PrepareOutput</a></div><div class="ttdeci">void PrepareOutput()</div><div class="ttdoc">Prepare the output file.</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8cpp_source.html#l00169">FitterBase.cpp:169</a></div></div>
 <div class="ttc" id="aclassFitterBase_html_ad955982e63066918cba9c53381608d09"><div class="ttname"><a href="classFitterBase.html#ad955982e63066918cba9c53381608d09">FitterBase::auto_save</a></div><div class="ttdeci">int auto_save</div><div class="ttdoc">auto save every N steps</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00147">FitterBase.h:147</a></div></div>

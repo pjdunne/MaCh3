@@ -1,0 +1,5 @@
+<map id="splineFDBase" name="splineFDBase">
+<area shape="rect" id="Node000001" title="Bin&#45;by&#45;bin class calculating response for spline parameters." alt="" coords="5,79,108,105"/>
+<area shape="rect" id="Node000002" href="$classSplineBase.html" title="Base class for calculating weight from spline." alt="" coords="13,5,100,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="59,46,59,79,54,79,54,46"/>
+</map>

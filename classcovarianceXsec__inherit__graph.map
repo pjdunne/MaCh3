@@ -1,0 +1,5 @@
+<map id="covarianceXsec" name="covarianceXsec">
+<area shape="rect" id="Node000001" title="Class responsible for handling of systematic error parameters with different types defined in the con..." alt="" coords="5,79,120,105"/>
+<area shape="rect" id="Node000002" href="$classcovarianceBase.html" title="Base class responsible for handling of systematic error parameters. Capable of using PCA or using ada..." alt="" coords="5,5,120,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="65,46,65,79,60,79,60,46"/>
+</map>

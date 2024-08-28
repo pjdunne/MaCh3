@@ -1,0 +1,13 @@
+<map id="splineFDBase" name="splineFDBase">
+<area shape="rect" id="Node000001" title="Bin&#45;by&#45;bin class calculating response for spline parameters." alt="" coords="19,258,122,283"/>
+<area shape="rect" id="Node000002" href="$classSplineBase.html" title="Base class for calculating weight from spline." alt="" coords="5,169,93,195"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="58,209,70,257,65,258,53,211"/>
+<area shape="rect" id="Node000003" href="$classcovarianceXsec.html" title="Class responsible for handling of systematic error parameters with different types defined in the con..." alt="" coords="117,169,232,195"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="150,207,86,259,83,255,147,203"/>
+<area shape="rect" id="Node000004" href="$classcovarianceBase.html" title="Base class responsible for handling of systematic error parameters. Capable of using PCA or using ada..." alt="" coords="117,94,232,120"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="177,135,177,169,172,169,172,135"/>
+<area shape="rect" id="Node000005" href="$classPCAHandler.html" title=" " alt="" coords="29,5,122,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="103,39,162,92,159,96,99,43"/>
+<area shape="rect" id="Node000006" href="$classadaptive__mcmc_1_1AdaptiveMCMCHandler.html" title="Contains information about adaptive covariance matrix." alt="" coords="147,5,402,31"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="251,43,190,96,186,92,247,39"/>
+</map>

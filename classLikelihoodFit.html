@@ -87,14 +87,40 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for LikelihoodFit:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="classLikelihoodFit.png" usemap="#LikelihoodFit_map" alt=""/>
-  <map id="LikelihoodFit_map" name="LikelihoodFit_map">
-<area href="classFitterBase.html" title="Base class for implementing fitting algorithms." alt="FitterBase" shape="rect" coords="46,0,129,24"/>
-<area href="classMinuitFit.html" title="Implementation of Minuit fitting algorithm." alt="MinuitFit" shape="rect" coords="0,112,83,136"/>
-<area href="classPSO.html" title="Class PSO, consist of a vector of object Class Particle and global best Takes in the size (number of ..." alt="PSO" shape="rect" coords="93,112,176,136"/>
-  </map>
-</div></div>
+<div class="center"><img src="classLikelihoodFit__inherit__graph.png" border="0" usemap="#aLikelihoodFit_inherit__map" alt="Inheritance graph"/></div>
+<map name="aLikelihoodFit_inherit__map" id="aLikelihoodFit_inherit__map">
+<area shape="rect" title="Implementation of base Likelihood Fit class, it is mostly responsible for likelihood calculation whil..." alt="" coords="35,79,130,105"/>
+<area shape="rect" href="classMinuitFit.html" title="Implementation of Minuit fitting algorithm." alt="" coords="5,153,77,178"/>
+<area shape="poly" title=" " alt="" coords="70,119,50,154,46,151,66,117"/>
+<area shape="rect" href="classPSO.html" title="Class PSO, consist of a vector of object Class Particle and global best Takes in the size (number of ..." alt="" coords="100,153,150,178"/>
+<area shape="poly" title=" " alt="" coords="99,116,120,151,116,154,95,119"/>
+<area shape="rect" href="classFitterBase.html" title="Base class for implementing fitting algorithms." alt="" coords="42,5,123,31"/>
+<area shape="poly" title=" " alt="" coords="85,46,85,79,80,79,80,46"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for LikelihoodFit:</div>
+<div class="dyncontent">
+<div class="center"><img src="classLikelihoodFit__coll__graph.png" border="0" usemap="#aLikelihoodFit_coll__map" alt="Collaboration graph"/></div>
+<map name="aLikelihoodFit_coll__map" id="aLikelihoodFit_coll__map">
+<area shape="rect" title="Implementation of base Likelihood Fit class, it is mostly responsible for likelihood calculation whil..." alt="" coords="68,361,164,387"/>
+<area shape="rect" href="classFitterBase.html" title="Base class for implementing fitting algorithms." alt="" coords="75,286,157,312"/>
+<area shape="poly" title=" " alt="" coords="119,327,119,361,113,361,113,327"/>
+<area shape="rect" href="classmanager.html" title="The manager class is responsible for managing configurations and settings." alt="" coords="80,183,152,208"/>
+<area shape="poly" title=" " alt="" coords="119,224,119,286,113,286,113,224"/>
+<area shape="rect" href="classMaCh3Modes.html" title="KS: Class describing MaCh3 modes used in the analysis, it is being initialised from config." alt="" coords="5,94,107,120"/>
+<area shape="poly" title=" " alt="" coords="42,134,27,170,25,189,28,207,42,231,60,252,99,284,95,288,57,256,38,234,24,209,19,189,22,168,37,132"/>
+<area shape="poly" title=" " alt="" coords="75,131,110,181,106,184,71,134"/>
+<area shape="rect" href="classcovarianceOsc.html" title="Class responsible for handling of neutrino oscillation parameters." alt="" coords="175,183,284,208"/>
+<area shape="poly" title=" " alt="" coords="208,221,160,264,132,288,129,284,157,260,204,217"/>
+<area shape="rect" href="classcovarianceBase.html" title="Base class responsible for handling of systematic error parameters. Capable of using PCA or using ada..." alt="" coords="172,94,287,120"/>
+<area shape="poly" title=" " alt="" coords="232,135,232,182,227,182,227,135"/>
+<area shape="rect" href="classPCAHandler.html" title=" " alt="" coords="84,5,177,31"/>
+<area shape="poly" title=" " alt="" coords="158,39,217,92,214,96,154,43"/>
+<area shape="rect" href="classadaptive__mcmc_1_1AdaptiveMCMCHandler.html" title="Contains information about adaptive covariance matrix." alt="" coords="202,5,457,31"/>
+<area shape="poly" title=" " alt="" coords="306,43,245,96,241,92,302,39"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -300,13 +326,15 @@ Protected Attributes</h2></td></tr>
 <div class="line"><span class="lineno">    6</span><span class="comment">// *******************</span></div>
 <div class="line"><span class="lineno">    7</span>    <a class="code hl_variable" href="classLikelihoodFit.html#ac779acfe140500d06e42a1d4ace25385">NPars</a> = 0;</div>
 <div class="line"><span class="lineno">    8</span>    <a class="code hl_variable" href="classLikelihoodFit.html#a0b50b7b607751e80b6c85e9db98631af">NParsPCA</a> = 0;</div>
-<div class="line"><span class="lineno">    9</span>    <a class="code hl_variable" href="classLikelihoodFit.html#ae1e5d13b373bf73e1b1003f7f9d65f00">fMirroring</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">    9</span>    <a class="code hl_variable" href="classLikelihoodFit.html#ae1e5d13b373bf73e1b1003f7f9d65f00">fMirroring</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">GetFromManager&lt;bool&gt;</a>(<a class="code hl_variable" href="classFitterBase.html#a4fceb68f242feeb04a0ddf42a5a37095">fitMan</a>-&gt;<a class="code hl_function" href="classmanager.html#ab3999cc856ede72b37f68bdb28bd5520">raw</a>()[<span class="stringliteral">&quot;General&quot;</span>][<span class="stringliteral">&quot;Fitter&quot;</span>][<span class="stringliteral">&quot;Mirroring&quot;</span>], <span class="keyword">false</span>);</div>
 <div class="line"><span class="lineno">   10</span>}</div>
 <div class="ttc" id="aYamlHelper_8h_html_a1a6adcb8b24bfbdcb936ced6812e1b0c"><div class="ttname"><a href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">GetFromManager</a></div><div class="ttdeci">Type GetFromManager(const YAML::Node &amp;node, Type defval)</div><div class="ttdoc">Get content of config file if node is not found take default value specified.</div><div class="ttdef"><b>Definition</b> <a href="YamlHelper_8h_source.html#l00021">YamlHelper.h:21</a></div></div>
 <div class="ttc" id="aclassFitterBase_html"><div class="ttname"><a href="classFitterBase.html">FitterBase</a></div><div class="ttdoc">Base class for implementing fitting algorithms.</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00024">FitterBase.h:24</a></div></div>
+<div class="ttc" id="aclassFitterBase_html_a4fceb68f242feeb04a0ddf42a5a37095"><div class="ttname"><a href="classFitterBase.html#a4fceb68f242feeb04a0ddf42a5a37095">FitterBase::fitMan</a></div><div class="ttdeci">manager * fitMan</div><div class="ttdoc">The manager.</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00093">FitterBase.h:93</a></div></div>
 <div class="ttc" id="aclassLikelihoodFit_html_a0b50b7b607751e80b6c85e9db98631af"><div class="ttname"><a href="classLikelihoodFit.html#a0b50b7b607751e80b6c85e9db98631af">LikelihoodFit::NParsPCA</a></div><div class="ttdeci">int NParsPCA</div><div class="ttdoc">Number of all parameters from all covariances in PCA base.</div><div class="ttdef"><b>Definition</b> <a href="LikelihoodFit_8h_source.html#l00029">LikelihoodFit.h:29</a></div></div>
 <div class="ttc" id="aclassLikelihoodFit_html_ac779acfe140500d06e42a1d4ace25385"><div class="ttname"><a href="classLikelihoodFit.html#ac779acfe140500d06e42a1d4ace25385">LikelihoodFit::NPars</a></div><div class="ttdeci">int NPars</div><div class="ttdoc">Number of all parameters from all covariances.</div><div class="ttdef"><b>Definition</b> <a href="LikelihoodFit_8h_source.html#l00027">LikelihoodFit.h:27</a></div></div>
 <div class="ttc" id="aclassLikelihoodFit_html_ae1e5d13b373bf73e1b1003f7f9d65f00"><div class="ttname"><a href="classLikelihoodFit.html#ae1e5d13b373bf73e1b1003f7f9d65f00">LikelihoodFit::fMirroring</a></div><div class="ttdeci">bool fMirroring</div><div class="ttdoc">Flag telling if mirroring is used or not.</div><div class="ttdef"><b>Definition</b> <a href="LikelihoodFit_8h_source.html#l00031">LikelihoodFit.h:31</a></div></div>
+<div class="ttc" id="aclassmanager_html_ab3999cc856ede72b37f68bdb28bd5520"><div class="ttname"><a href="classmanager.html#ab3999cc856ede72b37f68bdb28bd5520">manager::raw</a></div><div class="ttdeci">YAML::Node const &amp; raw()</div><div class="ttdoc">Return config.</div><div class="ttdef"><b>Definition</b> <a href="manager_8h_source.html#l00048">manager.h:48</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -498,7 +526,7 @@ Protected Attributes</h2></td></tr>
 <div class="ttc" id="aclassFitterBase_html_ad955982e63066918cba9c53381608d09"><div class="ttname"><a href="classFitterBase.html#ad955982e63066918cba9c53381608d09">FitterBase::auto_save</a></div><div class="ttdeci">int auto_save</div><div class="ttdoc">auto save every N steps</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00147">FitterBase.h:147</a></div></div>
 <div class="ttc" id="aclassFitterBase_html_aed2032b9c4a4f2248abe548f54f8dcc8"><div class="ttname"><a href="classFitterBase.html#aed2032b9c4a4f2248abe548f54f8dcc8">FitterBase::outTree</a></div><div class="ttdeci">TTree * outTree</div><div class="ttdoc">Output tree with posteriors.</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00145">FitterBase.h:145</a></div></div>
 <div class="ttc" id="aclassFitterBase_html_afac0dcceb1df194159c07945e8dc0069"><div class="ttname"><a href="classFitterBase.html#afac0dcceb1df194159c07945e8dc0069">FitterBase::samples</a></div><div class="ttdeci">std::vector&lt; samplePDFBase * &gt; samples</div><div class="ttdoc">Sample holder.</div><div class="ttdef"><b>Definition</b> <a href="FitterBase_8h_source.html#l00118">FitterBase.h:118</a></div></div>
-<div class="ttc" id="aclasscovarianceOsc_html_a5732a5abf9aa3d73f9dec5ba9d33217f"><div class="ttname"><a href="classcovarianceOsc.html#a5732a5abf9aa3d73f9dec5ba9d33217f">covarianceOsc::getPropPars</a></div><div class="ttdeci">double * getPropPars()</div><div class="ttdoc">Retrieves the proposed parameters.</div><div class="ttdef"><b>Definition</b> <a href="covarianceOsc_8cpp_source.html#l00147">covarianceOsc.cpp:147</a></div></div>
+<div class="ttc" id="aclasscovarianceOsc_html_a5732a5abf9aa3d73f9dec5ba9d33217f"><div class="ttname"><a href="classcovarianceOsc.html#a5732a5abf9aa3d73f9dec5ba9d33217f">covarianceOsc::getPropPars</a></div><div class="ttdeci">double * getPropPars()</div><div class="ttdoc">Retrieves the proposed parameters.</div><div class="ttdef"><b>Definition</b> <a href="covarianceOsc_8cpp_source.html#l00146">covarianceOsc.cpp:146</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

@@ -1,0 +1,9 @@
+<map id="covarianceOsc" name="covarianceOsc">
+<area shape="rect" id="Node000001" title="Class responsible for handling of neutrino oscillation parameters." alt="" coords="97,169,205,195"/>
+<area shape="rect" id="Node000002" href="$classcovarianceBase.html" title="Base class responsible for handling of systematic error parameters. Capable of using PCA or using ada..." alt="" coords="94,94,208,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="153,135,153,169,148,169,148,135"/>
+<area shape="rect" id="Node000003" href="$classPCAHandler.html" title=" " alt="" coords="5,5,99,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="79,39,139,92,135,96,75,43"/>
+<area shape="rect" id="Node000004" href="$classadaptive__mcmc_1_1AdaptiveMCMCHandler.html" title="Contains information about adaptive covariance matrix." alt="" coords="123,5,378,31"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="227,43,166,96,163,92,223,39"/>
+</map>

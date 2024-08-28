@@ -43,7 +43,7 @@ var searchData=
   ['nomxbin_40',['NomXBin',['../structfdmc__base.html#ae69617156a70dffc091e5e16efab2067',1,'fdmc_base']]],
   ['nomybin_41',['NomYBin',['../structfdmc__base.html#abd8d56f6ab427aa3e657707e6ad805f7',1,'fdmc_base']]],
   ['nonsampledirnames_42',['nonSampleDirNames',['../PlotLLH_8cpp.html#a4efd2f2417608fa67730f672cd7a534f',1,'PlotLLH.cpp']]],
-  ['nooverflowintegral_43',['nooverflowintegral',['../Structs_8h.html#a34ea004397beb80720b7cf838ba94410',1,'NoOverflowIntegral(TH2Poly *):&#160;Structs.cpp'],['../Structs_8cpp.html#ab18c6b2408d7b9021bad06d47a06ee8d',1,'NoOverflowIntegral(TH2Poly *poly):&#160;Structs.cpp']]],
+  ['nooverflowintegral_43',['nooverflowintegral',['../Structs_8h.html#ab18c6b2408d7b9021bad06d47a06ee8d',1,'NoOverflowIntegral(TH2Poly *poly):&#160;Structs.cpp'],['../Structs_8cpp.html#ab18c6b2408d7b9021bad06d47a06ee8d',1,'NoOverflowIntegral(TH2Poly *poly):&#160;Structs.cpp']]],
   ['normalisepoly_44',['normalisepoly',['../Structs_8h.html#ae28c217f8e8591248bfa54e95fdd7741',1,'NormalisePoly(TH2Poly *Histogram):&#160;Structs.cpp'],['../Structs_8cpp.html#ae28c217f8e8591248bfa54e95fdd7741',1,'NormalisePoly(TH2Poly *Histogram):&#160;Structs.cpp']]],
   ['normaliseth2poly_45',['NormaliseTH2Poly',['../classSampleSummary.html#acab977d5e63eaca5862c352fea8a01c2',1,'SampleSummary']]],
   ['normparams_46',['NormParams',['../classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5',1,'covarianceXsec']]],

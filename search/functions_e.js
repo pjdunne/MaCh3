@@ -51,12 +51,12 @@ var searchData=
   ['probinitgpu_48',['probInitGPU',['../probGpu_8cu.html#ab3cc109d8f1f54898e964f18153f6fd2',1,'probGpu.cu']]],
   ['probinitgpu_5fatm_49',['probInitGPU_atm',['../probGpu_8cu.html#a9864181fd8d2de92e069ad0213a7cbcf',1,'probGpu.cu']]],
   ['probstopdg_50',['ProbsToPDG',['../Structs_8h.html#a602ad839195b7087a4897e8f6b603ee6',1,'Structs.h']]],
-  ['processmcmc_51',['processmcmc',['../ProcessMCMC_8cpp.html#abc581054e1f370aa49c179affaae791a',1,'ProcessMCMC():&#160;ProcessMCMC.cpp'],['../classFitterBase.html#a1dccdac8611e70c759c47a65f2b1aea7',1,'FitterBase::ProcessMCMC()']]],
+  ['processmcmc_51',['processmcmc',['../ProcessMCMC_8cpp.html#a52c48199a4bcad577b88768020a91041',1,'ProcessMCMC():&#160;ProcessMCMC.cpp'],['../classFitterBase.html#a1dccdac8611e70c759c47a65f2b1aea7',1,'FitterBase::ProcessMCMC()']]],
   ['projecthist_52',['ProjectHist',['../classSampleSummary.html#af9277cfce437396a23e3fb22c55196f9',1,'SampleSummary']]],
   ['projectpoly_53',['ProjectPoly',['../classSampleSummary.html#a438ee66490a45c435baf264b6f433ebd',1,'SampleSummary']]],
   ['propagate_54',['propagate',['../probGpu_8cu.html#aaef807b1ff8ad0f12824fd7dc0cc73af',1,'probGpu.cu']]],
   ['propagatelinear_55',['propagateLinear',['../probGpu_8cu.html#a8fcc717c4d5b5bbcbdefc58ad20ccaf9',1,'probGpu.cu']]],
   ['propagatelinearall_56',['propagateLinearAll',['../probGpu_8cu.html#a30b0751d6b2e57811b62620869bbc2c8',1,'probGpu.cu']]],
-  ['proposestep_57',['proposestep',['../classmcmc.html#aaf921343861cec8bb96beb2503b3fe2c',1,'mcmc::ProposeStep()'],['../classcovarianceOsc.html#abb8df24417b380af9b96763b8abc6b2e',1,'covarianceOsc::proposeStep()'],['../classcovarianceBase.html#a95c7ca23995af579cfa7f199833fe24a',1,'covarianceBase::proposeStep()']]],
+  ['proposestep_57',['proposestep',['../classcovarianceOsc.html#abb8df24417b380af9b96763b8abc6b2e',1,'covarianceOsc::proposeStep()'],['../classcovarianceBase.html#a95c7ca23995af579cfa7f199833fe24a',1,'covarianceBase::proposeStep()'],['../classmcmc.html#aaf921343861cec8bb96beb2503b3fe2c',1,'mcmc::ProposeStep()']]],
   ['pso_58',['PSO',['../classPSO.html#a14542152b9bd6e2e0f59c8ea1e1e890f',1,'PSO']]]
 ];
