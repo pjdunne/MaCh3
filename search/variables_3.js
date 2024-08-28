@@ -13,7 +13,7 @@ var searchData=
   ['clock_10',['clock',['../classFitterBase.html#aafacee3aada764cd6f7720d1eaeed3cb',1,'FitterBase']]],
   ['coeffindex_11',['CoeffIndex',['../classsplineFDBase.html#abcff04fee3e6790a099a0df9dbee74c2',1,'splineFDBase']]],
   ['coeffindexvec_12',['coeffindexvec',['../classsplineFDBase.html#af63885ddb6731f77808d029372e6b187',1,'splineFDBase']]],
-  ['config_13',['config',['../classmanager.html#a7519c9ab5670ae939d18485d31057b46',1,'manager::config'],['../GetPostfitParamPlots_8cpp.html#a01d92a800904faa16b8c1c1372c40fb3',1,'config:&#160;GetPostfitParamPlots.cpp'],['../ProcessMCMC_8cpp.html#a13056efd080ab16304b6f7be0ebf0a61',1,'config:&#160;ProcessMCMC.cpp']]],
+  ['config_13',['config',['../classmanager.html#a7519c9ab5670ae939d18485d31057b46',1,'manager::config'],['../ProcessMCMC_8cpp.html#a13056efd080ab16304b6f7be0ebf0a61',1,'config:&#160;ProcessMCMC.cpp']]],
   ['corr_5fthrow_14',['corr_throw',['../classcovarianceBase.html#a7b70de3f098aae1d537d80bac5969d88',1,'covarianceBase']]],
   ['correlation_15',['Correlation',['../classMCMCProcessor.html#a03f28431158777cdd81d058b6632a92f',1,'MCMCProcessor']]],
   ['covar_16',['covar',['../classThrowParms.html#af27bd2c5ae4323a41bf696f91673ed54',1,'ThrowParms']]],

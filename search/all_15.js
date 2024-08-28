@@ -15,7 +15,7 @@ var searchData=
   ['updatethrowmatrix_12',['updateThrowMatrix',['../classcovarianceBase.html#a7e2d3623bbbf3edee558e04737fe2add',1,'covarianceBase']]],
   ['uppercut_13',['UpperCut',['../classMCMCProcessor.html#a840c686f15f419c0156df01c4ed62931',1,'MCMCProcessor']]],
   ['ur_14',['UR',['../structBox.html#a91e3a5bc435593fa2bab7389e47bf0fd',1,'Box']]],
-  ['usage_15',['usage',['../CombineMaCh3Chains_8cpp.html#a2ef30c42cbc289d899a8be5d2d8f77d0',1,'CombineMaCh3Chains.cpp']]],
+  ['usage_15',['usage',['../classMaCh3Plotting_1_1PlottingManager.html#a8910c157ce1ec6698f3bacdf521789ff',1,'MaCh3Plotting::PlottingManager::usage()'],['../CombineMaCh3Chains_8cpp.html#a2ef30c42cbc289d899a8be5d2d8f77d0',1,'usage():&#160;CombineMaCh3Chains.cpp']]],
   ['use_16',['How To Use',['../md__2github_2workspace_2README.html#autotoc_md20',1,'']]],
   ['use_5fadaptive_17',['use_adaptive',['../classcovarianceBase.html#a838731abd6716940043b484b2b266f86',1,'covarianceBase']]],
   ['usebeta_18',['USEBETA',['../samplePDFFDBase_8h.html#aef32089fdd2db890db53022a2e7da7e8',1,'samplePDFFDBase.h']]],
@@ -25,5 +25,6 @@ var searchData=
   ['usefinebinsperbin_22',['useFineBinsPerBin',['../classOscillator.html#ad2aad55aa2cd4ff56b03890d0aa49abe',1,'Oscillator']]],
   ['usenondoubledangles_23',['UseNonDoubledAngles',['../classsamplePDFFDBase.html#a36253a401aca201ca4f1808a437db4d9',1,'samplePDFFDBase']]],
   ['useproductionheightaveraging_24',['UseProductionHeightAveraging',['../classOscillator.html#a3d695f97e6e54b49ed4879b04f78f92a',1,'Oscillator']]],
-  ['usereactorprior_25',['useReactorPrior',['../classcovarianceOsc.html#a91995c48dcdf4ab10f952ac2e11abf96',1,'covarianceOsc']]]
+  ['usereactorprior_25',['useReactorPrior',['../classcovarianceOsc.html#a91995c48dcdf4ab10f952ac2e11abf96',1,'covarianceOsc']]],
+  ['utility_20functions_26',['Plotting Utility Functions',['../group__Utils.html',1,'']]]
 ];

@@ -13,7 +13,9 @@ var searchData=
   ['dragrace_10',['DragRace',['../classFitterBase.html#ab3db1d0bb7364e70cd432a3e1c0a600e',1,'FitterBase']]],
   ['drawcorrelations1d_11',['DrawCorrelations1D',['../classMCMCProcessor.html#a5b0961bcb0eea7a347e6a29ef7738d80',1,'MCMCProcessor']]],
   ['drawcovariance_12',['DrawCovariance',['../classMCMCProcessor.html#a8d9b9c1c780a51b130fe528583dc5019',1,'MCMCProcessor']]],
-  ['drawplots_13',['DrawPlots',['../GetPostfitParamPlots_8cpp.html#a45a260b517b253fb3d54f9168537da64',1,'GetPostfitParamPlots.cpp']]],
+  ['drawplots_13',['DrawPlots',['../GetPostfitParamPlots_8cpp.html#a447545e50107fe970fde19c465f33700',1,'GetPostfitParamPlots.cpp']]],
   ['drawpostfit_14',['DrawPostfit',['../classMCMCProcessor.html#ab420de77e598da4b02ba74cdc20f2ea9',1,'MCMCProcessor']]],
-  ['dumpweights_15',['DumpWeights',['../classsamplePDFFDBase.html#a571f6a6915c16e9bd97ac6691a8cbe1b',1,'samplePDFFDBase']]]
+  ['drawratiostack_15',['drawRatioStack',['../PlotLLH_8cpp.html#a22a044e77ac75863b8962c3a38b95ef7',1,'PlotLLH.cpp']]],
+  ['dump_16',['Dump',['../structMaCh3Plotting_1_1InputFile.html#a0897b76fdbfc674ed94da1d2b4adb0a2',1,'MaCh3Plotting::InputFile']]],
+  ['dumpweights_17',['DumpWeights',['../classsamplePDFFDBase.html#a571f6a6915c16e9bd97ac6691a8cbe1b',1,'samplePDFFDBase']]]
 ];

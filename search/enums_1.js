@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['matrix_5ftype_0',['matrix_type',['../probGpu_8cu.html#a07962dd0449c5d375d80af8cfaad8672',1,'probGpu.cu']]]
+  ['filetypeenum_0',['fileTypeEnum',['../namespaceMaCh3Plotting.html#a4152b51a260d6a18f41b3a22aa2a6b75',1,'MaCh3Plotting']]]
 ];

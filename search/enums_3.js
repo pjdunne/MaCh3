@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['parameterenum_0',['ParameterEnum',['../MCMCProcessor_8h.html#acd2848273413543fe14936252942c20b',1,'MCMCProcessor.h']]],
-  ['probnu_1',['ProbNu',['../Structs_8h.html#a5a4651943de972b89fd091d11fa7b3d7',1,'Structs.h']]]
+  ['nu_5ftype_0',['nu_type',['../probGpu_8cu.html#af576b2dca8674d5d2ea4ec3f38ee52f3',1,'probGpu.cu']]],
+  ['nupdg_1',['NuPDG',['../Structs_8h.html#a0dfdd8cf84b8fa3495e9e5e520fe6cd2',1,'Structs.h']]]
 ];

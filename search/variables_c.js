@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['mach3llhfilename_0',['Mach3LLHFileName',['../PlotLLH_8cpp.html#a6d439ed7ab6a5217ffd29ebaf72f3fcd',1,'PlotLLH.cpp']]],
-  ['madepostfit_1',['MadePostfit',['../classMCMCProcessor.html#aecc35d4ea7d2c7e020e50388ba0ffb64',1,'MCMCProcessor']]],
+  ['madepostfit_0',['MadePostfit',['../classMCMCProcessor.html#aecc35d4ea7d2c7e020e50388ba0ffb64',1,'MCMCProcessor']]],
+  ['man_1',['man',['../PlotLLH_8cpp.html#aa6f3c9a8cee8f72f6f8ce65b720a2d40',1,'man:&#160;PlotLLH.cpp'],['../GetPostfitParamPlots_8cpp.html#aa6f3c9a8cee8f72f6f8ce65b720a2d40',1,'man:&#160;GetPostfitParamPlots.cpp']]],
   ['manycoeff_5farr_2',['manycoeff_arr',['../classsplineFDBase.html#a23afe3075f6b512384e89493de6e4667',1,'splineFDBase']]],
   ['marginalposteriorvariance_3',['MarginalPosteriorVariance',['../RHat_8cpp.html#a68813385f1240d1264e139391b12bf05',1,'RHat.cpp']]],
   ['marginalposteriorvariancefolded_4',['MarginalPosteriorVarianceFolded',['../RHat_8cpp.html#af4fae3d323e2f5220b3506386304f8f4',1,'RHat.cpp']]],
@@ -28,7 +28,7 @@ var searchData=
   ['minuit_25',['minuit',['../classMinuitFit.html#a3f5a1b7de36ce6c55821e262b016cb19',1,'MinuitFit']]],
   ['mix_26',['mix',['../probGpu_8cu.html#aed2301470b9662874b90968ed9c54911',1,'probGpu.cu']]],
   ['mix_5fdevice_27',['mix_device',['../probGpu_8cu.html#a36790f4e53cc89c486c783a9127e5e56',1,'probGpu.cu']]],
-  ['mode_28',['mode',['../classMaCh3Modes.html#a062f961a64e9b6bebf420730f9dad9ff',1,'MaCh3Modes::Mode'],['../structfdmc__base.html#a86b6b78f41e045592074494f960c8128',1,'fdmc_base::mode']]],
+  ['mode_28',['mode',['../structfdmc__base.html#a86b6b78f41e045592074494f960c8128',1,'fdmc_base::mode'],['../classMaCh3Modes.html#a062f961a64e9b6bebf420730f9dad9ff',1,'MaCh3Modes::Mode']]],
   ['modehist_29',['ModeHist',['../classSampleSummary.html#a59475a0c9460277914402850372727ea',1,'SampleSummary']]],
   ['modemap_30',['ModeMap',['../classMaCh3Modes.html#a52a226378736541ece3830f53ac851c3',1,'MaCh3Modes']]],
   ['modes_31',['modes',['../structXsecNorms4.html#ad0632d5a94a37ee5ce297698abadd844',1,'XsecNorms4::modes'],['../classSampleSummary.html#a6593fed9709673a6910f96adc88fc8f2',1,'SampleSummary::Modes'],['../classFitterBase.html#a004cb6e6168032d9280ce3db912f1a43',1,'FitterBase::Modes'],['../classsamplePDFBase.html#ab4ce7691212fdc86570b98d58a333ddf',1,'samplePDFBase::Modes'],['../classmanager.html#ab30ad812780ee2152b72f942b7b91dec',1,'manager::Modes']]],

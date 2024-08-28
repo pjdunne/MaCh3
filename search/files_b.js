@@ -1,22 +1,5 @@
 var searchData=
 [
-  ['samplepdfbase_2ecpp_0',['samplePDFBase.cpp',['../samplePDFBase_8cpp.html',1,'']]],
-  ['samplepdfbase_2eh_1',['samplePDFBase.h',['../samplePDFBase_8h.html',1,'']]],
-  ['samplepdffdbase_2ecpp_2',['samplePDFFDBase.cpp',['../samplePDFFDBase_8cpp.html',1,'']]],
-  ['samplepdffdbase_2eh_3',['samplePDFFDBase.h',['../samplePDFFDBase_8h.html',1,'']]],
-  ['samplesummary_2ecpp_4',['SampleSummary.cpp',['../SampleSummary_8cpp.html',1,'']]],
-  ['samplesummary_2eh_5',['SampleSummary.h',['../SampleSummary_8h.html',1,'']]],
-  ['security_2emd_6',['SECURITY.md',['../SECURITY_8md.html',1,'']]],
-  ['shiftfunctors_2eh_7',['ShiftFunctors.h',['../ShiftFunctors_8h.html',1,'']]],
-  ['splinebase_2ecpp_8',['SplineBase.cpp',['../SplineBase_8cpp.html',1,'']]],
-  ['splinebase_2eh_9',['SplineBase.h',['../SplineBase_8h.html',1,'']]],
-  ['splinecommon_2eh_10',['SplineCommon.h',['../SplineCommon_8h.html',1,'']]],
-  ['splinefdbase_2ecpp_11',['splineFDBase.cpp',['../splineFDBase_8cpp.html',1,'']]],
-  ['splinefdbase_2eh_12',['splineFDBase.h',['../splineFDBase_8h.html',1,'']]],
-  ['splinemonolith_2ecpp_13',['SplineMonolith.cpp',['../SplineMonolith_8cpp.html',1,'']]],
-  ['splinemonolith_2eh_14',['SplineMonolith.h',['../SplineMonolith_8h.html',1,'']]],
-  ['splinestructs_2eh_15',['SplineStructs.h',['../SplineStructs_8h.html',1,'']]],
-  ['statisticalutils_2eh_16',['StatisticalUtils.h',['../StatisticalUtils_8h.html',1,'']]],
-  ['structs_2ecpp_17',['Structs.cpp',['../Structs_8cpp.html',1,'']]],
-  ['structs_2eh_18',['Structs.h',['../Structs_8h.html',1,'']]]
+  ['readme_2emd_0',['readme.md',['../Diagnostics_2README_8md.html',1,'(Global Namespace)'],['../plotting_2README_8md.html',1,'(Global Namespace)'],['../README_8md.html',1,'(Global Namespace)']]],
+  ['rhat_2ecpp_1',['RHat.cpp',['../RHat_8cpp.html',1,'']]]
 ];
