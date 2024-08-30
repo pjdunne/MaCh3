@@ -54,7 +54,7 @@ var searchData=
   ['getfile_51',['getFile',['../classMaCh3Plotting_1_1InputManager.html#ae107ba3d09a35ed2a00def84f5bb7a50',1,'MaCh3Plotting::InputManager']]],
   ['getfilelabel_52',['getFileLabel',['../classMaCh3Plotting_1_1PlottingManager.html#ac3180484af4d04aa7a0febd1cda99c54',1,'MaCh3Plotting::PlottingManager']]],
   ['getfilelabels_53',['getFileLabels',['../classMaCh3Plotting_1_1PlottingManager.html#a9584771a6c609cc833dff557c2f67f0d',1,'MaCh3Plotting::PlottingManager']]],
-  ['getfilename_54',['getfilename',['../classmanager.html#ab81f0be941a168843b372d38999877f2',1,'manager::GetFileName()'],['../classMaCh3Plotting_1_1PlottingManager.html#a8adadf9d9bbf91b5acef6578a0206af7',1,'MaCh3Plotting::PlottingManager::getFileName(int i)']]],
+  ['getfilename_54',['getfilename',['../classMaCh3Plotting_1_1PlottingManager.html#a8adadf9d9bbf91b5acef6578a0206af7',1,'MaCh3Plotting::PlottingManager::getFileName()'],['../classmanager.html#ab81f0be941a168843b372d38999877f2',1,'manager::GetFileName()']]],
   ['getfilenames_55',['getFileNames',['../classMaCh3Plotting_1_1PlottingManager.html#a4eb3bd2f18c614717576f82850532632',1,'MaCh3Plotting::PlottingManager']]],
   ['getfitterspecificoption_56',['getFitterSpecificOption',['../classMaCh3Plotting_1_1InputManager.html#a24fb21a5f30a5b397feec23d2e04c3d3',1,'MaCh3Plotting::InputManager']]],
   ['getfitterspecificparamname_57',['getFitterSpecificParamName',['../classMaCh3Plotting_1_1InputManager.html#aa3a91c2525f5aea76ba182b3be4b2b2a',1,'MaCh3Plotting::InputManager']]],

@@ -100,11 +100,19 @@ Collaboration diagram for SMonolith:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSMonolith__coll__graph.png" border="0" usemap="#aSMonolith_coll__map" alt="Collaboration graph"/></div>
 <map name="aSMonolith_coll__map" id="aSMonolith_coll__map">
-<area shape="rect" title="Even&#45;by&#45;event class calculating response for spline parameters. It is possible to use GPU acceleratio..." alt="" coords="69,94,149,120"/>
-<area shape="rect" href="classSplineBase.html" title="Base class for calculating weight from spline." alt="" coords="5,5,93,31"/>
-<area shape="poly" title=" " alt="" coords="68,42,103,92,99,95,64,45"/>
-<area shape="rect" href="structFastSplineInfo.html" title="CW: Add a struct to hold info about the splinified xsec parameters and help with FindSplineSegment." alt="" coords="116,5,222,31"/>
-<area shape="poly" title=" " alt="" coords="154,45,119,95,115,92,150,42"/>
+<area shape="rect" title="Even&#45;by&#45;event class calculating response for spline parameters. It is possible to use GPU acceleratio..." alt="" coords="324,145,403,171"/>
+<area shape="rect" href="classSplineBase.html" title="Base class for calculating weight from spline." alt="" coords="34,5,121,31"/>
+<area shape="poly" title=" " alt="" coords="137,15,176,18,219,26,262,39,301,60,322,79,339,102,360,144,355,146,335,105,318,83,298,64,260,44,217,31,175,24,137,20"/>
+<area shape="rect" href="structFastSplineInfo.html" title="CW: Add a struct to hold info about the splinified xsec parameters and help with FindSplineSegment." alt="" coords="25,55,130,80"/>
+<area shape="poly" title=" " alt="" coords="146,73,221,89,301,114,347,143,344,147,299,119,220,94,145,78"/>
+<area shape="rect" title=" " alt="" coords="15,105,140,145"/>
+<area shape="poly" title=" " alt="" coords="156,131,324,151,323,156,155,137"/>
+<area shape="rect" title=" " alt="" coords="5,170,150,211"/>
+<area shape="poly" title=" " alt="" coords="165,192,231,191,299,182,335,169,337,174,300,187,232,196,166,198"/>
+<area shape="rect" title=" " alt="" coords="17,235,138,276"/>
+<area shape="poly" title=" " alt="" coords="154,258,226,252,264,243,298,228,316,216,331,201,353,170,357,173,335,204,319,220,301,233,265,248,227,257,154,263"/>
+<area shape="rect" title=" " alt="" coords="14,301,141,327"/>
+<area shape="poly" title=" " alt="" coords="157,323,192,323,229,319,265,310,298,293,324,265,342,231,352,198,358,171,363,172,358,199,347,234,329,268,301,297,267,315,230,325,193,329,157,328"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -1681,7 +1689,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  895</span>  <span class="keywordtype">float</span> *<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">temp_coeffs</a> = <span class="keyword">new</span> <span class="keywordtype">float</span>[<a class="code hl_variable" href="classSMonolith.html#ac0d1df54649909e4cee3385f68132799">_max_knots</a>]();</div>
 <div class="line"><span class="lineno">  896</span>  <a class="code hl_variable" href="classSMonolith.html#ab72795333d6f632565b0f7eb0ca8a658">NSplines_valid</a> = 0;</div>
 <div class="line"><span class="lineno">  897</span> </div>
-<div class="line"><span class="lineno">  898</span>  std::vector&lt;std::vector&lt;TF1_red*&gt; &gt;<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">::iterator</a> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">OuterIt</a>;</div>
+<div class="line"><span class="lineno">  898</span>  std::vector&lt;std::vector&lt;TF1_red*&gt; &gt;::iterator <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">OuterIt</a>;</div>
 <div class="line"><span class="lineno">  899</span>  std::vector&lt;TF1_red*&gt;::iterator <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">InnerIt</a>;</div>
 <div class="line"><span class="lineno">  900</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">EventCounter</a> = 0;</div>
 <div class="line"><span class="lineno">  901</span>  <span class="comment">// Loop over events and extract the spline coefficients</span></div>
@@ -1945,7 +1953,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  356</span>  <span class="comment">// Number of valid splines in total for our entire ensemble of events</span></div>
 <div class="line"><span class="lineno">  357</span>  <a class="code hl_variable" href="classSMonolith.html#ab72795333d6f632565b0f7eb0ca8a658">NSplines_valid</a> = 0;</div>
 <div class="line"><span class="lineno">  358</span> </div>
-<div class="line"><span class="lineno">  359</span>  std::vector&lt;std::vector&lt;TSpline3_red*&gt; &gt;<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">::iterator</a> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">OuterIt</a>;</div>
+<div class="line"><span class="lineno">  359</span>  std::vector&lt;std::vector&lt;TSpline3_red*&gt; &gt;::iterator <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">OuterIt</a>;</div>
 <div class="line"><span class="lineno">  360</span>  std::vector&lt;TSpline3_red*&gt;::iterator <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">InnerIt</a>;</div>
 <div class="line"><span class="lineno">  361</span>  <span class="comment">// Count the number of events</span></div>
 <div class="line"><span class="lineno">  362</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">EventCounter</a> = 0;</div>
@@ -2455,7 +2463,7 @@ Additional Inherited Members</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="SplineMonolith_8cpp_source.html#l01316">1316</a> of file <a class="el" href="SplineMonolith_8cpp_source.html">SplineMonolith.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno"> 1316</span>                                                                                              {</div>
 <div class="line"><span class="lineno"> 1317</span><span class="comment">// *********************************</span></div>
-<div class="line"><span class="lineno"> 1318</span>  std::vector&lt;std::vector&lt;TF1*&gt; &gt;<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">::iterator</a> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">OuterIt</a>;</div>
+<div class="line"><span class="lineno"> 1318</span>  std::vector&lt;std::vector&lt;TF1*&gt; &gt;::iterator <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">OuterIt</a>;</div>
 <div class="line"><span class="lineno"> 1319</span>  std::vector&lt;TF1*&gt;::iterator <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">InnerIt</a>;</div>
 <div class="line"><span class="lineno"> 1320</span> </div>
 <div class="line"><span class="lineno"> 1321</span>  <span class="comment">// The return vector</span></div>
@@ -2525,7 +2533,7 @@ Additional Inherited Members</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="SplineMonolith_8cpp_source.html#l01279">1279</a> of file <a class="el" href="SplineMonolith_8cpp_source.html">SplineMonolith.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno"> 1279</span>                                                                                                             {</div>
 <div class="line"><span class="lineno"> 1280</span><span class="comment">// *********************************</span></div>
-<div class="line"><span class="lineno"> 1281</span>  std::vector&lt;std::vector&lt;TSpline3*&gt; &gt;<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">::iterator</a> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">OuterIt</a>;</div>
+<div class="line"><span class="lineno"> 1281</span>  std::vector&lt;std::vector&lt;TSpline3*&gt; &gt;::iterator <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">OuterIt</a>;</div>
 <div class="line"><span class="lineno"> 1282</span>  std::vector&lt;TSpline3*&gt;::iterator <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">InnerIt</a>;</div>
 <div class="line"><span class="lineno"> 1283</span> </div>
 <div class="line"><span class="lineno"> 1284</span>  <span class="comment">// The return vector</span></div>
@@ -2666,7 +2674,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno"> 1190</span>  nEvents   = 0;</div>
 <div class="line"><span class="lineno"> 1191</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">numParams</a>   = 0;</div>
 <div class="line"><span class="lineno"> 1192</span> </div>
-<div class="line"><span class="lineno"> 1193</span>  std::vector&lt;std::vector&lt;TF1_red*&gt; &gt;<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">::iterator</a> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">OuterIt</a>;</div>
+<div class="line"><span class="lineno"> 1193</span>  std::vector&lt;std::vector&lt;TF1_red*&gt; &gt;::iterator <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">OuterIt</a>;</div>
 <div class="line"><span class="lineno"> 1194</span>  std::vector&lt;TF1_red*&gt;::iterator <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">InnerIt</a>;</div>
 <div class="line"><span class="lineno"> 1195</span> </div>
 <div class="line"><span class="lineno"> 1196</span>  <span class="comment">// Check the number of events</span></div>
@@ -2783,7 +2791,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno"> 1094</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">numParams</a>   = 0;</div>
 <div class="line"><span class="lineno"> 1095</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">nSplines</a> = 0;</div>
 <div class="line"><span class="lineno"> 1096</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">numKnots</a> = 0;</div>
-<div class="line"><span class="lineno"> 1097</span>  std::vector&lt;std::vector&lt;TSpline3_red*&gt; &gt;<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">::iterator</a> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">OuterIt</a>;</div>
+<div class="line"><span class="lineno"> 1097</span>  std::vector&lt;std::vector&lt;TSpline3_red*&gt; &gt;::iterator <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">OuterIt</a>;</div>
 <div class="line"><span class="lineno"> 1098</span>  std::vector&lt;TSpline3_red*&gt;::iterator <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">InnerIt</a>;</div>
 <div class="line"><span class="lineno"> 1099</span> </div>
 <div class="line"><span class="lineno"> 1100</span>  <span class="comment">// Check the number of events</span></div>

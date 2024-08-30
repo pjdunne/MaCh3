@@ -1,0 +1,7 @@
+<map id="adaptive_mcmc::AdaptiveMCMCHandler" name="adaptive_mcmc::AdaptiveMCMCHandler">
+<area shape="rect" id="Node000001" title="Contains information about adaptive covariance matrix." alt="" coords="12,124,268,150"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,123,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="64,46,65,73,75,99,88,112,104,121,101,126,85,116,71,101,60,74,58,47"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="147,5,288,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="214,47,205,74,190,102,163,126,160,122,186,98,200,72,209,45"/>
+</map>

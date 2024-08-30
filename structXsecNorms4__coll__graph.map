@@ -1,0 +1,16 @@
+<map id="XsecNorms4" name="XsecNorms4">
+<area shape="rect" id="Node000001" title="ETA &#45; Normalisations for cross&#45;section parameters Carrier for whether you want to apply a systematic ..." alt="" coords="729,105,826,131"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="210,21,287,47"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="303,24,383,18,485,18,597,29,652,42,706,59,740,79,766,102,762,106,737,84,704,64,651,47,596,35,485,23,383,23,303,29"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="423,65,583,91"/>
+<area shape="poly" id="edge7_Node000007_Node000002" title=" " alt="" coords="303,40,344,47,425,62,424,67,343,53,302,46"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,13,129,54"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="144,31,210,31,210,36,144,36"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="444,157,562,183"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="577,181,640,183,673,179,704,172,737,152,763,129,766,133,740,157,706,176,674,185,640,188,577,186"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="427,207,579,247"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="595,229,650,223,678,215,703,204,725,188,743,168,767,129,772,132,747,171,729,192,706,208,680,220,651,228,595,235"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="178,214,319,240"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="335,224,426,224,426,230,335,230"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="598,78,652,83,705,91,742,102,741,107,704,96,651,88,598,83"/>
+</map>
