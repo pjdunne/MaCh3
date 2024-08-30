@@ -18,6 +18,5 @@ var searchData=
   ['errors_5fhpd_5fpositive_15',['Errors_HPD_Positive',['../classMCMCProcessor.html#af96664fa8cc51c49ad1385da07a343b8',1,'MCMCProcessor']]],
   ['escale_5fpointer_16',['EScale_pointer',['../structfdmc__base.html#a266ecead35a0e2a5f08e89d9989dac50',1,'fdmc_base']]],
   ['excludednames_17',['ExcludedNames',['../classMCMCProcessor.html#a7425f7802e50bcb5ff4b38e20157c423',1,'MCMCProcessor']]],
-  ['excludedtypes_18',['ExcludedTypes',['../classMCMCProcessor.html#aada4aadea10661586b46c1013a9d018f',1,'MCMCProcessor']]],
-  ['extradrawoptions_19',['extraDrawOptions',['../classMaCh3Plotting_1_1PlottingManager.html#a8e55dca182b3a52c3a95c08f67dd0adb',1,'MaCh3Plotting::PlottingManager']]]
+  ['excludedtypes_18',['ExcludedTypes',['../classMCMCProcessor.html#aada4aadea10661586b46c1013a9d018f',1,'MCMCProcessor']]]
 ];

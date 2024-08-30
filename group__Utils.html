@@ -82,6 +82,9 @@ Functions</h2></td></tr>
 <tr class="memitem:gaf1329db6e5a742f7dcfa154629c54542" id="r_gaf1329db6e5a742f7dcfa154629c54542"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TH1D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Utils.html#gaf1329db6e5a742f7dcfa154629c54542">MaCh3Plotting::TGraphToTH1D</a> (<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TGraph</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">graph</a>, std::string <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">newName</a>=&quot;&quot;, std::string <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">newTitle</a>=&quot;&quot;)</td></tr>
 <tr class="memdesc:gaf1329db6e5a742f7dcfa154629c54542"><td class="mdescLeft">&#160;</td><td class="mdescRight">This handy little function lets you interpret a TGraph as a TH1D.  <br /></td></tr>
 <tr class="separator:gaf1329db6e5a742f7dcfa154629c54542"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacb97b56df54ad5f4a5bf2ea2e6077c42" id="r_gacb97b56df54ad5f4a5bf2ea2e6077c42"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">float</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Utils.html#gacb97b56df54ad5f4a5bf2ea2e6077c42">MaCh3Plotting::TGraphToVector</a> (<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TGraph</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">graph</a>)</td></tr>
+<tr class="memdesc:gacb97b56df54ad5f4a5bf2ea2e6077c42"><td class="mdescLeft">&#160;</td><td class="mdescRight">This handy little function lets you interpret a TGraph as a vector containing the same data.  <br /></td></tr>
+<tr class="separator:gacb97b56df54ad5f4a5bf2ea2e6077c42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Function Documentation</h2>
@@ -178,6 +181,57 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   56</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">retHist</a>;</div>
 <div class="line"><span class="lineno">   57</span>}</div>
 <div class="ttc" id="aYamlHelper_8h_html_a1a6adcb8b24bfbdcb936ced6812e1b0c"><div class="ttname"><a href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">GetFromManager</a></div><div class="ttdeci">Type GetFromManager(const YAML::Node &amp;node, Type defval)</div><div class="ttdoc">Get content of config file if node is not found take default value specified.</div><div class="ttdef"><b>Definition</b> <a href="YamlHelper_8h_source.html#l00021">YamlHelper.h:21</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="gacb97b56df54ad5f4a5bf2ea2e6077c42" name="gacb97b56df54ad5f4a5bf2ea2e6077c42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacb97b56df54ad5f4a5bf2ea2e6077c42">&#9670;&#160;</a></span>TGraphToVector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::vector&lt; <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">float</a> &gt; &gt; MaCh3Plotting::TGraphToVector </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TGraph</a>&#160;</td>
+          <td class="paramname"><em>graph</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This handy little function lets you interpret a TGraph as a vector containing the same data. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graph</td><td>The graph you want to convert. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A vector of vectors containing the data from the initial graph. The first vector is the x axis, the 2nd the y axis </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="plottingUtils_8cpp_source.html#l00060">60</a> of file <a class="el" href="plottingUtils_8cpp_source.html">plottingUtils.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   60</span>                                                         {</div>
+<div class="line"><span class="lineno">   61</span> </div>
+<div class="line"><span class="lineno">   62</span>  <span class="keywordtype">int</span> nPoints = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">graph</a>.GetN();</div>
+<div class="line"><span class="lineno">   63</span>  std::vector&lt;std::vector&lt;float&gt;&gt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ret</a>(2);</div>
+<div class="line"><span class="lineno">   64</span>  std::vector&lt;float&gt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pointsX</a>(nPoints);</div>
+<div class="line"><span class="lineno">   65</span>  std::vector&lt;float&gt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pointsY</a>(nPoints);</div>
+<div class="line"><span class="lineno">   66</span> </div>
+<div class="line"><span class="lineno">   67</span>  <span class="comment">// Get the points out</span></div>
+<div class="line"><span class="lineno">   68</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">Double_t</a> x, y;</div>
+<div class="line"><span class="lineno">   69</span> </div>
+<div class="line"><span class="lineno">   70</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pointId</a> = 0; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pointId</a> &lt; nPoints; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pointId</a>++)</div>
+<div class="line"><span class="lineno">   71</span>  {</div>
+<div class="line"><span class="lineno">   72</span>    <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">graph</a>.GetPoint(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pointId</a>, x, y);</div>
+<div class="line"><span class="lineno">   73</span>    <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pointsX</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pointId</a>] = x;</div>
+<div class="line"><span class="lineno">   74</span>    <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pointsY</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pointId</a>] = y;</div>
+<div class="line"><span class="lineno">   75</span>  }</div>
+<div class="line"><span class="lineno">   76</span> </div>
+<div class="line"><span class="lineno">   77</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ret</a>[0] = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pointsX</a>;</div>
+<div class="line"><span class="lineno">   78</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ret</a>[1] = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pointsY</a>;</div>
+<div class="line"><span class="lineno">   79</span> </div>
+<div class="line"><span class="lineno">   80</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ret</a>;</div>
+<div class="line"><span class="lineno">   81</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>

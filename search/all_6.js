@@ -33,6 +33,5 @@ var searchData=
   ['evaluate_30',['evaluate',['../classSplineBase.html#a86e629f3eef59b2f3800136c86fe90c3',1,'SplineBase::Evaluate()'],['../classsplineFDBase.html#af6e248be25f753c85c4fbf2f3b72cf88',1,'splineFDBase::Evaluate()'],['../classSMonolith.html#a3d1128bb78b165d94721407a124f516b',1,'SMonolith::Evaluate() override']]],
   ['evaluate_5ftf1_31',['Evaluate_TF1',['../classSMonolith.html#acfe89403e2b71f0691b87e5e3611ccdf',1,'SMonolith']]],
   ['excludednames_32',['ExcludedNames',['../classMCMCProcessor.html#a7425f7802e50bcb5ff4b38e20157c423',1,'MCMCProcessor']]],
-  ['excludedtypes_33',['ExcludedTypes',['../classMCMCProcessor.html#aada4aadea10661586b46c1013a9d018f',1,'MCMCProcessor']]],
-  ['extradrawoptions_34',['extraDrawOptions',['../classMaCh3Plotting_1_1PlottingManager.html#a8e55dca182b3a52c3a95c08f67dd0adb',1,'MaCh3Plotting::PlottingManager']]]
+  ['excludedtypes_33',['ExcludedTypes',['../classMCMCProcessor.html#aada4aadea10661586b46c1013a9d018f',1,'MCMCProcessor']]]
 ];

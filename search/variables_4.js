@@ -36,10 +36,9 @@ var searchData=
   ['dodiagmcmc_33',['doDiagMCMC',['../classMCMCProcessor.html#adf449e50cf358f737fe4a2b65d9668e9',1,'MCMCProcessor']]],
   ['doshapeonly_34',['doShapeOnly',['../classSampleSummary.html#aebd01b201cf04608b251cd3e272878b7',1,'SampleSummary']]],
   ['doubled_5fangle_35',['doubled_angle',['../classsamplePDFFDBase.html#a2c50c633784af24832bb20a4fca42af5',1,'samplePDFFDBase']]],
-  ['drawgrid_36',['drawGrid',['../classMaCh3Plotting_1_1PlottingManager.html#a39091039aacb7488c8a96eb241d26d87',1,'MaCh3Plotting::PlottingManager']]],
-  ['drawrange_37',['DrawRange',['../classMCMCProcessor.html#a4abe633b264acd9b0459c7b8ccd8b9df',1,'MCMCProcessor']]],
-  ['draws_38',['Draws',['../RHat_8cpp.html#a9adc829d645affbb93eff1775ab7c0c6',1,'RHat.cpp']]],
-  ['drawsfolded_39',['DrawsFolded',['../RHat_8cpp.html#a7e7fe290fda4362be54b8cf5d56fea51',1,'RHat.cpp']]],
-  ['dummy_5fvalue_40',['dummy_value',['../structfdmc__base.html#a5a3e90e0db443a8f49eec210a47d6351',1,'fdmc_base']]],
-  ['dummyfile_41',['DUMMYFILE',['../PlotMCMC__Diagnosis_8cpp.html#aff052b2c086f67396715402e80de5fd7',1,'PlotMCMC_Diagnosis.cpp']]]
+  ['drawrange_36',['DrawRange',['../classMCMCProcessor.html#a4abe633b264acd9b0459c7b8ccd8b9df',1,'MCMCProcessor']]],
+  ['draws_37',['Draws',['../RHat_8cpp.html#a9adc829d645affbb93eff1775ab7c0c6',1,'RHat.cpp']]],
+  ['drawsfolded_38',['DrawsFolded',['../RHat_8cpp.html#a7e7fe290fda4362be54b8cf5d56fea51',1,'RHat.cpp']]],
+  ['dummy_5fvalue_39',['dummy_value',['../structfdmc__base.html#a5a3e90e0db443a8f49eec210a47d6351',1,'fdmc_base']]],
+  ['dummyfile_40',['DUMMYFILE',['../PlotMCMC__Diagnosis_8cpp.html#aff052b2c086f67396715402e80de5fd7',1,'PlotMCMC_Diagnosis.cpp']]]
 ];
