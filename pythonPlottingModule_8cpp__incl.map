@@ -1,13 +1,13 @@
-<map id="/github/workspace/plotting/plottingUtils/pythonPlottingModule.cpp" name="/github/workspace/plotting/plottingUtils/pythonPlottingModule.cpp">
-<area shape="rect" id="Node000001" title=" " alt="" coords="1423,5,1669,46"/>
+<map id="plotting/plottingUtils/pythonPlottingModule.cpp" name="plotting/plottingUtils/pythonPlottingModule.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1459,5,1633,46"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="985,94,1123,120"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1423,49,1138,95,1138,89,1423,44"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1459,43,1139,95,1138,89,1459,38"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="1146,94,1247,120"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="1459,49,1263,93,1261,88,1458,44"/>
 <area shape="rect" id="Node000004" title=" " alt="" coords="1323,168,1380,193"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="1522,49,1380,160,1377,156,1519,44"/>
 <area shape="rect" id="Node000005" title=" " alt="" coords="2066,462,2119,488"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="1670,28,1953,41,2122,53,2289,68,2444,88,2570,112,2619,126,2657,142,2681,159,2690,179,2690,329,2689,378,2681,397,2663,417,2633,429,2580,439,2430,456,2135,475,2134,469,2430,451,2580,434,2632,424,2660,412,2676,395,2683,377,2685,329,2685,180,2677,163,2654,146,2618,131,2569,117,2443,93,2289,73,2121,58,1953,47,1669,33"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="1633,27,1910,39,2084,50,2260,65,2424,85,2561,110,2614,124,2654,140,2680,158,2687,168,2690,179,2690,329,2689,378,2681,397,2663,417,2633,429,2580,439,2430,456,2135,475,2134,469,2430,451,2580,434,2632,424,2660,412,2676,395,2683,377,2685,329,2685,179,2682,171,2676,162,2652,145,2612,129,2559,115,2424,90,2260,70,2084,55,1910,44,1633,32"/>
 <area shape="rect" id="Node000006" href="$plottingUtils_8h.html" title=" " alt="" coords="1033,241,1133,267"/>
 <area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="1507,49,1123,236,1121,232,1504,44"/>
 <area shape="rect" id="Node000033" href="$plottingManager_8h.html" title=" " alt="" coords="1787,94,1910,120"/>
@@ -15,7 +15,7 @@
 <area shape="rect" id="Node000043" href="$inputManager_8h.html" title=" " alt="" coords="1557,168,1666,193"/>
 <area shape="poly" id="edge71_Node000001_Node000043" title=" " alt="" coords="1557,45,1602,152,1598,154,1552,47"/>
 <area shape="rect" id="Node000044" href="$styleManager_8h.html" title=" " alt="" coords="2061,241,2169,267"/>
-<area shape="poly" id="edge70_Node000001_Node000044" title=" " alt="" coords="1669,37,1794,55,1927,81,1988,98,2041,118,2084,140,2112,166,2119,180,2123,196,2123,226,2118,226,2118,197,2114,182,2108,169,2081,145,2039,123,1986,103,1926,87,1793,60,1669,42"/>
+<area shape="poly" id="edge70_Node000001_Node000044" title=" " alt="" coords="1633,33,1761,49,1905,76,1973,94,2033,114,2081,138,2112,166,2119,180,2123,196,2123,226,2118,226,2118,197,2114,182,2108,169,2078,143,2031,119,1972,99,1904,81,1760,55,1632,38"/>
 <area shape="rect" id="Node000007" href="$MaCh3Logger_8h.html" title=" " alt="" coords="1801,389,1968,414"/>
 <area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="1134,260,1234,280,1348,313,1374,326,1399,338,1786,386,1786,391,1397,343,1371,331,1346,317,1233,285,1133,266"/>
 <area shape="rect" id="Node000009" title=" " alt="" coords="1624,462,1695,488"/>

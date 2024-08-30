@@ -1,7 +1,7 @@
-<map id="/github/workspace/plotting/plottingUtils/styleManager.h" name="/github/workspace/plotting/plottingUtils/styleManager.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="494,5,679,46"/>
+<map id="plotting/plottingUtils/styleManager.h" name="plotting/plottingUtils/styleManager.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="519,5,655,46"/>
 <area shape="rect" id="Node000002" href="$MaCh3Logger_8h.html" title=" " alt="" coords="180,168,346,193"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="494,36,451,44,406,56,362,73,322,96,295,124,276,155,271,152,290,120,318,92,360,68,404,51,450,39,493,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="518,33,472,40,420,52,369,70,322,96,295,124,276,155,271,152,290,120,318,92,367,65,419,47,471,35,518,28"/>
 <area shape="rect" id="Node000008" href="$YamlHelper_8h.html" title=" " alt="" coords="573,168,726,193"/>
 <area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="581,47,573,82,573,101,578,119,594,140,614,157,611,161,590,144,574,121,568,101,568,81,576,46"/>
 <area shape="rect" id="Node000014" href="$MaCh3Exception_8h.html" title=" " alt="" coords="332,94,514,120"/>

@@ -242,5 +242,5 @@ var searchData=
   ['gpuutils_2ecu_239',['gpuUtils.cu',['../gpuUtils_8cu.html',1,'']]],
   ['gpuutils_2ecuh_240',['gpuUtils.cuh',['../gpuUtils_8cuh.html',1,'']]],
   ['grid_5fsize_241',['GRID_SIZE',['../kdeGpu2_8cu.html#a08246606c233e7785a497c09672f366f',1,'kdeGpu2.cu']]],
-  ['guidelines_242',['Help and Guidelines',['../md__2github_2workspace_2README.html#autotoc_md23',1,'']]]
+  ['guidelines_242',['Help and Guidelines',['../md_README.html#autotoc_md23',1,'']]]
 ];

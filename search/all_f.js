@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['operational_20systems_0',['Supported operational systems',['../md__2github_2workspace_2README.html#autotoc_md21',1,'']]],
+  ['operational_20systems_0',['Supported operational systems',['../md_README.html#autotoc_md21',1,'']]],
   ['osc_1',['osc',['../classFitterBase.html#a0c3179f05d6846f5b796ba4c04899634',1,'FitterBase::osc'],['../classsamplePDFFDBase.html#a3edf869b1304fd3316d92ea1eaeb0045',1,'samplePDFFDBase::Osc']]],
   ['osc2_2',['osc2',['../classFitterBase.html#a248ca37a92c46ddd944a31d348b8c7bb',1,'FitterBase']]],
   ['osc_5fbinned_3',['osc_binned',['../classsamplePDFFDBase.html#a37591029c5d56c09083f1f094ae11836',1,'samplePDFFDBase']]],
@@ -13,7 +13,7 @@ var searchData=
   ['oscclass_5fcudaprob3_2ecpp_10',['OscClass_CUDAProb3.cpp',['../OscClass__CUDAProb3_8cpp.html',1,'']]],
   ['oscclass_5fcudaprob3_2eh_11',['OscClass_CUDAProb3.h',['../OscClass__CUDAProb3_8h.html',1,'']]],
   ['osccov_12',['OscCov',['../classsamplePDFFDBase.html#aa3fbe81c57a430a917e01e849b8b84a0',1,'samplePDFFDBase']]],
-  ['oscillator_13',['oscillator',['../classOscillator.html',1,'Oscillator'],['../md__2github_2workspace_2README.html#autotoc_md17',1,'Oscillator'],['../structfdmc__base.html#a9bdecfa8f4ffd15989d9b9dda3236ab9',1,'fdmc_base::Oscillator'],['../classOscillator.html#acc240480ba377fa014440f718af60daf',1,'Oscillator::Oscillator()']]],
+  ['oscillator_13',['oscillator',['../classOscillator.html',1,'Oscillator'],['../md_README.html#autotoc_md17',1,'Oscillator'],['../structfdmc__base.html#a9bdecfa8f4ffd15989d9b9dda3236ab9',1,'fdmc_base::Oscillator'],['../classOscillator.html#acc240480ba377fa014440f718af60daf',1,'Oscillator::Oscillator()']]],
   ['oscnutype_14',['oscnutype',['../structfdmc__base.html#a8bdce59edb6430b7c865832cb264b39e',1,'fdmc_base']]],
   ['oscparameters_15',['OscParameters',['../GetPostfitParamPlots_8cpp.html#a5aedbc0849506477d31e20d345c967eb',1,'GetPostfitParamPlots.cpp']]],
   ['oscparametersstartingpos_16',['OscParametersStartingPos',['../GetPostfitParamPlots_8cpp.html#a3ec8e00c5c17bd6768473b08156f6c1c',1,'GetPostfitParamPlots.cpp']]],

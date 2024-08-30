@@ -19,8 +19,8 @@ var searchData=
   ['box_16',['Box',['../structBox.html',1,'']]],
   ['branchnames_17',['branchnames',['../RHat_8cpp.html#a871d6466cea2597401bdb203293f4033',1,'BranchNames:&#160;RHat.cpp'],['../GetPenaltyTerm_8cpp.html#a871d6466cea2597401bdb203293f4033',1,'BranchNames:&#160;GetPenaltyTerm.cpp'],['../classMCMCProcessor.html#ad043b6b2c885f47ab9967831bc8d0f5a',1,'MCMCProcessor::BranchNames']]],
   ['buf_18',['buf',['../classsamplePDFBase.html#a361ce3bc003686a461e7def89ebebfbc',1,'samplePDFBase']]],
-  ['building_20against_20mach3_19',['Building against MaCh3',['../md__2github_2workspace_2README.html#autotoc_md12',1,'']]],
-  ['building_20with_20pip_20',['Building with Pip',['../md__2github_2workspace_2README.html#autotoc_md14',1,'']]],
+  ['building_20against_20mach3_19',['Building against MaCh3',['../md_README.html#autotoc_md12',1,'']]],
+  ['building_20with_20pip_20',['Building with Pip',['../md_README.html#autotoc_md14',1,'']]],
   ['buildsampleindexingarray_21',['BuildSampleIndexingArray',['../classsplineFDBase.html#aaa699bd90abc662ce3af907733b3b704',1,'splineFDBase']]],
   ['burnincut_22',['BurnInCut',['../classMCMCProcessor.html#a22f82dadceccbe87dd8c5b7daa8432e8',1,'MCMCProcessor']]]
 ];

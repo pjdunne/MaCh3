@@ -1,16 +1,16 @@
-<map id="/github/workspace/plotting/plottingUtils/inputManager.h" name="/github/workspace/plotting/plottingUtils/inputManager.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="416,5,602,46"/>
-<area shape="rect" id="Node000002" href="$inputManager_8cpp.html" title=" " alt="" coords="185,94,385,135"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="445,54,337,96,335,91,443,49"/>
-<area shape="rect" id="Node000003" href="$plottingManager_8h.html" title=" " alt="" coords="409,94,609,135"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="512,62,512,94,506,94,506,62"/>
-<area shape="rect" id="Node000007" href="$pythonPlottingModule_8cpp.html" title=" " alt="" coords="641,183,887,223"/>
-<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="559,52,623,92,741,180,738,184,619,96,556,57"/>
-<area shape="rect" id="Node000004" href="$GetPostfitParamPlots_8cpp.html" title=" " alt="" coords="5,183,181,223"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="400,141,182,186,181,181,399,136"/>
-<area shape="rect" id="Node000005" href="$PlotLLH_8cpp.html" title=" " alt="" coords="205,183,378,223"/>
-<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="446,143,342,185,340,180,444,138"/>
-<area shape="rect" id="Node000006" href="$plottingManager_8cpp.html" title=" " alt="" coords="402,183,616,223"/>
-<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="512,150,512,182,506,182,506,150"/>
-<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="582,137,707,180,705,185,580,142"/>
+<map id="plotting/plottingUtils/inputManager.h" name="plotting/plottingUtils/inputManager.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="360,5,497,46"/>
+<area shape="rect" id="Node000002" href="$inputManager_8cpp.html" title=" " alt="" coords="200,94,337,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="380,56,306,96,303,91,378,51"/>
+<area shape="rect" id="Node000003" href="$plottingManager_8h.html" title=" " alt="" coords="360,94,497,135"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="431,62,431,94,426,94,426,62"/>
+<area shape="rect" id="Node000007" href="$pythonPlottingModule_8cpp.html" title=" " alt="" coords="523,183,696,223"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="467,54,510,92,595,181,591,184,506,96,463,58"/>
+<area shape="rect" id="Node000004" href="$GetPostfitParamPlots_8cpp.html" title=" " alt="" coords="5,183,169,223"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="346,139,165,185,164,180,344,134"/>
+<area shape="rect" id="Node000005" href="$PlotLLH_8cpp.html" title=" " alt="" coords="193,190,333,216"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="379,145,287,192,285,187,376,140"/>
+<area shape="rect" id="Node000006" href="$plottingManager_8cpp.html" title=" " alt="" coords="358,183,499,223"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="431,150,431,182,426,182,426,150"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="484,139,570,180,568,185,482,144"/>
 </map>

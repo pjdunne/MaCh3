@@ -1,28 +1,28 @@
-<map id="/github/workspace/mcmc/FitterBase.h" name="/github/workspace/mcmc/FitterBase.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="500,5,667,46"/>
-<area shape="rect" id="Node000002" href="$FitterBase_8cpp.html" title=" " alt="" coords="223,94,390,135"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="507,54,370,96,369,91,505,48"/>
-<area shape="rect" id="Node000003" href="$LikelihoodFit_8h.html" title=" " alt="" coords="415,94,582,135"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="556,59,520,95,516,92,552,55"/>
-<area shape="rect" id="Node000005" href="$MaCh3Factory_8h.html" title=" " alt="" coords="572,271,739,312"/>
-<area shape="poly" id="edge11_Node000001_Node000005" title=" " alt="" coords="596,60,653,270,648,272,590,62"/>
-<area shape="rect" id="Node000011" href="$mcmc_8h.html" title=" " alt="" coords="683,94,850,135"/>
-<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="640,50,726,91,724,96,638,55"/>
-<area shape="rect" id="Node000004" href="$LikelihoodFit_8cpp.html" title=" " alt="" coords="5,183,173,223"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="400,139,174,187,173,181,399,134"/>
-<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="533,143,571,181,643,269,639,273,567,184,529,147"/>
-<area shape="rect" id="Node000007" href="$MinuitFit_8h.html" title=" " alt="" coords="197,183,365,223"/>
-<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="436,143,331,185,330,180,434,138"/>
-<area shape="rect" id="Node000009" href="$PSO_8h.html" title=" " alt="" coords="389,183,557,223"/>
-<area shape="poly" id="edge8_Node000003_Node000009" title=" " alt="" coords="491,151,481,183,476,181,486,149"/>
-<area shape="rect" id="Node000006" href="$MaCh3Factory_8cpp.html" title=" " alt="" coords="572,360,739,401"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="658,328,658,360,653,360,653,328"/>
-<area shape="rect" id="Node000008" href="$MinuitFit_8cpp.html" title=" " alt="" coords="188,271,355,312"/>
-<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="280,239,276,271,271,271,275,239"/>
-<area shape="poly" id="edge9_Node000009_Node000005" title=" " alt="" coords="529,228,616,268,613,273,527,233"/>
-<area shape="rect" id="Node000010" href="$PSO_8cpp.html" title=" " alt="" coords="380,271,547,312"/>
-<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="472,239,468,271,463,271,467,239"/>
-<area shape="poly" id="edge13_Node000011_Node000005" title=" " alt="" coords="747,149,723,184,669,272,665,269,719,181,742,146"/>
-<area shape="rect" id="Node000012" href="$mcmc_8cpp.html" title=" " alt="" coords="733,183,901,223"/>
-<area shape="poly" id="edge14_Node000011_Node000012" title=" " alt="" coords="788,147,808,181,803,184,783,150"/>
+<map id="mcmc/FitterBase.h" name="mcmc/FitterBase.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="399,5,531,31"/>
+<area shape="rect" id="Node000002" href="$FitterBase_8cpp.html" title=" " alt="" coords="155,79,300,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="411,38,269,81,267,76,409,33"/>
+<area shape="rect" id="Node000003" href="$LikelihoodFit_8h.html" title=" " alt="" coords="324,79,470,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="445,44,410,80,407,77,441,40"/>
+<area shape="rect" id="Node000005" href="$MaCh3Factory_8h.html" title=" " alt="" coords="454,226,609,252"/>
+<area shape="poly" id="edge11_Node000001_Node000005" title=" " alt="" coords="476,45,531,225,526,227,470,47"/>
+<area shape="rect" id="Node000011" href="$mcmc_8h.html" title=" " alt="" coords="558,79,665,105"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="505,36,588,76,586,81,502,41"/>
+<area shape="rect" id="Node000004" href="$LikelihoodFit_8cpp.html" title=" " alt="" coords="5,153,165,178"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="330,111,139,155,137,149,328,106"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="420,114,522,224,519,228,416,118"/>
+<area shape="rect" id="Node000007" href="$MinuitFit_8h.html" title=" " alt="" coords="188,153,310,178"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="359,114,275,154,273,150,357,109"/>
+<area shape="rect" id="Node000009" href="$PSO_8h.html" title=" " alt="" coords="334,153,433,178"/>
+<area shape="poly" id="edge8_Node000003_Node000009" title=" " alt="" coords="395,120,389,153,383,152,389,119"/>
+<area shape="rect" id="Node000006" href="$MaCh3Factory_8cpp.html" title=" " alt="" coords="447,300,616,326"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="534,267,534,300,529,300,529,267"/>
+<area shape="rect" id="Node000008" href="$MinuitFit_8cpp.html" title=" " alt="" coords="157,226,293,252"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="243,194,232,227,227,225,238,192"/>
+<area shape="poly" id="edge9_Node000009_Node000005" title=" " alt="" coords="424,183,508,223,505,228,421,188"/>
+<area shape="rect" id="Node000010" href="$PSO_8cpp.html" title=" " alt="" coords="316,226,430,252"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="382,194,377,226,372,225,377,193"/>
+<area shape="poly" id="edge13_Node000011_Node000005" title=" " alt="" coords="600,119,541,227,536,225,596,117"/>
+<area shape="rect" id="Node000012" href="$mcmc_8cpp.html" title=" " alt="" coords="610,153,731,178"/>
+<area shape="poly" id="edge14_Node000011_Node000012" title=" " alt="" coords="633,115,662,150,658,154,629,118"/>
 </map>

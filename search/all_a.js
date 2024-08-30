@@ -2,7 +2,7 @@ var searchData=
 [
   ['iamvaried_0',['IamVaried',['../classMCMCProcessor.html#a95fa49737432818bc830a44898d0d850',1,'MCMCProcessor']]],
   ['im_1',['im',['../probGpu_8cu.html#a6b0bbb5b2111ac7741063db5063755e3',1,'probGpu.cu']]],
-  ['img_20src_20doc_20mach3logo_20png_20alt_20mach3_20align_20center_20width_20100_2',['MaCh3 &lt;img src=&quot;Doc/mach3logo.png&quot; alt=&quot;MaCh3&quot; align=&quot;center&quot; width=&quot;100&quot;/&gt;',['../md__2github_2workspace_2README.html',1,'']]],
+  ['img_20src_20doc_20mach3logo_20png_20alt_20mach3_20align_20center_20width_20100_2',['MaCh3 &lt;img src=&quot;Doc/mach3logo.png&quot; alt=&quot;MaCh3&quot; align=&quot;center&quot; width=&quot;100&quot;/&gt;',['../md_README.html',1,'']]],
   ['index_3',['index',['../structXsecNorms4.html#a6c45244b8c559ada13c1c886dea37cc2',1,'XsecNorms4']]],
   ['index_5fcpu_4',['index_cpu',['../classSMonolith.html#ae9fa50f60f717558f517faea6a38d251',1,'SMonolith']]],
   ['indexvec_5',['indexvec',['../classsplineFDBase.html#ab3a4e79bfe675a4070597557e6226e12',1,'splineFDBase']]],
@@ -27,7 +27,7 @@ var searchData=
   ['input_24',['input',['../classMaCh3Plotting_1_1PlottingManager.html#afcde3593be0894c7c1dbef6fa9055dee',1,'MaCh3Plotting::PlottingManager']]],
   ['inputfile_25',['inputfile',['../classcovarianceBase.html#a5451d4189a9fb7591c8ce728852ba82e',1,'covarianceBase::inputFile'],['../structMaCh3Plotting_1_1InputFile.html#a527fa8b92b688c79b14aefcb09418c3f',1,'MaCh3Plotting::InputFile::InputFile()'],['../structMaCh3Plotting_1_1InputFile.html',1,'MaCh3Plotting::InputFile']]],
   ['inputfilename_26',['InputFileName',['../classOscillator.html#a67231919b021341e75959e7284692d07',1,'Oscillator']]],
-  ['inputmanager_27',['inputmanager',['../classMaCh3Plotting_1_1InputManager.html',1,'MaCh3Plotting::InputManager'],['../md__2github_2workspace_2plotting_2README.html#autotoc_md32',1,'inputManager'],['../classMaCh3Plotting_1_1InputManager.html#a3eb97a2004b798ff48b6e05f485c8a50',1,'MaCh3Plotting::InputManager::InputManager()']]],
+  ['inputmanager_27',['inputmanager',['../classMaCh3Plotting_1_1InputManager.html',1,'MaCh3Plotting::InputManager'],['../md_plotting_2README.html#autotoc_md32',1,'inputManager'],['../classMaCh3Plotting_1_1InputManager.html#a3eb97a2004b798ff48b6e05f485c8a50',1,'MaCh3Plotting::InputManager::InputManager()']]],
   ['inputmanager_2ecpp_28',['inputManager.cpp',['../inputManager_8cpp.html',1,'']]],
   ['inputmanager_2eh_29',['inputManager.h',['../inputManager_8h.html',1,'']]],
   ['introduction_30',['Introduction',['../index.html#autotoc_md0',1,'']]],

@@ -51,7 +51,7 @@ var searchData=
   ['lnlhist_5fsample_5fpredflucdraw_48',['lnLHist_Sample_PredflucDraw',['../classSampleSummary.html#a59de41ffd933765d2e22ffd8aa198ac1',1,'SampleSummary']]],
   ['loadearthprofile_49',['LoadEarthProfile',['../probGpu_8cu.html#a09d7d622188d09612bafbed2e57a536b',1,'probGpu.cu']]],
   ['loadsplinefile_50',['LoadSplineFile',['../classSMonolith.html#a6783cdc3c485378ca21852e1a7b02482',1,'SMonolith']]],
-  ['logger_51',['Logger',['../md__2github_2workspace_2CONTRIBUTING.html#autotoc_md3',1,'']]],
+  ['logger_51',['Logger',['../md_CONTRIBUTING.html#autotoc_md3',1,'']]],
   ['loggerprint_52',['LoggerPrint',['../MaCh3Logger_8h.html#ada930684d7c1ed8916f1fbe6d266ca77',1,'MaCh3Logger.h']]],
   ['loglcurr_53',['logLCurr',['../classFitterBase.html#abfb6f10720764d8bbbe43754fd5cd976',1,'FitterBase']]],
   ['loglprop_54',['logLProp',['../classFitterBase.html#a187dd22c17f9e96e5a7e2fb2371abace',1,'FitterBase']]],

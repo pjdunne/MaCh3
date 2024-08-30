@@ -8,8 +8,8 @@ var searchData=
   ['weightvec_5fmonolith_5',['weightvec_Monolith',['../classsplineFDBase.html#a09320defd042ffffb7bacda58133f12a',1,'splineFDBase']]],
   ['weightvector_6',['WeightVector',['../classSampleSummary.html#ad40a0514f4be18ef026ea41bd5965fa3',1,'SampleSummary']]],
   ['what_7',['what',['../classMaCh3Exception.html#a42be88b1fd75b91ecb5e472ddefcc45d',1,'MaCh3Exception']]],
-  ['width_20100_8',['MaCh3 &lt;img src=&quot;Doc/mach3logo.png&quot; alt=&quot;MaCh3&quot; align=&quot;center&quot; width=&quot;100&quot;/&gt;',['../md__2github_2workspace_2README.html',1,'']]],
-  ['with_20pip_9',['Building with Pip',['../md__2github_2workspace_2README.html#autotoc_md14',1,'']]],
+  ['width_20100_8',['MaCh3 &lt;img src=&quot;Doc/mach3logo.png&quot; alt=&quot;MaCh3&quot; align=&quot;center&quot; width=&quot;100&quot;/&gt;',['../md_README.html',1,'']]],
+  ['with_20pip_9',['Building with Pip',['../md_README.html#autotoc_md14',1,'']]],
   ['write_10',['Write',['../classSampleSummary.html#aacf987756d2024868bf28b9c2c4a5a99',1,'SampleSummary']]],
   ['writeoutput_11',['WriteOutput',['../classPSO.html#af2a3d758cc67e9b6b6a9a96499345b5b',1,'PSO']]]
 ];
