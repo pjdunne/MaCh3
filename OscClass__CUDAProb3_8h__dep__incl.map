@@ -1,12 +1,12 @@
-<map id="OscClass_CUDAProb3.h" name="OscClass_CUDAProb3.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="106,5,272,31"/>
-<area shape="rect" id="Node000002" href="$OscClass__CUDAProb3_8cpp.html" title=" " alt="" coords="5,79,186,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,43,113,81,109,77,159,39"/>
-<area shape="rect" id="Node000003" href="$samplePDFFDBase_8h.html" title=" " alt="" coords="210,79,357,105"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="219,39,269,77,266,81,216,43"/>
-<area shape="rect" id="Node000004" href="$ShiftFunctors_8h.html" title=" " alt="" coords="229,153,338,178"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="277,120,279,152,274,152,272,120"/>
-<area shape="rect" id="Node000005" href="$samplePDFFDBase_8cpp.html" title=" " alt="" coords="362,153,522,178"/>
-<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="325,109,416,150,414,154,323,114"/>
-<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="290,137,288,105,293,105,295,137"/>
+<map id="/github/workspace/OscClass/OscClass_CUDAProb3.h" name="/github/workspace/OscClass/OscClass_CUDAProb3.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="108,5,296,46"/>
+<area shape="rect" id="Node000002" href="$OscClass__CUDAProb3_8cpp.html" title=" " alt="" coords="5,94,194,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="169,58,124,96,121,92,165,54"/>
+<area shape="rect" id="Node000003" href="$samplePDFFDBase_8h.html" title=" " alt="" coords="218,94,394,135"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="239,54,284,92,281,96,236,58"/>
+<area shape="rect" id="Node000004" href="$ShiftFunctors_8h.html" title=" " alt="" coords="220,183,393,223"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="300,150,301,182,296,182,295,150"/>
+<area shape="rect" id="Node000005" href="$samplePDFFDBase_8cpp.html" title=" " alt="" coords="416,183,607,223"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="368,139,466,180,464,185,366,143"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="312,167,311,135,317,135,318,167"/>
 </map>
