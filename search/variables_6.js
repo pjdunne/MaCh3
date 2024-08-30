@@ -13,7 +13,7 @@ var searchData=
   ['file_10',['file',['../structMaCh3Plotting_1_1InputFile.html#a11c074dd45647dd2957987f8b55f9d73',1,'MaCh3Plotting::InputFile']]],
   ['filelabels_11',['FileLabels',['../classMaCh3Plotting_1_1PlottingManager.html#aed70e1140f3ab670979802f52d179fd4',1,'MaCh3Plotting::PlottingManager']]],
   ['filelabels_5fdefault_12',['FileLabels_default',['../classMaCh3Plotting_1_1PlottingManager.html#a146bbde2ab9b1917cd9b6af4db69a7e3',1,'MaCh3Plotting::PlottingManager']]],
-  ['filename_13',['filename',['../classmanager.html#a1004958d1431ff607c08fa795b5953b7',1,'manager::FileName'],['../structMaCh3Plotting_1_1InputFile.html#a076134d08d2b54e29e76431a42267a52',1,'MaCh3Plotting::InputFile::fileName']]],
+  ['filename_13',['filename',['../structMaCh3Plotting_1_1InputFile.html#a076134d08d2b54e29e76431a42267a52',1,'MaCh3Plotting::InputFile::fileName'],['../classmanager.html#a1004958d1431ff607c08fa795b5953b7',1,'manager::FileName']]],
   ['filenames_14',['filenames',['../classMaCh3Plotting_1_1PlottingManager.html#a44d0841bc8f95e37e1ff6279962439e8',1,'MaCh3Plotting::PlottingManager::FileNames'],['../ProcessMCMC_8cpp.html#a8e90c1478f4be185364988cac765a163',1,'FileNames:&#160;ProcessMCMC.cpp']]],
   ['filesaved_15',['FileSaved',['../classFitterBase.html#a699abe6a2c89706b54544212152d613a',1,'FitterBase']]],
   ['finecoarseratiocosz_16',['fineCoarseRatioCosz',['../classOscillator.html#a45686c104c1adae1ebe0f0b2c7c464ae',1,'Oscillator']]],

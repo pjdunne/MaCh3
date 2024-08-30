@@ -15,7 +15,7 @@ var searchData=
   ['rhat_12',['RHat',['../RHat_8cpp.html#ab5cfb5e8741283e8d8252aae184004e4',1,'RHat.cpp']]],
   ['rhatfolded_13',['RHatFolded',['../RHat_8cpp.html#a754fbe6088f05d880121693722fe6b99',1,'RHat.cpp']]],
   ['rnd_14',['rnd',['../classSampleSummary.html#a8322552ef396f34af5ee4bd47a44e39e',1,'SampleSummary::rnd'],['../classsamplePDFBase.html#a06fd2c9575c0b9e56aaaf78b5be59b44',1,'samplePDFBase::rnd']]],
-  ['rw_5fetru_15',['rw_etru',['../structfdmc__base.html#aa37a1a1ba95c3cadb92fd135c845a3cf',1,'fdmc_base']]],
+  ['rw_5fetru_15',['rw_etru',['../structfdmc__base.html#aaf0aa44813fc15f760c58e7c058945bd',1,'fdmc_base']]],
   ['rw_5flower_5flower_5fxbinedge_16',['rw_lower_lower_xbinedge',['../structfdmc__base.html#aa7c93fcdf1ecb44af5fb60d9906884b3',1,'fdmc_base']]],
   ['rw_5flower_5fxbinedge_17',['rw_lower_xbinedge',['../structfdmc__base.html#ac21589725161539db7389ca71cc9d469',1,'fdmc_base']]],
   ['rw_5ftruecz_18',['rw_truecz',['../structfdmc__base.html#a4db46c63bde006773ccc31054c74d213',1,'fdmc_base']]],

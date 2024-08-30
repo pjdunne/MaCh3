@@ -1,22 +1,25 @@
 <map id="samplePDFFDBase" name="samplePDFFDBase">
-<area shape="rect" id="Node000001" title=" " alt="" coords="193,346,329,372"/>
-<area shape="rect" id="Node000002" href="$classsamplePDFBase.html" title="Class responsible for handling implementation of samples used in analysis, reweighting and returning ..." alt="" coords="5,258,125,283"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="107,288,235,343,232,348,105,292"/>
-<area shape="rect" id="Node000003" href="$classMaCh3Modes.html" title="KS: Class describing MaCh3 modes used in the analysis, it is being initialised from config." alt="" coords="9,169,110,195"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="64,210,67,257,62,257,59,210"/>
-<area shape="rect" id="Node000004" href="$classsplineFDBase.html" title="Bin&#45;by&#45;bin class calculating response for spline parameters." alt="" coords="151,258,254,283"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="214,297,227,321,248,344,244,348,222,324,209,299"/>
-<area shape="rect" id="Node000005" href="$classSplineBase.html" title="Base class for calculating weight from spline." alt="" coords="135,169,222,195"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="188,209,202,257,196,258,183,210"/>
-<area shape="rect" id="Node000006" href="$classcovarianceXsec.html" title="Class responsible for handling of systematic error parameters with different types defined in the con..." alt="" coords="247,169,361,195"/>
-<area shape="poly" id="edge10_Node000001_Node000006" title=" " alt="" coords="305,210,300,263,285,323,272,347,267,345,280,321,294,262,300,210"/>
-<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="274,206,254,221,215,259,211,255,251,217,271,201"/>
-<area shape="rect" id="Node000007" href="$classcovarianceBase.html" title="Base class responsible for handling of systematic error parameters. Capable of using PCA or using ada..." alt="" coords="247,94,361,120"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="306,135,306,169,301,169,301,135"/>
-<area shape="rect" id="Node000008" href="$classPCAHandler.html" title=" " alt="" coords="158,5,252,31"/>
-<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="232,39,292,92,288,96,228,43"/>
-<area shape="rect" id="Node000009" href="$classadaptive__mcmc_1_1AdaptiveMCMCHandler.html" title="Contains information about adaptive covariance matrix." alt="" coords="276,5,531,31"/>
-<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="380,43,319,96,316,92,376,39"/>
-<area shape="rect" id="Node000010" href="$classOscillator.html" title=" " alt="" coords="382,258,458,283"/>
-<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="385,293,285,348,282,343,383,289"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="230,357,367,383"/>
+<area shape="rect" id="Node000002" href="$classsamplePDFBase.html" title="Class responsible for handling implementation of samples used in analysis, reweighting and returning ..." alt="" coords="5,268,125,294"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,297,266,354,265,359,111,302"/>
+<area shape="rect" id="Node000003" href="$classMaCh3Modes.html" title="KS: Class describing MaCh3 modes used in the analysis, it is being initialised from config." alt="" coords="13,169,114,195"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="67,210,68,268,62,268,61,210"/>
+<area shape="rect" id="Node000004" href="$classsplineFDBase.html" title="Bin&#45;by&#45;bin class calculating response for spline parameters." alt="" coords="149,268,251,294"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="209,307,224,331,240,344,259,354,257,359,237,349,220,335,205,310"/>
+<area shape="rect" id="Node000005" href="$classSplineBase.html" title="Base class for calculating weight from spline." alt="" coords="139,169,226,195"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="190,209,200,267,195,268,184,210"/>
+<area shape="rect" id="Node000006" href="$classcovarianceXsec.html" title="Class responsible for handling of systematic error parameters with different types defined in the con..." alt="" coords="251,169,365,195"/>
+<area shape="poly" id="edge10_Node000001_Node000006" title=" " alt="" coords="307,210,301,268,301,357,295,357,296,268,301,210"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="273,205,251,221,228,246,210,270,205,266,224,242,248,217,269,201"/>
+<area shape="rect" id="Node000007" href="$classcovarianceBase.html" title="Base class responsible for handling of systematic error parameters. Capable of using PCA or using ada..." alt="" coords="297,94,412,120"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="341,134,317,170,313,167,336,131"/>
+<area shape="rect" id="Node000011" href="$classcovarianceOsc.html" title="Class responsible for handling of neutrino oscillation parameters." alt="" coords="348,219,457,244"/>
+<area shape="poly" id="edge12_Node000011_Node000007" title=" " alt="" coords="367,134,400,217,395,219,362,136"/>
+<area shape="rect" id="Node000008" href="$classPCAHandler.html" title=" " alt="" coords="209,5,302,31"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="283,39,342,92,339,96,279,43"/>
+<area shape="rect" id="Node000009" href="$classadaptive__mcmc_1_1AdaptiveMCMCHandler.html" title="Contains information about adaptive covariance matrix." alt="" coords="327,5,582,31"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="431,43,370,96,366,92,427,39"/>
+<area shape="rect" id="Node000010" href="$classOscillator.html" title=" " alt="" coords="476,268,553,294"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="483,305,422,335,350,359,348,354,420,331,481,300"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="388,259,362,296,311,358,307,355,358,292,384,256"/>
 </map>

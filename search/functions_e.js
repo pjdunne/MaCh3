@@ -62,6 +62,6 @@ var searchData=
   ['propagate_59',['propagate',['../probGpu_8cu.html#aaef807b1ff8ad0f12824fd7dc0cc73af',1,'probGpu.cu']]],
   ['propagatelinear_60',['propagateLinear',['../probGpu_8cu.html#a8fcc717c4d5b5bbcbdefc58ad20ccaf9',1,'probGpu.cu']]],
   ['propagatelinearall_61',['propagateLinearAll',['../probGpu_8cu.html#a30b0751d6b2e57811b62620869bbc2c8',1,'probGpu.cu']]],
-  ['proposestep_62',['proposestep',['../classmcmc.html#aaf921343861cec8bb96beb2503b3fe2c',1,'mcmc::ProposeStep()'],['../classcovarianceBase.html#a95c7ca23995af579cfa7f199833fe24a',1,'covarianceBase::proposeStep()'],['../classcovarianceOsc.html#abb8df24417b380af9b96763b8abc6b2e',1,'covarianceOsc::proposeStep()']]],
+  ['proposestep_62',['proposestep',['../classcovarianceBase.html#a95c7ca23995af579cfa7f199833fe24a',1,'covarianceBase::proposeStep()'],['../classcovarianceOsc.html#abb8df24417b380af9b96763b8abc6b2e',1,'covarianceOsc::proposeStep()'],['../classmcmc.html#aaf921343861cec8bb96beb2503b3fe2c',1,'mcmc::ProposeStep()']]],
   ['pso_63',['PSO',['../classPSO.html#a14542152b9bd6e2e0f59c8ea1e1e890f',1,'PSO']]]
 ];

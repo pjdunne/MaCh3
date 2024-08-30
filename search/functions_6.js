@@ -11,7 +11,7 @@ var searchData=
   ['fillarrays_5fstandard_8',['FillArrays_Standard',['../classOscillator.html#a1fb6cb1e2acc4a5d5da72fd624f93b19',1,'Oscillator']]],
   ['fillfiledata_9',['fillFileData',['../classMaCh3Plotting_1_1InputManager.html#a33e56b65a7351722fb7790d77e14452f',1,'MaCh3Plotting::InputManager']]],
   ['fillfileinfo_10',['fillFileInfo',['../classMaCh3Plotting_1_1InputManager.html#aad778d8694f9b581d09279584733f6ea',1,'MaCh3Plotting::InputManager']]],
-  ['filloscillogram_11',['FillOscillogram',['../classOscillator.html#a338f483a27048a37c274bf6c16c317ab',1,'Oscillator']]],
+  ['filloscillogram_11',['FillOscillogram',['../classOscillator.html#abe8134c001b9fa8dbd98c91a10889096',1,'Oscillator']]],
   ['fillprimaryhistograms_12',['FillPrimaryHistograms',['../classOscillator.html#af8127a000f846dd4b232610b2ffa6be0',1,'Oscillator']]],
   ['fillprimaryoscillogram_13',['FillPrimaryOscillogram',['../classOscillator.html#a09b23c4b387dd86df22fc54caea7b080',1,'Oscillator']]],
   ['fillsamplearray_14',['FillSampleArray',['../classsplineFDBase.html#addabdf30ee85c6975422c0ccf3f1844f',1,'splineFDBase']]],
@@ -28,9 +28,8 @@ var searchData=
   ['findrootobject_25',['findRootObject',['../classMaCh3Plotting_1_1InputManager.html#a7e9f932d7591cbdd6c99c56c2da75f85',1,'MaCh3Plotting::InputManager']]],
   ['findsplinebinning_26',['FindSplineBinning',['../classsplineFDBase.html#a00c0e93b4c4799ffacaa58578e5dcf6b',1,'splineFDBase']]],
   ['findsplinesegment_27',['findsplinesegment',['../classsplineFDBase.html#ab4a852337aab961abbcaa0c9f70c88ba',1,'splineFDBase::FindSplineSegment()'],['../classSMonolith.html#a7128a7c13b10f331df8946a0a87c4b33',1,'SMonolith::FindSplineSegment()'],['../classSplineBase.html#ae18e490295762416c8627d2db11ee98d',1,'SplineBase::FindSplineSegment()']]],
-  ['finduniquemodes_28',['FindUniqueModes',['../classsplineFDBase.html#a0249bb22856a7a01b64b7828046801aa',1,'splineFDBase']]],
-  ['findx_29',['findx',['../classTSpline3__red.html#a39668a1dc14058a1f833e9621ec19caf',1,'TSpline3_red::FindX()'],['../classTruncated__Spline.html#a0ff225fc53ec9d59402a8bddf45190e0',1,'Truncated_Spline::FindX()']]],
-  ['fitterbase_30',['FitterBase',['../classFitterBase.html#a2d45811f9bcb9719f312048bbd36a423',1,'FitterBase']]],
-  ['four_5fvector_5faddition_31',['four_vector_addition',['../classPSO.html#ac6522025d324079b88bc7ea8c5e766d6',1,'PSO']]],
-  ['fractionoverlapped_32',['FractionOverlapped',['../classOscillator.html#af97891766e2267f373ef85010d96401e',1,'Oscillator']]]
+  ['findx_28',['findx',['../classTSpline3__red.html#a39668a1dc14058a1f833e9621ec19caf',1,'TSpline3_red::FindX()'],['../classTruncated__Spline.html#a0ff225fc53ec9d59402a8bddf45190e0',1,'Truncated_Spline::FindX()']]],
+  ['fitterbase_29',['FitterBase',['../classFitterBase.html#a2d45811f9bcb9719f312048bbd36a423',1,'FitterBase']]],
+  ['four_5fvector_5faddition_30',['four_vector_addition',['../classPSO.html#ac6522025d324079b88bc7ea8c5e766d6',1,'PSO']]],
+  ['fractionoverlapped_31',['FractionOverlapped',['../classOscillator.html#af97891766e2267f373ef85010d96401e',1,'Oscillator']]]
 ];

@@ -17,5 +17,6 @@ var searchData=
   ['drawpostfit_14',['DrawPostfit',['../classMCMCProcessor.html#ab420de77e598da4b02ba74cdc20f2ea9',1,'MCMCProcessor']]],
   ['drawratiostack_15',['drawRatioStack',['../PlotLLH_8cpp.html#a22a044e77ac75863b8962c3a38b95ef7',1,'PlotLLH.cpp']]],
   ['dump_16',['Dump',['../structMaCh3Plotting_1_1InputFile.html#a0897b76fdbfc674ed94da1d2b4adb0a2',1,'MaCh3Plotting::InputFile']]],
-  ['dumpweights_17',['DumpWeights',['../classsamplePDFFDBase.html#a571f6a6915c16e9bd97ac6691a8cbe1b',1,'samplePDFFDBase']]]
+  ['dumpmatrixtofile_17',['DumpMatrixToFile',['../classcovarianceXsec.html#a5cffa7b3221e1a49706ea8a9fe0f826c',1,'covarianceXsec']]],
+  ['dumpweights_18',['DumpWeights',['../classsamplePDFFDBase.html#a571f6a6915c16e9bd97ac6691a8cbe1b',1,'samplePDFFDBase']]]
 ];
