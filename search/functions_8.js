@@ -8,7 +8,7 @@ var searchData=
   ['initgpu_5fsepmany_5',['InitGPU_SepMany',['../gpuSplineUtils_8cu.html#a1d9ccd919e57eb2e2939932bca23e205',1,'gpuSplineUtils.cu']]],
   ['initgpu_5ftf1_6',['InitGPU_TF1',['../gpuSplineUtils_8cu.html#a477d39804560c8f066b91a5f79fbfa0b',1,'gpuSplineUtils.cu']]],
   ['initgpu_5fvals_7',['InitGPU_Vals',['../gpuSplineUtils_8cu.html#acc3b24da038d746b5ccfcee61ba26b90',1,'gpuSplineUtils.cu']]],
-  ['initialise_8',['initialise',['../classMCMCProcessor.html#a224995a0b47bd9cbd04e099cc3ca634c',1,'MCMCProcessor::Initialise()'],['../classMaCh3Plotting_1_1PlottingManager.html#a20fbe3c9673f14adb46d3cd8919e306d',1,'MaCh3Plotting::PlottingManager::initialise()'],['../classSMonolith.html#a45cece9dcbe699e00a7b5fdff4806c1e',1,'SMonolith::Initialise()']]],
+  ['initialise_8',['initialise',['../classSMonolith.html#a45cece9dcbe699e00a7b5fdff4806c1e',1,'SMonolith::Initialise()'],['../classMCMCProcessor.html#a224995a0b47bd9cbd04e099cc3ca634c',1,'MCMCProcessor::Initialise()'],['../classMaCh3Plotting_1_1PlottingManager.html#a20fbe3c9673f14adb46d3cd8919e306d',1,'MaCh3Plotting::PlottingManager::initialise()']]],
   ['initialiseadaption_9',['initialiseAdaption',['../classcovarianceBase.html#a715900cc67fcc598090399ee931938e9',1,'covarianceBase']]],
   ['initialisearrays_10',['InitialiseArrays',['../RHat_8cpp.html#a3efe8085dcbead1e66a6cf54fc77ab5e',1,'RHat.cpp']]],
   ['initialisehistograms_11',['InitialiseHistograms',['../classOscillator.html#ad179520d34c471a982ebc9e0fd821482',1,'Oscillator']]],

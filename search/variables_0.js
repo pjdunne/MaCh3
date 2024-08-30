@@ -41,12 +41,14 @@ var searchData=
   ['_5fmax_5fknots_38',['_max_knots',['../classSMonolith.html#ac0d1df54649909e4cee3385f68132799',1,'SMonolith']]],
   ['_5foutputname_39',['_outputName',['../classMaCh3Plotting_1_1PlottingManager.html#a362e5a4b44a17e5548d0301c2fb43a0a',1,'MaCh3Plotting::PlottingManager']]],
   ['_5fparametersconfig_40',['_parametersConfig',['../classMaCh3Plotting_1_1InputManager.html#ad243d0438a33356e6bca0677c8b588e6',1,'MaCh3Plotting::InputManager']]],
-  ['_5fplotratios_41',['_plotRatios',['../classMaCh3Plotting_1_1PlottingManager.html#ae937b126847fd1b42e45dd5705970972',1,'MaCh3Plotting::PlottingManager']]],
-  ['_5fplottingconfig_42',['_plottingConfig',['../classMaCh3Plotting_1_1PlottingManager.html#aadb74532f93bd6f7ccb2a5928b772163',1,'MaCh3Plotting::PlottingManager']]],
-  ['_5fsamplefile_43',['_sampleFile',['../classsamplePDFFDBase.html#af8657285a97796f840dc191a16e34b16',1,'samplePDFFDBase']]],
-  ['_5fsamplesconfig_44',['_samplesConfig',['../classMaCh3Plotting_1_1InputManager.html#a1eed58ec2fc42d44474c80b8f4e91e15',1,'MaCh3Plotting::InputManager']]],
-  ['_5fsplitbysample_45',['_splitBySample',['../classMaCh3Plotting_1_1PlottingManager.html#ac58348de30d8854fe70371ba377d6b2d',1,'MaCh3Plotting::PlottingManager']]],
-  ['_5fstyleconfig_46',['_styleConfig',['../classMaCh3Plotting_1_1StyleManager.html#a904513e793037e503a1595cfe8467561',1,'MaCh3Plotting::StyleManager']]],
-  ['_5fstyleman_47',['_styleMan',['../classMaCh3Plotting_1_1PlottingManager.html#ad1519621bfc57eace55e228f3d7f9515',1,'MaCh3Plotting::PlottingManager']]],
-  ['_5ftranslatorconfig_48',['_translatorConfig',['../classMaCh3Plotting_1_1InputManager.html#ad2cec8b2758ffcb661db59f930e8010e',1,'MaCh3Plotting::InputManager']]]
+  ['_5fparamtotagsmap_41',['_paramToTagsMap',['../classMaCh3Plotting_1_1InputManager.html#a0d66afafbba133fc3c1b4867957eb3db',1,'MaCh3Plotting::InputManager']]],
+  ['_5fplotratios_42',['_plotRatios',['../classMaCh3Plotting_1_1PlottingManager.html#ae937b126847fd1b42e45dd5705970972',1,'MaCh3Plotting::PlottingManager']]],
+  ['_5fplottingconfig_43',['_plottingConfig',['../classMaCh3Plotting_1_1PlottingManager.html#aadb74532f93bd6f7ccb2a5928b772163',1,'MaCh3Plotting::PlottingManager']]],
+  ['_5fsamplefile_44',['_sampleFile',['../classsamplePDFFDBase.html#af8657285a97796f840dc191a16e34b16',1,'samplePDFFDBase']]],
+  ['_5fsamplesconfig_45',['_samplesConfig',['../classMaCh3Plotting_1_1InputManager.html#a1eed58ec2fc42d44474c80b8f4e91e15',1,'MaCh3Plotting::InputManager']]],
+  ['_5fsampletotagsmap_46',['_sampleToTagsMap',['../classMaCh3Plotting_1_1InputManager.html#ada0eddda54a072bdfc2464a9902cfe01',1,'MaCh3Plotting::InputManager']]],
+  ['_5fsplitbysample_47',['_splitBySample',['../classMaCh3Plotting_1_1PlottingManager.html#ac58348de30d8854fe70371ba377d6b2d',1,'MaCh3Plotting::PlottingManager']]],
+  ['_5fstyleconfig_48',['_styleConfig',['../classMaCh3Plotting_1_1StyleManager.html#a904513e793037e503a1595cfe8467561',1,'MaCh3Plotting::StyleManager']]],
+  ['_5fstyleman_49',['_styleMan',['../classMaCh3Plotting_1_1PlottingManager.html#ad1519621bfc57eace55e228f3d7f9515',1,'MaCh3Plotting::PlottingManager']]],
+  ['_5ftranslatorconfig_50',['_translatorConfig',['../classMaCh3Plotting_1_1InputManager.html#ad2cec8b2758ffcb661db59f930e8010e',1,'MaCh3Plotting::InputManager']]]
 ];

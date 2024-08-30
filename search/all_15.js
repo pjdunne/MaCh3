@@ -11,7 +11,7 @@ var searchData=
   ['uniquesystxpts_8',['UniqueSystXPts',['../classsplineFDBase.html#a5a0cd0e5c824ae56004fefe0ee322759',1,'splineFDBase']]],
   ['unity_9',['unity',['../structfdmc__base.html#a12e69ee22f800b6399bda527c173c455',1,'fdmc_base::Unity'],['../classcovarianceBase.html#a7682c3de33ae5b23b23e070dc0a3f778',1,'covarianceBase::Unity']]],
   ['unknown_5ftype_10',['unknown_type',['../probGpu_8cu.html#af576b2dca8674d5d2ea4ec3f38ee52f3adc4915ec587055c582d661400c0a0ee0',1,'probGpu.cu']]],
-  ['updateadaptivecovariance_11',['updateadaptivecovariance',['../classcovarianceBase.html#a50ce8ebb96ebd64190dc37e4bf950a9b',1,'covarianceBase::updateAdaptiveCovariance()'],['../classadaptive__mcmc_1_1AdaptiveMCMCHandler.html#ab17332692cafc750d1e6c73eb4897697',1,'adaptive_mcmc::AdaptiveMCMCHandler::UpdateAdaptiveCovariance()']]],
+  ['updateadaptivecovariance_11',['updateadaptivecovariance',['../classadaptive__mcmc_1_1AdaptiveMCMCHandler.html#ab17332692cafc750d1e6c73eb4897697',1,'adaptive_mcmc::AdaptiveMCMCHandler::UpdateAdaptiveCovariance()'],['../classcovarianceBase.html#a50ce8ebb96ebd64190dc37e4bf950a9b',1,'covarianceBase::updateAdaptiveCovariance()']]],
   ['updatethrowmatrix_12',['updateThrowMatrix',['../classcovarianceBase.html#a7e2d3623bbbf3edee558e04737fe2add',1,'covarianceBase']]],
   ['uppercut_13',['UpperCut',['../classMCMCProcessor.html#a840c686f15f419c0156df01c4ed62931',1,'MCMCProcessor']]],
   ['ur_14',['UR',['../structBox.html#a91e3a5bc435593fa2bab7389e47bf0fd',1,'Box']]],
