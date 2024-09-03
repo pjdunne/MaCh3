@@ -93,13 +93,14 @@ How to Compile</h1>
 </div><!-- fragment --><p>Don't forget to: </p><div class="fragment"><div class="line">source bin/setup.MaCh3.sh</div>
 </div><!-- fragment --> <h2><a class="anchor" id="autotoc_md12"></a>
 Building against MaCh3</h2>
-<p>If you compiled MaCh3 and sourced it you can simply call </p><div class="fragment"><div class="line">find_package(MaCh3)</div>
-</div><!-- fragment --><p> and cmake will find it. Alternatively, you can use CPM, for example: </p><div class="fragment"><div class="line">CPMFindPackage(</div>
+<p>To include MaCh3 in your cmake project you can use following syntax </p><div class="fragment"><div class="line">CPMFindPackage(</div>
 <div class="line">  NAME MaCh3</div>
 <div class="line">  GIT_TAG &quot;blarb&quot;</div>
 <div class="line">  GITHUB_REPOSITORY mach3-software/MaCh3</div>
 <div class="line">)</div>
-</div><!-- fragment --><p> Once you found MaCh3 you might want to link your library against MaCh3. You can do this as follows: </p><div class="fragment"><div class="line">target_link_libraries(blarb MaCh3::All)</div>
+</div><!-- fragment --><p> Where "blarb" is the MaCh3 version. You can find a list of releases <a href="https://github.com/mach3-software/MaCh3/wiki/0.1.-History">here</a> <br  />
+ If you compiled MaCh3 and sourced it you can simply call </p><div class="fragment"><div class="line">find_package(MaCh3)</div>
+</div><!-- fragment --><p>Once you found MaCh3 you might want to link your library against MaCh3. You can do this as follows: </p><div class="fragment"><div class="line">target_link_libraries(blarb MaCh3::All)</div>
 </div><!-- fragment --><p>Some functionalities rely on setting <code>Env{MACH3}</code> which should point to path experiment specific MaCh3. This way MaCh3 can easily find <code>Env{MACH3}/inputs/SomeInput.root</code> for example.</p>
 <h2><a class="anchor" id="autotoc_md13"></a>
 Python</h2>
