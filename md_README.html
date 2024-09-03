@@ -104,7 +104,7 @@ Building against MaCh3</h2>
 </div><!-- fragment --><p>Some functionalities rely on setting <code>Env{MACH3}</code> which should point to path experiment specific MaCh3. This way MaCh3 can easily find <code>Env{MACH3}/inputs/SomeInput.root</code> for example.</p>
 <h2><a class="anchor" id="autotoc_md13"></a>
 Python</h2>
-<p>MaCh3 can be compiled with a python interface by specifying the cmake option </p><div class="fragment"><div class="line">cmake ../ MaCh3_PYTHON_ENABLED=ON</div>
+<p>MaCh3 can be compiled with a python interface by specifying the cmake option </p><div class="fragment"><div class="line">cmake ../ -DMaCh3_PYTHON_ENABLED=ON</div>
 <div class="line">make &amp;&amp; make install</div>
 </div><!-- fragment --><p> and then adding the path to the installed module to your <code>PYTHONPATH</code> environment variable: </p><div class="fragment"><div class="line">export PYTHONPATH=$PYTHONPATH:&lt;path&gt;/&lt;to&gt;/&lt;MaCh3&gt;/build/python</div>
 </div><!-- fragment --><p> Currently the python module only contains an interface to the plotting library (see <a href="https://github.com/mach3-software/MaCh3/blob/develop/plotting/README.md#python">here</a> for more information on how to use it)</p>
