@@ -63,7 +63,7 @@ var searchData=
   ['propagate_60',['propagate',['../probGpu_8cu.html#aaef807b1ff8ad0f12824fd7dc0cc73af',1,'probGpu.cu']]],
   ['propagatelinear_61',['propagateLinear',['../probGpu_8cu.html#a8fcc717c4d5b5bbcbdefc58ad20ccaf9',1,'probGpu.cu']]],
   ['propagatelinearall_62',['propagateLinearAll',['../probGpu_8cu.html#a30b0751d6b2e57811b62620869bbc2c8',1,'probGpu.cu']]],
-  ['proposestep_63',['proposestep',['../classcovarianceOsc.html#abb8df24417b380af9b96763b8abc6b2e',1,'covarianceOsc::proposeStep()'],['../classmcmc.html#aaf921343861cec8bb96beb2503b3fe2c',1,'mcmc::ProposeStep()'],['../classcovarianceBase.html#a95c7ca23995af579cfa7f199833fe24a',1,'covarianceBase::proposeStep()']]],
+  ['proposestep_63',['proposestep',['../classmcmc.html#aaf921343861cec8bb96beb2503b3fe2c',1,'mcmc::ProposeStep()'],['../classcovarianceBase.html#a95c7ca23995af579cfa7f199833fe24a',1,'covarianceBase::proposeStep()'],['../classcovarianceOsc.html#abb8df24417b380af9b96763b8abc6b2e',1,'covarianceOsc::proposeStep()']]],
   ['pso_64',['PSO',['../classPSO.html#a14542152b9bd6e2e0f59c8ea1e1e890f',1,'PSO']]],
   ['pybind11_5fmodule_65',['PYBIND11_MODULE',['../pyMaCh3_8cpp.html#a28e6a2cab61cf90c8317c9c5e5e8d27d',1,'pyMaCh3.cpp']]]
 ];
