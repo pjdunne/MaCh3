@@ -27,8 +27,7 @@ var searchData=
   ['_7esplinebase_24',['~SplineBase',['../classSplineBase.html#a0de19b2322edb4197380506d594456bd',1,'SplineBase']]],
   ['_7esplinefdbase_25',['~splineFDBase',['../classsplineFDBase.html#aef7692f02d28abdcfc09b6ed6bdcabf2',1,'splineFDBase']]],
   ['_7etf1_5fred_26',['~TF1_red',['../classTF1__red.html#a154077c37858ec88449cae76c41d671b',1,'TF1_red']]],
-  ['_7ethrowparms_27',['~ThrowParms',['../classThrowParms.html#ac81ea768c6ade4f456f1b917340a64a4',1,'ThrowParms']]],
-  ['_7etruncated_5fspline_28',['~Truncated_Spline',['../classTruncated__Spline.html#a4ce82ec74b255ecbfe97a372b377444e',1,'Truncated_Spline']]],
-  ['_7etspline3_5fred_29',['~TSpline3_red',['../classTSpline3__red.html#a275808bab562c82d155433c1d62ac1a1',1,'TSpline3_red']]],
-  ['_7exsecstruct_30',['~XSecStruct',['../classXSecStruct.html#af9d63792f8ad59bb5dc5f79dee16ef38',1,'XSecStruct']]]
+  ['_7etruncated_5fspline_27',['~Truncated_Spline',['../classTruncated__Spline.html#a4ce82ec74b255ecbfe97a372b377444e',1,'Truncated_Spline']]],
+  ['_7etspline3_5fred_28',['~TSpline3_red',['../classTSpline3__red.html#a275808bab562c82d155433c1d62ac1a1',1,'TSpline3_red']]],
+  ['_7exsecstruct_29',['~XSecStruct',['../classXSecStruct.html#af9d63792f8ad59bb5dc5f79dee16ef38',1,'XSecStruct']]]
 ];

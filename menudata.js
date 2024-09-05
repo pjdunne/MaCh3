@@ -201,5 +201,4 @@ var menudata={children:[
 {text:"i",url:"globals_defs.html#index_i"},
 {text:"m",url:"globals_defs.html#index_m"},
 {text:"r",url:"globals_defs.html#index_r"},
-{text:"t",url:"globals_defs.html#index_t"},
-{text:"u",url:"globals_defs.html#index_u"}]}]}]}]}
+{text:"t",url:"globals_defs.html#index_t"}]}]}]}]}

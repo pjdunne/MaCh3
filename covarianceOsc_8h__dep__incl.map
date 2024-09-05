@@ -4,8 +4,8 @@
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="476,39,365,81,363,76,474,34"/>
 <area shape="rect" id="Node000003" href="$FitterBase_8h.html" title=" " alt="" coords="455,79,587,105"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="524,46,524,79,518,79,518,46"/>
-<area shape="rect" id="Node000015" href="$samplePDFFDBase_8h.html" title=" " alt="" coords="671,79,889,105"/>
-<area shape="poly" id="edge17_Node000001_Node000015" title=" " alt="" coords="580,33,736,76,735,81,579,38"/>
+<area shape="rect" id="Node000015" href="$samplePDFFDBase_8h.html" title=" " alt="" coords="653,79,872,105"/>
+<area shape="poly" id="edge17_Node000001_Node000015" title=" " alt="" coords="577,33,722,76,720,81,575,38"/>
 <area shape="rect" id="Node000004" href="$FitterBase_8cpp.html" title=" " alt="" coords="155,153,300,178"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="457,111,278,155,277,149,456,106"/>
 <area shape="rect" id="Node000005" href="$LikelihoodFit_8h.html" title=" " alt="" coords="324,153,470,178"/>
@@ -31,9 +31,6 @@
 <area shape="poly" id="edge15_Node000013_Node000007" title=" " alt="" coords="600,193,541,301,536,298,596,191"/>
 <area shape="rect" id="Node000014" href="$mcmc_8cpp.html" title=" " alt="" coords="610,226,731,252"/>
 <area shape="poly" id="edge16_Node000013_Node000014" title=" " alt="" coords="633,189,662,224,658,228,629,192"/>
-<area shape="rect" id="Node000016" href="$ShiftFunctors_8h.html" title=" " alt="" coords="689,153,870,178"/>
-<area shape="poly" id="edge18_Node000015_Node000016" title=" " alt="" coords="774,120,775,152,770,152,768,120"/>
-<area shape="rect" id="Node000017" href="$samplePDFFDBase_8cpp.html" title=" " alt="" coords="894,153,1127,178"/>
-<area shape="poly" id="edge20_Node000015_Node000017" title=" " alt="" coords="834,107,972,150,970,155,832,112"/>
-<area shape="poly" id="edge19_Node000016_Node000015" title=" " alt="" coords="786,137,784,105,789,105,791,137"/>
+<area shape="rect" id="Node000016" href="$samplePDFFDBase_8cpp.html" title=" " alt="" coords="689,153,921,178"/>
+<area shape="poly" id="edge18_Node000015_Node000016" title=" " alt="" coords="779,116,800,151,796,154,775,119"/>
 </map>

@@ -30,7 +30,7 @@ var searchData=
   ['algorithms_27',['Fitting algorithms',['../md_README.html#autotoc_md18',1,'']]],
   ['align_20center_20width_20100_28',['MaCh3 &lt;img src=&quot;Doc/mach3logo.png&quot; alt=&quot;MaCh3&quot; align=&quot;center&quot; width=&quot;100&quot;/&gt;',['../md_README.html',1,'']]],
   ['alt_20mach3_20align_20center_20width_20100_29',['MaCh3 &lt;img src=&quot;Doc/mach3logo.png&quot; alt=&quot;MaCh3&quot; align=&quot;center&quot; width=&quot;100&quot;/&gt;',['../md_README.html',1,'']]],
-  ['and_20diagnostic_30',['and diagnostic',['../md_README.html#autotoc_md24',1,'Plotting and Diagnostic'],['../md_Diagnostics_2README.html',1,'Plotting and Diagnostic']]],
+  ['and_20diagnostic_30',['Plotting and Diagnostic',['../md_README.html#autotoc_md24',1,'']]],
   ['and_20guidelines_31',['Help and Guidelines',['../md_README.html#autotoc_md23',1,'']]],
   ['anneal_32',['anneal',['../classmcmc.html#a4da3776296d4f06268f240df5eb0bbcc',1,'mcmc']]],
   ['annealtemp_33',['AnnealTemp',['../classmcmc.html#a3052c9e38107c0070c885a5a3bbbc302',1,'mcmc']]],

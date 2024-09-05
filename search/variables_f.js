@@ -4,7 +4,7 @@ var searchData=
   ['p2_1',['p2',['../GetPostfitParamPlots_8cpp.html#afcf736152a1c6e4f65d2d41b7335136c',1,'GetPostfitParamPlots.cpp']]],
   ['p3_2',['p3',['../GetPostfitParamPlots_8cpp.html#a814cbca1b36d9e3f622031e0e9634ce0',1,'GetPostfitParamPlots.cpp']]],
   ['p4_3',['p4',['../GetPostfitParamPlots_8cpp.html#ac577141e2ab46a432ac74c34d18d0739',1,'GetPostfitParamPlots.cpp']]],
-  ['par_4',['par',['../classTSpline3__red.html#a5864d7f83769639e0fbe5f417bee5dfe',1,'TSpline3_red::Par'],['../classTF1__red.html#a37ad3ad0f1a93e8f17f1c6bf06058b59',1,'TF1_red::Par'],['../classPSO.html#ae5eff2b0193e0d7c9c221edbc14118bd',1,'PSO::par']]],
+  ['par_4',['par',['../classTF1__red.html#a37ad3ad0f1a93e8f17f1c6bf06058b59',1,'TF1_red::Par'],['../classPSO.html#ae5eff2b0193e0d7c9c221edbc14118bd',1,'PSO::par'],['../classTSpline3__red.html#a5864d7f83769639e0fbe5f417bee5dfe',1,'TSpline3_red::Par']]],
   ['par_5fmeans_5',['par_means',['../classadaptive__mcmc_1_1AdaptiveMCMCHandler.html#a066984e9598e073d04edec51511cdf0a',1,'adaptive_mcmc::AdaptiveMCMCHandler']]],
   ['param_5fpos_6',['Param_pos',['../classBaseFuncPar.html#a852005983ca8e7d16274079245471bb5',1,'BaseFuncPar']]],
   ['paramcentral_7',['ParamCentral',['../classMCMCProcessor.html#a3a6614826ae320e462211e38e96d9d02',1,'MCMCProcessor']]],
@@ -56,6 +56,5 @@ var searchData=
   ['probtype_53',['ProbType',['../structfdmc__base.html#a1dd06648b45adb3a7f36fdf3f5620e4e',1,'fdmc_base']]],
   ['productionheightbinedges_54',['ProductionHeightBinEdges',['../classOscillator.html#a93b575c6ed29c79382b59e27ce978e0d',1,'Oscillator']]],
   ['productionheightfilename_55',['ProductionHeightFileName',['../classOscillator.html#ab72d1515e84960103c1f54142f1f04f3',1,'Oscillator']]],
-  ['propagator_56',['propagator',['../classOscillator.html#a22e72322d2ee2eacb522424b819a5d9c',1,'Oscillator']]],
-  ['pvals_57',['pvals',['../classThrowParms.html#a761c7ef866ef034f452f85fb9a5f9dba',1,'ThrowParms']]]
+  ['propagator_56',['propagator',['../classOscillator.html#a22e72322d2ee2eacb522424b819a5d9c',1,'Oscillator']]]
 ];
