@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="MaCh3.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -22,7 +23,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="mach3logo_small.png"/></td>
   <td id="projectalign">
-   <div id="projectname">MaCh3<span id="projectnumber">&#160;1.1.0</span>
+   <div id="projectname">MaCh3<span id="projectnumber">&#160;1.1.1</span>
    </div>
    <div id="projectbrief">Reference Guide</div>
   </td>
@@ -80,7 +81,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Class to calculate pvalue produce posterior predictive and many fancy Bayesian stuff.  
+<p>Class to calculate pvalue produce posterior predictive and many fancy Bayesian stuff <b>[gelman1996posterior]</b>.  
  <a href="classSampleSummary.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="SampleSummary_8h_source.html">mcmc/SampleSummary.h</a>&gt;</code></p>
@@ -89,7 +90,7 @@ Collaboration diagram for SampleSummary:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSampleSummary__coll__graph.png" border="0" usemap="#aSampleSummary_coll__map" alt="Collaboration graph"/></div>
 <map name="aSampleSummary_coll__map" id="aSampleSummary_coll__map">
-<area shape="rect" title="Class to calculate pvalue produce posterior predictive and many fancy Bayesian stuff." alt="" coords="1664,221,1784,247"/>
+<area shape="rect" title="Class to calculate pvalue produce posterior predictive and many fancy Bayesian stuff ." alt="" coords="1664,221,1784,247"/>
 <area shape="rect" title=" " alt="" coords="1041,40,1193,81"/>
 <area shape="poly" title=" " alt="" coords="1208,41,1305,32,1361,32,1419,35,1477,43,1535,57,1590,78,1642,108,1670,134,1693,165,1720,220,1715,222,1688,168,1666,138,1638,112,1588,83,1534,62,1476,48,1418,40,1360,37,1305,38,1209,47"/>
 <area shape="rect" title=" " alt="" coords="1355,89,1508,145"/>
@@ -517,8 +518,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a39f6281cf13b70266fc22fe46555dbe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Class to calculate pvalue produce posterior predictive and many fancy Bayesian stuff. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c" title="Get content of config file if node is not found take default value specified.">For</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c" title="Get content of config file if node is not found take default value specified.">more</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c" title="Get content of config file if node is not found take default value specified.">details</a>, <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c" title="Get content of config file if node is not found take default value specified.">visit</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c" title="Get content of config file if node is not found take default value specified.">the</a> <a href="https://github.com/mach3-software/MaCh3/wiki/10.-Posterior-Predictive,-p%E2%80%90value-etc.">Wiki</a>. </dd></dl>
+<div class="textblock"><p>Class to calculate pvalue produce posterior predictive and many fancy Bayesian stuff <b>[gelman1996posterior]</b>. </p>
+<p>For more information, visit the <a href="https://github.com/mach3-software/MaCh3/wiki/10.-Posterior-Predictive,-p%E2%80%90value-etc.">Wiki</a>. </p>
 
 <p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00025">25</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -1315,7 +1316,7 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  565</span>  } <span class="comment">// end samples loop</span></div>
 <div class="line"><span class="lineno">  566</span>} <span class="comment">// end AddThrow</span></div>
 <div class="ttc" id="aGetPenaltyTerm_8cpp_html_a439227feff9d7f55384e8780cfc2eb82"><div class="ttname"><a href="GetPenaltyTerm_8cpp.html#a439227feff9d7f55384e8780cfc2eb82">size</a></div><div class="ttdeci">int size</div><div class="ttdef"><b>Definition</b> <a href="GetPenaltyTerm_8cpp_source.html#l00042">GetPenaltyTerm.cpp:42</a></div></div>
-<div class="ttc" id="aStatisticalUtils_8h_html_afecd84c56d6546271c4547192aae31af"><div class="ttname"><a href="StatisticalUtils_8h.html#afecd84c56d6546271c4547192aae31af">GetBetaParameter</a></div><div class="ttdeci">double GetBetaParameter(const double data, const double mc, const double w2, TestStatistic TestStat)</div><div class="ttdoc">KS: Calculate Beta parameter which will be different based on specified test statistic.</div><div class="ttdef"><b>Definition</b> <a href="StatisticalUtils_8h_source.html#l00198">StatisticalUtils.h:198</a></div></div>
+<div class="ttc" id="aStatisticalUtils_8h_html_afecd84c56d6546271c4547192aae31af"><div class="ttname"><a href="StatisticalUtils_8h.html#afecd84c56d6546271c4547192aae31af">GetBetaParameter</a></div><div class="ttdeci">double GetBetaParameter(const double data, const double mc, const double w2, TestStatistic TestStat)</div><div class="ttdoc">KS: Calculate Beta parameter which will be different based on specified test statistic.</div><div class="ttdef"><b>Definition</b> <a href="StatisticalUtils_8h_source.html#l00197">StatisticalUtils.h:197</a></div></div>
 <div class="ttc" id="aclassSampleSummary_html_a068e2a5ad0c02aaa57a27d2b12e37810"><div class="ttname"><a href="classSampleSummary.html#a068e2a5ad0c02aaa57a27d2b12e37810">SampleSummary::LLHPenaltyVector</a></div><div class="ttdeci">std::vector&lt; double &gt; LLHPenaltyVector</div><div class="ttdoc">Vector to hold the penalty term.</div><div class="ttdef"><b>Definition</b> <a href="SampleSummary_8h_source.html#l00145">SampleSummary.h:145</a></div></div>
 <div class="ttc" id="aclassSampleSummary_html_a13177305e8fd4b97812b2ca563740bf2"><div class="ttname"><a href="classSampleSummary.html#a13177305e8fd4b97812b2ca563740bf2">SampleSummary::MCVector</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; TH2Poly * &gt; &gt; MCVector</div><div class="ttdoc">Vector of vectors which holds the loaded MC histograms.</div><div class="ttdef"><b>Definition</b> <a href="SampleSummary_8h_source.html#l00138">SampleSummary.h:138</a></div></div>
 <div class="ttc" id="aclassSampleSummary_html_a263b7541545b8b0ba735e0a3ac2d31e7"><div class="ttname"><a href="classSampleSummary.html#a263b7541545b8b0ba735e0a3ac2d31e7">SampleSummary::W2MCVector</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; TH2Poly * &gt; &gt; W2MCVector</div><div class="ttdoc">Vector of vectors which holds the loaded W2 histograms.</div><div class="ttdef"><b>Definition</b> <a href="SampleSummary_8h_source.html#l00140">SampleSummary.h:140</a></div></div>

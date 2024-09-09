@@ -16,7 +16,7 @@ var searchData=
   ['energyscale_13',['energyscale',['../classEnergyScale.html#a7d616fb5f4f141861ecd383174106ed0',1,'EnergyScale::EnergyScale()'],['../classEnergyScale.html',1,'EnergyScale']]],
   ['ensuremodenameregistered_14',['EnsureModeNameRegistered',['../classMaCh3Modes.html#a989fa0ebe20a1e0113900972e194a543',1,'MaCh3Modes']]],
   ['errbuf_15',['errbuf',['../classsamplePDFBase.html#ace134e4f57297cc68b5b299f97821b6c',1,'samplePDFBase']]],
-  ['error_20handling_16',['Error handling',['../md_CONTRIBUTING.html#autotoc_md6',1,'']]],
+  ['error_20handling_16',['Error handling',['../md_CONTRIBUTING.html#autotoc_md7',1,'']]],
   ['errormessage_17',['errorMessage',['../classMaCh3Exception.html#ab556e4d4710fab4c4d75e94c4bab537d',1,'MaCh3Exception']]],
   ['errors_18',['Errors',['../classMCMCProcessor.html#a5174aaa900edf16ddc6e841ea4adae83',1,'MCMCProcessor']]],
   ['errors_5fgauss_19',['Errors_Gauss',['../classMCMCProcessor.html#aa78b7ed1bb9966f84f4eaf8cedf5e688',1,'MCMCProcessor']]],

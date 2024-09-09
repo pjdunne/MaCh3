@@ -40,7 +40,7 @@ var searchData=
   ['signal_37',['signal',['../structfdmc__base.html#ae94a6b0203acb2effc73bd37d799d4b3',1,'fdmc_base']]],
   ['size_38',['size',['../classcovarianceBase.html#a7d3922fb843ba65990c44cac324b9ccb',1,'covarianceBase::size'],['../GetPenaltyTerm_8cpp.html#a439227feff9d7f55384e8780cfc2eb82',1,'size:&#160;GetPenaltyTerm.cpp']]],
   ['skdet_5fpointer_39',['skdet_pointer',['../structfdmc__base.html#a1222d10ff4ba2f6a2b2018a81c8ffdae',1,'fdmc_base']]],
-  ['splinebinnedvars_40',['SplineBinnedVars',['../classsamplePDFFDBase.html#a1e19211595e7139e6d9af1892d2bb12f',1,'samplePDFFDBase']]],
+  ['splinebinnedvars_40',['SplineBinnedVars',['../classsamplePDFFDBase.html#abb77e0f3640a1c46c47afe467bf15e81',1,'samplePDFFDBase']]],
   ['splinebinning_41',['SplineBinning',['../classsplineFDBase.html#af71b65713518f42e59c543dbad5dab70',1,'splineFDBase']]],
   ['splinefile_42',['splinefile',['../structfdmc__base.html#afbf315b6d43b5e0de283fc9df180068f',1,'fdmc_base::splineFile'],['../classsamplePDFFDBase.html#ac7c59494c502991294fa1be8624d47a6',1,'samplePDFFDBase::splineFile']]],
   ['splinefileparprefixnames_43',['SplineFileParPrefixNames',['../classsplineFDBase.html#a5619363447e607cd835c46d601b10675',1,'splineFDBase']]],

@@ -3,7 +3,7 @@ var searchData=
   ['m_5fe_0',['m_e',['../Structs_8h.html#ae0d15be5d1316877430ecb0ce94adec7ab2771e69b128dc53bc4f8bacfcfcecb0',1,'Structs.h']]],
   ['m_5fm_1',['m_m',['../Structs_8h.html#ae0d15be5d1316877430ecb0ce94adec7a41071dca17d04928fa0852ded8c1025b',1,'Structs.h']]],
   ['m_5ft_2',['m_t',['../Structs_8h.html#ae0d15be5d1316877430ecb0ce94adec7af7aaf8e15fe7f438db465ff6ce791d1b',1,'Structs.h']]],
-  ['mach3_3',['mach3',['../md_README.html#autotoc_md12',1,'Building against MaCh3'],['../md_CONTRIBUTING.html',1,'How to Contribute Code to MaCh3']]],
+  ['mach3_3',['mach3',['../md_README.html#autotoc_md13',1,'Building against MaCh3'],['../md_CONTRIBUTING.html',1,'How to Contribute Code to MaCh3']]],
   ['mach3_20img_20src_20doc_20mach3logo_20png_20alt_20mach3_20align_20center_20width_20100_4',['MaCh3 &lt;img src=&quot;Doc/mach3logo.png&quot; alt=&quot;MaCh3&quot; align=&quot;center&quot; width=&quot;100&quot;/&gt;',['../md_README.html',1,'']]],
   ['mach3_20reference_20documentation_5',['MaCh3 Reference Documentation',['../index.html',1,'']]],
   ['mach3exception_6',['mach3exception',['../classMaCh3Exception.html',1,'MaCh3Exception'],['../classMaCh3Exception.html#a848f0037a80a607b8721b7a163b1077e',1,'MaCh3Exception::MaCh3Exception()']]],
@@ -115,7 +115,7 @@ var searchData=
   ['mode_112',['mode',['../classMaCh3Modes.html#a062f961a64e9b6bebf420730f9dad9ff',1,'MaCh3Modes::Mode'],['../structfdmc__base.html#a86b6b78f41e045592074494f960c8128',1,'fdmc_base::mode']]],
   ['modehist_113',['ModeHist',['../classSampleSummary.html#a59475a0c9460277914402850372727ea',1,'SampleSummary']]],
   ['modemap_114',['ModeMap',['../classMaCh3Modes.html#a52a226378736541ece3830f53ac851c3',1,'MaCh3Modes']]],
-  ['modes_115',['modes',['../classSampleSummary.html#a6593fed9709673a6910f96adc88fc8f2',1,'SampleSummary::Modes'],['../classFitterBase.html#a004cb6e6168032d9280ce3db912f1a43',1,'FitterBase::Modes'],['../classsamplePDFBase.html#ab4ce7691212fdc86570b98d58a333ddf',1,'samplePDFBase::Modes'],['../classmanager.html#ab30ad812780ee2152b72f942b7b91dec',1,'manager::Modes'],['../structXsecNorms4.html#ad0632d5a94a37ee5ce297698abadd844',1,'XsecNorms4::modes']]],
+  ['modes_115',['modes',['../structXsecNorms4.html#ad0632d5a94a37ee5ce297698abadd844',1,'XsecNorms4::modes'],['../classSampleSummary.html#a6593fed9709673a6910f96adc88fc8f2',1,'SampleSummary::Modes'],['../classFitterBase.html#a004cb6e6168032d9280ce3db912f1a43',1,'FitterBase::Modes'],['../classsamplePDFBase.html#ab4ce7691212fdc86570b98d58a333ddf',1,'samplePDFBase::Modes'],['../classmanager.html#ab30ad812780ee2152b72f942b7b91dec',1,'manager::Modes']]],
   ['modifyweights_116',['modifyweights',['../classSMonolith.html#ac37ee525aa57316f652433a4e393afaf',1,'SMonolith::ModifyWeights()'],['../classsplineFDBase.html#a1a237a8b8c3c165c82ebe15d2ca740c7',1,'splineFDBase::ModifyWeights()'],['../classSplineBase.html#a49665d2712b61b038085d25ace96a568',1,'SplineBase::ModifyWeights()']]],
   ['modifyweights_5fgpu_117',['ModifyWeights_GPU',['../classSMonolith.html#a72cd282322bdaadb23d8a376efa9e2c1',1,'SMonolith']]],
   ['monitor_2ecpp_118',['Monitor.cpp',['../Monitor_8cpp.html',1,'']]],
@@ -126,6 +126,6 @@ var searchData=
   ['multipleprocessmcmc_123',['MultipleProcessMCMC',['../ProcessMCMC_8cpp.html#a83be70750a728e4deae518ea3ffaf388',1,'ProcessMCMC.cpp']]],
   ['multiply_5fcomplex_5fmatrix_124',['multiply_complex_matrix',['../probGpu_8cu.html#a53a370d8b4affa40d74e50a1f22807bf',1,'probGpu.cu']]],
   ['multiply_5fcomplex_5fmatvec_125',['multiply_complex_matvec',['../probGpu_8cu.html#a1acdf30bb35ebad7d39e490ab5eb4400',1,'probGpu.cu']]],
-  ['multithreading_126',['Multithreading',['../md_README.html#autotoc_md15',1,'']]],
+  ['multithreading_126',['Multithreading',['../md_README.html#autotoc_md16',1,'']]],
   ['muon_127',['muon',['../probGpu_8cu.html#a69678ffc7b9d73fd9cce79b957e155b7',1,'probGpu.cu']]]
 ];

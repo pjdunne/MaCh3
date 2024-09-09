@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="MaCh3.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -22,7 +23,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="mach3logo_small.png"/></td>
   <td id="projectalign">
-   <div id="projectname">MaCh3<span id="projectnumber">&#160;1.1.0</span>
+   <div id="projectname">MaCh3<span id="projectnumber">&#160;1.1.1</span>
    </div>
    <div id="projectbrief">Reference Guide</div>
   </td>
@@ -94,7 +95,7 @@ Inheritance diagram for FitterBase:</div>
 <area shape="poly" title=" " alt="" coords="117,45,93,80,88,77,113,42"/>
 <area shape="rect" href="classmcmc.html" title="Implementation of MR2T2 algorithm." alt="" coords="154,79,211,105"/>
 <area shape="poly" title=" " alt="" coords="151,42,176,77,172,80,147,45"/>
-<area shape="rect" href="classMinuitFit.html" title="Implementation of Minuit fitting algorithm." alt="" coords="5,153,77,178"/>
+<area shape="rect" href="classMinuitFit.html" title="Implementation of Minuit fitting algorithm ." alt="" coords="5,153,77,178"/>
 <area shape="poly" title=" " alt="" coords="70,119,50,154,46,151,66,117"/>
 <area shape="rect" href="classPSO.html" title="Class PSO, consist of a vector of object Class Particle and global best Takes in the size (number of ..." alt="" coords="100,153,150,178"/>
 <area shape="poly" title=" " alt="" coords="99,116,120,151,116,154,95,119"/>
@@ -184,7 +185,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a3815ee89c5580175bb952c9adf3fabb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds two oscillation handlers for covariance objects.  <br /></td></tr>
 <tr class="separator:a3815ee89c5580175bb952c9adf3fabb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a9666dc09f91af804954e8968bc7b24" id="r_a1a9666dc09f91af804954e8968bc7b24"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">virtual</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitterBase.html#a1a9666dc09f91af804954e8968bc7b24">runMCMC</a> ()=0</td></tr>
-<tr class="memdesc:a1a9666dc09f91af804954e8968bc7b24"><td class="mdescLeft">&#160;</td><td class="mdescRight">The specific fitting algorithm implemented in this function depends on the derived class. It could be Markov Chain Monte Carlo (MCMC), <a class="el" href="classMinuitFit.html" title="Implementation of Minuit fitting algorithm.">MinuitFit</a>, or another algorithm.  <br /></td></tr>
+<tr class="memdesc:a1a9666dc09f91af804954e8968bc7b24"><td class="mdescLeft">&#160;</td><td class="mdescRight">The specific fitting algorithm implemented in this function depends on the derived class. It could be Markov Chain Monte Carlo (MCMC), <a class="el" href="classMinuitFit.html" title="Implementation of Minuit fitting algorithm .">MinuitFit</a>, or another algorithm.  <br /></td></tr>
 <tr class="separator:a1a9666dc09f91af804954e8968bc7b24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3db1d0bb7364e70cd432a3e1c0a600e" id="r_ab3db1d0bb7364e70cd432a3e1c0a600e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFitterBase.html#ab3db1d0bb7364e70cd432a3e1c0a600e">DragRace</a> (<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">const</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">int</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">NLaps</a>=100)</td></tr>
 <tr class="memdesc:ab3db1d0bb7364e70cd432a3e1c0a600e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the required time for each sample or covariance object in a drag race simulation. Inspired by Dan's feature.  <br /></td></tr>
@@ -1165,7 +1166,7 @@ Protected Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  417</span>  }</div>
 <div class="line"><span class="lineno">  418</span>}</div>
 <div class="ttc" id="aGetPenaltyTerm_8cpp_html_a871d6466cea2597401bdb203293f4033"><div class="ttname"><a href="GetPenaltyTerm_8cpp.html#a871d6466cea2597401bdb203293f4033">BranchNames</a></div><div class="ttdeci">std::vector&lt; TString &gt; BranchNames</div><div class="ttdef"><b>Definition</b> <a href="GetPenaltyTerm_8cpp_source.html#l00040">GetPenaltyTerm.cpp:40</a></div></div>
-<div class="ttc" id="aclassMCMCProcessor_html"><div class="ttname"><a href="classMCMCProcessor.html">MCMCProcessor</a></div><div class="ttdoc">Class responsible for processing MCMC chains, performing diagnostics, generating plots,...</div><div class="ttdef"><b>Definition</b> <a href="MCMCProcessor_8h_source.html#l00063">MCMCProcessor.h:63</a></div></div>
+<div class="ttc" id="aclassMCMCProcessor_html"><div class="ttname"><a href="classMCMCProcessor.html">MCMCProcessor</a></div><div class="ttdoc">Class responsible for processing MCMC chains, performing diagnostics, generating plots,...</div><div class="ttdef"><b>Definition</b> <a href="MCMCProcessor_8h_source.html#l00062">MCMCProcessor.h:62</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1768,7 +1769,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>The specific fitting algorithm implemented in this function depends on the derived class. It could be Markov Chain Monte Carlo (MCMC), <a class="el" href="classMinuitFit.html" title="Implementation of Minuit fitting algorithm.">MinuitFit</a>, or another algorithm. </p>
+<p>The specific fitting algorithm implemented in this function depends on the derived class. It could be Markov Chain Monte Carlo (MCMC), <a class="el" href="classMinuitFit.html" title="Implementation of Minuit fitting algorithm .">MinuitFit</a>, or another algorithm. </p>
 
 <p>Implemented in <a class="el" href="classmcmc.html#a8a9cc0e0aa65c8573fca703a42b2ee31">mcmc</a>, <a class="el" href="classMinuitFit.html#a8e746fb17d4bc75a9d308398a4a0229e">MinuitFit</a>, <a class="el" href="classPSO.html#afcd534dbf737430c8ab1e921e8730b81">PSO</a>, and <a class="el" href="classLikelihoodFit.html#a97f28cf4797fd2f6e3fac267dcdafb27">LikelihoodFit</a>.</p>
 

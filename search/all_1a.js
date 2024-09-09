@@ -25,7 +25,7 @@ var searchData=
   ['_7esamplesummary_22',['~SampleSummary',['../classSampleSummary.html#a0ff4ad11cdada6c57e9e525decdfc6a6',1,'SampleSummary']]],
   ['_7esmonolith_23',['~SMonolith',['../classSMonolith.html#ac0ae7f110fa4c6e46e808d8c1ae979b6',1,'SMonolith']]],
   ['_7esplinebase_24',['~SplineBase',['../classSplineBase.html#a0de19b2322edb4197380506d594456bd',1,'SplineBase']]],
-  ['_7esplinefdbase_25',['~splineFDBase',['../classsplineFDBase.html#aef7692f02d28abdcfc09b6ed6bdcabf2',1,'splineFDBase']]],
+  ['_7esplinefdbase_25',['~splineFDBase',['../classsplineFDBase.html#a16c33124874a336255a3cba480b835c2',1,'splineFDBase']]],
   ['_7etf1_5fred_26',['~TF1_red',['../classTF1__red.html#a154077c37858ec88449cae76c41d671b',1,'TF1_red']]],
   ['_7etruncated_5fspline_27',['~Truncated_Spline',['../classTruncated__Spline.html#a4ce82ec74b255ecbfe97a372b377444e',1,'Truncated_Spline']]],
   ['_7etspline3_5fred_28',['~TSpline3_red',['../classTSpline3__red.html#a275808bab562c82d155433c1d62ac1a1',1,'TSpline3_red']]],

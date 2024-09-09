@@ -57,7 +57,7 @@ var searchData=
   ['getfile_54',['getFile',['../classMaCh3Plotting_1_1InputManager.html#ae107ba3d09a35ed2a00def84f5bb7a50',1,'MaCh3Plotting::InputManager']]],
   ['getfilelabel_55',['getFileLabel',['../classMaCh3Plotting_1_1PlottingManager.html#ac3180484af4d04aa7a0febd1cda99c54',1,'MaCh3Plotting::PlottingManager']]],
   ['getfilelabels_56',['getFileLabels',['../classMaCh3Plotting_1_1PlottingManager.html#a9584771a6c609cc833dff557c2f67f0d',1,'MaCh3Plotting::PlottingManager']]],
-  ['getfilename_57',['getfilename',['../classmanager.html#ab81f0be941a168843b372d38999877f2',1,'manager::GetFileName()'],['../classMaCh3Plotting_1_1PlottingManager.html#a8adadf9d9bbf91b5acef6578a0206af7',1,'MaCh3Plotting::PlottingManager::getFileName(int i)']]],
+  ['getfilename_57',['getfilename',['../classMaCh3Plotting_1_1PlottingManager.html#a8adadf9d9bbf91b5acef6578a0206af7',1,'MaCh3Plotting::PlottingManager::getFileName()'],['../classmanager.html#ab81f0be941a168843b372d38999877f2',1,'manager::GetFileName()']]],
   ['getfilenames_58',['getFileNames',['../classMaCh3Plotting_1_1PlottingManager.html#a4eb3bd2f18c614717576f82850532632',1,'MaCh3Plotting::PlottingManager']]],
   ['getfitterspecificoption_59',['getFitterSpecificOption',['../classMaCh3Plotting_1_1InputManager.html#a24fb21a5f30a5b397feec23d2e04c3d3',1,'MaCh3Plotting::InputManager']]],
   ['getfitterspecificparamname_60',['getFitterSpecificParamName',['../classMaCh3Plotting_1_1InputManager.html#aa3a91c2525f5aea76ba182b3be4b2b2a',1,'MaCh3Plotting::InputManager']]],
@@ -194,7 +194,7 @@ var searchData=
   ['getsamplespecificllhscan_5fth1d_191',['getSampleSpecificLLHScan_TH1D',['../classMaCh3Plotting_1_1InputManager.html#a74b058c312200657f046c64347f6a304',1,'MaCh3Plotting::InputManager']]],
   ['getsavagedickey_192',['GetSavageDickey',['../classMCMCProcessor.html#ad09b1ad60fa52fdd87450ab8834e9cd9',1,'MCMCProcessor']]],
   ['getsigmavalue_193',['GetSigmaValue',['../StatisticalUtils_8h.html#a04394b98587b44b98b003bd1226606ed',1,'StatisticalUtils.h']]],
-  ['getsize_194',['getsize',['../classcovarianceBase.html#ab3c974412479cd6d891a3c325820dc1e',1,'covarianceBase::getSize()'],['../classTF1__red.html#af9e3b0e8d2edad0e7e08f3bf215525c9',1,'TF1_red::GetSize()']]],
+  ['getsize_194',['getsize',['../classTF1__red.html#af9e3b0e8d2edad0e7e08f3bf215525c9',1,'TF1_red::GetSize()'],['../classcovarianceBase.html#ab3c974412479cd6d891a3c325820dc1e',1,'covarianceBase::getSize()']]],
   ['getsplinecoeff_5fsepmany_195',['getsplinecoeff_sepmany',['../classsplineFDBase.html#aeaed416a84dc6cedc42ed9db04b4f22c',1,'splineFDBase::getSplineCoeff_SepMany()'],['../classSMonolith.html#acbbe3398718d0d02d65a1e92a91c112c',1,'SMonolith::getSplineCoeff_SepMany()']]],
   ['getsplinefileparsnamesfromdetid_196',['GetSplineFileParsNamesFromDetID',['../classcovarianceXsec.html#adb95a5704149a2c6d6573a711024e7c5',1,'covarianceXsec']]],
   ['getsplinemodevecfromdetid_197',['GetSplineModeVecFromDetID',['../classcovarianceXsec.html#a63b4fb1e0caf3b71f372db7273c40c47',1,'covarianceXsec']]],
@@ -243,5 +243,5 @@ var searchData=
   ['gpuutils_2ecu_240',['gpuUtils.cu',['../gpuUtils_8cu.html',1,'']]],
   ['gpuutils_2ecuh_241',['gpuUtils.cuh',['../gpuUtils_8cuh.html',1,'']]],
   ['grid_5fsize_242',['GRID_SIZE',['../kdeGpu2_8cu.html#a08246606c233e7785a497c09672f366f',1,'kdeGpu2.cu']]],
-  ['guidelines_243',['Help and Guidelines',['../md_README.html#autotoc_md23',1,'']]]
+  ['guidelines_243',['Help and Guidelines',['../md_README.html#autotoc_md24',1,'']]]
 ];

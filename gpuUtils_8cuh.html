@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="MaCh3.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -22,7 +23,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="mach3logo_small.png"/></td>
   <td id="projectalign">
-   <div id="projectname">MaCh3<span id="projectnumber">&#160;1.1.0</span>
+   <div id="projectname">MaCh3<span id="projectnumber">&#160;1.1.1</span>
    </div>
    <div id="projectbrief">Reference Guide</div>
   </td>
@@ -288,6 +289,9 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Check for a safe call on GPU. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd><p class="startdd">KS: There is plenty of useful stuff here <a href="https://github.com/NVIDIA/cuda-samples/blob/master/Samples/1_Utilities/deviceQuery/deviceQuery.cpp">https://github.com/NVIDIA/cuda-samples/blob/master/Samples/1_Utilities/deviceQuery/deviceQuery.cpp</a> </p>
+<p class="enddd">KS: We might want to port some of these utilities, for example having bool if there is unified memory etc. </p>
+</dd></dl>
 <p>This function checks the error status returned by CUDA runtime API functions and reports any errors. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">err</td><td>The CUDA error code. </td></tr>
