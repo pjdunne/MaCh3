@@ -1,11 +1,11 @@
 var searchData=
 [
   ['_7eadaptivemcmchandler_0',['~AdaptiveMCMCHandler',['../classadaptive__mcmc_1_1AdaptiveMCMCHandler.html#a6b2d0d2f6dab5b6dc2b60cbe8f673cb7',1,'adaptive_mcmc::AdaptiveMCMCHandler']]],
-  ['_7ebasefuncpar_1',['~BaseFuncPar',['../classBaseFuncPar.html#a0cd19743e80b402106202ff1a82f8e14',1,'BaseFuncPar']]],
+  ['_7ebasefuncpar_1',['~BaseFuncPar',['../classBaseFuncPar.html#afaff8b31dea1941c83fe6a65c5a168ab',1,'BaseFuncPar']]],
   ['_7ecovariancebase_2',['~covarianceBase',['../classcovarianceBase.html#a1e7a87a1d7e054475b4b921407e0a2d1',1,'covarianceBase']]],
   ['_7ecovarianceosc_3',['~covarianceOsc',['../classcovarianceOsc.html#aab90b93f18a4cffbed4c225fecfdc5a8',1,'covarianceOsc']]],
   ['_7ecovariancexsec_4',['~covarianceXsec',['../classcovarianceXsec.html#af84383b735f450c33c9c34f7ca207a66',1,'covarianceXsec']]],
-  ['_7eenergyscale_5',['~EnergyScale',['../classEnergyScale.html#a24c0550c8bac1b50946a7fc918bf8ee5',1,'EnergyScale']]],
+  ['_7eenergyscale_5',['~EnergyScale',['../classEnergyScale.html#a00f34207d2908cffca53a88cabbe76c0',1,'EnergyScale']]],
   ['_7efastsplineinfo_6',['~FastSplineInfo',['../structFastSplineInfo.html#a64b519df4830241b9aea24ed4f0fe3f6',1,'FastSplineInfo']]],
   ['_7efitterbase_7',['~FitterBase',['../classFitterBase.html#ae8677b449e49ca86bafee685e8dbe93f',1,'FitterBase']]],
   ['_7einputfile_8',['~InputFile',['../structMaCh3Plotting_1_1InputFile.html#a64c6c4553a2fcc4fb85a243c0b1736f9',1,'MaCh3Plotting::InputFile']]],

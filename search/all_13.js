@@ -142,7 +142,7 @@ var searchData=
   ['setuposccalc_139',['SetupOscCalc',['../classsamplePDFFDBase.html#ad2052c9178b220901224a29b474afaad',1,'samplePDFFDBase']]],
   ['setupoutput_140',['SetupOutput',['../classMCMCProcessor.html#aa4761be1345f1be3defe162b278a9d8e',1,'MCMCProcessor']]],
   ['setupsamplebinning_141',['SetupSampleBinning',['../classsamplePDFFDBase.html#a66f01847a187f6bb0bc954eca07f5b41',1,'samplePDFFDBase']]],
-  ['setupsplines_142',['setupSplines',['../classsamplePDFFDBase.html#aa145eb7b1e14c10339c288959dad3d65',1,'samplePDFFDBase']]],
+  ['setupsplines_142',['setupSplines',['../classsamplePDFFDBase.html#afacd0d14bc0dffe3fb422f282160dd95',1,'samplePDFFDBase']]],
   ['setupweightpointers_143',['SetupWeightPointers',['../classsamplePDFFDBase.html#af58169bdc4b4a7e98c1f315dac96418e',1,'samplePDFFDBase']]],
   ['setxseccov_144',['SetXsecCov',['../classsamplePDFFDBase.html#a2da3da30c6de171d67ad2c346c36f160',1,'samplePDFFDBase']]],
   ['setxseconlyparameters_145',['setXsecOnlyParameters',['../classcovarianceXsec.html#afc512105a141dcf30bc5f478970aafa2',1,'covarianceXsec']]],

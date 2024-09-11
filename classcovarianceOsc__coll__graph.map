@@ -11,7 +11,7 @@
 <area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="716,125,750,141,787,167,820,198,878,266,921,330,947,375,942,378,916,333,874,270,816,202,783,172,747,145,714,130"/>
 <area shape="rect" id="Node000006" title=" " alt="" coords="178,350,319,376"/>
 <area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="335,349,343,348,487,347,655,353,872,367,905,374,904,379,871,372,655,358,487,352,343,354,335,354"/>
-<area shape="rect" id="Node000009" href="$classPCAHandler.html" title=" " alt="" coords="574,377,668,403"/>
+<area shape="rect" id="Node000009" href="$classPCAHandler.html" title="Class responsible for handling Principal Component Analysis (PCA) of covariance matrix." alt="" coords="574,377,668,403"/>
 <area shape="poly" id="edge10_Node000009_Node000006" title=" " alt="" coords="335,366,574,384,574,389,335,372"/>
 <area shape="rect" id="Node000010" href="$classadaptive__mcmc_1_1AdaptiveMCMCHandler.html" title="Contains information about adaptive covariance matrix." alt="" coords="493,426,749,452"/>
 <area shape="poly" id="edge13_Node000010_Node000006" title=" " alt="" coords="294,380,344,397,419,413,493,424,493,430,418,418,343,402,292,385"/>
