@@ -122,12 +122,11 @@ Building with Pip</h3>
 </div><!-- fragment --><p> The -t option specifies an install location which can be useful if you are on a computing cluster and don't have write access to the default install location. If you specify a non-standard location you will need to add it to your <code>PYTHONPATH</code> as above so that python can find the module.</p>
 <h2><a class="anchor" id="autotoc_md16"></a>
 Multithreading</h2>
-<p>MaCh3 quite heavily relies on Multithreading, it is turned on by default. If for debugging purposes you would like to turn it off please use</p>
-<div class="fragment"><div class="line">cmake ../ [-DMaCh3_MULTITHREAD_ENABLED=&lt;OFF&gt;]</div>
+<p>MaCh3 quite heavily relies on Multithreading, it is turned on by default. If for debugging purposes you would like to turn it off please use </p><div class="fragment"><div class="line">cmake ../ [-DMaCh3_MULTITHREAD_ENABLED=&lt;OFF&gt;]</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md17"></a>
 CUDA</h2>
 <p>If the system has access to GPU, MaCh3 will enable GPU functionality automatically. If you would like to CPU only despite having access to CUDA </p><div class="fragment"><div class="line">mkdir build; cd build;</div>
-<div class="line">cmake ../ [-USE_CPU=ON]</div>
+<div class="line">cmake ../ [-DUSE_CPU=ON]</div>
 </div><!-- fragment --><p> MaCh3 supports quite a high range of CUDA architectures if something doesn't work on your GPU let us know. MaCh3 supports only NVIDIA GPUs.</p>
 <h2><a class="anchor" id="autotoc_md18"></a>
 Oscillator</h2>
