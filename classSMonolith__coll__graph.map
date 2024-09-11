@@ -1,15 +1,20 @@
 <map id="SMonolith" name="SMonolith">
-<area shape="rect" id="Node000001" title="Even&#45;by&#45;event class calculating response for spline parameters. It is possible to use GPU acceleratio..." alt="" coords="324,145,403,171"/>
-<area shape="rect" id="Node000002" href="$classSplineBase.html" title="Base class for calculating weight from spline." alt="" coords="34,5,121,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,15,176,18,219,26,262,39,301,60,322,79,339,102,360,144,355,146,335,105,318,83,298,64,260,44,217,31,175,24,137,20"/>
-<area shape="rect" id="Node000003" href="$structFastSplineInfo.html" title="CW: Add a struct to hold info about the splinified xsec parameters and help with FindSplineSegment." alt="" coords="25,55,130,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="146,73,221,89,301,114,347,143,344,147,299,119,220,94,145,78"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="15,105,140,145"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="156,131,324,151,323,156,155,137"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="5,170,150,211"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="165,192,231,191,299,182,335,169,337,174,300,187,232,196,166,198"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="17,235,138,276"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="154,258,226,252,264,243,298,228,316,216,331,201,353,170,357,173,335,204,319,220,301,233,265,248,227,257,154,263"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="14,301,141,327"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="157,323,192,323,229,319,265,310,298,293,324,265,342,231,352,198,358,171,363,172,358,199,347,234,329,268,301,297,267,315,230,325,193,329,157,328"/>
+<area shape="rect" id="Node000001" title="Even&#45;by&#45;event class calculating response for spline parameters. It is possible to use GPU acceleratio..." alt="" coords="586,187,665,212"/>
+<area shape="rect" id="Node000002" href="$classSplineBase.html" title="Base class for calculating weight from spline." alt="" coords="306,5,393,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="409,16,446,20,487,28,527,43,563,65,589,94,607,128,624,186,619,187,602,130,584,97,560,70,525,48,485,34,445,25,408,21"/>
+<area shape="rect" id="Node000003" href="$structFastSplineInfo.html" title="CW: Add a struct to hold info about the splinified xsec parameters and help with FindSplineSegment." alt="" coords="297,55,402,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="418,76,490,95,528,110,563,129,595,157,617,184,613,188,591,160,560,134,526,115,489,100,417,81"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="288,105,412,145"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="428,142,562,178,586,185,584,190,561,183,427,147"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="5,197,150,237"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="165,211,585,198,585,203,165,217"/>
+<area shape="rect" id="Node000006" href="$structSplineMonoStruct.html" title="KS: Struct storing information for spline monolith." alt="" coords="288,261,412,287"/>
+<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="165,233,287,258,286,264,164,238"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="427,262,493,250,561,231,602,210,605,215,563,236,494,255,428,268"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="14,311,141,336"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="157,325,283,326,353,321,423,312,495,297,525,286,560,265,591,239,613,211,617,215,595,242,563,270,527,291,497,303,424,317,354,326,283,331,157,331"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="156,308,251,291,287,284,288,289,252,296,157,313"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="17,371,138,412"/>
+<area shape="poly" id="edge10_Node000001_Node000008" title=" " alt="" coords="153,399,245,404,298,402,353,397,409,386,463,370,514,346,560,314,582,289,598,261,618,212,623,214,603,264,586,292,563,317,517,350,465,374,410,391,354,402,298,408,245,409,153,405"/>
+<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="152,365,251,325,325,285,328,290,253,330,154,370"/>
 </map>

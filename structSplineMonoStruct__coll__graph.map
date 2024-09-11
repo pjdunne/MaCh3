@@ -1,0 +1,9 @@
+<map id="SplineMonoStruct" name="SplineMonoStruct">
+<area shape="rect" id="Node000001" title="KS: Struct storing information for spline monolith." alt="" coords="167,124,291,150"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,13,133,39"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="93,47,122,73,156,98,200,121,198,126,153,102,119,77,90,51"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="157,5,301,46"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="232,62,232,124,226,124,226,62"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="326,5,447,46"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="357,59,302,102,259,126,256,121,300,98,354,55"/>
+</map>
