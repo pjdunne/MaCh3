@@ -63,7 +63,7 @@ var searchData=
   ['correlatesteps_60',['CorrelateSteps',['../classcovarianceBase.html#aba2b2dae2546299c9a4dab618d65e7c0',1,'covarianceBase']]],
   ['countnumberofloadedsplines_61',['CountNumberOfLoadedSplines',['../classsplineFDBase.html#a0bfc616fab953333e6e938de52ce3bed',1,'splineFDBase']]],
   ['covariancebase_62',['covariancebase',['../classcovarianceBase.html#a50103e0078a03a58f8731287bf895ad0',1,'covarianceBase::covarianceBase(const std::vector&lt; std::string &gt; &amp;YAMLFile, const char *name, double threshold=-1, int FirstPCAdpar=-999, int LastPCAdpar=-999)'],['../classcovarianceBase.html#ac7b8a062756f85459f9128de1f617d5a',1,'covarianceBase::covarianceBase(const char *name, const char *file)'],['../classcovarianceBase.html#abd9745caccde077f9ad98c78ccb0a0b5',1,'covarianceBase::covarianceBase(const char *name, const char *file, int seed)'],['../classcovarianceBase.html#adc473e5e1813df2358124471c5540337',1,'covarianceBase::covarianceBase(const char *name, const char *file, int seed, double threshold, int FirstPCAdpar, int LastPCAdpar)']]],
-  ['covarianceosc_63',['covarianceOsc',['../classcovarianceOsc.html#a9346e1377d22750e43cdbd37a97e7b82',1,'covarianceOsc']]],
+  ['covarianceosc_63',['covarianceOsc',['../classcovarianceOsc.html#a523cc3ff865e317e705a68c10391feb9',1,'covarianceOsc']]],
   ['covariancexsec_64',['covarianceXsec',['../classcovarianceXsec.html#ae9d8c9ef0645b8224bb5cfe324fe67cc',1,'covarianceXsec']]],
   ['createnewadaptivecovariance_65',['CreateNewAdaptiveCovariance',['../classadaptive__mcmc_1_1AdaptiveMCMCHandler.html#ad7df80045651df99c2d1c375fea4ac74',1,'adaptive_mcmc::AdaptiveMCMCHandler']]]
 ];

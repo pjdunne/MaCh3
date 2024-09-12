@@ -93,7 +93,7 @@ var searchData=
   ['covariancebase_90',['covariancebase',['../classcovarianceBase.html',1,'covarianceBase'],['../classcovarianceBase.html#a50103e0078a03a58f8731287bf895ad0',1,'covarianceBase::covarianceBase(const std::vector&lt; std::string &gt; &amp;YAMLFile, const char *name, double threshold=-1, int FirstPCAdpar=-999, int LastPCAdpar=-999)'],['../classcovarianceBase.html#ac7b8a062756f85459f9128de1f617d5a',1,'covarianceBase::covarianceBase(const char *name, const char *file)'],['../classcovarianceBase.html#abd9745caccde077f9ad98c78ccb0a0b5',1,'covarianceBase::covarianceBase(const char *name, const char *file, int seed)'],['../classcovarianceBase.html#adc473e5e1813df2358124471c5540337',1,'covarianceBase::covarianceBase(const char *name, const char *file, int seed, double threshold, int FirstPCAdpar, int LastPCAdpar)']]],
   ['covariancebase_2ecpp_91',['covarianceBase.cpp',['../covarianceBase_8cpp.html',1,'']]],
   ['covariancebase_2eh_92',['covarianceBase.h',['../covarianceBase_8h.html',1,'']]],
-  ['covarianceosc_93',['covarianceosc',['../classcovarianceOsc.html',1,'covarianceOsc'],['../classcovarianceOsc.html#a9346e1377d22750e43cdbd37a97e7b82',1,'covarianceOsc::covarianceOsc()']]],
+  ['covarianceosc_93',['covarianceosc',['../classcovarianceOsc.html',1,'covarianceOsc'],['../classcovarianceOsc.html#a523cc3ff865e317e705a68c10391feb9',1,'covarianceOsc::covarianceOsc()']]],
   ['covarianceosc_2ecpp_94',['covarianceOsc.cpp',['../covarianceOsc_8cpp.html',1,'']]],
   ['covarianceosc_2eh_95',['covarianceOsc.h',['../covarianceOsc_8h.html',1,'']]],
   ['covarianceutils_2eh_96',['CovarianceUtils.h',['../CovarianceUtils_8h.html',1,'']]],
