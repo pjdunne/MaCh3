@@ -327,6 +327,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>KS: Get version of MaCh3. </p>
+<dl class="section return"><dt>Returns</dt><dd>The current MaCh3 version as a string.</dd></dl>
+<p>This function fetches and returns the version of the MaCh3 software being used. </p>
 
 <p class="definition">Definition at line <a class="el" href="Monitor_8cpp_source.html#l00045">45</a> of file <a class="el" href="Monitor_8cpp_source.html">Monitor.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   45</span>                            {</div>
@@ -544,6 +546,14 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>CW: Get info like RAM. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Type</td><td>The type of system information to retrieve (e.g., RAM, CPU usage). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The requested system information as an integer.</dd></dl>
+<p>This function fetches system information like RAM usage or other hardware details based on the specified type. </p>
 
 <p class="definition">Definition at line <a class="el" href="Monitor_8cpp_source.html#l00214">214</a> of file <a class="el" href="Monitor_8cpp_source.html">Monitor.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  214</span>                            { <span class="comment">//Note: this value is in KB!</span></div>
@@ -642,6 +652,14 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>KS: Almost all MaCh3 executables have the same usage, prepare simple printer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">argc</td><td>The number of command-line arguments. </td></tr>
+    <tr><td class="paramname">argv</td><td>The array of command-line arguments.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This function prints a simple usage guide for MaCh3 executables, typically called when incorrect arguments are passed. </p>
 
 <p class="definition">Definition at line <a class="el" href="Monitor_8cpp_source.html#l00289">289</a> of file <a class="el" href="Monitor_8cpp_source.html">Monitor.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  289</span>                                      {</div>
@@ -933,6 +951,14 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>CW: Get memory, which is probably silly. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">line</td><td>The line of text to parse. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The extracted memory value as an integer.</dd></dl>
+<p>This function is used to parse a line of text and extract memory-related information. </p>
 
 <p class="definition">Definition at line <a class="el" href="Monitor_8cpp_source.html#l00264">264</a> of file <a class="el" href="Monitor_8cpp_source.html">Monitor.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  264</span>                                    {</div>
@@ -1012,6 +1038,14 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>KS: Simply print progress bar. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Done</td><td>The number of tasks completed. </td></tr>
+    <tr><td class="paramname">All</td><td>The total number of tasks.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This function prints a progress bar to the terminal, indicating the percentage of tasks completed. </p>
 
 <p class="definition">Definition at line <a class="el" href="Monitor_8cpp_source.html#l00190">190</a> of file <a class="el" href="Monitor_8cpp_source.html">Monitor.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  190</span>                                                    {</div>
@@ -1055,6 +1089,13 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>KS: Convoluted code to grab output from terminal to string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cmd</td><td>The terminal command to execute. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The output of the terminal command as a string. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="Monitor_8cpp_source.html#l00153">153</a> of file <a class="el" href="Monitor_8cpp_source.html">Monitor.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  153</span>                                            {</div>
