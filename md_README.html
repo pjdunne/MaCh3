@@ -122,16 +122,16 @@ Building with Pip</h3>
 </div><!-- fragment --><p> The -t option specifies an install location which can be useful if you are on a computing cluster and don't have write access to the default install location. If you specify a non-standard location you will need to add it to your <code>PYTHONPATH</code> as above so that python can find the module.</p>
 <h2><a class="anchor" id="autotoc_md16"></a>
 Multithreading</h2>
-<p>MaCh3 quite heavily relies on Multithreading, it is turned on by default. If for debugging purposes you would like to turn it off please use </p><div class="fragment"><div class="line">cmake ../ [-DMaCh3_MULTITHREAD_ENABLED=&lt;OFF&gt;]</div>
+<p>MaCh3 quite heavily relies on Multithreading, it is turned on by default. If for debugging purposes you would like to turn it off please use </p><div class="fragment"><div class="line">cmake ../ -DMaCh3_MULTITHREAD_ENABLED=OFF</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md17"></a>
 CUDA</h2>
 <p>If the system has access to GPU, MaCh3 will enable GPU functionality automatically. If you would like to CPU only despite having access to CUDA </p><div class="fragment"><div class="line">mkdir build; cd build;</div>
-<div class="line">cmake ../ [-DUSE_CPU=ON]</div>
+<div class="line">cmake ../ -DUSE_CPU=ON</div>
 </div><!-- fragment --><p> MaCh3 supports quite a high range of CUDA architectures if something doesn't work on your GPU let us know. MaCh3 supports only NVIDIA GPUs.</p>
 <h2><a class="anchor" id="autotoc_md18"></a>
 Oscillator</h2>
 <p>MaCh3 uses several neutrino oscillation calculators. By default, CUDAProb3 is used. If you would like to use Prob3++</p>
-<div class="fragment"><div class="line">cmake ../ [-DUSE_PROB3=&lt;ON,OFF&gt;]</div>
+<div class="fragment"><div class="line">cmake ../ -DUSE_PROB3=&lt;ON,OFF&gt;</div>
 </div><!-- fragment --><p> Following neutrino oscillation calculators are available:</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -158,9 +158,9 @@ Fitting algorithms</h2>
 </table>
 <h2><a class="anchor" id="autotoc_md20"></a>
 Debug</h2>
-<p>Several debugging options are available which are heavy for RAM and performance and, therefore not used by default. To enable it: </p><div class="fragment"><div class="line">cmake ../ [-DMaCh3_DEBUG_ENABLED=&lt;ON,OFF&gt;]</div>
+<p>Several debugging options are available which are heavy for RAM and performance and, therefore not used by default. To enable it: </p><div class="fragment"><div class="line">cmake ../ -DMaCh3_DEBUG_ENABLED=&lt;ON,OFF&gt;</div>
 </div><!-- fragment --><p> There are several debug modes, to enable more detailed but very heavy specific debug levels. Level 1 is the default debug activated by the above.</p>
-<div class="fragment"><div class="line">cmake ../ [-DMaCh3_DEBUG_ENABLED=&lt;ON,OFF&gt;] [-DDEBUG_LEVEL=&lt;1,2,3&gt;]</div>
+<div class="fragment"><div class="line">cmake ../ -DMaCh3_DEBUG_ENABLED=&lt;ON,OFF&gt; -DDEBUG_LEVEL=&lt;1,2,3&gt;</div>
 </div><!-- fragment --> <h2><a class="anchor" id="autotoc_md21"></a>
 System Requirements</h2>
 <p>Most of external libraries are being handled through CPM. The only external library that is not being handled through CPM and is required is <a href="https://root.cern/">ROOT</a>. Currently used external dependencies include:</p>
