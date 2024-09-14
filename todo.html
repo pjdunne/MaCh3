@@ -30,7 +30,7 @@ MathJax.Hub.Config({
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="mach3logo_small.png"/></td>
   <td id="projectalign">
-   <div id="projectname">MaCh3<span id="projectnumber">&#160;1.1.3</span>
+   <div id="projectname">MaCh3<span id="projectnumber">&#160;1.1.4</span>
    </div>
    <div id="projectbrief">Reference Guide</div>
   </td>
@@ -88,6 +88,8 @@ $(function() {
 <p class="interdd"></p>
 <p class="enddd">KS: We might want to port some of these utilities, for example having bool if there is unified memory etc.  </p>
 </dd>
+<dt>Member <a class="el" href="classcovarianceOsc.html#a523cc3ff865e317e705a68c10391feb9">covarianceOsc::covarianceOsc</a>  (const std::vector&lt; std::string &gt; &amp;FileNames, const char *name="osc_cov", double threshold=-1, int FirstPCAdpar=-999, int LastPCAdpar=-999)</dt>
+<dd><a class="anchor" id="_todo000023"></a>KS: Technically if we would like to use PCA we have ot initialise parts here...  </dd>
 <dt>Member <a class="el" href="structMaCh3Plotting_1_1InputFile.html#a0897b76fdbfc674ed94da1d2b4adb0a2">MaCh3Plotting::InputFile::Dump</a>  () const</dt>
 <dd><a class="anchor" id="_todo000012"></a>Same as for <a class="el" href="structMaCh3Plotting_1_1InputFile.html#a4b3753ca1fa1a399e519aa15bca8658a" title="Print out a small summary of what is contained in the file.">Summarise()</a>, could add a check that the file info has actually been filled.  </dd>
 <dt>Member <a class="el" href="structMaCh3Plotting_1_1InputFile.html#a7491ea81990748b02402796ee512f518">MaCh3Plotting::InputFile::hasLLHScans</a>  </dt>
@@ -127,8 +129,8 @@ $(function() {
 <dt>Member <a class="el" href="classMaCh3Plotting_1_1PlottingManager.html#aaaa6879809b7c978bbcb4d02e15d1c0f">MaCh3Plotting::PlottingManager::parseInputs</a>  (int argc, char **argv)</dt>
 <dd><a class="anchor" id="_todo000015"></a>make this able to return any un-parsed arguments so that user can specify their own arguments for use in their plotting scripts  </dd>
 <dt>Member <a class="el" href="classMaCh3Plotting_1_1PlottingManager.html#a8910c157ce1ec6698f3bacdf521789ff">MaCh3Plotting::PlottingManager::usage</a>  ()</dt>
-<dd><p class="startdd"><a class="anchor" id="_todo000019"></a>Inplement this. </p>
-<p class="interdd"><a class="anchor" id="_todo000020"></a></p>
+<dd><p class="startdd"><a class="anchor" id="_todo000020"></a></p>
+<p class="interdd"><a class="anchor" id="_todo000019"></a>Inplement this. </p>
 <p class="enddd"><a class="anchor" id="_todo000021"></a>could add some function to allow user to specify the help message for their particular script, then auto generate what the cmd line syntax looks like based on user specified options?  </p>
 </dd>
 <dt>Member <a class="el" href="classMCMCProcessor.html#aef760d8c4bb70690a5c4114f4b2409b3">MCMCProcessor::PowerSpectrumAnalysis</a>  ()</dt>
