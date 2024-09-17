@@ -31,7 +31,7 @@ var searchData=
   ['secondaryxbinevalpoints_28',['SecondaryXBinEvalPoints',['../classOscillator.html#a2ce88122d08bd8ffde4ceb84748fa92c',1,'Oscillator']]],
   ['secondaryybinedges_29',['SecondaryYBinEdges',['../classOscillator.html#a9968789998df1f14ee02de9f82867911',1,'Oscillator']]],
   ['secondaryybinevalpoints_30',['SecondaryYBinEvalPoints',['../classOscillator.html#ad970795233f7696499a1753981eb6086',1,'Oscillator']]],
-  ['segment_5fgpu_31',['segment_gpu',['../gpuSplineUtils_8cu.html#a76574fafa48b0cba6adea505b0517004',1,'gpuSplineUtils.cu']]],
+  ['segment_5fgpu_31',['segment_gpu',['../gpuSplineUtils_8cu.html#ab99f54969e418c0517309fae3f648588',1,'gpuSplineUtils.cu']]],
   ['segments_32',['segments',['../classSMonolith.html#a53ab5b2235fd697f27556f1a1a7a5354',1,'SMonolith']]],
   ['selection_33',['selection',['../structXsecNorms4.html#a1723c13b5d04cff5ce48718cae5b6e14',1,'XsecNorms4::Selection'],['../classsamplePDFFDBase.html#aafa0e8f399c5c22d9234e55a7289f8ed',1,'samplePDFFDBase::Selection']]],
   ['selectionbounds_34',['SelectionBounds',['../classsamplePDFFDBase.html#a01553c17343ed6db1391750d7846b203',1,'samplePDFFDBase']]],
