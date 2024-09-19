@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['h_5fn_5fevents_0',['h_n_events',['../gpuSplineUtils_8cu.html#abc47d2cce54457c72a996222ec0a9ce4',1,'gpuSplineUtils.cu']]],
-  ['h_5fn_5fparams_1',['h_n_params',['../gpuSplineUtils_8cu.html#a374cb9eb9a8a9a79fa09a0b916acf166',1,'gpuSplineUtils.cu']]],
+  ['h_5fn_5fevents_0',['h_n_events',['../classSMonolithGPU.html#a4628e4d9bb58650086cf51098c996059',1,'SMonolithGPU']]],
+  ['h_5fn_5fparams_1',['h_n_params',['../classSMonolithGPU.html#ad36c112081992f2887fe24675f4bba06',1,'SMonolithGPU']]],
   ['h_5fndraws_2',['h_nDraws',['../gpuMCMCProcessorUtils_8cu.html#afe4d63f9540a121d02444724ba2abe10',1,'gpuMCMCProcessorUtils.cu']]],
   ['h_5fnentries_3',['h_nEntries',['../gpuMCMCProcessorUtils_8cu.html#adbc5ade24b4b04c29d1437f78a3f8923',1,'gpuMCMCProcessorUtils.cu']]],
   ['h_5fnlag_4',['h_nLag',['../gpuMCMCProcessorUtils_8cu.html#a3d609e7d3946c09c05beebd1f703f355',1,'gpuMCMCProcessorUtils.cu']]],
