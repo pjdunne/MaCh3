@@ -1,5 +1,5 @@
 <map id="splines/SplineCommon.h" name="splines/SplineCommon.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="367,5,531,31"/>
+<area shape="rect" id="Node000001" title="Contains definitions for spline coefficients and structure used in both CPU and GPU code." alt="" coords="367,5,531,31"/>
 <area shape="rect" id="Node000002" href="$SplineBase_8h.html" title=" " alt="" coords="287,79,429,105"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="423,43,375,81,372,77,420,39"/>
 <area shape="rect" id="Node000010" href="$gpuSplineUtils_8cuh.html" title="MaCh3 event&#45;by&#45;event cross&#45;section spline code." alt="" coords="502,79,676,105"/>

@@ -14,10 +14,9 @@ var searchData=
   ['isdecomposed_5fpca_11',['isDecomposed_PCA',['../classcovarianceBase.html#ae9f3cb2a310874b86965903714ef2bd8',1,'covarianceBase']]],
   ['isflat_12',['isFlat',['../GetPenaltyTerm_8cpp.html#ae7c3a438d4508eba7ac26e26135b2c17',1,'GetPenaltyTerm.cpp']]],
   ['isflatarray_13',['isflatarray',['../classsplineFDBase.html#aa8a204355df78af3f79bf8f2815258d3',1,'splineFDBase']]],
-  ['isflux_14',['isFlux',['../classcovarianceXsec.html#a76a3fd06dd9cbe2eb6ccf560a435bf76',1,'covarianceXsec']]],
-  ['islinear_15',['IsLinear',['../classOscillator.html#a646a52ceae668dc0b4cc58245d9f0939',1,'Oscillator']]],
-  ['isnc_16',['isNC',['../structfdmc__base.html#a3b50812cc57ead329ccf495012cf906e',1,'fdmc_base']]],
-  ['ispriorpredictive_17',['isPriorPredictive',['../classSampleSummary.html#adb737e335e68edeb14a6ce2ca112dc8c',1,'SampleSummary']]],
-  ['isrhc_18',['IsRHC',['../classsamplePDFFDBase.html#aba47d043236ede872ad74c26c906998a',1,'samplePDFFDBase']]],
-  ['isxsec_19',['IsXsec',['../classMCMCProcessor.html#a2c06d64020e9246e720cc131a9f4986d',1,'MCMCProcessor']]]
+  ['islinear_14',['IsLinear',['../classOscillator.html#a646a52ceae668dc0b4cc58245d9f0939',1,'Oscillator']]],
+  ['isnc_15',['isNC',['../structfdmc__base.html#a3b50812cc57ead329ccf495012cf906e',1,'fdmc_base']]],
+  ['ispriorpredictive_16',['isPriorPredictive',['../classSampleSummary.html#adb737e335e68edeb14a6ce2ca112dc8c',1,'SampleSummary']]],
+  ['isrhc_17',['IsRHC',['../classsamplePDFFDBase.html#aba47d043236ede872ad74c26c906998a',1,'samplePDFFDBase']]],
+  ['isxsec_18',['IsXsec',['../classMCMCProcessor.html#a2c06d64020e9246e720cc131a9f4986d',1,'MCMCProcessor']]]
 ];

@@ -26,7 +26,7 @@ var searchData=
   ['ismode_23',['IsMode',['../structMaCh3ModeInfo.html#a9a89a0394f9f5eb780008253716836fc',1,'MaCh3ModeInfo']]],
   ['isparameterfixed_24',['isparameterfixed',['../classcovarianceBase.html#a1a0ed90bcbc2f932c7a32d26090edbbb',1,'covarianceBase::isParameterFixed(const std::string &amp;name)'],['../classcovarianceBase.html#a2424eaebd9daa92b0294b352310770a3',1,'covarianceBase::isParameterFixed(const int i)']]],
   ['isparameterfixedpca_25',['isParameterFixedPCA',['../classcovarianceBase.html#ab7cb212b7fda7f402629855b58a69cec',1,'covarianceBase']]],
-  ['isparflux_26',['IsParFlux',['../classcovarianceXsec.html#a1297bd93b010760e05122e53507dbedc',1,'covarianceXsec']]],
+  ['isparfromgroup_26',['IsParFromGroup',['../classcovarianceXsec.html#a5dc8900054a498107e39cc41641879a8',1,'covarianceXsec']]],
   ['ispca_27',['IsPCA',['../classcovarianceBase.html#a30f3f34243be0f6bc901e525497e7f56',1,'covarianceBase']]],
   ['isusinggpu_28',['isUsingGPU',['../classOscillator.html#a04e27d2c84837eadda34fcc36d92ab70',1,'Oscillator']]],
   ['isvalidbox_29',['IsValidBox',['../classOscillator.html#a9aba209aecd9521e4db62b7500c147b6',1,'Oscillator']]],

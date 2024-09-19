@@ -11,7 +11,7 @@ var searchData=
   ['fdparametersstartingpos_8',['FDParametersStartingPos',['../GetPostfitParamPlots_8cpp.html#a6dfe886b2ff4881ee2434479a9028985',1,'GetPostfitParamPlots.cpp']]],
   ['ffillhistograms_9',['fFillHistograms',['../classOscillator.html#a1eddbd950e06f52470bf1228464351f6',1,'Oscillator']]],
   ['file_10',['file',['../structMaCh3Plotting_1_1InputFile.html#a11c074dd45647dd2957987f8b55f9d73',1,'MaCh3Plotting::InputFile']]],
-  ['filename_11',['filename',['../classmanager.html#a1004958d1431ff607c08fa795b5953b7',1,'manager::FileName'],['../structMaCh3Plotting_1_1InputFile.html#a076134d08d2b54e29e76431a42267a52',1,'MaCh3Plotting::InputFile::fileName']]],
+  ['filename_11',['filename',['../structMaCh3Plotting_1_1InputFile.html#a076134d08d2b54e29e76431a42267a52',1,'MaCh3Plotting::InputFile::fileName'],['../classmanager.html#a1004958d1431ff607c08fa795b5953b7',1,'manager::FileName']]],
   ['filenames_12',['FileNames',['../ProcessMCMC_8cpp.html#a8e90c1478f4be185364988cac765a163',1,'ProcessMCMC.cpp']]],
   ['filesaved_13',['FileSaved',['../classFitterBase.html#a699abe6a2c89706b54544212152d613a',1,'FitterBase']]],
   ['finecoarseratiocosz_14',['fineCoarseRatioCosz',['../classOscillator.html#a45686c104c1adae1ebe0f0b2c7c464ae',1,'Oscillator']]],
