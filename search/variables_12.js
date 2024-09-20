@@ -27,7 +27,7 @@ var searchData=
   ['total_5fllh_5fpredfluc_5fpred_24',['total_llh_predfluc_pred',['../classSampleSummary.html#a1f6c2e7ed8f9024cf928da5b56054e07',1,'SampleSummary']]],
   ['total_5fllh_5frate_5fdata_5fdraw_25',['total_llh_rate_data_draw',['../classSampleSummary.html#aaf055562efe3e5f2592942f5151ece22',1,'SampleSummary']]],
   ['total_5fllh_5frate_5fpredfluc_5fdraw_26',['total_llh_rate_predfluc_draw',['../classSampleSummary.html#a2ebe701d114669fdfcf61e1680bb144d',1,'SampleSummary']]],
-  ['total_5fsteps_27',['total_steps',['../classcovarianceBase.html#afa85fb6668931ef7494c4af511a7111c',1,'covarianceBase']]],
+  ['total_5fsteps_27',['total_steps',['../classadaptive__mcmc_1_1AdaptiveMCMCHandler.html#ab2837af4566e2d62db7b76f9527fb6d7',1,'adaptive_mcmc::AdaptiveMCMCHandler']]],
   ['total_5fw_28',['total_w',['../structfdmc__base.html#a4c4783b6eb014adbaf180f10e94e7d96',1,'fdmc_base']]],
   ['total_5fweight_5fpointers_29',['total_weight_pointers',['../structfdmc__base.html#a4a17a196cb46bc85da5e7865b83d0f93',1,'fdmc_base']]],
   ['totalnsamples_30',['TotalNSamples',['../classFitterBase.html#abe9814558b8ff1bccdde3b4c894467e6',1,'FitterBase']]],

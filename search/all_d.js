@@ -114,7 +114,7 @@ var searchData=
   ['mix_5fim_5fsign_5ff_111',['mix_im_sign_f',['../probGpu_8cu.html#af4884ff81c305821cd4fff97fdc0c158',1,'probGpu.cu']]],
   ['mix_5fim_5fsign_5ft_112',['mix_im_sign_t',['../probGpu_8cu.html#ad5679afaab5b40e29c4565db63605a3d',1,'probGpu.cu']]],
   ['mixarray_113',['mixArray',['../probGpu_8cu.html#ab60e9c751a9b4ddc253f2f281791fd95',1,'probGpu.cu']]],
-  ['mode_114',['mode',['../classMaCh3Modes.html#a062f961a64e9b6bebf420730f9dad9ff',1,'MaCh3Modes::Mode'],['../structfdmc__base.html#a86b6b78f41e045592074494f960c8128',1,'fdmc_base::mode']]],
+  ['mode_114',['mode',['../structfdmc__base.html#a86b6b78f41e045592074494f960c8128',1,'fdmc_base::mode'],['../classMaCh3Modes.html#a062f961a64e9b6bebf420730f9dad9ff',1,'MaCh3Modes::Mode']]],
   ['modehist_115',['ModeHist',['../classSampleSummary.html#a59475a0c9460277914402850372727ea',1,'SampleSummary']]],
   ['modemap_116',['ModeMap',['../classMaCh3Modes.html#a52a226378736541ece3830f53ac851c3',1,'MaCh3Modes']]],
   ['modes_117',['modes',['../classSampleSummary.html#a6593fed9709673a6910f96adc88fc8f2',1,'SampleSummary::Modes'],['../classFitterBase.html#a004cb6e6168032d9280ce3db912f1a43',1,'FitterBase::Modes'],['../structXsecNorms4.html#ad0632d5a94a37ee5ce297698abadd844',1,'XsecNorms4::modes'],['../classsamplePDFBase.html#ab4ce7691212fdc86570b98d58a333ddf',1,'samplePDFBase::Modes'],['../classmanager.html#ab30ad812780ee2152b72f942b7b91dec',1,'manager::Modes']]],
