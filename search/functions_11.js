@@ -98,7 +98,7 @@ var searchData=
   ['setupsplines_95',['setupSplines',['../classsamplePDFFDBase.html#afacd0d14bc0dffe3fb422f282160dd95',1,'samplePDFFDBase']]],
   ['setupweightpointers_96',['SetupWeightPointers',['../classsamplePDFFDBase.html#af58169bdc4b4a7e98c1f315dac96418e',1,'samplePDFFDBase']]],
   ['setxseccov_97',['SetXsecCov',['../classsamplePDFFDBase.html#a2da3da30c6de171d67ad2c346c36f160',1,'samplePDFFDBase']]],
-  ['smonolith_98',['smonolith',['../classSMonolith.html#ad2fcfc98995795a197448db5e1cc46d5',1,'SMonolith::SMonolith(std::vector&lt; std::vector&lt; TResponseFunction_red * &gt; &gt; &amp;MasterSpline, const std::vector&lt; RespFuncType &gt; &amp;SplineType)'],['../classSMonolith.html#ac622c355f630c12438b547bbb9fe212c',1,'SMonolith::SMonolith(std::string FileName)']]],
+  ['smonolith_98',['smonolith',['../classSMonolith.html#a4fe737f7c948f9ee963d87aac46ddebb',1,'SMonolith::SMonolith(std::vector&lt; std::vector&lt; TResponseFunction_red * &gt; &gt; &amp;MasterSpline, const std::vector&lt; RespFuncType &gt; &amp;SplineType, const bool SaveFlatTree=false)'],['../classSMonolith.html#ac622c355f630c12438b547bbb9fe212c',1,'SMonolith::SMonolith(std::string FileName)']]],
   ['smonolithgpu_99',['SMonolithGPU',['../classSMonolithGPU.html#aa19e498d0e762566ee62c7b93de18598',1,'SMonolithGPU']]],
   ['splinebase_100',['SplineBase',['../classSplineBase.html#aa6965d1522cc68ecf81ac3bfd2dcd6f1',1,'SplineBase']]],
   ['splinefdbase_101',['splineFDBase',['../classsplineFDBase.html#a089883fce1a3f4180e3156215fb9c38a',1,'splineFDBase']]],

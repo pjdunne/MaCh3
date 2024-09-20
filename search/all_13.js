@@ -148,7 +148,7 @@ var searchData=
   ['size_145',['size',['../classcovarianceBase.html#a7d3922fb843ba65990c44cac324b9ccb',1,'covarianceBase::size'],['../GetPenaltyTerm_8cpp.html#a439227feff9d7f55384e8780cfc2eb82',1,'size:&#160;GetPenaltyTerm.cpp']]],
   ['skdet_5fpointer_146',['skdet_pointer',['../structfdmc__base.html#a1222d10ff4ba2f6a2b2018a81c8ffdae',1,'fdmc_base']]],
   ['skescale_147',['SKEScale',['../classSKEScale.html',1,'']]],
-  ['smonolith_148',['smonolith',['../classSMonolith.html#ad2fcfc98995795a197448db5e1cc46d5',1,'SMonolith::SMonolith(std::vector&lt; std::vector&lt; TResponseFunction_red * &gt; &gt; &amp;MasterSpline, const std::vector&lt; RespFuncType &gt; &amp;SplineType)'],['../classSMonolith.html#ac622c355f630c12438b547bbb9fe212c',1,'SMonolith::SMonolith(std::string FileName)'],['../classSMonolith.html',1,'SMonolith']]],
+  ['smonolith_148',['smonolith',['../classSMonolith.html#a4fe737f7c948f9ee963d87aac46ddebb',1,'SMonolith::SMonolith(std::vector&lt; std::vector&lt; TResponseFunction_red * &gt; &gt; &amp;MasterSpline, const std::vector&lt; RespFuncType &gt; &amp;SplineType, const bool SaveFlatTree=false)'],['../classSMonolith.html#ac622c355f630c12438b547bbb9fe212c',1,'SMonolith::SMonolith(std::string FileName)'],['../classSMonolith.html',1,'SMonolith']]],
   ['smonolithgpu_149',['smonolithgpu',['../classSMonolithGPU.html#aa19e498d0e762566ee62c7b93de18598',1,'SMonolithGPU::SMonolithGPU()'],['../classSMonolithGPU.html',1,'SMonolithGPU']]],
   ['splinebase_150',['splinebase',['../classSplineBase.html#aa6965d1522cc68ecf81ac3bfd2dcd6f1',1,'SplineBase::SplineBase()'],['../classSplineBase.html',1,'SplineBase']]],
   ['splinebase_2ecpp_151',['SplineBase.cpp',['../SplineBase_8cpp.html',1,'']]],
