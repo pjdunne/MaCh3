@@ -30,7 +30,7 @@ MathJax.Hub.Config({
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="mach3logo_small.png"/></td>
   <td id="projectalign">
-   <div id="projectname">MaCh3<span id="projectnumber">&#160;1.1.6</span>
+   <div id="projectname">MaCh3<span id="projectnumber">&#160;1.1.7</span>
    </div>
    <div id="projectbrief">Reference Guide</div>
   </td>
@@ -395,12 +395,13 @@ template&lt;<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e
 
 <p class="definition">Definition at line <a class="el" href="SplineStructs_8h_source.html#l00070">70</a> of file <a class="el" href="SplineStructs_8h_source.html">SplineStructs.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   70</span>                      {</div>
-<div class="line"><span class="lineno">   71</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;    Splines: &quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">   71</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;    Splines:&quot;</span>);</div>
 <div class="line"><span class="lineno">   72</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> = 0; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> &lt; <a class="code hl_variable" href="classXSecStruct.html#a5ff0017b93c1ba064f62cf32045e4d19">nParams</a>; ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>) {</div>
 <div class="line"><span class="lineno">   73</span>      <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classXSecStruct.html#a9334a6ce9789e80e9b52409f45efc71c">Func</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>]) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">   74</span>      std::cout &lt;&lt; <span class="stringliteral">&quot;    &quot;</span> &lt;&lt; std::left &lt;&lt; std::setw(25) &lt;&lt; <a class="code hl_variable" href="classXSecStruct.html#a9334a6ce9789e80e9b52409f45efc71c">Func</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>]-&gt;GetName() &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">   74</span>      <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;    {:&lt;25}&quot;</span>, <a class="code hl_variable" href="classXSecStruct.html#a9334a6ce9789e80e9b52409f45efc71c">Func</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>]-&gt;GetName());</div>
 <div class="line"><span class="lineno">   75</span>    }</div>
 <div class="line"><span class="lineno">   76</span>  }</div>
+<div class="ttc" id="aMaCh3Logger_8h_html_a95fa4dffc648e4c5536c9292c2bdcac3"><div class="ttname"><a href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a></div><div class="ttdeci">#define MACH3LOG_INFO</div><div class="ttdef"><b>Definition</b> <a href="MaCh3Logger_8h_source.html#l00016">MaCh3Logger.h:16</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

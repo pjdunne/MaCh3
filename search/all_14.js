@@ -34,7 +34,7 @@ var searchData=
   ['tmatrixintoth2d_31',['TMatrixIntoTH2D',['../ProcessMCMC_8cpp.html#a2052da75bc58457dc290c8cbd06efe30',1,'ProcessMCMC.cpp']]],
   ['to_20compile_32',['How to Compile',['../md_README.html#autotoc_md12',1,'']]],
   ['to_20contribute_20code_20to_20mach3_33',['How to Contribute Code to MaCh3',['../md_CONTRIBUTING.html',1,'']]],
-  ['to_20use_34',['How To Use',['../md_README.html#autotoc_md23',1,'']]],
+  ['to_20use_34',['How To Use',['../md_README.html#autotoc_md25',1,'']]],
   ['todo_20list_35',['Todo List',['../todo.html',1,'']]],
   ['togglefixallparameters_36',['toggleFixAllParameters',['../classcovarianceBase.html#adb2d1a39cd2bd160257bc9e34e32df4c',1,'covarianceBase']]],
   ['togglefixparameter_37',['togglefixparameter',['../classcovarianceBase.html#a41cc8dd2185af7cee380f3c6d463e5a4',1,'covarianceBase::toggleFixParameter(const std::string &amp;name)'],['../classcovarianceBase.html#aafbbdc05b87df882dc341e20fe870603',1,'covarianceBase::toggleFixParameter(const int i)']]],

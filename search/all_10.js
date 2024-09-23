@@ -54,7 +54,7 @@ var searchData=
   ['plotrelativetoprior_51',['plotRelativeToPrior',['../classMCMCProcessor.html#afbac2a114c15ca7db4abe71dd549504c',1,'MCMCProcessor']]],
   ['plots_52',['Famous Plots',['../md_README.html#autotoc_md10',1,'']]],
   ['plotting_53',['Plotting',['../md_plotting_2README.html',1,'']]],
-  ['plotting_20and_20diagnostic_54',['Plotting and Diagnostic',['../md_README.html#autotoc_md25',1,'']]],
+  ['plotting_20and_20diagnostic_54',['Plotting and Diagnostic',['../md_README.html#autotoc_md24',1,'']]],
   ['plotting_20utility_20functions_55',['Plotting Utility Functions',['../group__Utils.html',1,'']]],
   ['plottingmanager_56',['plottingmanager',['../classMaCh3Plotting_1_1PlottingManager.html#a28c0b6e9ba8e0b09b0cffc09801d1e69',1,'MaCh3Plotting::PlottingManager::PlottingManager()'],['../classMaCh3Plotting_1_1PlottingManager.html',1,'MaCh3Plotting::PlottingManager'],['../md_plotting_2README.html#autotoc_md32',1,'PlottingManager'],['../classMaCh3Plotting_1_1PlottingManager.html#aa94590f322dcf7cd1130d8165378c7f5',1,'MaCh3Plotting::PlottingManager::PlottingManager()']]],
   ['plottingmanager_2ecpp_57',['plottingManager.cpp',['../plottingManager_8cpp.html',1,'']]],

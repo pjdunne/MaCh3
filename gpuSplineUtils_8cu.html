@@ -30,7 +30,7 @@ MathJax.Hub.Config({
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="mach3logo_small.png"/></td>
   <td id="projectalign">
-   <div id="projectname">MaCh3<span id="projectnumber">&#160;1.1.6</span>
+   <div id="projectname">MaCh3<span id="projectnumber">&#160;1.1.7</span>
    </div>
    <div id="projectbrief">Reference Guide</div>
   </td>
@@ -104,15 +104,15 @@ Functions</h2></td></tr>
 <tr class="memitem:a953e5c5aecebd908f5d8c6ad64de482c" id="r_a953e5c5aecebd908f5d8c6ad64de482c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">__host__</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gpuSplineUtils_8cu.html#a953e5c5aecebd908f5d8c6ad64de482c">SynchroniseSplines</a> ()</td></tr>
 <tr class="memdesc:a953e5c5aecebd908f5d8c6ad64de482c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make sure all Cuda threads finished execution.  <br /></td></tr>
 <tr class="separator:a953e5c5aecebd908f5d8c6ad64de482c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a2f7c752f784e5e0dfc4b06c25608f9" id="r_a6a2f7c752f784e5e0dfc4b06c25608f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">__global__</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gpuSplineUtils_8cu.html#a6a2f7c752f784e5e0dfc4b06c25608f9">EvalOnGPU_Splines</a> (<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">const</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">short</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">int</a> *<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">__restrict__</a> gpu_paramNo_arr, <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">const</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">unsigned</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">int</a> *<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">__restrict__</a> gpu_nKnots_arr, <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">const</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">float</a> *<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">__restrict__</a> gpu_coeff_many, <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">float</a> *gpu_weights, <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">const</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">cudaTextureObject_t</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">__restrict__</a> text_coeff_x)</td></tr>
-<tr class="memdesc:a6a2f7c752f784e5e0dfc4b06c25608f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate the spline on the GPU Using one {y,b,c,d} array and one {x} array Should be most efficient at cache hitting and memory coalescence But using spline segments rather than the parameter value: avoids doing binary search on GPU.  <br /></td></tr>
-<tr class="separator:a6a2f7c752f784e5e0dfc4b06c25608f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae90fdf441edbf7a4d3520c3121f6e7a9" id="r_ae90fdf441edbf7a4d3520c3121f6e7a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">__global__</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gpuSplineUtils_8cu.html#ae90fdf441edbf7a4d3520c3121f6e7a9">EvalOnGPU_TF1</a> (<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">const</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">float</a> *<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">__restrict__</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">gpu_coeffs_tf1</a>, <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">const</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">short</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">int</a> *<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">__restrict__</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">gpu_paramNo_arr_tf1</a>, <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">float</a> *gpu_weights_tf1)</td></tr>
-<tr class="memdesc:ae90fdf441edbf7a4d3520c3121f6e7a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate the TF1 on the GPU Using 5th order polynomial.  <br /></td></tr>
-<tr class="separator:ae90fdf441edbf7a4d3520c3121f6e7a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1af53253fb379e8c3eaba886add0ba04" id="r_a1af53253fb379e8c3eaba886add0ba04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">__global__</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gpuSplineUtils_8cu.html#a1af53253fb379e8c3eaba886add0ba04">EvalOnGPU_TotWeight</a> (<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">const</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">float</a> *<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">__restrict__</a> gpu_weights, <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">const</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">float</a> *<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">__restrict__</a> gpu_weights_tf1, <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">float</a> *gpu_total_weights, <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">const</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">cudaTextureObject_t</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">__restrict__</a> text_nParamPerEvent, <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">const</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">cudaTextureObject_t</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">__restrict__</a> text_nParamPerEvent_TF1)</td></tr>
-<tr class="memdesc:a1af53253fb379e8c3eaba886add0ba04"><td class="mdescLeft">&#160;</td><td class="mdescRight">KS: Evaluate the total spline event weight on the GPU, as in most cases GPU is faster, even more this significant reduce memory transfer from GPU to CPU.  <br /></td></tr>
-<tr class="separator:a1af53253fb379e8c3eaba886add0ba04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a617ef358c707699dd50af17358cbff69" id="r_a617ef358c707699dd50af17358cbff69"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">__global__</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gpuSplineUtils_8cu.html#a617ef358c707699dd50af17358cbff69">EvalOnGPU_Splines</a> (<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">const</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">short</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">int</a> *<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">__restrict__</a> gpu_paramNo_arr, <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">const</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">unsigned</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">int</a> *<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">__restrict__</a> gpu_nKnots_arr, <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">const</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">float</a> *<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">__restrict__</a> gpu_coeff_many, <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">float</a> *<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">__restrict__</a> gpu_weights, <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">const</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">cudaTextureObject_t</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">__restrict__</a> text_coeff_x)</td></tr>
+<tr class="memdesc:a617ef358c707699dd50af17358cbff69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate the spline on the GPU Using one {y,b,c,d} array and one {x} array Should be most efficient at cache hitting and memory coalescence But using spline segments rather than the parameter value: avoids doing binary search on GPU.  <br /></td></tr>
+<tr class="separator:a617ef358c707699dd50af17358cbff69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa36afe16baf1567c04ce88336ca9ad2e" id="r_aa36afe16baf1567c04ce88336ca9ad2e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">__global__</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gpuSplineUtils_8cu.html#aa36afe16baf1567c04ce88336ca9ad2e">EvalOnGPU_TF1</a> (<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">const</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">float</a> *<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">__restrict__</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">gpu_coeffs_tf1</a>, <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">const</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">short</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">int</a> *<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">__restrict__</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">gpu_paramNo_arr_tf1</a>, <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">float</a> *<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">__restrict__</a> gpu_weights_tf1)</td></tr>
+<tr class="memdesc:aa36afe16baf1567c04ce88336ca9ad2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate the TF1 on the GPU Using 5th order polynomial.  <br /></td></tr>
+<tr class="separator:aa36afe16baf1567c04ce88336ca9ad2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43b97a33ca18162ca4813449e4820731" id="r_a43b97a33ca18162ca4813449e4820731"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">__global__</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gpuSplineUtils_8cu.html#a43b97a33ca18162ca4813449e4820731">EvalOnGPU_TotWeight</a> (<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">const</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">float</a> *<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">__restrict__</a> gpu_weights, <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">const</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">float</a> *<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">__restrict__</a> gpu_weights_tf1, <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">float</a> *<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">__restrict__</a> gpu_total_weights, <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">const</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">cudaTextureObject_t</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">__restrict__</a> text_nParamPerEvent, <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">const</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">cudaTextureObject_t</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">__restrict__</a> text_nParamPerEvent_TF1)</td></tr>
+<tr class="memdesc:a43b97a33ca18162ca4813449e4820731"><td class="mdescLeft">&#160;</td><td class="mdescRight">KS: Evaluate the total spline event weight on the GPU, as in most cases GPU is faster, even more this significant reduce memory transfer from GPU to CPU.  <br /></td></tr>
+<tr class="separator:a43b97a33ca18162ca4813449e4820731"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -153,8 +153,8 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a6a2f7c752f784e5e0dfc4b06c25608f9" name="a6a2f7c752f784e5e0dfc4b06c25608f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6a2f7c752f784e5e0dfc4b06c25608f9">&#9670;&#160;</a></span>EvalOnGPU_Splines()</h2>
+<a id="a617ef358c707699dd50af17358cbff69" name="a617ef358c707699dd50af17358cbff69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a617ef358c707699dd50af17358cbff69">&#9670;&#160;</a></span>EvalOnGPU_Splines()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -180,7 +180,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">float</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">float</a> *<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">__restrict__</a>&#160;</td>
           <td class="paramname"><em>gpu_weights</em>, </td>
         </tr>
         <tr>
@@ -261,8 +261,8 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="ae90fdf441edbf7a4d3520c3121f6e7a9" name="ae90fdf441edbf7a4d3520c3121f6e7a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae90fdf441edbf7a4d3520c3121f6e7a9">&#9670;&#160;</a></span>EvalOnGPU_TF1()</h2>
+<a id="aa36afe16baf1567c04ce88336ca9ad2e" name="aa36afe16baf1567c04ce88336ca9ad2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa36afe16baf1567c04ce88336ca9ad2e">&#9670;&#160;</a></span>EvalOnGPU_TF1()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -282,7 +282,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">float</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">float</a> *<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">__restrict__</a>&#160;</td>
           <td class="paramname"><em>gpu_weights_tf1</em>&#160;</td>
         </tr>
         <tr>
@@ -304,7 +304,7 @@ Variables</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="gpuSplineUtils_8cu_source.html#l00397">397</a> of file <a class="el" href="gpuSplineUtils_8cu_source.html">gpuSplineUtils.cu</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  400</span>                            {</div>
+<div class="fragment"><div class="line"><span class="lineno">  400</span>                                         {</div>
 <div class="line"><span class="lineno">  401</span><span class="comment">//*********************************************************</span></div>
 <div class="line"><span class="lineno">  402</span> </div>
 <div class="line"><span class="lineno">  403</span>  <span class="comment">// points per spline is the offset to skip in the index to move between splines</span></div>
@@ -334,8 +334,8 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a1af53253fb379e8c3eaba886add0ba04" name="a1af53253fb379e8c3eaba886add0ba04"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1af53253fb379e8c3eaba886add0ba04">&#9670;&#160;</a></span>EvalOnGPU_TotWeight()</h2>
+<a id="a43b97a33ca18162ca4813449e4820731" name="a43b97a33ca18162ca4813449e4820731"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43b97a33ca18162ca4813449e4820731">&#9670;&#160;</a></span>EvalOnGPU_TotWeight()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -355,7 +355,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">float</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">float</a> *<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">__restrict__</a>&#160;</td>
           <td class="paramname"><em>gpu_total_weights</em>, </td>
         </tr>
         <tr>

@@ -30,7 +30,7 @@ MathJax.Hub.Config({
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="mach3logo_small.png"/></td>
   <td id="projectalign">
-   <div id="projectname">MaCh3<span id="projectnumber">&#160;1.1.6</span>
+   <div id="projectname">MaCh3<span id="projectnumber">&#160;1.1.7</span>
    </div>
    <div id="projectbrief">Reference Guide</div>
   </td>
@@ -82,9 +82,9 @@ $(function() {
   <div class="headertitle"><div class="title">MaCh3 &lt;img src="Doc/mach3logo.png" alt="MaCh3" align="center" width="100"/&gt;</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md9"></a>The Markov Chain 3 flavour is a framework born in 2013 as a Bayesian MCMC fitter for <a href="https://t2k-experiment.org/pl/">T2K</a> oscillation analysis. It has now been used for multiple T2K Oscillation analyses both at the Near and Far detectors throughout the years and is also used by the DUNE and HK oscillation analysis groups as well as for joint fits between T2K and NOvA and T2K and SK's atmospheric data.</p>
+<div class="textblock"><p><a class="anchor" id="autotoc_md9"></a>The Markov Chain 3 flavour is a framework born in 2013 as a Bayesian MCMC fitter for <a href="https://t2k-experiment.org/pl/">T2K</a> oscillation analysis. It has now been used for multiple T2K Oscillation analyses both at the Near and Far detectors throughout the years and is also used by the <a href="https://www.dunescience.org/">DUNE</a> and <a href="https://www-sk.icrr.u-tokyo.ac.jp/en/hk/">HK</a> oscillation analysis groups as well as for joint fits between T2K and NOvA and T2K and SK's atmospheric data.</p>
 <p>The framework has also evolved to allow non MCMC modules to interrogate the likelihoods implemented.</p>
-<p><a href="https://github.com/mach3-software/MaCh3/blob/develop/LICENSE.txt"><img src="https://img.shields.io/badge/License-BSD_3--Clause-blue.svg" alt="License" style="pointer-events: none;" class="inline"/></a> <a href="https://github.com/mach3-software/MaCh3/releases"><img src="https://img.shields.io/badge/Release-v1.1.0-2ea44f" alt="Release - v1.1.0" class="inline"/></a> <a href="https://github.com/mach3-software/MaCh3/pkgs/container/mach3"><img src="https://img.shields.io/badge/Container-Image-brightgreen" alt="Container Image" class="inline"/></a> <a href="https://github.com/mach3-software/MaCh3/wiki"><img src="https://img.shields.io/badge/Code-Documented-2ea44f" alt="Code - Documented" class="inline"/></a> <a href="https://mach3-software.github.io/MaCh3/index.html"><img src="https://img.shields.io/badge/Code-Doxygen-2ea44f" alt="Code - Doxygen" class="inline"/></a> <a href="https://github.com/mach3-software/MaCh3/actions/workflows/CIBuild.yml"><img src="https://github.com/mach3-software/MaCh3/actions/workflows/CIBuild.yml/badge.svg" alt="Build CI" style="pointer-events: none;" class="inline"/></a> </p>
+<p><a href="https://github.com/mach3-software/MaCh3/blob/develop/LICENSE.txt"><img src="https://img.shields.io/badge/License-BSD_3--Clause-blue.svg" alt="License" style="pointer-events: none;" class="inline"/></a> <a href="https://github.com/mach3-software/MaCh3/releases/latest"><img src="https://img.shields.io/github/release/mach3-software/MaCh3.svg" alt="Release" style="pointer-events: none;" class="inline"/></a> <a href="https://github.com/mach3-software/MaCh3/pkgs/container/mach3"><img src="https://img.shields.io/badge/Container-Image-brightgreen" alt="Container Image" class="inline"/></a> <a href="https://github.com/mach3-software/MaCh3/wiki"><img src="https://img.shields.io/badge/Code-Documented-2ea44f" alt="Code - Documented" class="inline"/></a> <a href="https://mach3-software.github.io/MaCh3/index.html"><img src="https://img.shields.io/badge/Code-Doxygen-2ea44f" alt="Code - Doxygen" class="inline"/></a> <a href="https://github.com/mach3-software/MaCh3/actions/workflows/CIBuild.yml"><img src="https://github.com/mach3-software/MaCh3/actions/workflows/CIBuild.yml/badge.svg" alt="Build CI" style="pointer-events: none;" class="inline"/></a> </p>
 <h1><a class="anchor" id="autotoc_md10"></a>
 Famous Plots</h1>
 <p>Example of plots made using MaCh3 apparent in scientific publications, for more see <a href="https://github.com/mach3-software/MaCh3/wiki/14.-MaCh3-in-the-Field">here</a> <img src="Doc/Plots/delta.png" alt="MaCh3" align="left" width="200" class="inline"/> <img src="Doc/Plots/Jarlskog.png" alt="MaCh3" align="center" width="200" class="inline"/></p>
@@ -96,7 +96,7 @@ How to Compile</h1>
 <p>MaCh3 follows standard cmake pattern. By default you should get most optimal build setting although below we list many configurable options: </p><div class="fragment"><div class="line">mkdir build;</div>
 <div class="line">cd build;</div>
 <div class="line">cmake ../</div>
-<div class="line">make -jN [set number of threads]</div>
+<div class="line">make -jN [Where N is number of threads]</div>
 <div class="line">make install</div>
 </div><!-- fragment --><p>Don't forget to: </p><div class="fragment"><div class="line">source bin/setup.MaCh3.sh</div>
 </div><!-- fragment --> <h2><a class="anchor" id="autotoc_md13"></a>
@@ -192,7 +192,20 @@ Supported operational systems</h3>
  ❌ - Not supported and no plans right now <br  />
 </p>
 <h1><a class="anchor" id="autotoc_md23"></a>
-How To Use</h1>
+Help and Guidelines</h1>
+<ul>
+<li><a href="https://github.com/mach3-software/MaCh3Tutorial">Tutorial</a></li>
+<li><a href="https://github.com/mach3-software/MaCh3/blob/develop/CONTRIBUTING.md">How to contribute</a></li>
+<li><a href="https://github.com/mach3-software/MaCh3/wiki">Wiki</a></li>
+<li><a href="https://www.jiscmail.ac.uk/cgi-bin/webadmin?A0=MACH3">Mailing lists</a></li>
+<li><a href="https://t2k-experiment.slack.com/archives/C06EM0C6D7W/p1705599931356889">Slack</a></li>
+<li><a href="https://github.com/mach3-software/MaCh3/discussions">Discussions</a></li>
+</ul>
+<h2><a class="anchor" id="autotoc_md24"></a>
+Plotting and Diagnostic</h2>
+<p>Example of chain diagnostic utils can be found <a href="https://github.com/mach3-software/MaCh3/tree/develop/Diagnostics">here</a> with example of config. The MaCh3 core plotting library code can be found <a href="https://github.com/mach3-software/MaCh3/tree/develop/plotting">here</a> along with example config files and some apps for making standard plots.</p>
+<h2><a class="anchor" id="autotoc_md25"></a>
+How To Use</h2>
 <p>This is an example how your executable can look like using MaCh3: </p><div class="fragment"><div class="line">manager *fitMan = nullptr; //Manager is responsible for reading from config</div>
 <div class="line"> </div>
 <div class="line">std::vector&lt;samplePDFBase*&gt; sample; //vector storing information about sample for different detector</div>
@@ -208,19 +221,7 @@ How To Use</h1>
 <div class="line"> </div>
 <div class="line">markovChain-&gt;RunLLHScan(); // can run LLH scan</div>
 <div class="line">markovChain-&gt;runMCMC(); //or run actual fit</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md24"></a>
-Help and Guidelines</h2>
-<ul>
-<li><a href="https://github.com/mach3-software/MaCh3/blob/develop/CONTRIBUTING.md">How to contribute</a></li>
-<li><a href="https://github.com/mach3-software/MaCh3/wiki">Wiki</a></li>
-<li><a href="https://www.jiscmail.ac.uk/cgi-bin/webadmin?A0=MACH3">Mailing lists</a></li>
-<li><a href="https://t2k-experiment.slack.com/archives/C06EM0C6D7W/p1705599931356889">Slack</a></li>
-<li><a href="https://github.com/mach3-software/MaCh3/discussions">Discussions</a></li>
-</ul>
-<h3><a class="anchor" id="autotoc_md25"></a>
-Plotting and Diagnostic</h3>
-<p>Example of chain diagnostic utils can be found <a href="https://github.com/mach3-software/MaCh3/tree/develop/Diagnostics">here</a> with example of config. The MaCh3 core plotting library code can be found <a href="https://github.com/mach3-software/MaCh3/tree/develop/plotting">here</a> along with example config files and some apps for making standard plots. </p>
-</div></div><!-- contents -->
+</div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
