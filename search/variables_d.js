@@ -19,7 +19,7 @@ var searchData=
   ['neutrinotype_16',['NeutrinoType',['../structfdmc__base.html#a68642e2df5ed3df12633de57599f276a',1,'fdmc_base']]],
   ['neutrinotypes_17',['NeutrinoTypes',['../classOscillator.html#ae838fed43a46d8a7476a46fc500c7609',1,'Oscillator']]],
   ['neutrinotypes_5fnames_18',['NeutrinoTypes_Names',['../classOscillator.html#a3b1d16da8ceb60e74217bb5f42df8210',1,'Oscillator']]],
-  ['nevents_19',['nevents',['../classSMonolith.html#ac86282b04659bae5cccb6073c9edc0a5',1,'SMonolith::NEvents'],['../structfdmc__base.html#abc7c499f714510adc13362187ec541e0',1,'fdmc_base::nEvents']]],
+  ['nevents_19',['nevents',['../structfdmc__base.html#abc7c499f714510adc13362187ec541e0',1,'fdmc_base::nEvents'],['../classSMonolith.html#ac86282b04659bae5cccb6073c9edc0a5',1,'SMonolith::NEvents']]],
   ['nfiles_20',['nFiles',['../ProcessMCMC_8cpp.html#a6b25bcddaae9b868109dc98a54476e46',1,'ProcessMCMC.cpp']]],
   ['nfinalflavours_21',['nFinalFlavours',['../classOscillator.html#a535e02743b317f2400747b824d075ee6',1,'Oscillator']]],
   ['nfinecosz_22',['nFineCosz',['../classOscillator.html#a3d1aa5b31722cd5342dfe6d30ee7fa99',1,'Oscillator']]],

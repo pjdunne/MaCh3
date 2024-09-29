@@ -17,7 +17,7 @@ var searchData=
   ['ffillhistograms_14',['fFillHistograms',['../classOscillator.html#a1eddbd950e06f52470bf1228464351f6',1,'Oscillator']]],
   ['file_15',['file',['../structMaCh3Plotting_1_1InputFile.html#a11c074dd45647dd2957987f8b55f9d73',1,'MaCh3Plotting::InputFile']]],
   ['file_5fexists_16',['file_exists',['../Structs_8h.html#afbf5ccf44bc187caa268d4d158f4e5f6',1,'Structs.h']]],
-  ['filename_17',['filename',['../structMaCh3Plotting_1_1InputFile.html#a076134d08d2b54e29e76431a42267a52',1,'MaCh3Plotting::InputFile::fileName'],['../classmanager.html#a1004958d1431ff607c08fa795b5953b7',1,'manager::FileName']]],
+  ['filename_17',['filename',['../classmanager.html#a1004958d1431ff607c08fa795b5953b7',1,'manager::FileName'],['../structMaCh3Plotting_1_1InputFile.html#a076134d08d2b54e29e76431a42267a52',1,'MaCh3Plotting::InputFile::fileName']]],
   ['filenames_18',['FileNames',['../ProcessMCMC_8cpp.html#a8e90c1478f4be185364988cac765a163',1,'ProcessMCMC.cpp']]],
   ['files_19',['Config Files',['../md_plotting_2README.html#autotoc_md35',1,'']]],
   ['filesaved_20',['FileSaved',['../classFitterBase.html#a699abe6a2c89706b54544212152d613a',1,'FitterBase']]],

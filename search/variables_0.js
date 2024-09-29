@@ -28,7 +28,7 @@ var searchData=
   ['_5ffpropval_25',['_fPropVal',['../classcovarianceBase.html#a12f0eb31a5ef48b014baa11d4ab919e9',1,'covarianceBase']]],
   ['_5ffsplinemodes_26',['_fSplineModes',['../structXsecSplines1.html#a70fd38fe1866c2672c4d733d994886c9',1,'XsecSplines1']]],
   ['_5ffsplinenames_27',['_fSplineNames',['../classcovarianceXsec.html#a4d3074db3c9edb7465a4409abd9c91fc',1,'covarianceXsec']]],
-  ['_5ffsysttoglobablsystindexmap_28',['_fSystToGlobablSystIndexMap',['../classcovarianceXsec.html#a084f2b11d068a95d991d99fbc6d82e37',1,'covarianceXsec']]],
+  ['_5ffsysttoglobalsystindexmap_28',['_fSystToGlobalSystIndexMap',['../classcovarianceXsec.html#adddfbaa235113603542826df331ed61e',1,'covarianceXsec']]],
   ['_5ffupbound_29',['_fUpBound',['../classcovarianceBase.html#a31e636cb6de871bd0c2c8e7e299df9e7',1,'covarianceBase']]],
   ['_5ffyamldoc_30',['_fYAMLDoc',['../classcovarianceBase.html#a933ff3dc0af99629ba3582a5d9d89d23',1,'covarianceBase']]],
   ['_5fhpdf1d_31',['_hPDF1D',['../classsamplePDFBase.html#ae324bd76a337efa43fedfd2052029e47',1,'samplePDFBase']]],

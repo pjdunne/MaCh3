@@ -40,7 +40,7 @@ var searchData=
   ['iseventselected_37',['iseventselected',['../classsamplePDFFDBase.html#a3814f042011a358d421188bcb49001a1',1,'samplePDFFDBase::IsEventSelected(const std::vector&lt; std::string &gt; &amp;ParameterStr, const std::vector&lt; std::vector&lt; double &gt; &gt; &amp;SelectionCuts, const int iSample, const int iEvent)'],['../classsamplePDFFDBase.html#a82c460356e8ab122671422b873a8e1f0',1,'samplePDFFDBase::IsEventSelected(const int iSample, const int iEvent)'],['../classsamplePDFFDBase.html#ae68b3b0e57846c5f3a960958df936520',1,'samplePDFFDBase::IsEventSelected(const std::vector&lt; std::string &gt; &amp;ParameterStr, const int iSample, const int iEvent)']]],
   ['isflat_38',['isflat',['../SplineStructs_8h.html#aee66563def836e531cda07c5efa45d87',1,'isFlat(TSpline3_red *&amp;spl):&#160;SplineStructs.h'],['../GetPenaltyTerm_8cpp.html#ae7c3a438d4508eba7ac26e26135b2c17',1,'isFlat:&#160;GetPenaltyTerm.cpp']]],
   ['isflatarray_39',['isflatarray',['../classsplineFDBase.html#aa8a204355df78af3f79bf8f2815258d3',1,'splineFDBase']]],
-  ['islinear_40',['islinear',['../classOscillator.html#a646a52ceae668dc0b4cc58245d9f0939',1,'Oscillator::IsLinear'],['../classOscillator.html#a7f3eb39d4674724a51cb55c7daff8c20',1,'Oscillator::isLinear()']]],
+  ['islinear_40',['islinear',['../classOscillator.html#a7f3eb39d4674724a51cb55c7daff8c20',1,'Oscillator::isLinear()'],['../classOscillator.html#a646a52ceae668dc0b4cc58245d9f0939',1,'Oscillator::IsLinear']]],
   ['ismode_41',['IsMode',['../structMaCh3ModeInfo.html#a9a89a0394f9f5eb780008253716836fc',1,'MaCh3ModeInfo']]],
   ['isnc_42',['isNC',['../structfdmc__base.html#a3b50812cc57ead329ccf495012cf906e',1,'fdmc_base']]],
   ['isparameterfixed_43',['isparameterfixed',['../classcovarianceBase.html#a1a0ed90bcbc2f932c7a32d26090edbbb',1,'covarianceBase::isParameterFixed(const std::string &amp;name)'],['../classcovarianceBase.html#a2424eaebd9daa92b0294b352310770a3',1,'covarianceBase::isParameterFixed(const int i)']]],
@@ -52,5 +52,6 @@ var searchData=
   ['isusinggpu_49',['isUsingGPU',['../classOscillator.html#a04e27d2c84837eadda34fcc36d92ab70',1,'Oscillator']]],
   ['isvalidbox_50',['IsValidBox',['../classOscillator.html#a9aba209aecd9521e4db62b7500c147b6',1,'Oscillator']]],
   ['isvalidsplineindex_51',['isValidSplineIndex',['../classsplineFDBase.html#ae66addf83262b03969d0b3b89737a42b',1,'splineFDBase']]],
-  ['isxsec_52',['IsXsec',['../classMCMCProcessor.html#a2c06d64020e9246e720cc131a9f4986d',1,'MCMCProcessor']]]
+  ['isxsec_52',['IsXsec',['../classMCMCProcessor.html#a2c06d64020e9246e720cc131a9f4986d',1,'MCMCProcessor']]],
+  ['iterateoverparams_53',['IterateOverParams',['../classcovarianceXsec.html#a17c24905af91f1fc7b806cfc39e50035',1,'covarianceXsec']]]
 ];
