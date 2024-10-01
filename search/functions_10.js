@@ -12,7 +12,7 @@ var searchData=
   ['readoscfile_9',['ReadOSCFile',['../classMCMCProcessor.html#a3733b3b753c73f79e6846bc92c4da11b',1,'MCMCProcessor']]],
   ['readparsfromfile_10',['ReadParsFromFile',['../classmcmc.html#abdc25b836c2067136ada66e6a8b7ddc3',1,'mcmc']]],
   ['readsettings_11',['ReadSettings',['../GetPostfitParamPlots_8cpp.html#a03d65d008bce22fa656f2d4e9f2bc78b',1,'GetPostfitParamPlots.cpp']]],
-  ['readxsecfile_12',['readxsecfile',['../classMCMCProcessor.html#a2b0b4afbf45adb93357abe96d108170b',1,'MCMCProcessor::ReadXSecFile()'],['../GetPenaltyTerm_8cpp.html#ad6a031a0073fbbf3e68974be18148c0a',1,'ReadXSecFile():&#160;GetPenaltyTerm.cpp']]],
+  ['readxsecfile_12',['readxsecfile',['../classMCMCProcessor.html#a2b0b4afbf45adb93357abe96d108170b',1,'MCMCProcessor::ReadXSecFile()'],['../GetPenaltyTerm_8cpp.html#a85332b9994750992c48e45f0bba7f43d',1,'ReadXSecFile():&#160;GetPenaltyTerm.cpp']]],
   ['rebinoscillogram_13',['RebinOscillogram',['../classOscillator.html#a143025170214000c5c412cecc331e56d',1,'Oscillator']]],
   ['reducetf1_14',['ReduceTF1',['../SplineStructs_8h.html#adb758df8e7abdf29f474bf643da0efd2',1,'SplineStructs.h']]],
   ['reducetspline3_15',['ReduceTSpline3',['../SplineStructs_8h.html#a02798d50f282b82a68b58d672dcb2472',1,'SplineStructs.h']]],

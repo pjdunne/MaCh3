@@ -164,7 +164,7 @@ var searchData=
   ['getpathlength_161',['GetPathLength',['../classcovarianceOsc.html#a367025ccd9467fa42dfeef223763261b',1,'covarianceOsc']]],
   ['getpdf_162',['getPDF',['../classsamplePDFBase.html#ab284783da50931cacbb9c73cd117d102',1,'samplePDFBase']]],
   ['getpdfmode_163',['getPDFMode',['../classsamplePDFBase.html#ad994df38f665190f3e15dbe21f663126',1,'samplePDFBase']]],
-  ['getpenaltyterm_164',['GetPenaltyTerm',['../GetPenaltyTerm_8cpp.html#aca180a34f33cad687281cba8e8ee6196',1,'GetPenaltyTerm.cpp']]],
+  ['getpenaltyterm_164',['GetPenaltyTerm',['../GetPenaltyTerm_8cpp.html#a84a9174999180db166e835e930e20b59',1,'GetPenaltyTerm.cpp']]],
   ['getplotratios_165',['getPlotRatios',['../classMaCh3Plotting_1_1PlottingManager.html#a0510b7710079eb67eeb3167e54e58741',1,'MaCh3Plotting::PlottingManager']]],
   ['getpolarplot_166',['GetPolarPlot',['../classMCMCProcessor.html#ac358c3ffe7c060e8872c762259973c6b',1,'MCMCProcessor']]],
   ['getpostfit_167',['GetPostfit',['../classMCMCProcessor.html#a5fc015740496b821648f0e5ca8cffe80',1,'MCMCProcessor']]],

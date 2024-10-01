@@ -31,11 +31,11 @@
 <area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="1421,370,1491,416,1488,420,1418,374"/>
 <area shape="rect" id="Node000007" href="$DiagMCMC_8cpp.html" title=" " alt="" coords="1791,581,1974,607"/>
 <area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="1473,356,1702,380,1803,397,1838,406,1858,417,1873,436,1883,458,1892,504,1892,549,1888,581,1882,580,1886,548,1887,505,1878,459,1868,439,1854,421,1836,411,1802,402,1701,385,1472,361"/>
-<area shape="rect" id="Node000008" href="$GetPenaltyTerm_8cpp.html" title=" " alt="" coords="845,426,1056,452"/>
+<area shape="rect" id="Node000008" href="$GetPenaltyTerm_8cpp.html" title="KS: This file contains the implementation of the function to extract specific penalty terms from syst..." alt="" coords="845,426,1056,452"/>
 <area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="1313,369,1013,428,1012,423,1312,364"/>
 <area shape="rect" id="Node000009" href="$ProcessMCMC_8cpp.html" title=" " alt="" coords="1999,581,2204,607"/>
 <area shape="poly" id="edge8_Node000005_Node000009" title=" " alt="" coords="1473,355,1699,377,1810,394,1855,405,1889,416,1935,445,1993,492,2090,579,2087,583,1990,496,1932,450,1887,421,1853,410,1809,400,1698,382,1472,360"/>
-<area shape="rect" id="Node000010" href="$RHat_8cpp.html" title=" " alt="" coords="1081,426,1228,452"/>
+<area shape="rect" id="Node000010" href="$RHat_8cpp.html" title="This executable calculates the &#160;estimator for Markov Chain Monte Carlo (MCMC) convergence." alt="" coords="1081,426,1228,452"/>
 <area shape="poly" id="edge9_Node000005_Node000010" title=" " alt="" coords="1343,371,1188,428,1187,423,1341,366"/>
 <area shape="rect" id="Node000011" href="$OscClass__CUDAProb3_8h.html" title=" " alt="" coords="40,426,267,452"/>
 <area shape="poly" id="edge10_Node000005_Node000011" title=" " alt="" coords="1307,357,867,376,575,395,279,421,226,428,226,423,278,416,575,390,867,371,1306,351"/>

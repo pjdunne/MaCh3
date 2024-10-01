@@ -167,7 +167,7 @@ var searchData=
   ['getpathlength_164',['GetPathLength',['../classcovarianceOsc.html#a367025ccd9467fa42dfeef223763261b',1,'covarianceOsc']]],
   ['getpdf_165',['getPDF',['../classsamplePDFBase.html#ab284783da50931cacbb9c73cd117d102',1,'samplePDFBase']]],
   ['getpdfmode_166',['getPDFMode',['../classsamplePDFBase.html#ad994df38f665190f3e15dbe21f663126',1,'samplePDFBase']]],
-  ['getpenaltyterm_167',['GetPenaltyTerm',['../GetPenaltyTerm_8cpp.html#aca180a34f33cad687281cba8e8ee6196',1,'GetPenaltyTerm.cpp']]],
+  ['getpenaltyterm_167',['GetPenaltyTerm',['../GetPenaltyTerm_8cpp.html#a84a9174999180db166e835e930e20b59',1,'GetPenaltyTerm.cpp']]],
   ['getpenaltyterm_2ecpp_168',['GetPenaltyTerm.cpp',['../GetPenaltyTerm_8cpp.html',1,'']]],
   ['getplotratios_169',['getPlotRatios',['../classMaCh3Plotting_1_1PlottingManager.html#a0510b7710079eb67eeb3167e54e58741',1,'MaCh3Plotting::PlottingManager']]],
   ['getpolarplot_170',['GetPolarPlot',['../classMCMCProcessor.html#ac358c3ffe7c060e8872c762259973c6b',1,'MCMCProcessor']]],
