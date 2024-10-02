@@ -125,7 +125,7 @@ Multithreading</h2>
 <p>MaCh3 quite heavily relies on Multithreading, it is turned on by default. If for debugging purposes you would like to turn it off please use </p><div class="fragment"><div class="line">cmake ../ -DMaCh3_MULTITHREAD_ENABLED=OFF</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md17"></a>
 CUDA</h2>
-<p>If the system has access to GPU, MaCh3 will enable GPU functionality automatically. If you would like to CPU only despite having access to CUDA </p><div class="fragment"><div class="line">mkdir build; cd build;</div>
+<p>If the system has access to GPU, MaCh3 will enable GPU functionality automatically. If you would like to CPU only despite having access to <a href="https://developer.nvidia.com/cuda-toolkit">CUDA</a> </p><div class="fragment"><div class="line">mkdir build; cd build;</div>
 <div class="line">cmake ../ -DUSE_CPU=ON</div>
 </div><!-- fragment --><p> MaCh3 supports quite a high range of CUDA architectures if something doesn't work on your GPU let us know. MaCh3 supports only NVIDIA GPUs.</p>
 <h2><a class="anchor" id="autotoc_md18"></a>
@@ -163,7 +163,7 @@ Debug</h2>
 <div class="fragment"><div class="line">cmake ../ -DMaCh3_DEBUG_ENABLED=&lt;ON,OFF&gt; -DDEBUG_LEVEL=&lt;1,2,3&gt;</div>
 </div><!-- fragment --> <h2><a class="anchor" id="autotoc_md21"></a>
 System Requirements</h2>
-<p>Most of external libraries are being handled through CPM. The only external library that is not being handled through CPM and is required is <a href="https://root.cern/">ROOT</a>. Currently used external dependencies include:</p>
+<p>Most of external libraries are being handled through <a href="https://github.com/cpm-cmake/CPM.cmake">CPM</a>. The only external library that is not being handled through <a href="https://github.com/cpm-cmake/CPM.cmake">CPM</a> and is required is <a href="https://root.cern/">ROOT</a>. Currently used external dependencies include:</p>
 <ol type="1">
 <li><a href="https://github.com/jbeder/yaml-cpp">yaml-cpp</a></li>
 <li><a href="https://github.com/gabime/spdlog">spdlog</a></li>
