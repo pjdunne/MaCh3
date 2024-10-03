@@ -19,7 +19,7 @@ var searchData=
   ['text_5fnparamperevent_5ftf1_16',['text_nParamPerEvent_TF1',['../classSMonolithGPU.html#a089fd1b491667e60d06c3713cd45552e',1,'SMonolithGPU']]],
   ['tf1_5fred_17',['tf1_red',['../classTF1__red.html',1,'TF1_red'],['../classTF1__red.html#a7ee6185f2184824a190d146375522952',1,'TF1_red::TF1_red(TF1 *&amp;Function)'],['../classTF1__red.html#a767d972c8e46f4c861944098a833a9fb',1,'TF1_red::TF1_red(_int_ nSize, _float_ *Array)'],['../classTF1__red.html#a503700d13da3bc04710c6a52e14877e6',1,'TF1_red::TF1_red()']]],
   ['tgraphtoth1d_18',['TGraphToTH1D',['../group__Utils.html#gaf1329db6e5a742f7dcfa154629c54542',1,'MaCh3Plotting']]],
-  ['tgraphtovector_19',['TGraphToVector',['../group__Utils.html#gacb97b56df54ad5f4a5bf2ea2e6077c42',1,'MaCh3Plotting']]],
+  ['tgraphtovector_19',['tgraphtovector',['../group__Utils.html#ga2f5f6d967ac631277a0d0dab0a053c6e',1,'MaCh3Plotting::TGraphToVector(TGraph2D graph)'],['../group__Utils.html#gacb97b56df54ad5f4a5bf2ea2e6077c42',1,'MaCh3Plotting::TGraphToVector(TGraph graph)']]],
   ['three_5fvector_5faddition_20',['three_vector_addition',['../classPSO.html#a440e0cb32000cf9c5d2170d0c2d08dc2',1,'PSO']]],
   ['throwmatrix_21',['throwMatrix',['../classcovarianceBase.html#a6cb3d0b4096fbb55b040f70cd5b6e32b',1,'covarianceBase']]],
   ['throwmatrix_5fcholdecomp_22',['throwMatrix_CholDecomp',['../classcovarianceBase.html#ab95f5e066c2dfb1d20d120bc6c85dda2',1,'covarianceBase']]],

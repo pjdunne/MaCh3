@@ -112,7 +112,7 @@ var searchData=
   ['studydic_109',['StudyDIC',['../classSampleSummary.html#a8e73fe07b8b8dfb1e2ee9245df4e7a4b',1,'SampleSummary']]],
   ['studykinematiccorrelations_110',['StudyKinematicCorrelations',['../classSampleSummary.html#afa199f8841fcbf007c293187ea60d795',1,'SampleSummary']]],
   ['style_111',['style',['../classMaCh3Plotting_1_1PlottingManager.html#ad07460f382733b379d0f122d6b0322c7',1,'MaCh3Plotting::PlottingManager']]],
-  ['stylemanager_112',['StyleManager',['../classMaCh3Plotting_1_1StyleManager.html#a7a7424674b40932d555382dadcef10f8',1,'MaCh3Plotting::StyleManager']]],
+  ['stylemanager_112',['stylemanager',['../classMaCh3Plotting_1_1StyleManager.html#ac20ebb6a36749e9396c37be18c80ba8f',1,'MaCh3Plotting::StyleManager::StyleManager(StyleManager &amp;&amp;)=default'],['../classMaCh3Plotting_1_1StyleManager.html#a691e626208630301bbdbd052fcef8337',1,'MaCh3Plotting::StyleManager::StyleManager(const StyleManager &amp;)=delete'],['../classMaCh3Plotting_1_1StyleManager.html#a7a7424674b40932d555382dadcef10f8',1,'MaCh3Plotting::StyleManager::StyleManager(std::string configName)']]],
   ['summarise_113',['Summarise',['../structMaCh3Plotting_1_1InputFile.html#a4b3753ca1fa1a399e519aa15bca8658a',1,'MaCh3Plotting::InputFile']]],
   ['swarmiterate_114',['swarmIterate',['../classPSO.html#af7b07ec9013e1d6859d7ffa8e54086c7',1,'PSO']]],
   ['switchtocudaprobtype_115',['SwitchToCUDAProbType',['../classsamplePDFFDBase.html#aaf8912a330835d6a7879c42d54d71387',1,'samplePDFFDBase']]],

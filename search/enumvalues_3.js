@@ -13,7 +13,7 @@ var searchData=
   ['klinear_10',['kLinear',['../Structs_8h.html#a6720d732608767153550aebebcf8fbf4ac188c019178783e5be55110601309d7d',1,'Structs.h']]],
   ['klinearfunc_11',['kLinearFunc',['../Structs_8h.html#a6720d732608767153550aebebcf8fbf4ade75212a78a5cf860f84473a80355f42',1,'Structs.h']]],
   ['kllh_12',['kLLH',['../namespaceMaCh3Plotting.html#a4152b51a260d6a18f41b3a22aa2a6b75a439e10ed490e0eae34588a3e8005c619',1,'MaCh3Plotting']]],
-  ['kmarkovchain_13',['kMarkovChain',['../namespaceMaCh3Plotting.html#a4152b51a260d6a18f41b3a22aa2a6b75a4aae87cc942dddc2a32eab2551ae7d7f',1,'MaCh3Plotting']]],
+  ['kmcmc_13',['kMCMC',['../namespaceMaCh3Plotting.html#a4152b51a260d6a18f41b3a22aa2a6b75a9b27490997d0011b93a1bb7d063edb0a',1,'MaCh3Plotting']]],
   ['kmonotonic_14',['kMonotonic',['../Structs_8h.html#a6720d732608767153550aebebcf8fbf4a68f4b10c9689389fd8fea39dc6c097d3',1,'Structs.h']]],
   ['kndpar_15',['kNDPar',['../MCMCProcessor_8h.html#acd2848273413543fe14936252942c20ba4ac215e1a6cd9e776ec0a230f62a0bb4',1,'MCMCProcessor.h']]],
   ['knfiletypes_16',['kNFileTypes',['../namespaceMaCh3Plotting.html#a4152b51a260d6a18f41b3a22aa2a6b75a061b376dc1c0bdc2e7a434852b9924ee',1,'MaCh3Plotting']]],

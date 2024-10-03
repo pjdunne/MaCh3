@@ -93,6 +93,9 @@ Functions</h2></td></tr>
 <tr class="memitem:gacb97b56df54ad5f4a5bf2ea2e6077c42" id="r_gacb97b56df54ad5f4a5bf2ea2e6077c42"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">float</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Utils.html#gacb97b56df54ad5f4a5bf2ea2e6077c42">MaCh3Plotting::TGraphToVector</a> (<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TGraph</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">graph</a>)</td></tr>
 <tr class="memdesc:gacb97b56df54ad5f4a5bf2ea2e6077c42"><td class="mdescLeft">&#160;</td><td class="mdescRight">This handy little function lets you interpret a TGraph as a vector containing the same data.  <br /></td></tr>
 <tr class="separator:gacb97b56df54ad5f4a5bf2ea2e6077c42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2f5f6d967ac631277a0d0dab0a053c6e" id="r_ga2f5f6d967ac631277a0d0dab0a053c6e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">float</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Utils.html#ga2f5f6d967ac631277a0d0dab0a053c6e">MaCh3Plotting::TGraphToVector</a> (<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TGraph2D</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">graph</a>)</td></tr>
+<tr class="memdesc:ga2f5f6d967ac631277a0d0dab0a053c6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This handy little function lets you interpret a 2d TGraph as a vector containing the same data.  <br /></td></tr>
+<tr class="separator:ga2f5f6d967ac631277a0d0dab0a053c6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Function Documentation</h2>
@@ -193,7 +196,7 @@ Functions</h2></td></tr>
 </div>
 </div>
 <a id="gacb97b56df54ad5f4a5bf2ea2e6077c42" name="gacb97b56df54ad5f4a5bf2ea2e6077c42"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gacb97b56df54ad5f4a5bf2ea2e6077c42">&#9670;&#160;</a></span>TGraphToVector()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gacb97b56df54ad5f4a5bf2ea2e6077c42">&#9670;&#160;</a></span>TGraphToVector() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -240,6 +243,60 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   79</span> </div>
 <div class="line"><span class="lineno">   80</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ret</a>;</div>
 <div class="line"><span class="lineno">   81</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ga2f5f6d967ac631277a0d0dab0a053c6e" name="ga2f5f6d967ac631277a0d0dab0a053c6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2f5f6d967ac631277a0d0dab0a053c6e">&#9670;&#160;</a></span>TGraphToVector() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::vector&lt; <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">float</a> &gt; &gt; MaCh3Plotting::TGraphToVector </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TGraph2D</a>&#160;</td>
+          <td class="paramname"><em>graph</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This handy little function lets you interpret a 2d TGraph as a vector containing the same data. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graph</td><td>The graph you want to convert. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A vector of vectors containing the data from the initial graph. The first vector is the x axis, the 2nd the y axis, the 3rd is the z axis </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="plottingUtils_8cpp_source.html#l00084">84</a> of file <a class="el" href="plottingUtils_8cpp_source.html">plottingUtils.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   84</span>                                                           {</div>
+<div class="line"><span class="lineno">   85</span> </div>
+<div class="line"><span class="lineno">   86</span>  <span class="keywordtype">int</span> nPoints = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">graph</a>.GetN();</div>
+<div class="line"><span class="lineno">   87</span>  std::vector&lt;std::vector&lt;float&gt;&gt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ret</a>(3);</div>
+<div class="line"><span class="lineno">   88</span>  std::vector&lt;float&gt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pointsX</a>(nPoints);</div>
+<div class="line"><span class="lineno">   89</span>  std::vector&lt;float&gt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pointsY</a>(nPoints);</div>
+<div class="line"><span class="lineno">   90</span>  std::vector&lt;float&gt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pointsZ</a>(nPoints);</div>
+<div class="line"><span class="lineno">   91</span> </div>
+<div class="line"><span class="lineno">   92</span>  <span class="comment">// Get the points out</span></div>
+<div class="line"><span class="lineno">   93</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">Double_t</a> x, y, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">z</a>;</div>
+<div class="line"><span class="lineno">   94</span> </div>
+<div class="line"><span class="lineno">   95</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pointId</a> = 0; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pointId</a> &lt; nPoints; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pointId</a>++)</div>
+<div class="line"><span class="lineno">   96</span>  {</div>
+<div class="line"><span class="lineno">   97</span>    <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">graph</a>.GetPoint(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pointId</a>, x, y, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">z</a>);</div>
+<div class="line"><span class="lineno">   98</span>    <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pointsX</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pointId</a>] = x;</div>
+<div class="line"><span class="lineno">   99</span>    <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pointsY</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pointId</a>] = y;</div>
+<div class="line"><span class="lineno">  100</span>    <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pointsZ</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pointId</a>] = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">z</a>;</div>
+<div class="line"><span class="lineno">  101</span>  }</div>
+<div class="line"><span class="lineno">  102</span> </div>
+<div class="line"><span class="lineno">  103</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ret</a>[0] = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pointsX</a>;</div>
+<div class="line"><span class="lineno">  104</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ret</a>[1] = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pointsY</a>;</div>
+<div class="line"><span class="lineno">  105</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ret</a>[2] = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pointsZ</a>;</div>
+<div class="line"><span class="lineno">  106</span> </div>
+<div class="line"><span class="lineno">  107</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ret</a>;</div>
+<div class="line"><span class="lineno">  108</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
