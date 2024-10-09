@@ -201,7 +201,7 @@ var searchData=
   ['getsamplespecificllhscan_5fth1d_198',['getSampleSpecificLLHScan_TH1D',['../classMaCh3Plotting_1_1InputManager.html#a74b058c312200657f046c64347f6a304',1,'MaCh3Plotting::InputManager']]],
   ['getsavagedickey_199',['GetSavageDickey',['../classMCMCProcessor.html#ad09b1ad60fa52fdd87450ab8834e9cd9',1,'MCMCProcessor']]],
   ['getsigmavalue_200',['GetSigmaValue',['../StatisticalUtils_8h.html#a04394b98587b44b98b003bd1226606ed',1,'StatisticalUtils.h']]],
-  ['getsize_201',['getsize',['../classcovarianceBase.html#ab3c974412479cd6d891a3c325820dc1e',1,'covarianceBase::getSize()'],['../classTF1__red.html#af9e3b0e8d2edad0e7e08f3bf215525c9',1,'TF1_red::GetSize()']]],
+  ['getsize_201',['getsize',['../classTF1__red.html#af9e3b0e8d2edad0e7e08f3bf215525c9',1,'TF1_red::GetSize()'],['../classcovarianceBase.html#ab3c974412479cd6d891a3c325820dc1e',1,'covarianceBase::getSize()']]],
   ['getsplinecoeff_5fsepmany_202',['getsplinecoeff_sepmany',['../classsplineFDBase.html#aeaed416a84dc6cedc42ed9db04b4f22c',1,'splineFDBase::getSplineCoeff_SepMany()'],['../classSMonolith.html#acbbe3398718d0d02d65a1e92a91c112c',1,'SMonolith::getSplineCoeff_SepMany()']]],
   ['getsplinefileparsnamesfromdetid_203',['GetSplineFileParsNamesFromDetID',['../classcovarianceXsec.html#adb95a5704149a2c6d6573a711024e7c5',1,'covarianceXsec']]],
   ['getsplinemodevecfromdetid_204',['GetSplineModeVecFromDetID',['../classcovarianceXsec.html#a63b4fb1e0caf3b71f372db7273c40c47',1,'covarianceXsec']]],

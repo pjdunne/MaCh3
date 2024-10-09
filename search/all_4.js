@@ -76,7 +76,7 @@ var searchData=
   ['contributing_2emd_73',['CONTRIBUTING.md',['../CONTRIBUTING_8md.html',1,'']]],
   ['convert_5ffrom_5fmass_5feigenstate_74',['convert_from_mass_eigenstate',['../probGpu_8cu.html#a6e4f935fde0822d63ee8bfd0a9f77868',1,'probGpu.cu']]],
   ['convertfiletypenames_75',['convertFileTypeNames',['../classMaCh3Plotting_1_1InputManager.html#a487b62643d1a5c63415685d662b7118d',1,'MaCh3Plotting::InputManager']]],
-  ['convertth2dtoth2poly_76',['convertth2dtoth2poly',['../Structs_8cpp.html#a7b09dee9c914bc3c3dd450e4a5cd2ce5',1,'ConvertTH2DToTH2Poly(TH2D *hist):&#160;Structs.cpp'],['../Structs_8h.html#aa9cbcbd12e52cadbc498db3b78784104',1,'ConvertTH2DtoTH2Poly(TH2D *TH2Dhist):&#160;Structs.h']]],
+  ['convertth2dtoth2poly_76',['convertth2dtoth2poly',['../Structs_8h.html#aa9cbcbd12e52cadbc498db3b78784104',1,'ConvertTH2DtoTH2Poly(TH2D *TH2Dhist):&#160;Structs.h'],['../Structs_8cpp.html#a7b09dee9c914bc3c3dd450e4a5cd2ce5',1,'ConvertTH2DToTH2Poly(TH2D *hist):&#160;Structs.cpp']]],
   ['convertth2polytoth2d_77',['convertth2polytoth2d',['../Structs_8h.html#af532e371f45a26f2b180d96b82b7d496',1,'ConvertTH2PolyToTH2D(TH2Poly *poly, TH2D *TH2Dhist):&#160;Structs.cpp'],['../Structs_8cpp.html#a1033cf3aa8abe6ab7135896aa9f3790b',1,'ConvertTH2PolyToTH2D(TH2Poly *poly, TH2D *h2dhist):&#160;Structs.cpp']]],
   ['copy_5fcomplex_5fmatrix_78',['copy_complex_matrix',['../probGpu_8cu.html#a2d82c80a49e215139e93f78ca29de8d6',1,'probGpu.cu']]],
   ['copydir_79',['CopyDir',['../CombineMaCh3Chains_8cpp.html#a1cecdc9d9c387545f811006b11f0ba71',1,'CombineMaCh3Chains.cpp']]],
