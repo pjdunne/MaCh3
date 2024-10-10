@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['name_0',['name',['../structMaCh3ModeInfo.html#a8c957d49742a2ad0faa79fbc07427767',1,'MaCh3ModeInfo::Name'],['../structXsecNorms4.html#a848104ff97acc9a0df9861acc8615aa7',1,'XsecNorms4::name']]],
+  ['name_0',['name',['../structXsecNorms4.html#a848104ff97acc9a0df9861acc8615aa7',1,'XsecNorms4::name'],['../structMaCh3ModeInfo.html#a8c957d49742a2ad0faa79fbc07427767',1,'MaCh3ModeInfo::Name']]],
   ['nbatches_1',['nBatches',['../classMCMCProcessor.html#a02c5a3f849cf217705816c650c678d19',1,'MCMCProcessor']]],
   ['nbins_2',['nbins',['../GetPostfitParamPlots_8cpp.html#ae4842c1619a902b2761696f3849889a1',1,'nBins:&#160;GetPostfitParamPlots.cpp'],['../classMCMCProcessor.html#a6b74f8195bcbca0979f9e9fe43468bae',1,'MCMCProcessor::nBins']]],
   ['nbranches_3',['nBranches',['../classMCMCProcessor.html#af6ba5d9aec5350fafebbf81309e813cb',1,'MCMCProcessor']]],
