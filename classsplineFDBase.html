@@ -30,7 +30,7 @@ MathJax.Hub.Config({
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="mach3logo_small.png"/></td>
   <td id="projectalign">
-   <div id="projectname">MaCh3<span id="projectnumber">&#160;1.1.8</span>
+   <div id="projectname">MaCh3<span id="projectnumber">&#160;1.2.0</span>
    </div>
    <div id="projectbrief">Reference Guide</div>
   </td>
@@ -1640,8 +1640,8 @@ Protected Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  678</span>    <a class="code hl_variable" href="classsplineFDBase.html#a5a0cd0e5c824ae56004fefe0ee322759">UniqueSystXPts</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">iSpline</a>].resize(<a class="code hl_variable" href="classsplineFDBase.html#a176d42bb137d3c8c3771eb1a4a8440c8">UniqueSystNKnots</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">iSpline</a>]);</div>
 <div class="line"><span class="lineno">  679</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">iKnot</a> = 0; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">iKnot</a> &lt; <a class="code hl_variable" href="classsplineFDBase.html#a176d42bb137d3c8c3771eb1a4a8440c8">UniqueSystNKnots</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">iSpline</a>]; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">iKnot</a>++)</div>
 <div class="line"><span class="lineno">  680</span>    {</div>
-<div class="line"><span class="lineno">  681</span>      <span class="keywordtype">double</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">xPoint</a> = -999;</div>
-<div class="line"><span class="lineno">  682</span>      <span class="keywordtype">double</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">yPoint</a> = -999;</div>
+<div class="line"><span class="lineno">  681</span>      <a class="code hl_define" href="Structs_8h.html#a44b939bf69f41920331b7d7a74d2d436">_float_</a> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">xPoint</a> = -999;</div>
+<div class="line"><span class="lineno">  682</span>      <a class="code hl_define" href="Structs_8h.html#a44b939bf69f41920331b7d7a74d2d436">_float_</a> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">yPoint</a> = -999;</div>
 <div class="line"><span class="lineno">  683</span>      <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">UniqueSystSplines</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">iSpline</a>]-&gt;GetKnot(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">iKnot</a>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">xPoint</a>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">yPoint</a>);</div>
 <div class="line"><span class="lineno">  684</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">xPoint</a> == -999 || <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">yPoint</a> == -999)</div>
 <div class="line"><span class="lineno">  685</span>      {</div>

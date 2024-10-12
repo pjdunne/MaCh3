@@ -1,13 +1,13 @@
 <map id="covariance/covarianceBase.cpp" name="covariance/covarianceBase.cpp">
 <area shape="rect" id="Node000001" title=" " alt="" coords="1494,5,1699,31"/>
-<area shape="rect" id="Node000002" href="$covarianceBase_8h.html" title=" " alt="" coords="1534,79,1659,105"/>
+<area shape="rect" id="Node000002" href="$covarianceBase_8h.html" title=" " alt="" coords="1501,79,1692,105"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1599,31,1599,63,1594,63,1594,31"/>
 <area shape="rect" id="Node000003" href="$manager_8h.html" title=" " alt="" coords="1374,226,1509,252"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="1548,108,1506,126,1486,139,1469,154,1454,182,1447,212,1441,210,1449,180,1465,151,1483,134,1503,121,1546,103"/>
 <area shape="rect" id="Node000010" href="$Structs_8h.html" title=" " alt="" coords="585,447,730,473"/>
-<area shape="poly" id="edge56_Node000002_Node000010" title=" " alt="" coords="1534,100,1331,117,1073,146,952,165,852,187,814,199,784,212,766,225,760,238,760,314,753,352,735,387,711,416,687,439,684,435,707,412,731,384,748,350,755,314,755,237,762,222,782,207,812,194,851,182,951,160,1072,141,1330,111,1534,95"/>
+<area shape="poly" id="edge56_Node000002_Node000010" title=" " alt="" coords="1500,102,1292,120,1047,150,935,168,844,190,782,213,766,226,760,238,760,314,753,352,735,387,711,416,687,439,684,435,707,412,731,384,748,350,755,314,755,237,762,223,779,209,842,185,934,163,1046,144,1291,115,1500,97"/>
 <area shape="rect" id="Node000038" href="$CovarianceUtils_8h.html" title=" " alt="" coords="2045,226,2236,252"/>
-<area shape="poly" id="edge57_Node000002_Node000038" title=" " alt="" coords="1659,98,1781,118,1921,150,2019,183,2101,217,2099,222,2017,188,1920,155,1780,123,1658,104"/>
+<area shape="poly" id="edge57_Node000002_Node000038" title=" " alt="" coords="1689,103,1801,122,1921,150,2019,183,2101,217,2099,222,2017,188,1920,155,1799,127,1688,108"/>
 <area shape="rect" id="Node000052" href="$AdaptiveMCMCHandler_8h.html" title=" " alt="" coords="1479,153,1714,178"/>
 <area shape="poly" id="edge74_Node000002_Node000052" title=" " alt="" coords="1599,105,1599,137,1594,137,1594,105"/>
 <area shape="rect" id="Node000053" href="$PCAHandler_8h.html" title=" " alt="" coords="1738,153,1908,178"/>
