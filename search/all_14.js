@@ -10,16 +10,16 @@ var searchData=
   ['targets_7',['targets',['../structXsecNorms4.html#a0f6b21994200f446f21c42ec1cebf9bb',1,'XsecNorms4']]],
   ['tau_8',['tau',['../probGpu_8cu.html#aa7082577997805000f8e8b56846642cd',1,'probGpu.cu']]],
   ['templateinputfilename_9',['TemplateInputFileName',['../classOscillator.html#a9799d325b7b716ae42aa65a7be383b73',1,'Oscillator']]],
-  ['terminaltostring_10',['TerminalToString',['../namespaceMaCh3Utils.html#aeed4ea9cad38e64fc3bae7590373d42c',1,'MaCh3Utils']]],
+  ['terminaltostring_10',['TerminalToString',['../namespaceMaCh3Utils.html#a10a037c1bcf48073ae105968128a55c5',1,'MaCh3Utils']]],
   ['test_11',['test',['../classEnergyScale.html#a273f63de62586b798ee17592d5776257',1,'EnergyScale']]],
   ['teststatistic_12',['TestStatistic',['../Structs_8h.html#a960da89e33ac45a56f7bbfac3068dc67',1,'Structs.h']]],
   ['teststatistic_5ftostring_13',['TestStatistic_ToString',['../Structs_8h.html#afe33f23691e6b5e3e0f5ab97aaeb7726',1,'Structs.h']]],
   ['text_5fcoeff_5fx_14',['text_coeff_x',['../classSMonolithGPU.html#a1fb766b50293e6b611c45aa21c5c1b9c',1,'SMonolithGPU']]],
   ['text_5fnparamperevent_15',['text_nParamPerEvent',['../classSMonolithGPU.html#a663a150b3464b28d6161df1924cd534f',1,'SMonolithGPU']]],
   ['text_5fnparamperevent_5ftf1_16',['text_nParamPerEvent_TF1',['../classSMonolithGPU.html#a089fd1b491667e60d06c3713cd45552e',1,'SMonolithGPU']]],
-  ['tf1_5fred_17',['tf1_red',['../classTF1__red.html',1,'TF1_red'],['../classTF1__red.html#a7ee6185f2184824a190d146375522952',1,'TF1_red::TF1_red(TF1 *&amp;Function)'],['../classTF1__red.html#a767d972c8e46f4c861944098a833a9fb',1,'TF1_red::TF1_red(_int_ nSize, _float_ *Array)'],['../classTF1__red.html#a503700d13da3bc04710c6a52e14877e6',1,'TF1_red::TF1_red()']]],
+  ['tf1_5fred_17',['tf1_red',['../classTF1__red.html#a503700d13da3bc04710c6a52e14877e6',1,'TF1_red::TF1_red()'],['../classTF1__red.html#a767d972c8e46f4c861944098a833a9fb',1,'TF1_red::TF1_red(_int_ nSize, _float_ *Array)'],['../classTF1__red.html#a7ee6185f2184824a190d146375522952',1,'TF1_red::TF1_red(TF1 *&amp;Function)'],['../classTF1__red.html',1,'TF1_red']]],
   ['tgraphtoth1d_18',['TGraphToTH1D',['../group__Utils.html#gaf1329db6e5a742f7dcfa154629c54542',1,'MaCh3Plotting']]],
-  ['tgraphtovector_19',['tgraphtovector',['../group__Utils.html#ga2f5f6d967ac631277a0d0dab0a053c6e',1,'MaCh3Plotting::TGraphToVector(TGraph2D graph)'],['../group__Utils.html#gacb97b56df54ad5f4a5bf2ea2e6077c42',1,'MaCh3Plotting::TGraphToVector(TGraph graph)']]],
+  ['tgraphtovector_19',['tgraphtovector',['../group__Utils.html#gacb97b56df54ad5f4a5bf2ea2e6077c42',1,'MaCh3Plotting::TGraphToVector(TGraph graph)'],['../group__Utils.html#ga2f5f6d967ac631277a0d0dab0a053c6e',1,'MaCh3Plotting::TGraphToVector(TGraph2D graph)']]],
   ['three_5fvector_5faddition_20',['three_vector_addition',['../classPSO.html#a440e0cb32000cf9c5d2170d0c2d08dc2',1,'PSO']]],
   ['throwmatrix_21',['throwMatrix',['../classcovarianceBase.html#a6cb3d0b4096fbb55b040f70cd5b6e32b',1,'covarianceBase']]],
   ['throwmatrix_5fcholdecomp_22',['throwMatrix_CholDecomp',['../classcovarianceBase.html#ab95f5e066c2dfb1d20d120bc6c85dda2',1,'covarianceBase']]],
@@ -64,6 +64,5 @@ var searchData=
   ['transfertopca_61',['TransferToPCA',['../classcovarianceBase.html#a651f5ecd8973918d5683606a607fa88c',1,'covarianceBase']]],
   ['translatename_62',['translateName',['../classMaCh3Plotting_1_1InputManager.html#ab4ecb1daf7b700137a15c3cad48cdaa4',1,'MaCh3Plotting::InputManager']]],
   ['tresponsefunction_5fred_63',['tresponsefunction_red',['../classTResponseFunction__red.html',1,'TResponseFunction_red'],['../classTResponseFunction__red.html#a50443a78985e0c9b16ffc36ebc1d2e91',1,'TResponseFunction_red::TResponseFunction_red()']]],
-  ['truncated_5fspline_64',['truncated_spline',['../classTruncated__Spline.html#ae40da5403298aacb6b45cd7690b61420',1,'Truncated_Spline::Truncated_Spline()'],['../classTruncated__Spline.html#a6efb9df707e8d2ca8deb2464fe78b09b',1,'Truncated_Spline::Truncated_Spline(TSpline3 *&amp;spline)'],['../classTruncated__Spline.html',1,'Truncated_Spline']]],
-  ['tspline3_5fred_65',['tspline3_red',['../classTSpline3__red.html#ae76e72436b20a59ee33eb1d41dbe59eb',1,'TSpline3_red::TSpline3_red()'],['../classTSpline3__red.html#a643d07969140e64bb55e8639552d1209',1,'TSpline3_red::TSpline3_red(TSpline3 *&amp;spline, SplineInterpolation InterPolation=kTSpline3)'],['../classTSpline3__red.html',1,'TSpline3_red'],['../classTSpline3__red.html#a580d22535ce1e881c53aabe7bdb7f945',1,'TSpline3_red::TSpline3_red()']]]
+  ['tspline3_5fred_64',['tspline3_red',['../classTSpline3__red.html#ae76e72436b20a59ee33eb1d41dbe59eb',1,'TSpline3_red::TSpline3_red()'],['../classTSpline3__red.html#a643d07969140e64bb55e8639552d1209',1,'TSpline3_red::TSpline3_red(TSpline3 *&amp;spline, SplineInterpolation InterPolation=kTSpline3)'],['../classTSpline3__red.html',1,'TSpline3_red'],['../classTSpline3__red.html#a580d22535ce1e881c53aabe7bdb7f945',1,'TSpline3_red::TSpline3_red()']]]
 ];

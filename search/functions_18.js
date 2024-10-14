@@ -30,7 +30,6 @@ var searchData=
   ['_7estylemanager_27',['~StyleManager',['../classMaCh3Plotting_1_1StyleManager.html#af5267abeb152c1c482f00a98ab9c722f',1,'MaCh3Plotting::StyleManager']]],
   ['_7etf1_5fred_28',['~TF1_red',['../classTF1__red.html#a154077c37858ec88449cae76c41d671b',1,'TF1_red']]],
   ['_7etresponsefunction_5fred_29',['~TResponseFunction_red',['../classTResponseFunction__red.html#a216998fd1fed9353073640ede950a916',1,'TResponseFunction_red']]],
-  ['_7etruncated_5fspline_30',['~Truncated_Spline',['../classTruncated__Spline.html#a4ce82ec74b255ecbfe97a372b377444e',1,'Truncated_Spline']]],
-  ['_7etspline3_5fred_31',['~TSpline3_red',['../classTSpline3__red.html#a275808bab562c82d155433c1d62ac1a1',1,'TSpline3_red']]],
-  ['_7exsecstruct_32',['~XSecStruct',['../classXSecStruct.html#af9d63792f8ad59bb5dc5f79dee16ef38',1,'XSecStruct']]]
+  ['_7etspline3_5fred_30',['~TSpline3_red',['../classTSpline3__red.html#a275808bab562c82d155433c1d62ac1a1',1,'TSpline3_red']]],
+  ['_7exsecstruct_31',['~XSecStruct',['../classXSecStruct.html#af9d63792f8ad59bb5dc5f79dee16ef38',1,'XSecStruct']]]
 ];

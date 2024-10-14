@@ -30,7 +30,7 @@ var searchData=
   ['findrootobject_27',['findRootObject',['../classMaCh3Plotting_1_1InputManager.html#a7e9f932d7591cbdd6c99c56c2da75f85',1,'MaCh3Plotting::InputManager']]],
   ['findsplinebinning_28',['FindSplineBinning',['../classsplineFDBase.html#a00c0e93b4c4799ffacaa58578e5dcf6b',1,'splineFDBase']]],
   ['findsplinesegment_29',['findsplinesegment',['../classSplineBase.html#ae18e490295762416c8627d2db11ee98d',1,'SplineBase::FindSplineSegment()'],['../classsplineFDBase.html#ab4a852337aab961abbcaa0c9f70c88ba',1,'splineFDBase::FindSplineSegment()'],['../classSMonolith.html#a7128a7c13b10f331df8946a0a87c4b33',1,'SMonolith::FindSplineSegment()']]],
-  ['findx_30',['findx',['../classTSpline3__red.html#a39668a1dc14058a1f833e9621ec19caf',1,'TSpline3_red::FindX()'],['../classTruncated__Spline.html#a0ff225fc53ec9d59402a8bddf45190e0',1,'Truncated_Spline::FindX()']]],
+  ['findx_30',['FindX',['../classTSpline3__red.html#a39668a1dc14058a1f833e9621ec19caf',1,'TSpline3_red']]],
   ['fitterbase_31',['FitterBase',['../classFitterBase.html#a2d45811f9bcb9719f312048bbd36a423',1,'FitterBase']]],
   ['four_5fvector_5faddition_32',['four_vector_addition',['../classPSO.html#ac6522025d324079b88bc7ea8c5e766d6',1,'PSO']]],
   ['fractionoverlapped_33',['FractionOverlapped',['../classOscillator.html#af97891766e2267f373ef85010d96401e',1,'Oscillator']]]

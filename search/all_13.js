@@ -30,7 +30,7 @@ var searchData=
   ['samplexbins_27',['SampleXBins',['../classsamplePDFFDBase.html#a15fdd51cd7c913384e5a4917a4b31c2b',1,'samplePDFFDBase']]],
   ['sampleybins_28',['SampleYBins',['../classsamplePDFFDBase.html#adbc9c34604003a47f180c9216121d4ef',1,'samplePDFFDBase']]],
   ['save_5fnominal_29',['save_nominal',['../classFitterBase.html#aedd882d8e4d0da0f89cf94e3a008affe',1,'FitterBase']]],
-  ['saveadaptivetofile_30',['saveadaptivetofile',['../classadaptive__mcmc_1_1AdaptiveMCMCHandler.html#a752d312d5fdd755af88b58880a9845ec',1,'adaptive_mcmc::AdaptiveMCMCHandler::SaveAdaptiveToFile()'],['../classcovarianceBase.html#ae4c26e3f2a727a39e9db7ed88e72ac38',1,'covarianceBase::saveAdaptiveToFile()']]],
+  ['saveadaptivetofile_30',['saveadaptivetofile',['../classcovarianceBase.html#ae4c26e3f2a727a39e9db7ed88e72ac38',1,'covarianceBase::saveAdaptiveToFile()'],['../classadaptive__mcmc_1_1AdaptiveMCMCHandler.html#a752d312d5fdd755af88b58880a9845ec',1,'adaptive_mcmc::AdaptiveMCMCHandler::SaveAdaptiveToFile()']]],
   ['savename_31',['SaveName',['../GetPostfitParamPlots_8cpp.html#a78b45c4d250d7b2113925577bbce2dad',1,'GetPostfitParamPlots.cpp']]],
   ['saveoscillogramstofile_32',['SaveOscillogramsToFile',['../classOscillator.html#a2907b6b25705cd6d4ddbd33b233f9364',1,'Oscillator']]],
   ['saveoutput_33',['SaveOutput',['../classFitterBase.html#a418f581b688f035211107ddd83168c08',1,'FitterBase']]],
