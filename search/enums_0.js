@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['cudaprob_5fnu_0',['CUDAProb_nu',['../Structs_8h.html#ae0d15be5d1316877430ecb0ce94adec7',1,'Structs.h']]]
+  ['filetypeenum_0',['fileTypeEnum',['../namespaceMaCh3Plotting.html#a4152b51a260d6a18f41b3a22aa2a6b75',1,'MaCh3Plotting']]]
 ];

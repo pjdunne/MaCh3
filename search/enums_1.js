@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['filetypeenum_0',['fileTypeEnum',['../namespaceMaCh3Plotting.html#a4152b51a260d6a18f41b3a22aa2a6b75',1,'MaCh3Plotting']]]
+  ['nupdg_0',['NuPDG',['../Structs_8h.html#a0dfdd8cf84b8fa3495e9e5e520fe6cd2',1,'Structs.h']]]
 ];

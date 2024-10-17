@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['basefuncpar_0',['BaseFuncPar',['../classBaseFuncPar.html',1,'']]],
-  ['box_1',['Box',['../structBox.html',1,'']]]
+  ['covariancebase_0',['covarianceBase',['../classcovarianceBase.html',1,'']]],
+  ['covarianceosc_1',['covarianceOsc',['../classcovarianceOsc.html',1,'']]],
+  ['covariancexsec_2',['covarianceXsec',['../classcovarianceXsec.html',1,'']]]
 ];

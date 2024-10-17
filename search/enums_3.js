@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['nu_5ftype_0',['nu_type',['../probGpu_8cu.html#af576b2dca8674d5d2ea4ec3f38ee52f3',1,'probGpu.cu']]],
-  ['nupdg_1',['NuPDG',['../Structs_8h.html#a0dfdd8cf84b8fa3495e9e5e520fe6cd2',1,'Structs.h']]]
+  ['respfunctype_0',['RespFuncType',['../Structs_8h.html#a6a73aa1ad819973a9c421c17c2a7f36d',1,'Structs.h']]]
 ];

@@ -48,10 +48,8 @@ var searchData=
   ['mcmc_45',['mcmc',['../classmcmc.html#a56195958aee22996158d3ba341dcf31e',1,'mcmc']]],
   ['mcmcprocessor_46',['MCMCProcessor',['../classMCMCProcessor.html#afb50150dcb6d1d75f3c08b5ee8d3d77c',1,'MCMCProcessor']]],
   ['minuitfit_47',['MinuitFit',['../classMinuitFit.html#a5392a49207148d7b884974db3d3f5eac',1,'MinuitFit']]],
-  ['modifyweights_48',['modifyweights',['../classsplineFDBase.html#a1a237a8b8c3c165c82ebe15d2ca740c7',1,'splineFDBase::ModifyWeights()'],['../classSMonolith.html#ac37ee525aa57316f652433a4e393afaf',1,'SMonolith::ModifyWeights()'],['../classSplineBase.html#a49665d2712b61b038085d25ace96a568',1,'SplineBase::ModifyWeights()']]],
+  ['modifyweights_48',['modifyweights',['../classSplineBase.html#a49665d2712b61b038085d25ace96a568',1,'SplineBase::ModifyWeights()'],['../classSMonolith.html#ac37ee525aa57316f652433a4e393afaf',1,'SMonolith::ModifyWeights()'],['../classsplineFDBase.html#a1a237a8b8c3c165c82ebe15d2ca740c7',1,'splineFDBase::ModifyWeights()']]],
   ['modifyweights_5fgpu_49',['ModifyWeights_GPU',['../classSMonolith.html#a72cd282322bdaadb23d8a376efa9e2c1',1,'SMonolith']]],
   ['movetogpu_50',['MoveToGPU',['../classSMonolith.html#aac73a1089592c5f22755b7427869827f',1,'SMonolith']]],
-  ['multipleprocessmcmc_51',['MultipleProcessMCMC',['../ProcessMCMC_8cpp.html#a83be70750a728e4deae518ea3ffaf388',1,'ProcessMCMC.cpp']]],
-  ['multiply_5fcomplex_5fmatrix_52',['multiply_complex_matrix',['../probGpu_8cu.html#a53a370d8b4affa40d74e50a1f22807bf',1,'probGpu.cu']]],
-  ['multiply_5fcomplex_5fmatvec_53',['multiply_complex_matvec',['../probGpu_8cu.html#a1acdf30bb35ebad7d39e490ab5eb4400',1,'probGpu.cu']]]
+  ['multipleprocessmcmc_51',['MultipleProcessMCMC',['../ProcessMCMC_8cpp.html#a83be70750a728e4deae518ea3ffaf388',1,'ProcessMCMC.cpp']]]
 ];

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['respfunctype_0',['RespFuncType',['../Structs_8h.html#a6a73aa1ad819973a9c421c17c2a7f36d',1,'Structs.h']]]
+  ['targetmat_0',['TargetMat',['../Structs_8h.html#a706416000041de040e97d5dbe0bdb580',1,'Structs.h']]],
+  ['teststatistic_1',['TestStatistic',['../Structs_8h.html#a960da89e33ac45a56f7bbfac3068dc67',1,'Structs.h']]]
 ];

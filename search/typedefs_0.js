@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['dmarray_0',['dmArray',['../probGpu_8cu.html#a3060b21ce9c77dad0cd5c09b63706d1e',1,'probGpu.cu']]]
+  ['mach3modes_5ft_0',['MaCh3Modes_t',['../MaCh3Modes_8h.html#adf43f6c73c9598abc381855d31ef5682',1,'MaCh3Modes.h']]]
 ];

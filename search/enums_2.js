@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['matrix_5ftype_0',['matrix_type',['../probGpu_8cu.html#a07962dd0449c5d375d80af8cfaad8672',1,'probGpu.cu']]]
+  ['parameterenum_0',['ParameterEnum',['../MCMCProcessor_8h.html#acd2848273413543fe14936252942c20b',1,'MCMCProcessor.h']]],
+  ['probnu_1',['ProbNu',['../Structs_8h.html#a5a4651943de972b89fd091d11fa7b3d7',1,'Structs.h']]]
 ];
