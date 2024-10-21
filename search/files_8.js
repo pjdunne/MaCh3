@@ -11,7 +11,5 @@ var searchData=
   ['plottingutils_2eh_8',['plottingUtils.h',['../plottingUtils_8h.html',1,'']]],
   ['processmcmc_2ecpp_9',['ProcessMCMC.cpp',['../ProcessMCMC_8cpp.html',1,'']]],
   ['pso_2ecpp_10',['PSO.cpp',['../PSO_8cpp.html',1,'']]],
-  ['pso_2eh_11',['PSO.h',['../PSO_8h.html',1,'']]],
-  ['pymach3_2ecpp_12',['pyMaCh3.cpp',['../pyMaCh3_8cpp.html',1,'']]],
-  ['pythonplottingmodule_2ecpp_13',['pythonPlottingModule.cpp',['../pythonPlottingModule_8cpp.html',1,'']]]
+  ['pso_2eh_11',['PSO.h',['../PSO_8h.html',1,'']]]
 ];

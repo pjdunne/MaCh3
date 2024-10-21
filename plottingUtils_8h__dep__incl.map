@@ -1,22 +1,18 @@
 <map id="plotting/plottingUtils/plottingUtils.h" name="plotting/plottingUtils/plottingUtils.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="463,5,599,46"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="80,5,217,46"/>
 <area shape="rect" id="Node000002" href="$GetPostfitParamPlots_8cpp.html" title=" " alt="" coords="5,271,169,312"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="455,54,395,77,326,106,256,143,190,185,141,229,104,272,100,269,137,226,187,181,253,138,324,102,393,72,453,49"/>
-<area shape="rect" id="Node000003" href="$inputManager_8h.html" title=" " alt="" coords="386,94,522,135"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="505,60,473,95,469,92,501,56"/>
-<area shape="rect" id="Node000008" href="$pythonPlottingModule_8cpp.html" title=" " alt="" coords="523,271,696,312"/>
-<area shape="poly" id="edge11_Node000001_Node000008" title=" " alt="" coords="544,60,606,270,601,272,539,62"/>
-<area shape="rect" id="Node000009" href="$plottingUtils_8cpp.html" title=" " alt="" coords="622,94,758,135"/>
-<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="582,51,655,91,653,96,579,56"/>
-<area shape="rect" id="Node000004" href="$inputManager_8cpp.html" title=" " alt="" coords="200,183,337,223"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="399,144,311,185,309,180,397,139"/>
-<area shape="rect" id="Node000005" href="$plottingManager_8h.html" title=" " alt="" coords="360,183,497,223"/>
-<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="446,151,437,183,432,181,441,149"/>
-<area shape="poly" id="edge9_Node000003_Node000008" title=" " alt="" coords="483,144,594,269,590,273,479,148"/>
-<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="346,228,165,273,164,268,344,223"/>
-<area shape="rect" id="Node000006" href="$PlotLLH_8cpp.html" title=" " alt="" coords="193,279,333,305"/>
-<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="379,233,287,281,285,276,376,228"/>
-<area shape="rect" id="Node000007" href="$plottingManager_8cpp.html" title=" " alt="" coords="358,271,499,312"/>
-<area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="431,239,431,271,426,271,426,239"/>
-<area shape="poly" id="edge8_Node000005_Node000008" title=" " alt="" coords="484,228,570,268,568,273,482,233"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="103,57,85,74,71,95,63,118,59,142,61,191,70,235,81,270,76,272,65,237,55,191,54,141,58,117,66,93,80,71,99,53"/>
+<area shape="rect" id="Node000003" href="$inputManager_8h.html" title=" " alt="" coords="80,94,217,135"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="151,62,151,94,146,94,146,62"/>
+<area shape="rect" id="Node000008" href="$plottingUtils_8cpp.html" title=" " alt="" coords="240,94,377,135"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="199,51,273,91,271,96,197,56"/>
+<area shape="rect" id="Node000004" href="$inputManager_8cpp.html" title=" " alt="" coords="80,183,217,223"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="151,150,151,182,146,182,146,150"/>
+<area shape="rect" id="Node000005" href="$plottingManager_8h.html" title=" " alt="" coords="240,183,377,223"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="199,140,273,180,271,185,197,145"/>
+<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="245,232,138,273,136,268,243,227"/>
+<area shape="rect" id="Node000006" href="$PlotLLH_8cpp.html" title=" " alt="" coords="216,279,356,305"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="302,239,291,279,286,278,297,238"/>
+<area shape="rect" id="Node000007" href="$plottingManager_8cpp.html" title=" " alt="" coords="380,271,522,312"/>
+<area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="355,229,420,269,417,273,352,234"/>
 </map>

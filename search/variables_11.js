@@ -9,7 +9,7 @@ var searchData=
   ['sampledetid_6',['sampledetid',['../classsamplePDFFDBase.html#a32b0465b0b8a2f7ae6b35da5fa6ef9cc',1,'samplePDFFDBase::SampleDetID'],['../structfdmc__base.html#abef728b31edac3c34700325150cba861',1,'fdmc_base::SampleDetID']]],
   ['samplelabelthreshold_7',['sampleLabelThreshold',['../PlotLLH_8cpp.html#a4a39ce5b09913469be1a966a5d99a88b',1,'PlotLLH.cpp']]],
   ['samplemanager_8',['SampleManager',['../classsamplePDFFDBase.html#abf7f35ac74b993d7d2e484b524ef3b5b',1,'samplePDFFDBase']]],
-  ['samplename_9',['samplename',['../classsamplePDFBase.html#a4f42dca382c09d8827b8d136a77d1b29',1,'samplePDFBase::SampleName'],['../classsamplePDFFDBase.html#ae1c9d87b302042e4e2347aa787a947cd',1,'samplePDFFDBase::samplename']]],
+  ['samplename_9',['samplename',['../classsamplePDFFDBase.html#ae1c9d87b302042e4e2347aa787a947cd',1,'samplePDFFDBase::samplename'],['../classsamplePDFBase.html#a4f42dca382c09d8827b8d136a77d1b29',1,'samplePDFBase::SampleName']]],
   ['samplename_5fv_10',['SampleName_v',['../classMCMCProcessor.html#a3660e404a6631cfa913a815481730a9b',1,'MCMCProcessor']]],
   ['samplenames_11',['samplenames',['../classsplineFDBase.html#a78508c5d0d4ef09457beb723dc796208',1,'splineFDBase::SampleNames'],['../classSampleSummary.html#a9ba7df41774c45a14c0a97e4accc9cc0',1,'SampleSummary::SampleNames']]],
   ['samplepdf_12',['SamplePDF',['../classSampleSummary.html#abd938805245ca6cfeb8c49363f5ff11c',1,'SampleSummary']]],

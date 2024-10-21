@@ -218,6 +218,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aae43146f1732e7095839c3e6d9e3832a" id="r_aae43146f1732e7095839c3e6d9e3832a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsamplePDFBase.html#aae43146f1732e7095839c3e6d9e3832a">getTestStatLLH</a> (<a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">const</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">double</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">data</a>, <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">const</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">double</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">mc</a>, <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">const</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">double</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">w2</a>)</td></tr>
 <tr class="memdesc:aae43146f1732e7095839c3e6d9e3832a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate test statistic for a single bin. Calculation depends on setting of fTestStatistic.  <br /></td></tr>
 <tr class="separator:aae43146f1732e7095839c3e6d9e3832a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb444a6114e59d6c1208f67f3f7cfb82" id="r_afb444a6114e59d6c1208f67f3f7cfb82"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsamplePDFBase.html#afb444a6114e59d6c1208f67f3f7cfb82">SetTestStatistic</a> (<a class="el" href="Structs_8h.html#a960da89e33ac45a56f7bbfac3068dc67">TestStatistic</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">testStat</a>)</td></tr>
+<tr class="memdesc:afb444a6114e59d6c1208f67f3f7cfb82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the test statistic to be used when calculating the binned likelihoods.  <br /></td></tr>
+<tr class="separator:afb444a6114e59d6c1208f67f3f7cfb82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d2c952d825cec64d8aaddc34f38f9f5" id="r_a2d2c952d825cec64d8aaddc34f38f9f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">virtual</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsamplePDFBase.html#a2d2c952d825cec64d8aaddc34f38f9f5">fill1DHist</a> ()=0</td></tr>
 <tr class="separator:a2d2c952d825cec64d8aaddc34f38f9f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e0a8020401ab3bfc713ad9e06df9dfc" id="r_a2e0a8020401ab3bfc713ad9e06df9dfc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">virtual</a> <a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsamplePDFBase.html#a2e0a8020401ab3bfc713ad9e06df9dfc">fill2DHist</a> ()=0</td></tr>
@@ -306,13 +309,13 @@ Protected Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   11</span>  <a class="code hl_variable" href="classsamplePDFBase.html#aeb2636b03955525ed586f1bb7748bc96">dataSample2D</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">NULL</a>;</div>
 <div class="line"><span class="lineno">   12</span>}</div>
 <div class="ttc" id="aYamlHelper_8h_html_a1a6adcb8b24bfbdcb936ced6812e1b0c"><div class="ttname"><a href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">GetFromManager</a></div><div class="ttdeci">Type GetFromManager(const YAML::Node &amp;node, Type defval)</div><div class="ttdoc">Get content of config file if node is not found take default value specified.</div><div class="ttdef"><b>Definition</b> <a href="YamlHelper_8h_source.html#l00021">YamlHelper.h:21</a></div></div>
-<div class="ttc" id="aclasssamplePDFBase_html_a06fd2c9575c0b9e56aaaf78b5be59b44"><div class="ttname"><a href="classsamplePDFBase.html#a06fd2c9575c0b9e56aaaf78b5be59b44">samplePDFBase::rnd</a></div><div class="ttdeci">TRandom3 * rnd</div><div class="ttdef"><b>Definition</b> <a href="samplePDFBase_8h_source.html#l00128">samplePDFBase.h:128</a></div></div>
-<div class="ttc" id="aclasssamplePDFBase_html_a22cd9b0e8664b6e0859e34a51731fadc"><div class="ttname"><a href="classsamplePDFBase.html#a22cd9b0e8664b6e0859e34a51731fadc">samplePDFBase::dathist2d</a></div><div class="ttdeci">TH2D * dathist2d</div><div class="ttdef"><b>Definition</b> <a href="samplePDFBase_8h_source.html#l00122">samplePDFBase.h:122</a></div></div>
-<div class="ttc" id="aclasssamplePDFBase_html_a364f1bb62fbe78e5dc0cfe635ca10838"><div class="ttname"><a href="classsamplePDFBase.html#a364f1bb62fbe78e5dc0cfe635ca10838">samplePDFBase::MCthrow</a></div><div class="ttdeci">bool MCthrow</div><div class="ttdef"><b>Definition</b> <a href="samplePDFBase_8h_source.html#l00129">samplePDFBase.h:129</a></div></div>
-<div class="ttc" id="aclasssamplePDFBase_html_a3db37aff026190ff162591361dc5ddd8"><div class="ttname"><a href="classsamplePDFBase.html#a3db37aff026190ff162591361dc5ddd8">samplePDFBase::nDims</a></div><div class="ttdeci">int nDims</div><div class="ttdoc">KS: number of dimension for this sample.</div><div class="ttdef"><b>Definition</b> <a href="samplePDFBase_8h_source.html#l00114">samplePDFBase.h:114</a></div></div>
-<div class="ttc" id="aclasssamplePDFBase_html_a695ac7419652443240feb046f14ba1bb"><div class="ttname"><a href="classsamplePDFBase.html#a695ac7419652443240feb046f14ba1bb">samplePDFBase::dathist</a></div><div class="ttdeci">TH1D * dathist</div><div class="ttdef"><b>Definition</b> <a href="samplePDFBase_8h_source.html#l00121">samplePDFBase.h:121</a></div></div>
-<div class="ttc" id="aclasssamplePDFBase_html_a71bbe44b4ed168c91db0db7abedc96a6"><div class="ttname"><a href="classsamplePDFBase.html#a71bbe44b4ed168c91db0db7abedc96a6">samplePDFBase::dataSample</a></div><div class="ttdeci">std::vector&lt; double &gt; * dataSample</div><div class="ttdef"><b>Definition</b> <a href="samplePDFBase_8h_source.html#l00108">samplePDFBase.h:108</a></div></div>
-<div class="ttc" id="aclasssamplePDFBase_html_aeb2636b03955525ed586f1bb7748bc96"><div class="ttname"><a href="classsamplePDFBase.html#aeb2636b03955525ed586f1bb7748bc96">samplePDFBase::dataSample2D</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; double &gt; &gt; * dataSample2D</div><div class="ttdef"><b>Definition</b> <a href="samplePDFBase_8h_source.html#l00109">samplePDFBase.h:109</a></div></div>
+<div class="ttc" id="aclasssamplePDFBase_html_a06fd2c9575c0b9e56aaaf78b5be59b44"><div class="ttname"><a href="classsamplePDFBase.html#a06fd2c9575c0b9e56aaaf78b5be59b44">samplePDFBase::rnd</a></div><div class="ttdeci">TRandom3 * rnd</div><div class="ttdef"><b>Definition</b> <a href="samplePDFBase_8h_source.html#l00129">samplePDFBase.h:129</a></div></div>
+<div class="ttc" id="aclasssamplePDFBase_html_a22cd9b0e8664b6e0859e34a51731fadc"><div class="ttname"><a href="classsamplePDFBase.html#a22cd9b0e8664b6e0859e34a51731fadc">samplePDFBase::dathist2d</a></div><div class="ttdeci">TH2D * dathist2d</div><div class="ttdef"><b>Definition</b> <a href="samplePDFBase_8h_source.html#l00123">samplePDFBase.h:123</a></div></div>
+<div class="ttc" id="aclasssamplePDFBase_html_a364f1bb62fbe78e5dc0cfe635ca10838"><div class="ttname"><a href="classsamplePDFBase.html#a364f1bb62fbe78e5dc0cfe635ca10838">samplePDFBase::MCthrow</a></div><div class="ttdeci">bool MCthrow</div><div class="ttdef"><b>Definition</b> <a href="samplePDFBase_8h_source.html#l00130">samplePDFBase.h:130</a></div></div>
+<div class="ttc" id="aclasssamplePDFBase_html_a3db37aff026190ff162591361dc5ddd8"><div class="ttname"><a href="classsamplePDFBase.html#a3db37aff026190ff162591361dc5ddd8">samplePDFBase::nDims</a></div><div class="ttdeci">int nDims</div><div class="ttdoc">KS: number of dimension for this sample.</div><div class="ttdef"><b>Definition</b> <a href="samplePDFBase_8h_source.html#l00115">samplePDFBase.h:115</a></div></div>
+<div class="ttc" id="aclasssamplePDFBase_html_a695ac7419652443240feb046f14ba1bb"><div class="ttname"><a href="classsamplePDFBase.html#a695ac7419652443240feb046f14ba1bb">samplePDFBase::dathist</a></div><div class="ttdeci">TH1D * dathist</div><div class="ttdef"><b>Definition</b> <a href="samplePDFBase_8h_source.html#l00122">samplePDFBase.h:122</a></div></div>
+<div class="ttc" id="aclasssamplePDFBase_html_a71bbe44b4ed168c91db0db7abedc96a6"><div class="ttname"><a href="classsamplePDFBase.html#a71bbe44b4ed168c91db0db7abedc96a6">samplePDFBase::dataSample</a></div><div class="ttdeci">std::vector&lt; double &gt; * dataSample</div><div class="ttdef"><b>Definition</b> <a href="samplePDFBase_8h_source.html#l00109">samplePDFBase.h:109</a></div></div>
+<div class="ttc" id="aclasssamplePDFBase_html_aeb2636b03955525ed586f1bb7748bc96"><div class="ttname"><a href="classsamplePDFBase.html#aeb2636b03955525ed586f1bb7748bc96">samplePDFBase::dataSample2D</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; double &gt; &gt; * dataSample2D</div><div class="ttdef"><b>Definition</b> <a href="samplePDFBase_8h_source.html#l00110">samplePDFBase.h:110</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -716,7 +719,7 @@ Protected Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  179</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="classsamplePDFBase.html#ae324bd76a337efa43fedfd2052029e47">_hPDF1D</a>;</div>
 <div class="line"><span class="lineno">  180</span>}</div>
 <div class="ttc" id="aclasssamplePDFBase_html_a2d2c952d825cec64d8aaddc34f38f9f5"><div class="ttname"><a href="classsamplePDFBase.html#a2d2c952d825cec64d8aaddc34f38f9f5">samplePDFBase::fill1DHist</a></div><div class="ttdeci">virtual void fill1DHist()=0</div></div>
-<div class="ttc" id="aclasssamplePDFBase_html_ae324bd76a337efa43fedfd2052029e47"><div class="ttname"><a href="classsamplePDFBase.html#ae324bd76a337efa43fedfd2052029e47">samplePDFBase::_hPDF1D</a></div><div class="ttdeci">TH1D * _hPDF1D</div><div class="ttdef"><b>Definition</b> <a href="samplePDFBase_8h_source.html#l00125">samplePDFBase.h:125</a></div></div>
+<div class="ttc" id="aclasssamplePDFBase_html_ae324bd76a337efa43fedfd2052029e47"><div class="ttname"><a href="classsamplePDFBase.html#ae324bd76a337efa43fedfd2052029e47">samplePDFBase::_hPDF1D</a></div><div class="ttdeci">TH1D * _hPDF1D</div><div class="ttdef"><b>Definition</b> <a href="samplePDFBase_8h_source.html#l00126">samplePDFBase.h:126</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -769,7 +772,7 @@ Protected Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  184</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="classsamplePDFBase.html#a603fb2d4f93751de60475ed65fc08245">_hPDF2D</a>;</div>
 <div class="line"><span class="lineno">  185</span>}</div>
 <div class="ttc" id="aclasssamplePDFBase_html_a2e0a8020401ab3bfc713ad9e06df9dfc"><div class="ttname"><a href="classsamplePDFBase.html#a2e0a8020401ab3bfc713ad9e06df9dfc">samplePDFBase::fill2DHist</a></div><div class="ttdeci">virtual void fill2DHist()=0</div></div>
-<div class="ttc" id="aclasssamplePDFBase_html_a603fb2d4f93751de60475ed65fc08245"><div class="ttname"><a href="classsamplePDFBase.html#a603fb2d4f93751de60475ed65fc08245">samplePDFBase::_hPDF2D</a></div><div class="ttdeci">TH2D * _hPDF2D</div><div class="ttdef"><b>Definition</b> <a href="samplePDFBase_8h_source.html#l00126">samplePDFBase.h:126</a></div></div>
+<div class="ttc" id="aclasssamplePDFBase_html_a603fb2d4f93751de60475ed65fc08245"><div class="ttname"><a href="classsamplePDFBase.html#a603fb2d4f93751de60475ed65fc08245">samplePDFBase::_hPDF2D</a></div><div class="ttdeci">TH2D * _hPDF2D</div><div class="ttdef"><b>Definition</b> <a href="samplePDFBase_8h_source.html#l00127">samplePDFBase.h:127</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -949,7 +952,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="samplePDFBase_8h_source.html#l00036">36</a> of file <a class="el" href="samplePDFBase_8h_source.html">samplePDFBase.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   36</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classsamplePDFBase.html#ab4ce7691212fdc86570b98d58a333ddf">Modes</a>; }</div>
-<div class="ttc" id="aclasssamplePDFBase_html_ab4ce7691212fdc86570b98d58a333ddf"><div class="ttname"><a href="classsamplePDFBase.html#ab4ce7691212fdc86570b98d58a333ddf">samplePDFBase::Modes</a></div><div class="ttdeci">MaCh3Modes * Modes</div><div class="ttdef"><b>Definition</b> <a href="samplePDFBase_8h_source.html#l00119">samplePDFBase.h:119</a></div></div>
+<div class="ttc" id="aclasssamplePDFBase_html_ab4ce7691212fdc86570b98d58a333ddf"><div class="ttname"><a href="classsamplePDFBase.html#ab4ce7691212fdc86570b98d58a333ddf">samplePDFBase::Modes</a></div><div class="ttdeci">MaCh3Modes * Modes</div><div class="ttdef"><b>Definition</b> <a href="samplePDFBase_8h_source.html#l00120">samplePDFBase.h:120</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1105,7 +1108,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="samplePDFBase_8h_source.html#l00028">28</a> of file <a class="el" href="samplePDFBase_8h_source.html">samplePDFBase.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   28</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classsamplePDFBase.html#a922cf3d3078a4d7993b9bd5fe6d34cdf">nSamples</a>; };</div>
-<div class="ttc" id="aclasssamplePDFBase_html_a922cf3d3078a4d7993b9bd5fe6d34cdf"><div class="ttname"><a href="classsamplePDFBase.html#a922cf3d3078a4d7993b9bd5fe6d34cdf">samplePDFBase::nSamples</a></div><div class="ttdeci">_int_ nSamples</div><div class="ttdoc">Contains how many samples we've got.</div><div class="ttdef"><b>Definition</b> <a href="samplePDFBase_8h_source.html#l00112">samplePDFBase.h:112</a></div></div>
+<div class="ttc" id="aclasssamplePDFBase_html_a922cf3d3078a4d7993b9bd5fe6d34cdf"><div class="ttname"><a href="classsamplePDFBase.html#a922cf3d3078a4d7993b9bd5fe6d34cdf">samplePDFBase::nSamples</a></div><div class="ttdeci">_int_ nSamples</div><div class="ttdoc">Contains how many samples we've got.</div><div class="ttdef"><b>Definition</b> <a href="samplePDFBase_8h_source.html#l00113">samplePDFBase.h:113</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1244,7 +1247,7 @@ Protected Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  401</span> </div>
 <div class="line"><span class="lineno">  402</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="classsamplePDFBase.html#a4f42dca382c09d8827b8d136a77d1b29">SampleName</a>[<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">Sample</a>];</div>
 <div class="line"><span class="lineno">  403</span>}</div>
-<div class="ttc" id="aclasssamplePDFBase_html_a4f42dca382c09d8827b8d136a77d1b29"><div class="ttname"><a href="classsamplePDFBase.html#a4f42dca382c09d8827b8d136a77d1b29">samplePDFBase::SampleName</a></div><div class="ttdeci">std::vector&lt; std::string &gt; SampleName</div><div class="ttdoc">Name of Sample.</div><div class="ttdef"><b>Definition</b> <a href="samplePDFBase_8h_source.html#l00116">samplePDFBase.h:116</a></div></div>
+<div class="ttc" id="aclasssamplePDFBase_html_a4f42dca382c09d8827b8d136a77d1b29"><div class="ttname"><a href="classsamplePDFBase.html#a4f42dca382c09d8827b8d136a77d1b29">samplePDFBase::SampleName</a></div><div class="ttdeci">std::vector&lt; std::string &gt; SampleName</div><div class="ttdoc">Name of Sample.</div><div class="ttdef"><b>Definition</b> <a href="samplePDFBase_8h_source.html#l00117">samplePDFBase.h:117</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1472,7 +1475,7 @@ Protected Attributes</h2></td></tr>
 <div class="ttc" id="aStructs_8h_html_a960da89e33ac45a56f7bbfac3068dc67a6589bdeaef8de84e7ef545fd709772bb"><div class="ttname"><a href="Structs_8h.html#a960da89e33ac45a56f7bbfac3068dc67a6589bdeaef8de84e7ef545fd709772bb">kDembinskiAbdelmottele</a></div><div class="ttdeci">@ kDembinskiAbdelmottele</div><div class="ttdoc">Based on .</div><div class="ttdef"><b>Definition</b> <a href="Structs_8h_source.html#l00425">Structs.h:425</a></div></div>
 <div class="ttc" id="aStructs_8h_html_a960da89e33ac45a56f7bbfac3068dc67a82f43d91f1eda213c4b5c486672a32a5"><div class="ttname"><a href="Structs_8h.html#a960da89e33ac45a56f7bbfac3068dc67a82f43d91f1eda213c4b5c486672a32a5">kPoisson</a></div><div class="ttdeci">@ kPoisson</div><div class="ttdoc">Standard Poisson likelihood.</div><div class="ttdef"><b>Definition</b> <a href="Structs_8h_source.html#l00421">Structs.h:421</a></div></div>
 <div class="ttc" id="aclasssamplePDFBase_html_a772ebf22fbffd9336b2d8c2f46988453"><div class="ttname"><a href="classsamplePDFBase.html#a772ebf22fbffd9336b2d8c2f46988453">samplePDFBase::getTestStatLLH</a></div><div class="ttdeci">double getTestStatLLH(double data, double mc)</div><div class="ttdef"><b>Definition</b> <a href="samplePDFBase_8cpp_source.html#l00196">samplePDFBase.cpp:196</a></div></div>
-<div class="ttc" id="aclasssamplePDFBase_html_adc5cd0002708ad049ba4fb5e3c62075d"><div class="ttname"><a href="classsamplePDFBase.html#adc5cd0002708ad049ba4fb5e3c62075d">samplePDFBase::fTestStatistic</a></div><div class="ttdeci">TestStatistic fTestStatistic</div><div class="ttdoc">Test statistic tells what kind of likelihood sample is using.</div><div class="ttdef"><b>Definition</b> <a href="samplePDFBase_8h_source.html#l00099">samplePDFBase.h:99</a></div></div>
+<div class="ttc" id="aclasssamplePDFBase_html_adc5cd0002708ad049ba4fb5e3c62075d"><div class="ttname"><a href="classsamplePDFBase.html#adc5cd0002708ad049ba4fb5e3c62075d">samplePDFBase::fTestStatistic</a></div><div class="ttdeci">TestStatistic fTestStatistic</div><div class="ttdoc">Test statistic tells what kind of likelihood sample is using.</div><div class="ttdef"><b>Definition</b> <a href="samplePDFBase_8h_source.html#l00100">samplePDFBase.h:100</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1614,8 +1617,8 @@ Protected Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  452</span>  std::cerr.rdbuf(<a class="code hl_variable" href="classsamplePDFBase.html#ace134e4f57297cc68b5b299f97821b6c">errbuf</a>);</div>
 <div class="line"><span class="lineno">  453</span><span class="preprocessor">  #endif</span></div>
 <div class="line"><span class="lineno">  454</span>}</div>
-<div class="ttc" id="aclasssamplePDFBase_html_a361ce3bc003686a461e7def89ebebfbc"><div class="ttname"><a href="classsamplePDFBase.html#a361ce3bc003686a461e7def89ebebfbc">samplePDFBase::buf</a></div><div class="ttdeci">std::streambuf * buf</div><div class="ttdoc">Keep the cout buffer.</div><div class="ttdef"><b>Definition</b> <a href="samplePDFBase_8h_source.html#l00102">samplePDFBase.h:102</a></div></div>
-<div class="ttc" id="aclasssamplePDFBase_html_ace134e4f57297cc68b5b299f97821b6c"><div class="ttname"><a href="classsamplePDFBase.html#ace134e4f57297cc68b5b299f97821b6c">samplePDFBase::errbuf</a></div><div class="ttdeci">std::streambuf * errbuf</div><div class="ttdoc">Keep the cerr buffer.</div><div class="ttdef"><b>Definition</b> <a href="samplePDFBase_8h_source.html#l00104">samplePDFBase.h:104</a></div></div>
+<div class="ttc" id="aclasssamplePDFBase_html_a361ce3bc003686a461e7def89ebebfbc"><div class="ttname"><a href="classsamplePDFBase.html#a361ce3bc003686a461e7def89ebebfbc">samplePDFBase::buf</a></div><div class="ttdeci">std::streambuf * buf</div><div class="ttdoc">Keep the cout buffer.</div><div class="ttdef"><b>Definition</b> <a href="samplePDFBase_8h_source.html#l00103">samplePDFBase.h:103</a></div></div>
+<div class="ttc" id="aclasssamplePDFBase_html_ace134e4f57297cc68b5b299f97821b6c"><div class="ttname"><a href="classsamplePDFBase.html#ace134e4f57297cc68b5b299f97821b6c">samplePDFBase::errbuf</a></div><div class="ttdeci">std::streambuf * errbuf</div><div class="ttdoc">Keep the cerr buffer.</div><div class="ttdef"><b>Definition</b> <a href="samplePDFBase_8h_source.html#l00105">samplePDFBase.h:105</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1926,6 +1929,43 @@ Protected Attributes</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
+<a id="afb444a6114e59d6c1208f67f3f7cfb82" name="afb444a6114e59d6c1208f67f3f7cfb82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb444a6114e59d6c1208f67f3f7cfb82">&#9670;&#160;</a></span>SetTestStatistic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">void</a> samplePDFBase::SetTestStatistic </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="Structs_8h.html#a960da89e33ac45a56f7bbfac3068dc67">TestStatistic</a>&#160;</td>
+          <td class="paramname"><em>testStat</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the test statistic to be used when calculating the binned likelihoods. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">testStat</td><td>The test statistic to use. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="samplePDFBase_8h_source.html#l00086">86</a> of file <a class="el" href="samplePDFBase_8h_source.html">samplePDFBase.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   86</span>{ <a class="code hl_variable" href="classsamplePDFBase.html#adc5cd0002708ad049ba4fb5e3c62075d">fTestStatistic</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">testStat</a>; }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a59f7e2ddcbec6fe3c470296134e37c7e" name="a59f7e2ddcbec6fe3c470296134e37c7e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a59f7e2ddcbec6fe3c470296134e37c7e">&#9670;&#160;</a></span>SetupBinning()</h2>
 
@@ -1993,7 +2033,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="samplePDFBase_8h_source.html#l00125">125</a> of file <a class="el" href="samplePDFBase_8h_source.html">samplePDFBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="samplePDFBase_8h_source.html#l00126">126</a> of file <a class="el" href="samplePDFBase_8h_source.html">samplePDFBase.h</a>.</p>
 
 </div>
 </div>
@@ -2017,7 +2057,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="samplePDFBase_8h_source.html#l00126">126</a> of file <a class="el" href="samplePDFBase_8h_source.html">samplePDFBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="samplePDFBase_8h_source.html#l00127">127</a> of file <a class="el" href="samplePDFBase_8h_source.html">samplePDFBase.h</a>.</p>
 
 </div>
 </div>
@@ -2043,7 +2083,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Keep the cout buffer. </p>
 
-<p class="definition">Definition at line <a class="el" href="samplePDFBase_8h_source.html#l00102">102</a> of file <a class="el" href="samplePDFBase_8h_source.html">samplePDFBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="samplePDFBase_8h_source.html#l00103">103</a> of file <a class="el" href="samplePDFBase_8h_source.html">samplePDFBase.h</a>.</p>
 
 </div>
 </div>
@@ -2067,7 +2107,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="samplePDFBase_8h_source.html#l00108">108</a> of file <a class="el" href="samplePDFBase_8h_source.html">samplePDFBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="samplePDFBase_8h_source.html#l00109">109</a> of file <a class="el" href="samplePDFBase_8h_source.html">samplePDFBase.h</a>.</p>
 
 </div>
 </div>
@@ -2091,7 +2131,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="samplePDFBase_8h_source.html#l00109">109</a> of file <a class="el" href="samplePDFBase_8h_source.html">samplePDFBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="samplePDFBase_8h_source.html#l00110">110</a> of file <a class="el" href="samplePDFBase_8h_source.html">samplePDFBase.h</a>.</p>
 
 </div>
 </div>
@@ -2115,7 +2155,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="samplePDFBase_8h_source.html#l00121">121</a> of file <a class="el" href="samplePDFBase_8h_source.html">samplePDFBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="samplePDFBase_8h_source.html#l00122">122</a> of file <a class="el" href="samplePDFBase_8h_source.html">samplePDFBase.h</a>.</p>
 
 </div>
 </div>
@@ -2139,7 +2179,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="samplePDFBase_8h_source.html#l00122">122</a> of file <a class="el" href="samplePDFBase_8h_source.html">samplePDFBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="samplePDFBase_8h_source.html#l00123">123</a> of file <a class="el" href="samplePDFBase_8h_source.html">samplePDFBase.h</a>.</p>
 
 </div>
 </div>
@@ -2165,7 +2205,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Keep the cerr buffer. </p>
 
-<p class="definition">Definition at line <a class="el" href="samplePDFBase_8h_source.html#l00104">104</a> of file <a class="el" href="samplePDFBase_8h_source.html">samplePDFBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="samplePDFBase_8h_source.html#l00105">105</a> of file <a class="el" href="samplePDFBase_8h_source.html">samplePDFBase.h</a>.</p>
 
 </div>
 </div>
@@ -2191,7 +2231,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Test statistic tells what kind of likelihood sample is using. </p>
 
-<p class="definition">Definition at line <a class="el" href="samplePDFBase_8h_source.html#l00099">99</a> of file <a class="el" href="samplePDFBase_8h_source.html">samplePDFBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="samplePDFBase_8h_source.html#l00100">100</a> of file <a class="el" href="samplePDFBase_8h_source.html">samplePDFBase.h</a>.</p>
 
 </div>
 </div>
@@ -2215,7 +2255,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="samplePDFBase_8h_source.html#l00129">129</a> of file <a class="el" href="samplePDFBase_8h_source.html">samplePDFBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="samplePDFBase_8h_source.html#l00130">130</a> of file <a class="el" href="samplePDFBase_8h_source.html">samplePDFBase.h</a>.</p>
 
 </div>
 </div>
@@ -2239,7 +2279,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="samplePDFBase_8h_source.html#l00119">119</a> of file <a class="el" href="samplePDFBase_8h_source.html">samplePDFBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="samplePDFBase_8h_source.html#l00120">120</a> of file <a class="el" href="samplePDFBase_8h_source.html">samplePDFBase.h</a>.</p>
 
 </div>
 </div>
@@ -2265,7 +2305,7 @@ Protected Attributes</h2></td></tr>
 
 <p>KS: number of dimension for this sample. </p>
 
-<p class="definition">Definition at line <a class="el" href="samplePDFBase_8h_source.html#l00114">114</a> of file <a class="el" href="samplePDFBase_8h_source.html">samplePDFBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="samplePDFBase_8h_source.html#l00115">115</a> of file <a class="el" href="samplePDFBase_8h_source.html">samplePDFBase.h</a>.</p>
 
 </div>
 </div>
@@ -2291,7 +2331,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Contains how many samples we've got. </p>
 
-<p class="definition">Definition at line <a class="el" href="samplePDFBase_8h_source.html#l00112">112</a> of file <a class="el" href="samplePDFBase_8h_source.html">samplePDFBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="samplePDFBase_8h_source.html#l00113">113</a> of file <a class="el" href="samplePDFBase_8h_source.html">samplePDFBase.h</a>.</p>
 
 </div>
 </div>
@@ -2315,7 +2355,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="samplePDFBase_8h_source.html#l00131">131</a> of file <a class="el" href="samplePDFBase_8h_source.html">samplePDFBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="samplePDFBase_8h_source.html#l00132">132</a> of file <a class="el" href="samplePDFBase_8h_source.html">samplePDFBase.h</a>.</p>
 
 </div>
 </div>
@@ -2339,7 +2379,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="samplePDFBase_8h_source.html#l00128">128</a> of file <a class="el" href="samplePDFBase_8h_source.html">samplePDFBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="samplePDFBase_8h_source.html#l00129">129</a> of file <a class="el" href="samplePDFBase_8h_source.html">samplePDFBase.h</a>.</p>
 
 </div>
 </div>
@@ -2365,7 +2405,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Name of Sample. </p>
 
-<p class="definition">Definition at line <a class="el" href="samplePDFBase_8h_source.html#l00116">116</a> of file <a class="el" href="samplePDFBase_8h_source.html">samplePDFBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="samplePDFBase_8h_source.html#l00117">117</a> of file <a class="el" href="samplePDFBase_8h_source.html">samplePDFBase.h</a>.</p>
 
 </div>
 </div>
