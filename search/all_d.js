@@ -108,7 +108,7 @@ var searchData=
   ['minuitfit_105',['minuitfit',['../classMinuitFit.html',1,'MinuitFit'],['../classMinuitFit.html#a5392a49207148d7b884974db3d3f5eac',1,'MinuitFit::MinuitFit()']]],
   ['minuitfit_2ecpp_106',['MinuitFit.cpp',['../MinuitFit_8cpp.html',1,'']]],
   ['minuitfit_2eh_107',['MinuitFit.h',['../MinuitFit_8h.html',1,'']]],
-  ['mode_108',['mode',['../classMaCh3Modes.html#a062f961a64e9b6bebf420730f9dad9ff',1,'MaCh3Modes::Mode'],['../structfdmc__base.html#a86b6b78f41e045592074494f960c8128',1,'fdmc_base::mode']]],
+  ['mode_108',['mode',['../structfdmc__base.html#a21440bdf718e95eeb654bcd6e9a2f060',1,'fdmc_base::mode'],['../classMaCh3Modes.html#a062f961a64e9b6bebf420730f9dad9ff',1,'MaCh3Modes::Mode']]],
   ['modehist_109',['ModeHist',['../classSampleSummary.html#a59475a0c9460277914402850372727ea',1,'SampleSummary']]],
   ['modemap_110',['ModeMap',['../classMaCh3Modes.html#a52a226378736541ece3830f53ac851c3',1,'MaCh3Modes']]],
   ['modes_111',['modes',['../classmanager.html#ab30ad812780ee2152b72f942b7b91dec',1,'manager::Modes'],['../classsamplePDFBase.html#ab4ce7691212fdc86570b98d58a333ddf',1,'samplePDFBase::Modes'],['../classFitterBase.html#a004cb6e6168032d9280ce3db912f1a43',1,'FitterBase::Modes'],['../classSampleSummary.html#a6593fed9709673a6910f96adc88fc8f2',1,'SampleSummary::Modes'],['../structXsecNorms4.html#ad0632d5a94a37ee5ce297698abadd844',1,'XsecNorms4::modes']]],
