@@ -1,0 +1,7 @@
+<map id="covarianceBase" name="covarianceBase">
+<area shape="rect" id="Node000001" title="Base class responsible for handling of systematic error parameters. Capable of using PCA or using ada..." alt="" coords="70,5,185,31"/>
+<area shape="rect" id="Node000002" href="$classcovarianceOsc.html" title="Class responsible for handling of neutrino oscillation parameters." alt="" coords="5,79,114,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,44,73,80,69,77,104,40"/>
+<area shape="rect" id="Node000003" href="$classcovarianceXsec.html" title="Class responsible for handling of systematic error parameters with different types defined in the con..." alt="" coords="138,79,253,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="151,40,186,77,182,80,147,44"/>
+</map>

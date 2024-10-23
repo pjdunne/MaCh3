@@ -1,0 +1,7 @@
+<map id="PSO" name="PSO">
+<area shape="rect" id="Node000001" title="Class PSO, consist of a vector of object Class Particle and global best Takes in the size (number of ..." alt="" coords="28,153,78,178"/>
+<area shape="rect" id="Node000002" href="$classLikelihoodFit.html" title="Implementation of base Likelihood Fit class, it is mostly responsible for likelihood calculation whil..." alt="" coords="5,79,101,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="56,120,56,152,50,152,50,120"/>
+<area shape="rect" id="Node000003" href="$classFitterBase.html" title="Base class for implementing fitting algorithms." alt="" coords="12,5,94,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="56,46,56,79,50,79,50,46"/>
+</map>

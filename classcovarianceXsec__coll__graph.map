@@ -1,0 +1,47 @@
+<map id="covarianceXsec" name="covarianceXsec">
+<area shape="rect" id="Node000001" title="Class responsible for handling of systematic error parameters with different types defined in the con..." alt="" coords="1506,612,1621,638"/>
+<area shape="rect" id="Node000002" href="$classcovarianceBase.html" title="Base class responsible for handling of systematic error parameters. Capable of using PCA or using ada..." alt="" coords="1136,340,1250,366"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1266,365,1318,379,1375,401,1433,430,1484,468,1514,504,1537,544,1561,611,1556,613,1532,547,1510,507,1481,472,1430,435,1373,406,1316,385,1264,370"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="178,728,255,754"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="216,712,222,622,242,494,260,423,284,352,316,284,357,222,395,177,431,142,466,114,502,93,542,76,585,62,692,33,764,14,823,3,852,3,881,8,913,18,949,33,998,64,1042,103,1080,146,1113,192,1162,279,1189,339,1184,341,1157,281,1108,195,1076,150,1038,106,995,68,947,38,911,23,880,13,851,9,824,9,765,19,693,38,587,67,543,81,505,98,469,119,434,146,399,181,361,225,321,287,289,354,265,425,247,495,227,623,221,713"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="359,728,519,754"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="271,738,359,738,359,744,271,744"/>
+<area shape="rect" id="Node000017" href="$structXsecNorms4.html" title="ETA &#45; Normalisations for cross&#45;section parameters Carrier for whether you want to apply a systematic ..." alt="" coords="772,779,869,805"/>
+<area shape="poly" id="edge24_Node000017_Node000003" title=" " alt="" coords="271,756,360,779,475,793,589,797,692,796,771,793,771,798,692,802,589,803,474,798,359,784,270,761"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,721,129,761"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="144,738,178,738,178,744,144,744"/>
+<area shape="poly" id="edge16_Node000001_Node000005" title=" " alt="" coords="534,740,679,741,866,738,1075,729,1284,712,1385,702,1428,693,1481,675,1516,656,1545,636,1548,640,1519,661,1483,679,1430,698,1386,707,1285,717,1075,734,866,743,679,746,534,745"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="446,713,459,679,479,641,506,604,541,573,579,553,614,539,649,531,683,528,747,531,809,542,871,554,935,558,968,555,1003,548,1038,535,1076,516,1097,501,1116,482,1148,439,1171,397,1184,365,1189,367,1175,400,1152,442,1120,486,1100,505,1078,521,1040,540,1004,553,969,561,935,564,871,559,808,548,746,536,683,533,650,536,616,544,581,558,544,578,510,607,484,644,464,682,451,715"/>
+<area shape="poly" id="edge27_Node000017_Node000005" title=" " alt="" coords="489,757,543,772,604,781,666,787,771,790,771,795,666,792,604,787,542,777,487,762"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="368,236,510,262"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="525,232,638,221,779,218,855,223,931,233,1006,250,1078,275,1134,306,1177,337,1174,342,1131,310,1076,279,1005,255,930,238,854,228,779,223,639,226,526,238"/>
+<area shape="rect" id="Node000009" href="$classPCAHandler.html" title="Class responsible for handling Principal Component Analysis (PCA) of covariance matrix." alt="" coords="774,263,867,289"/>
+<area shape="poly" id="edge10_Node000009_Node000006" title=" " alt="" coords="525,252,774,270,773,275,525,258"/>
+<area shape="rect" id="Node000010" href="$classadaptive__mcmc_1_1AdaptiveMCMCHandler.html" title="Contains information about adaptive covariance matrix." alt="" coords="693,312,948,338"/>
+<area shape="poly" id="edge13_Node000010_Node000006" title=" " alt="" coords="488,265,543,283,618,298,693,310,692,315,617,304,542,288,487,270"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="757,426,884,451"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="899,435,985,427,1076,408,1127,387,1169,364,1172,369,1129,392,1078,413,986,432,899,440"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="380,476,498,502"/>
+<area shape="poly" id="edge14_Node000001_Node000008" title=" " alt="" coords="513,486,727,488,1009,498,1153,508,1286,521,1399,539,1483,563,1522,585,1551,610,1548,614,1519,589,1481,567,1398,544,1285,526,1152,513,1009,503,727,494,513,491"/>
+<area shape="poly" id="edge8_Node000002_Node000008" title=" " alt="" coords="491,468,584,438,692,410,815,389,938,372,1135,354,1135,359,939,378,816,394,693,416,585,444,492,473"/>
+<area shape="poly" id="edge12_Node000010_Node000008" title=" " alt="" coords="460,463,496,429,541,397,632,369,763,336,764,341,633,375,544,402,499,433,463,467"/>
+<area shape="rect" id="Node000015" href="$structXsecSplines1.html" title="KS: Struct holding info about Spline Systematics." alt="" coords="770,606,871,631"/>
+<area shape="poly" id="edge21_Node000015_Node000008" title=" " alt="" coords="486,506,581,544,693,584,770,605,769,610,692,589,579,549,484,511"/>
+<area shape="poly" id="edge25_Node000017_Node000008" title=" " alt="" coords="453,515,488,585,514,623,544,657,600,699,662,732,721,758,773,776,771,781,719,763,659,737,597,703,541,661,510,626,483,587,449,518"/>
+<area shape="poly" id="edge9_Node000002_Node000009" title=" " alt="" coords="883,280,975,294,1078,314,1154,337,1153,342,1076,320,974,299,882,286"/>
+<area shape="poly" id="edge11_Node000002_Node000010" title=" " alt="" coords="964,333,1135,346,1135,351,963,338"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="1114,612,1271,638"/>
+<area shape="poly" id="edge15_Node000001_Node000011" title=" " alt="" coords="1287,622,1506,622,1506,628,1287,628"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="1122,662,1263,703"/>
+<area shape="poly" id="edge17_Node000001_Node000012" title=" " alt="" coords="1278,672,1376,660,1482,643,1513,636,1514,641,1483,648,1377,665,1279,677"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="757,667,884,693"/>
+<area shape="poly" id="edge18_Node000012_Node000013" title=" " alt="" coords="900,678,1121,679,1121,685,900,683"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="1101,563,1284,589"/>
+<area shape="poly" id="edge19_Node000001_Node000014" title=" " alt="" coords="1300,581,1389,590,1483,604,1509,609,1508,614,1482,609,1389,596,1299,586"/>
+<area shape="poly" id="edge20_Node000014_Node000015" title=" " alt="" coords="887,609,1077,588,1101,585,1101,590,1077,593,887,614"/>
+<area shape="rect" id="Node000016" title=" " alt="" coords="1103,779,1282,805"/>
+<area shape="poly" id="edge22_Node000001_Node000016" title=" " alt="" coords="1276,804,1326,808,1379,806,1432,795,1481,772,1498,759,1512,743,1535,705,1549,667,1557,638,1562,639,1554,669,1540,707,1517,746,1502,763,1484,777,1434,800,1380,811,1326,813,1276,810"/>
+<area shape="poly" id="edge23_Node000016_Node000017" title=" " alt="" coords="885,789,1102,789,1102,794,885,794"/>
+<area shape="rect" id="Node000018" title=" " alt="" coords="363,867,515,908"/>
+<area shape="poly" id="edge26_Node000017_Node000018" title=" " alt="" coords="530,877,598,866,668,851,735,827,791,803,793,808,737,832,669,856,599,872,531,882"/>
+</map>

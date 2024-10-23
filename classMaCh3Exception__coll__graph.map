@@ -1,0 +1,9 @@
+<map id="MaCh3Exception" name="MaCh3Exception">
+<area shape="rect" id="Node000001" title="Custom exception class for MaCh3 errors." alt="" coords="18,184,136,210"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,95,106,121"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="65,136,76,183,71,184,60,137"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="130,95,208,121"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="147,134,91,186,88,182,143,130"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="107,5,231,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="172,61,172,95,166,95,166,61"/>
+</map>

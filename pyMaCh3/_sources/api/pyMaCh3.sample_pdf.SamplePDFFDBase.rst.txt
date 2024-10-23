@@ -1,0 +1,19 @@
+SamplePDFFDBase
+===============
+
+.. currentmodule:: pyMaCh3.sample_pdf
+
+.. autoclass:: SamplePDFFDBase
+   :show-inheritance:
+
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~SamplePDFFDBase.set_osc_cov
+      ~SamplePDFFDBase.set_xsec_cov
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: set_osc_cov
+   .. automethod:: set_xsec_cov

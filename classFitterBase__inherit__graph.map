@@ -1,0 +1,11 @@
+<map id="FitterBase" name="FitterBase">
+<area shape="rect" id="Node000001" title="Base class for implementing fitting algorithms." alt="" coords="91,5,172,31"/>
+<area shape="rect" id="Node000002" href="$classLikelihoodFit.html" title="Implementation of base Likelihood Fit class, it is mostly responsible for likelihood calculation whil..." alt="" coords="35,79,130,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="117,45,93,80,88,77,113,42"/>
+<area shape="rect" id="Node000005" href="$classmcmc.html" title="Implementation of MR2T2 algorithm." alt="" coords="154,79,211,105"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="151,42,176,77,172,80,147,45"/>
+<area shape="rect" id="Node000003" href="$classMinuitFit.html" title="Implementation of Minuit fitting algorithm ." alt="" coords="5,153,77,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="70,119,50,154,46,151,66,117"/>
+<area shape="rect" id="Node000004" href="$classPSO.html" title="Class PSO, consist of a vector of object Class Particle and global best Takes in the size (number of ..." alt="" coords="100,153,150,178"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="99,116,120,151,116,154,95,119"/>
+</map>
