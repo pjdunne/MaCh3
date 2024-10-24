@@ -17,8 +17,8 @@ var searchData=
   ['updatethrowmatrix_14',['updateThrowMatrix',['../classcovarianceBase.html#a7e2d3623bbbf3edee558e04737fe2add',1,'covarianceBase']]],
   ['uppercut_15',['UpperCut',['../classMCMCProcessor.html#a840c686f15f419c0156df01c4ed62931',1,'MCMCProcessor']]],
   ['us_16',['About us',['../index.html#autotoc_md2',1,'']]],
-  ['usage_17',['usage',['../classMaCh3Plotting_1_1PlottingManager.html#a8910c157ce1ec6698f3bacdf521789ff',1,'MaCh3Plotting::PlottingManager::usage()'],['../CombineMaCh3Chains_8cpp.html#a2ef30c42cbc289d899a8be5d2d8f77d0',1,'usage():&#160;CombineMaCh3Chains.cpp'],['../md_plotting_2README.html#autotoc_md38',1,'Usage']]],
-  ['use_18',['How To Use',['../md_README.html#autotoc_md26',1,'']]],
+  ['usage_17',['usage',['../classMaCh3Plotting_1_1PlottingManager.html#a8910c157ce1ec6698f3bacdf521789ff',1,'MaCh3Plotting::PlottingManager::usage()'],['../CombineMaCh3Chains_8cpp.html#a2ef30c42cbc289d899a8be5d2d8f77d0',1,'usage():&#160;CombineMaCh3Chains.cpp'],['../md_plotting_2README.html#autotoc_md28',1,'Usage']]],
+  ['use_18',['How To Use',['../md_README.html#autotoc_md19',1,'']]],
   ['use_5fadaptive_19',['use_adaptive',['../classcovarianceBase.html#a838731abd6716940043b484b2b266f86',1,'covarianceBase']]],
   ['utility_20functions_20',['Plotting Utility Functions',['../group__Utils.html',1,'']]]
 ];

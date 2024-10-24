@@ -44,8 +44,7 @@ var searchData=
   ['lnlhist_5fsample_5fdrawflucdraw_41',['lnLHist_Sample_DrawflucDraw',['../classSampleSummary.html#a0e32c2a76de59e4142036b1c5a234819',1,'SampleSummary']]],
   ['lnlhist_5fsample_5fpredflucdraw_42',['lnLHist_Sample_PredflucDraw',['../classSampleSummary.html#a59de41ffd933765d2e22ffd8aa198ac1',1,'SampleSummary']]],
   ['loadsplinefile_43',['LoadSplineFile',['../classSMonolith.html#a6783cdc3c485378ca21852e1a7b02482',1,'SMonolith']]],
-  ['logger_44',['Logger',['../md_CONTRIBUTING.html#autotoc_md5',1,'']]],
-  ['loggerprint_45',['LoggerPrint',['../MaCh3Logger_8h.html#ada930684d7c1ed8916f1fbe6d266ca77',1,'MaCh3Logger.h']]],
-  ['loglcurr_46',['logLCurr',['../classFitterBase.html#abfb6f10720764d8bbbe43754fd5cd976',1,'FitterBase']]],
-  ['loglprop_47',['logLProp',['../classFitterBase.html#a187dd22c17f9e96e5a7e2fb2371abace',1,'FitterBase']]]
+  ['loggerprint_44',['LoggerPrint',['../MaCh3Logger_8h.html#ada930684d7c1ed8916f1fbe6d266ca77',1,'MaCh3Logger.h']]],
+  ['loglcurr_45',['logLCurr',['../classFitterBase.html#abfb6f10720764d8bbbe43754fd5cd976',1,'FitterBase']]],
+  ['loglprop_46',['logLProp',['../classFitterBase.html#a187dd22c17f9e96e5a7e2fb2371abace',1,'FitterBase']]]
 ];

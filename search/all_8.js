@@ -247,5 +247,5 @@ var searchData=
   ['gpusplineutils_2ecuh_244',['gpuSplineUtils.cuh',['../gpuSplineUtils_8cuh.html',1,'']]],
   ['gpuutils_2ecu_245',['gpuUtils.cu',['../gpuUtils_8cu.html',1,'']]],
   ['gpuutils_2ecuh_246',['gpuUtils.cuh',['../gpuUtils_8cuh.html',1,'']]],
-  ['guidelines_247',['Help and Guidelines',['../md_README.html#autotoc_md24',1,'']]]
+  ['guidelines_247',['Help and Guidelines',['../md_README.html#autotoc_md17',1,'']]]
 ];
