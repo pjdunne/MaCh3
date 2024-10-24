@@ -455,7 +455,7 @@ template&lt;typename... Args&gt; </div>
 <div class="fragment"><div class="line"><span class="lineno">   48</span>                                        {</div>
 <div class="line"><span class="lineno">   49</span>    <a class="code hl_function" href="YamlHelper_8h.html#ad236822fd2fe5bcf8e6acb556728b555">OverrideConfig</a>(<a class="code hl_variable" href="classmanager.html#a7519c9ab5670ae939d18485d31057b46">config</a>, std::forward&lt;Args&gt;(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">args</a>)...);</div>
 <div class="line"><span class="lineno">   50</span>  }</div>
-<div class="ttc" id="aYamlHelper_8h_html_ad236822fd2fe5bcf8e6acb556728b555"><div class="ttname"><a href="YamlHelper_8h.html#ad236822fd2fe5bcf8e6acb556728b555">OverrideConfig</a></div><div class="ttdeci">void OverrideConfig(YAML::Node &amp;node, Args... args)</div><div class="ttdoc">Overrides the configuration settings based on provided arguments.</div><div class="ttdef"><b>Definition</b> <a href="YamlHelper_8h_source.html#l00194">YamlHelper.h:194</a></div></div>
+<div class="ttc" id="aYamlHelper_8h_html_ad236822fd2fe5bcf8e6acb556728b555"><div class="ttname"><a href="YamlHelper_8h.html#ad236822fd2fe5bcf8e6acb556728b555">OverrideConfig</a></div><div class="ttdeci">void OverrideConfig(YAML::Node &amp;node, Args... args)</div><div class="ttdoc">Overrides the configuration settings based on provided arguments.</div><div class="ttdef"><b>Definition</b> <a href="YamlHelper_8h_source.html#l00244">YamlHelper.h:244</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -476,13 +476,13 @@ template&lt;typename... Args&gt; </div>
 
 <p>Print currently used config. </p>
 
-<p class="definition">Definition at line <a class="el" href="manager_8cpp_source.html#l00101">101</a> of file <a class="el" href="manager_8cpp_source.html">manager.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  101</span>                    {</div>
-<div class="line"><span class="lineno">  102</span><span class="comment">// *************************</span></div>
-<div class="line"><span class="lineno">  103</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;---------------------------------&quot;</span>);</div>
-<div class="line"><span class="lineno">  104</span>  <a class="code hl_function" href="namespaceMaCh3Utils.html#aaf39f873ebf93550a417418e583ebcf8">MaCh3Utils::PrintConfig</a>(<a class="code hl_variable" href="classmanager.html#a7519c9ab5670ae939d18485d31057b46">config</a>);</div>
-<div class="line"><span class="lineno">  105</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;---------------------------------&quot;</span>);</div>
-<div class="line"><span class="lineno">  106</span>}</div>
+<p class="definition">Definition at line <a class="el" href="manager_8cpp_source.html#l00100">100</a> of file <a class="el" href="manager_8cpp_source.html">manager.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  100</span>                    {</div>
+<div class="line"><span class="lineno">  101</span><span class="comment">// *************************</span></div>
+<div class="line"><span class="lineno">  102</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;---------------------------------&quot;</span>);</div>
+<div class="line"><span class="lineno">  103</span>  <a class="code hl_function" href="namespaceMaCh3Utils.html#aaf39f873ebf93550a417418e583ebcf8">MaCh3Utils::PrintConfig</a>(<a class="code hl_variable" href="classmanager.html#a7519c9ab5670ae939d18485d31057b46">config</a>);</div>
+<div class="line"><span class="lineno">  104</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;---------------------------------&quot;</span>);</div>
+<div class="line"><span class="lineno">  105</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -548,41 +548,41 @@ template&lt;typename... Args&gt; </div>
 <div class="line"><span class="lineno">   61</span>  OutputFile-&gt;cd();</div>
 <div class="line"><span class="lineno">   62</span> </div>
 <div class="line"><span class="lineno">   63</span>  <span class="comment">// EM: embed the config used for this app</span></div>
-<div class="line"><span class="lineno">   64</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TMacro</a> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">MaCh3Config</a>(<span class="stringliteral">&quot;MaCh3_Config&quot;</span>, <span class="stringliteral">&quot;MaCh3_Config&quot;</span>);</div>
-<div class="line"><span class="lineno">   65</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">MaCh3Config</a>.ReadFile(<a class="code hl_variable" href="classmanager.html#a1004958d1431ff607c08fa795b5953b7">FileName</a>.c_str());</div>
-<div class="line"><span class="lineno">   66</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">MaCh3Config</a>.Write();</div>
-<div class="line"><span class="lineno">   67</span> </div>
-<div class="line"><span class="lineno">   68</span>  <span class="comment">// The Branch!</span></div>
-<div class="line"><span class="lineno">   69</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TTree</a> *<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">SaveBranch</a> = <span class="keyword">new</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TTree</a>(<span class="stringliteral">&quot;Settings&quot;</span>, <span class="stringliteral">&quot;Settings&quot;</span>);</div>
-<div class="line"><span class="lineno">   70</span> </div>
-<div class="line"><span class="lineno">   71</span>  <span class="comment">// Fill the doubles</span></div>
-<div class="line"><span class="lineno">   72</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">SaveBranch</a>-&gt;Branch(<span class="stringliteral">&quot;Output&quot;</span>, &amp;<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">OutputFilename</a>);</div>
-<div class="line"><span class="lineno">   73</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">SaveBranch</a>-&gt;Branch(<span class="stringliteral">&quot;TestStatistic&quot;</span>, &amp;<a class="code hl_variable" href="classmanager.html#aa7619b235f224c34e77f8d09f42a5911">mc_stat_llh</a>);</div>
-<div class="line"><span class="lineno">   74</span> </div>
-<div class="line"><span class="lineno">   75</span>  <span class="comment">// Get settings defined by pre-processor directives, e.g. CPU MP and GPU</span></div>
-<div class="line"><span class="lineno">   76</span><span class="preprocessor">  #ifdef MULTITHREAD</span></div>
-<div class="line"><span class="lineno">   77</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">cpu_mp_on</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   78</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">n_cpus</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">omp_get_max_threads</a>();</div>
-<div class="line"><span class="lineno">   79</span><span class="preprocessor">  #else</span></div>
-<div class="line"><span class="lineno">   80</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">cpu_mp_on</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   81</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">n_cpus</a> = 1;</div>
-<div class="line"><span class="lineno">   82</span><span class="preprocessor">  #endif</span></div>
-<div class="line"><span class="lineno">   83</span> </div>
-<div class="line"><span class="lineno">   84</span><span class="preprocessor">  #ifdef CUDA</span></div>
-<div class="line"><span class="lineno">   85</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">gpu_on</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   86</span><span class="preprocessor">  #else</span></div>
-<div class="line"><span class="lineno">   87</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">gpu_on</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   88</span><span class="preprocessor">  #endif</span></div>
-<div class="line"><span class="lineno">   89</span> </div>
-<div class="line"><span class="lineno">   90</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">SaveBranch</a>-&gt;Branch(<span class="stringliteral">&quot;GPU&quot;</span>,   &amp;<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">gpu_on</a>);</div>
-<div class="line"><span class="lineno">   91</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">SaveBranch</a>-&gt;Branch(<span class="stringliteral">&quot;CPUMP&quot;</span>, &amp;<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">cpu_mp_on</a>);</div>
-<div class="line"><span class="lineno">   92</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">SaveBranch</a>-&gt;Branch(<span class="stringliteral">&quot;nCPUs&quot;</span>, &amp;<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">n_cpus</a>);</div>
-<div class="line"><span class="lineno">   93</span> </div>
-<div class="line"><span class="lineno">   94</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">SaveBranch</a>-&gt;Fill();</div>
-<div class="line"><span class="lineno">   95</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">SaveBranch</a>-&gt;Write();</div>
-<div class="line"><span class="lineno">   96</span> </div>
-<div class="line"><span class="lineno">   97</span>  <span class="keyword">delete</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">SaveBranch</a>;</div>
-<div class="line"><span class="lineno">   98</span>}</div>
+<div class="line"><span class="lineno">   64</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TMacro</a> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ConfigSave</a> = <a class="code hl_function" href="YamlHelper_8h.html#a2d4f3247b6e13ef8c127ff66e699d3cb">YAMLtoTMacro</a>(<a class="code hl_variable" href="classmanager.html#a7519c9ab5670ae939d18485d31057b46">config</a>, <span class="stringliteral">&quot;MaCh3_Config&quot;</span>);</div>
+<div class="line"><span class="lineno">   65</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ConfigSave</a>.Write();</div>
+<div class="line"><span class="lineno">   66</span> </div>
+<div class="line"><span class="lineno">   67</span>  <span class="comment">// The Branch!</span></div>
+<div class="line"><span class="lineno">   68</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TTree</a> *<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">SaveBranch</a> = <span class="keyword">new</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TTree</a>(<span class="stringliteral">&quot;Settings&quot;</span>, <span class="stringliteral">&quot;Settings&quot;</span>);</div>
+<div class="line"><span class="lineno">   69</span> </div>
+<div class="line"><span class="lineno">   70</span>  <span class="comment">// Fill the doubles</span></div>
+<div class="line"><span class="lineno">   71</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">SaveBranch</a>-&gt;Branch(<span class="stringliteral">&quot;Output&quot;</span>, &amp;<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">OutputFilename</a>);</div>
+<div class="line"><span class="lineno">   72</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">SaveBranch</a>-&gt;Branch(<span class="stringliteral">&quot;TestStatistic&quot;</span>, &amp;<a class="code hl_variable" href="classmanager.html#aa7619b235f224c34e77f8d09f42a5911">mc_stat_llh</a>);</div>
+<div class="line"><span class="lineno">   73</span> </div>
+<div class="line"><span class="lineno">   74</span>  <span class="comment">// Get settings defined by pre-processor directives, e.g. CPU MP and GPU</span></div>
+<div class="line"><span class="lineno">   75</span><span class="preprocessor">  #ifdef MULTITHREAD</span></div>
+<div class="line"><span class="lineno">   76</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">cpu_mp_on</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   77</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">n_cpus</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">omp_get_max_threads</a>();</div>
+<div class="line"><span class="lineno">   78</span><span class="preprocessor">  #else</span></div>
+<div class="line"><span class="lineno">   79</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">cpu_mp_on</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   80</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">n_cpus</a> = 1;</div>
+<div class="line"><span class="lineno">   81</span><span class="preprocessor">  #endif</span></div>
+<div class="line"><span class="lineno">   82</span> </div>
+<div class="line"><span class="lineno">   83</span><span class="preprocessor">  #ifdef CUDA</span></div>
+<div class="line"><span class="lineno">   84</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">gpu_on</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   85</span><span class="preprocessor">  #else</span></div>
+<div class="line"><span class="lineno">   86</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">gpu_on</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   87</span><span class="preprocessor">  #endif</span></div>
+<div class="line"><span class="lineno">   88</span> </div>
+<div class="line"><span class="lineno">   89</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">SaveBranch</a>-&gt;Branch(<span class="stringliteral">&quot;GPU&quot;</span>,   &amp;<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">gpu_on</a>);</div>
+<div class="line"><span class="lineno">   90</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">SaveBranch</a>-&gt;Branch(<span class="stringliteral">&quot;CPUMP&quot;</span>, &amp;<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">cpu_mp_on</a>);</div>
+<div class="line"><span class="lineno">   91</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">SaveBranch</a>-&gt;Branch(<span class="stringliteral">&quot;nCPUs&quot;</span>, &amp;<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">n_cpus</a>);</div>
+<div class="line"><span class="lineno">   92</span> </div>
+<div class="line"><span class="lineno">   93</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">SaveBranch</a>-&gt;Fill();</div>
+<div class="line"><span class="lineno">   94</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">SaveBranch</a>-&gt;Write();</div>
+<div class="line"><span class="lineno">   95</span> </div>
+<div class="line"><span class="lineno">   96</span>  <span class="keyword">delete</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">SaveBranch</a>;</div>
+<div class="line"><span class="lineno">   97</span>}</div>
+<div class="ttc" id="aYamlHelper_8h_html_a2d4f3247b6e13ef8c127ff66e699d3cb"><div class="ttname"><a href="YamlHelper_8h.html#a2d4f3247b6e13ef8c127ff66e699d3cb">YAMLtoTMacro</a></div><div class="ttdeci">TMacro YAMLtoTMacro(const YAML::Node &amp;yaml_node, const std::string &amp;name)</div><div class="ttdoc">Convert a YAML node to a ROOT TMacro object.</div><div class="ttdef"><b>Definition</b> <a href="YamlHelper_8h_source.html#l00162">YamlHelper.h:162</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
