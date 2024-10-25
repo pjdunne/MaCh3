@@ -100,46 +100,36 @@
 <p class="rubric">Methods Summary</p>
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyMaCh3.fitter.FitterBase.add_osc_handler" title="pyMaCh3.fitter.FitterBase.add_osc_handler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_osc_handler</span></code></a>(self, osc)</p></td>
-<td><p>Adds an oscillation handler for covariance objects.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyMaCh3.fitter.FitterBase.add_sample_PDF" title="pyMaCh3.fitter.FitterBase.add_sample_PDF"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_sample_PDF</span></code></a>(self, sample)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyMaCh3.fitter.FitterBase.add_sample_PDF" title="pyMaCh3.fitter.FitterBase.add_sample_PDF"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_sample_PDF</span></code></a>(self, sample)</p></td>
 <td><p>This function adds a sample PDF object to the analysis framework.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyMaCh3.fitter.FitterBase.add_syst_object" title="pyMaCh3.fitter.FitterBase.add_syst_object"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_syst_object</span></code></a>(self, cov)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyMaCh3.fitter.FitterBase.add_syst_object" title="pyMaCh3.fitter.FitterBase.add_syst_object"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_syst_object</span></code></a>(self, cov)</p></td>
 <td><p>This function adds a Covariance object to the analysis framework.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyMaCh3.fitter.FitterBase.drag_race" title="pyMaCh3.fitter.FitterBase.drag_race"><code class="xref py py-obj docutils literal notranslate"><span class="pre">drag_race</span></code></a>(self[, NLaps])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyMaCh3.fitter.FitterBase.drag_race" title="pyMaCh3.fitter.FitterBase.drag_race"><code class="xref py py-obj docutils literal notranslate"><span class="pre">drag_race</span></code></a>(self[, NLaps])</p></td>
 <td><p>Calculates the required time for each sample or covariance object in a drag race simulation.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyMaCh3.fitter.FitterBase.get_name" title="pyMaCh3.fitter.FitterBase.get_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_name</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyMaCh3.fitter.FitterBase.get_name" title="pyMaCh3.fitter.FitterBase.get_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_name</span></code></a>(self)</p></td>
 <td><p>The name of the algorithm, you should override this with something like.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyMaCh3.fitter.FitterBase.get_step_scale_from_LLH_scan" title="pyMaCh3.fitter.FitterBase.get_step_scale_from_LLH_scan"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_step_scale_from_LLH_scan</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyMaCh3.fitter.FitterBase.get_step_scale_from_LLH_scan" title="pyMaCh3.fitter.FitterBase.get_step_scale_from_LLH_scan"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_step_scale_from_LLH_scan</span></code></a>(self)</p></td>
 <td><p>LLH scan is good first estimate of step scale, this will get the rough estimates for the step scales based on running an LLH scan</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyMaCh3.fitter.FitterBase.run" title="pyMaCh3.fitter.FitterBase.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyMaCh3.fitter.FitterBase.run" title="pyMaCh3.fitter.FitterBase.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>(self)</p></td>
 <td><p>The implementation of the fitter, you should override this with your own desired fitting algorithm</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyMaCh3.fitter.FitterBase.run_2d_LLH_scan" title="pyMaCh3.fitter.FitterBase.run_2d_LLH_scan"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run_2d_LLH_scan</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyMaCh3.fitter.FitterBase.run_2d_LLH_scan" title="pyMaCh3.fitter.FitterBase.run_2d_LLH_scan"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run_2d_LLH_scan</span></code></a>(self)</p></td>
 <td><p>Perform a 2D likelihood scan.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pyMaCh3.fitter.FitterBase.run_LLH_scan" title="pyMaCh3.fitter.FitterBase.run_LLH_scan"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run_LLH_scan</span></code></a>(self)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pyMaCh3.fitter.FitterBase.run_LLH_scan" title="pyMaCh3.fitter.FitterBase.run_LLH_scan"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run_LLH_scan</span></code></a>(self)</p></td>
 <td><p>Perform a 1D likelihood scan</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pyMaCh3.fitter.FitterBase.run_sigma_var" title="pyMaCh3.fitter.FitterBase.run_sigma_var"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run_sigma_var</span></code></a>(self)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyMaCh3.fitter.FitterBase.run_sigma_var" title="pyMaCh3.fitter.FitterBase.run_sigma_var"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run_sigma_var</span></code></a>(self)</p></td>
 <td><p>Perform a 2D and 1D sigma var for all samples.</p></td>
 </tr>
 </tbody>
 </table>
 <p class="rubric">Methods Documentation</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="pyMaCh3.fitter.FitterBase.add_osc_handler">
-<span class="sig-name descname"><span class="pre">add_osc_handler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pyMaCh3.fitter.FitterBase" title="pyMaCh3.fitter.FitterBase"><span class="pre">pyMaCh3.fitter.FitterBase</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">osc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">covarianceOsc</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyMaCh3.fitter.FitterBase.add_osc_handler" title="Link to this definition"></a></dt>
-<dd><p>Adds an oscillation handler for covariance objects.
-:param oscf: An oscillation handler object for dealing with neutrino oscillation calculations.</p>
-</dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="pyMaCh3.fitter.FitterBase.add_sample_PDF">
 <span class="sig-name descname"><span class="pre">add_sample_PDF</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pyMaCh3.fitter.FitterBase" title="pyMaCh3.fitter.FitterBase"><span class="pre">pyMaCh3.fitter.FitterBase</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">samplePDFBase</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyMaCh3.fitter.FitterBase.add_sample_PDF" title="Link to this definition"></a></dt>

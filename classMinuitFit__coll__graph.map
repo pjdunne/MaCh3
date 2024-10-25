@@ -1,60 +1,57 @@
 <map id="MinuitFit" name="MinuitFit">
-<area shape="rect" id="Node000001" title="Implementation of Minuit fitting algorithm ." alt="" coords="2494,325,2566,351"/>
-<area shape="rect" id="Node000002" href="$classLikelihoodFit.html" title="Implementation of base Likelihood Fit class, it is mostly responsible for likelihood calculation whil..." alt="" coords="2350,325,2445,351"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="2461,335,2494,335,2494,340,2461,340"/>
-<area shape="rect" id="Node000003" href="$classFitterBase.html" title="Base class for implementing fitting algorithms." alt="" coords="2219,325,2300,351"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="2316,335,2349,335,2349,340,2316,340"/>
-<area shape="rect" id="Node000004" href="$classmanager.html" title="The manager class is responsible for managing configurations and settings." alt="" coords="1658,157,1729,183"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="1744,157,1836,144,1892,141,1953,141,2017,147,2080,159,2140,180,2197,210,2222,236,2241,267,2252,299,2259,324,2253,325,2247,300,2236,269,2218,239,2193,214,2138,185,2078,164,2016,152,1953,147,1893,146,1836,150,1745,162"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="210,156,287,181"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="277,144,307,123,342,103,416,67,476,40,538,23,620,18,1307,18,1364,22,1420,34,1475,51,1527,72,1615,117,1675,154,1672,159,1613,122,1525,77,1473,56,1419,39,1363,27,1307,23,620,23,539,29,478,45,419,71,345,108,310,127,280,148"/>
-<area shape="rect" id="Node000007" href="$classMaCh3Modes.html" title="KS: Class describing MaCh3 modes used in the analysis, it is being initialised from config." alt="" coords="1255,189,1356,215"/>
-<area shape="poly" id="edge14_Node000007_Node000005" title=" " alt="" coords="296,147,343,134,554,96,640,86,721,81,802,83,888,90,1100,123,1154,135,1206,154,1279,186,1277,191,1204,159,1152,140,1099,128,888,95,802,88,721,87,640,91,554,101,344,139,297,152"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="773,115,914,155"/>
-<area shape="poly" id="edge8_Node000008_Node000005" title=" " alt="" coords="303,163,772,136,772,142,303,168"/>
-<area shape="rect" id="Node000010" href="$structMaCh3ModeInfo.html" title="KS: Class containing information for a single MaCh3Mode." alt="" coords="563,189,679,215"/>
-<area shape="poly" id="edge11_Node000010_Node000005" title=" " alt="" coords="303,184,344,193,402,200,460,203,563,202,563,207,460,208,401,205,343,198,301,189"/>
-<area shape="rect" id="Node000016" title=" " alt="" coords="541,297,701,323"/>
-<area shape="poly" id="edge21_Node000016_Node000005" title=" " alt="" coords="283,188,344,222,459,265,562,294,561,299,457,270,342,227,280,192"/>
-<area shape="rect" id="Node000018" href="$classcovarianceBase.html" title="Base class responsible for handling of systematic error parameters. Capable of using PCA or using ada..." alt="" coords="962,520,1076,545"/>
-<area shape="poly" id="edge25_Node000018_Node000005" title=" " alt="" coords="270,193,302,233,345,271,378,289,407,296,437,303,471,321,483,335,495,348,571,377,703,417,915,481,993,517,991,521,913,485,701,422,569,382,492,352,479,338,468,325,435,308,406,301,376,294,342,276,298,236,265,196"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="5,148,129,189"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="144,166,210,166,210,171,144,171"/>
-<area shape="poly" id="edge15_Node000003_Node000007" title=" " alt="" coords="1372,204,1520,216,1725,238,1959,271,2196,315,2220,322,2219,327,2194,320,1958,276,1724,244,1520,222,1371,209"/>
-<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="1371,194,1657,170,1658,175,1372,199"/>
-<area shape="rect" id="Node000013" href="$classsamplePDFBase.html" title="Class responsible for handling implementation of samples used in analysis, reweighting and returning ..." alt="" coords="1634,325,1753,351"/>
-<area shape="poly" id="edge22_Node000013_Node000007" title=" " alt="" coords="1336,222,1369,244,1407,262,1462,276,1507,279,1554,280,1611,292,1644,306,1672,322,1670,327,1642,311,1609,298,1553,286,1507,284,1461,282,1405,267,1366,248,1333,226"/>
-<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="930,142,1060,158,1206,179,1255,188,1254,194,1205,184,1059,163,929,147"/>
-<area shape="rect" id="Node000009" title=" " alt="" coords="938,181,1099,222"/>
-<area shape="poly" id="edge9_Node000007_Node000009" title=" " alt="" coords="1115,199,1254,199,1254,204,1115,204"/>
-<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="695,199,938,199,938,204,695,204"/>
-<area shape="rect" id="Node000011" title=" " alt="" coords="190,416,307,441"/>
-<area shape="poly" id="edge13_Node000007_Node000011" title=" " alt="" coords="314,408,413,381,468,362,474,353,478,344,478,323,479,302,483,292,492,282,515,268,543,256,613,240,696,232,785,230,963,234,1039,234,1099,231,1254,208,1255,213,1100,236,1039,240,963,239,785,236,696,238,614,245,545,261,517,272,495,286,487,295,484,304,483,323,483,345,479,356,471,366,414,386,316,413"/>
-<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="282,405,342,366,379,345,409,331,437,315,467,287,475,275,478,263,482,251,492,238,525,218,562,206,563,212,528,223,495,242,486,253,483,264,480,277,471,290,440,319,412,336,382,350,345,371,285,409"/>
-<area shape="poly" id="edge29_Node000018_Node000011" title=" " alt="" coords="323,433,584,464,914,510,962,518,961,523,914,515,584,469,323,439"/>
-<area shape="rect" id="Node000021" href="$classadaptive__mcmc_1_1AdaptiveMCMCHandler.html" title="Contains information about adaptive covariance matrix." alt="" coords="493,573,749,599"/>
-<area shape="poly" id="edge33_Node000021_Node000011" title=" " alt="" coords="269,453,322,543,331,569,335,579,345,587,371,596,410,599,504,596,504,602,410,605,370,601,342,592,331,582,326,571,317,545,264,456"/>
-<area shape="rect" id="Node000012" title=" " alt="" coords="1910,325,2119,351"/>
-<area shape="poly" id="edge16_Node000003_Node000012" title=" " alt="" coords="2135,335,2219,335,2219,340,2135,340"/>
-<area shape="poly" id="edge17_Node000012_Node000013" title=" " alt="" coords="1769,335,1910,335,1910,340,1769,340"/>
-<area shape="rect" id="Node000014" title=" " alt="" coords="178,557,319,583"/>
-<area shape="poly" id="edge18_Node000013_Node000014" title=" " alt="" coords="278,545,319,518,371,488,430,460,493,439,578,425,685,416,936,408,1187,405,1295,402,1381,396,1496,384,1609,362,1655,348,1656,354,1611,367,1497,389,1382,402,1295,407,1187,410,936,413,686,421,579,430,494,444,432,465,373,493,322,523,281,550"/>
-<area shape="poly" id="edge27_Node000018_Node000014" title=" " alt="" coords="270,594,306,639,357,695,421,748,457,771,494,789,564,812,621,820,679,812,748,789,795,765,838,735,879,700,915,664,972,594,1007,544,1011,547,977,597,919,667,882,704,842,739,797,770,750,793,680,817,621,825,562,817,492,793,454,775,418,753,354,699,302,643,266,597"/>
-<area shape="rect" id="Node000020" href="$classPCAHandler.html" title="Class responsible for handling Principal Component Analysis (PCA) of covariance matrix." alt="" coords="574,524,668,549"/>
-<area shape="poly" id="edge31_Node000020_Node000014" title=" " alt="" coords="296,549,343,536,405,529,468,527,574,530,574,535,468,532,406,535,344,542,297,554"/>
-<area shape="poly" id="edge34_Node000021_Node000014" title=" " alt="" coords="278,590,308,611,344,627,378,636,406,638,434,635,468,627,480,622,492,615,554,596,556,602,494,620,483,627,470,633,435,640,406,644,378,641,342,633,306,616,275,595"/>
-<area shape="rect" id="Node000015" title=" " alt="" coords="1229,347,1382,387"/>
-<area shape="poly" id="edge19_Node000013_Node000015" title=" " alt="" coords="1397,357,1633,339,1634,345,1397,363"/>
-<area shape="poly" id="edge20_Node000013_Node000016" title=" " alt="" coords="717,306,1106,307,1357,313,1610,326,1634,328,1633,333,1610,331,1357,319,1106,312,716,311"/>
-<area shape="poly" id="edge26_Node000018_Node000016" title=" " alt="" coords="698,324,750,339,773,349,814,356,849,356,881,360,898,368,916,381,929,400,931,419,932,438,940,459,969,492,999,517,996,521,965,496,936,462,927,439,926,420,924,402,912,385,895,372,880,365,848,361,814,361,772,354,748,344,697,329"/>
-<area shape="rect" id="Node000017" title=" " alt="" coords="1406,520,1610,545"/>
-<area shape="poly" id="edge23_Node000003_Node000017" title=" " alt="" coords="1625,531,1733,526,1859,512,1925,499,1992,483,2056,463,2118,438,2155,417,2190,393,2243,349,2246,353,2194,397,2158,422,2120,443,2058,468,1993,489,1927,505,1860,517,1734,531,1625,537"/>
-<area shape="poly" id="edge24_Node000017_Node000018" title=" " alt="" coords="1092,530,1405,530,1405,535,1092,535"/>
-<area shape="rect" id="Node000022" href="$classcovarianceOsc.html" title="Class responsible for handling of neutrino oscillation parameters." alt="" coords="1777,444,1886,469"/>
-<area shape="poly" id="edge36_Node000022_Node000018" title=" " alt="" coords="1091,515,1123,510,1311,488,1497,472,1777,456,1777,461,1497,478,1311,493,1124,515,1092,520"/>
-<area shape="rect" id="Node000019" title=" " alt="" coords="557,852,685,877"/>
-<area shape="poly" id="edge28_Node000018_Node000019" title=" " alt="" coords="700,876,752,879,808,875,863,862,889,850,912,835,944,803,968,765,986,723,999,681,1012,601,1015,546,1020,546,1017,601,1004,682,991,725,973,768,948,806,916,839,892,855,865,867,809,881,752,884,700,881"/>
-<area shape="poly" id="edge30_Node000018_Node000020" title=" " alt="" coords="683,533,961,530,961,536,683,538"/>
-<area shape="poly" id="edge32_Node000018_Node000021" title=" " alt="" coords="763,571,914,551,961,543,962,548,914,557,764,576"/>
-<area shape="poly" id="edge35_Node000003_Node000022" title=" " alt="" coords="1896,436,2118,375,2218,347,2219,352,2120,381,1898,442"/>
+<area shape="rect" id="Node000001" title="Implementation of Minuit fitting algorithm ." alt="" coords="2459,649,2530,675"/>
+<area shape="rect" id="Node000002" href="$classLikelihoodFit.html" title="Implementation of base Likelihood Fit class, it is mostly responsible for likelihood calculation whil..." alt="" coords="2314,649,2410,675"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="2426,659,2459,659,2459,664,2426,664"/>
+<area shape="rect" id="Node000003" href="$classFitterBase.html" title="Base class for implementing fitting algorithms." alt="" coords="2184,649,2265,675"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="2281,659,2314,659,2314,664,2281,664"/>
+<area shape="rect" id="Node000004" href="$classmanager.html" title="The manager class is responsible for managing configurations and settings." alt="" coords="1658,740,1729,765"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="1745,750,1897,746,2083,731,2123,728,2139,725,2158,717,2188,696,2210,673,2214,677,2191,700,2161,721,2140,730,2123,733,2084,737,1897,751,1745,755"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="210,716,287,741"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="279,749,310,770,345,789,418,822,478,845,540,858,620,862,1307,862,1360,859,1413,850,1515,824,1603,791,1665,763,1667,768,1605,796,1517,829,1414,856,1360,864,1307,867,620,867,539,863,477,850,416,827,342,793,307,774,276,753"/>
+<area shape="rect" id="Node000007" href="$classMaCh3Modes.html" title="KS: Class describing MaCh3 modes used in the analysis, it is being initialised from config." alt="" coords="1255,688,1356,713"/>
+<area shape="poly" id="edge14_Node000007_Node000005" title=" " alt="" coords="303,742,414,772,565,802,650,813,738,820,827,821,914,814,1018,794,1119,766,1207,736,1271,711,1273,716,1209,741,1121,771,1019,800,914,820,827,827,738,826,650,819,564,807,412,777,302,747"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="773,735,914,775"/>
+<area shape="poly" id="edge8_Node000008_Node000005" title=" " alt="" coords="303,733,344,737,579,748,772,752,772,757,579,754,343,742,302,738"/>
+<area shape="rect" id="Node000010" href="$structMaCh3ModeInfo.html" title="KS: Class containing information for a single MaCh3Mode." alt="" coords="563,636,679,661"/>
+<area shape="poly" id="edge11_Node000010_Node000005" title=" " alt="" coords="290,706,343,687,459,663,562,650,563,655,460,668,344,692,292,711"/>
+<area shape="rect" id="Node000016" title=" " alt="" coords="541,685,701,711"/>
+<area shape="poly" id="edge21_Node000016_Node000005" title=" " alt="" coords="303,721,541,702,541,707,303,727"/>
+<area shape="rect" id="Node000018" href="$classcovarianceBase.html" title="Base class responsible for handling of systematic error parameters. Capable of using PCA or using ada..." alt="" coords="962,413,1076,439"/>
+<area shape="poly" id="edge25_Node000018_Node000005" title=" " alt="" coords="255,700,266,667,284,628,309,591,342,560,395,528,444,511,490,503,535,503,631,507,686,505,748,496,871,466,973,437,974,442,872,471,749,501,686,510,631,512,535,508,491,509,445,516,398,533,345,564,313,594,289,631,271,669,260,701"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="5,708,129,749"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="144,726,210,726,210,731,144,731"/>
+<area shape="poly" id="edge15_Node000003_Node000007" title=" " alt="" coords="1372,695,2183,661,2183,666,1372,700"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="1354,716,1406,731,1475,742,1545,748,1658,750,1657,756,1545,753,1475,747,1405,737,1353,722"/>
+<area shape="rect" id="Node000013" href="$classsamplePDFBase.html" title="Class responsible for handling implementation of samples used in analysis, reweighting and returning ..." alt="" coords="1634,609,1753,635"/>
+<area shape="poly" id="edge22_Node000013_Node000007" title=" " alt="" coords="1371,688,1609,653,1663,633,1665,638,1611,658,1372,693"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="929,749,1099,735,1254,709,1255,714,1100,741,930,754"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="938,671,1099,711"/>
+<area shape="poly" id="edge9_Node000007_Node000009" title=" " alt="" coords="1115,696,1123,697,1254,698,1254,704,1123,702,1114,702"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="695,657,773,667,938,683,938,688,772,673,694,662"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="190,468,307,493"/>
+<area shape="poly" id="edge13_Node000007_Node000011" title=" " alt="" coords="323,488,585,528,749,557,915,591,1078,634,1258,684,1257,689,1077,639,913,596,748,563,584,533,322,493"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="281,500,345,541,418,578,494,607,572,632,570,638,492,612,416,583,342,546,278,505"/>
+<area shape="poly" id="edge29_Node000018_Node000011" title=" " alt="" coords="322,472,961,427,961,432,323,478"/>
+<area shape="rect" id="Node000021" href="$classadaptive__mcmc_1_1AdaptiveMCMCHandler.html" title="Contains information about adaptive covariance matrix." alt="" coords="493,337,749,363"/>
+<area shape="poly" id="edge33_Node000021_Node000011" title=" " alt="" coords="285,457,342,431,379,422,408,420,436,416,468,402,475,395,479,387,483,379,492,371,514,361,517,366,495,376,488,383,484,390,479,398,471,406,438,421,409,426,379,428,344,436,287,462"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="1874,616,2084,641"/>
+<area shape="poly" id="edge16_Node000003_Node000012" title=" " alt="" coords="2093,641,2184,654,2183,659,2093,646"/>
+<area shape="poly" id="edge17_Node000012_Node000013" title=" " alt="" coords="1769,621,1874,623,1874,629,1769,626"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="178,210,319,236"/>
+<area shape="poly" id="edge18_Node000013_Node000014" title=" " alt="" coords="260,195,293,143,315,115,342,92,411,48,442,35,472,26,537,19,620,18,1307,18,1359,23,1407,40,1450,65,1489,98,1524,137,1555,182,1582,230,1605,280,1643,383,1669,479,1685,558,1693,608,1688,609,1680,559,1664,480,1638,385,1600,282,1577,232,1550,185,1520,141,1485,102,1447,69,1405,44,1358,29,1307,23,620,23,538,24,473,32,443,40,413,53,345,96,319,119,297,146,265,198"/>
+<area shape="poly" id="edge27_Node000018_Node000014" title=" " alt="" coords="322,237,494,274,558,284,613,289,708,293,754,297,802,305,855,320,915,343,943,358,968,376,1006,410,1003,414,965,380,940,363,913,348,853,325,801,311,753,303,708,299,613,294,557,289,493,279,321,242"/>
+<area shape="rect" id="Node000020" href="$classPCAHandler.html" title="Class responsible for handling Principal Component Analysis (PCA) of covariance matrix." alt="" coords="574,58,668,84"/>
+<area shape="poly" id="edge31_Node000020_Node000014" title=" " alt="" coords="285,200,378,151,492,100,573,78,575,83,494,106,380,156,288,204"/>
+<area shape="poly" id="edge34_Node000021_Node000014" title=" " alt="" coords="268,247,300,286,321,305,345,320,380,334,417,344,493,353,492,358,416,349,378,339,342,324,318,309,297,290,264,251"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="1229,544,1382,585"/>
+<area shape="poly" id="edge19_Node000013_Node000015" title=" " alt="" coords="1397,571,1500,583,1610,600,1637,606,1636,611,1610,606,1499,589,1396,576"/>
+<area shape="poly" id="edge20_Node000013_Node000016" title=" " alt="" coords="716,682,938,656,1138,642,1335,631,1633,620,1634,626,1335,637,1138,647,938,662,717,687"/>
+<area shape="poly" id="edge26_Node000018_Node000016" title=" " alt="" coords="715,683,747,671,759,662,771,653,793,645,812,641,846,641,878,639,894,633,912,622,934,601,953,578,983,525,1002,475,1012,438,1017,439,1007,477,988,527,958,581,938,605,916,626,897,638,879,644,846,646,812,647,794,650,774,657,762,667,750,676,717,688"/>
+<area shape="rect" id="Node000017" title=" " alt="" coords="1406,474,1610,500"/>
+<area shape="poly" id="edge23_Node000003_Node000017" title=" " alt="" coords="1605,500,1825,542,2084,600,2123,611,2161,625,2202,646,2200,651,2159,629,2122,616,2083,606,1824,547,1604,506"/>
+<area shape="poly" id="edge24_Node000017_Node000018" title=" " alt="" coords="1091,432,1405,472,1405,477,1091,437"/>
+<area shape="rect" id="Node000019" title=" " alt="" coords="557,386,685,412"/>
+<area shape="poly" id="edge28_Node000018_Node000019" title=" " alt="" coords="700,402,962,419,961,425,700,407"/>
+<area shape="poly" id="edge30_Node000018_Node000020" title=" " alt="" coords="683,77,717,86,750,101,800,135,846,176,888,221,924,267,981,353,1013,411,1008,414,976,355,920,270,884,224,843,180,797,139,747,105,715,91,682,82"/>
+<area shape="poly" id="edge32_Node000018_Node000021" title=" " alt="" coords="764,361,839,372,915,387,985,410,984,415,913,392,838,377,764,366"/>
 </map>

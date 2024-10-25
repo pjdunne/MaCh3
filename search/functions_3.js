@@ -50,8 +50,8 @@ var searchData=
   ['copytogpu_5fsplinemonolith_47',['CopyToGPU_SplineMonolith',['../classSMonolithGPU.html#aef41d94cf5e44ebf4fe427c3ce84f20b',1,'SMonolithGPU']]],
   ['correlatesteps_48',['CorrelateSteps',['../classcovarianceBase.html#aba2b2dae2546299c9a4dab618d65e7c0',1,'covarianceBase']]],
   ['countnumberofloadedsplines_49',['CountNumberOfLoadedSplines',['../classsplineFDBase.html#a0bfc616fab953333e6e938de52ce3bed',1,'splineFDBase']]],
-  ['covariancebase_50',['covariancebase',['../classcovarianceBase.html#ac7b8a062756f85459f9128de1f617d5a',1,'covarianceBase::covarianceBase(const char *name, const char *file)'],['../classcovarianceBase.html#a50103e0078a03a58f8731287bf895ad0',1,'covarianceBase::covarianceBase(const std::vector&lt; std::string &gt; &amp;YAMLFile, const char *name, double threshold=-1, int FirstPCAdpar=-999, int LastPCAdpar=-999)']]],
-  ['covarianceosc_51',['covarianceOsc',['../classcovarianceOsc.html#a523cc3ff865e317e705a68c10391feb9',1,'covarianceOsc']]],
-  ['covariancexsec_52',['covarianceXsec',['../classcovarianceXsec.html#ae9d8c9ef0645b8224bb5cfe324fe67cc',1,'covarianceXsec']]],
+  ['covariancebase_50',['covariancebase',['../classcovarianceBase.html#a8ff9c473f7e2ed9289459073a9d3dbe1',1,'covarianceBase::covarianceBase(std::string name, std::string file)'],['../classcovarianceBase.html#a332cbcc2c262ff3775b56c40724e623e',1,'covarianceBase::covarianceBase(const std::vector&lt; std::string &gt; &amp;YAMLFile, std::string name, double threshold=-1, int FirstPCAdpar=-999, int LastPCAdpar=-999)']]],
+  ['covarianceosc_51',['covarianceOsc',['../classcovarianceOsc.html#a05b22b92594371c86a5e28f73cf4a574',1,'covarianceOsc']]],
+  ['covariancexsec_52',['covarianceXsec',['../classcovarianceXsec.html#a2e6c281c3f7f902076043ca9776b241d',1,'covarianceXsec']]],
   ['createnewadaptivecovariance_53',['CreateNewAdaptiveCovariance',['../classadaptive__mcmc_1_1AdaptiveMCMCHandler.html#ad7df80045651df99c2d1c375fea4ac74',1,'adaptive_mcmc::AdaptiveMCMCHandler']]]
 ];

@@ -10,7 +10,6 @@ FitterBase
 
    .. autosummary::
 
-      ~FitterBase.add_osc_handler
       ~FitterBase.add_sample_PDF
       ~FitterBase.add_syst_object
       ~FitterBase.drag_race
@@ -23,7 +22,6 @@ FitterBase
 
    .. rubric:: Methods Documentation
 
-   .. automethod:: add_osc_handler
    .. automethod:: add_sample_PDF
    .. automethod:: add_syst_object
    .. automethod:: drag_race
