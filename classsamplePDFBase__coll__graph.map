@@ -1,27 +1,28 @@
 <map id="samplePDFBase" name="samplePDFBase">
-<area shape="rect" id="Node000001" title="Class responsible for handling implementation of samples used in analysis, reweighting and returning ..." alt="" coords="1349,92,1468,118"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="1066,5,1207,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1215,33,1326,65,1381,89,1379,94,1324,70,1213,38"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="1060,55,1213,96"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="1228,83,1349,96,1348,101,1228,88"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="586,120,745,146"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="760,127,1348,104,1348,110,761,132"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="198,196,275,222"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="269,185,318,162,388,146,459,136,585,129,585,134,459,141,389,151,320,167,271,190"/>
-<area shape="rect" id="Node000007" href="$classMaCh3Modes.html" title="KS: Class describing MaCh3 modes used in the analysis, it is being initialised from config." alt="" coords="1086,223,1187,248"/>
-<area shape="poly" id="edge14_Node000007_Node000005" title=" " alt="" coords="291,201,319,200,421,200,729,197,864,200,1037,214,1086,222,1085,227,1036,219,864,206,729,203,421,205,319,205,291,207"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="595,215,736,256"/>
-<area shape="poly" id="edge8_Node000008_Node000005" title=" " alt="" coords="291,212,320,215,595,230,594,235,319,220,290,217"/>
-<area shape="rect" id="Node000010" href="$structMaCh3ModeInfo.html" title="KS: Class containing information for a single MaCh3Mode." alt="" coords="445,291,562,316"/>
-<area shape="poly" id="edge11_Node000010_Node000005" title=" " alt="" coords="257,233,284,265,301,280,320,291,351,302,383,307,445,308,445,314,382,312,350,307,318,296,298,284,280,269,253,236"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="5,189,129,229"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="144,206,198,206,198,212,144,212"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="1199,215,1260,193,1323,164,1360,140,1390,116,1394,120,1364,144,1326,169,1262,198,1201,220"/>
-<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="751,233,1085,233,1085,238,751,238"/>
-<area shape="rect" id="Node000009" title=" " alt="" coords="769,283,930,324"/>
-<area shape="poly" id="edge9_Node000007_Node000009" title=" " alt="" coords="945,286,1036,267,1099,246,1101,251,1037,272,946,291"/>
-<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="578,301,769,301,769,306,578,306"/>
-<area shape="rect" id="Node000011" title=" " alt="" coords="178,349,295,375"/>
-<area shape="poly" id="edge13_Node000007_Node000011" title=" " alt="" coords="311,365,431,371,586,371,758,360,845,349,930,333,984,316,1036,292,1115,246,1117,251,1039,297,986,321,931,338,846,354,759,366,586,376,431,376,311,371"/>
-<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="311,356,365,349,421,337,476,315,478,319,422,342,366,354,311,361"/>
+<area shape="rect" id="Node000001" title="Class responsible for handling implementation of samples used in analysis, reweighting and returning ..." alt="" coords="1349,85,1468,111"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="779,13,920,39"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="935,21,954,20,1060,18,1143,19,1224,30,1326,58,1382,82,1380,87,1324,63,1223,35,1142,24,1060,23,954,26,935,26"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="1060,48,1213,89"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="936,36,1060,54,1060,60,935,41"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="1228,76,1349,89,1348,94,1228,81"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="586,113,745,139"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="760,119,1348,97,1348,103,761,125"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="198,189,275,215"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="269,178,318,155,388,139,459,128,585,121,585,127,459,134,389,144,320,160,271,183"/>
+<area shape="rect" id="Node000007" href="$classMaCh3Modes.html" title="KS: Class describing MaCh3 modes used in the analysis, it is being initialised from config." alt="" coords="1086,216,1187,241"/>
+<area shape="poly" id="edge15_Node000007_Node000005" title=" " alt="" coords="291,194,319,192,421,192,729,190,864,193,1037,207,1086,215,1085,220,1036,212,864,198,729,195,421,198,319,198,291,199"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="595,208,736,249"/>
+<area shape="poly" id="edge9_Node000008_Node000005" title=" " alt="" coords="291,205,320,207,595,223,594,228,319,213,290,210"/>
+<area shape="rect" id="Node000010" href="$structMaCh3ModeInfo.html" title="KS: Class containing information for a single MaCh3Mode." alt="" coords="445,284,562,309"/>
+<area shape="poly" id="edge12_Node000010_Node000005" title=" " alt="" coords="257,226,284,258,301,272,320,284,351,294,383,300,445,301,445,306,382,305,350,300,318,289,298,277,280,262,253,229"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="5,181,129,222"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="144,199,198,199,198,204,144,204"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="1199,208,1260,186,1323,157,1360,133,1390,109,1394,113,1364,137,1326,162,1262,191,1201,213"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="751,226,1085,226,1085,231,751,231"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="769,276,930,317"/>
+<area shape="poly" id="edge10_Node000007_Node000009" title=" " alt="" coords="945,279,1036,259,1099,239,1101,244,1037,265,946,284"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="578,294,769,294,769,299,578,299"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="178,342,295,368"/>
+<area shape="poly" id="edge14_Node000007_Node000011" title=" " alt="" coords="311,358,431,364,586,364,758,353,845,342,930,326,984,309,1036,285,1115,239,1117,244,1039,290,986,314,931,331,846,347,759,358,586,369,431,369,311,364"/>
+<area shape="poly" id="edge13_Node000010_Node000011" title=" " alt="" coords="311,349,365,342,421,330,476,307,478,312,422,335,366,347,311,354"/>
 </map>

@@ -14,7 +14,7 @@ var searchData=
   ['ndsamplesbins_11',['ndsamplesbins',['../GetPostfitParamPlots_8cpp.html#a329ffa5c522d29e1ec016f0b7028437d',1,'NDSamplesBins:&#160;GetPostfitParamPlots.cpp'],['../classMCMCProcessor.html#ae76b02ce85737d30c778698ba127933b',1,'MCMCProcessor::NDSamplesBins']]],
   ['ndsamplesnames_12',['ndsamplesnames',['../GetPostfitParamPlots_8cpp.html#ab5cba8ce6ff9a6e1e9a5ba0b9cfb0b37',1,'NDSamplesNames:&#160;GetPostfitParamPlots.cpp'],['../classMCMCProcessor.html#a27c8a25155baab660fc9658861c433ab',1,'MCMCProcessor::NDSamplesNames']]],
   ['nentries_13',['nEntries',['../classMCMCProcessor.html#af3a19b885e9c34e1674aea8cfbe14e1c',1,'MCMCProcessor']]],
-  ['nevents_14',['nevents',['../structfdmc__base.html#abc7c499f714510adc13362187ec541e0',1,'fdmc_base::nEvents'],['../classSMonolith.html#ac86282b04659bae5cccb6073c9edc0a5',1,'SMonolith::NEvents']]],
+  ['nevents_14',['nevents',['../classSMonolith.html#ac86282b04659bae5cccb6073c9edc0a5',1,'SMonolith::NEvents'],['../structfdmc__base.html#abc7c499f714510adc13362187ec541e0',1,'fdmc_base::nEvents']]],
   ['nfiles_15',['nFiles',['../ProcessMCMC_8cpp.html#a6b25bcddaae9b868109dc98a54476e46',1,'ProcessMCMC.cpp']]],
   ['nflux_16',['nFlux',['../classMCMCProcessor.html#acfc681553c5fbba89e133dfda605db3c',1,'MCMCProcessor']]],
   ['nfuncparams_17',['nFuncParams',['../classsamplePDFFDBase.html#a87aacca771e43e00c671d68552c4f8b3',1,'samplePDFFDBase']]],

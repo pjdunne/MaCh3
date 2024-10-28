@@ -10,12 +10,13 @@ var searchData=
   ['mainpage_2emd_7',['mainpage.md',['../mainpage_8md.html',1,'']]],
   ['manager_2ecpp_8',['manager.cpp',['../manager_8cpp.html',1,'']]],
   ['manager_2eh_9',['manager.h',['../manager_8h.html',1,'']]],
-  ['mcmc_2ecpp_10',['mcmc.cpp',['../mcmc_8cpp.html',1,'']]],
-  ['mcmc_2eh_11',['mcmc.h',['../mcmc_8h.html',1,'']]],
-  ['mcmcprocessor_2ecpp_12',['MCMCProcessor.cpp',['../MCMCProcessor_8cpp.html',1,'']]],
-  ['mcmcprocessor_2eh_13',['MCMCProcessor.h',['../MCMCProcessor_8h.html',1,'']]],
-  ['minuitfit_2ecpp_14',['MinuitFit.cpp',['../MinuitFit_8cpp.html',1,'']]],
-  ['minuitfit_2eh_15',['MinuitFit.h',['../MinuitFit_8h.html',1,'']]],
-  ['monitor_2ecpp_16',['Monitor.cpp',['../Monitor_8cpp.html',1,'']]],
-  ['monitor_2eh_17',['Monitor.h',['../Monitor_8h.html',1,'']]]
+  ['matrixplotter_2ecpp_10',['MatrixPlotter.cpp',['../MatrixPlotter_8cpp.html',1,'']]],
+  ['mcmc_2ecpp_11',['mcmc.cpp',['../mcmc_8cpp.html',1,'']]],
+  ['mcmc_2eh_12',['mcmc.h',['../mcmc_8h.html',1,'']]],
+  ['mcmcprocessor_2ecpp_13',['MCMCProcessor.cpp',['../MCMCProcessor_8cpp.html',1,'']]],
+  ['mcmcprocessor_2eh_14',['MCMCProcessor.h',['../MCMCProcessor_8h.html',1,'']]],
+  ['minuitfit_2ecpp_15',['MinuitFit.cpp',['../MinuitFit_8cpp.html',1,'']]],
+  ['minuitfit_2eh_16',['MinuitFit.h',['../MinuitFit_8h.html',1,'']]],
+  ['monitor_2ecpp_17',['Monitor.cpp',['../Monitor_8cpp.html',1,'']]],
+  ['monitor_2eh_18',['Monitor.h',['../Monitor_8h.html',1,'']]]
 ];

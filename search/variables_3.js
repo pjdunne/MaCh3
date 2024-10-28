@@ -7,7 +7,7 @@ var searchData=
   ['chain_4',['Chain',['../classMCMCProcessor.html#a6be3bbebd4a79fe9814a3da09b3bb820',1,'MCMCProcessor']]],
   ['chainlength_5',['chainLength',['../classmcmc.html#a2b9a5344ea8074fcecdc1ae2f3cfc62a',1,'mcmc']]],
   ['channelindex_6',['ChannelIndex',['../structfdmc__base.html#aa0d36a02477d9085eb34c90f00ab06d9',1,'fdmc_base']]],
-  ['clock_7',['clock',['../classFitterBase.html#aafacee3aada764cd6f7720d1eaeed3cb',1,'FitterBase']]],
+  ['clock_7',['clock',['../classFitterBase.html#a858edb45544f690e90b60b9e041394a6',1,'FitterBase']]],
   ['coeff_5fmany_8',['coeff_many',['../structSplineMonoStruct.html#a67c5585ae47fc8a646dfae3fe9690775',1,'SplineMonoStruct']]],
   ['coeff_5fx_9',['coeff_x',['../structSplineMonoStruct.html#a47012ee423ea21f99d06eff8257cf0f0',1,'SplineMonoStruct']]],
   ['coeffindex_10',['CoeffIndex',['../classsplineFDBase.html#abcff04fee3e6790a099a0df9dbee74c2',1,'splineFDBase']]],
