@@ -101,38 +101,39 @@ Config Files</h1>
 <h1><a class="anchor" id="autotoc_md27"></a>
 Python</h1>
 <p>The plotting library comes with a python interface (see <a href="https://github.com/mach3-software/MaCh3/blob/develop/README.md#python">here</a> for installation details). Once installed, you can simply import the plotting submodule as follows:</p>
-<div class="fragment"><div class="line">from pyMaCh3 import plotting</div>
+<div class="fragment"><div class="line"><span class="keyword">from</span> pyMaCh3 <span class="keyword">import</span> plotting</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md28"></a>
 Usage</h2>
 <p>A very basic example that will plot LLH scans is:</p>
-<div class="fragment"><div class="line">from pyMaCh3 import plotting</div>
-<div class="line">import matplotlib.backends.backend_pdf</div>
-<div class="line">from matplotlib import pyplot as plt</div>
-<div class="line">import sys</div>
+<div class="fragment"><div class="line"><span class="keyword">from</span> pyMaCh3 <span class="keyword">import</span> plotting</div>
+<div class="line"><span class="keyword">import</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">matplotlib.backends.backend_pdf</a></div>
+<div class="line"><span class="keyword">from</span> matplotlib <span class="keyword">import</span> pyplot <span class="keyword">as</span> plt</div>
+<div class="line"><span class="keyword">import</span> sys</div>
 <div class="line"> </div>
 <div class="line"> </div>
-<div class="line">## create an instance of the PlottingManager</div>
-<div class="line">man = plotting.PlottingManager()</div>
 <div class="line"> </div>
-<div class="line">## use the manager to parse command line inputs passed to the scripts</div>
-<div class="line">man.parse_inputs(sys.argv)</div>
+<div class="line">man = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">plotting.PlottingManager</a>()</div>
 <div class="line"> </div>
-<div class="line">## open a pdf file to save the generated plots to </div>
-<div class="line">pdf = matplotlib.backends.backend_pdf.PdfPages(&quot;LLH-scans.pdf&quot;)</div>
 <div class="line"> </div>
-<div class="line">## now just loop through all possible parameters and plot their likelihood scans using pyplot</div>
-<div class="line">for i, param in enumerate( man.input().get_known_parameters() ):</div>
+<div class="line"><a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">man.parse_inputs</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">sys.argv</a>)</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">pdf = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">matplotlib.backends.backend_pdf.PdfPages</a>(<span class="stringliteral">&quot;LLH-scans.pdf&quot;</span>)</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"><span class="keywordflow">for</span> i, param <span class="keywordflow">in</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">enumerate</a>( <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">man.input</a>().<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">get_known_parameters</a>() ):</div>
 <div class="line">    </div>
-<div class="line">    fig = plt.figure()</div>
-<div class="line">    plt.title(man.style().prettify_parameter_name(param))</div>
+<div class="line">    fig = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">plt.figure</a>()</div>
+<div class="line">    <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">plt.title</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">man.style</a>().<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">prettify_parameter_name</a>(param))</div>
 <div class="line"> </div>
-<div class="line">    for file_id in range(man.input().get_n_input_files()):</div>
-<div class="line">        llh_scan = man.input().get_llh_scan(file_id, param, &quot;sample&quot;)</div>
-<div class="line">        plt.plot(llh_scan[0], llh_scan[1])</div>
+<div class="line">    <span class="keywordflow">for</span> file_id <span class="keywordflow">in</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">range</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">man.input</a>().<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">get_n_input_files</a>()):</div>
+<div class="line">        llh_scan = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">man.input</a>().<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">get_llh_scan</a>(file_id, param, <span class="stringliteral">&quot;sample&quot;</span>)</div>
+<div class="line">        <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">plt.plot</a>(llh_scan[0], llh_scan[1])</div>
 <div class="line">    </div>
-<div class="line">    pdf.savefig( fig )</div>
+<div class="line">    <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pdf.savefig</a>( fig )</div>
 <div class="line"> </div>
-<div class="line">pdf.close()</div>
+<div class="line"><a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">pdf.close</a>()</div>
+<div class="ttc" id="aYamlHelper_8h_html_a1a6adcb8b24bfbdcb936ced6812e1b0c"><div class="ttname"><a href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">GetFromManager</a></div><div class="ttdeci">Type GetFromManager(const YAML::Node &amp;node, Type defval)</div><div class="ttdoc">Get content of config file if node is not found take default value specified.</div><div class="ttdef"><b>Definition</b> <a href="YamlHelper_8h_source.html#l00021">YamlHelper.h:21</a></div></div>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md29"></a>
 Apps</h1>
 <p>There are a few pre-written applications to plot some standard things that we typically look at (there will be some more to follow but they need to be "modernised" to use plotting library)</p>
