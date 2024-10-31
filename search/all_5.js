@@ -14,7 +14,7 @@ var searchData=
   ['datasample2d_11',['dataSample2D',['../classsamplePDFBase.html#aeb2636b03955525ed586f1bb7748bc96',1,'samplePDFBase']]],
   ['dathist_12',['dathist',['../classsamplePDFBase.html#a695ac7419652443240feb046f14ba1bb',1,'samplePDFBase']]],
   ['dathist2d_13',['dathist2d',['../classsamplePDFBase.html#a22cd9b0e8664b6e0859e34a51731fadc',1,'samplePDFBase']]],
-  ['debug_14',['debug',['../classSampleSummary.html#a39f6281cf13b70266fc22fe46555dbe0',1,'SampleSummary::Debug'],['../md_README.html#autotoc_md14',1,'Debug']]],
+  ['debug_14',['debug',['../classSampleSummary.html#a807e348a85fb460c5ca4a1ce56d08aab',1,'SampleSummary::Debug'],['../md_README.html#autotoc_md14',1,'Debug']]],
   ['declarenewmode_15',['DeclareNewMode',['../classMaCh3Modes.html#ad32518cbc4d3c4d45c3737193e637cb8',1,'MaCh3Modes']]],
   ['default_5fplotting_5fconfig_16',['DEFAULT_PLOTTING_CONFIG',['../classMaCh3Plotting_1_1PlottingManager.html#a1947b4f022707ef6f570787ec62ba90c',1,'MaCh3Plotting::PlottingManager']]],
   ['default_5fstyle_5fconfig_17',['DEFAULT_STYLE_CONFIG',['../classMaCh3Plotting_1_1PlottingManager.html#a2e234f2546aa3eb2c7d97e2f28024511',1,'MaCh3Plotting::PlottingManager']]],
@@ -43,7 +43,7 @@ var searchData=
   ['drawratiostack_40',['drawRatioStack',['../PlotLLH_8cpp.html#a22a044e77ac75863b8962c3a38b95ef7',1,'PlotLLH.cpp']]],
   ['draws_41',['Draws',['../RHat_8cpp.html#a9adc829d645affbb93eff1775ab7c0c6',1,'RHat.cpp']]],
   ['drawsfolded_42',['DrawsFolded',['../RHat_8cpp.html#a7e7fe290fda4362be54b8cf5d56fea51',1,'RHat.cpp']]],
-  ['dummy_5fvalue_43',['dummy_value',['../structfdmc__base.html#a5a3e90e0db443a8f49eec210a47d6351',1,'fdmc_base']]],
+  ['dummy_5fvalue_43',['dummy_value',['../structFarDetectorCoreInfo.html#a6999d8f0b1299aaad447cd1886110ffa',1,'FarDetectorCoreInfo']]],
   ['dummyfile_44',['DUMMYFILE',['../PlotMCMC__Diagnosis_8cpp.html#aff052b2c086f67396715402e80de5fd7',1,'PlotMCMC_Diagnosis.cpp']]],
   ['dump_45',['Dump',['../structMaCh3Plotting_1_1InputFile.html#a0897b76fdbfc674ed94da1d2b4adb0a2',1,'MaCh3Plotting::InputFile']]],
   ['dumpmatrixtofile_46',['DumpMatrixToFile',['../classcovarianceXsec.html#a5cffa7b3221e1a49706ea8a9fe0f826c',1,'covarianceXsec']]]

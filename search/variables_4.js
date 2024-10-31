@@ -14,7 +14,7 @@ var searchData=
   ['datasample2d_11',['dataSample2D',['../classsamplePDFBase.html#aeb2636b03955525ed586f1bb7748bc96',1,'samplePDFBase']]],
   ['dathist_12',['dathist',['../classsamplePDFBase.html#a695ac7419652443240feb046f14ba1bb',1,'samplePDFBase']]],
   ['dathist2d_13',['dathist2d',['../classsamplePDFBase.html#a22cd9b0e8664b6e0859e34a51731fadc',1,'samplePDFBase']]],
-  ['debug_14',['Debug',['../classSampleSummary.html#a39f6281cf13b70266fc22fe46555dbe0',1,'SampleSummary']]],
+  ['debug_14',['Debug',['../classSampleSummary.html#a807e348a85fb460c5ca4a1ce56d08aab',1,'SampleSummary']]],
   ['default_5fplotting_5fconfig_15',['DEFAULT_PLOTTING_CONFIG',['../classMaCh3Plotting_1_1PlottingManager.html#a1947b4f022707ef6f570787ec62ba90c',1,'MaCh3Plotting::PlottingManager']]],
   ['default_5fstyle_5fconfig_16',['DEFAULT_STYLE_CONFIG',['../classMaCh3Plotting_1_1PlottingManager.html#a2e234f2546aa3eb2c7d97e2f28024511',1,'MaCh3Plotting::PlottingManager']]],
   ['default_5ftranslation_5fconfig_17',['DEFAULT_TRANSLATION_CONFIG',['../classMaCh3Plotting_1_1PlottingManager.html#a59d9e05c0590931aa260d81cd97bf3e4',1,'MaCh3Plotting::PlottingManager']]],
@@ -30,6 +30,6 @@ var searchData=
   ['drawrange_27',['DrawRange',['../classMCMCProcessor.html#a4abe633b264acd9b0459c7b8ccd8b9df',1,'MCMCProcessor']]],
   ['draws_28',['Draws',['../RHat_8cpp.html#a9adc829d645affbb93eff1775ab7c0c6',1,'RHat.cpp']]],
   ['drawsfolded_29',['DrawsFolded',['../RHat_8cpp.html#a7e7fe290fda4362be54b8cf5d56fea51',1,'RHat.cpp']]],
-  ['dummy_5fvalue_30',['dummy_value',['../structfdmc__base.html#a5a3e90e0db443a8f49eec210a47d6351',1,'fdmc_base']]],
+  ['dummy_5fvalue_30',['dummy_value',['../structFarDetectorCoreInfo.html#a6999d8f0b1299aaad447cd1886110ffa',1,'FarDetectorCoreInfo']]],
   ['dummyfile_31',['DUMMYFILE',['../PlotMCMC__Diagnosis_8cpp.html#aff052b2c086f67396715402e80de5fd7',1,'PlotMCMC_Diagnosis.cpp']]]
 ];

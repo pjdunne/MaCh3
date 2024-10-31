@@ -28,7 +28,7 @@ var searchData=
   ['central_5fvalue_25',['Central_Value',['../classMCMCProcessor.html#aad661c6d53f9f891e18ff8ccdbd08479',1,'MCMCProcessor']]],
   ['chain_26',['Chain',['../classMCMCProcessor.html#a6be3bbebd4a79fe9814a3da09b3bb820',1,'MCMCProcessor']]],
   ['chainlength_27',['chainLength',['../classmcmc.html#a2b9a5344ea8074fcecdc1ae2f3cfc62a',1,'mcmc']]],
-  ['channelindex_28',['ChannelIndex',['../structfdmc__base.html#aa0d36a02477d9085eb34c90f00ab06d9',1,'fdmc_base']]],
+  ['channelindex_28',['ChannelIndex',['../structFarDetectorCoreInfo.html#a87395547f1572d6dfd5bce3e2352611c',1,'FarDetectorCoreInfo']]],
   ['checkbonferonicorrectedpvalue_29',['CheckBonferoniCorrectedpValue',['../StatisticalUtils_8h.html#adba5abb16555092305a8b459f94a24c1',1,'StatisticalUtils.h']]],
   ['checkbounds_30',['checkbounds',['../classcovarianceBase.html#ac3c3e322dc06ce6a44a887ae13e522ae',1,'covarianceBase::CheckBounds()'],['../classcovarianceOsc.html#ad181d61769506529f8f00c10c2a86944',1,'covarianceOsc::CheckBounds()']]],
   ['checkcorrectinitialisation_31',['CheckCorrectInitialisation',['../classcovarianceXsec.html#a688e670224e9e1fac3d6de97a2016f1a',1,'covarianceXsec']]],
@@ -62,7 +62,7 @@ var searchData=
   ['constructtf1_59',['ConstructTF1',['../classTF1__red.html#a06dd51dfd5a00286d99e688a8c0c5d6a',1,'TF1_red']]],
   ['constructtspline3_60',['ConstructTSpline3',['../classTSpline3__red.html#a597509d5b15f84e2ae77f91831e1266d',1,'TSpline3_red']]],
   ['convertfiletypenames_61',['convertFileTypeNames',['../classMaCh3Plotting_1_1InputManager.html#a487b62643d1a5c63415685d662b7118d',1,'MaCh3Plotting::InputManager']]],
-  ['convertth2dtoth2poly_62',['convertth2dtoth2poly',['../Structs_8cpp.html#a7b09dee9c914bc3c3dd450e4a5cd2ce5',1,'ConvertTH2DToTH2Poly(TH2D *hist):&#160;Structs.cpp'],['../Structs_8h.html#aa9cbcbd12e52cadbc498db3b78784104',1,'ConvertTH2DtoTH2Poly(TH2D *TH2Dhist):&#160;Structs.h']]],
+  ['convertth2dtoth2poly_62',['convertth2dtoth2poly',['../Structs_8h.html#aa9cbcbd12e52cadbc498db3b78784104',1,'ConvertTH2DtoTH2Poly(TH2D *TH2Dhist):&#160;Structs.h'],['../Structs_8cpp.html#a7b09dee9c914bc3c3dd450e4a5cd2ce5',1,'ConvertTH2DToTH2Poly(TH2D *hist):&#160;Structs.cpp']]],
   ['convertth2polytoth2d_63',['convertth2polytoth2d',['../Structs_8h.html#af532e371f45a26f2b180d96b82b7d496',1,'ConvertTH2PolyToTH2D(TH2Poly *poly, TH2D *TH2Dhist):&#160;Structs.cpp'],['../Structs_8cpp.html#a1033cf3aa8abe6ab7135896aa9f3790b',1,'ConvertTH2PolyToTH2D(TH2Poly *poly, TH2D *h2dhist):&#160;Structs.cpp']]],
   ['copydir_64',['CopyDir',['../CombineMaCh3Chains_8cpp.html#a1cecdc9d9c387545f811006b11f0ba71',1,'CombineMaCh3Chains.cpp']]],
   ['copypartoblockhist_65',['copyParToBlockHist',['../GetPostfitParamPlots_8cpp.html#adfd2b4bbdecfd669927e523e17012c8c',1,'GetPostfitParamPlots.cpp']]],
@@ -103,5 +103,5 @@ var searchData=
   ['cudacheckerror_100',['CudaCheckError',['../gpuUtils_8cuh.html#a0345e89c96b417069f1e64674cc77318',1,'gpuUtils.cuh']]],
   ['cudasafecall_101',['CudaSafeCall',['../gpuUtils_8cuh.html#a29078d993eacd9e9e6cb4a8ad9d248b8',1,'gpuUtils.cuh']]],
   ['curr_5fvalue_102',['curr_value',['../classparticle.html#a3fa66bc070aa43b66389b8e0b9754f32',1,'particle']]],
-  ['currsegment_103',['CurrSegment',['../structFastSplineInfo.html#abbaf75f4c41bd333cae72bf59856becb',1,'FastSplineInfo']]]
+  ['currsegment_103',['CurrSegment',['../structFastSplineInfo.html#a80e4c1195099d2c34a1a511e4f749fe4',1,'FastSplineInfo']]]
 ];

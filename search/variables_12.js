@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['target_0',['Target',['../structfdmc__base.html#aff6f0d938f770de0c192d256e8da8dce',1,'fdmc_base']]],
+  ['target_0',['Target',['../structFarDetectorCoreInfo.html#a23013785a91a3a417914c2e7c79e8fef',1,'FarDetectorCoreInfo']]],
   ['targetcompression_1',['targetCompression',['../CombineMaCh3Chains_8cpp.html#a8ea7adaa7c7b0783e5562e9e8673fbe1',1,'CombineMaCh3Chains.cpp']]],
   ['targets_2',['targets',['../structXsecNorms4.html#a0f6b21994200f446f21c42ec1cebf9bb',1,'XsecNorms4']]],
   ['text_5fcoeff_5fx_3',['text_coeff_x',['../classSMonolithGPU.html#a1fb766b50293e6b611c45aa21c5c1b9c',1,'SMonolithGPU']]],
@@ -26,8 +26,8 @@ var searchData=
   ['total_5fllh_5frate_5fdata_5fdraw_23',['total_llh_rate_data_draw',['../classSampleSummary.html#aaf055562efe3e5f2592942f5151ece22',1,'SampleSummary']]],
   ['total_5fllh_5frate_5fpredfluc_5fdraw_24',['total_llh_rate_predfluc_draw',['../classSampleSummary.html#a2ebe701d114669fdfcf61e1680bb144d',1,'SampleSummary']]],
   ['total_5fsteps_25',['total_steps',['../classadaptive__mcmc_1_1AdaptiveMCMCHandler.html#ab2837af4566e2d62db7b76f9527fb6d7',1,'adaptive_mcmc::AdaptiveMCMCHandler']]],
-  ['total_5fw_26',['total_w',['../structfdmc__base.html#a4c4783b6eb014adbaf180f10e94e7d96',1,'fdmc_base']]],
-  ['total_5fweight_5fpointers_27',['total_weight_pointers',['../structfdmc__base.html#a547100c42169bb7085b01abe4fdee44d',1,'fdmc_base']]],
+  ['total_5fw_26',['total_w',['../structFarDetectorCoreInfo.html#ae65d681ee0920766f7865f3e79bbac02',1,'FarDetectorCoreInfo']]],
+  ['total_5fweight_5fpointers_27',['total_weight_pointers',['../structFarDetectorCoreInfo.html#a6935feab558a39ccc611bb22c16510e5',1,'FarDetectorCoreInfo']]],
   ['totalnsamples_28',['TotalNSamples',['../classFitterBase.html#abe9814558b8ff1bccdde3b4c894467e6',1,'FitterBase']]],
   ['totalonsplitplots_29',['totalOnSplitPlots',['../PlotLLH_8cpp.html#a6446498097144fc5f704c241f009d44d',1,'PlotLLH.cpp']]],
   ['transfermat_30',['TransferMat',['../classPCAHandler.html#a1d9302633ed96ec57fbe26d25cbcee61',1,'PCAHandler']]],

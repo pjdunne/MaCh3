@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['mach3plotting_0',['MaCh3Plotting',['../namespaceMaCh3Plotting.html',1,'']]],
-  ['mach3utils_1',['MaCh3Utils',['../namespaceMaCh3Utils.html',1,'']]]
+  ['m3_0',['M3',['../namespaceM3.html',1,'']]],
+  ['mach3plotting_1',['MaCh3Plotting',['../namespaceMaCh3Plotting.html',1,'']]],
+  ['mach3utils_2',['MaCh3Utils',['../namespaceMaCh3Utils.html',1,'']]]
 ];

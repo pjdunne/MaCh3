@@ -6,7 +6,7 @@ var searchData=
   ['central_5fvalue_3',['Central_Value',['../classMCMCProcessor.html#aad661c6d53f9f891e18ff8ccdbd08479',1,'MCMCProcessor']]],
   ['chain_4',['Chain',['../classMCMCProcessor.html#a6be3bbebd4a79fe9814a3da09b3bb820',1,'MCMCProcessor']]],
   ['chainlength_5',['chainLength',['../classmcmc.html#a2b9a5344ea8074fcecdc1ae2f3cfc62a',1,'mcmc']]],
-  ['channelindex_6',['ChannelIndex',['../structfdmc__base.html#aa0d36a02477d9085eb34c90f00ab06d9',1,'fdmc_base']]],
+  ['channelindex_6',['ChannelIndex',['../structFarDetectorCoreInfo.html#a87395547f1572d6dfd5bce3e2352611c',1,'FarDetectorCoreInfo']]],
   ['clock_7',['clock',['../classFitterBase.html#a858edb45544f690e90b60b9e041394a6',1,'FitterBase']]],
   ['coeff_5fmany_8',['coeff_many',['../structSplineMonoStruct.html#a67c5585ae47fc8a646dfae3fe9690775',1,'SplineMonoStruct']]],
   ['coeff_5fx_9',['coeff_x',['../structSplineMonoStruct.html#a47012ee423ea21f99d06eff8257cf0f0',1,'SplineMonoStruct']]],
@@ -32,5 +32,5 @@ var searchData=
   ['cpu_5fweights_5fvar_29',['cpu_weights_var',['../classSMonolith.html#ab6a29f13d8e6efb380f2b9d59cfa88fc',1,'SMonolith']]],
   ['crosssectionparameters_30',['CrossSectionParameters',['../GetPostfitParamPlots_8cpp.html#a5307771642312031f0050189b493a621',1,'GetPostfitParamPlots.cpp']]],
   ['curr_5fvalue_31',['curr_value',['../classparticle.html#a3fa66bc070aa43b66389b8e0b9754f32',1,'particle']]],
-  ['currsegment_32',['CurrSegment',['../structFastSplineInfo.html#abbaf75f4c41bd333cae72bf59856becb',1,'FastSplineInfo']]]
+  ['currsegment_32',['CurrSegment',['../structFastSplineInfo.html#a80e4c1195099d2c34a1a511e4f749fe4',1,'FastSplineInfo']]]
 ];

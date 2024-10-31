@@ -3,9 +3,9 @@ var searchData=
   ['targetmat_5ftostring_0',['TargetMat_ToString',['../Structs_8h.html#a36b7eae1e9918d93ac6912d88c498a24',1,'Structs.h']]],
   ['terminaltostring_1',['TerminalToString',['../namespaceMaCh3Utils.html#a10a037c1bcf48073ae105968128a55c5',1,'MaCh3Utils']]],
   ['teststatistic_5ftostring_2',['TestStatistic_ToString',['../Structs_8h.html#afe33f23691e6b5e3e0f5ab97aaeb7726',1,'Structs.h']]],
-  ['tf1_5fred_3',['tf1_red',['../classTF1__red.html#a767d972c8e46f4c861944098a833a9fb',1,'TF1_red::TF1_red(_int_ nSize, _float_ *Array)'],['../classTF1__red.html#a7ee6185f2184824a190d146375522952',1,'TF1_red::TF1_red(TF1 *&amp;Function)'],['../classTF1__red.html#a503700d13da3bc04710c6a52e14877e6',1,'TF1_red::TF1_red()']]],
+  ['tf1_5fred_3',['tf1_red',['../classTF1__red.html#adead62e9b0591aec30925907f6972086',1,'TF1_red::TF1_red(M3::int_t nSize, M3::float_t *Array)'],['../classTF1__red.html#a7ee6185f2184824a190d146375522952',1,'TF1_red::TF1_red(TF1 *&amp;Function)'],['../classTF1__red.html#a503700d13da3bc04710c6a52e14877e6',1,'TF1_red::TF1_red()']]],
   ['tgraphtoth1d_4',['TGraphToTH1D',['../group__Utils.html#gaf1329db6e5a742f7dcfa154629c54542',1,'MaCh3Plotting']]],
-  ['tgraphtovector_5',['tgraphtovector',['../group__Utils.html#ga2f5f6d967ac631277a0d0dab0a053c6e',1,'MaCh3Plotting::TGraphToVector(TGraph2D graph)'],['../group__Utils.html#gacb97b56df54ad5f4a5bf2ea2e6077c42',1,'MaCh3Plotting::TGraphToVector(TGraph graph)']]],
+  ['tgraphtovector_5',['tgraphtovector',['../group__Utils.html#ga30c29bb2cae29751d106bd93dfeaff81',1,'MaCh3Plotting::TGraphToVector(TGraph2D graph)'],['../group__Utils.html#gabee3ac13b77811574c1650016e81a229',1,'MaCh3Plotting::TGraphToVector(TGraph graph)']]],
   ['three_5fvector_5faddition_6',['three_vector_addition',['../classPSO.html#a440e0cb32000cf9c5d2170d0c2d08dc2',1,'PSO']]],
   ['throwparameters_7',['throwParameters',['../classcovarianceBase.html#aa5d82895bcbae7773b6813c02cf2f485',1,'covarianceBase']]],
   ['throwparcurr_8',['throwParCurr',['../classcovarianceBase.html#a4e92a9db846d956473efbe5712c71d31',1,'covarianceBase']]],
@@ -20,5 +20,5 @@ var searchData=
   ['transfertopca_17',['TransferToPCA',['../classcovarianceBase.html#a651f5ecd8973918d5683606a607fa88c',1,'covarianceBase']]],
   ['translatename_18',['translateName',['../classMaCh3Plotting_1_1InputManager.html#ab4ecb1daf7b700137a15c3cad48cdaa4',1,'MaCh3Plotting::InputManager']]],
   ['tresponsefunction_5fred_19',['TResponseFunction_red',['../classTResponseFunction__red.html#a50443a78985e0c9b16ffc36ebc1d2e91',1,'TResponseFunction_red']]],
-  ['tspline3_5fred_20',['tspline3_red',['../classTSpline3__red.html#a643d07969140e64bb55e8639552d1209',1,'TSpline3_red::TSpline3_red(TSpline3 *&amp;spline, SplineInterpolation InterPolation=kTSpline3)'],['../classTSpline3__red.html#a580d22535ce1e881c53aabe7bdb7f945',1,'TSpline3_red::TSpline3_red(_float_ *X, _float_ *Y, _int_ N, _float_ **P)'],['../classTSpline3__red.html#ae76e72436b20a59ee33eb1d41dbe59eb',1,'TSpline3_red::TSpline3_red()']]]
+  ['tspline3_5fred_20',['tspline3_red',['../classTSpline3__red.html#a643d07969140e64bb55e8639552d1209',1,'TSpline3_red::TSpline3_red(TSpline3 *&amp;spline, SplineInterpolation InterPolation=kTSpline3)'],['../classTSpline3__red.html#a49e4386a4d7870a8f3a9f744d1b3ce7c',1,'TSpline3_red::TSpline3_red(M3::float_t *X, M3::float_t *Y, M3::int_t N, M3::float_t **P)'],['../classTSpline3__red.html#ae76e72436b20a59ee33eb1d41dbe59eb',1,'TSpline3_red::TSpline3_red()']]]
 ];

@@ -44,7 +44,7 @@ var searchData=
   ['constructtf1_41',['ConstructTF1',['../classTF1__red.html#a06dd51dfd5a00286d99e688a8c0c5d6a',1,'TF1_red']]],
   ['constructtspline3_42',['ConstructTSpline3',['../classTSpline3__red.html#a597509d5b15f84e2ae77f91831e1266d',1,'TSpline3_red']]],
   ['convertfiletypenames_43',['convertFileTypeNames',['../classMaCh3Plotting_1_1InputManager.html#a487b62643d1a5c63415685d662b7118d',1,'MaCh3Plotting::InputManager']]],
-  ['convertth2dtoth2poly_44',['convertth2dtoth2poly',['../Structs_8cpp.html#a7b09dee9c914bc3c3dd450e4a5cd2ce5',1,'ConvertTH2DToTH2Poly(TH2D *hist):&#160;Structs.cpp'],['../Structs_8h.html#aa9cbcbd12e52cadbc498db3b78784104',1,'ConvertTH2DtoTH2Poly(TH2D *TH2Dhist):&#160;Structs.h']]],
+  ['convertth2dtoth2poly_44',['convertth2dtoth2poly',['../Structs_8h.html#aa9cbcbd12e52cadbc498db3b78784104',1,'ConvertTH2DtoTH2Poly(TH2D *TH2Dhist):&#160;Structs.h'],['../Structs_8cpp.html#a7b09dee9c914bc3c3dd450e4a5cd2ce5',1,'ConvertTH2DToTH2Poly(TH2D *hist):&#160;Structs.cpp']]],
   ['convertth2polytoth2d_45',['convertth2polytoth2d',['../Structs_8cpp.html#a1033cf3aa8abe6ab7135896aa9f3790b',1,'ConvertTH2PolyToTH2D(TH2Poly *poly, TH2D *h2dhist):&#160;Structs.cpp'],['../Structs_8h.html#af532e371f45a26f2b180d96b82b7d496',1,'ConvertTH2PolyToTH2D(TH2Poly *poly, TH2D *TH2Dhist):&#160;Structs.cpp']]],
   ['copydir_46',['CopyDir',['../CombineMaCh3Chains_8cpp.html#a1cecdc9d9c387545f811006b11f0ba71',1,'CombineMaCh3Chains.cpp']]],
   ['copypartoblockhist_47',['copyParToBlockHist',['../GetPostfitParamPlots_8cpp.html#adfd2b4bbdecfd669927e523e17012c8c',1,'GetPostfitParamPlots.cpp']]],

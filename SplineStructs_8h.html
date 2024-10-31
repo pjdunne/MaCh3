@@ -91,144 +91,146 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="covarianceXsec_8h_source.html">covariance/covarianceXsec.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Structs_8h_source.html">samplePDF/Structs.h</a>&quot;</code><br />
+<code>#include &lt;cmath&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for SplineStructs.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="SplineStructs_8h__incl.png" border="0" usemap="#asplines_2SplineStructs_8h" alt=""/></div>
 <map name="asplines_2SplineStructs_8h" id="asplines_2SplineStructs_8h">
-<area shape="rect" title=" " alt="" coords="380,5,535,31"/>
-<area shape="rect" href="covarianceXsec_8h.html" title=" " alt="" coords="815,79,1006,105"/>
-<area shape="poly" title=" " alt="" coords="535,29,818,73,818,79,534,34"/>
-<area shape="rect" href="Structs_8h.html" title=" " alt="" coords="838,521,983,547"/>
-<area shape="poly" title=" " alt="" coords="380,31,267,48,145,76,91,94,47,115,18,138,11,151,8,164,8,387,14,401,32,415,62,428,102,440,204,462,329,481,599,509,822,525,822,530,598,514,328,486,203,467,100,445,60,433,30,419,10,404,3,388,3,164,6,149,14,135,44,110,89,89,143,71,266,43,379,26"/>
-<area shape="rect" href="covarianceBase_8h.html" title=" " alt="" coords="1190,153,1381,178"/>
-<area shape="poly" title=" " alt="" coords="975,103,1207,147,1206,152,974,108"/>
-<area shape="poly" title=" " alt="" coords="913,105,913,238,913,388,913,505,908,505,908,388,908,238,908,105"/>
-<area shape="rect" href="manager_8h.html" title=" " alt="" coords="1246,300,1381,326"/>
-<area shape="poly" title=" " alt="" coords="1276,180,1254,213,1249,232,1252,251,1265,272,1283,289,1280,293,1261,275,1247,253,1244,232,1249,211,1271,178"/>
-<area shape="poly" title=" " alt="" coords="1252,181,1210,200,1167,228,1148,246,1134,265,1124,287,1120,312,1120,388,1116,413,1106,436,1091,456,1071,473,1025,500,978,519,976,514,1023,495,1068,469,1087,452,1102,433,1111,412,1115,388,1115,311,1118,286,1129,263,1145,242,1164,224,1208,196,1249,176"/>
-<area shape="rect" href="CovarianceUtils_8h.html" title=" " alt="" coords="2254,300,2445,326"/>
-<area shape="poly" title=" " alt="" coords="1375,176,2245,295,2245,300,1374,182"/>
-<area shape="rect" href="AdaptiveMCMCHandler_8h.html" title=" " alt="" coords="1456,226,1691,252"/>
-<area shape="poly" title=" " alt="" coords="1335,176,1510,220,1509,225,1334,181"/>
-<area shape="rect" href="PCAHandler_8h.html" title=" " alt="" coords="1262,226,1432,252"/>
-<area shape="poly" title=" " alt="" coords="1297,177,1328,213,1324,216,1293,180"/>
-<area shape="rect" href="MaCh3Logger_8h.html" title=" " alt="" coords="962,668,1129,694"/>
-<area shape="poly" title=" " alt="" coords="1245,317,949,324,754,333,553,345,364,364,206,388,144,404,98,420,68,439,61,449,59,459,59,535,61,556,68,571,79,582,93,591,129,604,173,618,238,635,325,648,538,666,762,675,947,677,947,683,762,680,537,672,324,654,237,640,171,623,128,609,90,596,75,586,63,574,56,557,53,535,53,459,56,447,65,435,95,416,143,398,204,383,363,358,552,340,754,327,949,319,1245,312"/>
-<area shape="poly" title=" " alt="" coords="1301,328,1246,376,1217,405,1195,430,1172,452,1137,475,1068,504,999,522,998,517,1067,499,1135,471,1168,448,1191,426,1213,401,1242,372,1297,324"/>
-<area shape="rect" href="MaCh3Exception_8h.html" title=" " alt="" coords="1336,595,1518,620"/>
-<area shape="poly" title=" " alt="" coords="1315,326,1314,359,1320,399,1339,452,1363,502,1412,581,1407,583,1359,505,1334,454,1315,400,1309,360,1310,326"/>
-<area shape="rect" href="YamlHelper_8h.html" title=" " alt="" coords="1902,521,2055,547"/>
-<area shape="poly" title=" " alt="" coords="1369,324,1445,344,1529,371,1581,397,1767,465,1923,514,1921,519,1765,470,1579,402,1527,376,1444,349,1367,329"/>
-<area shape="rect" href="Monitor_8h.html" title=" " alt="" coords="1449,447,1578,473"/>
-<area shape="poly" title=" " alt="" coords="1316,326,1322,361,1329,381,1341,398,1361,415,1384,428,1435,446,1433,451,1382,433,1358,419,1337,401,1324,383,1317,363,1311,327"/>
-<area shape="rect" href="MaCh3Modes_8h.html" title=" " alt="" coords="1351,374,1516,399"/>
-<area shape="poly" title=" " alt="" coords="1335,324,1401,363,1399,368,1332,329"/>
-<area shape="rect" title=" " alt="" coords="931,742,1042,768"/>
-<area shape="poly" title=" " alt="" coords="1038,696,1008,732,1004,728,1034,693"/>
-<area shape="rect" title=" " alt="" coords="1342,742,1413,768"/>
-<area shape="poly" title=" " alt="" coords="1103,692,1327,740,1326,745,1101,697"/>
-<area shape="rect" title=" " alt="" coords="457,742,525,768"/>
-<area shape="poly" title=" " alt="" coords="962,696,540,750,540,745,961,691"/>
-<area shape="rect" title=" " alt="" coords="1067,742,1144,768"/>
-<area shape="poly" title=" " alt="" coords="1057,693,1088,728,1083,732,1053,696"/>
-<area shape="rect" title=" " alt="" coords="1787,742,1840,768"/>
-<area shape="poly" title=" " alt="" coords="1129,688,1772,747,1771,752,1129,693"/>
-<area shape="poly" title=" " alt="" coords="838,538,667,542,461,551,363,558,279,568,217,581,197,589,185,596,180,608,185,619,199,628,222,636,294,650,390,661,503,668,744,676,947,678,947,683,744,682,503,674,390,666,293,656,221,641,196,632,181,622,174,608,181,593,194,584,215,576,278,563,362,553,460,545,667,536,837,533"/>
-<area shape="poly" title=" " alt="" coords="983,545,1060,563,1141,592,1204,625,1263,663,1354,730,1350,734,1260,667,1201,630,1139,597,1059,569,981,550"/>
-<area shape="poly" title=" " alt="" coords="838,538,665,541,455,550,356,558,270,568,207,581,186,588,174,597,162,612,158,627,159,641,165,653,193,677,235,697,286,714,342,727,441,745,441,750,341,732,285,719,233,702,190,681,161,656,154,642,152,626,158,610,170,593,184,584,205,576,269,563,355,553,455,545,665,536,838,533"/>
-<area shape="rect" title=" " alt="" coords="1710,595,1775,620"/>
-<area shape="poly" title=" " alt="" coords="984,534,1115,538,1290,548,1490,565,1695,592,1694,597,1489,571,1290,553,1115,544,984,539"/>
-<area shape="rect" title=" " alt="" coords="1203,595,1261,620"/>
-<area shape="poly" title=" " alt="" coords="968,545,1185,592,1189,593,1188,598,1183,597,967,550"/>
-<area shape="rect" title=" " alt="" coords="195,595,261,620"/>
-<area shape="poly" title=" " alt="" coords="838,541,593,558,437,574,277,597,276,592,436,569,592,553,837,536"/>
-<area shape="rect" title=" " alt="" coords="286,595,325,620"/>
-<area shape="poly" title=" " alt="" coords="837,540,741,545,618,555,481,572,341,597,340,592,481,566,618,549,740,539,837,534"/>
-<area shape="rect" title=" " alt="" coords="349,595,387,620"/>
-<area shape="poly" title=" " alt="" coords="838,541,644,557,525,574,403,597,402,592,524,569,644,552,837,536"/>
-<area shape="rect" title=" " alt="" coords="412,595,522,620"/>
-<area shape="poly" title=" " alt="" coords="838,549,538,597,537,592,837,544"/>
-<area shape="rect" title=" " alt="" coords="546,595,622,620"/>
-<area shape="poly" title=" " alt="" coords="854,550,638,597,637,592,853,545"/>
-<area shape="rect" title=" " alt="" coords="646,595,701,620"/>
-<area shape="poly" title=" " alt="" coords="871,550,716,596,715,591,870,545"/>
-<area shape="rect" title=" " alt="" coords="725,595,846,620"/>
-<area shape="poly" title=" " alt="" coords="891,550,821,589,818,584,888,545"/>
-<area shape="rect" title=" " alt="" coords="1592,595,1685,620"/>
-<area shape="poly" title=" " alt="" coords="984,539,1530,592,1577,597,1577,602,1529,597,983,545"/>
-<area shape="rect" title=" " alt="" coords="870,595,951,620"/>
-<area shape="poly" title=" " alt="" coords="913,547,913,579,908,579,908,547"/>
-<area shape="rect" title=" " alt="" coords="1950,595,2010,620"/>
-<area shape="poly" title=" " alt="" coords="983,532,1151,533,1385,540,1656,558,1796,573,1935,592,1934,597,1796,578,1656,564,1385,545,1151,538,983,537"/>
-<area shape="rect" title=" " alt="" coords="976,595,1128,620"/>
-<area shape="poly" title=" " alt="" coords="936,545,1016,585,1013,590,933,550"/>
-<area shape="poly" title=" " alt="" coords="984,543,1324,589,1323,595,983,548"/>
-<area shape="poly" title=" " alt="" coords="1362,624,1126,668,1125,662,1361,618"/>
-<area shape="poly" title=" " alt="" coords="1424,622,1405,669,1387,728,1382,727,1400,667,1419,620"/>
-<area shape="poly" title=" " alt="" coords="1460,618,1773,735,1771,740,1458,623"/>
-<area shape="rect" title=" " alt="" coords="1415,668,1492,694"/>
-<area shape="poly" title=" " alt="" coords="1434,620,1446,653,1441,655,1429,621"/>
-<area shape="poly" title=" " alt="" coords="1995,545,2010,561,2024,580,2031,601,2030,612,2025,622,2007,639,1982,654,1919,681,1839,703,1750,720,1570,743,1429,754,1428,748,1569,737,1749,715,1838,698,1917,676,1980,650,2003,635,2021,619,2025,610,2026,602,2020,583,2006,564,1991,549"/>
-<area shape="poly" title=" " alt="" coords="2056,536,2125,542,2197,552,2260,569,2283,580,2299,593,2305,607,2299,622,2269,648,2221,671,2163,691,2097,708,1963,735,1856,751,1855,746,1962,730,2096,703,2161,686,2219,666,2266,644,2295,619,2300,607,2295,596,2280,584,2258,574,2196,558,2125,547,2056,541"/>
-<area shape="poly" title=" " alt="" coords="1939,550,1791,594,1789,589,1938,545"/>
-<area shape="poly" title=" " alt="" coords="1921,550,1701,596,1700,591,1920,545"/>
-<area shape="rect" title=" " alt="" coords="1850,595,1926,620"/>
-<area shape="poly" title=" " alt="" coords="1965,549,1917,587,1913,583,1962,545"/>
-<area shape="rect" title=" " alt="" coords="2085,595,2147,620"/>
-<area shape="poly" title=" " alt="" coords="2003,545,2080,585,2078,589,2001,550"/>
-<area shape="rect" title=" " alt="" coords="2171,595,2285,620"/>
-<area shape="poly" title=" " alt="" coords="2022,545,2172,587,2171,593,2020,550"/>
-<area shape="poly" title=" " alt="" coords="1498,476,1387,554,1323,595,1274,623,1202,649,1131,667,1130,662,1200,644,1272,618,1321,591,1384,549,1495,471"/>
-<area shape="poly" title=" " alt="" coords="1520,473,1531,514,1540,574,1539,606,1535,639,1524,669,1506,696,1469,724,1428,743,1426,738,1467,720,1502,692,1519,667,1529,637,1534,606,1534,574,1526,516,1515,474"/>
-<area shape="poly" title=" " alt="" coords="1576,471,1629,487,1688,511,1744,546,1769,568,1790,593,1807,626,1816,662,1819,697,1819,727,1813,726,1814,697,1811,663,1802,628,1786,596,1765,572,1741,550,1685,516,1627,492,1574,476"/>
-<area shape="poly" title=" " alt="" coords="1449,472,999,525,998,519,1449,466"/>
-<area shape="poly" title=" " alt="" coords="1534,471,1713,584,1710,589,1531,476"/>
-<area shape="poly" title=" " alt="" coords="1449,470,1372,488,1333,503,1296,523,1267,551,1247,583,1242,580,1263,548,1293,519,1330,498,1371,483,1448,465"/>
-<area shape="poly" title=" " alt="" coords="1509,475,1444,583,1439,580,1504,472"/>
-<area shape="poly" title=" " alt="" coords="1578,469,1887,516,1886,521,1578,474"/>
-<area shape="poly" title=" " alt="" coords="1578,468,1730,493,1796,507,1833,519,1862,547,1880,579,1875,581,1857,550,1831,523,1795,512,1729,498,1577,473"/>
-<area shape="rect" title=" " alt="" coords="2175,521,2241,547"/>
-<area shape="poly" title=" " alt="" coords="1578,465,2160,525,2159,530,1578,471"/>
-<area shape="rect" title=" " alt="" coords="2760,521,2861,547"/>
-<area shape="poly" title=" " alt="" coords="1578,462,2744,526,2744,532,1578,468"/>
-<area shape="poly" title=" " alt="" coords="1517,394,1747,419,2031,455,2163,474,2272,494,2347,513,2368,522,2376,532,2376,609,2371,629,2358,647,2338,663,2312,678,2245,702,2164,720,2077,734,1992,744,1856,754,1855,749,1991,739,2076,729,2163,715,2243,697,2310,673,2335,659,2355,644,2367,627,2371,609,2371,533,2365,526,2345,518,2271,499,2162,479,2031,460,1747,424,1516,399"/>
-<area shape="poly" title=" " alt="" coords="1436,400,1430,579,1425,579,1430,399"/>
-<area shape="poly" title=" " alt="" coords="1467,397,1590,445,1619,459,1647,470,1772,501,1887,520,1886,525,1771,506,1646,476,1617,464,1588,450,1465,402"/>
-<area shape="poly" title=" " alt="" coords="1449,398,1491,435,1487,439,1445,402"/>
-<area shape="poly" title=" " alt="" coords="2445,311,2634,314,2858,322,2962,330,3052,340,3118,354,3141,362,3155,372,3160,385,3156,400,3141,445,3119,479,3090,502,3055,518,3016,528,2972,535,2874,549,2753,568,2650,578,2560,583,2475,584,2299,585,2195,588,2074,597,2026,603,2025,597,2073,592,2195,583,2299,580,2475,579,2560,578,2650,573,2752,563,2873,544,2971,530,3014,523,3053,513,3087,498,3115,475,3136,443,3151,399,3154,386,3151,375,3139,367,3117,359,3051,346,2962,335,2857,328,2634,319,2445,317"/>
-<area shape="poly" title=" " alt="" coords="2445,312,2624,315,2832,324,2929,332,3012,342,3074,355,3095,363,3109,372,3115,386,3109,401,3082,424,3046,445,3002,462,2951,478,2834,502,2704,518,2571,528,2446,534,2256,536,2256,531,2445,528,2571,523,2703,513,2833,496,2950,473,3000,457,3044,440,3079,420,3105,398,3110,386,3105,375,3093,368,3073,360,3011,347,2929,337,2832,330,2624,321,2445,317"/>
-<area shape="poly" title=" " alt="" coords="2445,312,2629,315,2844,323,2944,331,3030,341,3094,354,3116,363,3130,372,3142,388,3148,404,3147,419,3141,433,3115,457,3076,477,3029,494,2976,508,2877,526,2876,521,2975,502,3027,489,3074,472,3112,452,3136,430,3142,417,3142,405,3137,391,3126,376,3114,367,3093,360,3029,346,2944,336,2843,329,2629,320,2445,317"/>
-<area shape="rect" title=" " alt="" coords="2570,374,2652,399"/>
-<area shape="poly" title=" " alt="" coords="2394,324,2556,367,2554,373,2393,329"/>
-<area shape="rect" title=" " alt="" coords="2676,374,2785,399"/>
-<area shape="poly" title=" " alt="" coords="2415,324,2661,370,2660,375,2414,329"/>
-<area shape="rect" title=" " alt="" coords="2809,374,2895,399"/>
-<area shape="poly" title=" " alt="" coords="2445,322,2605,342,2795,371,2794,376,2604,347,2445,327"/>
-<area shape="rect" title=" " alt="" coords="2918,374,3005,399"/>
-<area shape="poly" title=" " alt="" coords="2445,319,2652,338,2903,371,2903,376,2651,344,2445,324"/>
-<area shape="rect" title=" " alt="" coords="3029,374,3094,399"/>
-<area shape="poly" title=" " alt="" coords="2445,315,2698,332,2854,348,3014,371,3013,376,2853,354,2698,338,2445,321"/>
-<area shape="rect" title=" " alt="" coords="1591,374,1657,399"/>
-<area shape="poly" title=" " alt="" coords="2254,320,1995,337,1836,353,1672,376,1671,371,1835,348,1995,332,2253,315"/>
-<area shape="rect" title=" " alt="" coords="1681,374,1775,399"/>
-<area shape="poly" title=" " alt="" coords="2254,324,2045,344,1791,376,1790,371,2045,339,2254,319"/>
-<area shape="rect" title=" " alt="" coords="1799,374,1868,399"/>
-<area shape="poly" title=" " alt="" coords="2254,326,2085,345,1883,376,1882,371,2084,340,2253,320"/>
-<area shape="rect" title=" " alt="" coords="1891,374,2005,399"/>
-<area shape="poly" title=" " alt="" coords="2281,329,2020,375,2019,370,2280,324"/>
-<area shape="rect" title=" " alt="" coords="2028,374,2103,399"/>
-<area shape="poly" title=" " alt="" coords="2302,329,2118,375,2117,370,2301,324"/>
-<area shape="rect" title=" " alt="" coords="2127,374,2268,399"/>
-<area shape="poly" title=" " alt="" coords="2325,329,2238,369,2236,364,2322,324"/>
-<area shape="rect" title=" " alt="" coords="2292,374,2407,399"/>
-<area shape="poly" title=" " alt="" coords="2352,326,2352,358,2347,358,2347,326"/>
-<area shape="rect" title=" " alt="" coords="2431,374,2545,399"/>
-<area shape="poly" title=" " alt="" coords="2374,324,2452,364,2450,368,2372,329"/>
-<area shape="poly" title=" " alt="" coords="1530,255,1373,298,1372,293,1529,250"/>
-<area shape="poly" title=" " alt="" coords="1691,249,2239,299,2238,304,1691,254"/>
-<area shape="poly" title=" " alt="" coords="1344,253,1328,287,1323,285,1339,251"/>
-<area shape="poly" title=" " alt="" coords="1432,248,1444,249,1885,283,2239,303,2239,309,1885,288,1444,255,1432,254"/>
+<area shape="rect" title=" " alt="" coords="1708,5,1863,31"/>
+<area shape="rect" href="covarianceXsec_8h.html" title=" " alt="" coords="960,79,1152,105"/>
+<area shape="poly" title=" " alt="" coords="1708,30,1167,82,1167,77,1707,24"/>
+<area shape="rect" href="Structs_8h.html" title=" " alt="" coords="1226,521,1371,547"/>
+<area shape="poly" title=" " alt="" coords="1788,32,1788,164,1788,388,1785,404,1776,418,1744,444,1697,466,1639,484,1509,511,1387,527,1386,522,1508,506,1638,479,1695,461,1741,439,1772,415,1780,402,1783,388,1783,164,1783,32"/>
+<area shape="rect" title=" " alt="" coords="2555,447,2613,473"/>
+<area shape="poly" title=" " alt="" coords="1863,21,2088,36,2365,64,2495,83,2602,106,2644,118,2676,132,2696,147,2704,164,2704,314,2702,335,2695,354,2674,389,2646,418,2618,440,2615,436,2642,414,2670,386,2691,352,2696,333,2699,314,2699,165,2692,150,2673,137,2642,123,2601,111,2494,89,2365,70,2087,42,1863,26"/>
+<area shape="rect" href="covarianceBase_8h.html" title=" " alt="" coords="960,153,1152,178"/>
+<area shape="poly" title=" " alt="" coords="1059,105,1059,137,1053,137,1053,105"/>
+<area shape="poly" title=" " alt="" coords="960,99,702,112,544,123,386,138,239,156,119,179,72,193,37,207,15,222,8,238,8,388,11,412,21,429,35,441,54,449,103,459,158,470,250,489,373,504,516,515,671,522,976,529,1210,530,1210,536,976,535,671,527,516,520,372,509,249,495,157,476,102,464,53,454,32,445,17,432,6,414,3,388,3,237,11,219,34,202,70,188,117,174,239,151,385,132,544,118,701,107,960,94"/>
+<area shape="rect" href="manager_8h.html" title=" " alt="" coords="1823,300,1958,326"/>
+<area shape="poly" title=" " alt="" coords="1130,176,1412,224,1809,294,1809,299,1412,229,1130,182"/>
+<area shape="poly" title=" " alt="" coords="960,173,713,187,414,214,277,233,163,255,119,268,86,282,65,297,59,312,59,388,61,397,68,407,95,425,139,441,197,456,347,481,527,499,721,512,911,521,1211,529,1210,534,910,526,720,517,527,504,346,486,196,461,137,446,93,430,64,411,56,400,53,388,53,311,61,293,83,278,117,263,161,250,276,227,414,209,713,182,960,168"/>
+<area shape="rect" href="CovarianceUtils_8h.html" title=" " alt="" coords="838,300,1029,326"/>
+<area shape="poly" title=" " alt="" coords="1026,181,991,200,961,228,946,256,939,286,934,285,941,254,957,225,988,196,1023,177"/>
+<area shape="rect" href="AdaptiveMCMCHandler_8h.html" title=" " alt="" coords="1166,226,1400,252"/>
+<area shape="poly" title=" " alt="" coords="1095,176,1230,219,1229,224,1094,181"/>
+<area shape="rect" href="PCAHandler_8h.html" title=" " alt="" coords="971,226,1141,252"/>
+<area shape="poly" title=" " alt="" coords="1059,179,1059,211,1053,211,1053,179"/>
+<area shape="rect" href="MaCh3Logger_8h.html" title=" " alt="" coords="1714,668,1881,694"/>
+<area shape="poly" title=" " alt="" coords="1891,327,1871,400,1855,438,1836,474,1814,508,1794,533,1777,559,1763,595,1761,611,1764,626,1780,655,1775,657,1759,628,1756,611,1757,594,1772,557,1790,530,1810,505,1831,472,1850,436,1865,398,1886,325"/>
+<area shape="poly" title=" " alt="" coords="1888,327,1852,406,1829,448,1805,475,1752,487,1642,501,1387,527,1387,522,1641,495,1751,481,1803,471,1824,445,1848,404,1883,325"/>
+<area shape="rect" href="MaCh3Exception_8h.html" title=" " alt="" coords="2045,595,2227,620"/>
+<area shape="poly" title=" " alt="" coords="1914,324,1987,372,2029,406,2066,446,2089,479,2107,515,2131,579,2126,581,2102,517,2084,482,2062,449,2025,410,1984,376,1911,328"/>
+<area shape="rect" href="YamlHelper_8h.html" title=" " alt="" coords="2454,521,2607,547"/>
+<area shape="poly" title=" " alt="" coords="1959,313,2095,317,2263,327,2423,344,2488,357,2537,371,2578,389,2614,410,2626,423,2634,438,2635,455,2628,474,2607,499,2581,516,2578,512,2604,495,2623,472,2629,454,2629,439,2622,426,2610,414,2576,394,2535,376,2487,362,2422,350,2262,333,2095,323,1959,318"/>
+<area shape="rect" href="Monitor_8h.html" title=" " alt="" coords="1924,447,2052,473"/>
+<area shape="poly" title=" " alt="" coords="1901,325,1974,433,1969,436,1896,327"/>
+<area shape="rect" href="MaCh3Modes_8h.html" title=" " alt="" coords="2359,374,2524,399"/>
+<area shape="poly" title=" " alt="" coords="1959,320,2343,370,2343,375,1958,326"/>
+<area shape="rect" title=" " alt="" coords="1744,742,1856,768"/>
+<area shape="poly" title=" " alt="" coords="1800,694,1802,726,1796,727,1795,694"/>
+<area shape="rect" title=" " alt="" coords="1882,742,1953,768"/>
+<area shape="poly" title=" " alt="" coords="1819,692,1885,731,1883,736,1816,697"/>
+<area shape="rect" title=" " alt="" coords="1070,742,1138,768"/>
+<area shape="poly" title=" " alt="" coords="1714,694,1154,751,1153,746,1713,688"/>
+<area shape="rect" title=" " alt="" coords="1643,742,1720,768"/>
+<area shape="poly" title=" " alt="" coords="1779,697,1715,736,1712,731,1776,692"/>
+<area shape="rect" title=" " alt="" coords="2355,742,2408,768"/>
+<area shape="poly" title=" " alt="" coords="1881,690,2340,746,2339,751,1881,695"/>
+<area shape="poly" title=" " alt="" coords="1372,542,1526,564,1599,578,1652,592,1717,623,1770,657,1767,661,1714,628,1650,597,1598,583,1525,570,1371,547"/>
+<area shape="poly" title=" " alt="" coords="1372,541,1504,563,1565,577,1608,592,1639,616,1657,642,1675,668,1704,692,1769,713,1868,738,1866,744,1767,718,1701,696,1671,671,1653,645,1635,620,1605,597,1563,582,1503,568,1371,547"/>
+<area shape="poly" title=" " alt="" coords="1226,539,1073,544,892,554,733,571,679,583,651,597,635,619,630,639,633,656,645,672,664,686,689,698,755,718,833,732,915,742,1054,750,1054,755,915,747,833,738,754,723,687,703,661,690,641,675,628,658,624,638,630,617,648,593,678,578,732,566,891,549,1073,538,1226,534"/>
+<area shape="rect" title=" " alt="" coords="1955,595,2021,620"/>
+<area shape="poly" title=" " alt="" coords="1372,540,1940,599,1939,604,1372,545"/>
+<area shape="rect" title=" " alt="" coords="1771,595,1829,620"/>
+<area shape="poly" title=" " alt="" coords="1372,543,1756,597,1755,603,1371,548"/>
+<area shape="rect" title=" " alt="" coords="662,595,728,620"/>
+<area shape="poly" title=" " alt="" coords="1226,542,1013,561,880,576,743,597,742,592,879,571,1012,555,1225,537"/>
+<area shape="rect" title=" " alt="" coords="752,595,792,620"/>
+<area shape="poly" title=" " alt="" coords="1226,541,1039,558,925,574,807,597,806,592,924,569,1039,553,1225,536"/>
+<area shape="rect" title=" " alt="" coords="815,595,854,620"/>
+<area shape="poly" title=" " alt="" coords="1226,543,1066,561,969,577,870,597,869,592,968,571,1065,556,1225,538"/>
+<area shape="rect" title=" " alt="" coords="878,595,989,620"/>
+<area shape="poly" title=" " alt="" coords="1237,550,1004,595,1003,590,1236,545"/>
+<area shape="rect" title=" " alt="" coords="1013,595,1088,620"/>
+<area shape="poly" title=" " alt="" coords="1257,550,1104,594,1103,588,1256,545"/>
+<area shape="rect" title=" " alt="" coords="1113,595,1167,620"/>
+<area shape="poly" title=" " alt="" coords="1273,550,1182,590,1180,586,1271,545"/>
+<area shape="rect" title=" " alt="" coords="1192,595,1312,620"/>
+<area shape="poly" title=" " alt="" coords="1293,548,1270,583,1266,580,1289,545"/>
+<area shape="rect" title=" " alt="" coords="2251,595,2344,620"/>
+<area shape="poly" title=" " alt="" coords="1372,539,1431,544,1656,556,1832,561,2009,569,2235,592,2235,597,2009,575,1832,566,1655,561,1430,549,1372,545"/>
+<area shape="rect" title=" " alt="" coords="1337,595,1418,620"/>
+<area shape="poly" title=" " alt="" coords="1314,545,1355,582,1351,586,1310,549"/>
+<area shape="rect" title=" " alt="" coords="302,595,362,620"/>
+<area shape="poly" title=" " alt="" coords="1226,543,378,605,377,600,1225,538"/>
+<area shape="rect" title=" " alt="" coords="1443,595,1595,620"/>
+<area shape="poly" title=" " alt="" coords="1337,545,1468,587,1466,592,1335,550"/>
+<area shape="poly" title=" " alt="" coords="1372,539,1431,544,1729,567,2029,592,2029,597,1729,572,1430,549,1372,544"/>
+<area shape="poly" title=" " alt="" coords="2079,624,1870,667,1869,662,2078,618"/>
+<area shape="poly" title=" " alt="" coords="2119,623,1949,736,1946,731,2116,619"/>
+<area shape="poly" title=" " alt="" coords="2158,619,2349,732,2347,736,2155,623"/>
+<area shape="rect" title=" " alt="" coords="2097,668,2175,694"/>
+<area shape="poly" title=" " alt="" coords="2139,621,2139,653,2133,653,2133,621"/>
+<area shape="poly" title=" " alt="" coords="2533,547,2528,584,2520,605,2507,622,2466,649,2407,672,2335,692,2256,710,2096,736,1969,751,1968,746,2095,731,2255,704,2334,687,2406,667,2464,644,2504,618,2516,602,2523,583,2528,547"/>
+<area shape="poly" title=" " alt="" coords="2573,545,2603,557,2631,574,2647,596,2649,608,2644,622,2623,649,2597,673,2569,693,2538,710,2477,734,2424,749,2423,743,2476,729,2536,705,2566,689,2594,669,2619,646,2639,619,2643,608,2642,598,2627,578,2601,562,2571,550"/>
+<area shape="poly" title=" " alt="" coords="2454,544,2268,563,2036,597,2036,592,2267,558,2453,539"/>
+<area shape="poly" title=" " alt="" coords="2492,550,2352,592,2351,587,2490,545"/>
+<area shape="rect" title=" " alt="" coords="2418,595,2494,620"/>
+<area shape="poly" title=" " alt="" coords="2520,549,2481,586,2477,582,2516,545"/>
+<area shape="rect" title=" " alt="" coords="2568,595,2629,620"/>
+<area shape="poly" title=" " alt="" coords="2544,545,2579,582,2575,585,2540,549"/>
+<area shape="poly" title=" " alt="" coords="1965,476,1933,496,1901,523,1881,548,1870,570,1860,593,1844,622,1818,657,1814,654,1839,619,1855,591,1865,567,1877,545,1897,519,1929,492,1962,471"/>
+<area shape="poly" title=" " alt="" coords="1986,474,1967,526,1947,595,1932,666,1923,727,1918,726,1927,665,1941,594,1962,525,1981,473"/>
+<area shape="poly" title=" " alt="" coords="2053,463,2125,474,2208,497,2250,514,2290,535,2326,561,2358,593,2376,625,2386,661,2388,696,2387,726,2382,726,2383,697,2380,662,2371,627,2354,596,2323,565,2287,539,2248,518,2207,502,2124,479,2052,468"/>
+<area shape="poly" title=" " alt="" coords="1924,471,1387,526,1387,521,1923,465"/>
+<area shape="poly" title=" " alt="" coords="1991,473,1991,579,1985,579,1985,473"/>
+<area shape="poly" title=" " alt="" coords="1940,476,1894,494,1850,523,1827,551,1812,581,1807,579,1823,548,1846,519,1891,490,1938,471"/>
+<area shape="poly" title=" " alt="" coords="2002,471,2115,582,2111,585,1998,475"/>
+<area shape="poly" title=" " alt="" coords="2053,467,2439,518,2438,523,2052,473"/>
+<area shape="poly" title=" " alt="" coords="2053,462,2114,467,2185,478,2261,494,2334,519,2389,549,2433,582,2430,586,2386,553,2332,523,2260,499,2184,483,2113,473,2052,467"/>
+<area shape="rect" title=" " alt="" coords="1443,521,1509,547"/>
+<area shape="poly" title=" " alt="" coords="1924,473,1524,528,1524,523,1923,468"/>
+<area shape="rect" title=" " alt="" coords="1627,521,1728,547"/>
+<area shape="poly" title=" " alt="" coords="1936,476,1744,520,1743,515,1934,471"/>
+<area shape="poly" title=" " alt="" coords="2457,398,2545,471,2585,493,2603,502,2622,519,2645,543,2662,566,2669,591,2664,621,2646,654,2621,681,2590,703,2556,720,2485,743,2424,753,2423,748,2484,737,2554,715,2588,699,2617,677,2642,651,2659,619,2664,591,2657,568,2641,547,2618,523,2600,507,2583,497,2543,475,2453,402"/>
+<area shape="poly" title=" " alt="" coords="2426,402,2167,587,2164,583,2423,398"/>
+<area shape="poly" title=" " alt="" coords="2451,398,2518,506,2513,509,2446,401"/>
+<area shape="poly" title=" " alt="" coords="2364,403,2068,449,2067,444,2364,397"/>
+<area shape="poly" title=" " alt="" coords="2467,397,2547,438,2545,442,2464,402"/>
+<area shape="poly" title=" " alt="" coords="838,317,658,320,449,329,351,337,268,347,206,360,186,367,174,376,164,389,159,402,158,430,169,459,189,489,216,517,245,543,301,584,298,588,242,547,212,521,185,492,164,462,153,431,153,401,160,386,170,372,183,363,205,355,267,342,351,332,448,324,658,315,838,312"/>
+<area shape="poly" title=" " alt="" coords="838,317,660,321,454,330,359,337,277,347,216,360,196,368,185,375,180,386,185,398,211,415,255,430,316,444,390,456,567,475,767,489,1152,507,1383,518,1428,524,1427,529,1382,524,1151,512,766,495,566,480,389,461,315,449,254,435,208,419,181,401,174,386,181,372,194,363,215,355,276,342,358,332,454,325,660,315,838,312"/>
+<area shape="poly" title=" " alt="" coords="1029,312,1212,315,1426,324,1526,331,1612,341,1676,355,1698,363,1711,372,1722,387,1727,405,1725,442,1712,478,1696,509,1691,507,1707,476,1719,441,1722,406,1717,390,1707,376,1695,367,1674,360,1611,347,1526,336,1426,329,1212,320,1029,317"/>
+<area shape="rect" title=" " alt="" coords="195,374,277,399"/>
+<area shape="poly" title=" " alt="" coords="838,322,595,341,446,356,293,376,292,371,445,351,594,335,838,317"/>
+<area shape="rect" title=" " alt="" coords="301,374,411,399"/>
+<area shape="poly" title=" " alt="" coords="838,326,652,347,427,376,426,371,651,342,837,321"/>
+<area shape="rect" title=" " alt="" coords="435,374,520,399"/>
+<area shape="poly" title=" " alt="" coords="841,329,535,376,535,371,840,324"/>
+<area shape="rect" title=" " alt="" coords="544,374,630,399"/>
+<area shape="poly" title=" " alt="" coords="874,329,646,375,645,370,873,324"/>
+<area shape="rect" title=" " alt="" coords="654,374,719,399"/>
+<area shape="poly" title=" " alt="" coords="892,329,735,374,734,369,891,324"/>
+<area shape="rect" title=" " alt="" coords="743,374,809,399"/>
+<area shape="poly" title=" " alt="" coords="908,329,818,369,816,364,906,324"/>
+<area shape="rect" title=" " alt="" coords="833,374,927,399"/>
+<area shape="poly" title=" " alt="" coords="927,327,900,363,896,359,922,324"/>
+<area shape="rect" title=" " alt="" coords="951,374,1020,399"/>
+<area shape="poly" title=" " alt="" coords="944,324,970,359,965,363,940,327"/>
+<area shape="rect" title=" " alt="" coords="1043,374,1157,399"/>
+<area shape="poly" title=" " alt="" coords="963,324,1059,365,1057,370,961,329"/>
+<area shape="rect" title=" " alt="" coords="1180,374,1255,399"/>
+<area shape="poly" title=" " alt="" coords="982,324,1166,370,1165,375,981,329"/>
+<area shape="rect" title=" " alt="" coords="1279,374,1420,399"/>
+<area shape="poly" title=" " alt="" coords="1005,324,1264,368,1263,373,1004,329"/>
+<area shape="rect" title=" " alt="" coords="1444,374,1559,399"/>
+<area shape="poly" title=" " alt="" coords="1029,322,1210,342,1428,371,1428,376,1210,348,1029,327"/>
+<area shape="rect" title=" " alt="" coords="1583,374,1697,399"/>
+<area shape="poly" title=" " alt="" coords="1029,318,1270,338,1568,371,1567,376,1269,344,1029,324"/>
+<area shape="poly" title=" " alt="" coords="1387,250,1808,299,1807,304,1387,255"/>
+<area shape="poly" title=" " alt="" coords="1224,255,1008,299,1007,294,1222,250"/>
+<area shape="poly" title=" " alt="" coords="1142,248,1154,249,1518,281,1808,303,1807,308,1518,287,1153,255,1141,253"/>
+<area shape="poly" title=" " alt="" coords="1037,255,968,294,966,290,1034,250"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -334,55 +336,55 @@ Functions</h2></td></tr>
 
 <p>EM: Apply capping to knot weight for specified spline parameter. param graph needs to have been set in xsecgraph array first. </p>
 
-<p class="definition">Definition at line <a class="el" href="SplineStructs_8h_source.html#l00106">106</a> of file <a class="el" href="SplineStructs_8h_source.html">SplineStructs.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  106</span>                                                                                                {</div>
-<div class="line"><span class="lineno">  107</span><span class="comment">// ***************************************************************************</span></div>
-<div class="line"><span class="lineno">  108</span>  <span class="keywordflow">if</span>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">xsecgraph</a> == <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">NULL</a>){</div>
-<div class="line"><span class="lineno">  109</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a>(<span class="stringliteral">&quot;ERROR: hmmm looks like you&#39;re trying to apply capping for spline parameter {} but it hasn&#39;t been set in xsecgraph yet&quot;</span>, XsecCov-&gt;<a class="code hl_function" href="classcovarianceBase.html#a6a46b5fed3e7feb6e9e151e90927bdbc">GetParFancyName</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">splineParsIndex</a>));</div>
-<div class="line"><span class="lineno">  110</span>    <span class="keywordflow">throw</span> <a class="code hl_class" href="classMaCh3Exception.html">MaCh3Exception</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">__FILE__</a> , <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">__LINE__</a> );</div>
-<div class="line"><span class="lineno">  111</span>  }</div>
-<div class="line"><span class="lineno">  112</span> </div>
-<div class="line"><span class="lineno">  113</span>  <span class="comment">// EM: cap the weights of the knots if specified in the config</span></div>
-<div class="line"><span class="lineno">  114</span>  <span class="keywordflow">if</span>(</div>
-<div class="line"><span class="lineno">  115</span>    (XsecCov-&gt;<a class="code hl_function" href="classcovarianceXsec.html#ac612a0f939f2f070906af574f98590d6">GetParSplineKnotUpperBound</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">splineParsIndex</a>) != 9999)</div>
-<div class="line"><span class="lineno">  116</span>    || (XsecCov-&gt;<a class="code hl_function" href="classcovarianceXsec.html#a9ea6bd6b0e021f154ebd1f23605ff3e5">GetParSplineKnotLowerBound</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">splineParsIndex</a>) != -9999))</div>
-<div class="line"><span class="lineno">  117</span>  {</div>
-<div class="line"><span class="lineno">  118</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">knotId</a> = 0; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">knotId</a> &lt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">xsecgraph</a>-&gt;GetN(); <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">knotId</a>++){</div>
-<div class="line"><span class="lineno">  119</span>      <span class="keywordtype">double</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">x</a>,<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">y</a>;</div>
-<div class="line"><span class="lineno">  120</span> </div>
-<div class="line"><span class="lineno">  121</span>      <span class="comment">// EM: get the x and y of the point. Also double check that the requested point was valid just to be super safe</span></div>
-<div class="line"><span class="lineno">  122</span>      <span class="keywordflow">if</span>( <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">xsecgraph</a>-&gt;GetPoint(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">knotId</a>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">x</a>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">y</a>) == -1) {</div>
-<div class="line"><span class="lineno">  123</span>        <a class="code hl_define" href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a>(<span class="stringliteral">&quot;Invalid knot requested: {}&quot;</span>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">knotId</a>);</div>
-<div class="line"><span class="lineno">  124</span>        <span class="keywordflow">throw</span> <a class="code hl_class" href="classMaCh3Exception.html">MaCh3Exception</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">__FILE__</a> , <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">__LINE__</a> );</div>
-<div class="line"><span class="lineno">  125</span>      }</div>
+<p class="definition">Definition at line <a class="el" href="SplineStructs_8h_source.html#l00112">112</a> of file <a class="el" href="SplineStructs_8h_source.html">SplineStructs.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  112</span>                                                                                                {</div>
+<div class="line"><span class="lineno">  113</span><span class="comment">// ***************************************************************************</span></div>
+<div class="line"><span class="lineno">  114</span>  <span class="keywordflow">if</span>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">xsecgraph</a> == <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">NULL</a>){</div>
+<div class="line"><span class="lineno">  115</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a>(<span class="stringliteral">&quot;ERROR: hmmm looks like you&#39;re trying to apply capping for spline parameter {} but it hasn&#39;t been set in xsecgraph yet&quot;</span>, XsecCov-&gt;<a class="code hl_function" href="classcovarianceBase.html#a6a46b5fed3e7feb6e9e151e90927bdbc">GetParFancyName</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">splineParsIndex</a>));</div>
+<div class="line"><span class="lineno">  116</span>    <span class="keywordflow">throw</span> <a class="code hl_class" href="classMaCh3Exception.html">MaCh3Exception</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">__FILE__</a> , <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">__LINE__</a> );</div>
+<div class="line"><span class="lineno">  117</span>  }</div>
+<div class="line"><span class="lineno">  118</span> </div>
+<div class="line"><span class="lineno">  119</span>  <span class="comment">// EM: cap the weights of the knots if specified in the config</span></div>
+<div class="line"><span class="lineno">  120</span>  <span class="keywordflow">if</span>(</div>
+<div class="line"><span class="lineno">  121</span>    (XsecCov-&gt;<a class="code hl_function" href="classcovarianceXsec.html#ac612a0f939f2f070906af574f98590d6">GetParSplineKnotUpperBound</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">splineParsIndex</a>) != 9999)</div>
+<div class="line"><span class="lineno">  122</span>    || (XsecCov-&gt;<a class="code hl_function" href="classcovarianceXsec.html#a9ea6bd6b0e021f154ebd1f23605ff3e5">GetParSplineKnotLowerBound</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">splineParsIndex</a>) != -9999))</div>
+<div class="line"><span class="lineno">  123</span>  {</div>
+<div class="line"><span class="lineno">  124</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">knotId</a> = 0; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">knotId</a> &lt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">xsecgraph</a>-&gt;GetN(); <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">knotId</a>++){</div>
+<div class="line"><span class="lineno">  125</span>      <span class="keywordtype">double</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">x</a>,<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">y</a>;</div>
 <div class="line"><span class="lineno">  126</span> </div>
-<div class="line"><span class="lineno">  127</span>      <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">y</a> = std::min(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">y</a>, XsecCov-&gt;<a class="code hl_function" href="classcovarianceXsec.html#ac612a0f939f2f070906af574f98590d6">GetParSplineKnotUpperBound</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">splineParsIndex</a>));</div>
-<div class="line"><span class="lineno">  128</span>      <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">y</a> = std::max(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">y</a>, XsecCov-&gt;<a class="code hl_function" href="classcovarianceXsec.html#a9ea6bd6b0e021f154ebd1f23605ff3e5">GetParSplineKnotLowerBound</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">splineParsIndex</a>));</div>
-<div class="line"><span class="lineno">  129</span> </div>
-<div class="line"><span class="lineno">  130</span>      <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">xsecgraph</a>-&gt;SetPoint(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">knotId</a>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">x</a>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">y</a>);</div>
-<div class="line"><span class="lineno">  131</span>    }</div>
+<div class="line"><span class="lineno">  127</span>      <span class="comment">// EM: get the x and y of the point. Also double check that the requested point was valid just to be super safe</span></div>
+<div class="line"><span class="lineno">  128</span>      <span class="keywordflow">if</span>( <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">xsecgraph</a>-&gt;GetPoint(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">knotId</a>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">x</a>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">y</a>) == -1) {</div>
+<div class="line"><span class="lineno">  129</span>        <a class="code hl_define" href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a>(<span class="stringliteral">&quot;Invalid knot requested: {}&quot;</span>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">knotId</a>);</div>
+<div class="line"><span class="lineno">  130</span>        <span class="keywordflow">throw</span> <a class="code hl_class" href="classMaCh3Exception.html">MaCh3Exception</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">__FILE__</a> , <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">__LINE__</a> );</div>
+<div class="line"><span class="lineno">  131</span>      }</div>
 <div class="line"><span class="lineno">  132</span> </div>
-<div class="line"><span class="lineno">  133</span>    <span class="comment">// EM: check if our cap made the spline flat, if so we set to 1 knot to avoid problems later on</span></div>
-<div class="line"><span class="lineno">  134</span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="GetPenaltyTerm_8cpp.html#ae7c3a438d4508eba7ac26e26135b2c17">isFlat</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  133</span>      <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">y</a> = std::min(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">y</a>, XsecCov-&gt;<a class="code hl_function" href="classcovarianceXsec.html#ac612a0f939f2f070906af574f98590d6">GetParSplineKnotUpperBound</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">splineParsIndex</a>));</div>
+<div class="line"><span class="lineno">  134</span>      <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">y</a> = std::max(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">y</a>, XsecCov-&gt;<a class="code hl_function" href="classcovarianceXsec.html#a9ea6bd6b0e021f154ebd1f23605ff3e5">GetParSplineKnotLowerBound</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">splineParsIndex</a>));</div>
 <div class="line"><span class="lineno">  135</span> </div>
-<div class="line"><span class="lineno">  136</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">knotId</a> = 0; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">knotId</a> &lt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">xsecgraph</a>-&gt;GetN(); <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">knotId</a>++){</div>
-<div class="line"><span class="lineno">  137</span>      <span class="keywordtype">double</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">x</a>,<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">y</a>;</div>
+<div class="line"><span class="lineno">  136</span>      <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">xsecgraph</a>-&gt;SetPoint(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">knotId</a>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">x</a>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">y</a>);</div>
+<div class="line"><span class="lineno">  137</span>    }</div>
 <div class="line"><span class="lineno">  138</span> </div>
-<div class="line"><span class="lineno">  139</span>      <span class="comment">// EM: get the x and y of the point. Also double check that the requested point was valid just to be super safe</span></div>
-<div class="line"><span class="lineno">  140</span>      <span class="keywordflow">if</span>( <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">xsecgraph</a>-&gt;GetPoint(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">knotId</a>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">x</a>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">y</a>) == -1) {</div>
-<div class="line"><span class="lineno">  141</span>        <a class="code hl_define" href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a>(<span class="stringliteral">&quot;Invalid knot requested: {}&quot;</span>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">knotId</a>);</div>
-<div class="line"><span class="lineno">  142</span>        <span class="keywordflow">throw</span> <a class="code hl_class" href="classMaCh3Exception.html">MaCh3Exception</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">__FILE__</a> , <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">__LINE__</a> );</div>
-<div class="line"><span class="lineno">  143</span>      }</div>
+<div class="line"><span class="lineno">  139</span>    <span class="comment">// EM: check if our cap made the spline flat, if so we set to 1 knot to avoid problems later on</span></div>
+<div class="line"><span class="lineno">  140</span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="GetPenaltyTerm_8cpp.html#ae7c3a438d4508eba7ac26e26135b2c17">isFlat</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  141</span> </div>
+<div class="line"><span class="lineno">  142</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">knotId</a> = 0; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">knotId</a> &lt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">xsecgraph</a>-&gt;GetN(); <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">knotId</a>++){</div>
+<div class="line"><span class="lineno">  143</span>      <span class="keywordtype">double</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">x</a>,<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">y</a>;</div>
 <div class="line"><span class="lineno">  144</span> </div>
-<div class="line"><span class="lineno">  145</span>      <span class="keywordflow">if</span>(std::abs(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">y</a> - 1.0) &gt; 1<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">e</a>-5) <a class="code hl_variable" href="GetPenaltyTerm_8cpp.html#ae7c3a438d4508eba7ac26e26135b2c17">isFlat</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  146</span>    }</div>
-<div class="line"><span class="lineno">  147</span> </div>
-<div class="line"><span class="lineno">  148</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="GetPenaltyTerm_8cpp.html#ae7c3a438d4508eba7ac26e26135b2c17">isFlat</a>){</div>
-<div class="line"><span class="lineno">  149</span>      <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">xsecgraph</a>-&gt;Set(1);</div>
-<div class="line"><span class="lineno">  150</span>      <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">xsecgraph</a>-&gt;SetPoint(0, 0.0, 1.0);</div>
-<div class="line"><span class="lineno">  151</span>    }</div>
-<div class="line"><span class="lineno">  152</span>  }</div>
-<div class="line"><span class="lineno">  153</span>}</div>
+<div class="line"><span class="lineno">  145</span>      <span class="comment">// EM: get the x and y of the point. Also double check that the requested point was valid just to be super safe</span></div>
+<div class="line"><span class="lineno">  146</span>      <span class="keywordflow">if</span>( <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">xsecgraph</a>-&gt;GetPoint(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">knotId</a>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">x</a>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">y</a>) == -1) {</div>
+<div class="line"><span class="lineno">  147</span>        <a class="code hl_define" href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a>(<span class="stringliteral">&quot;Invalid knot requested: {}&quot;</span>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">knotId</a>);</div>
+<div class="line"><span class="lineno">  148</span>        <span class="keywordflow">throw</span> <a class="code hl_class" href="classMaCh3Exception.html">MaCh3Exception</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">__FILE__</a> , <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">__LINE__</a> );</div>
+<div class="line"><span class="lineno">  149</span>      }</div>
+<div class="line"><span class="lineno">  150</span> </div>
+<div class="line"><span class="lineno">  151</span>      <span class="keywordflow">if</span>(std::abs(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">y</a> - 1.0) &gt; 1<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">e</a>-5) <a class="code hl_variable" href="GetPenaltyTerm_8cpp.html#ae7c3a438d4508eba7ac26e26135b2c17">isFlat</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  152</span>    }</div>
+<div class="line"><span class="lineno">  153</span> </div>
+<div class="line"><span class="lineno">  154</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="GetPenaltyTerm_8cpp.html#ae7c3a438d4508eba7ac26e26135b2c17">isFlat</a>){</div>
+<div class="line"><span class="lineno">  155</span>      <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">xsecgraph</a>-&gt;Set(1);</div>
+<div class="line"><span class="lineno">  156</span>      <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">xsecgraph</a>-&gt;SetPoint(0, 0.0, 1.0);</div>
+<div class="line"><span class="lineno">  157</span>    }</div>
+<div class="line"><span class="lineno">  158</span>  }</div>
+<div class="line"><span class="lineno">  159</span>}</div>
 <div class="ttc" id="aGetPenaltyTerm_8cpp_html_ae7c3a438d4508eba7ac26e26135b2c17"><div class="ttname"><a href="GetPenaltyTerm_8cpp.html#ae7c3a438d4508eba7ac26e26135b2c17">isFlat</a></div><div class="ttdeci">std::vector&lt; bool &gt; isFlat</div><div class="ttdef"><b>Definition</b> <a href="GetPenaltyTerm_8cpp_source.html#l00035">GetPenaltyTerm.cpp:35</a></div></div>
 <div class="ttc" id="aMaCh3Logger_8h_html_a61052119a625282d0ec6d4a97adf3ee2"><div class="ttname"><a href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a></div><div class="ttdeci">#define MACH3LOG_ERROR</div><div class="ttdef"><b>Definition</b> <a href="MaCh3Logger_8h_source.html#l00018">MaCh3Logger.h:18</a></div></div>
 <div class="ttc" id="aYamlHelper_8h_html_a1a6adcb8b24bfbdcb936ced6812e1b0c"><div class="ttname"><a href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">GetFromManager</a></div><div class="ttdeci">Type GetFromManager(const YAML::Node &amp;node, Type defval)</div><div class="ttdoc">Get content of config file if node is not found take default value specified.</div><div class="ttdef"><b>Definition</b> <a href="YamlHelper_8h_source.html#l00021">YamlHelper.h:21</a></div></div>
@@ -425,23 +427,23 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="SplineStructs_8h_source.html#l00725">725</a> of file <a class="el" href="SplineStructs_8h_source.html">SplineStructs.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  725</span>                                       {</div>
-<div class="line"><span class="lineno">  726</span><span class="comment">// *****************************************</span></div>
-<div class="line"><span class="lineno">  727</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">Np</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">spl</a>-&gt;GetNp();</div>
-<div class="line"><span class="lineno">  728</span>  <a class="code hl_define" href="Structs_8h.html#a44b939bf69f41920331b7d7a74d2d436">_float_</a> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">x</a>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">y</a>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">b</a>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">c</a>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">d</a>;</div>
-<div class="line"><span class="lineno">  729</span>  <span class="comment">// Go through spline segment parameters,</span></div>
-<div class="line"><span class="lineno">  730</span>  <span class="comment">// Get y values for each spline knot,</span></div>
-<div class="line"><span class="lineno">  731</span>  <span class="comment">// Every knot must evaluate to 1.0 to create a flat spline</span></div>
-<div class="line"><span class="lineno">  732</span>  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> = 0; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> &lt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">Np</a>; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>++) {</div>
-<div class="line"><span class="lineno">  733</span>    <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">spl</a>-&gt;GetCoeff(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">x</a>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">y</a>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">b</a>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">c</a>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">d</a>);</div>
-<div class="line"><span class="lineno">  734</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">y</a> != 1) {</div>
-<div class="line"><span class="lineno">  735</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  736</span>    }</div>
-<div class="line"><span class="lineno">  737</span>  }</div>
-<div class="line"><span class="lineno">  738</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  739</span>}</div>
-<div class="ttc" id="aStructs_8h_html_a44b939bf69f41920331b7d7a74d2d436"><div class="ttname"><a href="Structs_8h.html#a44b939bf69f41920331b7d7a74d2d436">_float_</a></div><div class="ttdeci">#define _float_</div><div class="ttdef"><b>Definition</b> <a href="Structs_8h_source.html#l00014">Structs.h:14</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SplineStructs_8h_source.html#l00731">731</a> of file <a class="el" href="SplineStructs_8h_source.html">SplineStructs.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  731</span>                                       {</div>
+<div class="line"><span class="lineno">  732</span><span class="comment">// *****************************************</span></div>
+<div class="line"><span class="lineno">  733</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">Np</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">spl</a>-&gt;GetNp();</div>
+<div class="line"><span class="lineno">  734</span>  <a class="code hl_typedef" href="namespaceM3.html#a1f95274549f25fc19fe7db343c8a7a68">M3::float_t</a> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">x</a>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">y</a>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">b</a>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">c</a>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">d</a>;</div>
+<div class="line"><span class="lineno">  735</span>  <span class="comment">// Go through spline segment parameters,</span></div>
+<div class="line"><span class="lineno">  736</span>  <span class="comment">// Get y values for each spline knot,</span></div>
+<div class="line"><span class="lineno">  737</span>  <span class="comment">// Every knot must evaluate to 1.0 to create a flat spline</span></div>
+<div class="line"><span class="lineno">  738</span>  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> = 0; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a> &lt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">Np</a>; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>++) {</div>
+<div class="line"><span class="lineno">  739</span>    <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">spl</a>-&gt;GetCoeff(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">i</a>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">x</a>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">y</a>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">b</a>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">c</a>, <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">d</a>);</div>
+<div class="line"><span class="lineno">  740</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">y</a> != 1) {</div>
+<div class="line"><span class="lineno">  741</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  742</span>    }</div>
+<div class="line"><span class="lineno">  743</span>  }</div>
+<div class="line"><span class="lineno">  744</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  745</span>}</div>
+<div class="ttc" id="anamespaceM3_html_a1f95274549f25fc19fe7db343c8a7a68"><div class="ttname"><a href="namespaceM3.html#a1f95274549f25fc19fe7db343c8a7a68">M3::float_t</a></div><div class="ttdeci">double float_t</div><div class="ttdef"><b>Definition</b> <a href="Structs_8h_source.html#l00015">Structs.h:15</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -477,42 +479,42 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="SplineStructs_8h_source.html#l00782">782</a> of file <a class="el" href="SplineStructs_8h_source.html">SplineStructs.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  782</span>                                                                                            {</div>
-<div class="line"><span class="lineno">  783</span><span class="comment">// *********************************</span></div>
-<div class="line"><span class="lineno">  784</span>  std::vector&lt;std::vector&lt;TF1*&gt; &gt;::iterator <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">OuterIt</a>;</div>
-<div class="line"><span class="lineno">  785</span>  std::vector&lt;TF1*&gt;::iterator <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">InnerIt</a>;</div>
-<div class="line"><span class="lineno">  786</span> </div>
-<div class="line"><span class="lineno">  787</span>  <span class="comment">// The return vector</span></div>
-<div class="line"><span class="lineno">  788</span>  std::vector&lt;std::vector&lt;TF1_red*&gt; &gt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ReducedVector</a>;</div>
-<div class="line"><span class="lineno">  789</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ReducedVector</a>.reserve(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">MasterSpline</a>.size());</div>
-<div class="line"><span class="lineno">  790</span> </div>
-<div class="line"><span class="lineno">  791</span>  <span class="comment">// Loop over each parameter</span></div>
-<div class="line"><span class="lineno">  792</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">OuterCounter</a> = 0;</div>
-<div class="line"><span class="lineno">  793</span>  <span class="keywordflow">for</span> (<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">OuterIt</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">MasterSpline</a>.begin(); <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">OuterIt</a> != <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">MasterSpline</a>.end(); ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">OuterIt</a>, ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">OuterCounter</a>) {</div>
-<div class="line"><span class="lineno">  794</span>    <span class="comment">// Make the temp vector</span></div>
-<div class="line"><span class="lineno">  795</span>    std::vector&lt;TF1_red*&gt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TempVector</a>;</div>
-<div class="line"><span class="lineno">  796</span>    <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TempVector</a>.reserve(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">OuterIt</a>-&gt;size());</div>
-<div class="line"><span class="lineno">  797</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">InnerCounter</a> = 0;</div>
-<div class="line"><span class="lineno">  798</span>    <span class="comment">// Loop over each TSpline3 pointer</span></div>
-<div class="line"><span class="lineno">  799</span>    <span class="keywordflow">for</span> (<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">InnerIt</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">OuterIt</a>-&gt;begin(); <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">InnerIt</a> != <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">OuterIt</a>-&gt;end(); ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">InnerIt</a>, ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">InnerCounter</a>) {</div>
-<div class="line"><span class="lineno">  800</span>      <span class="comment">// Here&#39;s our delicious TSpline3 object</span></div>
-<div class="line"><span class="lineno">  801</span>      <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TF1</a>* <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">spline</a> = (*InnerIt);</div>
-<div class="line"><span class="lineno">  802</span>      <span class="comment">// Now make the reduced TSpline3 pointer (which deleted TSpline3)</span></div>
-<div class="line"><span class="lineno">  803</span>      <a class="code hl_class" href="classTF1__red.html">TF1_red</a>* <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">red</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">NULL</a>;</div>
-<div class="line"><span class="lineno">  804</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">spline</a> != <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">NULL</a>) {</div>
-<div class="line"><span class="lineno">  805</span>        <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">red</a> = <span class="keyword">new</span> <a class="code hl_class" href="classTF1__red.html">TF1_red</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">spline</a>);</div>
-<div class="line"><span class="lineno">  806</span>        (*InnerIt) = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">spline</a>;</div>
-<div class="line"><span class="lineno">  807</span>      }</div>
-<div class="line"><span class="lineno">  808</span>      <span class="comment">// Push back onto new vector</span></div>
-<div class="line"><span class="lineno">  809</span>      <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TempVector</a>.push_back(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">red</a>);</div>
-<div class="line"><span class="lineno">  810</span>    } <span class="comment">// End inner for loop</span></div>
-<div class="line"><span class="lineno">  811</span>    <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ReducedVector</a>.push_back(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TempVector</a>);</div>
-<div class="line"><span class="lineno">  812</span>  } <span class="comment">// End outer for loop</span></div>
-<div class="line"><span class="lineno">  813</span>  <span class="comment">// Now have the reduced vector</span></div>
-<div class="line"><span class="lineno">  814</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ReducedVector</a>;</div>
-<div class="line"><span class="lineno">  815</span>}</div>
-<div class="ttc" id="aclassTF1__red_html"><div class="ttname"><a href="classTF1__red.html">TF1_red</a></div><div class="ttdoc">CW: A reduced TF1 class only. Only saves parameters for each TF1 and how many parameters each paramet...</div><div class="ttdef"><b>Definition</b> <a href="SplineStructs_8h_source.html#l00174">SplineStructs.h:174</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SplineStructs_8h_source.html#l00788">788</a> of file <a class="el" href="SplineStructs_8h_source.html">SplineStructs.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  788</span>                                                                                            {</div>
+<div class="line"><span class="lineno">  789</span><span class="comment">// *********************************</span></div>
+<div class="line"><span class="lineno">  790</span>  std::vector&lt;std::vector&lt;TF1*&gt; &gt;::iterator <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">OuterIt</a>;</div>
+<div class="line"><span class="lineno">  791</span>  std::vector&lt;TF1*&gt;::iterator <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">InnerIt</a>;</div>
+<div class="line"><span class="lineno">  792</span> </div>
+<div class="line"><span class="lineno">  793</span>  <span class="comment">// The return vector</span></div>
+<div class="line"><span class="lineno">  794</span>  std::vector&lt;std::vector&lt;TF1_red*&gt; &gt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ReducedVector</a>;</div>
+<div class="line"><span class="lineno">  795</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ReducedVector</a>.reserve(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">MasterSpline</a>.size());</div>
+<div class="line"><span class="lineno">  796</span> </div>
+<div class="line"><span class="lineno">  797</span>  <span class="comment">// Loop over each parameter</span></div>
+<div class="line"><span class="lineno">  798</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">OuterCounter</a> = 0;</div>
+<div class="line"><span class="lineno">  799</span>  <span class="keywordflow">for</span> (<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">OuterIt</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">MasterSpline</a>.begin(); <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">OuterIt</a> != <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">MasterSpline</a>.end(); ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">OuterIt</a>, ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">OuterCounter</a>) {</div>
+<div class="line"><span class="lineno">  800</span>    <span class="comment">// Make the temp vector</span></div>
+<div class="line"><span class="lineno">  801</span>    std::vector&lt;TF1_red*&gt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TempVector</a>;</div>
+<div class="line"><span class="lineno">  802</span>    <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TempVector</a>.reserve(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">OuterIt</a>-&gt;size());</div>
+<div class="line"><span class="lineno">  803</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">InnerCounter</a> = 0;</div>
+<div class="line"><span class="lineno">  804</span>    <span class="comment">// Loop over each TSpline3 pointer</span></div>
+<div class="line"><span class="lineno">  805</span>    <span class="keywordflow">for</span> (<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">InnerIt</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">OuterIt</a>-&gt;begin(); <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">InnerIt</a> != <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">OuterIt</a>-&gt;end(); ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">InnerIt</a>, ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">InnerCounter</a>) {</div>
+<div class="line"><span class="lineno">  806</span>      <span class="comment">// Here&#39;s our delicious TSpline3 object</span></div>
+<div class="line"><span class="lineno">  807</span>      <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TF1</a>* <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">spline</a> = (*InnerIt);</div>
+<div class="line"><span class="lineno">  808</span>      <span class="comment">// Now make the reduced TSpline3 pointer (which deleted TSpline3)</span></div>
+<div class="line"><span class="lineno">  809</span>      <a class="code hl_class" href="classTF1__red.html">TF1_red</a>* <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">red</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">NULL</a>;</div>
+<div class="line"><span class="lineno">  810</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">spline</a> != <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">NULL</a>) {</div>
+<div class="line"><span class="lineno">  811</span>        <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">red</a> = <span class="keyword">new</span> <a class="code hl_class" href="classTF1__red.html">TF1_red</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">spline</a>);</div>
+<div class="line"><span class="lineno">  812</span>        (*InnerIt) = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">spline</a>;</div>
+<div class="line"><span class="lineno">  813</span>      }</div>
+<div class="line"><span class="lineno">  814</span>      <span class="comment">// Push back onto new vector</span></div>
+<div class="line"><span class="lineno">  815</span>      <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TempVector</a>.push_back(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">red</a>);</div>
+<div class="line"><span class="lineno">  816</span>    } <span class="comment">// End inner for loop</span></div>
+<div class="line"><span class="lineno">  817</span>    <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ReducedVector</a>.push_back(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TempVector</a>);</div>
+<div class="line"><span class="lineno">  818</span>  } <span class="comment">// End outer for loop</span></div>
+<div class="line"><span class="lineno">  819</span>  <span class="comment">// Now have the reduced vector</span></div>
+<div class="line"><span class="lineno">  820</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ReducedVector</a>;</div>
+<div class="line"><span class="lineno">  821</span>}</div>
+<div class="ttc" id="aclassTF1__red_html"><div class="ttname"><a href="classTF1__red.html">TF1_red</a></div><div class="ttdoc">CW: A reduced TF1 class only. Only saves parameters for each TF1 and how many parameters each paramet...</div><div class="ttdef"><b>Definition</b> <a href="SplineStructs_8h_source.html#l00180">SplineStructs.h:180</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -548,42 +550,42 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="SplineStructs_8h_source.html#l00744">744</a> of file <a class="el" href="SplineStructs_8h_source.html">SplineStructs.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  744</span>                                                                                                           {</div>
-<div class="line"><span class="lineno">  745</span><span class="comment">// *********************************</span></div>
-<div class="line"><span class="lineno">  746</span>  std::vector&lt;std::vector&lt;TSpline3*&gt; &gt;::iterator <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">OuterIt</a>;</div>
-<div class="line"><span class="lineno">  747</span>  std::vector&lt;TSpline3*&gt;::iterator <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">InnerIt</a>;</div>
-<div class="line"><span class="lineno">  748</span> </div>
-<div class="line"><span class="lineno">  749</span>  <span class="comment">// The return vector</span></div>
-<div class="line"><span class="lineno">  750</span>  std::vector&lt;std::vector&lt;TSpline3_red*&gt; &gt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ReducedVector</a>;</div>
-<div class="line"><span class="lineno">  751</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ReducedVector</a>.reserve(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">MasterSpline</a>.size());</div>
-<div class="line"><span class="lineno">  752</span> </div>
-<div class="line"><span class="lineno">  753</span>  <span class="comment">// Loop over each parameter</span></div>
-<div class="line"><span class="lineno">  754</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">OuterCounter</a> = 0;</div>
-<div class="line"><span class="lineno">  755</span>  <span class="keywordflow">for</span> (<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">OuterIt</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">MasterSpline</a>.begin(); <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">OuterIt</a> != <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">MasterSpline</a>.end(); ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">OuterIt</a>, ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">OuterCounter</a>) {</div>
-<div class="line"><span class="lineno">  756</span>    <span class="comment">// Make the temp vector</span></div>
-<div class="line"><span class="lineno">  757</span>    std::vector&lt;TSpline3_red*&gt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TempVector</a>;</div>
-<div class="line"><span class="lineno">  758</span>    <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TempVector</a>.reserve(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">OuterIt</a>-&gt;size());</div>
-<div class="line"><span class="lineno">  759</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">InnerCounter</a> = 0;</div>
-<div class="line"><span class="lineno">  760</span>    <span class="comment">// Loop over each TSpline3 pointer</span></div>
-<div class="line"><span class="lineno">  761</span>    <span class="keywordflow">for</span> (<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">InnerIt</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">OuterIt</a>-&gt;begin(); <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">InnerIt</a> != <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">OuterIt</a>-&gt;end(); ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">InnerIt</a>, ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">InnerCounter</a>) {</div>
-<div class="line"><span class="lineno">  762</span>      <span class="comment">// Here&#39;s our delicious TSpline3 object</span></div>
-<div class="line"><span class="lineno">  763</span>      <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TSpline3</a> *<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">spline</a> = (*InnerIt);</div>
-<div class="line"><span class="lineno">  764</span>      <span class="comment">// Now make the reduced TSpline3 pointer</span></div>
-<div class="line"><span class="lineno">  765</span>      <a class="code hl_class" href="classTSpline3__red.html">TSpline3_red</a> *<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">red</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">NULL</a>;</div>
-<div class="line"><span class="lineno">  766</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">spline</a> != <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">NULL</a>) {</div>
-<div class="line"><span class="lineno">  767</span>        <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">red</a> = <span class="keyword">new</span> <a class="code hl_class" href="classTSpline3__red.html">TSpline3_red</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">spline</a>);</div>
-<div class="line"><span class="lineno">  768</span>        (*InnerIt) = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">spline</a>;</div>
-<div class="line"><span class="lineno">  769</span>      }</div>
-<div class="line"><span class="lineno">  770</span>      <span class="comment">// Push back onto new vector</span></div>
-<div class="line"><span class="lineno">  771</span>      <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TempVector</a>.push_back(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">red</a>);</div>
-<div class="line"><span class="lineno">  772</span>    } <span class="comment">// End inner for loop</span></div>
-<div class="line"><span class="lineno">  773</span>    <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ReducedVector</a>.push_back(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TempVector</a>);</div>
-<div class="line"><span class="lineno">  774</span>  } <span class="comment">// End outer for loop</span></div>
-<div class="line"><span class="lineno">  775</span>  <span class="comment">// Now have the reduced vector</span></div>
-<div class="line"><span class="lineno">  776</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ReducedVector</a>;</div>
-<div class="line"><span class="lineno">  777</span>}</div>
-<div class="ttc" id="aclassTSpline3__red_html"><div class="ttname"><a href="classTSpline3__red.html">TSpline3_red</a></div><div class="ttdoc">CW: Reduced TSpline3 class.</div><div class="ttdef"><b>Definition</b> <a href="SplineStructs_8h_source.html#l00291">SplineStructs.h:291</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SplineStructs_8h_source.html#l00750">750</a> of file <a class="el" href="SplineStructs_8h_source.html">SplineStructs.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  750</span>                                                                                                           {</div>
+<div class="line"><span class="lineno">  751</span><span class="comment">// *********************************</span></div>
+<div class="line"><span class="lineno">  752</span>  std::vector&lt;std::vector&lt;TSpline3*&gt; &gt;::iterator <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">OuterIt</a>;</div>
+<div class="line"><span class="lineno">  753</span>  std::vector&lt;TSpline3*&gt;::iterator <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">InnerIt</a>;</div>
+<div class="line"><span class="lineno">  754</span> </div>
+<div class="line"><span class="lineno">  755</span>  <span class="comment">// The return vector</span></div>
+<div class="line"><span class="lineno">  756</span>  std::vector&lt;std::vector&lt;TSpline3_red*&gt; &gt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ReducedVector</a>;</div>
+<div class="line"><span class="lineno">  757</span>  <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ReducedVector</a>.reserve(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">MasterSpline</a>.size());</div>
+<div class="line"><span class="lineno">  758</span> </div>
+<div class="line"><span class="lineno">  759</span>  <span class="comment">// Loop over each parameter</span></div>
+<div class="line"><span class="lineno">  760</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">OuterCounter</a> = 0;</div>
+<div class="line"><span class="lineno">  761</span>  <span class="keywordflow">for</span> (<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">OuterIt</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">MasterSpline</a>.begin(); <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">OuterIt</a> != <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">MasterSpline</a>.end(); ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">OuterIt</a>, ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">OuterCounter</a>) {</div>
+<div class="line"><span class="lineno">  762</span>    <span class="comment">// Make the temp vector</span></div>
+<div class="line"><span class="lineno">  763</span>    std::vector&lt;TSpline3_red*&gt; <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TempVector</a>;</div>
+<div class="line"><span class="lineno">  764</span>    <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TempVector</a>.reserve(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">OuterIt</a>-&gt;size());</div>
+<div class="line"><span class="lineno">  765</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">InnerCounter</a> = 0;</div>
+<div class="line"><span class="lineno">  766</span>    <span class="comment">// Loop over each TSpline3 pointer</span></div>
+<div class="line"><span class="lineno">  767</span>    <span class="keywordflow">for</span> (<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">InnerIt</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">OuterIt</a>-&gt;begin(); <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">InnerIt</a> != <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">OuterIt</a>-&gt;end(); ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">InnerIt</a>, ++<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">InnerCounter</a>) {</div>
+<div class="line"><span class="lineno">  768</span>      <span class="comment">// Here&#39;s our delicious TSpline3 object</span></div>
+<div class="line"><span class="lineno">  769</span>      <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TSpline3</a> *<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">spline</a> = (*InnerIt);</div>
+<div class="line"><span class="lineno">  770</span>      <span class="comment">// Now make the reduced TSpline3 pointer</span></div>
+<div class="line"><span class="lineno">  771</span>      <a class="code hl_class" href="classTSpline3__red.html">TSpline3_red</a> *<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">red</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">NULL</a>;</div>
+<div class="line"><span class="lineno">  772</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">spline</a> != <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">NULL</a>) {</div>
+<div class="line"><span class="lineno">  773</span>        <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">red</a> = <span class="keyword">new</span> <a class="code hl_class" href="classTSpline3__red.html">TSpline3_red</a>(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">spline</a>);</div>
+<div class="line"><span class="lineno">  774</span>        (*InnerIt) = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">spline</a>;</div>
+<div class="line"><span class="lineno">  775</span>      }</div>
+<div class="line"><span class="lineno">  776</span>      <span class="comment">// Push back onto new vector</span></div>
+<div class="line"><span class="lineno">  777</span>      <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TempVector</a>.push_back(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">red</a>);</div>
+<div class="line"><span class="lineno">  778</span>    } <span class="comment">// End inner for loop</span></div>
+<div class="line"><span class="lineno">  779</span>    <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ReducedVector</a>.push_back(<a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">TempVector</a>);</div>
+<div class="line"><span class="lineno">  780</span>  } <span class="comment">// End outer for loop</span></div>
+<div class="line"><span class="lineno">  781</span>  <span class="comment">// Now have the reduced vector</span></div>
+<div class="line"><span class="lineno">  782</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">ReducedVector</a>;</div>
+<div class="line"><span class="lineno">  783</span>}</div>
+<div class="ttc" id="aclassTSpline3__red_html"><div class="ttname"><a href="classTSpline3__red.html">TSpline3_red</a></div><div class="ttdoc">CW: Reduced TSpline3 class.</div><div class="ttdef"><b>Definition</b> <a href="SplineStructs_8h_source.html#l00297">SplineStructs.h:297</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

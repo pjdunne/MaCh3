@@ -54,10 +54,10 @@ var searchData=
   ['runllhscan_51',['RunLLHScan',['../classFitterBase.html#a018e8d09a62bca19840e1321b49df2c0',1,'FitterBase']]],
   ['runmcmc_52',['runmcmc',['../classFitterBase.html#a1a9666dc09f91af804954e8968bc7b24',1,'FitterBase::runMCMC()'],['../classLikelihoodFit.html#a97f28cf4797fd2f6e3fac267dcdafb27',1,'LikelihoodFit::runMCMC()'],['../classmcmc.html#a8a9cc0e0aa65c8573fca703a42b2ee31',1,'mcmc::runMCMC()'],['../classMinuitFit.html#a8e746fb17d4bc75a9d308398a4a0229e',1,'MinuitFit::runMCMC()'],['../classPSO.html#afcd534dbf737430c8ab1e921e8730b81',1,'PSO::runMCMC()']]],
   ['runsigmavar_53',['RunSigmaVar',['../classFitterBase.html#a71e43b96395568e54879d9bd1b57c0f8',1,'FitterBase']]],
-  ['rw_5fetru_54',['rw_etru',['../structfdmc__base.html#aaf0aa44813fc15f760c58e7c058945bd',1,'fdmc_base']]],
-  ['rw_5flower_5flower_5fxbinedge_55',['rw_lower_lower_xbinedge',['../structfdmc__base.html#aa7c93fcdf1ecb44af5fb60d9906884b3',1,'fdmc_base']]],
-  ['rw_5flower_5fxbinedge_56',['rw_lower_xbinedge',['../structfdmc__base.html#ac21589725161539db7389ca71cc9d469',1,'fdmc_base']]],
-  ['rw_5ftruecz_57',['rw_truecz',['../structfdmc__base.html#ae9dc05c1a207b9b4a58f8874fc2a0ede',1,'fdmc_base']]],
-  ['rw_5fupper_5fupper_5fxbinedge_58',['rw_upper_upper_xbinedge',['../structfdmc__base.html#a914879f08bef429544c23de3547f5485',1,'fdmc_base']]],
-  ['rw_5fupper_5fxbinedge_59',['rw_upper_xbinedge',['../structfdmc__base.html#af4abad4b5dc2004648207976d38048d5',1,'fdmc_base']]]
+  ['rw_5fetru_54',['rw_etru',['../structFarDetectorCoreInfo.html#a90ac71448d50c0b8db0a4479444779c3',1,'FarDetectorCoreInfo']]],
+  ['rw_5flower_5flower_5fxbinedge_55',['rw_lower_lower_xbinedge',['../structFarDetectorCoreInfo.html#a1da2583460c7d5292c97cb44187b9d91',1,'FarDetectorCoreInfo']]],
+  ['rw_5flower_5fxbinedge_56',['rw_lower_xbinedge',['../structFarDetectorCoreInfo.html#a0cb33607ebcc5e8ab3dc2e03b61744b0',1,'FarDetectorCoreInfo']]],
+  ['rw_5ftruecz_57',['rw_truecz',['../structFarDetectorCoreInfo.html#a6a26058f1a5ee11d9dfbfb9433acd282',1,'FarDetectorCoreInfo']]],
+  ['rw_5fupper_5fupper_5fxbinedge_58',['rw_upper_upper_xbinedge',['../structFarDetectorCoreInfo.html#ad1b522c6ab1427789fb1888657173572',1,'FarDetectorCoreInfo']]],
+  ['rw_5fupper_5fxbinedge_59',['rw_upper_xbinedge',['../structFarDetectorCoreInfo.html#a697bb2e1b4ec61a6125b04e856f4825f',1,'FarDetectorCoreInfo']]]
 ];
