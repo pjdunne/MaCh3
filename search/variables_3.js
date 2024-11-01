@@ -12,7 +12,7 @@ var searchData=
   ['coeff_5fx_9',['coeff_x',['../structSplineMonoStruct.html#a47012ee423ea21f99d06eff8257cf0f0',1,'SplineMonoStruct']]],
   ['coeffindex_10',['CoeffIndex',['../classsplineFDBase.html#abcff04fee3e6790a099a0df9dbee74c2',1,'splineFDBase']]],
   ['coeffindexvec_11',['coeffindexvec',['../classsplineFDBase.html#af63885ddb6731f77808d029372e6b187',1,'splineFDBase']]],
-  ['config_12',['config',['../classmanager.html#a7519c9ab5670ae939d18485d31057b46',1,'manager::config'],['../ProcessMCMC_8cpp.html#a13056efd080ab16304b6f7be0ebf0a61',1,'config:&#160;ProcessMCMC.cpp']]],
+  ['config_12',['config',['../classmanager.html#a7519c9ab5670ae939d18485d31057b46',1,'manager::config()'],['../ProcessMCMC_8cpp.html#a13056efd080ab16304b6f7be0ebf0a61',1,'config():&#160;ProcessMCMC.cpp']]],
   ['corr_5fthrow_13',['corr_throw',['../classcovarianceBase.html#a7b70de3f098aae1d537d80bac5969d88',1,'covarianceBase']]],
   ['correlation_14',['Correlation',['../classMCMCProcessor.html#a03f28431158777cdd81d058b6632a92f',1,'MCMCProcessor']]],
   ['covariance_15',['Covariance',['../classMCMCProcessor.html#af9a40632e2d7f1266d69a74d5b5f2244',1,'MCMCProcessor']]],

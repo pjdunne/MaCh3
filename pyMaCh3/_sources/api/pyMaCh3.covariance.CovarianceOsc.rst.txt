@@ -1,7 +1,0 @@
-CovarianceOsc
-=============
-
-.. currentmodule:: pyMaCh3.covariance
-
-.. autoclass:: CovarianceOsc
-   :show-inheritance:

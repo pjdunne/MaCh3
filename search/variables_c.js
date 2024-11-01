@@ -1,7 +1,7 @@
 var searchData=
 [
   ['madepostfit_0',['MadePostfit',['../classMCMCProcessor.html#aecc35d4ea7d2c7e020e50388ba0ffb64',1,'MCMCProcessor']]],
-  ['man_1',['man',['../GetPostfitParamPlots_8cpp.html#aa6f3c9a8cee8f72f6f8ce65b720a2d40',1,'man:&#160;GetPostfitParamPlots.cpp'],['../PlotLLH_8cpp.html#aa6f3c9a8cee8f72f6f8ce65b720a2d40',1,'man:&#160;PlotLLH.cpp']]],
+  ['man_1',['man',['../GetPostfitParamPlots_8cpp.html#aa6f3c9a8cee8f72f6f8ce65b720a2d40',1,'man():&#160;GetPostfitParamPlots.cpp'],['../PlotLLH_8cpp.html#aa6f3c9a8cee8f72f6f8ce65b720a2d40',1,'man():&#160;PlotLLH.cpp']]],
   ['manycoeff_5farr_2',['manycoeff_arr',['../classsplineFDBase.html#ab883a1f2cdae707c36fa27b86ed7f279',1,'splineFDBase']]],
   ['marginalposteriorvariance_3',['MarginalPosteriorVariance',['../RHat_8cpp.html#a68813385f1240d1264e139391b12bf05',1,'RHat.cpp']]],
   ['marginalposteriorvariancefolded_4',['MarginalPosteriorVarianceFolded',['../RHat_8cpp.html#af4fae3d323e2f5220b3506386304f8f4',1,'RHat.cpp']]],
@@ -9,7 +9,7 @@ var searchData=
   ['maxbins_6',['maxBins',['../classSampleSummary.html#a780a82a74bb9d1c3b798a995dfef7ec2',1,'SampleSummary']]],
   ['mc_5ffiles_7',['mc_files',['../classsamplePDFFDBase.html#a48ec5ccc753e412865513d4168657ac4',1,'samplePDFFDBase']]],
   ['mc_5fstat_5fllh_8',['mc_stat_llh',['../classmanager.html#aa7619b235f224c34e77f8d09f42a5911',1,'manager']]],
-  ['mcmcfile_9',['mcmcfile',['../RHat_8cpp.html#aa19a5e341d34dce5448ee490dedba8ef',1,'MCMCFile:&#160;RHat.cpp'],['../classMCMCProcessor.html#a6d212d77a818304a8674a7b9b18d43b8',1,'MCMCProcessor::MCMCFile']]],
+  ['mcmcfile_9',['MCMCFile',['../RHat_8cpp.html#aa19a5e341d34dce5448ee490dedba8ef',1,'MCMCFile():&#160;RHat.cpp'],['../classMCMCProcessor.html#a6d212d77a818304a8674a7b9b18d43b8',1,'MCMCProcessor::MCMCFile()']]],
   ['mcmcproc_10',['mcmcProc',['../structMaCh3Plotting_1_1InputFile.html#a78420e7a9d73500f257d5a92437556f8',1,'MaCh3Plotting::InputFile']]],
   ['mcmcstepparamsmap_11',['MCMCstepParamsMap',['../structMaCh3Plotting_1_1InputFile.html#ad0366c41862bce9e38ecc8eea890bf05',1,'MaCh3Plotting::InputFile']]],
   ['mcmcsteptreeindicesmap_12',['MCMCstepTreeIndicesMap',['../structMaCh3Plotting_1_1InputFile.html#ab3bf09dd833f8d8a73a2273c0a1cc113',1,'MaCh3Plotting::InputFile']]],
@@ -29,10 +29,12 @@ var searchData=
   ['means_5fhpd_26',['Means_HPD',['../classMCMCProcessor.html#a32657dc39a7fc0d04804f6195a3d8c3e',1,'MCMCProcessor']]],
   ['medianarr_27',['MedianArr',['../RHat_8cpp.html#a761fd0b4a970686c00ce3e4daefd7f73',1,'RHat.cpp']]],
   ['minuit_28',['minuit',['../classMinuitFit.html#a3f5a1b7de36ce6c55821e262b016cb19',1,'MinuitFit']]],
-  ['mode_29',['mode',['../structFarDetectorCoreInfo.html#a1f789958d83380f77b8fba1b3e3daa24',1,'FarDetectorCoreInfo::mode'],['../classMaCh3Modes.html#a062f961a64e9b6bebf420730f9dad9ff',1,'MaCh3Modes::Mode']]],
-  ['modehist_30',['ModeHist',['../classSampleSummary.html#a59475a0c9460277914402850372727ea',1,'SampleSummary']]],
-  ['modemap_31',['ModeMap',['../classMaCh3Modes.html#a52a226378736541ece3830f53ac851c3',1,'MaCh3Modes']]],
-  ['modes_32',['modes',['../classSampleSummary.html#a6593fed9709673a6910f96adc88fc8f2',1,'SampleSummary::Modes'],['../classFitterBase.html#a004cb6e6168032d9280ce3db912f1a43',1,'FitterBase::Modes'],['../classsamplePDFBase.html#ab4ce7691212fdc86570b98d58a333ddf',1,'samplePDFBase::Modes'],['../classmanager.html#ab30ad812780ee2152b72f942b7b91dec',1,'manager::Modes'],['../structXsecNorms4.html#ad0632d5a94a37ee5ce297698abadd844',1,'XsecNorms4::modes']]],
-  ['monolithindex_33',['MonolithIndex',['../classsplineFDBase.html#addec38a8493974ccc3ee16931d5b794a',1,'splineFDBase']]],
-  ['monolithsize_34',['MonolithSize',['../classsplineFDBase.html#ad1fefa7f796f2a28a69f5336f5777bce',1,'splineFDBase']]]
+  ['mode_29',['mode',['../structFarDetectorCoreInfo.html#a1f789958d83380f77b8fba1b3e3daa24',1,'FarDetectorCoreInfo']]],
+  ['mode_30',['Mode',['../classMaCh3Modes.html#a062f961a64e9b6bebf420730f9dad9ff',1,'MaCh3Modes']]],
+  ['modehist_31',['ModeHist',['../classSampleSummary.html#a59475a0c9460277914402850372727ea',1,'SampleSummary']]],
+  ['modemap_32',['ModeMap',['../classMaCh3Modes.html#a52a226378736541ece3830f53ac851c3',1,'MaCh3Modes']]],
+  ['modes_33',['modes',['../structXsecNorms4.html#ad0632d5a94a37ee5ce297698abadd844',1,'XsecNorms4']]],
+  ['modes_34',['Modes',['../classSampleSummary.html#a6593fed9709673a6910f96adc88fc8f2',1,'SampleSummary::Modes()'],['../classFitterBase.html#a004cb6e6168032d9280ce3db912f1a43',1,'FitterBase::Modes()'],['../classsamplePDFBase.html#ab4ce7691212fdc86570b98d58a333ddf',1,'samplePDFBase::Modes()'],['../classmanager.html#ab30ad812780ee2152b72f942b7b91dec',1,'manager::Modes()']]],
+  ['monolithindex_35',['MonolithIndex',['../classsplineFDBase.html#addec38a8493974ccc3ee16931d5b794a',1,'splineFDBase']]],
+  ['monolithsize_36',['MonolithSize',['../classsplineFDBase.html#ad1fefa7f796f2a28a69f5336f5777bce',1,'splineFDBase']]]
 ];

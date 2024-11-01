@@ -1,21 +1,11 @@
-<map id="plotting/plottingUtils/plottingUtils.h" name="plotting/plottingUtils/plottingUtils.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="446,5,582,46"/>
-<area shape="rect" id="Node000002" href="$GetPostfitParamPlots_8cpp.html" title=" " alt="" coords="5,271,169,312"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="462,56,383,96,301,138,223,185,161,231,111,273,107,269,158,227,220,180,299,133,380,92,459,51"/>
-<area shape="rect" id="Node000003" href="$MatrixPlotter_8cpp.html" title=" " alt="" coords="524,279,688,305"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="531,59,544,93,581,200,605,277,600,279,575,201,539,95,526,61"/>
-<area shape="rect" id="Node000004" href="$inputManager_8h.html" title=" " alt="" coords="394,94,530,135"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="496,61,476,95,471,92,492,58"/>
-<area shape="rect" id="Node000009" href="$plottingUtils_8cpp.html" title=" " alt="" coords="604,94,741,135"/>
-<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="564,51,638,91,635,96,562,56"/>
-<area shape="rect" id="Node000005" href="$inputManager_8cpp.html" title=" " alt="" coords="394,183,530,223"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="464,150,464,182,459,182,459,150"/>
-<area shape="rect" id="Node000006" href="$plottingManager_8h.html" title=" " alt="" coords="234,183,370,223"/>
-<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="413,145,339,185,337,180,411,140"/>
-<area shape="poly" id="edge6_Node000006_Node000002" title=" " alt="" coords="240,232,137,273,135,268,238,227"/>
-<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="386,225,564,276,562,281,384,230"/>
-<area shape="rect" id="Node000007" href="$PlotLLH_8cpp.html" title=" " alt="" coords="193,279,333,305"/>
-<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="289,239,271,280,266,277,284,236"/>
-<area shape="rect" id="Node000008" href="$plottingManager_8cpp.html" title=" " alt="" coords="358,271,499,312"/>
-<area shape="poly" id="edge9_Node000006_Node000008" title=" " alt="" coords="344,230,401,269,398,273,341,234"/>
+<map id="/home/runner/work/MaCh3/MaCh3/plotting/plottingUtils/plottingUtils.h" name="/home/runner/work/MaCh3/MaCh3/plotting/plottingUtils/plottingUtils.h">
+<area shape="rect" id="node1" title=" " alt="" coords="618,5,827,60"/>
+<area shape="rect" id="node2" href="$GetPostfitParamPlots_8cpp.html" title=" " alt="" coords="5,313,240,368"/>
+<area shape="rect" id="node3" href="$MatrixPlotter_8cpp.html" title=" " alt="" coords="728,321,968,361"/>
+<area shape="rect" id="node4" href="$inputManager_8h.html" title=" " alt="" coords="547,108,757,163"/>
+<area shape="rect" id="node9" href="$plottingUtils_8cpp.html" title=" " alt="" coords="833,108,1042,163"/>
+<area shape="rect" id="node5" href="$inputManager_8cpp.html" title=" " alt="" coords="547,211,757,265"/>
+<area shape="rect" id="node6" href="$plottingManager_8h.html" title=" " alt="" coords="314,211,523,265"/>
+<area shape="rect" id="node7" href="$PlotLLH_8cpp.html" title=" " alt="" coords="264,321,469,361"/>
+<area shape="rect" id="node8" href="$plottingManager_8cpp.html" title=" " alt="" coords="494,313,703,368"/>
 </map>
