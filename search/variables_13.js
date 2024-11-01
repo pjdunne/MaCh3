@@ -8,8 +8,8 @@ var searchData=
   ['uniquesystnames_5',['UniqueSystNames',['../classsplineFDBase.html#aacf850f4ec22e4f7338f243999ecc7dd',1,'splineFDBase']]],
   ['uniquesystnknots_6',['UniqueSystNKnots',['../classsplineFDBase.html#a176d42bb137d3c8c3771eb1a4a8440c8',1,'splineFDBase']]],
   ['uniquesystxpts_7',['UniqueSystXPts',['../classsplineFDBase.html#a5112a1bbd658d3a90c6a785c12aebf34',1,'splineFDBase']]],
-  ['unity_8',['Unity',['../structFarDetectorCoreInfo.html#a365032372727c218a3d11e1ab6f804fb',1,'FarDetectorCoreInfo::Unity()'],['../classsamplePDFFDBase.html#a4f0c67b108c3307c7943873ffcb0a361',1,'samplePDFFDBase::Unity()'],['../classcovarianceBase.html#a7682c3de33ae5b23b23e070dc0a3f778',1,'covarianceBase::Unity()']]],
-  ['unity_5ff_9',['Unity_F',['../structFarDetectorCoreInfo.html#a03f091e0a2896169cd508bab43a8fde9',1,'FarDetectorCoreInfo::Unity_F()'],['../classsamplePDFFDBase.html#a32169b381961e12d91be0b83f445049d',1,'samplePDFFDBase::Unity_F()']]],
+  ['unity_8',['unity',['../structFarDetectorCoreInfo.html#a365032372727c218a3d11e1ab6f804fb',1,'FarDetectorCoreInfo::Unity'],['../classsamplePDFFDBase.html#a4f0c67b108c3307c7943873ffcb0a361',1,'samplePDFFDBase::Unity'],['../classcovarianceBase.html#a7682c3de33ae5b23b23e070dc0a3f778',1,'covarianceBase::Unity']]],
+  ['unity_5ff_9',['unity_f',['../structFarDetectorCoreInfo.html#a03f091e0a2896169cd508bab43a8fde9',1,'FarDetectorCoreInfo::Unity_F'],['../classsamplePDFFDBase.html#a32169b381961e12d91be0b83f445049d',1,'samplePDFFDBase::Unity_F']]],
   ['unity_5fint_10',['Unity_Int',['../structFarDetectorCoreInfo.html#aa4acd05f0690043c7f2e089e56d64609',1,'FarDetectorCoreInfo']]],
   ['uppercut_11',['UpperCut',['../classMCMCProcessor.html#a840c686f15f419c0156df01c4ed62931',1,'MCMCProcessor']]],
   ['use_5fadaptive_12',['use_adaptive',['../classcovarianceBase.html#a838731abd6716940043b484b2b266f86',1,'covarianceBase']]]
