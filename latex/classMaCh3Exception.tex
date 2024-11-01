@@ -1,0 +1,138 @@
+\hypertarget{classMaCh3Exception}{}\doxysection{Ma\+Ch3\+Exception Class Reference}
+\label{classMaCh3Exception}\index{MaCh3Exception@{MaCh3Exception}}
+
+
+Custom exception class for Ma\+Ch3 errors.  
+
+
+
+
+{\ttfamily \#include $<$/home/runner/work/\+Ma\+Ch3/\+Ma\+Ch3/manager/\+Ma\+Ch3\+Exception.\+h$>$}
+
+
+
+Inheritance diagram for Ma\+Ch3\+Exception\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{classMaCh3Exception__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Ma\+Ch3\+Exception\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=269pt]{classMaCh3Exception__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMaCh3Exception_a848f0037a80a607b8721b7a163b1077e}{Ma\+Ch3\+Exception}} (std\+::string File, int Line, std\+::string Message=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classMaCh3Exception}{Ma\+Ch3\+Exception}} object with the specified error message. \end{DoxyCompactList}\item 
+const char $\ast$ \mbox{\hyperlink{classMaCh3Exception_a42be88b1fd75b91ecb5e472ddefcc45d}{what}} () const noexcept override
+\begin{DoxyCompactList}\small\item\em Returns the error message associated with this exception. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classMaCh3Exception_ab556e4d4710fab4c4d75e94c4bab537d}{error\+Message}}
+\begin{DoxyCompactList}\small\item\em The error message associated with this exception. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Custom exception class for Ma\+Ch3 errors. 
+
+Definition at line \mbox{\hyperlink{MaCh3Exception_8h_source_l00012}{12}} of file \mbox{\hyperlink{MaCh3Exception_8h_source}{Ma\+Ch3\+Exception.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMaCh3Exception_a848f0037a80a607b8721b7a163b1077e}\label{classMaCh3Exception_a848f0037a80a607b8721b7a163b1077e}} 
+\index{MaCh3Exception@{MaCh3Exception}!MaCh3Exception@{MaCh3Exception}}
+\index{MaCh3Exception@{MaCh3Exception}!MaCh3Exception@{MaCh3Exception}}
+\doxysubsubsection{\texorpdfstring{MaCh3Exception()}{MaCh3Exception()}}
+{\footnotesize\ttfamily Ma\+Ch3\+Exception\+::\+Ma\+Ch3\+Exception (\begin{DoxyParamCaption}\item[{std\+::string}]{File,  }\item[{int}]{Line,  }\item[{std\+::string}]{Message = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Constructs a \mbox{\hyperlink{classMaCh3Exception}{Ma\+Ch3\+Exception}} object with the specified error message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em File} & The name of the file where the exception occurred. \\
+\hline
+{\em Line} & The line number where the exception occurred. \\
+\hline
+{\em Message} & The error message describing the exception (optional). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{MaCh3Exception_8h_source_l00018}{18}} of file \mbox{\hyperlink{MaCh3Exception_8h_source}{Ma\+Ch3\+Exception.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00019\ \ \ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ lastSlashPos\ =\ File.find\_last\_of(\textcolor{charliteral}{'/'});}
+\DoxyCodeLine{00021\ \ \ \ \ std::string\ fileName\ =\ (lastSlashPos\ !=\ std::string::npos)\ ?\ File.substr(lastSlashPos\ +\ 1)\ :\ File;}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{classMaCh3Exception_ab556e4d4710fab4c4d75e94c4bab537d}{errorMessage}}\ =\ ((Message.empty())\ ?\ \textcolor{stringliteral}{"{}Terminating\ MaCh3"{}}\ :\ Message);}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{comment}{//\ KS:\ Set\ logger\ format\ where\ we\ only\ have\ have\ "{}information\ type"{},\ line\ would\ be\ confusing}}
+\DoxyCodeLine{00025\ \ \ \ \ spdlog::set\_pattern(\textcolor{stringliteral}{"{}[\%\string^\%l\%\$]\ \%v"{}});}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Find\ me\ here:\ \{\}::\{\}"{}},\ fileName,\ Line);}
+\DoxyCodeLine{00027\ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMaCh3Exception_a42be88b1fd75b91ecb5e472ddefcc45d}\label{classMaCh3Exception_a42be88b1fd75b91ecb5e472ddefcc45d}} 
+\index{MaCh3Exception@{MaCh3Exception}!what@{what}}
+\index{what@{what}!MaCh3Exception@{MaCh3Exception}}
+\doxysubsubsection{\texorpdfstring{what()}{what()}}
+{\footnotesize\ttfamily const char $\ast$ Ma\+Ch3\+Exception\+::what (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [noexcept]}}
+
+
+
+Returns the error message associated with this exception. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the error message string. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{MaCh3Exception_8h_source_l00031}{31}} of file \mbox{\hyperlink{MaCh3Exception_8h_source}{Ma\+Ch3\+Exception.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classMaCh3Exception_ab556e4d4710fab4c4d75e94c4bab537d}{errorMessage}}.c\_str();}
+\DoxyCodeLine{00033\ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classMaCh3Exception_ab556e4d4710fab4c4d75e94c4bab537d}\label{classMaCh3Exception_ab556e4d4710fab4c4d75e94c4bab537d}} 
+\index{MaCh3Exception@{MaCh3Exception}!errorMessage@{errorMessage}}
+\index{errorMessage@{errorMessage}!MaCh3Exception@{MaCh3Exception}}
+\doxysubsubsection{\texorpdfstring{errorMessage}{errorMessage}}
+{\footnotesize\ttfamily std\+::string Ma\+Ch3\+Exception\+::error\+Message\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The error message associated with this exception. 
+
+
+
+Definition at line \mbox{\hyperlink{MaCh3Exception_8h_source_l00037}{37}} of file \mbox{\hyperlink{MaCh3Exception_8h_source}{Ma\+Ch3\+Exception.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/runner/work/\+Ma\+Ch3/\+Ma\+Ch3/manager/\mbox{\hyperlink{MaCh3Exception_8h}{Ma\+Ch3\+Exception.\+h}}\end{DoxyCompactItemize}

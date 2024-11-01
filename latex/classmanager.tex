@@ -1,0 +1,434 @@
+\hypertarget{classmanager}{}\doxysection{manager Class Reference}
+\label{classmanager}\index{manager@{manager}}
+
+
+The manager class is responsible for managing configurations and settings.  
+
+
+
+
+{\ttfamily \#include $<$/home/runner/work/\+Ma\+Ch3/\+Ma\+Ch3/manager/manager.\+h$>$}
+
+
+
+Collaboration diagram for manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmanager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmanager_a1f70d87043901a5f3b79f9828873642c}{manager}} (std\+::string const \&filename)
+\begin{DoxyCompactList}\small\item\em Constructs a manager object with the specified file name. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classmanager_ad5f9fad9ba7b6e4ff0d65834a478bfc2}{$\sim$manager}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the manager object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmanager_a0990af01a220479a19ead5d0231aaf94}{Save\+Settings}} (TFile $\ast$const Output\+File)
+\begin{DoxyCompactList}\small\item\em Add manager useful information\textquotesingle{}s to TFile, in most cases to Fitter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmanager_a10ff16396efbc1dedcbd931c50ff7eff}{Print}} ()
+\begin{DoxyCompactList}\small\item\em Print currently used config. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classmanager_a149d43d444a7492187d0051c531923bd}{Get\+MCStat\+LLH}} ()
+\begin{DoxyCompactList}\small\item\em Get likelihood type defined in the config. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classmanager_ab81f0be941a168843b372d38999877f2}{Get\+File\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Return name of config. \end{DoxyCompactList}\item 
+YAML\+::\+Node const \& \mbox{\hyperlink{classmanager_ab3999cc856ede72b37f68bdb28bd5520}{raw}} ()
+\begin{DoxyCompactList}\small\item\em Return config. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMaCh3Modes}{Ma\+Ch3\+Modes}} $\ast$ \mbox{\hyperlink{classmanager_a297a81517f0a46bda90f42b211e42cf5}{Get\+Ma\+Ch3\+Modes}} () const
+\begin{DoxyCompactList}\small\item\em Return pointer to Ma\+Ch3 modes. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classmanager_add5993e63225ab419ede0a3ba80c9f7f}{Get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Get class name. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... Args$>$ }\\void \mbox{\hyperlink{classmanager_a27d6193b03ee0400af4ddc91af114a35}{Override\+Settings}} (Args \&\&... args)
+\begin{DoxyCompactList}\small\item\em Overrides the configuration settings based on provided arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+YAML\+::\+Node \mbox{\hyperlink{classmanager_a7519c9ab5670ae939d18485d31057b46}{config}}
+\begin{DoxyCompactList}\small\item\em The YAML node containing the configuration data. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classmanager_a1004958d1431ff607c08fa795b5953b7}{File\+Name}}
+\begin{DoxyCompactList}\small\item\em The name of the configuration file. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classmanager_aa7619b235f224c34e77f8d09f42a5911}{mc\+\_\+stat\+\_\+llh}}
+\begin{DoxyCompactList}\small\item\em The likelihood type defined in the configuration. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMaCh3Modes}{Ma\+Ch3\+Modes}} $\ast$ \mbox{\hyperlink{classmanager_ab30ad812780ee2152b72f942b7b91dec}{Modes}}
+\begin{DoxyCompactList}\small\item\em Ma\+Ch3 Modes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The manager class is responsible for managing configurations and settings. 
+
+\begin{DoxySeeAlso}{See also}
+For more details, visit the \href{https://github.com/mach3-software/MaCh3/wiki/01.-Manager-and-config-handling}{\texttt{ Wiki}}. 
+\end{DoxySeeAlso}
+
+
+Definition at line \mbox{\hyperlink{manager_8h_source_l00016}{16}} of file \mbox{\hyperlink{manager_8h_source}{manager.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmanager_a1f70d87043901a5f3b79f9828873642c}\label{classmanager_a1f70d87043901a5f3b79f9828873642c}} 
+\index{manager@{manager}!manager@{manager}}
+\index{manager@{manager}!manager@{manager}}
+\doxysubsubsection{\texorpdfstring{manager()}{manager()}}
+{\footnotesize\ttfamily manager\+::manager (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructs a manager object with the specified file name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the configuration file. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{manager_8cpp_source_l00006}{6}} of file \mbox{\hyperlink{manager_8cpp_source}{manager.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00007\ \ \ \ \ :\ \mbox{\hyperlink{classmanager_a7519c9ab5670ae939d18485d31057b46}{config}}(YAML::LoadFile(filename))\ \{}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ *************************}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \ \ \mbox{\hyperlink{classmanager_a1004958d1431ff607c08fa795b5953b7}{FileName}}\ =\ filename;}
+\DoxyCodeLine{00011\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_aa603c55ea73cd86d1994901227883e1e}{SetMaCh3LoggerFormat}}();}
+\DoxyCodeLine{00012\ \ \ \mbox{\hyperlink{namespaceMaCh3Utils_ac6f4a3b6a7749967ff9a011469352f6c}{MaCh3Utils::MaCh3Welcome}}();}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Setting\ config\ to\ be:\ \{\}"{}},\ filename);}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Config\ is\ now:\ "{}});}
+\DoxyCodeLine{00017\ \ \ \mbox{\hyperlink{namespaceMaCh3Utils_aaf39f873ebf93550a417418e583ebcf8}{MaCh3Utils::PrintConfig}}(\mbox{\hyperlink{classmanager_a7519c9ab5670ae939d18485d31057b46}{config}});}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classmanager_a7519c9ab5670ae939d18485d31057b46}{config}}[\textcolor{stringliteral}{"{}LikelihoodOptions"{}}])}
+\DoxyCodeLine{00020\ \ \ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{auto}\ likelihood\ =\ GetFromManager<std::string>(\mbox{\hyperlink{classmanager_a7519c9ab5670ae939d18485d31057b46}{config}}[\textcolor{stringliteral}{"{}LikelihoodOptions"{}}][\textcolor{stringliteral}{"{}TestStatistic"{}}],\ \textcolor{stringliteral}{"{}Barlow-\/Beeston"{}});}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordflow}{if}\ (likelihood\ ==\ \textcolor{stringliteral}{"{}Barlow-\/Beeston"{}})\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmanager_aa7619b235f224c34e77f8d09f42a5911}{mc\_stat\_llh}}\ =\ \mbox{\hyperlink{Structs_8h_a960da89e33ac45a56f7bbfac3068dc67a3c9b50397bd37ce679bbdda14f6108c4}{kBarlowBeeston}};}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (likelihood\ ==\ \textcolor{stringliteral}{"{}IceCube"{}})\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmanager_aa7619b235f224c34e77f8d09f42a5911}{mc\_stat\_llh}}\ =\ \mbox{\hyperlink{Structs_8h_a960da89e33ac45a56f7bbfac3068dc67a5a1aedce85942661f297f503d606c472}{kIceCube}};}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (likelihood\ ==\ \textcolor{stringliteral}{"{}Poisson"{}})\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmanager_aa7619b235f224c34e77f8d09f42a5911}{mc\_stat\_llh}}\ =\ \mbox{\hyperlink{Structs_8h_a960da89e33ac45a56f7bbfac3068dc67a82f43d91f1eda213c4b5c486672a32a5}{kPoisson}};}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (likelihood\ ==\ \textcolor{stringliteral}{"{}Pearson"{}})\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmanager_aa7619b235f224c34e77f8d09f42a5911}{mc\_stat\_llh}}\ =\ \mbox{\hyperlink{Structs_8h_a960da89e33ac45a56f7bbfac3068dc67a1ac0c03f07bf2bb9ad083e449d69ffd7}{kPearson}};}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (likelihood\ ==\ \textcolor{stringliteral}{"{}Dembinski-\/Abdelmotteleb"{}})\ \ \ \mbox{\hyperlink{classmanager_aa7619b235f224c34e77f8d09f42a5911}{mc\_stat\_llh}}\ =\ \mbox{\hyperlink{Structs_8h_a960da89e33ac45a56f7bbfac3068dc67a6589bdeaef8de84e7ef545fd709772bb}{kDembinskiAbdelmottele}};}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Wrong\ form\ of\ test-\/statistic\ specified!"{}});}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}You\ gave\ \{\}\ and\ I\ only\ support:"{}},\ likelihood);}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{Structs_8h_a960da89e33ac45a56f7bbfac3068dc67a1459dbcc0f1b68b266cf0ddc37c34aee}{kNTestStatistics}};\ i++)}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}\{\}"{}},\ \mbox{\hyperlink{Structs_8h_afe33f23691e6b5e3e0f5ab97aaeb7726}{TestStatistic\_ToString}}(\mbox{\hyperlink{Structs_8h_a960da89e33ac45a56f7bbfac3068dc67}{TestStatistic}}(i)));}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_\ ,\ \_\_LINE\_\_\ );}
+\DoxyCodeLine{00035\ \ \ \ \ \}}
+\DoxyCodeLine{00036\ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{classmanager_aa7619b235f224c34e77f8d09f42a5911}{mc\_stat\_llh}}\ =\ \mbox{\hyperlink{Structs_8h_a960da89e33ac45a56f7bbfac3068dc67a82f43d91f1eda213c4b5c486672a32a5}{kPoisson}};}
+\DoxyCodeLine{00038\ \ \ \}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \mbox{\hyperlink{classmanager_ab30ad812780ee2152b72f942b7b91dec}{Modes}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00041\ \ \ std::string\ ModeInput\ =\ GetFromManager<std::string>(\mbox{\hyperlink{classmanager_a7519c9ab5670ae939d18485d31057b46}{config}}[\textcolor{stringliteral}{"{}General"{}}][\textcolor{stringliteral}{"{}MaCh3Modes"{}}],\ \textcolor{stringliteral}{"{}null"{}});}
+\DoxyCodeLine{00042\ \ \ \textcolor{keywordflow}{if}(ModeInput\ !=\ \textcolor{stringliteral}{"{}null"{}})\ \mbox{\hyperlink{classmanager_ab30ad812780ee2152b72f942b7b91dec}{Modes}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classMaCh3Modes}{MaCh3Modes}}(ModeInput);}
+\DoxyCodeLine{00043\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classmanager_ad5f9fad9ba7b6e4ff0d65834a478bfc2}\label{classmanager_ad5f9fad9ba7b6e4ff0d65834a478bfc2}} 
+\index{manager@{manager}!````~manager@{$\sim$manager}}
+\index{````~manager@{$\sim$manager}!manager@{manager}}
+\doxysubsubsection{\texorpdfstring{$\sim$manager()}{~manager()}}
+{\footnotesize\ttfamily manager\+::$\sim$manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destroys the manager object. 
+
+
+
+Definition at line \mbox{\hyperlink{manager_8cpp_source_l00047}{47}} of file \mbox{\hyperlink{manager_8cpp_source}{manager.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00048\ \textcolor{comment}{//\ *************************}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \textcolor{keywordflow}{if}(!\mbox{\hyperlink{classmanager_ab30ad812780ee2152b72f942b7b91dec}{Modes}})\ \textcolor{keyword}{delete}\ \mbox{\hyperlink{classmanager_ab30ad812780ee2152b72f942b7b91dec}{Modes}};}
+\DoxyCodeLine{00051\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmanager_ab81f0be941a168843b372d38999877f2}\label{classmanager_ab81f0be941a168843b372d38999877f2}} 
+\index{manager@{manager}!GetFileName@{GetFileName}}
+\index{GetFileName@{GetFileName}!manager@{manager}}
+\doxysubsubsection{\texorpdfstring{GetFileName()}{GetFileName()}}
+{\footnotesize\ttfamily std\+::string manager\+::\+Get\+File\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return name of config. 
+
+
+
+Definition at line \mbox{\hyperlink{manager_8h_source_l00034}{34}} of file \mbox{\hyperlink{manager_8h_source}{manager.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00034\ \{\textcolor{keywordflow}{return}\ \mbox{\hyperlink{classmanager_a1004958d1431ff607c08fa795b5953b7}{FileName}};\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classmanager_a297a81517f0a46bda90f42b211e42cf5}\label{classmanager_a297a81517f0a46bda90f42b211e42cf5}} 
+\index{manager@{manager}!GetMaCh3Modes@{GetMaCh3Modes}}
+\index{GetMaCh3Modes@{GetMaCh3Modes}!manager@{manager}}
+\doxysubsubsection{\texorpdfstring{GetMaCh3Modes()}{GetMaCh3Modes()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMaCh3Modes}{Ma\+Ch3\+Modes}} $\ast$ manager\+::\+Get\+Ma\+Ch3\+Modes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return pointer to Ma\+Ch3 modes. 
+
+
+
+Definition at line \mbox{\hyperlink{manager_8h_source_l00038}{38}} of file \mbox{\hyperlink{manager_8h_source}{manager.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00038\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classmanager_ab30ad812780ee2152b72f942b7b91dec}{Modes}};\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classmanager_a149d43d444a7492187d0051c531923bd}\label{classmanager_a149d43d444a7492187d0051c531923bd}} 
+\index{manager@{manager}!GetMCStatLLH@{GetMCStatLLH}}
+\index{GetMCStatLLH@{GetMCStatLLH}!manager@{manager}}
+\doxysubsubsection{\texorpdfstring{GetMCStatLLH()}{GetMCStatLLH()}}
+{\footnotesize\ttfamily int manager\+::\+Get\+MCStat\+LLH (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get likelihood type defined in the config. 
+
+
+
+Definition at line \mbox{\hyperlink{manager_8h_source_l00032}{32}} of file \mbox{\hyperlink{manager_8h_source}{manager.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00032\ \{\textcolor{keywordflow}{return}\ \mbox{\hyperlink{classmanager_aa7619b235f224c34e77f8d09f42a5911}{mc\_stat\_llh}};\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classmanager_add5993e63225ab419ede0a3ba80c9f7f}\label{classmanager_add5993e63225ab419ede0a3ba80c9f7f}} 
+\index{manager@{manager}!GetName@{GetName}}
+\index{GetName@{GetName}!manager@{manager}}
+\doxysubsubsection{\texorpdfstring{GetName()}{GetName()}}
+{\footnotesize\ttfamily std\+::string manager\+::\+Get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get class name. 
+
+
+
+Definition at line \mbox{\hyperlink{manager_8h_source_l00040}{40}} of file \mbox{\hyperlink{manager_8h_source}{manager.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040\ \{\textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Manager"{}};\};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classmanager_a27d6193b03ee0400af4ddc91af114a35}\label{classmanager_a27d6193b03ee0400af4ddc91af114a35}} 
+\index{manager@{manager}!OverrideSettings@{OverrideSettings}}
+\index{OverrideSettings@{OverrideSettings}!manager@{manager}}
+\doxysubsubsection{\texorpdfstring{OverrideSettings()}{OverrideSettings()}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+void manager\+::\+Override\+Settings (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Overrides the configuration settings based on provided arguments. 
+
+\begin{DoxyNote}{Note}
+Example usage\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{FitManager-\/>OverrideSettings(\textcolor{stringliteral}{"{}General"{}},\ \textcolor{stringliteral}{"{}OutputFile"{}},\ \textcolor{stringliteral}{"{}Wooimbouttamakeanameformyselfere.root"{}});}
+
+\end{DoxyCode}
+ 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{manager_8h_source_l00048}{48}} of file \mbox{\hyperlink{manager_8h_source}{manager.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{YamlHelper_8h_a269e230f4f26b824c65a4c7a1472e07b}{OverrideConfig}}(\mbox{\hyperlink{classmanager_a7519c9ab5670ae939d18485d31057b46}{config}},\ std::forward<Args>(args)...);}
+\DoxyCodeLine{00050\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classmanager_a10ff16396efbc1dedcbd931c50ff7eff}\label{classmanager_a10ff16396efbc1dedcbd931c50ff7eff}} 
+\index{manager@{manager}!Print@{Print}}
+\index{Print@{Print}!manager@{manager}}
+\doxysubsubsection{\texorpdfstring{Print()}{Print()}}
+{\footnotesize\ttfamily void manager\+::\+Print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Print currently used config. 
+
+
+
+Definition at line \mbox{\hyperlink{manager_8cpp_source_l00100}{100}} of file \mbox{\hyperlink{manager_8cpp_source}{manager.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00101\ \textcolor{comment}{//\ *************************}}
+\DoxyCodeLine{00102\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{00103\ \ \ \mbox{\hyperlink{namespaceMaCh3Utils_aaf39f873ebf93550a417418e583ebcf8}{MaCh3Utils::PrintConfig}}(\mbox{\hyperlink{classmanager_a7519c9ab5670ae939d18485d31057b46}{config}});}
+\DoxyCodeLine{00104\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{00105\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classmanager_ab3999cc856ede72b37f68bdb28bd5520}\label{classmanager_ab3999cc856ede72b37f68bdb28bd5520}} 
+\index{manager@{manager}!raw@{raw}}
+\index{raw@{raw}!manager@{manager}}
+\doxysubsubsection{\texorpdfstring{raw()}{raw()}}
+{\footnotesize\ttfamily YAML\+::\+Node const  \& manager\+::raw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return config. 
+
+
+
+Definition at line \mbox{\hyperlink{manager_8h_source_l00036}{36}} of file \mbox{\hyperlink{manager_8h_source}{manager.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00036\ \{\textcolor{keywordflow}{return}\ \mbox{\hyperlink{classmanager_a7519c9ab5670ae939d18485d31057b46}{config}};\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classmanager_a0990af01a220479a19ead5d0231aaf94}\label{classmanager_a0990af01a220479a19ead5d0231aaf94}} 
+\index{manager@{manager}!SaveSettings@{SaveSettings}}
+\index{SaveSettings@{SaveSettings}!manager@{manager}}
+\doxysubsubsection{\texorpdfstring{SaveSettings()}{SaveSettings()}}
+{\footnotesize\ttfamily void manager\+::\+Save\+Settings (\begin{DoxyParamCaption}\item[{TFile $\ast$const}]{Output\+File }\end{DoxyParamCaption})}
+
+
+
+Add manager useful information\textquotesingle{}s to TFile, in most cases to Fitter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Output\+File} & The ROOT TFile to which the information will be added. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{manager_8cpp_source_l00057}{57}} of file \mbox{\hyperlink{manager_8cpp_source}{manager.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00058\ \textcolor{comment}{//\ *************************}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ std::string\ OutputFilename\ =\ std::string(OutputFile-\/>GetName());}
+\DoxyCodeLine{00061\ \ \ OutputFile-\/>cd();}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \textcolor{comment}{//\ EM:\ embed\ the\ config\ used\ for\ this\ app}}
+\DoxyCodeLine{00064\ \ \ TMacro\ ConfigSave\ =\ \mbox{\hyperlink{YamlHelper_8h_a2d4f3247b6e13ef8c127ff66e699d3cb}{YAMLtoTMacro}}(\mbox{\hyperlink{classmanager_a7519c9ab5670ae939d18485d31057b46}{config}},\ \textcolor{stringliteral}{"{}MaCh3\_Config"{}});}
+\DoxyCodeLine{00065\ \ \ ConfigSave.Write();}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \textcolor{comment}{//\ The\ Branch!}}
+\DoxyCodeLine{00068\ \ \ TTree\ *SaveBranch\ =\ \textcolor{keyword}{new}\ TTree(\textcolor{stringliteral}{"{}Settings"{}},\ \textcolor{stringliteral}{"{}Settings"{}});}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \textcolor{comment}{//\ Fill\ the\ doubles}}
+\DoxyCodeLine{00071\ \ \ SaveBranch-\/>Branch(\textcolor{stringliteral}{"{}Output"{}},\ \&OutputFilename);}
+\DoxyCodeLine{00072\ \ \ SaveBranch-\/>Branch(\textcolor{stringliteral}{"{}TestStatistic"{}},\ \&\mbox{\hyperlink{classmanager_aa7619b235f224c34e77f8d09f42a5911}{mc\_stat\_llh}});}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \textcolor{comment}{//\ Get\ settings\ defined\ by\ pre-\/processor\ directives,\ e.g.\ CPU\ MP\ and\ GPU}}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\ \ \#ifdef\ MULTITHREAD}}
+\DoxyCodeLine{00076\ \ \ \textcolor{keywordtype}{bool}\ cpu\_mp\_on\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00077\ \ \ \textcolor{keywordtype}{int}\ n\_cpus\ =\ omp\_get\_max\_threads();}
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\ \ \#else}}
+\DoxyCodeLine{00079\ \ \ \textcolor{keywordtype}{bool}\ cpu\_mp\_on\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00080\ \ \ \textcolor{keywordtype}{int}\ n\_cpus\ =\ 1;}
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\ \ \#ifdef\ CUDA}}
+\DoxyCodeLine{00084\ \ \ \textcolor{keywordtype}{bool}\ gpu\_on\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\ \ \#else}}
+\DoxyCodeLine{00086\ \ \ \textcolor{keywordtype}{bool}\ gpu\_on\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ SaveBranch-\/>Branch(\textcolor{stringliteral}{"{}GPU"{}},\ \ \ \&gpu\_on);}
+\DoxyCodeLine{00090\ \ \ SaveBranch-\/>Branch(\textcolor{stringliteral}{"{}CPUMP"{}},\ \&cpu\_mp\_on);}
+\DoxyCodeLine{00091\ \ \ SaveBranch-\/>Branch(\textcolor{stringliteral}{"{}nCPUs"{}},\ \&n\_cpus);}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ SaveBranch-\/>Fill();}
+\DoxyCodeLine{00094\ \ \ SaveBranch-\/>Write();}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \textcolor{keyword}{delete}\ SaveBranch;}
+\DoxyCodeLine{00097\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classmanager_a7519c9ab5670ae939d18485d31057b46}\label{classmanager_a7519c9ab5670ae939d18485d31057b46}} 
+\index{manager@{manager}!config@{config}}
+\index{config@{config}!manager@{manager}}
+\doxysubsubsection{\texorpdfstring{config}{config}}
+{\footnotesize\ttfamily YAML\+::\+Node manager\+::config\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The YAML node containing the configuration data. 
+
+
+
+Definition at line \mbox{\hyperlink{manager_8h_source_l00054}{54}} of file \mbox{\hyperlink{manager_8h_source}{manager.\+h}}.
+
+\mbox{\Hypertarget{classmanager_a1004958d1431ff607c08fa795b5953b7}\label{classmanager_a1004958d1431ff607c08fa795b5953b7}} 
+\index{manager@{manager}!FileName@{FileName}}
+\index{FileName@{FileName}!manager@{manager}}
+\doxysubsubsection{\texorpdfstring{FileName}{FileName}}
+{\footnotesize\ttfamily std\+::string manager\+::\+File\+Name\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The name of the configuration file. 
+
+
+
+Definition at line \mbox{\hyperlink{manager_8h_source_l00056}{56}} of file \mbox{\hyperlink{manager_8h_source}{manager.\+h}}.
+
+\mbox{\Hypertarget{classmanager_aa7619b235f224c34e77f8d09f42a5911}\label{classmanager_aa7619b235f224c34e77f8d09f42a5911}} 
+\index{manager@{manager}!mc\_stat\_llh@{mc\_stat\_llh}}
+\index{mc\_stat\_llh@{mc\_stat\_llh}!manager@{manager}}
+\doxysubsubsection{\texorpdfstring{mc\_stat\_llh}{mc\_stat\_llh}}
+{\footnotesize\ttfamily int manager\+::mc\+\_\+stat\+\_\+llh\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The likelihood type defined in the configuration. 
+
+
+
+Definition at line \mbox{\hyperlink{manager_8h_source_l00058}{58}} of file \mbox{\hyperlink{manager_8h_source}{manager.\+h}}.
+
+\mbox{\Hypertarget{classmanager_ab30ad812780ee2152b72f942b7b91dec}\label{classmanager_ab30ad812780ee2152b72f942b7b91dec}} 
+\index{manager@{manager}!Modes@{Modes}}
+\index{Modes@{Modes}!manager@{manager}}
+\doxysubsubsection{\texorpdfstring{Modes}{Modes}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMaCh3Modes}{Ma\+Ch3\+Modes}}$\ast$ manager\+::\+Modes\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Ma\+Ch3 Modes. 
+
+
+
+Definition at line \mbox{\hyperlink{manager_8h_source_l00060}{60}} of file \mbox{\hyperlink{manager_8h_source}{manager.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/runner/work/\+Ma\+Ch3/\+Ma\+Ch3/manager/\mbox{\hyperlink{manager_8h}{manager.\+h}}\item 
+/home/runner/work/\+Ma\+Ch3/\+Ma\+Ch3/manager/\mbox{\hyperlink{manager_8cpp}{manager.\+cpp}}\end{DoxyCompactItemize}

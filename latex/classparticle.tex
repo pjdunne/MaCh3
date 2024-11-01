@@ -1,0 +1,353 @@
+\hypertarget{classparticle}{}\doxysection{particle Class Reference}
+\label{classparticle}\index{particle@{particle}}
+
+
+Class particle -\/ stores the position, velocity and personal best With functions which move particle and update velocity.  
+
+
+
+
+{\ttfamily \#include $<$/home/runner/work/\+Ma\+Ch3/\+Ma\+Ch3/mcmc/\+PSO.\+h$>$}
+
+
+
+Collaboration diagram for particle\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{classparticle__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparticle_a31e82afa2044567396e7357613a1438f}{particle}} ()
+\item 
+\mbox{\hyperlink{classparticle_a44ec19e15c9e1b79a44428f2ee72c576}{particle}} (std\+::vector$<$ double $>$ pos, std\+::vector$<$ double $>$ vel)
+\item 
+virtual \mbox{\hyperlink{classparticle_a47fbb39c75f15832add299d173bd9c69}{$\sim$particle}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classparticle_af0b46439a6cba18c4a7f59a26ea405bf}{set\+\_\+position}} (std\+::vector$<$ double $>$ new\+\_\+position)
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classparticle_a80f74f071446a4100718cabdacc7533c}{get\+\_\+position}} ()
+\item 
+void \mbox{\hyperlink{classparticle_a6e850e2803bff20ebec0038a87429211}{set\+\_\+personal\+\_\+best\+\_\+position}} (std\+::vector$<$ double $>$ new\+\_\+pos)
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classparticle_a49e62920bb60565abfe3e186b313744e}{get\+\_\+personal\+\_\+best\+\_\+position}} ()
+\item 
+void \mbox{\hyperlink{classparticle_a96e44e615e56a271679b9b1c5e6a6721}{set\+\_\+personal\+\_\+best\+\_\+value}} (double new\+\_\+val)
+\item 
+double \mbox{\hyperlink{classparticle_a5e3ff4cfd13828939252119ad5b4637c}{get\+\_\+personal\+\_\+best\+\_\+value}} ()
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classparticle_ac2bc6cb51ad1661424eb629cf859e42c}{get\+\_\+velocity}} ()
+\item 
+void \mbox{\hyperlink{classparticle_ad0f119b37e53ba1dfe4345cc0ae3fc8a}{set\+\_\+velocity}} (std\+::vector$<$ double $>$ new\+\_\+velocity)
+\item 
+double \mbox{\hyperlink{classparticle_a99bce4ba53278e8cb97b9c1de11ff0d4}{get\+\_\+value}} ()
+\item 
+void \mbox{\hyperlink{classparticle_ab0a15a079761b5a4bb1c4bb4ba642411}{set\+\_\+value}} (double val)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classparticle_a16f312fadb1c50e0a45a840f9e393eae}{position}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classparticle_a7c7a70f520cbcd91e49e17f7b9406044}{velocity}}
+\item 
+double \mbox{\hyperlink{classparticle_ad45e229bdf80e2eaadeb9e9ae216277b}{personal\+\_\+best\+\_\+value}}
+\item 
+double \mbox{\hyperlink{classparticle_a3fa66bc070aa43b66389b8e0b9754f32}{curr\+\_\+value}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classparticle_a8b36e78ddaa8737f8d1d3d1b39e6924f}{personal\+\_\+best\+\_\+position}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class particle -\/ stores the position, velocity and personal best With functions which move particle and update velocity. 
+
+Definition at line \mbox{\hyperlink{PSO_8h_source_l00018}{18}} of file \mbox{\hyperlink{PSO_8h_source}{PSO.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classparticle_a31e82afa2044567396e7357613a1438f}\label{classparticle_a31e82afa2044567396e7357613a1438f}} 
+\index{particle@{particle}!particle@{particle}}
+\index{particle@{particle}!particle@{particle}}
+\doxysubsubsection{\texorpdfstring{particle()}{particle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily particle\+::particle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{PSO_8h_source_l00020}{20}} of file \mbox{\hyperlink{PSO_8h_source}{PSO.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020\ \{\};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classparticle_a44ec19e15c9e1b79a44428f2ee72c576}\label{classparticle_a44ec19e15c9e1b79a44428f2ee72c576}} 
+\index{particle@{particle}!particle@{particle}}
+\index{particle@{particle}!particle@{particle}}
+\doxysubsubsection{\texorpdfstring{particle()}{particle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily particle\+::particle (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{pos,  }\item[{std\+::vector$<$ double $>$}]{vel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{PSO_8h_source_l00021}{21}} of file \mbox{\hyperlink{PSO_8h_source}{PSO.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021\ :\ \mbox{\hyperlink{classparticle_a16f312fadb1c50e0a45a840f9e393eae}{position}}(pos),\ \mbox{\hyperlink{classparticle_a7c7a70f520cbcd91e49e17f7b9406044}{velocity}}(vel)\{\};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classparticle_a47fbb39c75f15832add299d173bd9c69}\label{classparticle_a47fbb39c75f15832add299d173bd9c69}} 
+\index{particle@{particle}!````~particle@{$\sim$particle}}
+\index{````~particle@{$\sim$particle}!particle@{particle}}
+\doxysubsubsection{\texorpdfstring{$\sim$particle()}{~particle()}}
+{\footnotesize\ttfamily virtual particle\+::$\sim$particle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+
+
+Definition at line \mbox{\hyperlink{PSO_8h_source_l00023}{23}} of file \mbox{\hyperlink{PSO_8h_source}{PSO.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00023\ \{\};}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classparticle_a49e62920bb60565abfe3e186b313744e}\label{classparticle_a49e62920bb60565abfe3e186b313744e}} 
+\index{particle@{particle}!get\_personal\_best\_position@{get\_personal\_best\_position}}
+\index{get\_personal\_best\_position@{get\_personal\_best\_position}!particle@{particle}}
+\doxysubsubsection{\texorpdfstring{get\_personal\_best\_position()}{get\_personal\_best\_position()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ particle\+::get\+\_\+personal\+\_\+best\+\_\+position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{PSO_8h_source_l00037}{37}} of file \mbox{\hyperlink{PSO_8h_source}{PSO.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classparticle_a8b36e78ddaa8737f8d1d3d1b39e6924f}{personal\_best\_position}};}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classparticle_a5e3ff4cfd13828939252119ad5b4637c}\label{classparticle_a5e3ff4cfd13828939252119ad5b4637c}} 
+\index{particle@{particle}!get\_personal\_best\_value@{get\_personal\_best\_value}}
+\index{get\_personal\_best\_value@{get\_personal\_best\_value}!particle@{particle}}
+\doxysubsubsection{\texorpdfstring{get\_personal\_best\_value()}{get\_personal\_best\_value()}}
+{\footnotesize\ttfamily double particle\+::get\+\_\+personal\+\_\+best\+\_\+value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{PSO_8h_source_l00045}{45}} of file \mbox{\hyperlink{PSO_8h_source}{PSO.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classparticle_ad45e229bdf80e2eaadeb9e9ae216277b}{personal\_best\_value}};}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classparticle_a80f74f071446a4100718cabdacc7533c}\label{classparticle_a80f74f071446a4100718cabdacc7533c}} 
+\index{particle@{particle}!get\_position@{get\_position}}
+\index{get\_position@{get\_position}!particle@{particle}}
+\doxysubsubsection{\texorpdfstring{get\_position()}{get\_position()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ particle\+::get\+\_\+position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{PSO_8h_source_l00029}{29}} of file \mbox{\hyperlink{PSO_8h_source}{PSO.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classparticle_a16f312fadb1c50e0a45a840f9e393eae}{position}};}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classparticle_a99bce4ba53278e8cb97b9c1de11ff0d4}\label{classparticle_a99bce4ba53278e8cb97b9c1de11ff0d4}} 
+\index{particle@{particle}!get\_value@{get\_value}}
+\index{get\_value@{get\_value}!particle@{particle}}
+\doxysubsubsection{\texorpdfstring{get\_value()}{get\_value()}}
+{\footnotesize\ttfamily double particle\+::get\+\_\+value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{PSO_8h_source_l00057}{57}} of file \mbox{\hyperlink{PSO_8h_source}{PSO.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classparticle_a3fa66bc070aa43b66389b8e0b9754f32}{curr\_value}};}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classparticle_ac2bc6cb51ad1661424eb629cf859e42c}\label{classparticle_ac2bc6cb51ad1661424eb629cf859e42c}} 
+\index{particle@{particle}!get\_velocity@{get\_velocity}}
+\index{get\_velocity@{get\_velocity}!particle@{particle}}
+\doxysubsubsection{\texorpdfstring{get\_velocity()}{get\_velocity()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ particle\+::get\+\_\+velocity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{PSO_8h_source_l00049}{49}} of file \mbox{\hyperlink{PSO_8h_source}{PSO.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classparticle_a7c7a70f520cbcd91e49e17f7b9406044}{velocity}};}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classparticle_a6e850e2803bff20ebec0038a87429211}\label{classparticle_a6e850e2803bff20ebec0038a87429211}} 
+\index{particle@{particle}!set\_personal\_best\_position@{set\_personal\_best\_position}}
+\index{set\_personal\_best\_position@{set\_personal\_best\_position}!particle@{particle}}
+\doxysubsubsection{\texorpdfstring{set\_personal\_best\_position()}{set\_personal\_best\_position()}}
+{\footnotesize\ttfamily void particle\+::set\+\_\+personal\+\_\+best\+\_\+position (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{new\+\_\+pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{PSO_8h_source_l00033}{33}} of file \mbox{\hyperlink{PSO_8h_source}{PSO.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classparticle_a8b36e78ddaa8737f8d1d3d1b39e6924f}{personal\_best\_position}}\ =\ new\_pos;}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classparticle_a96e44e615e56a271679b9b1c5e6a6721}\label{classparticle_a96e44e615e56a271679b9b1c5e6a6721}} 
+\index{particle@{particle}!set\_personal\_best\_value@{set\_personal\_best\_value}}
+\index{set\_personal\_best\_value@{set\_personal\_best\_value}!particle@{particle}}
+\doxysubsubsection{\texorpdfstring{set\_personal\_best\_value()}{set\_personal\_best\_value()}}
+{\footnotesize\ttfamily void particle\+::set\+\_\+personal\+\_\+best\+\_\+value (\begin{DoxyParamCaption}\item[{double}]{new\+\_\+val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{PSO_8h_source_l00041}{41}} of file \mbox{\hyperlink{PSO_8h_source}{PSO.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classparticle_ad45e229bdf80e2eaadeb9e9ae216277b}{personal\_best\_value}}\ =\ new\_val;}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classparticle_af0b46439a6cba18c4a7f59a26ea405bf}\label{classparticle_af0b46439a6cba18c4a7f59a26ea405bf}} 
+\index{particle@{particle}!set\_position@{set\_position}}
+\index{set\_position@{set\_position}!particle@{particle}}
+\doxysubsubsection{\texorpdfstring{set\_position()}{set\_position()}}
+{\footnotesize\ttfamily void particle\+::set\+\_\+position (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{new\+\_\+position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{PSO_8h_source_l00025}{25}} of file \mbox{\hyperlink{PSO_8h_source}{PSO.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classparticle_a16f312fadb1c50e0a45a840f9e393eae}{position}}\ =\ new\_position;}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classparticle_ab0a15a079761b5a4bb1c4bb4ba642411}\label{classparticle_ab0a15a079761b5a4bb1c4bb4ba642411}} 
+\index{particle@{particle}!set\_value@{set\_value}}
+\index{set\_value@{set\_value}!particle@{particle}}
+\doxysubsubsection{\texorpdfstring{set\_value()}{set\_value()}}
+{\footnotesize\ttfamily void particle\+::set\+\_\+value (\begin{DoxyParamCaption}\item[{double}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{PSO_8h_source_l00060}{60}} of file \mbox{\hyperlink{PSO_8h_source}{PSO.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classparticle_a3fa66bc070aa43b66389b8e0b9754f32}{curr\_value}}\ =\ val;}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classparticle_ad0f119b37e53ba1dfe4345cc0ae3fc8a}\label{classparticle_ad0f119b37e53ba1dfe4345cc0ae3fc8a}} 
+\index{particle@{particle}!set\_velocity@{set\_velocity}}
+\index{set\_velocity@{set\_velocity}!particle@{particle}}
+\doxysubsubsection{\texorpdfstring{set\_velocity()}{set\_velocity()}}
+{\footnotesize\ttfamily void particle\+::set\+\_\+velocity (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{new\+\_\+velocity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{PSO_8h_source_l00053}{53}} of file \mbox{\hyperlink{PSO_8h_source}{PSO.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classparticle_a7c7a70f520cbcd91e49e17f7b9406044}{velocity}}\ =\ new\_velocity;}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \};}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classparticle_a3fa66bc070aa43b66389b8e0b9754f32}\label{classparticle_a3fa66bc070aa43b66389b8e0b9754f32}} 
+\index{particle@{particle}!curr\_value@{curr\_value}}
+\index{curr\_value@{curr\_value}!particle@{particle}}
+\doxysubsubsection{\texorpdfstring{curr\_value}{curr\_value}}
+{\footnotesize\ttfamily double particle\+::curr\+\_\+value\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{PSO_8h_source_l00068}{68}} of file \mbox{\hyperlink{PSO_8h_source}{PSO.\+h}}.
+
+\mbox{\Hypertarget{classparticle_a8b36e78ddaa8737f8d1d3d1b39e6924f}\label{classparticle_a8b36e78ddaa8737f8d1d3d1b39e6924f}} 
+\index{particle@{particle}!personal\_best\_position@{personal\_best\_position}}
+\index{personal\_best\_position@{personal\_best\_position}!particle@{particle}}
+\doxysubsubsection{\texorpdfstring{personal\_best\_position}{personal\_best\_position}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ particle\+::personal\+\_\+best\+\_\+position\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{PSO_8h_source_l00069}{69}} of file \mbox{\hyperlink{PSO_8h_source}{PSO.\+h}}.
+
+\mbox{\Hypertarget{classparticle_ad45e229bdf80e2eaadeb9e9ae216277b}\label{classparticle_ad45e229bdf80e2eaadeb9e9ae216277b}} 
+\index{particle@{particle}!personal\_best\_value@{personal\_best\_value}}
+\index{personal\_best\_value@{personal\_best\_value}!particle@{particle}}
+\doxysubsubsection{\texorpdfstring{personal\_best\_value}{personal\_best\_value}}
+{\footnotesize\ttfamily double particle\+::personal\+\_\+best\+\_\+value\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{PSO_8h_source_l00067}{67}} of file \mbox{\hyperlink{PSO_8h_source}{PSO.\+h}}.
+
+\mbox{\Hypertarget{classparticle_a16f312fadb1c50e0a45a840f9e393eae}\label{classparticle_a16f312fadb1c50e0a45a840f9e393eae}} 
+\index{particle@{particle}!position@{position}}
+\index{position@{position}!particle@{particle}}
+\doxysubsubsection{\texorpdfstring{position}{position}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ particle\+::position\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{PSO_8h_source_l00065}{65}} of file \mbox{\hyperlink{PSO_8h_source}{PSO.\+h}}.
+
+\mbox{\Hypertarget{classparticle_a7c7a70f520cbcd91e49e17f7b9406044}\label{classparticle_a7c7a70f520cbcd91e49e17f7b9406044}} 
+\index{particle@{particle}!velocity@{velocity}}
+\index{velocity@{velocity}!particle@{particle}}
+\doxysubsubsection{\texorpdfstring{velocity}{velocity}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ particle\+::velocity\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{PSO_8h_source_l00066}{66}} of file \mbox{\hyperlink{PSO_8h_source}{PSO.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/runner/work/\+Ma\+Ch3/\+Ma\+Ch3/mcmc/\mbox{\hyperlink{PSO_8h}{PSO.\+h}}\end{DoxyCompactItemize}

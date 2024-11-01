@@ -1,0 +1,68 @@
+\hypertarget{AdaptiveMCMCHandler_8h_source}{}\doxysection{Adaptive\+MCMCHandler.\+h}
+\label{AdaptiveMCMCHandler_8h_source}\index{/home/runner/work/MaCh3/MaCh3/covariance/AdaptiveMCMCHandler.h@{/home/runner/work/MaCh3/MaCh3/covariance/AdaptiveMCMCHandler.h}}
+\mbox{\hyperlink{AdaptiveMCMCHandler_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00003}00003\ \textcolor{comment}{//\ MaCh3\ Includes}}
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{manager_8h}{manager/manager.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{CovarianceUtils_8h}{covariance/CovarianceUtils.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00007}00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceadaptive__mcmc}{adaptive\_mcmc}}\{}
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00012}\mbox{\hyperlink{classadaptive__mcmc_1_1AdaptiveMCMCHandler}{00012}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classadaptive__mcmc_1_1AdaptiveMCMCHandler}{AdaptiveMCMCHandler}}\{}
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00013}00013\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00016}00016\ \ \ \mbox{\hyperlink{classadaptive__mcmc_1_1AdaptiveMCMCHandler_a8c1c9c62865ad7e2a9c9bdfa24ad54be}{AdaptiveMCMCHandler}}();}
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00019}00019\ \ \ \mbox{\hyperlink{classadaptive__mcmc_1_1AdaptiveMCMCHandler_a6b2d0d2f6dab5b6dc2b60cbe8f673cb7}{\string~AdaptiveMCMCHandler}}();}
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00022}00022\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classadaptive__mcmc_1_1AdaptiveMCMCHandler_a5997a813faf68d891c62cbaf65984aca}{Print}}();}
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00026}00026\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classadaptive__mcmc_1_1AdaptiveMCMCHandler_a192304475bc377ef975ef40d2bd2b254}{InitFromConfig}}(\textcolor{keyword}{const}\ YAML::Node\&\ adapt\_manager,\ \textcolor{keyword}{const}\ std::string\&\ matrix\_name\_str,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ Npars);}
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00029}00029\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classadaptive__mcmc_1_1AdaptiveMCMCHandler_ad7df80045651df99c2d1c375fea4ac74}{CreateNewAdaptiveCovariance}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ Npars);}
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00033}00033\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classadaptive__mcmc_1_1AdaptiveMCMCHandler_ac47f80e6e94cbeb1cdb1a72563f35fe6}{SetAdaptiveBlocks}}(std::vector<std::vector<int>>\ block\_indices,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ Npars);}
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00036}00036\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classadaptive__mcmc_1_1AdaptiveMCMCHandler_a752d312d5fdd755af88b58880a9845ec}{SaveAdaptiveToFile}}(\textcolor{keyword}{const}\ TString\&\ outFileName,\ \textcolor{keyword}{const}\ TString\&\ systematicName);}
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00042}00042\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classadaptive__mcmc_1_1AdaptiveMCMCHandler_aebd1df26766a9f106fe6ce4255ceb0d9}{SetThrowMatrixFromFile}}(\textcolor{keyword}{const}\ std::string\&\ matrix\_file\_name,}
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ matrix\_name,}
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ means\_name,}
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\&\ use\_adaptive,}
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ Npars);}
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00051}00051\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classadaptive__mcmc_1_1AdaptiveMCMCHandler_a828e12f4ecb82252341af5f5e54f7ad3}{UpdateAdaptiveCovariance}}(\textcolor{keyword}{const}\ std::vector<double>\&\ \_fCurrVal,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ Npars);}
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00054}00054\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classadaptive__mcmc_1_1AdaptiveMCMCHandler_a77726d0255edf32a817339fcbac30bee}{IndivStepScaleAdapt}}();}
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00057}00057\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classadaptive__mcmc_1_1AdaptiveMCMCHandler_a217c72a492c9d3e1b3a7b14626d19ab2}{UpdateMatrixAdapt}}();}
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00060}00060\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classadaptive__mcmc_1_1AdaptiveMCMCHandler_a39a099e5712cf605190a53a4355c700c}{AdaptionUpdate}}();}
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00063}00063\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classadaptive__mcmc_1_1AdaptiveMCMCHandler_af797ab969eb8c1802afa12df8c2106d8}{SkipAdaption}}();}
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00067}\mbox{\hyperlink{classadaptive__mcmc_1_1AdaptiveMCMCHandler_a9708ad2c46d0e7a9ac78f5377fbf8839}{00067}}\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classadaptive__mcmc_1_1AdaptiveMCMCHandler_a9708ad2c46d0e7a9ac78f5377fbf8839}{start\_adaptive\_throw}};}
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00070}\mbox{\hyperlink{classadaptive__mcmc_1_1AdaptiveMCMCHandler_a59d194f84b46b159d367477f3d436e10}{00070}}\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classadaptive__mcmc_1_1AdaptiveMCMCHandler_a59d194f84b46b159d367477f3d436e10}{start\_adaptive\_update}};}
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00073}\mbox{\hyperlink{classadaptive__mcmc_1_1AdaptiveMCMCHandler_aa7d3703d1de3c3fbf32f37cadf58be08}{00073}}\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classadaptive__mcmc_1_1AdaptiveMCMCHandler_aa7d3703d1de3c3fbf32f37cadf58be08}{end\_adaptive\_update}};}
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00076}\mbox{\hyperlink{classadaptive__mcmc_1_1AdaptiveMCMCHandler_ac29758f6988af2d8271fe9950989baf4}{00076}}\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classadaptive__mcmc_1_1AdaptiveMCMCHandler_ac29758f6988af2d8271fe9950989baf4}{adaptive\_update\_step}};}
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00079}\mbox{\hyperlink{classadaptive__mcmc_1_1AdaptiveMCMCHandler_a23d17e906a663e2b48dd4dfc96300b02}{00079}}\ \ \ std::vector<int>\ \mbox{\hyperlink{classadaptive__mcmc_1_1AdaptiveMCMCHandler_a23d17e906a663e2b48dd4dfc96300b02}{adapt\_block\_matrix\_indices}};}
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00082}\mbox{\hyperlink{classadaptive__mcmc_1_1AdaptiveMCMCHandler_a639f1d4935965556ce4e3d36aef844ec}{00082}}\ \ \ std::vector<int>\ \mbox{\hyperlink{classadaptive__mcmc_1_1AdaptiveMCMCHandler_a639f1d4935965556ce4e3d36aef844ec}{adapt\_block\_sizes}};}
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00084}00084\ \ \ \textcolor{comment}{//\ Variables\ directedly\ linked\ to\ adaption}}
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00086}\mbox{\hyperlink{classadaptive__mcmc_1_1AdaptiveMCMCHandler_a066984e9598e073d04edec51511cdf0a}{00086}}\ \textcolor{comment}{}\ \ std::vector<double>\ \mbox{\hyperlink{classadaptive__mcmc_1_1AdaptiveMCMCHandler_a066984e9598e073d04edec51511cdf0a}{par\_means}};}
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00089}\mbox{\hyperlink{classadaptive__mcmc_1_1AdaptiveMCMCHandler_afd61e64f18f5c25dbbd6bb2bd619a268}{00089}}\ \ \ TMatrixDSym*\ \mbox{\hyperlink{classadaptive__mcmc_1_1AdaptiveMCMCHandler_afd61e64f18f5c25dbbd6bb2bd619a268}{adaptive\_covariance}};}
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00092}\mbox{\hyperlink{classadaptive__mcmc_1_1AdaptiveMCMCHandler_ab2837af4566e2d62db7b76f9527fb6d7}{00092}}\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classadaptive__mcmc_1_1AdaptiveMCMCHandler_ab2837af4566e2d62db7b76f9527fb6d7}{total\_steps}};}
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00093}00093\ \};}
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{AdaptiveMCMCHandler_8h_source_l00095}00095\ \}\ \textcolor{comment}{//\ adaptive\_mcmc\ namespace}}
+
+\end{DoxyCode}

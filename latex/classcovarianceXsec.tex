@@ -1,0 +1,1855 @@
+\hypertarget{classcovarianceXsec}{}\doxysection{covariance\+Xsec Class Reference}
+\label{classcovarianceXsec}\index{covarianceXsec@{covarianceXsec}}
+
+
+Class responsible for handling of systematic error parameters with different types defined in the config. Like spline, normalisation parameters etc.  
+
+
+
+
+{\ttfamily \#include $<$/home/runner/work/\+Ma\+Ch3/\+Ma\+Ch3/covariance/covariance\+Xsec.\+h$>$}
+
+
+
+Inheritance diagram for covariance\+Xsec\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{classcovarianceXsec__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for covariance\+Xsec\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcovarianceXsec__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcovarianceXsec_a2e6c281c3f7f902076043ca9776b241d}{covariance\+Xsec}} (const std\+::vector$<$ std\+::string $>$ \&\mbox{\hyperlink{ProcessMCMC_8cpp_a8e90c1478f4be185364988cac765a163}{File\+Names}}, std\+::string name=\char`\"{}xsec\+\_\+cov\char`\"{}, double threshold=-\/1, int \mbox{\hyperlink{classcovarianceBase_abba75182305d556818c76974a054a17d}{First\+PCAdpar}}=-\/999, int \mbox{\hyperlink{classcovarianceBase_a5ebdc744b733656972a15f1657915a3f}{Last\+PCAdpar}}=-\/999)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcovarianceXsec_af84383b735f450c33c9c34f7ca207a66}{$\sim$covariance\+Xsec}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classcovarianceXsec_aad522479b06581729efd6c1cd12d11df}{Get\+Par\+Det\+ID}} (const int i) const
+\begin{DoxyCompactList}\small\item\em ETA -\/ just return the int of the Det\+ID, this can be removed to do a string comp at some point. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classcovarianceXsec_a917350cc0ea76530145086b8943b0d23}{Get\+Param\+Type\+String}} (const int i) const
+\begin{DoxyCompactList}\small\item\em ETA -\/ just return a string of \char`\"{}spline\char`\"{}, \char`\"{}norm\char`\"{} or \char`\"{}functional\char`\"{}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{Structs_8h_affc27d8b7b82d3713f45af17873fde2f}{Syst\+Type}} \mbox{\hyperlink{classcovarianceXsec_a50cca3de3274be7a57d25cc1b454e890}{Get\+Param\+Type}} (const int i) const
+\begin{DoxyCompactList}\small\item\em Returns enum describing our param type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{Structs_8h_a6720d732608767153550aebebcf8fbf4}{Spline\+Interpolation}} \mbox{\hyperlink{classcovarianceXsec_a6e7661f9bd67500b66c7499f776b594d}{Get\+Par\+Spline\+Interpolation}} (const int i)
+\begin{DoxyCompactList}\small\item\em Get interpolation type for a given parameter. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classcovarianceXsec_adce4b39e20a140acd8314049e2cca05b}{Get\+Par\+Spline\+Name}} (const int i)
+\begin{DoxyCompactList}\small\item\em Get the name of the spline associated with the spline at index i. \end{DoxyCompactList}\item 
+const std\+::vector$<$ int $>$ \mbox{\hyperlink{classcovarianceXsec_a7669f8e01cc0aba5670784c786ff2645}{Get\+Global\+Syst\+Index\+From\+Det\+ID}} (const int Det\+ID, const \mbox{\hyperlink{Structs_8h_affc27d8b7b82d3713f45af17873fde2f}{Syst\+Type}} Type)
+\item 
+double \mbox{\hyperlink{classcovarianceXsec_ac612a0f939f2f070906af574f98590d6}{Get\+Par\+Spline\+Knot\+Upper\+Bound}} (const int i)
+\begin{DoxyCompactList}\small\item\em EM\+: value at which we cap spline knot weight. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classcovarianceXsec_a9ea6bd6b0e021f154ebd1f23605ff3e5}{Get\+Par\+Spline\+Knot\+Lower\+Bound}} (const int i)
+\begin{DoxyCompactList}\small\item\em EM\+: value at which we cap spline knot weight. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classcovarianceXsec_a0103e8fe156dccedee05619697fe0467}{Get\+Num\+Params\+From\+Det\+ID}} (const int Det\+ID, const \mbox{\hyperlink{Structs_8h_affc27d8b7b82d3713f45af17873fde2f}{Syst\+Type}} Type)
+\begin{DoxyCompactList}\small\item\em DB Grab the number of parameters for the relevant Det\+ID. \end{DoxyCompactList}\item 
+const std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classcovarianceXsec_a86bd213e24e1c7b574d2b07c8c5c15b8}{Get\+Pars\+Names\+From\+Det\+ID}} (const int Det\+ID, const \mbox{\hyperlink{Structs_8h_affc27d8b7b82d3713f45af17873fde2f}{Syst\+Type}} Type)
+\begin{DoxyCompactList}\small\item\em DB Grab the parameter names for the relevant Det\+ID. \end{DoxyCompactList}\item 
+const std\+::vector$<$ int $>$ \mbox{\hyperlink{classcovarianceXsec_aa5f13d2836d1de71dec80c0746fc05ae}{Get\+Pars\+Index\+From\+Det\+ID}} (const int Det\+ID, const \mbox{\hyperlink{Structs_8h_affc27d8b7b82d3713f45af17873fde2f}{Syst\+Type}} Type)
+\begin{DoxyCompactList}\small\item\em DB Grab the parameter indices for the relevant Det\+ID. \end{DoxyCompactList}\item 
+const std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classcovarianceXsec_a7678bbdb59c36f032fb414d62928f47e}{Get\+Spline\+Pars\+Names\+From\+Det\+ID}} (const int Det\+ID)
+\begin{DoxyCompactList}\small\item\em DB Get spline parameters depending on given Det\+ID. \end{DoxyCompactList}\item 
+const std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classcovarianceXsec_adb95a5704149a2c6d6573a711024e7c5}{Get\+Spline\+File\+Pars\+Names\+From\+Det\+ID}} (const int Det\+ID)
+\begin{DoxyCompactList}\small\item\em DB Get spline parameters depending on given Det\+ID. \end{DoxyCompactList}\item 
+const std\+::vector$<$ std\+::vector$<$ int $>$ $>$ \mbox{\hyperlink{classcovarianceXsec_a63b4fb1e0caf3b71f372db7273c40c47}{Get\+Spline\+Mode\+Vec\+From\+Det\+ID}} (const int Det\+ID)
+\begin{DoxyCompactList}\small\item\em DB Grab the Spline Modes for the relevant Det\+ID. \end{DoxyCompactList}\item 
+const std\+::vector$<$ int $>$ \mbox{\hyperlink{classcovarianceXsec_a0246245453554d222bb14cdaa53f014a}{Get\+Syst\+Index\+From\+Det\+ID}} (const int Det\+ID, const \mbox{\hyperlink{Structs_8h_affc27d8b7b82d3713f45af17873fde2f}{Syst\+Type}} Type)
+\begin{DoxyCompactList}\small\item\em Grab the index of the syst relative to global numbering. \end{DoxyCompactList}\item 
+const std\+::vector$<$ \mbox{\hyperlink{structXsecNorms4}{Xsec\+Norms4}} $>$ \mbox{\hyperlink{classcovarianceXsec_a98c68c6c894132a984c6bdd90c3e85dd}{Get\+Norm\+Pars\+From\+Det\+ID}} (const int Det\+ID)
+\begin{DoxyCompactList}\small\item\em DB Get norm/func parameters depending on given Det\+ID. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classcovarianceXsec_a98cf4b870e62badc83bcda99ae3574ae}{get\+Nominal\+Array}} () override
+\begin{DoxyCompactList}\small\item\em KS\+: For most covariances nominal and fpar\+Init (prior) are the same, however for Xsec those can be different For example Sigma Var are done around nominal in ND280, no idea why though... \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classcovarianceXsec_aea8d453c3b4bfe236faff0bf48623118}{get\+Nominal}} (const int i) override
+\begin{DoxyCompactList}\small\item\em Get nominal for a given param. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classcovarianceXsec_a5dc8900054a498107e39cc41641879a8}{Is\+Par\+From\+Group}} (const int i, const std\+::string \&Group)
+\begin{DoxyCompactList}\small\item\em Checks if parameter belongs to a given group. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceXsec_a8e602fcc62a2c930c89987e06af9def1}{Set\+Group\+Only\+Parameters}} (const std\+::string \&Group)
+\begin{DoxyCompactList}\small\item\em KS Function to set to prior parameters of a given group. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceXsec_a5cffa7b3221e1a49706ea8a9fe0f826c}{Dump\+Matrix\+To\+File}} (const std\+::string \&Name)
+\begin{DoxyCompactList}\small\item\em Dump Matrix to ROOT file, useful when we need to pass matrix info to another fitting group. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{classcovarianceBase}{covariance\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcovarianceBase_a332cbcc2c262ff3775b56c40724e623e}{covariance\+Base}} (const std\+::vector$<$ std\+::string $>$ \&YAMLFile, std\+::string name, double threshold=-\/1, int \mbox{\hyperlink{classcovarianceBase_abba75182305d556818c76974a054a17d}{First\+PCAdpar}}=-\/999, int \mbox{\hyperlink{classcovarianceBase_a5ebdc744b733656972a15f1657915a3f}{Last\+PCAdpar}}=-\/999)
+\begin{DoxyCompactList}\small\item\em ETA -\/ constructor for a YAML file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcovarianceBase_a8ff9c473f7e2ed9289459073a9d3dbe1}{covariance\+Base}} (std\+::string name, std\+::string file)
+\begin{DoxyCompactList}\small\item\em \char`\"{}\+Usual\char`\"{} constructors from root file \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classcovarianceBase_a1e7a87a1d7e054475b4b921407e0a2d1}{$\sim$covariance\+Base}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceBase_a5f28f7294d25cca6334f7033a63596b9}{set\+Cov\+Matrix}} (TMatrix\+DSym $\ast$cov)
+\begin{DoxyCompactList}\small\item\em Set covariance matrix. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceBase_a9f980a259c5952f9ca907832f99ad2a7}{set\+Name}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Set matrix name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceBase_a086ff04fa55c074a2baa6cc63e4f279a}{set\+Par\+Name}} (int i, std\+::string name)
+\begin{DoxyCompactList}\small\item\em change parameter name \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceBase_a978483dabf04239f1c475516b5cdab7f}{set\+Single\+Parameter}} (const int par\+No, const double par\+Val)
+\item 
+void \mbox{\hyperlink{classcovarianceBase_aae3b226cbd6a4c03f291620ebd018bc9}{set\+Par}} (const int i, const double val)
+\begin{DoxyCompactList}\small\item\em Set all the covariance matrix parameters to a user-\/defined value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceBase_a6701f97eb624cef70998773333f96757}{set\+Par\+Curr\+Prop}} (const int i, const double val)
+\begin{DoxyCompactList}\small\item\em Set current parameter value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceBase_a9f78e4f0ae493e78accc8374cdf38b6f}{set\+Par\+Prop}} (const int i, const double val)
+\begin{DoxyCompactList}\small\item\em Set proposed parameter value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceBase_aa4d9eaf56199245332f0b0be2c353944}{set\+Parameters}} (const std\+::vector$<$ double $>$ \&pars=\{\})
+\begin{DoxyCompactList}\small\item\em Set parameter values using vector, it has to have same size as covariance class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceBase_a1e9b4a09866909595a26fb2e1ea94cac}{set\+Flat\+Prior}} (const int i, const bool eL)
+\begin{DoxyCompactList}\small\item\em Set if parameter should have flat prior or not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceBase_aae80acab113ac496a9bc56e28f6ae0c9}{Set\+Branches}} (TTree \&tree, bool Save\+Proposal=false)
+\begin{DoxyCompactList}\small\item\em set branches for output file \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceBase_a806cf53a69a35da2426169561f450b85}{set\+Step\+Scale}} (const double scale)
+\begin{DoxyCompactList}\small\item\em Set global step scale for covariance object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceBase_a21b912b31c888a2bdae9145a0c10a614}{set\+Indiv\+Step\+Scale}} (const int Parameter\+Index, const double Step\+Scale)
+\begin{DoxyCompactList}\small\item\em DB Function to set f\+Indiv\+Step\+Scale from a vector (Can be used from execs and inside covariance constructors) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceBase_a57fcbce7dbdc47e3b6ff9344c215ed9a}{set\+Indiv\+Step\+Scale}} (const std\+::vector$<$ double $>$ \&stepscale)
+\begin{DoxyCompactList}\small\item\em DB Function to set f\+Indiv\+Step\+Scale from a vector (Can be used from execs and inside covariance constructors) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceBase_a340fbee1b5d97897431f2b0222f85337}{set\+Print\+Length}} (const unsigned int Pri\+Len)
+\begin{DoxyCompactList}\small\item\em KS\+: In case someone really want to change this. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceBase_ab36f40d40f4747718c98d368c04f41b7}{Save\+Updated\+Matrix\+Config}} ()
+\begin{DoxyCompactList}\small\item\em KS\+: After step scale, prefit etc. value were modified save this modified config. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceBase_af4d127ff4761379dd11843523835c4dc}{throw\+Par\+Prop}} (const double mag=1.)
+\begin{DoxyCompactList}\small\item\em Throw the proposed parameter by mag sigma. Should really just have the user specify this throw by having argument double. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceBase_a4e92a9db846d956473efbe5712c71d31}{throw\+Par\+Curr}} (const double mag=1.)
+\begin{DoxyCompactList}\small\item\em Helper function to throw the current parameter by mag sigma. Can study bias in MCMC with this; put different starting parameters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceBase_aa5d82895bcbae7773b6813c02cf2f485}{throw\+Parameters}} ()
+\begin{DoxyCompactList}\small\item\em Throw the parameters according to the covariance matrix. This shouldn\textquotesingle{}t be used in MCMC code ase it can break Detailed Balance;. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceBase_a867bff214af25bba68f921eaea8b5cdd}{Random\+Configuration}} ()
+\begin{DoxyCompactList}\small\item\em Randomly throw the parameters in their 1 sigma range. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classcovarianceBase_ac3c3e322dc06ce6a44a887ae13e522ae}{Check\+Bounds}} ()
+\begin{DoxyCompactList}\small\item\em Check if parameters were proposed outside physical boundary. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classcovarianceBase_a0056f747843633b2f8408f599f13f89f}{Calc\+Likelihood}} ()
+\begin{DoxyCompactList}\small\item\em Calc penalty term based on inverted covariance matrix. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classcovarianceBase_a9ee2fbfe0f1ac86c8c129095638e0f76}{Get\+Likelihood}} ()
+\begin{DoxyCompactList}\small\item\em Return Calc\+Likelihood if some params were thrown out of boundary return {\itshape LARGE\+\_\+\+LOGL} \end{DoxyCompactList}\item 
+TMatrix\+DSym $\ast$ \mbox{\hyperlink{classcovarianceBase_a5968a05b1139d72344ea08b8cd6c76c6}{get\+Cov\+Matrix}} ()
+\begin{DoxyCompactList}\small\item\em Return covariance matrix. \end{DoxyCompactList}\item 
+TMatrix\+DSym $\ast$ \mbox{\hyperlink{classcovarianceBase_a12221dba3e93480881d1195482ef6d87}{get\+Inv\+Cov\+Matrix}} ()
+\begin{DoxyCompactList}\small\item\em Return inverted covariance matrix. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classcovarianceBase_a0278e73361d955ab1e39984552acb3b7}{get\+Flat\+Prior}} (const int i)
+\begin{DoxyCompactList}\small\item\em Get if param has flat prior or not. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classcovarianceBase_ae57d994c79de782285455c9c6524a1c4}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Get name of covariance. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classcovarianceBase_a033c5b6a8669537acaa6c5fc252899e6}{Get\+Par\+Name}} (const int i)
+\begin{DoxyCompactList}\small\item\em Get name of covariance. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classcovarianceBase_a6a46b5fed3e7feb6e9e151e90927bdbc}{Get\+Par\+Fancy\+Name}} (const int i)
+\begin{DoxyCompactList}\small\item\em Get fancy name of the Parameter. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classcovarianceBase_aa52b2765d3e7ae504af20861bedafa4e}{get\+Input\+File}} () const
+\begin{DoxyCompactList}\small\item\em Get name of input file. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classcovarianceBase_a01e3ab6a6758fc58b8c695556a39d879}{get\+Diagonal\+Error}} (const int i)
+\begin{DoxyCompactList}\small\item\em Get diagonal error for ith parameter. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classcovarianceBase_a82539ec974ced3c3f912be4731bb191d}{Get\+Error}} (const int i)
+\begin{DoxyCompactList}\small\item\em Get the error for the ith parameter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceBase_a0993a1ea6c5b06ba834e9e70af87ee9e}{reset\+Indiv\+Step\+Scale}} ()
+\begin{DoxyCompactList}\small\item\em Adaptive Step Tuning Stuff. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceBase_a715900cc67fcc598090399ee931938e9}{initialise\+Adaption}} (const YAML\+::\+Node \&adapt\+\_\+manager)
+\begin{DoxyCompactList}\small\item\em Initialise adaptive MCMC. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceBase_ae4c26e3f2a727a39e9db7ed88e72ac38}{save\+Adaptive\+To\+File}} (const TString \&out\+File\+Name, const TString \&systematic\+Name)
+\begin{DoxyCompactList}\small\item\em Save adaptive throw matrix to file. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classcovarianceBase_a11075f684f5d2d7eff9c222867e33bb7}{get\+Do\+Adaption}} ()
+\begin{DoxyCompactList}\small\item\em Do we adapt or not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceBase_af30ca7861452e1446e55700f4b49b608}{set\+Throw\+Matrix}} (TMatrix\+DSym $\ast$cov)
+\begin{DoxyCompactList}\small\item\em Use new throw matrix, used in adaptive MCMC. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceBase_a7e2d3623bbbf3edee558e04737fe2add}{update\+Throw\+Matrix}} (TMatrix\+DSym $\ast$cov)
+\item 
+void \mbox{\hyperlink{classcovarianceBase_a1e5aec8c073799ac9d40e65c0996b2c1}{set\+Number\+Of\+Steps}} (const int nsteps)
+\begin{DoxyCompactList}\small\item\em Set number of MCMC step, when running adaptive MCMC it is updated with given frequency. We need number of steps to determine frequency. \end{DoxyCompactList}\item 
+TMatrix\+DSym $\ast$ \mbox{\hyperlink{classcovarianceBase_aa306bea2b30013ca55f2a95b8d16ec42}{get\+Throw\+Matrix}} ()
+\begin{DoxyCompactList}\small\item\em Get matrix used for step proposal. \end{DoxyCompactList}\item 
+TMatrixD $\ast$ \mbox{\hyperlink{classcovarianceBase_a563a904298d0bd5ec5518708396e0e22}{get\+Throw\+Matrix\+\_\+\+Chol\+Decomp}} ()
+\begin{DoxyCompactList}\small\item\em Get the Cholesky decomposition of the throw matrix. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classcovarianceBase_ab89b754afc93b63f41070710af4c0f2d}{get\+Parameter\+Means}} ()
+\begin{DoxyCompactList}\small\item\em Get the parameter means used in the adaptive handler. \end{DoxyCompactList}\item 
+TH2D $\ast$ \mbox{\hyperlink{classcovarianceBase_ac14fabdb87f5101cdbfcecb8e6b6b811}{Get\+Correlation\+Matrix}} ()
+\begin{DoxyCompactList}\small\item\em KS\+: Convert covariance matrix to correlation matrix and return TH2D which can be used for fancy plotting. \end{DoxyCompactList}\item 
+const double $\ast$ \mbox{\hyperlink{classcovarianceBase_aa970d7a68497a3765723bf34629f79f7}{ret\+Pointer}} (const int i\+Param)
+\begin{DoxyCompactList}\small\item\em DB Pointer return to param position. \end{DoxyCompactList}\item 
+const std\+::vector$<$ double $>$ \& \mbox{\hyperlink{classcovarianceBase_a43c569248e176e14330cd002bfc2bff6}{get\+Par\+Prop\+Vec}} ()
+\begin{DoxyCompactList}\small\item\em Get a reference to the proposed parameter values Can be useful if you want to track these without having to copy values using \mbox{\hyperlink{classcovarianceBase_a63db139faf1e42d7a1c3c3c661c0b7d9}{get\+Proposed()}} \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classcovarianceBase_a3daac6405cc791347b768a5afe8a13d2}{Get\+Num\+Params}} ()
+\begin{DoxyCompactList}\small\item\em Get total number of parameters. \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ double $>$ \mbox{\hyperlink{classcovarianceBase_ae0a231f87266048a3cd2e0032eaf0f30}{get\+Nominal\+Array}} ()
+\begin{DoxyCompactList}\small\item\em Get the nominal array for parameters. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classcovarianceBase_ab34500d7b559db68c46a2838667c3e03}{get\+Pre\+Fit\+Values}} ()
+\begin{DoxyCompactList}\small\item\em Get the pre-\/fit values of the parameters. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classcovarianceBase_a7316a31398c07816a5529d7a9494a1c5}{get\+Generated\+Values}} ()
+\begin{DoxyCompactList}\small\item\em Get the generated values of the parameters. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classcovarianceBase_a63db139faf1e42d7a1c3c3c661c0b7d9}{get\+Proposed}} () const
+\begin{DoxyCompactList}\small\item\em Get vector of all proposed parameter values. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classcovarianceBase_a37c87fa18db7e4ac087d120bca955617}{get\+Par\+Prop}} (const int i)
+\begin{DoxyCompactList}\small\item\em Get proposed parameter value. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classcovarianceBase_a040e445c6d4f8d4eea8fc13418cea7ff}{get\+Par\+Curr}} (const int i)
+\begin{DoxyCompactList}\small\item\em Get current parameter value. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classcovarianceBase_a1cede85accaac2ea7056740893d90c49}{get\+Par\+Init}} (const int i)
+\begin{DoxyCompactList}\small\item\em Get prior parameter value. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classcovarianceBase_a5bf31f7d7a5e24c49d4157d411080dbf}{get\+Nominal}} (const int i)
+\begin{DoxyCompactList}\small\item\em Return generated value, although is virtual so class inheriting might actual get nominal not generated. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classcovarianceBase_a3d8d40e4f44cd0c89a1a2d4b4711f332}{Get\+Generated}} (const int i)
+\begin{DoxyCompactList}\small\item\em Return generated value for a given parameter. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classcovarianceBase_a0c6510aa48248382ba2da0330015b8c6}{Get\+Upper\+Bound}} (const int i)
+\begin{DoxyCompactList}\small\item\em Get upper parameter bound in which it is physically valid. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classcovarianceBase_a634e89392da441ff88cad3a3ba619ccc}{Get\+Lower\+Bound}} (const int i)
+\begin{DoxyCompactList}\small\item\em Get lower parameter bound in which it is physically valid. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classcovarianceBase_ad5b8a91b33381652bae35f1903e16136}{Get\+Indiv\+Step\+Scale}} (const int Parameter\+Index)
+\begin{DoxyCompactList}\small\item\em Get individual step scale for selected parameter. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classcovarianceBase_a3e29910a1706f60db5f615b3b6f05994}{get\+Par\+Prop\+\_\+\+PCA}} (const int i)
+\begin{DoxyCompactList}\small\item\em Get current parameter value using PCA. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classcovarianceBase_af4c0edbf1bd150484bc4696480ef9a77}{get\+Par\+Curr\+\_\+\+PCA}} (const int i)
+\begin{DoxyCompactList}\small\item\em Get current parameter value using PCA. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classcovarianceBase_ab7cb212b7fda7f402629855b58a69cec}{is\+Parameter\+Fixed\+PCA}} (const int i)
+\begin{DoxyCompactList}\small\item\em Is parameter fixed in PCA base or not. \end{DoxyCompactList}\item 
+const TMatrixD \mbox{\hyperlink{classcovarianceBase_acdcf459e3ef443e93c66d83cde87e238}{get\+Transfer\+Matrix}} ()
+\begin{DoxyCompactList}\small\item\em Get transfer matrix allowing to go from PCA base to normal base. \end{DoxyCompactList}\item 
+const TMatrixD \mbox{\hyperlink{classcovarianceBase_ad1b0e5f25843ee77ec1c6094856cda27}{get\+Eigen\+Vectors}} ()
+\begin{DoxyCompactList}\small\item\em Get eigen vectors of covariance matrix, only works with PCA. \end{DoxyCompactList}\item 
+const TVectorD \mbox{\hyperlink{classcovarianceBase_add3d24e738cde5a2f5ab1b2b377a2afb}{get\+Eigen\+Values}} ()
+\begin{DoxyCompactList}\small\item\em Get eigen values for all parameters, if you want for decomposed only parameters use get\+Eigen\+Values\+Master. \end{DoxyCompactList}\item 
+const std\+::vector$<$ double $>$ \mbox{\hyperlink{classcovarianceBase_a104f2d2f1b7f60693bba489ac4e753cc}{get\+Eigen\+Values\+Master}} ()
+\begin{DoxyCompactList}\small\item\em Get eigen value of only decomposed parameters, if you want for all parameters use get\+Eigen\+Values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceBase_a7c9b2ae1b4144448385b47a576e4d07d}{set\+Par\+Prop\+\_\+\+PCA}} (const int i, const double value)
+\begin{DoxyCompactList}\small\item\em Set proposed value for parameter in PCA base. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceBase_a593457c3ae0a2d1892846b484833274f}{set\+Par\+Curr\+\_\+\+PCA}} (const int i, const double value)
+\begin{DoxyCompactList}\small\item\em Set current value for parameter in PCA base. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceBase_a5888af0b4b6e1d7826fca0f6777bf3ae}{set\+Parameters\+\_\+\+PCA}} (const std\+::vector$<$ double $>$ \&pars)
+\begin{DoxyCompactList}\small\item\em Set values for PCA parameters in PCA base. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classcovarianceBase_a261941a4c06e5d875174d8769a4d02f1}{get\+Npars}} ()
+\begin{DoxyCompactList}\small\item\em Get number of params which will be different depending if using Eigen decomposition or not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceBase_aebd37baf2d6551863d810bea83c73020}{print\+Nominal}} ()
+\begin{DoxyCompactList}\small\item\em Print nominal value for every parameter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceBase_a732268706d083b6ae4495e34e703bbda}{print\+Nominal\+Curr\+Prop}} ()
+\begin{DoxyCompactList}\small\item\em Print nominal, current and proposed value for each parameter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceBase_ac1ff984cbc1b7858af9dd237cc1648d3}{print\+Pars}} ()
+\item 
+void \mbox{\hyperlink{classcovarianceBase_ad3c0dddbedcf57f06a14ec52800a087b}{print\+Indiv\+Step\+Scale}} ()
+\begin{DoxyCompactList}\small\item\em Print step scale for each parameter. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classcovarianceBase_a95c7ca23995af579cfa7f199833fe24a}{propose\+Step}} ()
+\begin{DoxyCompactList}\small\item\em Generate a new proposed state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceBase_aa2344b1482362eed11d817acdb6befe4}{accept\+Step}} ()
+\begin{DoxyCompactList}\small\item\em Accepted this step. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceBase_adb2d1a39cd2bd160257bc9e34e32df4c}{toggle\+Fix\+All\+Parameters}} ()
+\begin{DoxyCompactList}\small\item\em fix parameters at prior values \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceBase_aafbbdc05b87df882dc341e20fe870603}{toggle\+Fix\+Parameter}} (const int i)
+\begin{DoxyCompactList}\small\item\em fix parameter at prior values \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceBase_a41cc8dd2185af7cee380f3c6d463e5a4}{toggle\+Fix\+Parameter}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Fix parameter at prior values. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classcovarianceBase_a2424eaebd9daa92b0294b352310770a3}{is\+Parameter\+Fixed}} (const int i)
+\begin{DoxyCompactList}\small\item\em Is parameter fixed or not. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classcovarianceBase_a1a0ed90bcbc2f932c7a32d26090edbbb}{is\+Parameter\+Fixed}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Is parameter fixed or not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceBase_a8ac3a458097817eca534c23554a7635b}{Construct\+PCA}} ()
+\begin{DoxyCompactList}\small\item\em CW\+: Calculate eigen values, prepare transition matrices and remove param based on defined threshold. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classcovarianceBase_a30f3f34243be0f6bc901e525497e7f56}{Is\+PCA}} ()
+\begin{DoxyCompactList}\small\item\em is PCA, can use to query e.\+g. LLH scans \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceBase_a64aaa71f81750ba27977c0405c51cd88}{Matrix\+Vector\+Multi}} (double $\ast$\mbox{\hyperlink{Structs_8h_ab6a7e23420f0bcfb04f42f45f8283101}{\+\_\+restrict\+\_\+}} Vec\+Multi, double $\ast$$\ast$\mbox{\hyperlink{Structs_8h_ab6a7e23420f0bcfb04f42f45f8283101}{\+\_\+restrict\+\_\+}} matrix, const double $\ast$\mbox{\hyperlink{Structs_8h_ab6a7e23420f0bcfb04f42f45f8283101}{\+\_\+restrict\+\_\+}} vector, const int n)
+\begin{DoxyCompactList}\small\item\em KS\+: Custom function to perform multiplication of matrix and vector with multithreading. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classcovarianceBase_a767242ffde1e52dff143889e5534b4e3}{Matrix\+Vector\+Multi\+Single}} (double $\ast$$\ast$\mbox{\hyperlink{Structs_8h_ab6a7e23420f0bcfb04f42f45f8283101}{\+\_\+restrict\+\_\+}} matrix, const double $\ast$\mbox{\hyperlink{Structs_8h_ab6a7e23420f0bcfb04f42f45f8283101}{\+\_\+restrict\+\_\+}} vector, const int Length, const int i)
+\begin{DoxyCompactList}\small\item\em KS\+: Custom function to perform multiplication of matrix and single element which is thread safe. \end{DoxyCompactList}\item 
+YAML\+::\+Node \mbox{\hyperlink{classcovarianceBase_a61936f5c39ad7902624222fc49ad1362}{Get\+Config}} () const
+\begin{DoxyCompactList}\small\item\em Getter to return a copy of the YAML node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcovarianceXsec_ade0e8f83dcf75c50e6dad08ab6715093}{Print}} ()
+\begin{DoxyCompactList}\small\item\em Print information about the whole object once it is set. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceXsec_a41d7f1b1010bddd3e938eb589a089593}{Print\+Globabl\+Info}} ()
+\begin{DoxyCompactList}\small\item\em Prints general information about the \mbox{\hyperlink{classcovarianceXsec}{covariance\+Xsec}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceXsec_a8b408060d825769eec6c8e4594397ec8}{Print\+Norm\+Params}} ()
+\begin{DoxyCompactList}\small\item\em Prints normalization parameters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceXsec_a02678dad88cf9dafb7d001208f8b0348}{Print\+Spline\+Params}} ()
+\begin{DoxyCompactList}\small\item\em Prints spline parameters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceXsec_a36b690efce9b6d073482e461b350871f}{Print\+Functional\+Params}} ()
+\begin{DoxyCompactList}\small\item\em Prints functional parameters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceXsec_ae62615b039cb1e1510934406200bde3a}{Print\+Parameter\+Groups}} ()
+\begin{DoxyCompactList}\small\item\em Prints groups of parameters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceXsec_a688e670224e9e1fac3d6de97a2016f1a}{Check\+Correct\+Initialisation}} ()
+\begin{DoxyCompactList}\small\item\em KS\+: Check if matrix is correctly initialised. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Filter\+Func , typename Action\+Func $>$ }\\void \mbox{\hyperlink{classcovarianceXsec_a17c24905af91f1fc7b806cfc39e50035}{Iterate\+Over\+Params}} (const int Det\+ID, Filter\+Func filter, Action\+Func action)
+\begin{DoxyCompactList}\small\item\em Iterates over parameters and applies a filter and action function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceXsec_aea65a8b1ad6399f0b9f356810249bfd1}{init\+Params}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the systematic parameters from the configuration file. This function loads parameters like normalizations and splines from the provided YAML file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceXsec_a90bd7a32f16efc88c070e57fabafd13b}{Init\+Xsec\+From\+Config}} ()
+\begin{DoxyCompactList}\small\item\em Parses the YAML configuration to set up cross-\/section parameters. The YAML file defines the types of systematic errors, interpolation types, and bounds for splines. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structXsecNorms4}{Xsec\+Norms4}} \mbox{\hyperlink{classcovarianceXsec_a68938d9079d05782eb1f415a5204284c}{Get\+Xsec\+Norm}} (const YAML\+::\+Node \&param, const int Index)
+\begin{DoxyCompactList}\small\item\em Get Norm params. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structXsecSplines1}{Xsec\+Splines1}} \mbox{\hyperlink{classcovarianceXsec_acf3b87f72369d597d27d2a32fc01e779}{Get\+Xsec\+Spline}} (const YAML\+::\+Node \&param)
+\begin{DoxyCompactList}\small\item\em Get Spline params. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classcovarianceBase}{covariance\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcovarianceBase_a2960c489f6aafdb5a2291e1a48b14e9a}{init}} (std\+::string name, std\+::string file)
+\begin{DoxyCompactList}\small\item\em Initialisation of the class using matrix from root file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceBase_acec1e1c7fd83d21e1ad55a03acfeb8c4}{init}} (const std\+::vector$<$ std\+::string $>$ \&YAMLFile)
+\begin{DoxyCompactList}\small\item\em Initialisation of the class using config. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceBase_ab5141e2014519c1483788f4995686164}{init}} (TMatrix\+DSym $\ast$cov\+Mat)
+\begin{DoxyCompactList}\small\item\em Initialisation of the class using only TMatrix. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceBase_a75b5553823335bb82026ff46369fb67e}{Reserve\+Memory}} (const int \mbox{\hyperlink{GetPenaltyTerm_8cpp_a439227feff9d7f55384e8780cfc2eb82}{size}})
+\begin{DoxyCompactList}\small\item\em Initialise vectors with parameters information. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceBase_a3432b7a9acc1243b8bdb17ec0b40d195}{randomize}} ()
+\begin{DoxyCompactList}\small\item\em \char`\"{}\+Randomize\char`\"{} the parameters in the covariance class for the proposed step. Used the proposal kernel and the current parameter value to set proposed step \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceBase_aba2b2dae2546299c9a4dab618d65e7c0}{Correlate\+Steps}} ()
+\begin{DoxyCompactList}\small\item\em Use Cholesky throw matrix for better step proposal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceBase_ae2850c8e2f2d4acfe322b0ebe65b07cf}{Make\+Pos\+Def}} (TMatrix\+DSym $\ast$cov=nullptr)
+\begin{DoxyCompactList}\small\item\em Make matrix positive definite by adding small values to diagonal, necessary for inverting matrix. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceBase_a8a709e1c6c58618cf65400eef1741cc7}{make\+Closest\+Pos\+Def}} (TMatrix\+DSym $\ast$cov)
+\begin{DoxyCompactList}\small\item\em HW\+: Finds closest possible positive definite matrix in Frobenius Norm $\vert$$\vert$.$\vert$$\vert$\+\_\+frob Where $\vert$$\vert$\+X$\vert$$\vert$\+\_\+frob=sqrt\mbox{[}sum\+\_\+ij(x\+\_\+ij$^\wedge$2)\mbox{]} (basically just turns an n,n matrix into vector in n$^\wedge$2 space then does Euclidean norm) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceBase_a651f5ecd8973918d5683606a607fa88c}{Transfer\+To\+PCA}} ()
+\begin{DoxyCompactList}\small\item\em Transfer param values from normal base to PCA base. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceBase_a65ac4956a782b01768f445732522a450}{Transfer\+To\+Param}} ()
+\begin{DoxyCompactList}\small\item\em Transfer param values from PCA base to normal base. \end{DoxyCompactList}\item 
+const double $\ast$ \mbox{\hyperlink{classcovarianceBase_a3e2c11c7c0a3557068369b30e7aac17f}{Return\+Unity}} ()
+\begin{DoxyCompactList}\small\item\em Handy function to return 1 for any systs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceBase_a5ab3d89b7fe6103ae6f750c984bcefc8}{set\+Throw\+Matrix\+From\+File}} (const std\+::string \&matrix\+\_\+file\+\_\+name, const std\+::string \&matrix\+\_\+name, const std\+::string \&means\+\_\+name)
+\begin{DoxyCompactList}\small\item\em sets throw matrix from a file \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcovarianceBase_a50ce8ebb96ebd64190dc37e4bf950a9b}{update\+Adaptive\+Covariance}} ()
+\begin{DoxyCompactList}\small\item\em Method to update adaptive MCMC. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classcovarianceXsec_a183f01056fc0e9b42db202e944021332}{\+\_\+f\+Det\+ID}}
+\begin{DoxyCompactList}\small\item\em Tells to which samples object param should be applied. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{Structs_8h_affc27d8b7b82d3713f45af17873fde2f}{Syst\+Type}} $>$ \mbox{\hyperlink{classcovarianceXsec_aae3338ca71027adab7fdfd3e828c0f79}{\+\_\+f\+Param\+Type}}
+\begin{DoxyCompactList}\small\item\em Type of parameter like norm, spline etc. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classcovarianceXsec_a4d3074db3c9edb7465a4409abd9c91fc}{\+\_\+f\+Spline\+Names}}
+\begin{DoxyCompactList}\small\item\em Name of spline in TTree (TBranch),. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classcovarianceXsec_a47cd1802e0dac0c22c8c16f214272c34}{\+\_\+\+Parameter\+Group}}
+\begin{DoxyCompactList}\small\item\em KS\+: Allow to group parameters for example to affect only cross-\/section or only flux etc. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::map$<$ int, int $>$ $>$ \mbox{\hyperlink{classcovarianceXsec_adddfbaa235113603542826df331ed61e}{\+\_\+f\+Syst\+To\+Global\+Syst\+Index\+Map}}
+\begin{DoxyCompactList}\small\item\em Map between number of given parameter type with global parameter numbering. For example 2nd norm param may be 10-\/th global param. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{structXsecSplines1}{Xsec\+Splines1}} $>$ \mbox{\hyperlink{classcovarianceXsec_ae95bafab0c674dc838635aaeca40bc2c}{Spline\+Params}}
+\begin{DoxyCompactList}\small\item\em Vector containing info for normalisation systematics. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{structXsecNorms4}{Xsec\+Norms4}} $>$ \mbox{\hyperlink{classcovarianceXsec_acd6c2346a5b808c6917e4828bbb633f5}{Norm\+Params}}
+\begin{DoxyCompactList}\small\item\em Vector containing info for normalisation systematics. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes inherited from \mbox{\hyperlink{classcovarianceBase}{covariance\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::string \mbox{\hyperlink{classcovarianceBase_a5451d4189a9fb7591c8ce728852ba82e}{input\+File}}
+\begin{DoxyCompactList}\small\item\em The input root file we read in. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classcovarianceBase_a26618d3f5633b33ce20e38ce8261b3ee}{matrix\+Name}}
+\begin{DoxyCompactList}\small\item\em Name of cov matrix. \end{DoxyCompactList}\item 
+TMatrix\+DSym $\ast$ \mbox{\hyperlink{classcovarianceBase_a6c3fe8db34c06299fd1633951ac00937}{cov\+Matrix}}
+\begin{DoxyCompactList}\small\item\em The covariance matrix. \end{DoxyCompactList}\item 
+TMatrix\+DSym $\ast$ \mbox{\hyperlink{classcovarianceBase_a35c7dc7817eaf4058e9775b6bc792ebc}{inv\+Cov\+Matrix}}
+\begin{DoxyCompactList}\small\item\em The inverse covariance matrix. \end{DoxyCompactList}\item 
+double $\ast$$\ast$ \mbox{\hyperlink{classcovarianceBase_a49a8341eb8e997fb090749117320edf9}{Invert\+Cov\+Matrix}}
+\begin{DoxyCompactList}\small\item\em KS\+: Same as above but much faster as TMatrix\+DSym cache miss. \end{DoxyCompactList}\item 
+TRandom3 $\ast$$\ast$ \mbox{\hyperlink{classcovarianceBase_a60dcca091a79ccddd3ad5b414ccd809b}{random\+\_\+number}}
+\begin{DoxyCompactList}\small\item\em KS\+: Set Random numbers for each thread so each thread has different seed. \end{DoxyCompactList}\item 
+double $\ast$ \mbox{\hyperlink{classcovarianceBase_a705e648220c06083cd1acc5fba4f2ef7}{rand\+Params}}
+\begin{DoxyCompactList}\small\item\em Random number taken from gaussian around prior error used for corr\+\_\+throw. \end{DoxyCompactList}\item 
+double $\ast$ \mbox{\hyperlink{classcovarianceBase_a7b70de3f098aae1d537d80bac5969d88}{corr\+\_\+throw}}
+\begin{DoxyCompactList}\small\item\em Result of multiplication of Cholesky matrix and rand\+Params. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classcovarianceBase_a0088413d6a15d12cd34ec06166302f5c}{\+\_\+f\+Global\+Step\+Scale}}
+\begin{DoxyCompactList}\small\item\em Global step scale applied ot all params in this class. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classcovarianceBase_a8d821ce805f2426fe95549170866821f}{Print\+Length}}
+\begin{DoxyCompactList}\small\item\em KS\+: This is used when printing parameters, sometimes we have super long parameters name, we want to flexibly adjust couts. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classcovarianceBase_a3e502d80fd2c30a7da4fe75a3e05b0da}{\+\_\+f\+Names}}
+\begin{DoxyCompactList}\small\item\em ETA \+\_\+f\+Names is set automatically in the covariance class to be something like xsec\+\_\+i, this is currently to make things compatible with the Diagnostic tools. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classcovarianceBase_a973671386a2f8ea924f25f8f5404654c}{\+\_\+f\+Fancy\+Names}}
+\begin{DoxyCompactList}\small\item\em Fancy name for example rather than xsec\+\_\+0 it is MAQE, useful for human reading. \end{DoxyCompactList}\item 
+YAML\+::\+Node \mbox{\hyperlink{classcovarianceBase_a933ff3dc0af99629ba3582a5d9d89d23}{\+\_\+f\+YAMLDoc}}
+\begin{DoxyCompactList}\small\item\em Stores config describing systematics. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classcovarianceBase_ac5d922f1a4163b38ebc7a3ef21eec376}{\+\_\+f\+Num\+Par}}
+\begin{DoxyCompactList}\small\item\em Number of systematic parameters. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classcovarianceBase_a7578a2cc2e8e9100fad88310a824cb1c}{\+\_\+f\+Pre\+Fit\+Value}}
+\begin{DoxyCompactList}\small\item\em Parameter value dictated by the prior model. Based on it penalty term is calculated. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classcovarianceBase_ae70f51df3976975b2dc78fd3bfc28b65}{\+\_\+f\+Curr\+Val}}
+\begin{DoxyCompactList}\small\item\em Current value of the parameter. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classcovarianceBase_a12f0eb31a5ef48b014baa11d4ab919e9}{\+\_\+f\+Prop\+Val}}
+\begin{DoxyCompactList}\small\item\em Proposed value of the parameter. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classcovarianceBase_a9b753f52711600a9f8d648531d95b044}{\+\_\+f\+Generated}}
+\begin{DoxyCompactList}\small\item\em Generated value of the parameter. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classcovarianceBase_a34f877fc160b4a93a3aab1b3a8977858}{\+\_\+f\+Error}}
+\begin{DoxyCompactList}\small\item\em Prior error on the parameter. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classcovarianceBase_a8f1d94838f188cc85c4f82557c0b0b66}{\+\_\+f\+Low\+Bound}}
+\begin{DoxyCompactList}\small\item\em Lowest physical bound, parameter will not be able to go beyond it. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classcovarianceBase_a31e636cb6de871bd0c2c8e7e299df9e7}{\+\_\+f\+Up\+Bound}}
+\begin{DoxyCompactList}\small\item\em Upper physical bound, parameter will not be able to go beyond it. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classcovarianceBase_a3cda39026e336a49cef482efd4062561}{\+\_\+f\+Indiv\+Step\+Scale}}
+\begin{DoxyCompactList}\small\item\em Individual step scale used by MCMC algorithm. \end{DoxyCompactList}\item 
+std\+::vector$<$ bool $>$ \mbox{\hyperlink{classcovarianceBase_ad9c47deb7009bff81210f666e80012eb}{\+\_\+f\+Flat\+Prior}}
+\begin{DoxyCompactList}\small\item\em Whether to apply flat prior or not. \end{DoxyCompactList}\item 
+const double \mbox{\hyperlink{classcovarianceBase_a7682c3de33ae5b23b23e070dc0a3f778}{Unity}} = 1.\+0
+\begin{DoxyCompactList}\small\item\em Unity for null systs to point back to. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classcovarianceBase_ab4b7f96d3e977a0b3307ceecbd0baeb4}{pca}}
+\begin{DoxyCompactList}\small\item\em perform PCA or not \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classcovarianceBase_add54ab1ba46b723fa23d7c95dfad671a}{eigen\+\_\+threshold}}
+\begin{DoxyCompactList}\small\item\em CW\+: Threshold based on which we remove parameters in eigen base. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classcovarianceBase_ac57285a48d41ef764b4c659959a36c2d}{\+\_\+f\+Num\+Par\+PCA}}
+\begin{DoxyCompactList}\small\item\em Number of parameters in PCA base. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classcovarianceBase_abba75182305d556818c76974a054a17d}{First\+PCAdpar}}
+\begin{DoxyCompactList}\small\item\em Index of the first param that is being decomposed. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classcovarianceBase_a5ebdc744b733656972a15f1657915a3f}{Last\+PCAdpar}}
+\begin{DoxyCompactList}\small\item\em Index of the last param that is being decomposed. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classcovarianceBase_ae6aada94037640a68e3f37898f276019}{\+\_\+f\+Pre\+Fit\+Value\+\_\+\+PCA}}
+\begin{DoxyCompactList}\small\item\em Prefit value for PCA params. \end{DoxyCompactList}\item 
+TVectorD \mbox{\hyperlink{classcovarianceBase_a2e101b6b7028c82a02e617c90212e4cc}{f\+Par\+Prop\+\_\+\+PCA}}
+\begin{DoxyCompactList}\small\item\em CW\+: Current parameter value in PCA base. \end{DoxyCompactList}\item 
+TVectorD \mbox{\hyperlink{classcovarianceBase_aa96f87ab90dc26fc1b5e157149b9dfd3}{f\+Par\+Curr\+\_\+\+PCA}}
+\begin{DoxyCompactList}\small\item\em CW\+: Proposed parameter value in PCA base. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classcovarianceBase_a7b83a17de68cc7838b93de242d91d9a0}{f\+Par\+Sigma\+\_\+\+PCA}}
+\begin{DoxyCompactList}\small\item\em Tells if parameter is fixed in PCA base or not. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classcovarianceBase_ae9f3cb2a310874b86965903714ef2bd8}{is\+Decomposed\+\_\+\+PCA}}
+\begin{DoxyCompactList}\small\item\em If param is decomposed this will return -\/1, if not this will return enumerator to param in normal base. This way we can map stuff like step scale etc between normal base and undecomposed param in eigen base. \end{DoxyCompactList}\item 
+TMatrix\+DSym $\ast$ \mbox{\hyperlink{classcovarianceBase_a6cb3d0b4096fbb55b040f70cd5b6e32b}{throw\+Matrix}}
+\begin{DoxyCompactList}\small\item\em Matrix which we use for step proposal before Cholesky decomposition (not actually used for step proposal) \end{DoxyCompactList}\item 
+TMatrixD $\ast$ \mbox{\hyperlink{classcovarianceBase_ab95f5e066c2dfb1d20d120bc6c85dda2}{throw\+Matrix\+\_\+\+Chol\+Decomp}}
+\begin{DoxyCompactList}\small\item\em Matrix which we use for step proposal after Cholesky decomposition. \end{DoxyCompactList}\item 
+double $\ast$$\ast$ \mbox{\hyperlink{classcovarianceBase_aca17e48a5fa8e353317d58c205fb89df}{throw\+Matrix\+Chol\+Decomp}}
+\begin{DoxyCompactList}\small\item\em Throw matrix that is being used in the fit, much faster as TMatrix\+DSym cache miss. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classcovarianceBase_a838731abd6716940043b484b2b266f86}{use\+\_\+adaptive}}
+\begin{DoxyCompactList}\small\item\em Are we using AMCMC? \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPCAHandler}{PCAHandler}} \mbox{\hyperlink{classcovarianceBase_ad0022a3e9dd3b2661c9b02a02488759c}{PCAObj}}
+\begin{DoxyCompactList}\small\item\em Struct containing information about PCA. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classadaptive__mcmc_1_1AdaptiveMCMCHandler}{adaptive\+\_\+mcmc\+::\+Adaptive\+MCMCHandler}} \mbox{\hyperlink{classcovarianceBase_ab3833dc51a81afc9dca7c3dcbb107af7}{Adaptive\+Handler}}
+\begin{DoxyCompactList}\small\item\em Struct containing information about adaption. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class responsible for handling of systematic error parameters with different types defined in the config. Like spline, normalisation parameters etc. 
+
+\begin{DoxySeeAlso}{See also}
+For more details, visit the \href{https://github.com/mach3-software/MaCh3/wiki/02.-Implementation-of-Systematic}{\texttt{ Wiki}}. 
+\end{DoxySeeAlso}
+
+
+Definition at line \mbox{\hyperlink{covarianceXsec_8h_source_l00009}{9}} of file \mbox{\hyperlink{covarianceXsec_8h_source}{covariance\+Xsec.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcovarianceXsec_a2e6c281c3f7f902076043ca9776b241d}\label{classcovarianceXsec_a2e6c281c3f7f902076043ca9776b241d}} 
+\index{covarianceXsec@{covarianceXsec}!covarianceXsec@{covarianceXsec}}
+\index{covarianceXsec@{covarianceXsec}!covarianceXsec@{covarianceXsec}}
+\doxysubsubsection{\texorpdfstring{covarianceXsec()}{covarianceXsec()}}
+{\footnotesize\ttfamily covariance\+Xsec\+::covariance\+Xsec (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{File\+Names,  }\item[{std\+::string}]{name = {\ttfamily \char`\"{}xsec\+\_\+cov\char`\"{}},  }\item[{double}]{threshold = {\ttfamily -\/1},  }\item[{int}]{First\+PCAdpar = {\ttfamily -\/999},  }\item[{int}]{Last\+PCAdpar = {\ttfamily -\/999} }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em File\+Names} & A vector of strings representing the YAML files used for initialisation of matrix \\
+\hline
+{\em name} & Matrix name \\
+\hline
+{\em threshold} & PCA threshold from 0 to 1. Default is -\/1 and means no PCA \\
+\hline
+{\em First\+PCAdpar} & First PCA parameter that will be decomposed. \\
+\hline
+{\em Last\+PCAdpar} & First PCA parameter that will be decomposed. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{covarianceXsec_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{covarianceXsec_8cpp_source}{covariance\+Xsec.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classcovarianceBase}{covarianceBase}}(YAMLFile,\ name,\ threshold,\ FirstPCA,\ LastPCA)\{}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ ********************************************}}
+\DoxyCodeLine{00010\ \ \ \mbox{\hyperlink{classcovarianceXsec_a90bd7a32f16efc88c070e57fabafd13b}{InitXsecFromConfig}}();}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \textcolor{comment}{//ETA\ -\/\ again\ this\ really\ doesn't\ need\ to\ be\ hear...}}
+\DoxyCodeLine{00013\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classcovarianceBase_ac5d922f1a4163b38ebc7a3ef21eec376}{\_fNumPar}};\ i++)}
+\DoxyCodeLine{00014\ \ \ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{comment}{//\ Sort\ out\ the\ print\ length}}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordflow}{if}(\textcolor{keywordtype}{int}(\mbox{\hyperlink{classcovarianceBase_a3e502d80fd2c30a7da4fe75a3e05b0da}{\_fNames}}[i].length())\ >\ \mbox{\hyperlink{classcovarianceBase_a8d821ce805f2426fe95549170866821f}{PrintLength}})\ \mbox{\hyperlink{classcovarianceBase_a8d821ce805f2426fe95549170866821f}{PrintLength}}\ =\ int(\mbox{\hyperlink{classcovarianceBase_a3e502d80fd2c30a7da4fe75a3e05b0da}{\_fNames}}[i].length());}
+\DoxyCodeLine{00017\ \ \ \}\ \textcolor{comment}{//\ end\ the\ for\ loop}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}Constructing\ instance\ of\ covarianceXsec"{}});}
+\DoxyCodeLine{00020\ \ \ \mbox{\hyperlink{classcovarianceXsec_aea65a8b1ad6399f0b9f356810249bfd1}{initParams}}();}
+\DoxyCodeLine{00021\ \ \ \textcolor{comment}{//\ Print}}
+\DoxyCodeLine{00022\ \ \ \mbox{\hyperlink{classcovarianceXsec_ade0e8f83dcf75c50e6dad08ab6715093}{Print}}();}
+\DoxyCodeLine{00023\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcovarianceXsec_af84383b735f450c33c9c34f7ca207a66}\label{classcovarianceXsec_af84383b735f450c33c9c34f7ca207a66}} 
+\index{covarianceXsec@{covarianceXsec}!````~covarianceXsec@{$\sim$covarianceXsec}}
+\index{````~covarianceXsec@{$\sim$covarianceXsec}!covarianceXsec@{covarianceXsec}}
+\doxysubsubsection{\texorpdfstring{$\sim$covarianceXsec()}{~covarianceXsec()}}
+{\footnotesize\ttfamily covariance\+Xsec\+::$\sim$covariance\+Xsec (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+
+
+Definition at line \mbox{\hyperlink{covarianceXsec_8cpp_source_l00104}{104}} of file \mbox{\hyperlink{covarianceXsec_8cpp_source}{covariance\+Xsec.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00105\ \textcolor{comment}{//\ ********************************************}}
+\DoxyCodeLine{00106\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}Deleting\ covarianceXsec"{}});}
+\DoxyCodeLine{00107\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcovarianceXsec_a688e670224e9e1fac3d6de97a2016f1a}\label{classcovarianceXsec_a688e670224e9e1fac3d6de97a2016f1a}} 
+\index{covarianceXsec@{covarianceXsec}!CheckCorrectInitialisation@{CheckCorrectInitialisation}}
+\index{CheckCorrectInitialisation@{CheckCorrectInitialisation}!covarianceXsec@{covarianceXsec}}
+\doxysubsubsection{\texorpdfstring{CheckCorrectInitialisation()}{CheckCorrectInitialisation()}}
+{\footnotesize\ttfamily void covariance\+Xsec\+::\+Check\+Correct\+Initialisation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+KS\+: Check if matrix is correctly initialised. 
+
+
+
+Definition at line \mbox{\hyperlink{covarianceXsec_8cpp_source_l00479}{479}} of file \mbox{\hyperlink{covarianceXsec_8cpp_source}{covariance\+Xsec.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00479\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00480\ \textcolor{comment}{//\ ********************************************}}
+\DoxyCodeLine{00481\ \ \ \textcolor{comment}{//\ KS:\ Lambda\ Function\ which\ simply\ checks\ if\ there\ are\ no\ duplicates\ in\ std::vector}}
+\DoxyCodeLine{00482\ \ \ \textcolor{keyword}{auto}\ CheckForDuplicates\ =\ [](\textcolor{keyword}{const}\ std::vector<std::string>\&\ names,\ \textcolor{keyword}{const}\ std::string\&\ nameType)\ \{}
+\DoxyCodeLine{00483\ \ \ \ \ std::unordered\_map<std::string,\ size\_t>\ seenStrings;}
+\DoxyCodeLine{00484\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ names.size();\ ++i)\ \{}
+\DoxyCodeLine{00485\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ name\ =\ names[i];}
+\DoxyCodeLine{00486\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (seenStrings.find(name)\ !=\ seenStrings.end())\ \{}
+\DoxyCodeLine{00487\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ firstIndex\ =\ seenStrings[name];}
+\DoxyCodeLine{00488\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a07ff6d6a15b24f94afc88a1b89779beb}{MACH3LOG\_CRITICAL}}(\textcolor{stringliteral}{"{}There\ are\ two\ systematics\ with\ the\ same\ \{\}\ '\{\}',\ first\ at\ index\ \{\},\ and\ again\ at\ index\ \{\}"{}},\ nameType,\ name,\ firstIndex,\ i);}
+\DoxyCodeLine{00489\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_,\ \_\_LINE\_\_);}
+\DoxyCodeLine{00490\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00491\ \ \ \ \ \ \ seenStrings[name]\ =\ i;}
+\DoxyCodeLine{00492\ \ \ \ \ \}}
+\DoxyCodeLine{00493\ \ \ \};}
+\DoxyCodeLine{00494\ }
+\DoxyCodeLine{00495\ \ \ \textcolor{comment}{//\ KS:\ Checks\ if\ there\ are\ no\ duplicates\ in\ fancy\ names\ etc,\ this\ can\ happen\ if\ we\ merge\ configs\ etc}}
+\DoxyCodeLine{00496\ \ \ CheckForDuplicates(\mbox{\hyperlink{classcovarianceBase_a973671386a2f8ea924f25f8f5404654c}{\_fFancyNames}},\ \textcolor{stringliteral}{"{}\_fFancyNames"{}});}
+\DoxyCodeLine{00497\ \ \ CheckForDuplicates(\mbox{\hyperlink{classcovarianceXsec_a4d3074db3c9edb7465a4409abd9c91fc}{\_fSplineNames}},\ \textcolor{stringliteral}{"{}\_fSplineNames"{}});}
+\DoxyCodeLine{00498\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcovarianceXsec_a5cffa7b3221e1a49706ea8a9fe0f826c}\label{classcovarianceXsec_a5cffa7b3221e1a49706ea8a9fe0f826c}} 
+\index{covarianceXsec@{covarianceXsec}!DumpMatrixToFile@{DumpMatrixToFile}}
+\index{DumpMatrixToFile@{DumpMatrixToFile}!covarianceXsec@{covarianceXsec}}
+\doxysubsubsection{\texorpdfstring{DumpMatrixToFile()}{DumpMatrixToFile()}}
+{\footnotesize\ttfamily void covariance\+Xsec\+::\+Dump\+Matrix\+To\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{Name }\end{DoxyParamCaption})}
+
+
+
+Dump Matrix to ROOT file, useful when we need to pass matrix info to another fitting group. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Name} & Name of TFile to which we save stuff \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+This is mostly used for backward compatibility 
+\end{DoxyWarning}
+
+
+Definition at line \mbox{\hyperlink{covarianceXsec_8cpp_source_l00525}{525}} of file \mbox{\hyperlink{covarianceXsec_8cpp_source}{covariance\+Xsec.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00525\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00526\ \textcolor{comment}{//\ ********************************************}}
+\DoxyCodeLine{00527\ \ \ TFile*\ outputFile\ =\ \textcolor{keyword}{new}\ TFile(Name.c\_str(),\ \textcolor{stringliteral}{"{}RECREATE"{}});}
+\DoxyCodeLine{00528\ }
+\DoxyCodeLine{00529\ \ \ TObjArray*\ xsec\_param\_names\ =\ \textcolor{keyword}{new}\ TObjArray();}
+\DoxyCodeLine{00530\ \ \ TObjArray*\ xsec\_spline\_interpolation\ =\ \textcolor{keyword}{new}\ TObjArray();}
+\DoxyCodeLine{00531\ \ \ TObjArray*\ xsec\_spline\_names\ =\ \textcolor{keyword}{new}\ TObjArray();}
+\DoxyCodeLine{00532\ }
+\DoxyCodeLine{00533\ \ \ TVectorD*\ xsec\_param\_prior\ =\ \textcolor{keyword}{new}\ TVectorD(\mbox{\hyperlink{classcovarianceBase_ac5d922f1a4163b38ebc7a3ef21eec376}{\_fNumPar}});}
+\DoxyCodeLine{00534\ \ \ TVectorD*\ xsec\_flat\_prior\ =\ \textcolor{keyword}{new}\ TVectorD(\mbox{\hyperlink{classcovarianceBase_ac5d922f1a4163b38ebc7a3ef21eec376}{\_fNumPar}});}
+\DoxyCodeLine{00535\ \ \ TVectorD*\ xsec\_stepscale\ =\ \textcolor{keyword}{new}\ TVectorD(\mbox{\hyperlink{classcovarianceBase_ac5d922f1a4163b38ebc7a3ef21eec376}{\_fNumPar}});}
+\DoxyCodeLine{00536\ \ \ TVectorD*\ xsec\_param\_nom\ =\ \textcolor{keyword}{new}\ TVectorD(\mbox{\hyperlink{classcovarianceBase_ac5d922f1a4163b38ebc7a3ef21eec376}{\_fNumPar}});}
+\DoxyCodeLine{00537\ \ \ TVectorD*\ xsec\_param\_lb\ =\ \textcolor{keyword}{new}\ TVectorD(\mbox{\hyperlink{classcovarianceBase_ac5d922f1a4163b38ebc7a3ef21eec376}{\_fNumPar}});}
+\DoxyCodeLine{00538\ \ \ TVectorD*\ xsec\_param\_ub\ =\ \textcolor{keyword}{new}\ TVectorD(\mbox{\hyperlink{classcovarianceBase_ac5d922f1a4163b38ebc7a3ef21eec376}{\_fNumPar}});}
+\DoxyCodeLine{00539\ }
+\DoxyCodeLine{00540\ \ \ TVectorD*\ xsec\_param\_knot\_weight\_lb\ =\ \textcolor{keyword}{new}\ TVectorD(\mbox{\hyperlink{classcovarianceBase_ac5d922f1a4163b38ebc7a3ef21eec376}{\_fNumPar}});}
+\DoxyCodeLine{00541\ \ \ TVectorD*\ xsec\_param\_knot\_weight\_ub\ =\ \textcolor{keyword}{new}\ TVectorD(\mbox{\hyperlink{classcovarianceBase_ac5d922f1a4163b38ebc7a3ef21eec376}{\_fNumPar}});}
+\DoxyCodeLine{00542\ }
+\DoxyCodeLine{00543\ \ \ TVectorD*\ xsec\_error\ =\ \textcolor{keyword}{new}\ TVectorD(\mbox{\hyperlink{classcovarianceBase_ac5d922f1a4163b38ebc7a3ef21eec376}{\_fNumPar}});}
+\DoxyCodeLine{00544\ \ \ TVectorD*\ xsec\_param\_id\ =\ \textcolor{keyword}{new}\ TVectorD(\mbox{\hyperlink{classcovarianceBase_ac5d922f1a4163b38ebc7a3ef21eec376}{\_fNumPar}});}
+\DoxyCodeLine{00545\ }
+\DoxyCodeLine{00546\ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classcovarianceBase_ac5d922f1a4163b38ebc7a3ef21eec376}{\_fNumPar}};\ ++i)}
+\DoxyCodeLine{00547\ \ \ \{}
+\DoxyCodeLine{00548\ \ \ \ \ TObjString*\ nameObj\ =\ \textcolor{keyword}{new}\ TObjString(\mbox{\hyperlink{classcovarianceBase_a973671386a2f8ea924f25f8f5404654c}{\_fFancyNames}}[i].c\_str());}
+\DoxyCodeLine{00549\ \ \ \ \ xsec\_param\_names-\/>AddLast(nameObj);}
+\DoxyCodeLine{00550\ }
+\DoxyCodeLine{00551\ \ \ \ \ TObjString*\ splineType\ =\ \textcolor{keyword}{new}\ TObjString(\textcolor{stringliteral}{"{}TSpline3"{}});}
+\DoxyCodeLine{00552\ \ \ \ \ xsec\_spline\_interpolation-\/>AddLast(splineType);}
+\DoxyCodeLine{00553\ }
+\DoxyCodeLine{00554\ \ \ \ \ TObjString*\ splineName\ =\ \textcolor{keyword}{new}\ TObjString(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00555\ \ \ \ \ xsec\_spline\_names-\/>AddLast(splineName);}
+\DoxyCodeLine{00556\ }
+\DoxyCodeLine{00557\ \ \ \ \ (*xsec\_param\_prior)[i]\ =\ \mbox{\hyperlink{classcovarianceBase_a7578a2cc2e8e9100fad88310a824cb1c}{\_fPreFitValue}}[i];}
+\DoxyCodeLine{00558\ \ \ \ \ (*xsec\_param\_nom)[i]\ =\ \mbox{\hyperlink{classcovarianceBase_a9b753f52711600a9f8d648531d95b044}{\_fGenerated}}[i];}
+\DoxyCodeLine{00559\ \ \ \ \ (*xsec\_flat\_prior)[i]\ =\ \mbox{\hyperlink{classcovarianceBase_ad9c47deb7009bff81210f666e80012eb}{\_fFlatPrior}}[i];}
+\DoxyCodeLine{00560\ \ \ \ \ (*xsec\_stepscale)[i]\ =\ \mbox{\hyperlink{classcovarianceBase_a3cda39026e336a49cef482efd4062561}{\_fIndivStepScale}}[i];}
+\DoxyCodeLine{00561\ \ \ \ \ (*xsec\_error)[i]\ =\ \mbox{\hyperlink{classcovarianceBase_a34f877fc160b4a93a3aab1b3a8977858}{\_fError}}[i];}
+\DoxyCodeLine{00562\ \ \ \ \ (*xsec\_param\_id)[i]\ =\ \mbox{\hyperlink{classcovarianceXsec_a183f01056fc0e9b42db202e944021332}{\_fDetID}}[i];}
+\DoxyCodeLine{00563\ }
+\DoxyCodeLine{00564\ \ \ \ \ (*xsec\_param\_lb)[i]\ =\ \mbox{\hyperlink{classcovarianceBase_a8f1d94838f188cc85c4f82557c0b0b66}{\_fLowBound}}[i];}
+\DoxyCodeLine{00565\ \ \ \ \ (*xsec\_param\_ub)[i]\ =\ \mbox{\hyperlink{classcovarianceBase_a31e636cb6de871bd0c2c8e7e299df9e7}{\_fUpBound}}[i];}
+\DoxyCodeLine{00566\ }
+\DoxyCodeLine{00567\ \ \ \ \ \textcolor{comment}{//Default\ values}}
+\DoxyCodeLine{00568\ \ \ \ \ (*xsec\_param\_knot\_weight\_lb)[i]\ =\ -\/9999;}
+\DoxyCodeLine{00569\ \ \ \ \ (*xsec\_param\_knot\_weight\_ub)[i]\ =\ +9999;}
+\DoxyCodeLine{00570\ \ \ \}}
+\DoxyCodeLine{00571\ }
+\DoxyCodeLine{00572\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&pair\ :\ \mbox{\hyperlink{classcovarianceXsec_adddfbaa235113603542826df331ed61e}{\_fSystToGlobalSystIndexMap}}[SystType::kSpline])\ \{}
+\DoxyCodeLine{00573\ \ \ \ \ \textcolor{keyword}{auto}\ \&SplineIndex\ =\ pair.first;}
+\DoxyCodeLine{00574\ \ \ \ \ \textcolor{keyword}{auto}\ \&SystIndex\ =\ pair.second;}
+\DoxyCodeLine{00575\ }
+\DoxyCodeLine{00576\ \ \ \ \ (*xsec\_param\_knot\_weight\_lb)[SystIndex]\ =\ \mbox{\hyperlink{classcovarianceXsec_ae95bafab0c674dc838635aaeca40bc2c}{SplineParams}}.at(SplineIndex).\_SplineKnotLowBound;}
+\DoxyCodeLine{00577\ \ \ \ \ (*xsec\_param\_knot\_weight\_ub)[SystIndex]\ =\ \mbox{\hyperlink{classcovarianceXsec_ae95bafab0c674dc838635aaeca40bc2c}{SplineParams}}.at(SplineIndex).\_SplineKnotUpBound;}
+\DoxyCodeLine{00578\ }
+\DoxyCodeLine{00579\ \ \ \ \ TObjString*\ splineType\ =\ \textcolor{keyword}{new}\ TObjString(\mbox{\hyperlink{Structs_8h_a2d969ce667e41bd2492cff1775456837}{SplineInterpolation\_ToString}}(\mbox{\hyperlink{classcovarianceXsec_ae95bafab0c674dc838635aaeca40bc2c}{SplineParams}}.at(SplineIndex).\_SplineInterpolationType).c\_str());}
+\DoxyCodeLine{00580\ \ \ \ \ xsec\_spline\_interpolation-\/>AddAt(splineType,\ SystIndex);}
+\DoxyCodeLine{00581\ }
+\DoxyCodeLine{00582\ \ \ \ \ TObjString*\ splineName\ =\ \textcolor{keyword}{new}\ TObjString(\mbox{\hyperlink{classcovarianceXsec_a4d3074db3c9edb7465a4409abd9c91fc}{\_fSplineNames}}[SplineIndex].c\_str());}
+\DoxyCodeLine{00583\ \ \ \ \ xsec\_spline\_names-\/>AddAt(splineName,\ SystIndex);}
+\DoxyCodeLine{00584\ \ \ \}}
+\DoxyCodeLine{00585\ \ \ xsec\_param\_names-\/>Write(\textcolor{stringliteral}{"{}xsec\_param\_names"{}},\ TObject::kSingleKey);}
+\DoxyCodeLine{00586\ \ \ \textcolor{keyword}{delete}\ xsec\_param\_names;}
+\DoxyCodeLine{00587\ \ \ xsec\_spline\_interpolation-\/>Write(\textcolor{stringliteral}{"{}xsec\_spline\_interpolation"{}},\ TObject::kSingleKey);}
+\DoxyCodeLine{00588\ \ \ \textcolor{keyword}{delete}\ xsec\_spline\_interpolation;}
+\DoxyCodeLine{00589\ \ \ xsec\_spline\_names-\/>Write(\textcolor{stringliteral}{"{}xsec\_spline\_names"{}},\ TObject::kSingleKey);}
+\DoxyCodeLine{00590\ \ \ \textcolor{keyword}{delete}\ xsec\_spline\_names;}
+\DoxyCodeLine{00591\ }
+\DoxyCodeLine{00592\ \ \ xsec\_param\_prior-\/>Write(\textcolor{stringliteral}{"{}xsec\_param\_prior"{}});}
+\DoxyCodeLine{00593\ \ \ \textcolor{keyword}{delete}\ xsec\_param\_prior;}
+\DoxyCodeLine{00594\ \ \ xsec\_flat\_prior-\/>Write(\textcolor{stringliteral}{"{}xsec\_flat\_prior"{}});}
+\DoxyCodeLine{00595\ \ \ \textcolor{keyword}{delete}\ xsec\_flat\_prior;}
+\DoxyCodeLine{00596\ \ \ xsec\_stepscale-\/>Write(\textcolor{stringliteral}{"{}xsec\_stepscale"{}});}
+\DoxyCodeLine{00597\ \ \ \textcolor{keyword}{delete}\ xsec\_stepscale;}
+\DoxyCodeLine{00598\ \ \ xsec\_param\_nom-\/>Write(\textcolor{stringliteral}{"{}xsec\_param\_nom"{}});}
+\DoxyCodeLine{00599\ \ \ \textcolor{keyword}{delete}\ xsec\_param\_nom;}
+\DoxyCodeLine{00600\ \ \ xsec\_param\_lb-\/>Write(\textcolor{stringliteral}{"{}xsec\_param\_lb"{}});}
+\DoxyCodeLine{00601\ \ \ \textcolor{keyword}{delete}\ xsec\_param\_lb;}
+\DoxyCodeLine{00602\ \ \ xsec\_param\_ub-\/>Write(\textcolor{stringliteral}{"{}xsec\_param\_ub"{}});}
+\DoxyCodeLine{00603\ \ \ \textcolor{keyword}{delete}\ xsec\_param\_ub;}
+\DoxyCodeLine{00604\ }
+\DoxyCodeLine{00605\ \ \ xsec\_param\_knot\_weight\_lb-\/>Write(\textcolor{stringliteral}{"{}xsec\_param\_knot\_weight\_lb"{}});}
+\DoxyCodeLine{00606\ \ \ \textcolor{keyword}{delete}\ xsec\_param\_knot\_weight\_lb;}
+\DoxyCodeLine{00607\ \ \ xsec\_param\_knot\_weight\_ub-\/>Write(\textcolor{stringliteral}{"{}xsec\_param\_knot\_weight\_ub"{}});}
+\DoxyCodeLine{00608\ \ \ \textcolor{keyword}{delete}\ xsec\_param\_knot\_weight\_ub;}
+\DoxyCodeLine{00609\ }
+\DoxyCodeLine{00610\ \ \ xsec\_param\_id-\/>Write(\textcolor{stringliteral}{"{}xsec\_param\_id"{}});}
+\DoxyCodeLine{00611\ \ \ \textcolor{keyword}{delete}\ xsec\_param\_id;}
+\DoxyCodeLine{00612\ \ \ xsec\_error-\/>Write(\textcolor{stringliteral}{"{}xsec\_error"{}});}
+\DoxyCodeLine{00613\ \ \ \textcolor{keyword}{delete}\ xsec\_error;}
+\DoxyCodeLine{00614\ }
+\DoxyCodeLine{00615\ \ \ \mbox{\hyperlink{classcovarianceBase_a6c3fe8db34c06299fd1633951ac00937}{covMatrix}}-\/>Write(\textcolor{stringliteral}{"{}xsec\_cov"{}});}
+\DoxyCodeLine{00616\ \ \ TH2D*\ CorrMatrix\ =\ \mbox{\hyperlink{classcovarianceBase_ac14fabdb87f5101cdbfcecb8e6b6b811}{GetCorrelationMatrix}}();}
+\DoxyCodeLine{00617\ \ \ CorrMatrix-\/>Write(\textcolor{stringliteral}{"{}hcov"{}});}
+\DoxyCodeLine{00618\ \ \ \textcolor{keyword}{delete}\ CorrMatrix;}
+\DoxyCodeLine{00619\ }
+\DoxyCodeLine{00620\ \ \ outputFile-\/>Close();}
+\DoxyCodeLine{00621\ \ \ \textcolor{keyword}{delete}\ outputFile;}
+\DoxyCodeLine{00622\ }
+\DoxyCodeLine{00623\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Finished\ dumping\ covariance\ object"{}});}
+\DoxyCodeLine{00624\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcovarianceXsec_a7669f8e01cc0aba5670784c786ff2645}\label{classcovarianceXsec_a7669f8e01cc0aba5670784c786ff2645}} 
+\index{covarianceXsec@{covarianceXsec}!GetGlobalSystIndexFromDetID@{GetGlobalSystIndexFromDetID}}
+\index{GetGlobalSystIndexFromDetID@{GetGlobalSystIndexFromDetID}!covarianceXsec@{covarianceXsec}}
+\doxysubsubsection{\texorpdfstring{GetGlobalSystIndexFromDetID()}{GetGlobalSystIndexFromDetID()}}
+{\footnotesize\ttfamily const std\+::vector$<$ int $>$ covariance\+Xsec\+::\+Get\+Global\+Syst\+Index\+From\+Det\+ID (\begin{DoxyParamCaption}\item[{const int}]{Det\+ID,  }\item[{const \mbox{\hyperlink{Structs_8h_affc27d8b7b82d3713f45af17873fde2f}{Syst\+Type}}}]{Type }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{covarianceXsec_8cpp_source_l00199}{199}} of file \mbox{\hyperlink{covarianceXsec_8cpp_source}{covariance\+Xsec.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00200\ \textcolor{comment}{//\ ********************************************}}
+\DoxyCodeLine{00201\ \ \ std::vector<int>\ returnVec;}
+\DoxyCodeLine{00202\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&pair\ :\ \mbox{\hyperlink{classcovarianceXsec_adddfbaa235113603542826df331ed61e}{\_fSystToGlobalSystIndexMap}}[Type])\ \{}
+\DoxyCodeLine{00203\ \ \ \ \ \textcolor{keyword}{auto}\ \&SystIndex\ =\ pair.second;}
+\DoxyCodeLine{00204\ \ \ \ \ \textcolor{keywordflow}{if}\ ((\mbox{\hyperlink{classcovarianceXsec_aad522479b06581729efd6c1cd12d11df}{GetParDetID}}(SystIndex)\ \&\ DetID))\ \{\ \textcolor{comment}{//If\ parameter\ applies\ to\ required\ DetID}}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ returnVec.push\_back(SystIndex);}
+\DoxyCodeLine{00206\ \ \ \ \ \}}
+\DoxyCodeLine{00207\ \ \ \}}
+\DoxyCodeLine{00208\ \ \ \textcolor{keywordflow}{return}\ returnVec;}
+\DoxyCodeLine{00209\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcovarianceXsec_aea8d453c3b4bfe236faff0bf48623118}\label{classcovarianceXsec_aea8d453c3b4bfe236faff0bf48623118}} 
+\index{covarianceXsec@{covarianceXsec}!getNominal@{getNominal}}
+\index{getNominal@{getNominal}!covarianceXsec@{covarianceXsec}}
+\doxysubsubsection{\texorpdfstring{getNominal()}{getNominal()}}
+{\footnotesize\ttfamily double covariance\+Xsec\+::get\+Nominal (\begin{DoxyParamCaption}\item[{const int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get nominal for a given param. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & parameter index \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classcovarianceBase_a5bf31f7d7a5e24c49d4157d411080dbf}{covariance\+Base}}.
+
+
+
+Definition at line \mbox{\hyperlink{covarianceXsec_8h_source_l00083}{83}} of file \mbox{\hyperlink{covarianceXsec_8h_source}{covariance\+Xsec.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00083\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classcovarianceBase_a7578a2cc2e8e9100fad88310a824cb1c}{\_fPreFitValue}}.at(i);\ \};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcovarianceXsec_a98cf4b870e62badc83bcda99ae3574ae}\label{classcovarianceXsec_a98cf4b870e62badc83bcda99ae3574ae}} 
+\index{covarianceXsec@{covarianceXsec}!getNominalArray@{getNominalArray}}
+\index{getNominalArray@{getNominalArray}!covarianceXsec@{covarianceXsec}}
+\doxysubsubsection{\texorpdfstring{getNominalArray()}{getNominalArray()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ covariance\+Xsec\+::get\+Nominal\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+KS\+: For most covariances nominal and fpar\+Init (prior) are the same, however for Xsec those can be different For example Sigma Var are done around nominal in ND280, no idea why though... 
+
+
+
+Reimplemented from \mbox{\hyperlink{classcovarianceBase_ae0a231f87266048a3cd2e0032eaf0f30}{covariance\+Base}}.
+
+
+
+Definition at line \mbox{\hyperlink{covarianceXsec_8h_source_l00073}{73}} of file \mbox{\hyperlink{covarianceXsec_8h_source}{covariance\+Xsec.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00074\ \ \ \ \ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ std::vector<double>\ \mbox{\hyperlink{GetPenaltyTerm_8cpp_a35f9d8ea46badc9ea84d62feaa0e73df}{nominal}}(\mbox{\hyperlink{classcovarianceBase_ac5d922f1a4163b38ebc7a3ef21eec376}{\_fNumPar}});}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classcovarianceBase_ac5d922f1a4163b38ebc7a3ef21eec376}{\_fNumPar}};\ i++)\ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{GetPenaltyTerm_8cpp_a35f9d8ea46badc9ea84d62feaa0e73df}{nominal}}[i]\ =\ \mbox{\hyperlink{classcovarianceBase_a7578a2cc2e8e9100fad88310a824cb1c}{\_fPreFitValue}}.at(i);}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{GetPenaltyTerm_8cpp_a35f9d8ea46badc9ea84d62feaa0e73df}{nominal}};}
+\DoxyCodeLine{00080\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcovarianceXsec_a98c68c6c894132a984c6bdd90c3e85dd}\label{classcovarianceXsec_a98c68c6c894132a984c6bdd90c3e85dd}} 
+\index{covarianceXsec@{covarianceXsec}!GetNormParsFromDetID@{GetNormParsFromDetID}}
+\index{GetNormParsFromDetID@{GetNormParsFromDetID}!covarianceXsec@{covarianceXsec}}
+\doxysubsubsection{\texorpdfstring{GetNormParsFromDetID()}{GetNormParsFromDetID()}}
+{\footnotesize\ttfamily const std\+::vector$<$ \mbox{\hyperlink{structXsecNorms4}{Xsec\+Norms4}} $>$ covariance\+Xsec\+::\+Get\+Norm\+Pars\+From\+Det\+ID (\begin{DoxyParamCaption}\item[{const int}]{Det\+ID }\end{DoxyParamCaption})}
+
+
+
+DB Get norm/func parameters depending on given Det\+ID. 
+
+
+
+Definition at line \mbox{\hyperlink{covarianceXsec_8cpp_source_l00253}{253}} of file \mbox{\hyperlink{covarianceXsec_8cpp_source}{covariance\+Xsec.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00254\ \textcolor{comment}{//\ ********************************************}}
+\DoxyCodeLine{00255\ \ \ std::vector<XsecNorms4>\ returnVec;}
+\DoxyCodeLine{00256\ \ \ \textcolor{keywordtype}{int}\ norm\_counter\ =\ 0;}
+\DoxyCodeLine{00257\ \ \ \mbox{\hyperlink{classcovarianceXsec_a17c24905af91f1fc7b806cfc39e50035}{IterateOverParams}}(DetID,}
+\DoxyCodeLine{00258\ \ \ \ \ [\&](\textcolor{keywordtype}{int}\ i)\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classcovarianceXsec_a50cca3de3274be7a57d25cc1b454e890}{GetParamType}}(i)\ ==\ \mbox{\hyperlink{Structs_8h_affc27d8b7b82d3713f45af17873fde2fa085cb29127b1cf7b1ddd429ff4440b17}{kNorm}};\ \},\ \textcolor{comment}{//\ Filter\ condition}}
+\DoxyCodeLine{00259\ \ \ \ \ [\&](\textcolor{keyword}{auto})\ \{}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \mbox{\hyperlink{structXsecNorms4}{XsecNorms4}}\ Temp\ =\ \mbox{\hyperlink{classcovarianceXsec_acd6c2346a5b808c6917e4828bbb633f5}{NormParams}}[norm\_counter];}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ returnVec.push\_back(Temp);}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ norm\_counter++;}
+\DoxyCodeLine{00263\ \ \ \ \ \}}
+\DoxyCodeLine{00264\ \ \ );}
+\DoxyCodeLine{00265\ \ \ \textcolor{keywordflow}{return}\ returnVec;}
+\DoxyCodeLine{00266\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcovarianceXsec_a0103e8fe156dccedee05619697fe0467}\label{classcovarianceXsec_a0103e8fe156dccedee05619697fe0467}} 
+\index{covarianceXsec@{covarianceXsec}!GetNumParamsFromDetID@{GetNumParamsFromDetID}}
+\index{GetNumParamsFromDetID@{GetNumParamsFromDetID}!covarianceXsec@{covarianceXsec}}
+\doxysubsubsection{\texorpdfstring{GetNumParamsFromDetID()}{GetNumParamsFromDetID()}}
+{\footnotesize\ttfamily int covariance\+Xsec\+::\+Get\+Num\+Params\+From\+Det\+ID (\begin{DoxyParamCaption}\item[{const int}]{Det\+ID,  }\item[{const \mbox{\hyperlink{Structs_8h_affc27d8b7b82d3713f45af17873fde2f}{Syst\+Type}}}]{Type }\end{DoxyParamCaption})}
+
+
+
+DB Grab the number of parameters for the relevant Det\+ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Type} & Type of syst, for example k\+Norm, k\+Spline etc \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{covarianceXsec_8cpp_source_l00270}{270}} of file \mbox{\hyperlink{covarianceXsec_8cpp_source}{covariance\+Xsec.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00271\ \textcolor{comment}{//\ ********************************************}}
+\DoxyCodeLine{00272\ \ \ \textcolor{keywordtype}{int}\ returnVal\ =\ 0;}
+\DoxyCodeLine{00273\ \ \ \mbox{\hyperlink{classcovarianceXsec_a17c24905af91f1fc7b806cfc39e50035}{IterateOverParams}}(DetID,}
+\DoxyCodeLine{00274\ \ \ \ \ [\&](\textcolor{keywordtype}{int}\ i)\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classcovarianceXsec_a50cca3de3274be7a57d25cc1b454e890}{GetParamType}}(i)\ ==\ Type;\ \},\ \textcolor{comment}{//\ Filter\ condition}}
+\DoxyCodeLine{00275\ \ \ \ \ [\&](int)\ \{\ returnVal\ +=\ 1;\ \}\ \textcolor{comment}{//\ Action\ to\ perform\ if\ filter\ passes}}
+\DoxyCodeLine{00276\ \ \ );}
+\DoxyCodeLine{00277\ \ \ \textcolor{keywordflow}{return}\ returnVal;}
+\DoxyCodeLine{00278\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcovarianceXsec_a50cca3de3274be7a57d25cc1b454e890}\label{classcovarianceXsec_a50cca3de3274be7a57d25cc1b454e890}} 
+\index{covarianceXsec@{covarianceXsec}!GetParamType@{GetParamType}}
+\index{GetParamType@{GetParamType}!covarianceXsec@{covarianceXsec}}
+\doxysubsubsection{\texorpdfstring{GetParamType()}{GetParamType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Structs_8h_affc27d8b7b82d3713f45af17873fde2f}{Syst\+Type}} covariance\+Xsec\+::\+Get\+Param\+Type (\begin{DoxyParamCaption}\item[{const int}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns enum describing our param type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & parameter index \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{covarianceXsec_8h_source_l00030}{30}} of file \mbox{\hyperlink{covarianceXsec_8h_source}{covariance\+Xsec.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00030\ \{\textcolor{keywordflow}{return}\ \mbox{\hyperlink{classcovarianceXsec_aae3338ca71027adab7fdfd3e828c0f79}{\_fParamType}}[i];\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcovarianceXsec_a917350cc0ea76530145086b8943b0d23}\label{classcovarianceXsec_a917350cc0ea76530145086b8943b0d23}} 
+\index{covarianceXsec@{covarianceXsec}!GetParamTypeString@{GetParamTypeString}}
+\index{GetParamTypeString@{GetParamTypeString}!covarianceXsec@{covarianceXsec}}
+\doxysubsubsection{\texorpdfstring{GetParamTypeString()}{GetParamTypeString()}}
+{\footnotesize\ttfamily std\+::string covariance\+Xsec\+::\+Get\+Param\+Type\+String (\begin{DoxyParamCaption}\item[{const int}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ETA -\/ just return a string of \char`\"{}spline\char`\"{}, \char`\"{}norm\char`\"{} or \char`\"{}functional\char`\"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & parameter index \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{covarianceXsec_8h_source_l00027}{27}} of file \mbox{\hyperlink{covarianceXsec_8h_source}{covariance\+Xsec.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{Structs_8h_ad39c312dc44177340e2ebccd3d3f2d4c}{SystType\_ToString}}(\mbox{\hyperlink{classcovarianceXsec_aae3338ca71027adab7fdfd3e828c0f79}{\_fParamType}}[i]);\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcovarianceXsec_aad522479b06581729efd6c1cd12d11df}\label{classcovarianceXsec_aad522479b06581729efd6c1cd12d11df}} 
+\index{covarianceXsec@{covarianceXsec}!GetParDetID@{GetParDetID}}
+\index{GetParDetID@{GetParDetID}!covarianceXsec@{covarianceXsec}}
+\doxysubsubsection{\texorpdfstring{GetParDetID()}{GetParDetID()}}
+{\footnotesize\ttfamily int covariance\+Xsec\+::\+Get\+Par\+Det\+ID (\begin{DoxyParamCaption}\item[{const int}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ETA -\/ just return the int of the Det\+ID, this can be removed to do a string comp at some point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & parameter index \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{covarianceXsec_8h_source_l00024}{24}} of file \mbox{\hyperlink{covarianceXsec_8h_source}{covariance\+Xsec.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00024\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classcovarianceXsec_a183f01056fc0e9b42db202e944021332}{\_fDetID}}[i];\};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcovarianceXsec_aa5f13d2836d1de71dec80c0746fc05ae}\label{classcovarianceXsec_aa5f13d2836d1de71dec80c0746fc05ae}} 
+\index{covarianceXsec@{covarianceXsec}!GetParsIndexFromDetID@{GetParsIndexFromDetID}}
+\index{GetParsIndexFromDetID@{GetParsIndexFromDetID}!covarianceXsec@{covarianceXsec}}
+\doxysubsubsection{\texorpdfstring{GetParsIndexFromDetID()}{GetParsIndexFromDetID()}}
+{\footnotesize\ttfamily const std\+::vector$<$ int $>$ covariance\+Xsec\+::\+Get\+Pars\+Index\+From\+Det\+ID (\begin{DoxyParamCaption}\item[{const int}]{Det\+ID,  }\item[{const \mbox{\hyperlink{Structs_8h_affc27d8b7b82d3713f45af17873fde2f}{Syst\+Type}}}]{Type }\end{DoxyParamCaption})}
+
+
+
+DB Grab the parameter indices for the relevant Det\+ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Type} & Type of syst, for example k\+Norm, k\+Spline etc \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{covarianceXsec_8cpp_source_l00294}{294}} of file \mbox{\hyperlink{covarianceXsec_8cpp_source}{covariance\+Xsec.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00295\ \textcolor{comment}{//\ ********************************************}}
+\DoxyCodeLine{00296\ \ \ std::vector<int>\ returnVec;}
+\DoxyCodeLine{00297\ \ \ \mbox{\hyperlink{classcovarianceXsec_a17c24905af91f1fc7b806cfc39e50035}{IterateOverParams}}(DetID,}
+\DoxyCodeLine{00298\ \ \ \ \ [\&](\textcolor{keywordtype}{int}\ i)\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classcovarianceXsec_a50cca3de3274be7a57d25cc1b454e890}{GetParamType}}(i)\ ==\ Type;\ \},\ \textcolor{comment}{//\ Filter\ condition}}
+\DoxyCodeLine{00299\ \ \ \ \ [\&](\textcolor{keywordtype}{int}\ i)\ \{\ returnVec.push\_back(i);\ \}\ \textcolor{comment}{//\ Action\ to\ perform\ if\ filter\ passes}}
+\DoxyCodeLine{00300\ \ \ );}
+\DoxyCodeLine{00301\ \ \ \textcolor{keywordflow}{return}\ returnVec;}
+\DoxyCodeLine{00302\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcovarianceXsec_a86bd213e24e1c7b574d2b07c8c5c15b8}\label{classcovarianceXsec_a86bd213e24e1c7b574d2b07c8c5c15b8}} 
+\index{covarianceXsec@{covarianceXsec}!GetParsNamesFromDetID@{GetParsNamesFromDetID}}
+\index{GetParsNamesFromDetID@{GetParsNamesFromDetID}!covarianceXsec@{covarianceXsec}}
+\doxysubsubsection{\texorpdfstring{GetParsNamesFromDetID()}{GetParsNamesFromDetID()}}
+{\footnotesize\ttfamily const std\+::vector$<$ std\+::string $>$ covariance\+Xsec\+::\+Get\+Pars\+Names\+From\+Det\+ID (\begin{DoxyParamCaption}\item[{const int}]{Det\+ID,  }\item[{const \mbox{\hyperlink{Structs_8h_affc27d8b7b82d3713f45af17873fde2f}{Syst\+Type}}}]{Type }\end{DoxyParamCaption})}
+
+
+
+DB Grab the parameter names for the relevant Det\+ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Type} & Type of syst, for example k\+Norm, k\+Spline etc \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{covarianceXsec_8cpp_source_l00282}{282}} of file \mbox{\hyperlink{covarianceXsec_8cpp_source}{covariance\+Xsec.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00283\ \textcolor{comment}{//\ ********************************************}}
+\DoxyCodeLine{00284\ \ \ std::vector<std::string>\ returnVec;}
+\DoxyCodeLine{00285\ \ \ \mbox{\hyperlink{classcovarianceXsec_a17c24905af91f1fc7b806cfc39e50035}{IterateOverParams}}(DetID,}
+\DoxyCodeLine{00286\ \ \ \ \ [\&](\textcolor{keywordtype}{int}\ i)\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classcovarianceXsec_a50cca3de3274be7a57d25cc1b454e890}{GetParamType}}(i)\ ==\ Type;\ \},\ \textcolor{comment}{//\ Filter\ condition}}
+\DoxyCodeLine{00287\ \ \ \ \ [\&](\textcolor{keywordtype}{int}\ i)\ \{\ returnVec.push\_back(\mbox{\hyperlink{classcovarianceBase_a6a46b5fed3e7feb6e9e151e90927bdbc}{GetParFancyName}}(i));\ \}\ \textcolor{comment}{//\ Action\ to\ perform\ if\ filter\ passes}}
+\DoxyCodeLine{00288\ \ \ );}
+\DoxyCodeLine{00289\ \ \ \textcolor{keywordflow}{return}\ returnVec;}
+\DoxyCodeLine{00290\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcovarianceXsec_a6e7661f9bd67500b66c7499f776b594d}\label{classcovarianceXsec_a6e7661f9bd67500b66c7499f776b594d}} 
+\index{covarianceXsec@{covarianceXsec}!GetParSplineInterpolation@{GetParSplineInterpolation}}
+\index{GetParSplineInterpolation@{GetParSplineInterpolation}!covarianceXsec@{covarianceXsec}}
+\doxysubsubsection{\texorpdfstring{GetParSplineInterpolation()}{GetParSplineInterpolation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Structs_8h_a6720d732608767153550aebebcf8fbf4}{Spline\+Interpolation}} covariance\+Xsec\+::\+Get\+Par\+Spline\+Interpolation (\begin{DoxyParamCaption}\item[{const int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get interpolation type for a given parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & spline parameter index, not confuse with global index \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{covarianceXsec_8h_source_l00034}{34}} of file \mbox{\hyperlink{covarianceXsec_8h_source}{covariance\+Xsec.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00034\ \{\textcolor{keywordflow}{return}\ \mbox{\hyperlink{classcovarianceXsec_ae95bafab0c674dc838635aaeca40bc2c}{SplineParams}}.at(i).\_SplineInterpolationType;\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcovarianceXsec_a9ea6bd6b0e021f154ebd1f23605ff3e5}\label{classcovarianceXsec_a9ea6bd6b0e021f154ebd1f23605ff3e5}} 
+\index{covarianceXsec@{covarianceXsec}!GetParSplineKnotLowerBound@{GetParSplineKnotLowerBound}}
+\index{GetParSplineKnotLowerBound@{GetParSplineKnotLowerBound}!covarianceXsec@{covarianceXsec}}
+\doxysubsubsection{\texorpdfstring{GetParSplineKnotLowerBound()}{GetParSplineKnotLowerBound()}}
+{\footnotesize\ttfamily double covariance\+Xsec\+::\+Get\+Par\+Spline\+Knot\+Lower\+Bound (\begin{DoxyParamCaption}\item[{const int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+EM\+: value at which we cap spline knot weight. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & spline parameter index, not confuse with global index \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{covarianceXsec_8h_source_l00046}{46}} of file \mbox{\hyperlink{covarianceXsec_8h_source}{covariance\+Xsec.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00046\ \{\textcolor{keywordflow}{return}\ \mbox{\hyperlink{classcovarianceXsec_ae95bafab0c674dc838635aaeca40bc2c}{SplineParams}}.at(i).\_SplineKnotLowBound;\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcovarianceXsec_ac612a0f939f2f070906af574f98590d6}\label{classcovarianceXsec_ac612a0f939f2f070906af574f98590d6}} 
+\index{covarianceXsec@{covarianceXsec}!GetParSplineKnotUpperBound@{GetParSplineKnotUpperBound}}
+\index{GetParSplineKnotUpperBound@{GetParSplineKnotUpperBound}!covarianceXsec@{covarianceXsec}}
+\doxysubsubsection{\texorpdfstring{GetParSplineKnotUpperBound()}{GetParSplineKnotUpperBound()}}
+{\footnotesize\ttfamily double covariance\+Xsec\+::\+Get\+Par\+Spline\+Knot\+Upper\+Bound (\begin{DoxyParamCaption}\item[{const int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+EM\+: value at which we cap spline knot weight. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & spline parameter index, not confuse with global index \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{covarianceXsec_8h_source_l00043}{43}} of file \mbox{\hyperlink{covarianceXsec_8h_source}{covariance\+Xsec.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00043\ \{\textcolor{keywordflow}{return}\ \mbox{\hyperlink{classcovarianceXsec_ae95bafab0c674dc838635aaeca40bc2c}{SplineParams}}.at(i).\_SplineKnotUpBound;\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcovarianceXsec_adce4b39e20a140acd8314049e2cca05b}\label{classcovarianceXsec_adce4b39e20a140acd8314049e2cca05b}} 
+\index{covarianceXsec@{covarianceXsec}!GetParSplineName@{GetParSplineName}}
+\index{GetParSplineName@{GetParSplineName}!covarianceXsec@{covarianceXsec}}
+\doxysubsubsection{\texorpdfstring{GetParSplineName()}{GetParSplineName()}}
+{\footnotesize\ttfamily std\+::string covariance\+Xsec\+::\+Get\+Par\+Spline\+Name (\begin{DoxyParamCaption}\item[{const int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the name of the spline associated with the spline at index i. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & spline parameter index, not to be confused with global index \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{covarianceXsec_8h_source_l00037}{37}} of file \mbox{\hyperlink{covarianceXsec_8h_source}{covariance\+Xsec.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00037\ \{\textcolor{keywordflow}{return}\ \mbox{\hyperlink{classcovarianceXsec_a4d3074db3c9edb7465a4409abd9c91fc}{\_fSplineNames}}[i];\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcovarianceXsec_adb95a5704149a2c6d6573a711024e7c5}\label{classcovarianceXsec_adb95a5704149a2c6d6573a711024e7c5}} 
+\index{covarianceXsec@{covarianceXsec}!GetSplineFileParsNamesFromDetID@{GetSplineFileParsNamesFromDetID}}
+\index{GetSplineFileParsNamesFromDetID@{GetSplineFileParsNamesFromDetID}!covarianceXsec@{covarianceXsec}}
+\doxysubsubsection{\texorpdfstring{GetSplineFileParsNamesFromDetID()}{GetSplineFileParsNamesFromDetID()}}
+{\footnotesize\ttfamily const std\+::vector$<$ std\+::string $>$ covariance\+Xsec\+::\+Get\+Spline\+File\+Pars\+Names\+From\+Det\+ID (\begin{DoxyParamCaption}\item[{const int}]{Det\+ID }\end{DoxyParamCaption})}
+
+
+
+DB Get spline parameters depending on given Det\+ID. 
+
+\mbox{\Hypertarget{classcovarianceXsec_a63b4fb1e0caf3b71f372db7273c40c47}\label{classcovarianceXsec_a63b4fb1e0caf3b71f372db7273c40c47}} 
+\index{covarianceXsec@{covarianceXsec}!GetSplineModeVecFromDetID@{GetSplineModeVecFromDetID}}
+\index{GetSplineModeVecFromDetID@{GetSplineModeVecFromDetID}!covarianceXsec@{covarianceXsec}}
+\doxysubsubsection{\texorpdfstring{GetSplineModeVecFromDetID()}{GetSplineModeVecFromDetID()}}
+{\footnotesize\ttfamily const std\+::vector$<$ std\+::vector$<$ int $>$ $>$ covariance\+Xsec\+::\+Get\+Spline\+Mode\+Vec\+From\+Det\+ID (\begin{DoxyParamCaption}\item[{const int}]{Det\+ID }\end{DoxyParamCaption})}
+
+
+
+DB Grab the Spline Modes for the relevant Det\+ID. 
+
+
+
+Definition at line \mbox{\hyperlink{covarianceXsec_8cpp_source_l00126}{126}} of file \mbox{\hyperlink{covarianceXsec_8cpp_source}{covariance\+Xsec.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00127\ \textcolor{comment}{//\ ********************************************}}
+\DoxyCodeLine{00128\ \ \ std::vector<\ std::vector<int>\ >\ returnVec;}
+\DoxyCodeLine{00129\ \ \ \textcolor{comment}{//Need\ a\ counter\ or\ something\ to\ correctly\ get\ the\ index\ in\ \_fSplineModes\ since\ it's\ not\ of\ length\ nPars}}
+\DoxyCodeLine{00130\ \ \ \textcolor{comment}{//Should\ probably\ just\ make\ a\ std::map<std::string,\ int>\ for\ param\ name\ to\ FD\ spline\ index}}
+\DoxyCodeLine{00131\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&pair\ :\ \mbox{\hyperlink{classcovarianceXsec_adddfbaa235113603542826df331ed61e}{\_fSystToGlobalSystIndexMap}}[SystType::kSpline])\ \{}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keyword}{auto}\ \&SplineIndex\ =\ pair.first;}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keyword}{auto}\ \&SystIndex\ =\ pair.second;}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordflow}{if}\ ((\mbox{\hyperlink{classcovarianceXsec_aad522479b06581729efd6c1cd12d11df}{GetParDetID}}(SystIndex)\ \&\ DetID))\ \{\ \textcolor{comment}{//If\ parameter\ applies\ to\ required\ DetID}}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ returnVec.push\_back(\mbox{\hyperlink{classcovarianceXsec_ae95bafab0c674dc838635aaeca40bc2c}{SplineParams}}.at(SplineIndex).\_fSplineModes);}
+\DoxyCodeLine{00136\ \ \ \ \ \}}
+\DoxyCodeLine{00137\ \ \ \}}
+\DoxyCodeLine{00138\ \ \ \textcolor{keywordflow}{return}\ returnVec;}
+\DoxyCodeLine{00139\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcovarianceXsec_a7678bbdb59c36f032fb414d62928f47e}\label{classcovarianceXsec_a7678bbdb59c36f032fb414d62928f47e}} 
+\index{covarianceXsec@{covarianceXsec}!GetSplineParsNamesFromDetID@{GetSplineParsNamesFromDetID}}
+\index{GetSplineParsNamesFromDetID@{GetSplineParsNamesFromDetID}!covarianceXsec@{covarianceXsec}}
+\doxysubsubsection{\texorpdfstring{GetSplineParsNamesFromDetID()}{GetSplineParsNamesFromDetID()}}
+{\footnotesize\ttfamily const std\+::vector$<$ std\+::string $>$ covariance\+Xsec\+::\+Get\+Spline\+Pars\+Names\+From\+Det\+ID (\begin{DoxyParamCaption}\item[{const int}]{Det\+ID }\end{DoxyParamCaption})}
+
+
+
+DB Get spline parameters depending on given Det\+ID. 
+
+
+
+Definition at line \mbox{\hyperlink{covarianceXsec_8cpp_source_l00111}{111}} of file \mbox{\hyperlink{covarianceXsec_8cpp_source}{covariance\+Xsec.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00112\ \textcolor{comment}{//\ ********************************************}}
+\DoxyCodeLine{00113\ \ \ std::vector<std::string>\ returnVec;}
+\DoxyCodeLine{00114\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&pair\ :\ \mbox{\hyperlink{classcovarianceXsec_adddfbaa235113603542826df331ed61e}{\_fSystToGlobalSystIndexMap}}[SystType::kSpline])\ \{}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keyword}{auto}\ \&SplineIndex\ =\ pair.first;}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keyword}{auto}\ \&SystIndex\ =\ pair.second;}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordflow}{if}\ ((\mbox{\hyperlink{classcovarianceXsec_aad522479b06581729efd6c1cd12d11df}{GetParDetID}}(SystIndex)\ \&\ DetID\ ))\{}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ returnVec.push\_back(\mbox{\hyperlink{classcovarianceXsec_a4d3074db3c9edb7465a4409abd9c91fc}{\_fSplineNames}}.at(SplineIndex));}
+\DoxyCodeLine{00119\ \ \ \ \ \}}
+\DoxyCodeLine{00120\ \ \ \}}
+\DoxyCodeLine{00121\ \ \ \textcolor{keywordflow}{return}\ returnVec;}
+\DoxyCodeLine{00122\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcovarianceXsec_a0246245453554d222bb14cdaa53f014a}\label{classcovarianceXsec_a0246245453554d222bb14cdaa53f014a}} 
+\index{covarianceXsec@{covarianceXsec}!GetSystIndexFromDetID@{GetSystIndexFromDetID}}
+\index{GetSystIndexFromDetID@{GetSystIndexFromDetID}!covarianceXsec@{covarianceXsec}}
+\doxysubsubsection{\texorpdfstring{GetSystIndexFromDetID()}{GetSystIndexFromDetID()}}
+{\footnotesize\ttfamily const std\+::vector$<$ int $>$ covariance\+Xsec\+::\+Get\+Syst\+Index\+From\+Det\+ID (\begin{DoxyParamCaption}\item[{const int}]{Det\+ID,  }\item[{const \mbox{\hyperlink{Structs_8h_affc27d8b7b82d3713f45af17873fde2f}{Syst\+Type}}}]{Type }\end{DoxyParamCaption})}
+
+
+
+Grab the index of the syst relative to global numbering. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Type} & Type of syst, for example k\+Norm, k\+Spline etc \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{covarianceXsec_8cpp_source_l00214}{214}} of file \mbox{\hyperlink{covarianceXsec_8cpp_source}{covariance\+Xsec.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00215\ \textcolor{comment}{//\ ********************************************}}
+\DoxyCodeLine{00216\ \ \ std::vector<int>\ returnVec;}
+\DoxyCodeLine{00217\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&pair\ :\ \mbox{\hyperlink{classcovarianceXsec_adddfbaa235113603542826df331ed61e}{\_fSystToGlobalSystIndexMap}}[Type])\ \{}
+\DoxyCodeLine{00218\ \ \ \ \ \textcolor{keyword}{auto}\ \&SplineIndex\ =\ pair.first;}
+\DoxyCodeLine{00219\ \ \ \ \ \textcolor{keyword}{auto}\ \&SystIndex\ =\ pair.second;}
+\DoxyCodeLine{00220\ \ \ \ \ \textcolor{keywordflow}{if}\ ((\mbox{\hyperlink{classcovarianceXsec_aad522479b06581729efd6c1cd12d11df}{GetParDetID}}(SystIndex)\ \&\ DetID))\ \{\ \textcolor{comment}{//If\ parameter\ applies\ to\ required\ DetID}}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ returnVec.push\_back(SplineIndex);}
+\DoxyCodeLine{00222\ \ \ \ \ \}}
+\DoxyCodeLine{00223\ \ \ \}}
+\DoxyCodeLine{00224\ \ \ \textcolor{keywordflow}{return}\ returnVec;}
+\DoxyCodeLine{00225\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcovarianceXsec_a68938d9079d05782eb1f415a5204284c}\label{classcovarianceXsec_a68938d9079d05782eb1f415a5204284c}} 
+\index{covarianceXsec@{covarianceXsec}!GetXsecNorm@{GetXsecNorm}}
+\index{GetXsecNorm@{GetXsecNorm}!covarianceXsec@{covarianceXsec}}
+\doxysubsubsection{\texorpdfstring{GetXsecNorm()}{GetXsecNorm()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structXsecNorms4}{Xsec\+Norms4}} covariance\+Xsec\+::\+Get\+Xsec\+Norm (\begin{DoxyParamCaption}\item[{const YAML\+::\+Node \&}]{param,  }\item[{const int}]{Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Get Norm params. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & Yaml node describing param \\
+\hline
+{\em Index} & Global parameter index \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{covarianceXsec_8cpp_source_l00143}{143}} of file \mbox{\hyperlink{covarianceXsec_8cpp_source}{covariance\+Xsec.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00144\ \textcolor{comment}{//\ ********************************************}}
+\DoxyCodeLine{00145\ \ \ \mbox{\hyperlink{structXsecNorms4}{XsecNorms4}}\ norm;}
+\DoxyCodeLine{00146\ \ \ norm.\mbox{\hyperlink{structXsecNorms4_a848104ff97acc9a0df9861acc8615aa7}{name}}\ =\ \mbox{\hyperlink{classcovarianceBase_a6a46b5fed3e7feb6e9e151e90927bdbc}{GetParFancyName}}(Index);}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \ \ \textcolor{comment}{//\ ETA\ Empty\ DummyVector\ can\ be\ used\ to\ specify\ no\ cut\ for\ mode,\ target\ and\ neutrino\ flavour}}
+\DoxyCodeLine{00149\ \ \ \textcolor{comment}{//\ ETA\ Has\ to\ be\ of\ size\ 0\ to\ mean\ apply\ to\ all}}
+\DoxyCodeLine{00150\ \ \ std::vector<int>\ DummyModeVec;}
+\DoxyCodeLine{00151\ \ \ \textcolor{comment}{//Ultimately\ all\ this\ information\ ends\ up\ in\ the\ NormParams\ vector}}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \ \ \textcolor{comment}{//Copy\ the\ mode\ information\ into\ an\ XsecNorms4\ struct}}
+\DoxyCodeLine{00154\ \ \ norm.\mbox{\hyperlink{structXsecNorms4_ad0632d5a94a37ee5ce297698abadd844}{modes}}\ =\ GetFromManager<std::vector<int>>(param[\textcolor{stringliteral}{"{}Mode"{}}],\ DummyModeVec);}
+\DoxyCodeLine{00155\ \ \ norm.\mbox{\hyperlink{structXsecNorms4_afed4b95759559016df72bfed03763b6e}{pdgs}}\ =\ GetFromManager<std::vector<int>>(param[\textcolor{stringliteral}{"{}NeutrinoFlavour"{}}],\ DummyModeVec);}
+\DoxyCodeLine{00156\ \ \ norm.\mbox{\hyperlink{structXsecNorms4_ac2e3b749d0c629e425861d2f6ecf82b0}{preoscpdgs}}\ =\ GetFromManager<std::vector<int>>(param[\textcolor{stringliteral}{"{}NeutrinoFlavourUnosc"{}}],\ DummyModeVec);}
+\DoxyCodeLine{00157\ \ \ norm.\mbox{\hyperlink{structXsecNorms4_a0f6b21994200f446f21c42ec1cebf9bb}{targets}}\ =\ GetFromManager<std::vector<int>>(param[\textcolor{stringliteral}{"{}TargetNuclei"{}}],\ DummyModeVec);}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ \ \ \textcolor{comment}{//ETA\ -\/\ I\ think\ this\ can\ go\ in\ the\ norm\ parameters\ only\ if\ statement\ above}}
+\DoxyCodeLine{00160\ \ \ \textcolor{keywordtype}{int}\ NumKinematicCuts\ =\ 0;}
+\DoxyCodeLine{00161\ \ \ \textcolor{keywordflow}{if}(param[\textcolor{stringliteral}{"{}KinematicCuts"{}}])\{}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ \ \ \ \ NumKinematicCuts\ =\ int(param[\textcolor{stringliteral}{"{}KinematicCuts"{}}].\mbox{\hyperlink{GetPenaltyTerm_8cpp_a439227feff9d7f55384e8780cfc2eb82}{size}}());}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00165\ \ \ \ \ std::vector<std::string>\ TempKinematicStrings;}
+\DoxyCodeLine{00166\ \ \ \ \ std::vector<std::vector<double>>\ TempKinematicBounds;}
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{comment}{//First\ element\ of\ TempKinematicBounds\ is\ always\ -\/999,\ and\ size\ is\ then\ 3}}
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ KinVar\_i\ =\ 0\ ;\ KinVar\_i\ <\ NumKinematicCuts\ ;\ ++KinVar\_i)\{}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \textcolor{comment}{//ETA}}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \textcolor{comment}{//This\ is\ a\ bit\ messy,\ Kinematic\ cuts\ is\ a\ list\ of\ maps}}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (YAML::const\_iterator\ it\ =\ param[\textcolor{stringliteral}{"{}KinematicCuts"{}}][KinVar\_i].begin();it!=param[\textcolor{stringliteral}{"{}KinematicCuts"{}}][KinVar\_i].end();++it)\ \{}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ TempKinematicStrings.push\_back(it-\/>first.as<std::string>());}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ TempKinematicBounds.push\_back(it-\/>second.as<std::vector<double>>());}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ std::vector<double>\ bounds\ =\ it-\/>second.as<std::vector<double>>();}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00176\ \ \ \ \ \}}
+\DoxyCodeLine{00177\ \ \ \ \ norm.\mbox{\hyperlink{structXsecNorms4_a67a1d237f1fdb41a0c11898fada0f00c}{KinematicVarStr}}\ =\ TempKinematicStrings;}
+\DoxyCodeLine{00178\ \ \ \ \ norm.\mbox{\hyperlink{structXsecNorms4_a1723c13b5d04cff5ce48718cae5b6e14}{Selection}}\ =\ TempKinematicBounds;}
+\DoxyCodeLine{00179\ \ \ \}}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00181\ \ \ \textcolor{comment}{//Next\ ones\ are\ kinematic\ bounds\ on\ where\ normalisation\ parameter\ should\ apply\ (at\ the\ moment\ only\ etrue\ but\ hope\ to\ add\ q2}}
+\DoxyCodeLine{00182\ \ \ \textcolor{comment}{//We\ set\ a\ bool\ to\ see\ if\ any\ bounds\ exist\ so\ we\ can\ short-\/circuit\ checking\ all\ of\ them\ every\ step}}
+\DoxyCodeLine{00183\ \ \ \textcolor{keywordtype}{bool}\ HasKinBounds\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00185\ \ \ \textcolor{keywordflow}{if}(norm.\mbox{\hyperlink{structXsecNorms4_a67a1d237f1fdb41a0c11898fada0f00c}{KinematicVarStr}}.size()\ >\ 0)\ HasKinBounds\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00187\ \ \ norm.\mbox{\hyperlink{structXsecNorms4_ab5d815107d57b4f7ae22ccb3f2ae318b}{hasKinBounds}}\ =\ HasKinBounds;}
+\DoxyCodeLine{00188\ \ \ \textcolor{comment}{//End\ of\ kinematic\ bound\ checking}}
+\DoxyCodeLine{00189\ }
+\DoxyCodeLine{00190\ \ \ \textcolor{comment}{//\ Set\ the\ global\ parameter\ index\ of\ the\ normalisation\ parameter}}
+\DoxyCodeLine{00191\ \ \ norm.\mbox{\hyperlink{structXsecNorms4_a6c45244b8c559ada13c1c886dea37cc2}{index}}\ =\ Index;}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00193\ \ \ \textcolor{keywordflow}{return}\ norm;}
+\DoxyCodeLine{00194\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcovarianceXsec_acf3b87f72369d597d27d2a32fc01e779}\label{classcovarianceXsec_acf3b87f72369d597d27d2a32fc01e779}} 
+\index{covarianceXsec@{covarianceXsec}!GetXsecSpline@{GetXsecSpline}}
+\index{GetXsecSpline@{GetXsecSpline}!covarianceXsec@{covarianceXsec}}
+\doxysubsubsection{\texorpdfstring{GetXsecSpline()}{GetXsecSpline()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structXsecSplines1}{Xsec\+Splines1}} covariance\+Xsec\+::\+Get\+Xsec\+Spline (\begin{DoxyParamCaption}\item[{const YAML\+::\+Node \&}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Get Spline params. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em param} & Yaml node describing param \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{covarianceXsec_8cpp_source_l00229}{229}} of file \mbox{\hyperlink{covarianceXsec_8cpp_source}{covariance\+Xsec.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00230\ \textcolor{comment}{//\ ********************************************}}
+\DoxyCodeLine{00231\ \ \ \mbox{\hyperlink{structXsecSplines1}{XsecSplines1}}\ Spline;}
+\DoxyCodeLine{00232\ }
+\DoxyCodeLine{00233\ \ \ \textcolor{comment}{//Now\ get\ the\ Spline\ interpolation\ type}}
+\DoxyCodeLine{00234\ \ \ \textcolor{keywordflow}{if}\ (param[\textcolor{stringliteral}{"{}SplineInformation"{}}][\textcolor{stringliteral}{"{}InterpolationType"{}}])\{}
+\DoxyCodeLine{00235\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ InterpType\ =\ 0;\ InterpType\ <\ \mbox{\hyperlink{Structs_8h_a6720d732608767153550aebebcf8fbf4a9e1a345912f2baebd863ab7d40c9ab7b}{kSplineInterpolations}}\ ;\ ++InterpType)\{}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \textcolor{keywordflow}{if}(param[\textcolor{stringliteral}{"{}SplineInformation"{}}][\textcolor{stringliteral}{"{}InterpolationType"{}}].as<std::string>()\ ==\ \mbox{\hyperlink{Structs_8h_a2d969ce667e41bd2492cff1775456837}{SplineInterpolation\_ToString}}(\mbox{\hyperlink{Structs_8h_a6720d732608767153550aebebcf8fbf4}{SplineInterpolation}}(InterpType)))}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ Spline.\mbox{\hyperlink{structXsecSplines1_aaa0e82ade2dbe697f625c06d9c79cffb}{\_SplineInterpolationType}}\ =\ \mbox{\hyperlink{Structs_8h_a6720d732608767153550aebebcf8fbf4}{SplineInterpolation}}(InterpType);}
+\DoxyCodeLine{00238\ \ \ \ \ \}}
+\DoxyCodeLine{00239\ \ \ \}\ \textcolor{keywordflow}{else}\ \{\ \textcolor{comment}{//KS:\ By\ default\ use\ TSpline3}}
+\DoxyCodeLine{00240\ \ \ \ \ Spline.\mbox{\hyperlink{structXsecSplines1_aaa0e82ade2dbe697f625c06d9c79cffb}{\_SplineInterpolationType}}\ =\ \mbox{\hyperlink{Structs_8h_a6720d732608767153550aebebcf8fbf4a56c886e7b34c938027a7140748999c8a}{kTSpline3}};}
+\DoxyCodeLine{00241\ \ \ \}}
+\DoxyCodeLine{00242\ \ \ Spline.\mbox{\hyperlink{structXsecSplines1_aa253e0c9ad458756613665a5e28e8f3c}{\_SplineKnotUpBound}}\ =\ GetFromManager<double>(param[\textcolor{stringliteral}{"{}SplineInformation"{}}][\textcolor{stringliteral}{"{}SplineKnotUpBound"{}}],\ 9999);}
+\DoxyCodeLine{00243\ \ \ Spline.\mbox{\hyperlink{structXsecSplines1_a44d06d261a524bf6d7e1b3e2b3ae08c0}{\_SplineKnotLowBound}}\ =\ GetFromManager<double>(param[\textcolor{stringliteral}{"{}SplineInformation"{}}][\textcolor{stringliteral}{"{}SplineKnotLowBound"{}}],\ -\/9999);}
+\DoxyCodeLine{00244\ }
+\DoxyCodeLine{00245\ \ \ \textcolor{comment}{//If\ there\ is\ no\ mode\ information\ given\ then\ this\ will\ be\ an\ empty\ vector}}
+\DoxyCodeLine{00246\ \ \ Spline.\mbox{\hyperlink{structXsecSplines1_a70fd38fe1866c2672c4d733d994886c9}{\_fSplineModes}}\ =\ \mbox{\hyperlink{YamlHelper_8h_a1a6adcb8b24bfbdcb936ced6812e1b0c}{GetFromManager}}(param[\textcolor{stringliteral}{"{}SplineInformation"{}}][\textcolor{stringliteral}{"{}Mode"{}}],\ std::vector<int>());}
+\DoxyCodeLine{00247\ }
+\DoxyCodeLine{00248\ \ \ \textcolor{keywordflow}{return}\ Spline;}
+\DoxyCodeLine{00249\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcovarianceXsec_aea65a8b1ad6399f0b9f356810249bfd1}\label{classcovarianceXsec_aea65a8b1ad6399f0b9f356810249bfd1}} 
+\index{covarianceXsec@{covarianceXsec}!initParams@{initParams}}
+\index{initParams@{initParams}!covarianceXsec@{covarianceXsec}}
+\doxysubsubsection{\texorpdfstring{initParams()}{initParams()}}
+{\footnotesize\ttfamily void covariance\+Xsec\+::init\+Params (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Initializes the systematic parameters from the configuration file. This function loads parameters like normalizations and splines from the provided YAML file. 
+
+\begin{DoxyNote}{Note}
+This is used internally during the object\textquotesingle{}s initialization process. 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{covarianceXsec_8cpp_source_l00316}{316}} of file \mbox{\hyperlink{covarianceXsec_8cpp_source}{covariance\+Xsec.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00317\ \textcolor{comment}{//\ ********************************************}}
+\DoxyCodeLine{00318\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classcovarianceBase_ac5d922f1a4163b38ebc7a3ef21eec376}{\_fNumPar}};\ ++i)\ \{}
+\DoxyCodeLine{00319\ \ \ \ \ \textcolor{comment}{//ETA\ -\/\ set\ the\ name\ to\ be\ xsec\_\%\ as\ this\ is\ what\ ProcessorMCMC\ expects}}
+\DoxyCodeLine{00320\ \ \ \ \ \mbox{\hyperlink{classcovarianceBase_a3e502d80fd2c30a7da4fe75a3e05b0da}{\_fNames}}[i]\ =\ \textcolor{stringliteral}{"{}xsec\_"{}}+std::to\_string(i);}
+\DoxyCodeLine{00321\ }
+\DoxyCodeLine{00322\ \ \ \ \ \textcolor{comment}{//\ Set\ covarianceBase\ parameters\ (Curr\ =\ current,\ Prop\ =\ proposed,\ Sigma\ =\ step)}}
+\DoxyCodeLine{00323\ \ \ \ \ \mbox{\hyperlink{classcovarianceBase_ae70f51df3976975b2dc78fd3bfc28b65}{\_fCurrVal}}[i]\ =\ \mbox{\hyperlink{classcovarianceBase_a7578a2cc2e8e9100fad88310a824cb1c}{\_fPreFitValue}}[i];}
+\DoxyCodeLine{00324\ \ \ \ \ \mbox{\hyperlink{classcovarianceBase_a12f0eb31a5ef48b014baa11d4ab919e9}{\_fPropVal}}[i]\ =\ \mbox{\hyperlink{classcovarianceBase_ae70f51df3976975b2dc78fd3bfc28b65}{\_fCurrVal}}[i];}
+\DoxyCodeLine{00325\ \ \ \}}
+\DoxyCodeLine{00326\ \ \ \textcolor{comment}{//DB\ Set\ Individual\ Step\ scale\ for\ PCA\ parameters\ to\ the\ LastPCAdpar\ fIndivStepScale\ because\ the\ step\ scale\ for\ those\ parameters\ is\ set\ by\ 'eigen\_values[i]'\ but\ needs\ an\ overall\ step\ scale}}
+\DoxyCodeLine{00327\ \ \ \textcolor{comment}{//\ \ \ However,\ individual\ step\ scale\ for\ non-\/PCA\ parameters\ needs\ to\ be\ set\ correctly}}
+\DoxyCodeLine{00328\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classcovarianceBase_ab4b7f96d3e977a0b3307ceecbd0baeb4}{pca}})\ \{}
+\DoxyCodeLine{00329\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ \mbox{\hyperlink{classcovarianceBase_abba75182305d556818c76974a054a17d}{FirstPCAdpar}};\ i\ <=\ \mbox{\hyperlink{classcovarianceBase_a5ebdc744b733656972a15f1657915a3f}{LastPCAdpar}};\ i++)\ \{}
+\DoxyCodeLine{00330\ \ \ \ \ \ \ \mbox{\hyperlink{classcovarianceBase_a3cda39026e336a49cef482efd4062561}{\_fIndivStepScale}}[i]\ =\ \mbox{\hyperlink{classcovarianceBase_a3cda39026e336a49cef482efd4062561}{\_fIndivStepScale}}[\mbox{\hyperlink{classcovarianceBase_a5ebdc744b733656972a15f1657915a3f}{LastPCAdpar}}-\/1];}
+\DoxyCodeLine{00331\ \ \ \ \ \}}
+\DoxyCodeLine{00332\ \ \ \}}
+\DoxyCodeLine{00333\ \ \ \mbox{\hyperlink{classcovarianceBase_a3432b7a9acc1243b8bdb17ec0b40d195}{randomize}}();}
+\DoxyCodeLine{00334\ \ \ \textcolor{comment}{//KS:\ Transfer\ the\ starting\ parameters\ to\ the\ PCA\ basis,\ you\ don't\ want\ to\ start\ with\ zero..}}
+\DoxyCodeLine{00335\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classcovarianceBase_ab4b7f96d3e977a0b3307ceecbd0baeb4}{pca}})}
+\DoxyCodeLine{00336\ \ \ \{}
+\DoxyCodeLine{00337\ \ \ \ \ \mbox{\hyperlink{classcovarianceBase_a651f5ecd8973918d5683606a607fa88c}{TransferToPCA}}();}
+\DoxyCodeLine{00338\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classcovarianceBase_ac57285a48d41ef764b4c659959a36c2d}{\_fNumParPCA}};\ ++i)\ \{}
+\DoxyCodeLine{00339\ \ \ \ \ \ \ \mbox{\hyperlink{classcovarianceBase_ae6aada94037640a68e3f37898f276019}{\_fPreFitValue\_PCA}}[i]\ =\ \mbox{\hyperlink{classcovarianceBase_aa96f87ab90dc26fc1b5e157149b9dfd3}{fParCurr\_PCA}}(i);}
+\DoxyCodeLine{00340\ \ \ \ \ \}}
+\DoxyCodeLine{00341\ \ \ \}}
+\DoxyCodeLine{00342\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcovarianceXsec_a90bd7a32f16efc88c070e57fabafd13b}\label{classcovarianceXsec_a90bd7a32f16efc88c070e57fabafd13b}} 
+\index{covarianceXsec@{covarianceXsec}!InitXsecFromConfig@{InitXsecFromConfig}}
+\index{InitXsecFromConfig@{InitXsecFromConfig}!covarianceXsec@{covarianceXsec}}
+\doxysubsubsection{\texorpdfstring{InitXsecFromConfig()}{InitXsecFromConfig()}}
+{\footnotesize\ttfamily void covariance\+Xsec\+::\+Init\+Xsec\+From\+Config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Parses the YAML configuration to set up cross-\/section parameters. The YAML file defines the types of systematic errors, interpolation types, and bounds for splines. 
+
+
+
+Definition at line \mbox{\hyperlink{covarianceXsec_8cpp_source_l00026}{26}} of file \mbox{\hyperlink{covarianceXsec_8cpp_source}{covariance\+Xsec.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00027\ \textcolor{comment}{//\ ********************************************}}
+\DoxyCodeLine{00028\ \ \ \mbox{\hyperlink{classcovarianceXsec_adddfbaa235113603542826df331ed61e}{\_fSystToGlobalSystIndexMap}}.resize(SystType::kSystTypes);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \mbox{\hyperlink{classcovarianceXsec_a183f01056fc0e9b42db202e944021332}{\_fDetID}}\ =\ std::vector<int>(\mbox{\hyperlink{classcovarianceBase_ac5d922f1a4163b38ebc7a3ef21eec376}{\_fNumPar}});}
+\DoxyCodeLine{00031\ \ \ \mbox{\hyperlink{classcovarianceXsec_aae3338ca71027adab7fdfd3e828c0f79}{\_fParamType}}\ =\ std::vector<SystType>(\mbox{\hyperlink{classcovarianceBase_ac5d922f1a4163b38ebc7a3ef21eec376}{\_fNumPar}});}
+\DoxyCodeLine{00032\ \ \ \mbox{\hyperlink{classcovarianceXsec_a47cd1802e0dac0c22c8c16f214272c34}{\_ParameterGroup}}\ =\ std::vector<std::string>(\mbox{\hyperlink{classcovarianceBase_ac5d922f1a4163b38ebc7a3ef21eec376}{\_fNumPar}});}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \textcolor{comment}{//KS:\ We\ know\ at\ most\ how\ params\ we\ expect\ so\ reserve\ memory\ for\ max\ possible\ params.\ Later\ we\ will\ shrink\ to\ size\ to\ not\ waste\ memory.\ Reserving\ means\ slightly\ faster\ loading\ and\ possible\ less\ memory\ fragmentation.}}
+\DoxyCodeLine{00035\ \ \ \mbox{\hyperlink{classcovarianceXsec_acd6c2346a5b808c6917e4828bbb633f5}{NormParams}}.reserve(\mbox{\hyperlink{classcovarianceBase_ac5d922f1a4163b38ebc7a3ef21eec376}{\_fNumPar}});}
+\DoxyCodeLine{00036\ \ \ \mbox{\hyperlink{classcovarianceXsec_ae95bafab0c674dc838635aaeca40bc2c}{SplineParams}}.reserve(\mbox{\hyperlink{classcovarianceBase_ac5d922f1a4163b38ebc7a3ef21eec376}{\_fNumPar}});}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \textcolor{keywordtype}{int}\ i\ =\ 0;}
+\DoxyCodeLine{00039\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ ParamCounter[SystType::kSystTypes]\ =\ \{0\};}
+\DoxyCodeLine{00040\ \ \ \textcolor{comment}{//ETA\ -\/\ read\ in\ the\ systematics.\ Would\ be\ good\ to\ add\ in\ some\ checks\ to\ make\ sure}}
+\DoxyCodeLine{00041\ \ \ \textcolor{comment}{//that\ there\ are\ the\ correct\ number\ of\ entries\ i.e.\ are\ the\ \_fNumPars\ for\ Names,}}
+\DoxyCodeLine{00042\ \ \ \textcolor{comment}{//PreFitValues\ etc\ etc.}}
+\DoxyCodeLine{00043\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \textcolor{keyword}{const}\ \&param\ :\ \mbox{\hyperlink{classcovarianceBase_a933ff3dc0af99629ba3582a5d9d89d23}{\_fYAMLDoc}}[\textcolor{stringliteral}{"{}Systematics"{}}])}
+\DoxyCodeLine{00044\ \ \ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{classcovarianceXsec_a183f01056fc0e9b42db202e944021332}{\_fDetID}}[i]\ =\ (param[\textcolor{stringliteral}{"{}Systematic"{}}][\textcolor{stringliteral}{"{}DetID"{}}].as<\textcolor{keywordtype}{int}>());}
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{classcovarianceXsec_a47cd1802e0dac0c22c8c16f214272c34}{\_ParameterGroup}}[i]\ =\ (param[\textcolor{stringliteral}{"{}Systematic"{}}][\textcolor{stringliteral}{"{}ParameterGroup"{}}].as<std::string>());}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{comment}{//Fill\ the\ map\ to\ get\ the\ correlations\ later\ as\ well}}
+\DoxyCodeLine{00049\ \ \ \ \ std::string\ ParamType\ =\ param[\textcolor{stringliteral}{"{}Systematic"{}}][\textcolor{stringliteral}{"{}Type"{}}].as<std::string>();}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{comment}{//Now\ load\ in\ variables\ for\ spline\ systematics\ only}}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordflow}{if}\ (ParamType.find(\mbox{\hyperlink{Structs_8h_ad39c312dc44177340e2ebccd3d3f2d4c}{SystType\_ToString}}(SystType::kSpline))\ !=\ std::string::npos)}
+\DoxyCodeLine{00052\ \ \ \ \ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \textcolor{comment}{//Set\ param\ type}}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \mbox{\hyperlink{classcovarianceXsec_aae3338ca71027adab7fdfd3e828c0f79}{\_fParamType}}[i]\ =\ SystType::kSpline;}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \textcolor{comment}{//\ Fill\ Spline\ info}}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \mbox{\hyperlink{classcovarianceXsec_ae95bafab0c674dc838635aaeca40bc2c}{SplineParams}}.push\_back(\mbox{\hyperlink{classcovarianceXsec_acf3b87f72369d597d27d2a32fc01e779}{GetXsecSpline}}(param[\textcolor{stringliteral}{"{}Systematic"{}}]));}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (param[\textcolor{stringliteral}{"{}Systematic"{}}][\textcolor{stringliteral}{"{}SplineInformation"{}}][\textcolor{stringliteral}{"{}SplineName"{}}])\ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcovarianceXsec_a4d3074db3c9edb7465a4409abd9c91fc}{\_fSplineNames}}.push\_back(param[\textcolor{stringliteral}{"{}Systematic"{}}][\textcolor{stringliteral}{"{}SplineInformation"{}}][\textcolor{stringliteral}{"{}SplineName"{}}].as<std::string>());}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \textcolor{comment}{//Insert\ the\ mapping\ from\ the\ spline\ index\ i.e.\ the\ length\ of\ \_fSplineNames\ etc}}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \textcolor{comment}{//to\ the\ Systematic\ index\ i.e.\ the\ counter\ for\ things\ like\ \_fDetID\ and\ \_fDetID}}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \mbox{\hyperlink{classcovarianceXsec_adddfbaa235113603542826df331ed61e}{\_fSystToGlobalSystIndexMap}}[SystType::kSpline].insert(std::make\_pair(ParamCounter[SystType::kSpline],\ i));}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ ParamCounter[SystType::kSpline]++;}
+\DoxyCodeLine{00066\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(param[\textcolor{stringliteral}{"{}Systematic"{}}][\textcolor{stringliteral}{"{}Type"{}}].as<std::string>()\ ==\ \mbox{\hyperlink{Structs_8h_ad39c312dc44177340e2ebccd3d3f2d4c}{SystType\_ToString}}(SystType::kNorm))\ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \mbox{\hyperlink{classcovarianceXsec_aae3338ca71027adab7fdfd3e828c0f79}{\_fParamType}}[i]\ =\ SystType::kNorm;}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \mbox{\hyperlink{classcovarianceXsec_acd6c2346a5b808c6917e4828bbb633f5}{NormParams}}.push\_back(\mbox{\hyperlink{classcovarianceXsec_a68938d9079d05782eb1f415a5204284c}{GetXsecNorm}}(param[\textcolor{stringliteral}{"{}Systematic"{}}],\ i));}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \mbox{\hyperlink{classcovarianceXsec_adddfbaa235113603542826df331ed61e}{\_fSystToGlobalSystIndexMap}}[SystType::kNorm].insert(std::make\_pair(ParamCounter[SystType::kNorm],\ i));}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ ParamCounter[SystType::kNorm]++;}
+\DoxyCodeLine{00071\ \ \ \ \ \}}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(param[\textcolor{stringliteral}{"{}Systematic"{}}][\textcolor{stringliteral}{"{}Type"{}}].as<std::string>()\ ==\ \mbox{\hyperlink{Structs_8h_ad39c312dc44177340e2ebccd3d3f2d4c}{SystType\_ToString}}(SystType::kFunc))\{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \mbox{\hyperlink{classcovarianceXsec_aae3338ca71027adab7fdfd3e828c0f79}{\_fParamType}}[i]\ =\ SystType::kFunc;}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \mbox{\hyperlink{classcovarianceXsec_adddfbaa235113603542826df331ed61e}{\_fSystToGlobalSystIndexMap}}[SystType::kFunc].insert(std::make\_pair(ParamCounter[SystType::kFunc],\ i));}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ ParamCounter[SystType::kFunc]++;}
+\DoxyCodeLine{00076\ \ \ \ \ \}}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Given\ unrecognised\ systematic\ type:\ \{\}"{}},\ param[\textcolor{stringliteral}{"{}Systematic"{}}][\textcolor{stringliteral}{"{}Type"{}}].as<std::string>());}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ std::string\ expectedTypes\ =\ \textcolor{stringliteral}{"{}Expecting\ "{}};}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ s\ =\ 0;\ s\ <\ SystType::kSystTypes;\ ++s)\ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (s\ >\ 0)\ expectedTypes\ +=\ \textcolor{stringliteral}{"{},\ "{}};}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ expectedTypes\ +=\ \mbox{\hyperlink{Structs_8h_ad39c312dc44177340e2ebccd3d3f2d4c}{SystType\_ToString}}(\textcolor{keyword}{static\_cast<}\mbox{\hyperlink{Structs_8h_affc27d8b7b82d3713f45af17873fde2f}{SystType}}\textcolor{keyword}{>}(s))\ +\ \textcolor{stringliteral}{"{}\(\backslash\)"{}"{}};}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ expectedTypes\ +=\ \textcolor{stringliteral}{"{}."{}};}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(expectedTypes);}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_,\ \_\_LINE\_\_);}
+\DoxyCodeLine{00087\ \ \ \ \ \}}
+\DoxyCodeLine{00088\ \ \ \ \ i++;}
+\DoxyCodeLine{00089\ \ \ \}}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \textcolor{comment}{//Add\ a\ sanity\ check,}}
+\DoxyCodeLine{00092\ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classcovarianceXsec_a4d3074db3c9edb7465a4409abd9c91fc}{\_fSplineNames}}.size()\ !=\ ParamCounter[SystType::kSpline])\{}
+\DoxyCodeLine{00093\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}\_fSplineNames\ is\ of\ size\ \{\}\ but\ found\ \{\}\ spline\ parameters"{}},\ \mbox{\hyperlink{classcovarianceXsec_a4d3074db3c9edb7465a4409abd9c91fc}{\_fSplineNames}}.size(),\ ParamCounter[SystType::kSpline]);}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_,\ \_\_LINE\_\_);}
+\DoxyCodeLine{00095\ \ \ \}}
+\DoxyCodeLine{00096\ \ \ \textcolor{comment}{//KS\ We\ resized\ them\ above\ to\ all\ params\ to\ fight\ memory\ fragmentation,\ now\ let's\ resize\ to\ fit\ only\ allocated\ memory\ to\ save\ RAM}}
+\DoxyCodeLine{00097\ \ \ \mbox{\hyperlink{classcovarianceXsec_acd6c2346a5b808c6917e4828bbb633f5}{NormParams}}.shrink\_to\_fit();}
+\DoxyCodeLine{00098\ \ \ \mbox{\hyperlink{classcovarianceXsec_ae95bafab0c674dc838635aaeca40bc2c}{SplineParams}}.shrink\_to\_fit();}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00101\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcovarianceXsec_a5dc8900054a498107e39cc41641879a8}\label{classcovarianceXsec_a5dc8900054a498107e39cc41641879a8}} 
+\index{covarianceXsec@{covarianceXsec}!IsParFromGroup@{IsParFromGroup}}
+\index{IsParFromGroup@{IsParFromGroup}!covarianceXsec@{covarianceXsec}}
+\doxysubsubsection{\texorpdfstring{IsParFromGroup()}{IsParFromGroup()}}
+{\footnotesize\ttfamily bool covariance\+Xsec\+::\+Is\+Par\+From\+Group (\begin{DoxyParamCaption}\item[{const int}]{i,  }\item[{const std\+::string \&}]{Group }\end{DoxyParamCaption})}
+
+
+
+Checks if parameter belongs to a given group. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & parameter index \\
+\hline
+{\em Group} & name of group, like Xsec or Flux \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool telling whether param is part of group 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{covarianceXsec_8cpp_source_l00516}{516}} of file \mbox{\hyperlink{covarianceXsec_8cpp_source}{covariance\+Xsec.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00516\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00517\ \textcolor{comment}{//\ ********************************************}}
+\DoxyCodeLine{00518\ }
+\DoxyCodeLine{00519\ \ \ \textcolor{keywordflow}{if}(Group\ ==\ \mbox{\hyperlink{classcovarianceXsec_a47cd1802e0dac0c22c8c16f214272c34}{\_ParameterGroup}}[i])\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00520\ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00521\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcovarianceXsec_a17c24905af91f1fc7b806cfc39e50035}\label{classcovarianceXsec_a17c24905af91f1fc7b806cfc39e50035}} 
+\index{covarianceXsec@{covarianceXsec}!IterateOverParams@{IterateOverParams}}
+\index{IterateOverParams@{IterateOverParams}!covarianceXsec@{covarianceXsec}}
+\doxysubsubsection{\texorpdfstring{IterateOverParams()}{IterateOverParams()}}
+{\footnotesize\ttfamily template$<$typename Filter\+Func , typename Action\+Func $>$ \\
+void covariance\+Xsec\+::\+Iterate\+Over\+Params (\begin{DoxyParamCaption}\item[{const int}]{Det\+ID,  }\item[{Filter\+Func}]{filter,  }\item[{Action\+Func}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Iterates over parameters and applies a filter and action function. 
+
+This template function provides a way to iterate over parameters associated with a specific Detector ID (Det\+ID). It applies a filter function to determine which parameters to process and an action function to define what to do with the selected parameters.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Filter\+Func} & The type of the filter function used to determine which parameters to include. \\
+\hline
+{\em Action\+Func} & The type of the action function applied to each selected parameter. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em Det\+ID} & The Detector ID used to filter parameters. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{covarianceXsec_8cpp_source_l00306}{306}} of file \mbox{\hyperlink{covarianceXsec_8cpp_source}{covariance\+Xsec.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00307\ \textcolor{comment}{//\ ********************************************}}
+\DoxyCodeLine{00308\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classcovarianceBase_ac5d922f1a4163b38ebc7a3ef21eec376}{\_fNumPar}};\ ++i)\ \{}
+\DoxyCodeLine{00309\ \ \ \ \ \textcolor{keywordflow}{if}\ ((\mbox{\hyperlink{classcovarianceXsec_aad522479b06581729efd6c1cd12d11df}{GetParDetID}}(i)\ \&\ DetID)\ \&\&\ filter(i))\ \{\ \textcolor{comment}{//\ Common\ filter\ logic}}
+\DoxyCodeLine{00310\ \ \ \ \ \ \ action(i);\ \textcolor{comment}{//\ Specific\ action\ for\ each\ function}}
+\DoxyCodeLine{00311\ \ \ \ \ \}}
+\DoxyCodeLine{00312\ \ \ \}}
+\DoxyCodeLine{00313\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcovarianceXsec_ade0e8f83dcf75c50e6dad08ab6715093}\label{classcovarianceXsec_ade0e8f83dcf75c50e6dad08ab6715093}} 
+\index{covarianceXsec@{covarianceXsec}!Print@{Print}}
+\index{Print@{Print}!covarianceXsec@{covarianceXsec}}
+\doxysubsubsection{\texorpdfstring{Print()}{Print()}}
+{\footnotesize\ttfamily void covariance\+Xsec\+::\+Print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Print information about the whole object once it is set. 
+
+
+
+Definition at line \mbox{\hyperlink{covarianceXsec_8cpp_source_l00346}{346}} of file \mbox{\hyperlink{covarianceXsec_8cpp_source}{covariance\+Xsec.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00346\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00347\ \textcolor{comment}{//\ ********************************************}}
+\DoxyCodeLine{00348\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#"{}});}
+\DoxyCodeLine{00349\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Printing\ covarianceXsec:"{}});}
+\DoxyCodeLine{00350\ }
+\DoxyCodeLine{00351\ \ \ \mbox{\hyperlink{classcovarianceXsec_a41d7f1b1010bddd3e938eb589a089593}{PrintGlobablInfo}}();}
+\DoxyCodeLine{00352\ }
+\DoxyCodeLine{00353\ \ \ \mbox{\hyperlink{classcovarianceXsec_a8b408060d825769eec6c8e4594397ec8}{PrintNormParams}}();}
+\DoxyCodeLine{00354\ }
+\DoxyCodeLine{00355\ \ \ \mbox{\hyperlink{classcovarianceXsec_a02678dad88cf9dafb7d001208f8b0348}{PrintSplineParams}}();}
+\DoxyCodeLine{00356\ }
+\DoxyCodeLine{00357\ \ \ \mbox{\hyperlink{classcovarianceXsec_a36b690efce9b6d073482e461b350871f}{PrintFunctionalParams}}();}
+\DoxyCodeLine{00358\ }
+\DoxyCodeLine{00359\ \ \ \mbox{\hyperlink{classcovarianceXsec_ae62615b039cb1e1510934406200bde3a}{PrintParameterGroups}}();}
+\DoxyCodeLine{00360\ }
+\DoxyCodeLine{00361\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Finished"{}});}
+\DoxyCodeLine{00362\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#"{}});}
+\DoxyCodeLine{00363\ }
+\DoxyCodeLine{00364\ \ \ \mbox{\hyperlink{classcovarianceXsec_a688e670224e9e1fac3d6de97a2016f1a}{CheckCorrectInitialisation}}();}
+\DoxyCodeLine{00365\ \}\ \textcolor{comment}{//\ End}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcovarianceXsec_a36b690efce9b6d073482e461b350871f}\label{classcovarianceXsec_a36b690efce9b6d073482e461b350871f}} 
+\index{covarianceXsec@{covarianceXsec}!PrintFunctionalParams@{PrintFunctionalParams}}
+\index{PrintFunctionalParams@{PrintFunctionalParams}!covarianceXsec@{covarianceXsec}}
+\doxysubsubsection{\texorpdfstring{PrintFunctionalParams()}{PrintFunctionalParams()}}
+{\footnotesize\ttfamily void covariance\+Xsec\+::\+Print\+Functional\+Params (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Prints functional parameters. 
+
+
+
+Definition at line \mbox{\hyperlink{covarianceXsec_8cpp_source_l00444}{444}} of file \mbox{\hyperlink{covarianceXsec_8cpp_source}{covariance\+Xsec.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00444\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00445\ \textcolor{comment}{//\ ********************************************}}
+\DoxyCodeLine{00446\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Functional\ parameters:\ \{\}"{}},\ \mbox{\hyperlink{classcovarianceXsec_adddfbaa235113603542826df331ed61e}{\_fSystToGlobalSystIndexMap}}[SystType::kFunc].\mbox{\hyperlink{GetPenaltyTerm_8cpp_a439227feff9d7f55384e8780cfc2eb82}{size}}());}
+\DoxyCodeLine{00447\ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classcovarianceXsec_adddfbaa235113603542826df331ed61e}{\_fSystToGlobalSystIndexMap}}[SystType::kFunc].\mbox{\hyperlink{GetPenaltyTerm_8cpp_a439227feff9d7f55384e8780cfc2eb82}{size}}()\ ==\ 0)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00448\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}┌────┬──────────┬────────────────────────────────────────┐"{}});}
+\DoxyCodeLine{00449\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}│\{0:4\}│\{1:10\}│\{2:40\}│"{}},\ \textcolor{stringliteral}{"{}\#"{}},\ \textcolor{stringliteral}{"{}Global\ \#"{}},\ \textcolor{stringliteral}{"{}Name"{}});}
+\DoxyCodeLine{00450\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}├────┼──────────┼────────────────────────────────────────┤"{}});}
+\DoxyCodeLine{00451\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&pair\ :\ \mbox{\hyperlink{classcovarianceXsec_adddfbaa235113603542826df331ed61e}{\_fSystToGlobalSystIndexMap}}[SystType::kFunc])\ \{}
+\DoxyCodeLine{00452\ \ \ \ \ \textcolor{keyword}{auto}\ \&FuncIndex\ =\ pair.first;}
+\DoxyCodeLine{00453\ \ \ \ \ \textcolor{keyword}{auto}\ \&GlobalIndex\ =\ pair.second;}
+\DoxyCodeLine{00454\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}│\{0:4\}│\{1:<10\}│\{2:40\}│"{}},\ std::to\_string(FuncIndex),\ GlobalIndex,\ \mbox{\hyperlink{classcovarianceBase_a6a46b5fed3e7feb6e9e151e90927bdbc}{GetParFancyName}}(GlobalIndex));}
+\DoxyCodeLine{00455\ \ \ \}}
+\DoxyCodeLine{00456\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}└────┴──────────┴────────────────────────────────────────┘"{}});}
+\DoxyCodeLine{00457\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcovarianceXsec_a41d7f1b1010bddd3e938eb589a089593}\label{classcovarianceXsec_a41d7f1b1010bddd3e938eb589a089593}} 
+\index{covarianceXsec@{covarianceXsec}!PrintGlobablInfo@{PrintGlobablInfo}}
+\index{PrintGlobablInfo@{PrintGlobablInfo}!covarianceXsec@{covarianceXsec}}
+\doxysubsubsection{\texorpdfstring{PrintGlobablInfo()}{PrintGlobablInfo()}}
+{\footnotesize\ttfamily void covariance\+Xsec\+::\+Print\+Globabl\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Prints general information about the \mbox{\hyperlink{classcovarianceXsec}{covariance\+Xsec}} object. 
+
+
+
+Definition at line \mbox{\hyperlink{covarianceXsec_8cpp_source_l00369}{369}} of file \mbox{\hyperlink{covarianceXsec_8cpp_source}{covariance\+Xsec.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00369\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00370\ \textcolor{comment}{//\ ********************************************}}
+\DoxyCodeLine{00371\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}============================================================================================================================================================"{}});}
+\DoxyCodeLine{00372\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}\{:<5\}\ \{:2\}\ \{:<40\}\ \{:2\}\ \{:<10\}\ \{:2\}\ \{:<10\}\ \{:2\}\ \{:<10\}\ \{:2\}\ \{:<10\}\ \{:2\}\ \{:<10\}\ \{:2\}\ \{:<10\}\ \{:2\}\ \{:<5\}\ \{:2\}\ \{:<10\}"{}},\ \textcolor{stringliteral}{"{}\#"{}},\ \textcolor{stringliteral}{"{}|"{}},\ \textcolor{stringliteral}{"{}Name"{}},\ \textcolor{stringliteral}{"{}|"{}},\ \textcolor{stringliteral}{"{}Nom."{}},\ \textcolor{stringliteral}{"{}|"{}},\ \textcolor{stringliteral}{"{}Prior"{}},\ \textcolor{stringliteral}{"{}|"{}},\ \textcolor{stringliteral}{"{}Error"{}},\ \textcolor{stringliteral}{"{}|"{}},\ \textcolor{stringliteral}{"{}Lower"{}},\ \textcolor{stringliteral}{"{}|"{}},\ \textcolor{stringliteral}{"{}Upper"{}},\ \textcolor{stringliteral}{"{}|"{}},\ \textcolor{stringliteral}{"{}StepScale"{}},\ \textcolor{stringliteral}{"{}|"{}},\ \textcolor{stringliteral}{"{}DetID"{}},\ \textcolor{stringliteral}{"{}|"{}},\ \textcolor{stringliteral}{"{}Type"{}});}
+\DoxyCodeLine{00373\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{00374\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classcovarianceBase_a3daac6405cc791347b768a5afe8a13d2}{GetNumParams}}();\ i++)\ \{}
+\DoxyCodeLine{00375\ \ \ \ \ std::string\ ErrString\ =\ fmt::format(\textcolor{stringliteral}{"{}\{:.2f\}"{}},\ \mbox{\hyperlink{classcovarianceBase_a34f877fc160b4a93a3aab1b3a8977858}{\_fError}}[i]);}
+\DoxyCodeLine{00376\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}\{:<5\}\ \{:2\}\ \{:<40\}\ \{:2\}\ \{:<10\}\ \{:2\}\ \{:<10\}\ \{:2\}\ \{:<10\}\ \{:2\}\ \{:<10\}\ \{:2\}\ \{:<10\}\ \{:2\}\ \{:<10\}\ \{:2\}\ \{:<5\}\ \{:2\}\ \{:<10\}"{}},\ i,\ \textcolor{stringliteral}{"{}|"{}},\ \mbox{\hyperlink{classcovarianceBase_a6a46b5fed3e7feb6e9e151e90927bdbc}{GetParFancyName}}(i),\ \textcolor{stringliteral}{"{}|"{}},\ \mbox{\hyperlink{classcovarianceBase_a9b753f52711600a9f8d648531d95b044}{\_fGenerated}}[i],\ \textcolor{stringliteral}{"{}|"{}},\ \mbox{\hyperlink{classcovarianceBase_a7578a2cc2e8e9100fad88310a824cb1c}{\_fPreFitValue}}[i],\ \textcolor{stringliteral}{"{}|"{}},\ \textcolor{stringliteral}{"{}+/-\/\ "{}}\ +\ ErrString,\ \textcolor{stringliteral}{"{}|"{}},\ \mbox{\hyperlink{classcovarianceBase_a8f1d94838f188cc85c4f82557c0b0b66}{\_fLowBound}}[i],\ \textcolor{stringliteral}{"{}|"{}},\ \mbox{\hyperlink{classcovarianceBase_a31e636cb6de871bd0c2c8e7e299df9e7}{\_fUpBound}}[i],\ \textcolor{stringliteral}{"{}|"{}},\ \mbox{\hyperlink{classcovarianceBase_a3cda39026e336a49cef482efd4062561}{\_fIndivStepScale}}[i],\ \textcolor{stringliteral}{"{}|"{}},\ \mbox{\hyperlink{classcovarianceXsec_a183f01056fc0e9b42db202e944021332}{\_fDetID}}[i],\ \textcolor{stringliteral}{"{}|"{}},\ \mbox{\hyperlink{Structs_8h_ad39c312dc44177340e2ebccd3d3f2d4c}{SystType\_ToString}}(\mbox{\hyperlink{classcovarianceXsec_aae3338ca71027adab7fdfd3e828c0f79}{\_fParamType}}[i]));}
+\DoxyCodeLine{00377\ \ \ \}}
+\DoxyCodeLine{00378\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}============================================================================================================================================================"{}});}
+\DoxyCodeLine{00379\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcovarianceXsec_a8b408060d825769eec6c8e4594397ec8}\label{classcovarianceXsec_a8b408060d825769eec6c8e4594397ec8}} 
+\index{covarianceXsec@{covarianceXsec}!PrintNormParams@{PrintNormParams}}
+\index{PrintNormParams@{PrintNormParams}!covarianceXsec@{covarianceXsec}}
+\doxysubsubsection{\texorpdfstring{PrintNormParams()}{PrintNormParams()}}
+{\footnotesize\ttfamily void covariance\+Xsec\+::\+Print\+Norm\+Params (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Prints normalization parameters. 
+
+
+
+Definition at line \mbox{\hyperlink{covarianceXsec_8cpp_source_l00382}{382}} of file \mbox{\hyperlink{covarianceXsec_8cpp_source}{covariance\+Xsec.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00382\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00383\ \textcolor{comment}{//\ ********************************************}}
+\DoxyCodeLine{00384\ \ \ \textcolor{comment}{//\ Output\ the\ normalisation\ parameters\ as\ a\ sanity\ check!}}
+\DoxyCodeLine{00385\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Normalisation\ parameters:\ \ \{\}"{}},\ \mbox{\hyperlink{classcovarianceXsec_acd6c2346a5b808c6917e4828bbb633f5}{NormParams}}.size());}
+\DoxyCodeLine{00386\ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classcovarianceXsec_adddfbaa235113603542826df331ed61e}{\_fSystToGlobalSystIndexMap}}[SystType::kNorm].\mbox{\hyperlink{GetPenaltyTerm_8cpp_a439227feff9d7f55384e8780cfc2eb82}{size}}()\ ==\ 0)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00387\ }
+\DoxyCodeLine{00388\ \ \ \textcolor{comment}{//KS:\ Consider\ making\ some\ class\ producing\ table..}}
+\DoxyCodeLine{00389\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}┌────┬──────────┬────────────────────────────────────────┬────────────────────┬────────────────────┬────────────────────┐"{}});}
+\DoxyCodeLine{00390\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}│\{0:4\}│\{1:10\}│\{2:40\}│\{3:20\}│\{4:20\}│\{5:20\}│"{}},\ \textcolor{stringliteral}{"{}\#"{}},\ \textcolor{stringliteral}{"{}Global\ \#"{}},\ \textcolor{stringliteral}{"{}Name"{}},\ \textcolor{stringliteral}{"{}Int.\ mode"{}},\ \textcolor{stringliteral}{"{}Target"{}},\ \textcolor{stringliteral}{"{}pdg"{}});}
+\DoxyCodeLine{00391\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}├────┼──────────┼────────────────────────────────────────┼────────────────────┼────────────────────┼────────────────────┤"{}});}
+\DoxyCodeLine{00392\ }
+\DoxyCodeLine{00393\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classcovarianceXsec_acd6c2346a5b808c6917e4828bbb633f5}{NormParams}}.size();\ ++i)}
+\DoxyCodeLine{00394\ \ \ \{}
+\DoxyCodeLine{00395\ \ \ \ \ std::string\ intModeString;}
+\DoxyCodeLine{00396\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ \mbox{\hyperlink{classcovarianceXsec_acd6c2346a5b808c6917e4828bbb633f5}{NormParams}}[i].modes.size();\ j++)\ \{}
+\DoxyCodeLine{00397\ \ \ \ \ \ \ intModeString\ +=\ std::to\_string(\mbox{\hyperlink{classcovarianceXsec_acd6c2346a5b808c6917e4828bbb633f5}{NormParams}}[i].modes[j]);}
+\DoxyCodeLine{00398\ \ \ \ \ \ \ intModeString\ +=\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{00399\ \ \ \ \ \}}
+\DoxyCodeLine{00400\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classcovarianceXsec_acd6c2346a5b808c6917e4828bbb633f5}{NormParams}}[i].modes.empty())\ intModeString\ +=\ \textcolor{stringliteral}{"{}all"{}};}
+\DoxyCodeLine{00401\ }
+\DoxyCodeLine{00402\ \ \ \ \ std::string\ targetString;}
+\DoxyCodeLine{00403\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ \mbox{\hyperlink{classcovarianceXsec_acd6c2346a5b808c6917e4828bbb633f5}{NormParams}}[i].targets.size();\ j++)\ \{}
+\DoxyCodeLine{00404\ \ \ \ \ \ \ targetString\ +=\ std::to\_string(\mbox{\hyperlink{classcovarianceXsec_acd6c2346a5b808c6917e4828bbb633f5}{NormParams}}[i].targets[j]);}
+\DoxyCodeLine{00405\ \ \ \ \ \ \ targetString\ +=\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{00406\ \ \ \ \ \}}
+\DoxyCodeLine{00407\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classcovarianceXsec_acd6c2346a5b808c6917e4828bbb633f5}{NormParams}}[i].targets.empty())\ targetString\ +=\ \textcolor{stringliteral}{"{}all"{}};}
+\DoxyCodeLine{00408\ }
+\DoxyCodeLine{00409\ \ \ \ \ std::string\ pdgString;}
+\DoxyCodeLine{00410\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ \mbox{\hyperlink{classcovarianceXsec_acd6c2346a5b808c6917e4828bbb633f5}{NormParams}}[i].pdgs.size();\ j++)\ \{}
+\DoxyCodeLine{00411\ \ \ \ \ \ \ pdgString\ +=\ std::to\_string(\mbox{\hyperlink{classcovarianceXsec_acd6c2346a5b808c6917e4828bbb633f5}{NormParams}}[i].pdgs[j]);}
+\DoxyCodeLine{00412\ \ \ \ \ \ \ pdgString\ +=\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{00413\ \ \ \ \ \}}
+\DoxyCodeLine{00414\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classcovarianceXsec_acd6c2346a5b808c6917e4828bbb633f5}{NormParams}}[i].pdgs.empty())\ pdgString\ +=\ \textcolor{stringliteral}{"{}all"{}};}
+\DoxyCodeLine{00415\ }
+\DoxyCodeLine{00416\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}│\{:\ <4\}│\{:\ <10\}│\{:\ <40\}│\{:\ <20\}│\{:\ <20\}│\{:\ <20\}│"{}},\ i,\ \mbox{\hyperlink{classcovarianceXsec_acd6c2346a5b808c6917e4828bbb633f5}{NormParams}}[i].index,\ \mbox{\hyperlink{classcovarianceXsec_acd6c2346a5b808c6917e4828bbb633f5}{NormParams}}[i].name,\ intModeString,\ targetString,\ pdgString);}
+\DoxyCodeLine{00417\ \ \ \}}
+\DoxyCodeLine{00418\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}└────┴──────────┴────────────────────────────────────────┴────────────────────┴────────────────────┴────────────────────┘"{}});}
+\DoxyCodeLine{00419\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcovarianceXsec_ae62615b039cb1e1510934406200bde3a}\label{classcovarianceXsec_ae62615b039cb1e1510934406200bde3a}} 
+\index{covarianceXsec@{covarianceXsec}!PrintParameterGroups@{PrintParameterGroups}}
+\index{PrintParameterGroups@{PrintParameterGroups}!covarianceXsec@{covarianceXsec}}
+\doxysubsubsection{\texorpdfstring{PrintParameterGroups()}{PrintParameterGroups()}}
+{\footnotesize\ttfamily void covariance\+Xsec\+::\+Print\+Parameter\+Groups (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Prints groups of parameters. 
+
+
+
+Definition at line \mbox{\hyperlink{covarianceXsec_8cpp_source_l00460}{460}} of file \mbox{\hyperlink{covarianceXsec_8cpp_source}{covariance\+Xsec.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00460\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00461\ \textcolor{comment}{//\ ********************************************}}
+\DoxyCodeLine{00462\ \ \ \textcolor{comment}{//\ KS:\ Create\ a\ map\ to\ store\ the\ counts\ of\ unique\ strings,\ in\ principle\ this\ could\ be\ in\ header\ file}}
+\DoxyCodeLine{00463\ \ \ std::unordered\_map<std::string,\ int>\ paramCounts;}
+\DoxyCodeLine{00464\ }
+\DoxyCodeLine{00465\ \ \ std::for\_each(\mbox{\hyperlink{classcovarianceXsec_a47cd1802e0dac0c22c8c16f214272c34}{\_ParameterGroup}}.begin(),\ \mbox{\hyperlink{classcovarianceXsec_a47cd1802e0dac0c22c8c16f214272c34}{\_ParameterGroup}}.end(),}
+\DoxyCodeLine{00466\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [\&paramCounts](\textcolor{keyword}{const}\ std::string\&\ param)\ \{}
+\DoxyCodeLine{00467\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ paramCounts[param]++;}
+\DoxyCodeLine{00468\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00469\ }
+\DoxyCodeLine{00470\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Printing\ parameter\ groups"{}});}
+\DoxyCodeLine{00471\ \ \ \textcolor{comment}{//\ Output\ the\ counts}}
+\DoxyCodeLine{00472\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ pair\ :\ paramCounts)\ \{}
+\DoxyCodeLine{00473\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Found\ \{\}:\ \{\}\ params"{}},\ pair.second,\ pair.first);}
+\DoxyCodeLine{00474\ \ \ \}}
+\DoxyCodeLine{00475\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcovarianceXsec_a02678dad88cf9dafb7d001208f8b0348}\label{classcovarianceXsec_a02678dad88cf9dafb7d001208f8b0348}} 
+\index{covarianceXsec@{covarianceXsec}!PrintSplineParams@{PrintSplineParams}}
+\index{PrintSplineParams@{PrintSplineParams}!covarianceXsec@{covarianceXsec}}
+\doxysubsubsection{\texorpdfstring{PrintSplineParams()}{PrintSplineParams()}}
+{\footnotesize\ttfamily void covariance\+Xsec\+::\+Print\+Spline\+Params (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Prints spline parameters. 
+
+
+
+Definition at line \mbox{\hyperlink{covarianceXsec_8cpp_source_l00422}{422}} of file \mbox{\hyperlink{covarianceXsec_8cpp_source}{covariance\+Xsec.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00422\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00423\ \textcolor{comment}{//\ ********************************************}}
+\DoxyCodeLine{00424\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Spline\ parameters:\ \{\}"{}},\ \mbox{\hyperlink{classcovarianceXsec_adddfbaa235113603542826df331ed61e}{\_fSystToGlobalSystIndexMap}}[SystType::kSpline].\mbox{\hyperlink{GetPenaltyTerm_8cpp_a439227feff9d7f55384e8780cfc2eb82}{size}}());}
+\DoxyCodeLine{00425\ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classcovarianceXsec_adddfbaa235113603542826df331ed61e}{\_fSystToGlobalSystIndexMap}}[SystType::kSpline].\mbox{\hyperlink{GetPenaltyTerm_8cpp_a439227feff9d7f55384e8780cfc2eb82}{size}}()\ ==\ 0)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00426\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}====================================================================================================================================================================="{}});}
+\DoxyCodeLine{00427\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}\{:<4\}\ \{:<2\}\ \{:<40\}\ \{:<2\}\ \{:<40\}\ \{:<2\}\ \{:<20\}\ \{:<2\}\ \{:<20\}\ \{:<2\}\ \{:<20\}\ \{:<2\}"{}},\ \textcolor{stringliteral}{"{}\#"{}},\ \textcolor{stringliteral}{"{}|"{}},\ \textcolor{stringliteral}{"{}Name"{}},\ \textcolor{stringliteral}{"{}|"{}},\ \textcolor{stringliteral}{"{}Spline\ Name"{}},\ \textcolor{stringliteral}{"{}|"{}},\ \textcolor{stringliteral}{"{}Spline\ Interpolation"{}},\ \textcolor{stringliteral}{"{}|"{}},\ \textcolor{stringliteral}{"{}Low\ Knot\ Bound"{}},\ \textcolor{stringliteral}{"{}|"{}},\ \textcolor{stringliteral}{"{}Up\ Knot\ Bound"{}},\ \textcolor{stringliteral}{"{}|"{}});}
+\DoxyCodeLine{00428\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{00429\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&pair\ :\ \mbox{\hyperlink{classcovarianceXsec_adddfbaa235113603542826df331ed61e}{\_fSystToGlobalSystIndexMap}}[SystType::kSpline])\ \{}
+\DoxyCodeLine{00430\ \ \ \ \ \textcolor{keyword}{auto}\ \&SplineIndex\ =\ pair.first;}
+\DoxyCodeLine{00431\ \ \ \ \ \textcolor{keyword}{auto}\ \&GlobalIndex\ =\ pair.second;}
+\DoxyCodeLine{00432\ }
+\DoxyCodeLine{00433\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}\{:<4\}\ \{:<2\}\ \{:<40\}\ \{:<2\}\ \{:<40\}\ \{:<2\}\ \{:<20\}\ \{:<2\}\ \{:<20\}\ \{:<2\}\ \{:<20\}\ \{:<2\}"{}},}
+\DoxyCodeLine{00434\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SplineIndex,\ \textcolor{stringliteral}{"{}|"{}},\ \mbox{\hyperlink{classcovarianceBase_a6a46b5fed3e7feb6e9e151e90927bdbc}{GetParFancyName}}(GlobalIndex),\ \textcolor{stringliteral}{"{}|"{}},}
+\DoxyCodeLine{00435\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcovarianceXsec_a4d3074db3c9edb7465a4409abd9c91fc}{\_fSplineNames}}[SplineIndex],\ \textcolor{stringliteral}{"{}|"{}},}
+\DoxyCodeLine{00436\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{Structs_8h_a2d969ce667e41bd2492cff1775456837}{SplineInterpolation\_ToString}}(\mbox{\hyperlink{classcovarianceXsec_a6e7661f9bd67500b66c7499f776b594d}{GetParSplineInterpolation}}(SplineIndex)),\ \textcolor{stringliteral}{"{}|"{}},}
+\DoxyCodeLine{00437\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcovarianceXsec_a9ea6bd6b0e021f154ebd1f23605ff3e5}{GetParSplineKnotLowerBound}}(SplineIndex),\ \textcolor{stringliteral}{"{}|"{}},}
+\DoxyCodeLine{00438\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcovarianceXsec_ac612a0f939f2f070906af574f98590d6}{GetParSplineKnotUpperBound}}(SplineIndex),\ \textcolor{stringliteral}{"{}|"{}});}
+\DoxyCodeLine{00439\ \ \ \}}
+\DoxyCodeLine{00440\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}====================================================================================================================================================================="{}});}
+\DoxyCodeLine{00441\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classcovarianceXsec_a8e602fcc62a2c930c89987e06af9def1}\label{classcovarianceXsec_a8e602fcc62a2c930c89987e06af9def1}} 
+\index{covarianceXsec@{covarianceXsec}!SetGroupOnlyParameters@{SetGroupOnlyParameters}}
+\index{SetGroupOnlyParameters@{SetGroupOnlyParameters}!covarianceXsec@{covarianceXsec}}
+\doxysubsubsection{\texorpdfstring{SetGroupOnlyParameters()}{SetGroupOnlyParameters()}}
+{\footnotesize\ttfamily void covariance\+Xsec\+::\+Set\+Group\+Only\+Parameters (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{Group }\end{DoxyParamCaption})}
+
+
+
+KS Function to set to prior parameters of a given group. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Group} & name of group, like Xsec or Flux \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{covarianceXsec_8cpp_source_l00502}{502}} of file \mbox{\hyperlink{covarianceXsec_8cpp_source}{covariance\+Xsec.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00502\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00503\ \textcolor{comment}{//\ ********************************************}}
+\DoxyCodeLine{00504\ \ \ \textcolor{keywordflow}{if}(!\mbox{\hyperlink{classcovarianceBase_ab4b7f96d3e977a0b3307ceecbd0baeb4}{pca}})\ \{}
+\DoxyCodeLine{00505\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classcovarianceBase_ac5d922f1a4163b38ebc7a3ef21eec376}{\_fNumPar}};\ i++)\ \{}
+\DoxyCodeLine{00506\ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classcovarianceXsec_a5dc8900054a498107e39cc41641879a8}{IsParFromGroup}}(i,\ Group))\ \mbox{\hyperlink{classcovarianceBase_a12f0eb31a5ef48b014baa11d4ab919e9}{\_fPropVal}}[i]\ =\ \mbox{\hyperlink{classcovarianceBase_a7578a2cc2e8e9100fad88310a824cb1c}{\_fPreFitValue}}[i];}
+\DoxyCodeLine{00507\ \ \ \ \ \}}
+\DoxyCodeLine{00508\ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00509\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}SetGroupOnlyParameters\ not\ implemented\ for\ PCA"{}});}
+\DoxyCodeLine{00510\ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_,\ \_\_LINE\_\_);}
+\DoxyCodeLine{00511\ \ \ \}}
+\DoxyCodeLine{00512\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classcovarianceXsec_a183f01056fc0e9b42db202e944021332}\label{classcovarianceXsec_a183f01056fc0e9b42db202e944021332}} 
+\index{covarianceXsec@{covarianceXsec}!\_fDetID@{\_fDetID}}
+\index{\_fDetID@{\_fDetID}!covarianceXsec@{covarianceXsec}}
+\doxysubsubsection{\texorpdfstring{\_fDetID}{\_fDetID}}
+{\footnotesize\ttfamily std\+::vector$<$int$>$ covariance\+Xsec\+::\+\_\+f\+Det\+ID\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Tells to which samples object param should be applied. 
+
+
+
+Definition at line \mbox{\hyperlink{covarianceXsec_8h_source_l00147}{147}} of file \mbox{\hyperlink{covarianceXsec_8h_source}{covariance\+Xsec.\+h}}.
+
+\mbox{\Hypertarget{classcovarianceXsec_aae3338ca71027adab7fdfd3e828c0f79}\label{classcovarianceXsec_aae3338ca71027adab7fdfd3e828c0f79}} 
+\index{covarianceXsec@{covarianceXsec}!\_fParamType@{\_fParamType}}
+\index{\_fParamType@{\_fParamType}!covarianceXsec@{covarianceXsec}}
+\doxysubsubsection{\texorpdfstring{\_fParamType}{\_fParamType}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{Structs_8h_affc27d8b7b82d3713f45af17873fde2f}{Syst\+Type}}$>$ covariance\+Xsec\+::\+\_\+f\+Param\+Type\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Type of parameter like norm, spline etc. 
+
+
+
+Definition at line \mbox{\hyperlink{covarianceXsec_8h_source_l00149}{149}} of file \mbox{\hyperlink{covarianceXsec_8h_source}{covariance\+Xsec.\+h}}.
+
+\mbox{\Hypertarget{classcovarianceXsec_a4d3074db3c9edb7465a4409abd9c91fc}\label{classcovarianceXsec_a4d3074db3c9edb7465a4409abd9c91fc}} 
+\index{covarianceXsec@{covarianceXsec}!\_fSplineNames@{\_fSplineNames}}
+\index{\_fSplineNames@{\_fSplineNames}!covarianceXsec@{covarianceXsec}}
+\doxysubsubsection{\texorpdfstring{\_fSplineNames}{\_fSplineNames}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ covariance\+Xsec\+::\+\_\+f\+Spline\+Names\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Name of spline in TTree (TBranch),. 
+
+
+
+Definition at line \mbox{\hyperlink{covarianceXsec_8h_source_l00152}{152}} of file \mbox{\hyperlink{covarianceXsec_8h_source}{covariance\+Xsec.\+h}}.
+
+\mbox{\Hypertarget{classcovarianceXsec_adddfbaa235113603542826df331ed61e}\label{classcovarianceXsec_adddfbaa235113603542826df331ed61e}} 
+\index{covarianceXsec@{covarianceXsec}!\_fSystToGlobalSystIndexMap@{\_fSystToGlobalSystIndexMap}}
+\index{\_fSystToGlobalSystIndexMap@{\_fSystToGlobalSystIndexMap}!covarianceXsec@{covarianceXsec}}
+\doxysubsubsection{\texorpdfstring{\_fSystToGlobalSystIndexMap}{\_fSystToGlobalSystIndexMap}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::map$<$int, int$>$ $>$ covariance\+Xsec\+::\+\_\+f\+Syst\+To\+Global\+Syst\+Index\+Map\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Map between number of given parameter type with global parameter numbering. For example 2nd norm param may be 10-\/th global param. 
+
+
+
+Definition at line \mbox{\hyperlink{covarianceXsec_8h_source_l00158}{158}} of file \mbox{\hyperlink{covarianceXsec_8h_source}{covariance\+Xsec.\+h}}.
+
+\mbox{\Hypertarget{classcovarianceXsec_a47cd1802e0dac0c22c8c16f214272c34}\label{classcovarianceXsec_a47cd1802e0dac0c22c8c16f214272c34}} 
+\index{covarianceXsec@{covarianceXsec}!\_ParameterGroup@{\_ParameterGroup}}
+\index{\_ParameterGroup@{\_ParameterGroup}!covarianceXsec@{covarianceXsec}}
+\doxysubsubsection{\texorpdfstring{\_ParameterGroup}{\_ParameterGroup}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ covariance\+Xsec\+::\+\_\+\+Parameter\+Group\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+KS\+: Allow to group parameters for example to affect only cross-\/section or only flux etc. 
+
+
+
+Definition at line \mbox{\hyperlink{covarianceXsec_8h_source_l00155}{155}} of file \mbox{\hyperlink{covarianceXsec_8h_source}{covariance\+Xsec.\+h}}.
+
+\mbox{\Hypertarget{classcovarianceXsec_acd6c2346a5b808c6917e4828bbb633f5}\label{classcovarianceXsec_acd6c2346a5b808c6917e4828bbb633f5}} 
+\index{covarianceXsec@{covarianceXsec}!NormParams@{NormParams}}
+\index{NormParams@{NormParams}!covarianceXsec@{covarianceXsec}}
+\doxysubsubsection{\texorpdfstring{NormParams}{NormParams}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structXsecNorms4}{Xsec\+Norms4}}$>$ covariance\+Xsec\+::\+Norm\+Params\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Vector containing info for normalisation systematics. 
+
+
+
+Definition at line \mbox{\hyperlink{covarianceXsec_8h_source_l00164}{164}} of file \mbox{\hyperlink{covarianceXsec_8h_source}{covariance\+Xsec.\+h}}.
+
+\mbox{\Hypertarget{classcovarianceXsec_ae95bafab0c674dc838635aaeca40bc2c}\label{classcovarianceXsec_ae95bafab0c674dc838635aaeca40bc2c}} 
+\index{covarianceXsec@{covarianceXsec}!SplineParams@{SplineParams}}
+\index{SplineParams@{SplineParams}!covarianceXsec@{covarianceXsec}}
+\doxysubsubsection{\texorpdfstring{SplineParams}{SplineParams}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structXsecSplines1}{Xsec\+Splines1}}$>$ covariance\+Xsec\+::\+Spline\+Params\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Vector containing info for normalisation systematics. 
+
+
+
+Definition at line \mbox{\hyperlink{covarianceXsec_8h_source_l00161}{161}} of file \mbox{\hyperlink{covarianceXsec_8h_source}{covariance\+Xsec.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/runner/work/\+Ma\+Ch3/\+Ma\+Ch3/covariance/\mbox{\hyperlink{covarianceXsec_8h}{covariance\+Xsec.\+h}}\item 
+/home/runner/work/\+Ma\+Ch3/\+Ma\+Ch3/covariance/\mbox{\hyperlink{covarianceXsec_8cpp}{covariance\+Xsec.\+cpp}}\end{DoxyCompactItemize}

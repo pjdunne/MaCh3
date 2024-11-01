@@ -1,0 +1,131 @@
+
+\begin{DoxyRefList}
+\item[Member \mbox{\hyperlink{gpuUtils_8cuh_ace64b352b82023c1dc75e981ef999197}{\+\_\+\+\_\+cuda\+Safe\+Call}} (cuda\+Error err, const char $\ast$file, const int line)]\label{todo__todo000001}%
+\Hypertarget{todo__todo000001}%
+KS\+: There is plenty of useful stuff here \href{https://github.com/NVIDIA/cuda-samples/blob/master/Samples/1_Utilities/deviceQuery/deviceQuery.cpp}{\texttt{ https\+://github.\+com/\+NVIDIA/cuda-\/samples/blob/master/\+Samples/1\+\_\+\+Utilities/device\+Query/device\+Query.\+cpp}} 
+
+
+
+KS\+: We might want to port some of these utilities, for example having bool if there is unified memory etc.  
+\item[Member \mbox{\hyperlink{classcovarianceOsc_a05b22b92594371c86a5e28f73cf4a574}{covariance\+Osc\+::covariance\+Osc}} (const std\+::vector$<$ std\+::string $>$ \&File\+Names, std\+::string name=\char`\"{}osc\+\_\+cov\char`\"{}, double threshold=-\/1, int First\+PCAdpar=-\/999, int Last\+PCAdpar=-\/999)]\label{todo__todo000029}%
+\Hypertarget{todo__todo000029}%
+KS\+: Technically if we would like to use PCA we have to initialise parts here...  
+\item[Member \mbox{\hyperlink{classFitterBase_a655ccea31627627e2b36745c97e5c0f0}{Fitter\+Base\+::Start\+From\+Previous\+Fit}} (const std\+::string \&Fit\+Name)]\label{todo__todo000006}%
+\Hypertarget{todo__todo000006}%
+implement some check that number of params matches etc  
+\item[File \mbox{\hyperlink{GetPenaltyTerm_8cpp}{Get\+Penalty\+Term.cpp}} ]\label{todo__todo000013}%
+\Hypertarget{todo__todo000013}%
+KS\+: This should really be moved to MCMC Processor  
+\item[Member \mbox{\hyperlink{MaCh3Factory_8h_adf686154f88c21b8937a8c9062d41644}{Ma\+Ch3\+Covariance\+Factory}} (manager $\ast$fit\+Man, const std\+::string \&Pre\+Fix)]\label{todo__todo000007}%
+\Hypertarget{todo__todo000007}%
+this massive hack with \char`\"{}xsec\+\_\+cov\char`\"{} is because we have const char $\ast$ ... will have to fix it later... 
+
+\label{todo__todo000008}%
+\Hypertarget{todo__todo000008}%
+add adaptive stuff  
+\item[Member \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_a0897b76fdbfc674ed94da1d2b4adb0a2}{Ma\+Ch3\+Plotting\+::Input\+File\+::Dump}} () const]\label{todo__todo000018}%
+\Hypertarget{todo__todo000018}%
+Same as for \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_a4b3753ca1fa1a399e519aa15bca8658a}{Summarise()}}, could add a check that the file info has actually been filled.  
+\item[Member \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_a7491ea81990748b02402796ee512f518}{Ma\+Ch3\+Plotting\+::Input\+File\+::has\+LLHScans}} ]\label{todo__todo000019}%
+\Hypertarget{todo__todo000019}%
+I think it would be nice to store all the \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile}{Input\+File}} data in some non root, maybe custom c++ types, and have separate reader classes for potential different input file formats that can convert to these types. 
+
+
+
+Currently all fitters use root but maybe some wonderful day in the far far future this wont be the case. Doing things this way we could maintain the possible future option of moving away from root???  
+\item[Member \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_a4b3753ca1fa1a399e519aa15bca8658a}{Ma\+Ch3\+Plotting\+::Input\+File\+::Summarise}} () const]\label{todo__todo000017}%
+\Hypertarget{todo__todo000017}%
+Could add some flag to this to check if the relevant information has actually been filled already and if not give some warning or print only some of the values.  
+\item[Class \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager}{Ma\+Ch3\+Plotting\+::Input\+Manager}} ]\label{todo__todo000016}%
+\Hypertarget{todo__todo000016}%
+A lot of string comparisons going on in the code for the post fit errors, would maybe be good to implement some kind of indexing for parameters and just have a map between the parameter names and this index to be used internally by the class. 
+
+
+
+Add code to read MCMC from input file 
+
+
+
+Add code to read Sigma variations. There are usually so many of these that we might not want to read them all into memory at once when adding the file but maybe just check to see what ones are in the file, then be able to read them on the fly later. 
+
+
+
+Add code to read in Violin plots from the postfit error output files.  
+\item[Member \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_aad778d8694f9b581d09279584733f6ea}{Ma\+Ch3\+Plotting\+::Input\+Manager\+::fill\+File\+Info}} (\mbox{\hyperlink{structMaCh3Plotting_1_1InputFile}{Input\+File}} \&input\+File\+Def, bool print\+Thoughts=true)]\label{todo__todo000015}%
+\Hypertarget{todo__todo000015}%
+add a check here to make sure all the scans that are in the file are being picked up by the reader, and warn if any are not being used 
+
+\label{todo__todo000014}%
+\Hypertarget{todo__todo000014}%
+Would like to be able to specify what kind of file and what fitter an input is from on the command like\+: e.\+g. like \`{}plot\+App \mbox{[}options\mbox{]} $<$file\+Name1$>$;$<$file\+Type$>$;$<$fitter\+Name$>$... and only try to auto-\/detect it if its not specified, this would save some time and would also be very helpful in situations where we can\textquotesingle{}t auto-\/detect e.\+g. if there is some kind of overlap in the file structure between two fitters  
+\item[Member \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_aeb042d09d55644d8b35632f66f1832b6}{Ma\+Ch3\+Plotting\+::Plotting\+Manager\+::add\+User\+Option}} ()]\label{todo__todo000022}%
+\Hypertarget{todo__todo000022}%
+Would be good to add functionality to this to allow user to add their own options. 
+
+
+
+The way I can think to do this would be have fn \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_aeb042d09d55644d8b35632f66f1832b6}{add\+User\+Option()}} to set the options, defining the cmd line option (e.\+g. -\/x), the name of the option, and maybe some description of the option to be used in the help message 
+
+
+
+can then store these options in some map or something to be retrieved later by \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_af9f60a6196a9249d7ad7fee6c7bba89a}{get\+User\+Option()}} 
+
+\label{todo__todo000023}%
+\Hypertarget{todo__todo000023}%
+Implement this.  
+\item[Member \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a9c1177794e2fecce4e258ee8446d6569}{Ma\+Ch3\+Plotting\+::Plotting\+Manager\+::get\+Output\+Name}} (const std\+::string \&suffix)]\label{todo__todo000028}%
+\Hypertarget{todo__todo000028}%
+Make this support .root files too  
+\item[Member \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_af9f60a6196a9249d7ad7fee6c7bba89a}{Ma\+Ch3\+Plotting\+::Plotting\+Manager\+::get\+User\+Option}} (std\+::string option)]\label{todo__todo000024}%
+\Hypertarget{todo__todo000024}%
+Implement this.  
+\item[Member \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a20fbe3c9673f14adb46d3cd8919e306d}{Ma\+Ch3\+Plotting\+::Plotting\+Manager\+::initialise}} ()]\label{todo__todo000020}%
+\Hypertarget{todo__todo000020}%
+should add some kind of validata\+Configs() method to got throught all of the specified config files and make sure that all provided options are valid and all necessary options are provided as it can be pretty annoying and difficult to identify what\textquotesingle{}s going wrong when yaml just fails to find an option at runtime  
+\item[Member \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a6abd05428a9f8827c67a22bd6f8ffce3}{Ma\+Ch3\+Plotting\+::Plotting\+Manager\+::parse\+Inputs}} (int argc, char $\ast$const $\ast$argv)]\label{todo__todo000021}%
+\Hypertarget{todo__todo000021}%
+make this able to return any un-\/parsed arguments so that user can specify their own arguments for use in their plotting scripts  
+\item[Member \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a8910c157ce1ec6698f3bacdf521789ff}{Ma\+Ch3\+Plotting\+::Plotting\+Manager\+::usage}} ()]\label{todo__todo000027}%
+\Hypertarget{todo__todo000027}%
+could add some function to allow user to specify the help message for their particular script, then auto generate what the cmd line syntax looks like based on user specified options? 
+
+\label{todo__todo000026}%
+\Hypertarget{todo__todo000026}%
+
+
+\label{todo__todo000025}%
+\Hypertarget{todo__todo000025}%
+Implement this.  
+\item[Member \mbox{\hyperlink{classmcmc_adf4c80255288c5396da3b95d609ce4b2}{mcmc\+::Start\+From\+Previous\+Fit}} (const std\+::string \&Fit\+Name) override]\label{todo__todo000009}%
+\Hypertarget{todo__todo000009}%
+implement some check that number of params matches etc  
+\item[Member \mbox{\hyperlink{classMCMCProcessor_aef760d8c4bb70690a5c4114f4b2409b3}{MCMCProcessor\+::Power\+Spectrum\+Analysis}} ()]\label{todo__todo000011}%
+\Hypertarget{todo__todo000011}%
+KS\+: Code is awfully slow... I know how to make it faster (GPU scream in a distant) but for now just make it for two params, bit hacky sry...  
+\item[Member \mbox{\hyperlink{classMCMCProcessor_a3733b3b753c73f79e6846bc92c4da11b}{MCMCProcessor\+::Read\+OSCFile}} ()]\label{todo__todo000010}%
+\Hypertarget{todo__todo000010}%
+we should actually calculate central value and prior error but leave it for now...  
+\item[Member \mbox{\hyperlink{MCMCProcessor_8h_acd2848273413543fe14936252942c20b}{Parameter\+Enum}} ]\label{todo__todo000012}%
+\Hypertarget{todo__todo000012}%
+KS\+: Apply reweighted weight to plotting and Bayes Factor. 
+
+
+
+KS\+: Implement 2D reweighing like Daya\+Bay. 
+
+
+
+KS\+: Implement \mbox{\hyperlink{GetPenaltyTerm_8cpp}{Diagnostics/\+Get\+Penalty\+Term.\+cpp}} here.  
+\item[Member \mbox{\hyperlink{classsamplePDFFDBase_a4f9fdda921406906cf11421f0c0b6416}{sample\+PDFFDBase\+::Setup\+Splines}} ()=0]\label{todo__todo000004}%
+\Hypertarget{todo__todo000004}%
+abstract the spline initialisation completely to core  
+\item[Member \mbox{\hyperlink{classsplineFDBase_a089883fce1a3f4180e3156215fb9c38a}{spline\+FDBase\+::spline\+FDBase}} (\mbox{\hyperlink{classcovarianceXsec}{covariance\+Xsec}} $\ast$xsec\+\_\+=NULL)]\label{todo__todo000002}%
+\Hypertarget{todo__todo000002}%
+ETA -\/ do all of these functions and members actually need to be public?  
+\item[Member \mbox{\hyperlink{classsplineFDBase_a16c33124874a336255a3cba480b835c2}{spline\+FDBase\+::$\sim$spline\+FDBase}} ()]\label{todo__todo000003}%
+\Hypertarget{todo__todo000003}%
+it need some love  
+\item[Member \mbox{\hyperlink{Structs_8h_affc27d8b7b82d3713f45af17873fde2f}{Syst\+Type}} ]\label{todo__todo000005}%
+\Hypertarget{todo__todo000005}%
+KS\+: Consider using enum class, it is generally recommended as safer. It will require many static\+\_\+cast 
+\end{DoxyRefList}

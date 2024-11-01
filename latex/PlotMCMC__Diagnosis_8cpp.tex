@@ -1,0 +1,385 @@
+\hypertarget{PlotMCMC__Diagnosis_8cpp}{}\doxysection{/home/runner/work/\+Ma\+Ch3/\+Ma\+Ch3/\+Diagnostics/\+Diagnostics\+\_\+utils/\+Plot\+MCMC\+\_\+\+Diagnosis.cpp File Reference}
+\label{PlotMCMC__Diagnosis_8cpp}\index{/home/runner/work/MaCh3/MaCh3/Diagnostics/Diagnostics\_utils/PlotMCMC\_Diagnosis.cpp@{/home/runner/work/MaCh3/MaCh3/Diagnostics/Diagnostics\_utils/PlotMCMC\_Diagnosis.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$TCanvas.\+h$>$}\newline
+{\ttfamily \#include $<$TFile.\+h$>$}\newline
+{\ttfamily \#include $<$TH1\+D.\+h$>$}\newline
+Include dependency graph for Plot\+MCMC\+\_\+\+Diagnosis.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{PlotMCMC__Diagnosis_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_ade8095fd652fffdf2c7632812fafc4ed}{Plot\+MCMC\+\_\+\+Diagnosis}} (TString fname1)
+\item 
+void \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_a4ef987d45bb730d5c3f870a53c2a9b75}{Plot\+MCMC\+\_\+\+Diagnosis}} (TString fname1, TString fname2)
+\item 
+void \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_a57ab6e5dce810b6c20c75db268c20a32}{Plot\+MCMC\+\_\+\+Diagnosis}} (TString fname1, TString fname2, TString fname3)
+\item 
+void \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_a85c947865f19a904527c0992b94e8d1a}{Plot\+MCMC\+\_\+\+Diagnosis}} (TString fname1, TString fname2, TString fname3, TString fname4)
+\item 
+void \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_a70a8847717dd98bb61d4be6af69dbe03}{Make\+Plot}} (TString fname1, TString fname2, TString fname3, TString fname4)
+\item 
+void \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_a077cef58096692740b5491f8b1bec715}{Plot\+Auto\+Corr}} (TString fname1, TString fname2, TString fname3, TString fname4)
+\item 
+double \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_a81b2565c9b974c6f11088cef1c422bb3}{Get\+Minimum\+In\+Range}} (TH1D $\ast$hist, double min\+Range, double max\+Range)
+\item 
+void \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_ad6cc7e819155d937288181eb54bae3aa}{Remove\+Fitter}} (TH1D $\ast$hist)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+TString \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_aff052b2c086f67396715402e80de5fd7}{DUMMYFILE}} = \char`\"{}Kill\+Me\+Please\char`\"{}
+\item 
+bool \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_a0b9ef81bcc059ed6bb251bf8d72eee1c}{Plot\+Flux}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{PlotMCMC__Diagnosis_8cpp_a81b2565c9b974c6f11088cef1c422bb3}\label{PlotMCMC__Diagnosis_8cpp_a81b2565c9b974c6f11088cef1c422bb3}} 
+\index{PlotMCMC\_Diagnosis.cpp@{PlotMCMC\_Diagnosis.cpp}!GetMinimumInRange@{GetMinimumInRange}}
+\index{GetMinimumInRange@{GetMinimumInRange}!PlotMCMC\_Diagnosis.cpp@{PlotMCMC\_Diagnosis.cpp}}
+\doxysubsubsection{\texorpdfstring{GetMinimumInRange()}{GetMinimumInRange()}}
+{\footnotesize\ttfamily double Get\+Minimum\+In\+Range (\begin{DoxyParamCaption}\item[{TH1D $\ast$}]{hist,  }\item[{double}]{min\+Range,  }\item[{double}]{max\+Range }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_source_l00235}{235}} of file \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_source}{Plot\+MCMC\+\_\+\+Diagnosis.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00236\ \{}
+\DoxyCodeLine{00237\ \ \ \ \ \textcolor{keywordtype}{double}\ MinVale\ =\ 1234567890.;}
+\DoxyCodeLine{00238\ \ \ \ \ TAxis*\ xaxis\ =\ hist-\/>GetXaxis();}
+\DoxyCodeLine{00239\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ x\ =\ 1;\ x\ <=\ hist-\/>GetNbinsX();\ x++)\ }
+\DoxyCodeLine{00240\ \ \ \ \ \{}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(xaxis-\/>GetBinLowEdge(x)>minRange\ \&\&\ xaxis-\/>GetBinUpEdge(x)<maxRange)\{}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(MinVale\ >\ hist-\/>GetBinContent(x))MinVale\ =\ hist-\/>GetBinContent(x);}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00244\ \ \ \ \ \}}
+\DoxyCodeLine{00245\ \ \ \ \ \textcolor{keywordflow}{return}\ MinVale;}
+\DoxyCodeLine{00246\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{PlotMCMC__Diagnosis_8cpp_a70a8847717dd98bb61d4be6af69dbe03}\label{PlotMCMC__Diagnosis_8cpp_a70a8847717dd98bb61d4be6af69dbe03}} 
+\index{PlotMCMC\_Diagnosis.cpp@{PlotMCMC\_Diagnosis.cpp}!MakePlot@{MakePlot}}
+\index{MakePlot@{MakePlot}!PlotMCMC\_Diagnosis.cpp@{PlotMCMC\_Diagnosis.cpp}}
+\doxysubsubsection{\texorpdfstring{MakePlot()}{MakePlot()}}
+{\footnotesize\ttfamily void Make\+Plot (\begin{DoxyParamCaption}\item[{TString}]{fname1,  }\item[{TString}]{fname2,  }\item[{TString}]{fname3,  }\item[{TString}]{fname4 }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_source_l00061}{61}} of file \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_source}{Plot\+MCMC\+\_\+\+Diagnosis.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00062\ \{}
+\DoxyCodeLine{00063\ \ \ \ \ TCanvas\ *c1\ =\ \textcolor{keyword}{new}\ TCanvas(\textcolor{stringliteral}{"{}c1"{}},\textcolor{stringliteral}{"{}\ "{}},\ 0,\ 0,\ 800,630);}
+\DoxyCodeLine{00064\ \ \ \ \ gStyle-\/>SetOptStat(0);\ \textcolor{comment}{//Set\ 0\ to\ disable\ statystic\ box}}
+\DoxyCodeLine{00065\ \ \ \ \ }
+\DoxyCodeLine{00066\ \ \ \ \ TKey\ *key;}
+\DoxyCodeLine{00067\ \ \ \ \ TFile\ *infile\ =\ TFile::Open(fname1.Data());}
+\DoxyCodeLine{00068\ \ \ \ \ }
+\DoxyCodeLine{00069\ \ \ \ \ TFile\ *infile2\ =\ NULL;}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordflow}{if}(fname2\ !=\ \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_aff052b2c086f67396715402e80de5fd7}{DUMMYFILE}})infile2\ =\ TFile::Open(fname2.Data());}
+\DoxyCodeLine{00071\ \ \ \ \ TFile\ *infile3\ =\ NULL;}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordflow}{if}(fname3\ !=\ \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_aff052b2c086f67396715402e80de5fd7}{DUMMYFILE}})\ infile3\ =\ TFile::Open(fname3.Data());}
+\DoxyCodeLine{00073\ \ \ \ \ TFile\ *infile4\ =\ NULL;}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordflow}{if}(fname4\ !=\ \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_aff052b2c086f67396715402e80de5fd7}{DUMMYFILE}})\ infile4\ =\ TFile::Open(fname4.Data());}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00077\ \ \ \ \ TIter\ next(infile-\/>GetListOfKeys());}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordflow}{while}\ ((key\ =\ (TKey*)next()))\ \{\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ dirname\ =\ std::string(key-\/>GetName());\ \ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//KS:\ Script\ will\ work\ with\ LogL\ and\ Batched\_means,\ you\ can\ comment\ it\ if\ you\ are\ interested\ in\ it}}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\ (dirname\ ==\ \textcolor{stringliteral}{"{}LogL"{}})\ ||\ (dirname\ ==\ \textcolor{stringliteral}{"{}Batched\_means"{}})\ )\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//KS:\ Trace\ wo\ longer\ chains\ is\ super\ big,\ the\ way\ to\ avoid\ is\ to\ plot\ as\ png\ but\ I\ don't\ like\ png,}}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//keepp\ possiblilty\ to\ skip\ it}}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//if(\ (dirname\ ==\ "{}Trace"{})\ )\ continue;}}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ infile-\/>cd(dirname.c\_str());}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ TDirectory\ *dir;}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ dir=gDirectory;}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ TIter\ nextsub(gDirectory-\/>GetListOfKeys());}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ c1-\/>Print(Form(\textcolor{stringliteral}{"{}\%s.pdf["{}},dirname.c\_str()),\ \textcolor{stringliteral}{"{}pdf"{}});}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ TKey\ *subkey;}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ ((subkey\ =\ (TKey*)nextsub()))}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ name\ =\ std::string(subkey-\/>GetName());}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//KS:\ Skip\ flux\ params}}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((name.rfind(\textcolor{stringliteral}{"{}b\_"{}},\ 0)\ ==\ 0\ )\ \&\&\ !\mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_a0b9ef81bcc059ed6bb251bf8d72eee1c}{PlotFlux}})\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ name\ =\ dirname\ +\ \textcolor{stringliteral}{"{}/"{}}\ +\ name;}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout<<name<<std::endl;}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (std::string(subkey-\/>GetClassName())\ !=\ \textcolor{stringliteral}{"{}TH1D"{}})\{\textcolor{keywordflow}{continue};\}}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{std::cout\ <<\ \textcolor{stringliteral}{"{}continuing\ along\ my\ way"{}}\ <<\ std::endl;\}}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TH1D*\ blarb[4];}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Looking\ for\ "{}}\ <<\ name.c\_str()\ <<\ \textcolor{stringliteral}{"{}\ from\ file\ "{}}\ <<\ fname1.Data()\ <<\ std::endl;\ }
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ blarb[0]\ =\ (TH1D*)infile-\/>Get(name.c\_str())-\/>Clone();}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//KS:\ Some\ fixe\ pramas\ can\ go\ crazy}}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(TMath::IsNaN(blarb[0]-\/>GetBinContent(1))\ )\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//KS:\ This\ is\ unfortunately\ hardcoded,\ need\ to\ find\ better\ way\ to\ write\ this\ }}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//blarb[0]-\/>GetListOfFunctions()-\/>ls();}}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//delete\ blarb[0]-\/>GetListOfFunctions()-\/>FindObject("{}Fitter"{});}}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_ad6cc7e819155d937288181eb54bae3aa}{RemoveFitter}}(blarb[0]);}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ blarb[0]-\/>SetLineStyle(kSolid);}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ blarb[0]-\/>SetLineColor(kRed);}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ blarb[0]-\/>Draw();}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\ dirname\ ==\ \textcolor{stringliteral}{"{}AccProb"{}})\ blarb[0]-\/>GetYaxis()-\/>SetRangeUser(0,\ 1.0);}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\ name\ ==\ \textcolor{stringliteral}{"{}AccProb/AcceptanceProbability"{}}\ )\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(infile2\ !=\ NULL)}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ blarb[1]\ =\ (TH1D*)infile2-\/>Get(name.c\_str())-\/>Clone();}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ blarb[1]-\/>GetListOfFunctions()-\/>FindObject(\textcolor{stringliteral}{"{}Fitter"{}});}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ blarb[1]-\/>SetLineStyle(kDashed);}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ blarb[1]-\/>SetLineColor(kBlue);}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ blarb[1]-\/>Draw(\textcolor{stringliteral}{"{}same"{}});}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(infile3\ !=\ NULL)}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ blarb[2]\ =\ (TH1D*)infile3-\/>Get(name.c\_str())-\/>Clone();}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ blarb[2]-\/>GetListOfFunctions()-\/>FindObject(\textcolor{stringliteral}{"{}Fitter"{}});}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ blarb[2]-\/>SetLineStyle(kDotted\ );}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ blarb[2]-\/>SetLineColor(kGreen);}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ blarb[2]-\/>Draw(\textcolor{stringliteral}{"{}same"{}});}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(infile4\ !=\ NULL)}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ blarb[3]\ =\ (TH1D*)infile4-\/>Get(name.c\_str())-\/>Clone();}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ blarb[3]-\/>GetListOfFunctions()-\/>FindObject(\textcolor{stringliteral}{"{}Fitter"{}});}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ blarb[3]-\/>SetLineStyle(kDashDotted\ );}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ blarb[3]-\/>SetLineColor(kOrange);}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ blarb[3]-\/>Draw(\textcolor{stringliteral}{"{}same"{}});}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ c1-\/>Print(Form(\textcolor{stringliteral}{"{}\%s.pdf"{}},dirname.c\_str()),\ \textcolor{stringliteral}{"{}pdf"{}});}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ gDirectory-\/>cd(\textcolor{stringliteral}{"{}.."{}});}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ c1-\/>Print(Form(\textcolor{stringliteral}{"{}\%s.pdf]"{}},dirname.c\_str()),\ \textcolor{stringliteral}{"{}pdf"{}});}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ \ \ \ \ }
+\DoxyCodeLine{00151\ \ \ \ \ infile-\/>Close();}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordflow}{if}(infile2\ !=\ NULL)infile2-\/>Close();}
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordflow}{if}(infile3\ !=\ NULL)infile3-\/>Close();}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordflow}{if}(infile4\ !=\ NULL)infile4-\/>Close();}
+\DoxyCodeLine{00155\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{PlotMCMC__Diagnosis_8cpp_a077cef58096692740b5491f8b1bec715}\label{PlotMCMC__Diagnosis_8cpp_a077cef58096692740b5491f8b1bec715}} 
+\index{PlotMCMC\_Diagnosis.cpp@{PlotMCMC\_Diagnosis.cpp}!PlotAutoCorr@{PlotAutoCorr}}
+\index{PlotAutoCorr@{PlotAutoCorr}!PlotMCMC\_Diagnosis.cpp@{PlotMCMC\_Diagnosis.cpp}}
+\doxysubsubsection{\texorpdfstring{PlotAutoCorr()}{PlotAutoCorr()}}
+{\footnotesize\ttfamily void Plot\+Auto\+Corr (\begin{DoxyParamCaption}\item[{TString}]{fname1,  }\item[{TString}]{fname2,  }\item[{TString}]{fname3,  }\item[{TString}]{fname4 }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_source_l00157}{157}} of file \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_source}{Plot\+MCMC\+\_\+\+Diagnosis.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00158\ \{}
+\DoxyCodeLine{00159\ \ \ \ \ TString\ fname[4];}
+\DoxyCodeLine{00160\ \ \ \ \ fname[0]\ =\ fname1;\ fname[1]\ =\ fname2;\ fname[2]\ =\ fname3;\ fname[3]\ =\ fname4;}
+\DoxyCodeLine{00161\ \ \ \ \ Color\_t\ \mbox{\hyperlink{GetPostfitParamPlots_8cpp_ab2b28d9b5fd61ee45bbdfa307b969241}{PlotColor}}[4]=\{kRed,\ kBlue,\ kGreen,\ kOrange\};}
+\DoxyCodeLine{00162\ \ \ \ \ }
+\DoxyCodeLine{00163\ \ \ \ \ TFile\ *infile[4];}
+\DoxyCodeLine{00164\ \ \ \ \ infile[0]\ =\ TFile::Open(fname[0].Data());}
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{comment}{//KS"{}\ We\ need\ to\ check\ number\ of\ files\ to\ loop\ over\ in\ very\ lazy\ way}}
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keywordtype}{int}\ Nfiles\ =\ 1;}
+\DoxyCodeLine{00167\ \ \ \ \ }
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keywordflow}{if}(fname[1]\ !=\ \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_aff052b2c086f67396715402e80de5fd7}{DUMMYFILE}})\{\ infile[1]\ =\ TFile::Open(fname[1].Data());\ Nfiles++;\}}
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordflow}{if}(fname[2]\ !=\ \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_aff052b2c086f67396715402e80de5fd7}{DUMMYFILE}})\{\ infile[2]\ =\ TFile::Open(fname[2].Data());\ Nfiles++;\}}
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keywordflow}{if}(fname[3]\ !=\ \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_aff052b2c086f67396715402e80de5fd7}{DUMMYFILE}})\{\ infile[3]\ =\ TFile::Open(fname[3].Data());\ Nfiles++;\}}
+\DoxyCodeLine{00171\ \ \ \ \ }
+\DoxyCodeLine{00172\ \ \ \ \ TCanvas\ *c1\ =\ \textcolor{keyword}{new}\ TCanvas(\textcolor{stringliteral}{"{}c1"{}},\textcolor{stringliteral}{"{}\ "{}},\ 0,\ 0,\ 800,630);}
+\DoxyCodeLine{00173\ \ \ \ \ gStyle-\/>SetOptStat(0);\ \textcolor{comment}{//Set\ 0\ to\ disable\ statystic\ box}}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ }
+\DoxyCodeLine{00175\ \ \ \ \ c1-\/>Print(\textcolor{stringliteral}{"{}Auto\_Corr\_PerFile.pdf["{}},\ \textcolor{stringliteral}{"{}pdf"{}});}
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ ik\ =\ 0;\ ik<Nfiles;\ ik++)}
+\DoxyCodeLine{00177\ \ \ \ \ \{}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ TIter\ next(infile[ik]-\/>GetListOfKeys());}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ TKey*\ key;}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ ((key\ =\ (TKey*)next()))\ }
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \{\ }
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ dirname\ =\ std::string(key-\/>GetName());\ \ }
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//KS:\ Script\ We\ are\ only\ interested\ in\ auto\ corr}}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\ (dirname\ !=\ \textcolor{stringliteral}{"{}Auto\_corr"{}}))\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ infile[ik]-\/>cd(dirname.c\_str());}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ TDirectory\ *dir;}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ dir=gDirectory;}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ TIter\ nextsub(gDirectory-\/>GetListOfKeys());}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ TKey\ *subkey;}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ FirstTime\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ ((subkey\ =\ (TKey*)nextsub()))}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ name\ =\ std::string(subkey-\/>GetName());}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//KS:\ Skip\ flux\ params}}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((name.rfind(\textcolor{stringliteral}{"{}b\_"{}},\ 0)\ ==\ 0\ )\ \&\&\ !\mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_a0b9ef81bcc059ed6bb251bf8d72eee1c}{PlotFlux}})\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ name\ =\ dirname\ +\ \textcolor{stringliteral}{"{}/"{}}\ +\ name;}
+\DoxyCodeLine{00201\ }
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (std::string(subkey-\/>GetClassName())\ !=\ \textcolor{stringliteral}{"{}TH1D"{}})\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout<<name.c\_str()<<std::endl;}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TH1D*\ blarb\ =\ (TH1D*)infile[ik]-\/>Get(name.c\_str())-\/>Clone();}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//KS:\ Some\ fixe\ pramas\ can\ go\ crazy}}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(TMath::IsNaN(blarb-\/>GetBinContent(1)))\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//KS:\ This\ is\ unfortunately\ hardcoded,\ need\ to\ find\ better\ way\ to\ write\ this\ }}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//blarb[0]-\/>GetListOfFunctions()-\/>ls();}}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ blarb-\/>GetListOfFunctions()-\/>FindObject(\textcolor{stringliteral}{"{}Fitter"{}});}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ MinValue\ =\ \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_a81b2565c9b974c6f11088cef1c422bb3}{GetMinimumInRange}}(blarb,\ 0,\ 24000);}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(MinValue\ >=0.80)\ blarb-\/>SetLineColor(kRed);}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(MinValue\ >=0.40\ \&\&\ MinValue\ <0.80)\ blarb-\/>SetLineColor(kOrange);}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(MinValue\ >0.20\ \&\&\ MinValue\ <0.40)\ blarb-\/>SetLineColor(kYellow);}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(MinValue\ <=0.20)\ blarb-\/>SetLineColor(kGreen);}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ blarb-\/>GetXaxis()-\/>UnZoom();}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(FirstTime)\ blarb-\/>SetTitle(\ Form(\textcolor{stringliteral}{"{}Auto\_Corr\_\%s.pdf"{}},fname[ik].Data())\ );}
+\DoxyCodeLine{00220\ }
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ blarb-\/>SetLineStyle(kDashed);}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(FirstTime)\ blarb-\/>Draw();}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!FirstTime)\ blarb-\/>Draw(\textcolor{stringliteral}{"{}same"{}});}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ FirstTime\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ gDirectory-\/>cd(\textcolor{stringliteral}{"{}.."{}});}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ c1-\/>Print(\textcolor{stringliteral}{"{}Auto\_Corr\_PerFile.pdf"{}},\ \textcolor{stringliteral}{"{}pdf"{}});}
+\DoxyCodeLine{00230\ \ \ \ \ \}}
+\DoxyCodeLine{00231\ \ \ \ \ c1-\/>Print(\textcolor{stringliteral}{"{}Auto\_Corr\_PerFile.pdf]"{}},\ \textcolor{stringliteral}{"{}pdf"{}});}
+\DoxyCodeLine{00232\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{PlotMCMC__Diagnosis_8cpp_ade8095fd652fffdf2c7632812fafc4ed}\label{PlotMCMC__Diagnosis_8cpp_ade8095fd652fffdf2c7632812fafc4ed}} 
+\index{PlotMCMC\_Diagnosis.cpp@{PlotMCMC\_Diagnosis.cpp}!PlotMCMC\_Diagnosis@{PlotMCMC\_Diagnosis}}
+\index{PlotMCMC\_Diagnosis@{PlotMCMC\_Diagnosis}!PlotMCMC\_Diagnosis.cpp@{PlotMCMC\_Diagnosis.cpp}}
+\doxysubsubsection{\texorpdfstring{PlotMCMC\_Diagnosis()}{PlotMCMC\_Diagnosis()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily void Plot\+MCMC\+\_\+\+Diagnosis (\begin{DoxyParamCaption}\item[{TString}]{fname1 }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_source_l00033}{33}} of file \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_source}{Plot\+MCMC\+\_\+\+Diagnosis.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00034\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_a70a8847717dd98bb61d4be6af69dbe03}{MakePlot}}(fname1,\ \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_aff052b2c086f67396715402e80de5fd7}{DUMMYFILE}},\ \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_aff052b2c086f67396715402e80de5fd7}{DUMMYFILE}},\ \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_aff052b2c086f67396715402e80de5fd7}{DUMMYFILE}});\ }
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_a077cef58096692740b5491f8b1bec715}{PlotAutoCorr}}(fname1,\ \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_aff052b2c086f67396715402e80de5fd7}{DUMMYFILE}},\ \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_aff052b2c086f67396715402e80de5fd7}{DUMMYFILE}},\ \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_aff052b2c086f67396715402e80de5fd7}{DUMMYFILE}});}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00038\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{PlotMCMC__Diagnosis_8cpp_a4ef987d45bb730d5c3f870a53c2a9b75}\label{PlotMCMC__Diagnosis_8cpp_a4ef987d45bb730d5c3f870a53c2a9b75}} 
+\index{PlotMCMC\_Diagnosis.cpp@{PlotMCMC\_Diagnosis.cpp}!PlotMCMC\_Diagnosis@{PlotMCMC\_Diagnosis}}
+\index{PlotMCMC\_Diagnosis@{PlotMCMC\_Diagnosis}!PlotMCMC\_Diagnosis.cpp@{PlotMCMC\_Diagnosis.cpp}}
+\doxysubsubsection{\texorpdfstring{PlotMCMC\_Diagnosis()}{PlotMCMC\_Diagnosis()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily void Plot\+MCMC\+\_\+\+Diagnosis (\begin{DoxyParamCaption}\item[{TString}]{fname1,  }\item[{TString}]{fname2 }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_source_l00040}{40}} of file \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_source}{Plot\+MCMC\+\_\+\+Diagnosis.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00041\ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_a70a8847717dd98bb61d4be6af69dbe03}{MakePlot}}(fname1,\ fname2,\ \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_aff052b2c086f67396715402e80de5fd7}{DUMMYFILE}}\ ,\mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_aff052b2c086f67396715402e80de5fd7}{DUMMYFILE}});}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_a077cef58096692740b5491f8b1bec715}{PlotAutoCorr}}(fname1,\ fname2,\ \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_aff052b2c086f67396715402e80de5fd7}{DUMMYFILE}},\ \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_aff052b2c086f67396715402e80de5fd7}{DUMMYFILE}});}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00045\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{PlotMCMC__Diagnosis_8cpp_a57ab6e5dce810b6c20c75db268c20a32}\label{PlotMCMC__Diagnosis_8cpp_a57ab6e5dce810b6c20c75db268c20a32}} 
+\index{PlotMCMC\_Diagnosis.cpp@{PlotMCMC\_Diagnosis.cpp}!PlotMCMC\_Diagnosis@{PlotMCMC\_Diagnosis}}
+\index{PlotMCMC\_Diagnosis@{PlotMCMC\_Diagnosis}!PlotMCMC\_Diagnosis.cpp@{PlotMCMC\_Diagnosis.cpp}}
+\doxysubsubsection{\texorpdfstring{PlotMCMC\_Diagnosis()}{PlotMCMC\_Diagnosis()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily void Plot\+MCMC\+\_\+\+Diagnosis (\begin{DoxyParamCaption}\item[{TString}]{fname1,  }\item[{TString}]{fname2,  }\item[{TString}]{fname3 }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_source_l00047}{47}} of file \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_source}{Plot\+MCMC\+\_\+\+Diagnosis.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00048\ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_a70a8847717dd98bb61d4be6af69dbe03}{MakePlot}}(fname1,\ fname2,\ fname3,\ \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_aff052b2c086f67396715402e80de5fd7}{DUMMYFILE}});}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_a077cef58096692740b5491f8b1bec715}{PlotAutoCorr}}(fname1,\ fname2,\ fname3,\ \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_aff052b2c086f67396715402e80de5fd7}{DUMMYFILE}});}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00052\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{PlotMCMC__Diagnosis_8cpp_a85c947865f19a904527c0992b94e8d1a}\label{PlotMCMC__Diagnosis_8cpp_a85c947865f19a904527c0992b94e8d1a}} 
+\index{PlotMCMC\_Diagnosis.cpp@{PlotMCMC\_Diagnosis.cpp}!PlotMCMC\_Diagnosis@{PlotMCMC\_Diagnosis}}
+\index{PlotMCMC\_Diagnosis@{PlotMCMC\_Diagnosis}!PlotMCMC\_Diagnosis.cpp@{PlotMCMC\_Diagnosis.cpp}}
+\doxysubsubsection{\texorpdfstring{PlotMCMC\_Diagnosis()}{PlotMCMC\_Diagnosis()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily void Plot\+MCMC\+\_\+\+Diagnosis (\begin{DoxyParamCaption}\item[{TString}]{fname1,  }\item[{TString}]{fname2,  }\item[{TString}]{fname3,  }\item[{TString}]{fname4 }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_source_l00054}{54}} of file \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_source}{Plot\+MCMC\+\_\+\+Diagnosis.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00055\ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_a70a8847717dd98bb61d4be6af69dbe03}{MakePlot}}(fname1,\ fname2,\ fname3,\ fname4);}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_a077cef58096692740b5491f8b1bec715}{PlotAutoCorr}}(fname1,\ fname2,\ fname3,\ fname4);}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00059\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{PlotMCMC__Diagnosis_8cpp_ad6cc7e819155d937288181eb54bae3aa}\label{PlotMCMC__Diagnosis_8cpp_ad6cc7e819155d937288181eb54bae3aa}} 
+\index{PlotMCMC\_Diagnosis.cpp@{PlotMCMC\_Diagnosis.cpp}!RemoveFitter@{RemoveFitter}}
+\index{RemoveFitter@{RemoveFitter}!PlotMCMC\_Diagnosis.cpp@{PlotMCMC\_Diagnosis.cpp}}
+\doxysubsubsection{\texorpdfstring{RemoveFitter()}{RemoveFitter()}}
+{\footnotesize\ttfamily void Remove\+Fitter (\begin{DoxyParamCaption}\item[{TH1D $\ast$}]{hist }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_source_l00024}{24}} of file \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_source}{Plot\+MCMC\+\_\+\+Diagnosis.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025\ \{}
+\DoxyCodeLine{00026\ \ \ TList\ *listOfFunctions\ =\ hist-\/>GetListOfFunctions();}
+\DoxyCodeLine{00027\ \ \ TF1\ *fitter\ =\ \textcolor{keyword}{dynamic\_cast<}TF1*\textcolor{keyword}{>}(listOfFunctions-\/>FindObject(\textcolor{stringliteral}{"{}Fitter"{}}));}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ listOfFunctions-\/>Remove(fitter);}
+\DoxyCodeLine{00030\ \ \ \textcolor{keyword}{delete}\ fitter;}
+\DoxyCodeLine{00031\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{PlotMCMC__Diagnosis_8cpp_aff052b2c086f67396715402e80de5fd7}\label{PlotMCMC__Diagnosis_8cpp_aff052b2c086f67396715402e80de5fd7}} 
+\index{PlotMCMC\_Diagnosis.cpp@{PlotMCMC\_Diagnosis.cpp}!DUMMYFILE@{DUMMYFILE}}
+\index{DUMMYFILE@{DUMMYFILE}!PlotMCMC\_Diagnosis.cpp@{PlotMCMC\_Diagnosis.cpp}}
+\doxysubsubsection{\texorpdfstring{DUMMYFILE}{DUMMYFILE}}
+{\footnotesize\ttfamily TString DUMMYFILE = \char`\"{}Kill\+Me\+Please\char`\"{}}
+
+
+
+Definition at line \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_source_l00021}{21}} of file \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_source}{Plot\+MCMC\+\_\+\+Diagnosis.\+cpp}}.
+
+\mbox{\Hypertarget{PlotMCMC__Diagnosis_8cpp_a0b9ef81bcc059ed6bb251bf8d72eee1c}\label{PlotMCMC__Diagnosis_8cpp_a0b9ef81bcc059ed6bb251bf8d72eee1c}} 
+\index{PlotMCMC\_Diagnosis.cpp@{PlotMCMC\_Diagnosis.cpp}!PlotFlux@{PlotFlux}}
+\index{PlotFlux@{PlotFlux}!PlotMCMC\_Diagnosis.cpp@{PlotMCMC\_Diagnosis.cpp}}
+\doxysubsubsection{\texorpdfstring{PlotFlux}{PlotFlux}}
+{\footnotesize\ttfamily bool Plot\+Flux = false}
+
+
+
+Definition at line \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_source_l00022}{22}} of file \mbox{\hyperlink{PlotMCMC__Diagnosis_8cpp_source}{Plot\+MCMC\+\_\+\+Diagnosis.\+cpp}}.
+

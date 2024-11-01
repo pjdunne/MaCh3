@@ -1,0 +1,631 @@
+\hypertarget{structMaCh3Plotting_1_1InputFile}{}\doxysection{Ma\+Ch3\+Plotting\+::Input\+File Struct Reference}
+\label{structMaCh3Plotting_1_1InputFile}\index{MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}}
+
+
+{\ttfamily \#include $<$/home/runner/work/\+Ma\+Ch3/\+Ma\+Ch3/plotting/plotting\+Utils/input\+Manager.\+h$>$}
+
+
+
+Collaboration diagram for Ma\+Ch3\+Plotting\+::Input\+File\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structMaCh3Plotting_1_1InputFile__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_a527fa8b92b688c79b14aefcb09418c3f}{Input\+File}} (const std\+::string \&f\+Name)
+\begin{DoxyCompactList}\small\item\em Struct which wraps around the actual input file and also holds general information, and data from the file to be used by other classes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_a56fb9148b809f59df92e0dd6424cc589}{Input\+File}} (const \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile}{Input\+File}} \&)=delete
+\item 
+\mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_adbd21c3ed9c5d161c61e661ad9058ae3}{Input\+File}} (\mbox{\hyperlink{structMaCh3Plotting_1_1InputFile}{Input\+File}} \&\&)=default
+\item 
+\mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_a64c6c4553a2fcc4fb85a243c0b1736f9}{$\sim$\+Input\+File}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_ab06af1ffed29a57d47eb616b7ece91be}{Close}} ()
+\begin{DoxyCompactList}\small\item\em Close out the underlying root file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_a4b3753ca1fa1a399e519aa15bca8658a}{Summarise}} () const
+\begin{DoxyCompactList}\small\item\em Print out a small summary of what is contained in the file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_a0897b76fdbfc674ed94da1d2b4adb0a2}{Dump}} () const
+\begin{DoxyCompactList}\small\item\em Print out a more detailed summary of what is contained in the file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMCMCProcessor}{MCMCProcessor}} $\ast$ \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_a78420e7a9d73500f257d5a92437556f8}{mcmc\+Proc}}
+\begin{DoxyCompactList}\small\item\em ptr to an \mbox{\hyperlink{classMCMCProcessor}{MCMCProcessor}} instance to be used if this is a Ma\+Ch3 input file \end{DoxyCompactList}\item 
+TTree $\ast$ \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_a231dcc94331cbb1bc0947ed085292516}{posterior\+Tree}}
+\item 
+std\+::shared\+\_\+ptr$<$ TFile $>$ \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_a11c074dd45647dd2957987f8b55f9d73}{file}}
+\begin{DoxyCompactList}\small\item\em Pointer to the underlying file for this \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile}{Input\+File}} instance. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_a076134d08d2b54e29e76431a42267a52}{file\+Name}}
+\begin{DoxyCompactList}\small\item\em The location of the underlying file. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_a6ad1094c5fb3dcd4479ef8fdf378370c}{fitter}}
+\begin{DoxyCompactList}\small\item\em Which fitter this file came from, detected by \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_aad778d8694f9b581d09279584733f6ea}{Input\+Manager\+::fill\+File\+Info()}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_a7491ea81990748b02402796ee512f518}{has\+LLHScans}}
+\begin{DoxyCompactList}\small\item\em Whether or not this file contains any log likelihood scans. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_a4244508b3b2f75b4e48a340684ddf3bc}{available\+Params\+\_\+\+LLH}}
+\begin{DoxyCompactList}\small\item\em The parameters that this file contains likelihood scans for. \end{DoxyCompactList}\item 
+std\+::unordered\+\_\+map$<$ std\+::string, bool $>$ \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_a28fa5364bec393769892aae24dfe32bb}{has\+LLHScans\+\_\+map}}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, std\+::unordered\+\_\+map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ TGraph $>$ $>$ $>$ \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_a6a2aa0adbbb56a35805fe8cfd8cb167e}{LLHScans\+\_\+map}}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, std\+::unordered\+\_\+map$<$ std\+::string, bool $>$ $>$ \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_a38d2fe169ea4c25f727017346998b49d}{available\+Params\+\_\+map\+\_\+\+LLH}}
+\item 
+bool \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_aaa4547bef8273c260886b1faeae0a42e}{has\+LLHScans\+By\+Sample}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_ae82ebcfa48d2571048a9f099c6697ac1}{available\+Samples\+\_\+\+LLH}}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, std\+::unordered\+\_\+map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ TGraph $>$ $>$ $>$ \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_aa64f3b1a441f1727747166f4a4991a2c}{LLHScans\+By\+Sample\+\_\+map}}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, std\+::unordered\+\_\+map$<$ std\+::string, bool $>$ $>$ \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_ac3555fe306953b52d3ba2d4ecc2d2dfe}{available\+Params\+\_\+map\+\_\+\+LLHBy\+Sample}}
+\item 
+bool \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_aad5e99c863e5992fdd04aafe3a1b6f84}{has\+Post\+Fit\+Errors}}
+\begin{DoxyCompactList}\small\item\em Whether or not this file contains any processed post fit errors. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_aaeae1c258a81785847831e0f3b5beae9}{available\+Params\+\_\+post\+Fit\+Errors}}
+\begin{DoxyCompactList}\small\item\em The parameters that this file has post fit errors for. \end{DoxyCompactList}\item 
+std\+::unordered\+\_\+map$<$ std\+::string, std\+::unordered\+\_\+map$<$ std\+::string, double $>$ $>$ \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_a79e1b14e612e3cb027688d47599f57fb}{post\+Fit\+Errors}}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, std\+::unordered\+\_\+map$<$ std\+::string, double $>$ $>$ \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_a9fda9461129b12fd18c6aad0aae12241}{post\+Fit\+Values}}
+\item 
+std\+::string \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_a4a4c62bb5c0978571d11356b77a28e3e}{default\+Error\+Type}}
+\item 
+bool \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_a76fd425b6c73e8b8b2653654fb17eaf5}{has1d\+Posteriors}}
+\begin{DoxyCompactList}\small\item\em Whether or not the file has processed 1d posteriors. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_ade85f7f9bdbbb5b3f4275dabaf2ccb11}{has\+MCMCchain}}
+\begin{DoxyCompactList}\small\item\em Whether or not the file has unprocessed MCMC chain steps. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_ae00097a495ed0cc29a0858e1918fb9f7}{n\+MCMCentries}}
+\begin{DoxyCompactList}\small\item\em The number of steps in the MCMC chain. \end{DoxyCompactList}\item 
+std\+::unordered\+\_\+map$<$ std\+::string, bool $>$ \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_a48d4c6b8411f482e0920dce2bb31fae8}{available\+Params\+\_\+map\+\_\+\+MCMCchain}}
+\begin{DoxyCompactList}\small\item\em whether or not specific parameters exist in the MCMC posterior chain \end{DoxyCompactList}\item 
+std\+::unordered\+\_\+map$<$ std\+::string, bool $>$ \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_a9fa1b3ae452eeef0c4ffed2eed65ddfc}{available\+Params\+\_\+map\+\_\+1d\+Posteriors}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_aea4557f61c0ed6c2aae532b270e431c5}{available\+Params\+\_\+1d\+Posteriors}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_a85f4a66342b512431b1fabb8253aeaa9}{available\+Params\+\_\+\+MCMCchain}}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, double $\ast$ $>$ \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_ad0366c41862bce9e38ecc8eea890bf05}{MCMCstep\+Params\+Map}}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, int $>$ \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_ab3bf09dd833f8d8a73a2273c0a1cc113}{MCMCstep\+Tree\+Indices\+Map}}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ TGraph $>$ $>$ \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_a784de266deed02c52fda2900b420e433}{posteriors1d\+\_\+map}}
+\item 
+bool \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_a7a953fd14a8a781ab4f0c53e2c1e13b7}{has\+Sigma\+Vars}}
+\begin{DoxyCompactList}\small\item\em Whether or not this file contains Sigma variations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00025}{25}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structMaCh3Plotting_1_1InputFile_a527fa8b92b688c79b14aefcb09418c3f}\label{structMaCh3Plotting_1_1InputFile_a527fa8b92b688c79b14aefcb09418c3f}} 
+\index{MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}!InputFile@{InputFile}}
+\index{InputFile@{InputFile}!MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}}
+\doxysubsubsection{\texorpdfstring{InputFile()}{InputFile()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Ma\+Ch3\+Plotting\+::\+Input\+File\+::\+Input\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{f\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Struct which wraps around the actual input file and also holds general information, and data from the file to be used by other classes. 
+
+This is just a little guy thats intended to be just a plain old data type which simply holds and organises information and data read from the underlying input file, just some methods to inspect the contents of the object. As such it does not implement methods to manipulate such data, which is all done via the Input\+Manager() class. Reason for this object is to try to smooth over the cracks that come from very different file structures used by different fitters and provide a common format to be used for plot making. Intended use of this objects is only via \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager}{Input\+Manager}} which contains the methods to fill and manipulate it.
+
+Create \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile}{Input\+File}} instance based on a specified file. 
+\begin{DoxyParams}{Parameters}
+{\em f\+Name} & The name of the file to open. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The constructed \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile}{Input\+File}}.
+\end{DoxyReturn}
+Constructor which opens the specified file and sets default values for information parameters. Currently this assumes the specified file is a root file, and opens it as a TFile. In future it would be nice to extend this to be able to read different types of files, perhaps also moving the opening of the file to a different place to keep this struct nice and simple, perhaps into the \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager}{Input\+Manager}}. 
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00045}{45}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_a076134d08d2b54e29e76431a42267a52}{fileName}}\ =\ fName;}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_a11c074dd45647dd2957987f8b55f9d73}{file}}\ =\ std::make\_shared<TFile>(\mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_a076134d08d2b54e29e76431a42267a52}{fileName}}.c\_str());}
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_a7491ea81990748b02402796ee512f518}{hasLLHScans}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_aad5e99c863e5992fdd04aafe3a1b6f84}{hasPostFitErrors}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_a7a953fd14a8a781ab4f0c53e2c1e13b7}{hasSigmaVars}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordflow}{for}\ (std::string\ LLHType\ :\ \{\textcolor{stringliteral}{"{}sample"{}},\ \textcolor{stringliteral}{"{}penalty"{}},\ \textcolor{stringliteral}{"{}total"{}}\})}
+\DoxyCodeLine{00054\ \ \ \ \ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_a28fa5364bec393769892aae24dfe32bb}{hasLLHScans\_map}}[LLHType]\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00056\ \ \ \ \ \}}
+\DoxyCodeLine{00057\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{structMaCh3Plotting_1_1InputFile_a56fb9148b809f59df92e0dd6424cc589}\label{structMaCh3Plotting_1_1InputFile_a56fb9148b809f59df92e0dd6424cc589}} 
+\index{MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}!InputFile@{InputFile}}
+\index{InputFile@{InputFile}!MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}}
+\doxysubsubsection{\texorpdfstring{InputFile()}{InputFile()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Ma\+Ch3\+Plotting\+::\+Input\+File\+::\+Input\+File (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile}{Input\+File}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{structMaCh3Plotting_1_1InputFile_adbd21c3ed9c5d161c61e661ad9058ae3}\label{structMaCh3Plotting_1_1InputFile_adbd21c3ed9c5d161c61e661ad9058ae3}} 
+\index{MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}!InputFile@{InputFile}}
+\index{InputFile@{InputFile}!MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}}
+\doxysubsubsection{\texorpdfstring{InputFile()}{InputFile()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Ma\+Ch3\+Plotting\+::\+Input\+File\+::\+Input\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMaCh3Plotting_1_1InputFile}{Input\+File}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{structMaCh3Plotting_1_1InputFile_a64c6c4553a2fcc4fb85a243c0b1736f9}\label{structMaCh3Plotting_1_1InputFile_a64c6c4553a2fcc4fb85a243c0b1736f9}} 
+\index{MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}!````~InputFile@{$\sim$InputFile}}
+\index{````~InputFile@{$\sim$InputFile}!MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}}
+\doxysubsubsection{\texorpdfstring{$\sim$InputFile()}{~InputFile()}}
+{\footnotesize\ttfamily Ma\+Ch3\+Plotting\+::\+Input\+File\+::$\sim$\+Input\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destructor. 
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00069}{69}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}\#\#\#\#\#\#\ Deleting\ InputFile\ Object\ holding\ file\ \#\#\#\#\#\#"{}});}
+\DoxyCodeLine{00071\ \ \ \ \ \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_a6a2aa0adbbb56a35805fe8cfd8cb167e}{LLHScans\_map}}.clear();}
+\DoxyCodeLine{00072\ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structMaCh3Plotting_1_1InputFile_ab06af1ffed29a57d47eb616b7ece91be}\label{structMaCh3Plotting_1_1InputFile_ab06af1ffed29a57d47eb616b7ece91be}} 
+\index{MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}!Close@{Close}}
+\index{Close@{Close}!MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}}
+\doxysubsubsection{\texorpdfstring{Close()}{Close()}}
+{\footnotesize\ttfamily void Ma\+Ch3\+Plotting\+::\+Input\+File\+::\+Close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Close out the underlying root file. 
+
+Should only be done once this \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile}{Input\+File}} is {\itshape done} with, should only really ever be done by the \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager}{Input\+Manager}} that holds this object ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00076}{76}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}[InputFile]\ closing\ file\ \{\}"{}},\ \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_a076134d08d2b54e29e76431a42267a52}{fileName}});}
+\DoxyCodeLine{00078\ \ \ \ \ \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_a11c074dd45647dd2957987f8b55f9d73}{file}}-\/>Close();}
+\DoxyCodeLine{00079\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{structMaCh3Plotting_1_1InputFile_a0897b76fdbfc674ed94da1d2b4adb0a2}\label{structMaCh3Plotting_1_1InputFile_a0897b76fdbfc674ed94da1d2b4adb0a2}} 
+\index{MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}!Dump@{Dump}}
+\index{Dump@{Dump}!MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}}
+\doxysubsubsection{\texorpdfstring{Dump()}{Dump()}}
+{\footnotesize\ttfamily void Ma\+Ch3\+Plotting\+::\+Input\+File\+::\+Dump (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Print out a more detailed summary of what is contained in the file. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000018}{Todo}}]Same as for \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_a4b3753ca1fa1a399e519aa15bca8658a}{Summarise()}}, could add a check that the file info has actually been filled. \end{DoxyRefDesc}
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00094}{94}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00095\ \ \ \ \ \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_a4b3753ca1fa1a399e519aa15bca8658a}{Summarise}}();}
+\DoxyCodeLine{00096\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Available\ LLH\ parameters:\ "{}});}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordflow}{for}\ (std::string\ paramName\ :\ \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_a4244508b3b2f75b4e48a340684ddf3bc}{availableParams\_LLH}})}
+\DoxyCodeLine{00098\ \ \ \ \ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}\ \ \{\}"{}},\ paramName);}
+\DoxyCodeLine{00100\ \ \ \ \ \}}
+\DoxyCodeLine{00101\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Available\ Post\ Fit\ errors:\ "{}});}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordflow}{for}\ (std::string\ paramName\ :\ \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_aaeae1c258a81785847831e0f3b5beae9}{availableParams\_postFitErrors}})}
+\DoxyCodeLine{00103\ \ \ \ \ \{}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}\ \ \{\}"{}},\ paramName);}
+\DoxyCodeLine{00105\ \ \ \ \ \}}
+\DoxyCodeLine{00106\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{structMaCh3Plotting_1_1InputFile_a4b3753ca1fa1a399e519aa15bca8658a}\label{structMaCh3Plotting_1_1InputFile_a4b3753ca1fa1a399e519aa15bca8658a}} 
+\index{MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}!Summarise@{Summarise}}
+\index{Summarise@{Summarise}!MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}}
+\doxysubsubsection{\texorpdfstring{Summarise()}{Summarise()}}
+{\footnotesize\ttfamily void Ma\+Ch3\+Plotting\+::\+Input\+File\+::\+Summarise (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Print out a small summary of what is contained in the file. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000017}{Todo}}]Could add some flag to this to check if the relevant information has actually been filled already and if not give some warning or print only some of the values. \end{DoxyRefDesc}
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00084}{84}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00085\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}\#\#\#\ Input\ File\ Summary\ \#\#\#"{}});}
+\DoxyCodeLine{00086\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}\ \ Root\ file\ loc:\ \{\}"{}},\ \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_a076134d08d2b54e29e76431a42267a52}{fileName}});}
+\DoxyCodeLine{00087\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}\ \ Came\ from\ fitter:\ \{\}"{}},\ \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_a6ad1094c5fb3dcd4479ef8fdf378370c}{fitter}});}
+\DoxyCodeLine{00088\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}\ \ N\ LLH\ scans:\ \{\}"{}},\ \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_a4244508b3b2f75b4e48a340684ddf3bc}{availableParams\_LLH}}.size());}
+\DoxyCodeLine{00089\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}\ \ N\ Processed\ post\ fit\ errors:\ \{\}"{}},\ \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_aaeae1c258a81785847831e0f3b5beae9}{availableParams\_postFitErrors}}.size());}
+\DoxyCodeLine{00090\ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structMaCh3Plotting_1_1InputFile_aea4557f61c0ed6c2aae532b270e431c5}\label{structMaCh3Plotting_1_1InputFile_aea4557f61c0ed6c2aae532b270e431c5}} 
+\index{MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}!availableParams\_1dPosteriors@{availableParams\_1dPosteriors}}
+\index{availableParams\_1dPosteriors@{availableParams\_1dPosteriors}!MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}}
+\doxysubsubsection{\texorpdfstring{availableParams\_1dPosteriors}{availableParams\_1dPosteriors}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ Ma\+Ch3\+Plotting\+::\+Input\+File\+::available\+Params\+\_\+1d\+Posteriors}
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00180}{180}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+\mbox{\Hypertarget{structMaCh3Plotting_1_1InputFile_a4244508b3b2f75b4e48a340684ddf3bc}\label{structMaCh3Plotting_1_1InputFile_a4244508b3b2f75b4e48a340684ddf3bc}} 
+\index{MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}!availableParams\_LLH@{availableParams\_LLH}}
+\index{availableParams\_LLH@{availableParams\_LLH}!MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}}
+\doxysubsubsection{\texorpdfstring{availableParams\_LLH}{availableParams\_LLH}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ Ma\+Ch3\+Plotting\+::\+Input\+File\+::available\+Params\+\_\+\+LLH}
+
+
+
+The parameters that this file contains likelihood scans for. 
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00127}{127}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+\mbox{\Hypertarget{structMaCh3Plotting_1_1InputFile_a9fa1b3ae452eeef0c4ffed2eed65ddfc}\label{structMaCh3Plotting_1_1InputFile_a9fa1b3ae452eeef0c4ffed2eed65ddfc}} 
+\index{MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}!availableParams\_map\_1dPosteriors@{availableParams\_map\_1dPosteriors}}
+\index{availableParams\_map\_1dPosteriors@{availableParams\_map\_1dPosteriors}!MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}}
+\doxysubsubsection{\texorpdfstring{availableParams\_map\_1dPosteriors}{availableParams\_map\_1dPosteriors}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, bool$>$ Ma\+Ch3\+Plotting\+::\+Input\+File\+::available\+Params\+\_\+map\+\_\+1d\+Posteriors}
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00178}{178}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+\mbox{\Hypertarget{structMaCh3Plotting_1_1InputFile_a38d2fe169ea4c25f727017346998b49d}\label{structMaCh3Plotting_1_1InputFile_a38d2fe169ea4c25f727017346998b49d}} 
+\index{MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}!availableParams\_map\_LLH@{availableParams\_map\_LLH}}
+\index{availableParams\_map\_LLH@{availableParams\_map\_LLH}!MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}}
+\doxysubsubsection{\texorpdfstring{availableParams\_map\_LLH}{availableParams\_map\_LLH}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, std\+::unordered\+\_\+map$<$std\+::string, bool$>$ $>$ Ma\+Ch3\+Plotting\+::\+Input\+File\+::available\+Params\+\_\+map\+\_\+\+LLH}
+
+Whether this file has LLH scans of a particular type for a particular parameter, organised as available\+Params\+\_\+map\+\_\+\+LLH.\+at(\+LLHType).at(parameter) 
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00135}{135}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+\mbox{\Hypertarget{structMaCh3Plotting_1_1InputFile_ac3555fe306953b52d3ba2d4ecc2d2dfe}\label{structMaCh3Plotting_1_1InputFile_ac3555fe306953b52d3ba2d4ecc2d2dfe}} 
+\index{MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}!availableParams\_map\_LLHBySample@{availableParams\_map\_LLHBySample}}
+\index{availableParams\_map\_LLHBySample@{availableParams\_map\_LLHBySample}!MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}}
+\doxysubsubsection{\texorpdfstring{availableParams\_map\_LLHBySample}{availableParams\_map\_LLHBySample}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, std\+::unordered\+\_\+map$<$std\+::string, bool$>$ $>$ Ma\+Ch3\+Plotting\+::\+Input\+File\+::available\+Params\+\_\+map\+\_\+\+LLHBy\+Sample}
+
+Whether this file has LLH scans of a particular type for a particular parameter, organised as available\+Params\+\_\+map\+\_\+\+LLH.\+at(sample).at(parameter) 
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00151}{151}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+\mbox{\Hypertarget{structMaCh3Plotting_1_1InputFile_a48d4c6b8411f482e0920dce2bb31fae8}\label{structMaCh3Plotting_1_1InputFile_a48d4c6b8411f482e0920dce2bb31fae8}} 
+\index{MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}!availableParams\_map\_MCMCchain@{availableParams\_map\_MCMCchain}}
+\index{availableParams\_map\_MCMCchain@{availableParams\_map\_MCMCchain}!MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}}
+\doxysubsubsection{\texorpdfstring{availableParams\_map\_MCMCchain}{availableParams\_map\_MCMCchain}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, bool$>$ Ma\+Ch3\+Plotting\+::\+Input\+File\+::available\+Params\+\_\+map\+\_\+\+MCMCchain}
+
+
+
+whether or not specific parameters exist in the MCMC posterior chain 
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00177}{177}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+\mbox{\Hypertarget{structMaCh3Plotting_1_1InputFile_a85f4a66342b512431b1fabb8253aeaa9}\label{structMaCh3Plotting_1_1InputFile_a85f4a66342b512431b1fabb8253aeaa9}} 
+\index{MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}!availableParams\_MCMCchain@{availableParams\_MCMCchain}}
+\index{availableParams\_MCMCchain@{availableParams\_MCMCchain}!MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}}
+\doxysubsubsection{\texorpdfstring{availableParams\_MCMCchain}{availableParams\_MCMCchain}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ Ma\+Ch3\+Plotting\+::\+Input\+File\+::available\+Params\+\_\+\+MCMCchain}
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00181}{181}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+\mbox{\Hypertarget{structMaCh3Plotting_1_1InputFile_aaeae1c258a81785847831e0f3b5beae9}\label{structMaCh3Plotting_1_1InputFile_aaeae1c258a81785847831e0f3b5beae9}} 
+\index{MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}!availableParams\_postFitErrors@{availableParams\_postFitErrors}}
+\index{availableParams\_postFitErrors@{availableParams\_postFitErrors}!MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}}
+\doxysubsubsection{\texorpdfstring{availableParams\_postFitErrors}{availableParams\_postFitErrors}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ Ma\+Ch3\+Plotting\+::\+Input\+File\+::available\+Params\+\_\+post\+Fit\+Errors}
+
+
+
+The parameters that this file has post fit errors for. 
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00158}{158}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+\mbox{\Hypertarget{structMaCh3Plotting_1_1InputFile_ae82ebcfa48d2571048a9f099c6697ac1}\label{structMaCh3Plotting_1_1InputFile_ae82ebcfa48d2571048a9f099c6697ac1}} 
+\index{MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}!availableSamples\_LLH@{availableSamples\_LLH}}
+\index{availableSamples\_LLH@{availableSamples\_LLH}!MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}}
+\doxysubsubsection{\texorpdfstring{availableSamples\_LLH}{availableSamples\_LLH}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ Ma\+Ch3\+Plotting\+::\+Input\+File\+::available\+Samples\+\_\+\+LLH}
+
+The samples that this file contains individual likelihood scans for. 
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00145}{145}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+\mbox{\Hypertarget{structMaCh3Plotting_1_1InputFile_a4a4c62bb5c0978571d11356b77a28e3e}\label{structMaCh3Plotting_1_1InputFile_a4a4c62bb5c0978571d11356b77a28e3e}} 
+\index{MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}!defaultErrorType@{defaultErrorType}}
+\index{defaultErrorType@{defaultErrorType}!MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}}
+\doxysubsubsection{\texorpdfstring{defaultErrorType}{defaultErrorType}}
+{\footnotesize\ttfamily std\+::string Ma\+Ch3\+Plotting\+::\+Input\+File\+::default\+Error\+Type}
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00165}{165}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+\mbox{\Hypertarget{structMaCh3Plotting_1_1InputFile_a11c074dd45647dd2957987f8b55f9d73}\label{structMaCh3Plotting_1_1InputFile_a11c074dd45647dd2957987f8b55f9d73}} 
+\index{MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}!file@{file}}
+\index{file@{file}!MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}}
+\doxysubsubsection{\texorpdfstring{file}{file}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$TFile$>$ Ma\+Ch3\+Plotting\+::\+Input\+File\+::file}
+
+
+
+Pointer to the underlying file for this \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile}{Input\+File}} instance. 
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00112}{112}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+\mbox{\Hypertarget{structMaCh3Plotting_1_1InputFile_a076134d08d2b54e29e76431a42267a52}\label{structMaCh3Plotting_1_1InputFile_a076134d08d2b54e29e76431a42267a52}} 
+\index{MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}!fileName@{fileName}}
+\index{fileName@{fileName}!MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}}
+\doxysubsubsection{\texorpdfstring{fileName}{fileName}}
+{\footnotesize\ttfamily std\+::string Ma\+Ch3\+Plotting\+::\+Input\+File\+::file\+Name}
+
+
+
+The location of the underlying file. 
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00113}{113}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+\mbox{\Hypertarget{structMaCh3Plotting_1_1InputFile_a6ad1094c5fb3dcd4479ef8fdf378370c}\label{structMaCh3Plotting_1_1InputFile_a6ad1094c5fb3dcd4479ef8fdf378370c}} 
+\index{MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}!fitter@{fitter}}
+\index{fitter@{fitter}!MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}}
+\doxysubsubsection{\texorpdfstring{fitter}{fitter}}
+{\footnotesize\ttfamily std\+::string Ma\+Ch3\+Plotting\+::\+Input\+File\+::fitter}
+
+
+
+Which fitter this file came from, detected by \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_aad778d8694f9b581d09279584733f6ea}{Input\+Manager\+::fill\+File\+Info()}}. 
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00115}{115}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+\mbox{\Hypertarget{structMaCh3Plotting_1_1InputFile_a76fd425b6c73e8b8b2653654fb17eaf5}\label{structMaCh3Plotting_1_1InputFile_a76fd425b6c73e8b8b2653654fb17eaf5}} 
+\index{MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}!has1dPosteriors@{has1dPosteriors}}
+\index{has1dPosteriors@{has1dPosteriors}!MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}}
+\doxysubsubsection{\texorpdfstring{has1dPosteriors}{has1dPosteriors}}
+{\footnotesize\ttfamily bool Ma\+Ch3\+Plotting\+::\+Input\+File\+::has1d\+Posteriors}
+
+
+
+Whether or not the file has processed 1d posteriors. 
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00169}{169}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+\mbox{\Hypertarget{structMaCh3Plotting_1_1InputFile_a7491ea81990748b02402796ee512f518}\label{structMaCh3Plotting_1_1InputFile_a7491ea81990748b02402796ee512f518}} 
+\index{MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}!hasLLHScans@{hasLLHScans}}
+\index{hasLLHScans@{hasLLHScans}!MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}}
+\doxysubsubsection{\texorpdfstring{hasLLHScans}{hasLLHScans}}
+{\footnotesize\ttfamily bool Ma\+Ch3\+Plotting\+::\+Input\+File\+::has\+LLHScans}
+
+
+
+Whether or not this file contains any log likelihood scans. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000019}{Todo}}]I think it would be nice to store all the \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile}{Input\+File}} data in some non root, maybe custom c++ types, and have separate reader classes for potential different input file formats that can convert to these types. 
+
+Currently all fitters use root but maybe some wonderful day in the far far future this wont be the case. Doing things this way we could maintain the possible future option of moving away from root??? \end{DoxyRefDesc}
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00125}{125}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+\mbox{\Hypertarget{structMaCh3Plotting_1_1InputFile_a28fa5364bec393769892aae24dfe32bb}\label{structMaCh3Plotting_1_1InputFile_a28fa5364bec393769892aae24dfe32bb}} 
+\index{MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}!hasLLHScans\_map@{hasLLHScans\_map}}
+\index{hasLLHScans\_map@{hasLLHScans\_map}!MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}}
+\doxysubsubsection{\texorpdfstring{hasLLHScans\_map}{hasLLHScans\_map}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, bool$>$ Ma\+Ch3\+Plotting\+::\+Input\+File\+::has\+LLHScans\+\_\+map}
+
+Whether this file contains specific types of likelihood scans, e.\+g. has\+LLHScans\+\_\+map.\+at(\char`\"{}prior\char`\"{}). 
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00129}{129}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+\mbox{\Hypertarget{structMaCh3Plotting_1_1InputFile_aaa4547bef8273c260886b1faeae0a42e}\label{structMaCh3Plotting_1_1InputFile_aaa4547bef8273c260886b1faeae0a42e}} 
+\index{MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}!hasLLHScansBySample@{hasLLHScansBySample}}
+\index{hasLLHScansBySample@{hasLLHScansBySample}!MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}}
+\doxysubsubsection{\texorpdfstring{hasLLHScansBySample}{hasLLHScansBySample}}
+{\footnotesize\ttfamily bool Ma\+Ch3\+Plotting\+::\+Input\+File\+::has\+LLHScans\+By\+Sample}
+
+Whether or not this file contains log likelihood scans broken down per sample. 
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00143}{143}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+\mbox{\Hypertarget{structMaCh3Plotting_1_1InputFile_ade85f7f9bdbbb5b3f4275dabaf2ccb11}\label{structMaCh3Plotting_1_1InputFile_ade85f7f9bdbbb5b3f4275dabaf2ccb11}} 
+\index{MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}!hasMCMCchain@{hasMCMCchain}}
+\index{hasMCMCchain@{hasMCMCchain}!MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}}
+\doxysubsubsection{\texorpdfstring{hasMCMCchain}{hasMCMCchain}}
+{\footnotesize\ttfamily bool Ma\+Ch3\+Plotting\+::\+Input\+File\+::has\+MCMCchain}
+
+
+
+Whether or not the file has unprocessed MCMC chain steps. 
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00171}{171}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+\mbox{\Hypertarget{structMaCh3Plotting_1_1InputFile_aad5e99c863e5992fdd04aafe3a1b6f84}\label{structMaCh3Plotting_1_1InputFile_aad5e99c863e5992fdd04aafe3a1b6f84}} 
+\index{MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}!hasPostFitErrors@{hasPostFitErrors}}
+\index{hasPostFitErrors@{hasPostFitErrors}!MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}}
+\doxysubsubsection{\texorpdfstring{hasPostFitErrors}{hasPostFitErrors}}
+{\footnotesize\ttfamily bool Ma\+Ch3\+Plotting\+::\+Input\+File\+::has\+Post\+Fit\+Errors}
+
+
+
+Whether or not this file contains any processed post fit errors. 
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00156}{156}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+\mbox{\Hypertarget{structMaCh3Plotting_1_1InputFile_a7a953fd14a8a781ab4f0c53e2c1e13b7}\label{structMaCh3Plotting_1_1InputFile_a7a953fd14a8a781ab4f0c53e2c1e13b7}} 
+\index{MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}!hasSigmaVars@{hasSigmaVars}}
+\index{hasSigmaVars@{hasSigmaVars}!MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}}
+\doxysubsubsection{\texorpdfstring{hasSigmaVars}{hasSigmaVars}}
+{\footnotesize\ttfamily bool Ma\+Ch3\+Plotting\+::\+Input\+File\+::has\+Sigma\+Vars}
+
+
+
+Whether or not this file contains Sigma variations. 
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00189}{189}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+\mbox{\Hypertarget{structMaCh3Plotting_1_1InputFile_a6a2aa0adbbb56a35805fe8cfd8cb167e}\label{structMaCh3Plotting_1_1InputFile_a6a2aa0adbbb56a35805fe8cfd8cb167e}} 
+\index{MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}!LLHScans\_map@{LLHScans\_map}}
+\index{LLHScans\_map@{LLHScans\_map}!MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}}
+\doxysubsubsection{\texorpdfstring{LLHScans\_map}{LLHScans\_map}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, std\+::unordered\+\_\+map$<$std\+::string, std\+::shared\+\_\+ptr$<$TGraph$>$ $>$ $>$ Ma\+Ch3\+Plotting\+::\+Input\+File\+::\+LLHScans\+\_\+map}
+
+The actual graphs of the likelihood scans, organised as LLHScans\+\_\+map.\+at(\+LLHType).at(parameter). 
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00132}{132}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+\mbox{\Hypertarget{structMaCh3Plotting_1_1InputFile_aa64f3b1a441f1727747166f4a4991a2c}\label{structMaCh3Plotting_1_1InputFile_aa64f3b1a441f1727747166f4a4991a2c}} 
+\index{MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}!LLHScansBySample\_map@{LLHScansBySample\_map}}
+\index{LLHScansBySample\_map@{LLHScansBySample\_map}!MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}}
+\doxysubsubsection{\texorpdfstring{LLHScansBySample\_map}{LLHScansBySample\_map}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, std\+::unordered\+\_\+map$<$std\+::string, std\+::shared\+\_\+ptr$<$TGraph$>$ $>$ $>$ Ma\+Ch3\+Plotting\+::\+Input\+File\+::\+LLHScans\+By\+Sample\+\_\+map}
+
+The actual graphs of the likelihood scans, organised as LLHScans\+\_\+map.\+at(sample).at(parameter). 
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00148}{148}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+\mbox{\Hypertarget{structMaCh3Plotting_1_1InputFile_a78420e7a9d73500f257d5a92437556f8}\label{structMaCh3Plotting_1_1InputFile_a78420e7a9d73500f257d5a92437556f8}} 
+\index{MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}!mcmcProc@{mcmcProc}}
+\index{mcmcProc@{mcmcProc}!MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}}
+\doxysubsubsection{\texorpdfstring{mcmcProc}{mcmcProc}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMCMCProcessor}{MCMCProcessor}}$\ast$ Ma\+Ch3\+Plotting\+::\+Input\+File\+::mcmc\+Proc}
+
+
+
+ptr to an \mbox{\hyperlink{classMCMCProcessor}{MCMCProcessor}} instance to be used if this is a Ma\+Ch3 input file 
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00109}{109}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+\mbox{\Hypertarget{structMaCh3Plotting_1_1InputFile_ad0366c41862bce9e38ecc8eea890bf05}\label{structMaCh3Plotting_1_1InputFile_ad0366c41862bce9e38ecc8eea890bf05}} 
+\index{MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}!MCMCstepParamsMap@{MCMCstepParamsMap}}
+\index{MCMCstepParamsMap@{MCMCstepParamsMap}!MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}}
+\doxysubsubsection{\texorpdfstring{MCMCstepParamsMap}{MCMCstepParamsMap}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, double$\ast$$>$ Ma\+Ch3\+Plotting\+::\+Input\+File\+::\+MCMCstep\+Params\+Map}
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00183}{183}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+\mbox{\Hypertarget{structMaCh3Plotting_1_1InputFile_ab3bf09dd833f8d8a73a2273c0a1cc113}\label{structMaCh3Plotting_1_1InputFile_ab3bf09dd833f8d8a73a2273c0a1cc113}} 
+\index{MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}!MCMCstepTreeIndicesMap@{MCMCstepTreeIndicesMap}}
+\index{MCMCstepTreeIndicesMap@{MCMCstepTreeIndicesMap}!MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}}
+\doxysubsubsection{\texorpdfstring{MCMCstepTreeIndicesMap}{MCMCstepTreeIndicesMap}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, int$>$ Ma\+Ch3\+Plotting\+::\+Input\+File\+::\+MCMCstep\+Tree\+Indices\+Map}
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00184}{184}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+\mbox{\Hypertarget{structMaCh3Plotting_1_1InputFile_ae00097a495ed0cc29a0858e1918fb9f7}\label{structMaCh3Plotting_1_1InputFile_ae00097a495ed0cc29a0858e1918fb9f7}} 
+\index{MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}!nMCMCentries@{nMCMCentries}}
+\index{nMCMCentries@{nMCMCentries}!MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}}
+\doxysubsubsection{\texorpdfstring{nMCMCentries}{nMCMCentries}}
+{\footnotesize\ttfamily int Ma\+Ch3\+Plotting\+::\+Input\+File\+::n\+MCMCentries}
+
+
+
+The number of steps in the MCMC chain. 
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00174}{174}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+\mbox{\Hypertarget{structMaCh3Plotting_1_1InputFile_a784de266deed02c52fda2900b420e433}\label{structMaCh3Plotting_1_1InputFile_a784de266deed02c52fda2900b420e433}} 
+\index{MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}!posteriors1d\_map@{posteriors1d\_map}}
+\index{posteriors1d\_map@{posteriors1d\_map}!MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}}
+\doxysubsubsection{\texorpdfstring{posteriors1d\_map}{posteriors1d\_map}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, std\+::shared\+\_\+ptr$<$TGraph$>$ $>$ Ma\+Ch3\+Plotting\+::\+Input\+File\+::posteriors1d\+\_\+map}
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00186}{186}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+\mbox{\Hypertarget{structMaCh3Plotting_1_1InputFile_a231dcc94331cbb1bc0947ed085292516}\label{structMaCh3Plotting_1_1InputFile_a231dcc94331cbb1bc0947ed085292516}} 
+\index{MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}!posteriorTree@{posteriorTree}}
+\index{posteriorTree@{posteriorTree}!MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}}
+\doxysubsubsection{\texorpdfstring{posteriorTree}{posteriorTree}}
+{\footnotesize\ttfamily TTree$\ast$ Ma\+Ch3\+Plotting\+::\+Input\+File\+::posterior\+Tree}
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00110}{110}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+\mbox{\Hypertarget{structMaCh3Plotting_1_1InputFile_a79e1b14e612e3cb027688d47599f57fb}\label{structMaCh3Plotting_1_1InputFile_a79e1b14e612e3cb027688d47599f57fb}} 
+\index{MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}!postFitErrors@{postFitErrors}}
+\index{postFitErrors@{postFitErrors}!MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}}
+\doxysubsubsection{\texorpdfstring{postFitErrors}{postFitErrors}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, std\+::unordered\+\_\+map$<$std\+::string, double$>$ $>$ Ma\+Ch3\+Plotting\+::\+Input\+File\+::post\+Fit\+Errors}
+
+The actual errors on the parameters, organised as post\+Fit\+Errors.\+at(error\+Type).at(parameter). 
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00160}{160}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+\mbox{\Hypertarget{structMaCh3Plotting_1_1InputFile_a9fda9461129b12fd18c6aad0aae12241}\label{structMaCh3Plotting_1_1InputFile_a9fda9461129b12fd18c6aad0aae12241}} 
+\index{MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}!postFitValues@{postFitValues}}
+\index{postFitValues@{postFitValues}!MaCh3Plotting::InputFile@{MaCh3Plotting::InputFile}}
+\doxysubsubsection{\texorpdfstring{postFitValues}{postFitValues}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, std\+::unordered\+\_\+map$<$std\+::string, double$>$ $>$ Ma\+Ch3\+Plotting\+::\+Input\+File\+::post\+Fit\+Values}
+
+The post fit values of the parameters, organised as post\+Fit\+Values.\+at(error\+Type).at(parameter). 
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00163}{163}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/runner/work/\+Ma\+Ch3/\+Ma\+Ch3/plotting/plotting\+Utils/\mbox{\hyperlink{inputManager_8h}{input\+Manager.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,205 @@
+The Markov Chain 3 flavour is a framework born in 2013 as a Bayesian MCMC fitter for \href{https://t2k-experiment.org/pl/}{\texttt{ T2K}} oscillation analysis. It has now been used for multiple T2K Oscillation analyses at both the Near and Far detectors throughout the years. The framework is also utilized by the \href{https://www.dunescience.org/}{\texttt{ DUNE}} and \href{https://www-sk.icrr.u-tokyo.ac.jp/en/hk/}{\texttt{ HK}} oscillation analysis groups. Additionally, it supports joint fits between T2K and NOvA, as well as T2K and SK\textquotesingle{}s atmospheric data.
+
+The framework has also evolved to allow non-\/\+MCMC modules to interrogate the likelihoods implemented.
+
+\href{https://github.com/mach3-software/MaCh3/blob/develop/LICENSE.txt}{\texttt{ }} \href{https://github.com/mach3-software/MaCh3/releases/latest}{\texttt{ }} \href{https://github.com/mach3-software/MaCh3/pkgs/container/mach3}{\texttt{ }} \href{https://github.com/mach3-software/MaCh3/wiki}{\texttt{ }} \href{https://mach3-software.github.io/MaCh3/index.html}{\texttt{ }} \href{https://github.com/mach3-software/MaCh3/actions/workflows/CIBuild.yml}{\texttt{ }} \hypertarget{md__home_runner_work_MaCh3_MaCh3_README_autotoc_md1}{}\doxysection{Famous Plots}\label{md__home_runner_work_MaCh3_MaCh3_README_autotoc_md1}
+Example of plots made using Ma\+Ch3 apparent in scientific publications, for more see \href{https://github.com/mach3-software/MaCh3/wiki/14.-MaCh3-in-the-Field}{\texttt{ here}}  \hypertarget{md__home_runner_work_MaCh3_MaCh3_README_autotoc_md2}{}\doxysection{Cite}\label{md__home_runner_work_MaCh3_MaCh3_README_autotoc_md2}
+When citing Ma\+Ch3, please use \href{https://zenodo.org/records/7608367}{\texttt{ on Zenodo}} \href{https://doi.org/10.5281/zenodo.13642670}{\texttt{ }}.\hypertarget{md__home_runner_work_MaCh3_MaCh3_README_autotoc_md3}{}\doxysection{How to Compile}\label{md__home_runner_work_MaCh3_MaCh3_README_autotoc_md3}
+Ma\+Ch3 follows standard cmake pattern. By default you should get most optimal build setting although below we list many configurable options\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{mkdir\ build;}
+\DoxyCodeLine{cd\ build;}
+\DoxyCodeLine{cmake\ ../}
+\DoxyCodeLine{make\ -\/jN\ [Where\ N\ is\ number\ of\ threads]}
+\DoxyCodeLine{make\ install}
+
+\end{DoxyCode}
+
+
+Don\textquotesingle{}t forget to\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{source\ bin/setup.MaCh3.sh}
+
+\end{DoxyCode}
+ \hypertarget{md__home_runner_work_MaCh3_MaCh3_README_autotoc_md4}{}\doxysection{Building against Ma\+Ch3}\label{md__home_runner_work_MaCh3_MaCh3_README_autotoc_md4}
+To include Ma\+Ch3 in your cmake project you can use following syntax 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{CPMFindPackage(}
+\DoxyCodeLine{\ \ NAME\ MaCh3}
+\DoxyCodeLine{\ \ GIT\_TAG\ "{}blarb"{}}
+\DoxyCodeLine{\ \ GITHUB\_REPOSITORY\ mach3-\/software/MaCh3}
+\DoxyCodeLine{)}
+
+\end{DoxyCode}
+ Where \char`\"{}blarb\char`\"{} is the Ma\+Ch3 version. You can find a list of releases \href{https://github.com/mach3-software/MaCh3/wiki/0.1.-History}{\texttt{ here}} ~\newline
+ If you compiled Ma\+Ch3 and sourced it you can simply call 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{find\_package(MaCh3)}
+
+\end{DoxyCode}
+
+
+Once you found Ma\+Ch3 you might want to link your library against Ma\+Ch3. You can do this as follows\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{target\_link\_libraries(blarb\ MaCh3::All)}
+
+\end{DoxyCode}
+
+
+Some functionalities rely on setting {\ttfamily Env\{MACH3\}} which should point to path experiment specific Ma\+Ch3. This way Ma\+Ch3 can easily find {\ttfamily Env\{MACH3\}/inputs/\+Some\+Input.root} for example.\hypertarget{md__home_runner_work_MaCh3_MaCh3_README_autotoc_md5}{}\doxysection{Python}\label{md__home_runner_work_MaCh3_MaCh3_README_autotoc_md5}
+Ma\+Ch3 can be compiled with a python interface by specifying the cmake option 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cmake\ ../\ -\/DMaCh3\_PYTHON\_ENABLED=ON}
+\DoxyCodeLine{make\ \&\&\ make\ install}
+
+\end{DoxyCode}
+
+
+Currently the python module only contains an interface to the plotting library (see \href{https://github.com/mach3-software/MaCh3/blob/develop/plotting/README.md\#python}{\texttt{ here}} for more information on how to use it)\hypertarget{md__home_runner_work_MaCh3_MaCh3_README_autotoc_md6}{}\doxysubsection{Building with Pip}\label{md__home_runner_work_MaCh3_MaCh3_README_autotoc_md6}
+Additionally, you can build just the Python module by doing\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{pip\ install\ -\/t\ <install\ location>\ .}
+
+\end{DoxyCode}
+ The -\/t option specifies an install location which can be useful if you are on a computing cluster and don\textquotesingle{}t have write access to the default install location. If you specify a non-\/standard location you will need to add it to your {\ttfamily PYTHONPATH} as above so that python can find the module.\hypertarget{md__home_runner_work_MaCh3_MaCh3_README_autotoc_md7}{}\doxysection{Multithreading}\label{md__home_runner_work_MaCh3_MaCh3_README_autotoc_md7}
+Ma\+Ch3 quite heavily relies on Multithreading, it is turned on by default. If for debugging purposes you would like to turn it off please use 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cmake\ ../\ -\/DMaCh3\_MULTITHREAD\_ENABLED=OFF}
+
+\end{DoxyCode}
+\hypertarget{md__home_runner_work_MaCh3_MaCh3_README_autotoc_md8}{}\doxysection{CUDA}\label{md__home_runner_work_MaCh3_MaCh3_README_autotoc_md8}
+If the system has access to GPU, Ma\+Ch3 will enable GPU functionality automatically. If you would like to CPU only despite having access to \href{https://developer.nvidia.com/cuda-toolkit}{\texttt{ CUDA}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{mkdir\ build;\ cd\ build;}
+\DoxyCodeLine{cmake\ ../\ -\/DUSE\_CPU=ON}
+
+\end{DoxyCode}
+ Ma\+Ch3 supports quite a high range of CUDA architectures if something doesn\textquotesingle{}t work on your GPU let us know. Ma\+Ch3 supports only NVIDIA GPUs.\hypertarget{md__home_runner_work_MaCh3_MaCh3_README_autotoc_md9}{}\doxysection{Oscillator}\label{md__home_runner_work_MaCh3_MaCh3_README_autotoc_md9}
+Ma\+Ch3 uses several neutrino oscillation calculators.
+
+Following neutrino oscillation calculators are available\+: \tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Oscillator   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Hardware   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Source   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Reference    }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Oscillator   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Hardware   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Source   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Reference    }\\\cline{1-4}
+\endhead
+CUDAProb3\+Linear   &CPU/\+GPU   &Beam   &\\\cline{1-4}
+CUDAProb3   &CPU/\+GPU   &Atm   &\href{https://doi.org/10.1016/j.cpc.2018.07.022}{\texttt{ Ref}}    \\\cline{1-4}
+Prob\+GPULinear   &GPU   &Beam   &\href{http://dx.doi.org/10.3204/DESY-PROC-2014-05/23}{\texttt{ Ref}}    \\\cline{1-4}
+Prob3++\+Linear   &CPU   &Beam   &\\\cline{1-4}
+Nu\+Fast\+Linear   &CPU   &Beam   &\href{https://doi.org/10.48550/arXiv.2405.02400}{\texttt{ Ref}}   \\\cline{1-4}
+\end{longtabu}
+
+
+If nothing is specified in cmake build then CUDAProb3\+Linear will be used. To control which oscillation calculators you want to use here is syntax\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cmake\ ../\ -\/DCUDAProb3Linear\_ENABLED=ON\ -\/DCUDAProb3\_ENABLED=ON\ -\/DProbGPULinear\_ENABLED=ON\ -\/DProb3ppLinear\_ENABLED=ON\ -\/DNuFastLinear\_ENABLED=ON}
+
+\end{DoxyCode}
+ You can only specify engines you want to use, and you can in principle use more than one.\hypertarget{md__home_runner_work_MaCh3_MaCh3_README_autotoc_md10}{}\doxysection{Fitting algorithms}\label{md__home_runner_work_MaCh3_MaCh3_README_autotoc_md10}
+The following fitting algorithms are available\+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Algorithm   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Reference   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Need Ext Lib    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Algorithm   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Reference   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Need Ext Lib    }\\\cline{1-3}
+\endhead
+MR2\+T2   &\href{https://doi.org/10.1063/1.1699114}{\texttt{ Ref}}   &No    \\\cline{1-3}
+MINUIT2   &\href{https://cds.cern.ch/record/2296388/}{\texttt{ Ref}}   &Yes    \\\cline{1-3}
+\mbox{\hyperlink{classPSO}{PSO}}   &\href{https://doi.org/10.1162/EVCO_r_00180}{\texttt{ Ref}}   &No   \\\cline{1-3}
+\end{longtabu}
+\hypertarget{md__home_runner_work_MaCh3_MaCh3_README_autotoc_md11}{}\doxysection{Debug}\label{md__home_runner_work_MaCh3_MaCh3_README_autotoc_md11}
+Several debugging options are available which are heavy for RAM and performance and, therefore not used by default. To enable it\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cmake\ ../\ -\/DMaCh3\_DEBUG\_ENABLED=<ON,OFF>}
+
+\end{DoxyCode}
+ There are several debug modes, to enable more detailed but very heavy specific debug levels. Level 1 is the default debug activated by the above.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cmake\ ../\ -\/DMaCh3\_DEBUG\_ENABLED=<ON,OFF>\ -\/DDEBUG\_LEVEL=<1,2,3>}
+
+\end{DoxyCode}
+ \hypertarget{md__home_runner_work_MaCh3_MaCh3_README_autotoc_md12}{}\doxysection{System Requirements}\label{md__home_runner_work_MaCh3_MaCh3_README_autotoc_md12}
+Most of external libraries are being handled through \href{https://github.com/cpm-cmake/CPM.cmake}{\texttt{ CPM}}. The only external library that is not being handled through \href{https://github.com/cpm-cmake/CPM.cmake}{\texttt{ CPM}} and is required is \href{https://root.cern/}{\texttt{ ROOT}}. Currently used external dependencies include\+:
+
+
+\begin{DoxyEnumerate}
+\item \href{https://github.com/jbeder/yaml-cpp}{\texttt{ yaml-\/cpp}}
+\item \href{https://github.com/gabime/spdlog}{\texttt{ spdlog}}
+\end{DoxyEnumerate}
+
+Based on several test here are recommended version\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{GCC:\ >=\ 8.5\ [lower\ versions\ may\ work]}
+\DoxyCodeLine{CMake:\ >=\ 3.14}
+\DoxyCodeLine{ROOT:\ >=\ 6.18}
+
+\end{DoxyCode}
+ \hypertarget{md__home_runner_work_MaCh3_MaCh3_README_autotoc_md13}{}\doxysubsection{Supported operational systems}\label{md__home_runner_work_MaCh3_MaCh3_README_autotoc_md13}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Status    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Status    }\\\cline{1-2}
+\endhead
+Alma9   &✅    \\\cline{1-2}
+Ubuntu22.\+04   &✅    \\\cline{1-2}
+Fedora32   &✅    \\\cline{1-2}
+Cent\+OS7   &❔    \\\cline{1-2}
+Windows   &❌   \\\cline{1-2}
+\end{longtabu}
+
+
+✅ -\/ Part of CI/\+CD ~\newline
+ ❔ -\/ Not part of CI/\+CD but used by some users/developers so it might work ~\newline
+ ❌ -\/ Not supported and no plans right now ~\newline
+\hypertarget{md__home_runner_work_MaCh3_MaCh3_README_autotoc_md14}{}\doxysection{Help and Guidelines}\label{md__home_runner_work_MaCh3_MaCh3_README_autotoc_md14}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/mach3-software/MaCh3Tutorial}{\texttt{ Tutorial}}
+\item \href{https://github.com/mach3-software/MaCh3/blob/develop/CONTRIBUTING.md}{\texttt{ How to contribute}}
+\item \href{https://github.com/mach3-software/MaCh3/wiki}{\texttt{ Wiki}}
+\item \href{https://www.jiscmail.ac.uk/cgi-bin/webadmin?A0=MACH3}{\texttt{ Mailing lists}}
+\item \href{https://t2k-experiment.slack.com/archives/C06EM0C6D7W/p1705599931356889}{\texttt{ Slack}}
+\item \href{https://github.com/mach3-software/MaCh3/discussions}{\texttt{ Discussions}}
+\end{DoxyItemize}\hypertarget{md__home_runner_work_MaCh3_MaCh3_README_autotoc_md15}{}\doxysection{Plotting and Diagnostic}\label{md__home_runner_work_MaCh3_MaCh3_README_autotoc_md15}
+Example of chain diagnostic utils can be found \href{https://github.com/mach3-software/MaCh3/tree/develop/Diagnostics}{\texttt{ here}} with example of config. The Ma\+Ch3 core plotting library code can be found \href{https://github.com/mach3-software/MaCh3/tree/develop/plotting}{\texttt{ here}} along with example config files and some apps for making standard plots.\hypertarget{md__home_runner_work_MaCh3_MaCh3_README_autotoc_md16}{}\doxysection{How To Use}\label{md__home_runner_work_MaCh3_MaCh3_README_autotoc_md16}
+This is an example how your executable can look like using Ma\+Ch3\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classmanager}{manager}}\ *fitMan\ =\ \textcolor{keyword}{nullptr};\ \textcolor{comment}{//Manager\ is\ responsible\ for\ reading\ from\ config}}
+\DoxyCodeLine{}
+\DoxyCodeLine{std::vector<samplePDFBase*>\ sample;\ \textcolor{comment}{//vector\ storing\ information\ about\ sample\ for\ different\ detector}}
+\DoxyCodeLine{std::vector<covarianceBase*>\ Cov;\ \textcolor{comment}{//\ vector\ with\ systematic\ implementation}}
+\DoxyCodeLine{\mbox{\hyperlink{classmcmc}{mcmc}}\ *markovChain\ =\ \textcolor{keyword}{nullptr};\ \textcolor{comment}{//\ MCMC\ class,\ can\ be\ replaced\ with\ other\ fitting\ method}}
+\DoxyCodeLine{MakeMaCh3Instance(fitMan,\ sample,\ Cov,\ markovChain);\ \textcolor{comment}{//Factory\ like\ function\ which\ initialises\ everything}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//Adding\ samples\ and\ covariances\ to\ the\ Fitter\ class\ could\ be\ in\ the\ factory}}
+\DoxyCodeLine{\textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ i\ =\ 0;\ sample.size();\ i++)}
+\DoxyCodeLine{\ \ markovChain-\/>\mbox{\hyperlink{classFitterBase_abe93c6d49aa079d811a9021de59691b1}{addSamplePDF}}(sample[i]);}
+\DoxyCodeLine{\textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ i\ =\ 0;\ Cov.size();\ i++)}
+\DoxyCodeLine{\ \ markovChain-\/>\mbox{\hyperlink{classFitterBase_a1d0068193922448a6fed0e0d3ff4305a}{addSystObj}}(Cov[i]);}
+\DoxyCodeLine{}
+\DoxyCodeLine{markovChain-\/>\mbox{\hyperlink{classFitterBase_a018e8d09a62bca19840e1321b49df2c0}{RunLLHScan}}();\ \textcolor{comment}{//\ can\ run\ LLH\ scan}}
+\DoxyCodeLine{markovChain-\/>\mbox{\hyperlink{classmcmc_a8a9cc0e0aa65c8573fca703a42b2ee31}{runMCMC}}();\ \textcolor{comment}{//or\ run\ actual\ fit}}
+
+\end{DoxyCode}
+ 

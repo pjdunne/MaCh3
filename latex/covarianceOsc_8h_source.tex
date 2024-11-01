@@ -1,0 +1,36 @@
+\hypertarget{covarianceOsc_8h_source}{}\doxysection{covariance\+Osc.\+h}
+\label{covarianceOsc_8h_source}\index{/home/runner/work/MaCh3/MaCh3/covariance/covarianceOsc.h@{/home/runner/work/MaCh3/MaCh3/covariance/covarianceOsc.h}}
+\mbox{\hyperlink{covarianceOsc_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{covarianceOsc_8h_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{covarianceOsc_8h_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{covarianceOsc_8h_source_l00003}00003\ \textcolor{comment}{//\ MaCh3\ includes}}
+\DoxyCodeLine{\Hypertarget{covarianceOsc_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{covarianceBase_8h}{covariance/covarianceBase.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{covarianceOsc_8h_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{covarianceOsc_8h_source_l00007}\mbox{\hyperlink{classcovarianceOsc}{00007}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcovarianceOsc}{covarianceOsc}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classcovarianceBase}{covarianceBase}}}
+\DoxyCodeLine{\Hypertarget{covarianceOsc_8h_source_l00008}00008\ \{}
+\DoxyCodeLine{\Hypertarget{covarianceOsc_8h_source_l00009}00009\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{covarianceOsc_8h_source_l00011}00011\ \ \ \mbox{\hyperlink{classcovarianceOsc}{covarianceOsc}}(\textcolor{keyword}{const}\ std::vector<std::string>\&\ \mbox{\hyperlink{ProcessMCMC_8cpp_a8e90c1478f4be185364988cac765a163}{FileNames}},\ std::string\ name\ =\ \textcolor{stringliteral}{"{}osc\_cov"{}},\ \textcolor{keywordtype}{double}\ threshold\ =\ -\/1,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classcovarianceBase_abba75182305d556818c76974a054a17d}{FirstPCAdpar}}\ =\ -\/999,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classcovarianceBase_a5ebdc744b733656972a15f1657915a3f}{LastPCAdpar}}\ =\ -\/999);}
+\DoxyCodeLine{\Hypertarget{covarianceOsc_8h_source_l00013}00013\ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classcovarianceOsc_aab90b93f18a4cffbed4c225fecfdc5a8}{\string~covarianceOsc}}();}
+\DoxyCodeLine{\Hypertarget{covarianceOsc_8h_source_l00015}00015\ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classcovarianceOsc_ad181d61769506529f8f00c10c2a86944}{CheckBounds}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{covarianceOsc_8h_source_l00017}\mbox{\hyperlink{classcovarianceOsc_a5732a5abf9aa3d73f9dec5ba9d33217f}{00017}}\ \ \ \textcolor{keywordtype}{double}\ *\mbox{\hyperlink{classcovarianceOsc_a5732a5abf9aa3d73f9dec5ba9d33217f}{getPropPars}}();}
+\DoxyCodeLine{\Hypertarget{covarianceOsc_8h_source_l00019}00019\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcovarianceOsc_abb8df24417b380af9b96763b8abc6b2e}{proposeStep}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{covarianceOsc_8h_source_l00021}\mbox{\hyperlink{classcovarianceOsc_aad7ee2764232f61af5a6deab075ee142}{00021}}\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcovarianceOsc_aad7ee2764232f61af5a6deab075ee142}{setFlipDeltaM23}}(\textcolor{keywordtype}{bool}\ flip)\{\mbox{\hyperlink{classcovarianceOsc_a9a36ac8acc5baad4b41ff0fe53958100}{flipdelM}}\ =\ flip;\}}
+\DoxyCodeLine{\Hypertarget{covarianceOsc_8h_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{covarianceOsc_8h_source_l00024}\mbox{\hyperlink{classcovarianceOsc_a367025ccd9467fa42dfeef223763261b}{00024}}\ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classcovarianceOsc_a367025ccd9467fa42dfeef223763261b}{GetPathLength}}()\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classcovarianceBase_a12f0eb31a5ef48b014baa11d4ab919e9}{\_fPropVal}}[\mbox{\hyperlink{classcovarianceOsc_a74ac09650ebb641865afe2710f69c178}{kBaseline}}];\}}
+\DoxyCodeLine{\Hypertarget{covarianceOsc_8h_source_l00026}\mbox{\hyperlink{classcovarianceOsc_aae3f81247d3aa3b3a1f3e83dc540edfb}{00026}}\ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classcovarianceOsc_aae3f81247d3aa3b3a1f3e83dc540edfb}{GetDensity}}()\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classcovarianceBase_a12f0eb31a5ef48b014baa11d4ab919e9}{\_fPropVal}}[\mbox{\hyperlink{classcovarianceOsc_a8ab8bea0eacbb9c09b9c9ca0b08fda6c}{kDensity}}];\}}
+\DoxyCodeLine{\Hypertarget{covarianceOsc_8h_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{covarianceOsc_8h_source_l00029}00029\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcovarianceOsc_a6f098e51551a6d175cce56027ddfd31f}{Print}}();}
+\DoxyCodeLine{\Hypertarget{covarianceOsc_8h_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{covarianceOsc_8h_source_l00031}00031\ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{covarianceOsc_8h_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{covarianceOsc_8h_source_l00034}\mbox{\hyperlink{classcovarianceOsc_a9a36ac8acc5baad4b41ff0fe53958100}{00034}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classcovarianceOsc_a9a36ac8acc5baad4b41ff0fe53958100}{flipdelM}};}
+\DoxyCodeLine{\Hypertarget{covarianceOsc_8h_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{covarianceOsc_8h_source_l00037}\mbox{\hyperlink{classcovarianceOsc_ac4068139be51a4426706d4ddf4bf930d}{00037}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classcovarianceOsc_ac4068139be51a4426706d4ddf4bf930d}{kDeltaCP}};}
+\DoxyCodeLine{\Hypertarget{covarianceOsc_8h_source_l00039}\mbox{\hyperlink{classcovarianceOsc_a5f554c455622a351015fa782e9933801}{00039}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classcovarianceOsc_a5f554c455622a351015fa782e9933801}{kDeltaM23}};}
+\DoxyCodeLine{\Hypertarget{covarianceOsc_8h_source_l00041}\mbox{\hyperlink{classcovarianceOsc_ae065d9a3c633bfcef6915b2b86d3e209}{00041}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classcovarianceOsc_ae065d9a3c633bfcef6915b2b86d3e209}{kSinTheta23}};}
+\DoxyCodeLine{\Hypertarget{covarianceOsc_8h_source_l00043}\mbox{\hyperlink{classcovarianceOsc_a74ac09650ebb641865afe2710f69c178}{00043}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classcovarianceOsc_a74ac09650ebb641865afe2710f69c178}{kBaseline}};}
+\DoxyCodeLine{\Hypertarget{covarianceOsc_8h_source_l00045}\mbox{\hyperlink{classcovarianceOsc_a8ab8bea0eacbb9c09b9c9ca0b08fda6c}{00045}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classcovarianceOsc_a8ab8bea0eacbb9c09b9c9ca0b08fda6c}{kDensity}};}
+\DoxyCodeLine{\Hypertarget{covarianceOsc_8h_source_l00046}00046\ \};}
+
+\end{DoxyCode}

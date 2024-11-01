@@ -1,0 +1,777 @@
+\hypertarget{classTSpline3__red}{}\doxysection{TSpline3\+\_\+red Class Reference}
+\label{classTSpline3__red}\index{TSpline3\_red@{TSpline3\_red}}
+
+
+CW\+: Reduced TSpline3 class.  
+
+
+
+
+{\ttfamily \#include $<$/home/runner/work/\+Ma\+Ch3/\+Ma\+Ch3/splines/\+Spline\+Structs.\+h$>$}
+
+
+
+Inheritance diagram for TSpline3\+\_\+red\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{classTSpline3__red__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for TSpline3\+\_\+red\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{classTSpline3__red__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTSpline3__red_ae76e72436b20a59ee33eb1d41dbe59eb}{TSpline3\+\_\+red}} ()
+\begin{DoxyCompactList}\small\item\em Empty constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTSpline3__red_a643d07969140e64bb55e8639552d1209}{TSpline3\+\_\+red}} (TSpline3 $\ast$\&spline, \mbox{\hyperlink{Structs_8h_a6720d732608767153550aebebcf8fbf4}{Spline\+Interpolation}} Inter\+Polation=\mbox{\hyperlink{Structs_8h_a6720d732608767153550aebebcf8fbf4a56c886e7b34c938027a7140748999c8a}{k\+TSpline3}})
+\begin{DoxyCompactList}\small\item\em The constructor that takes a TSpline3 pointer and copies in to memory. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTSpline3__red_a49e4386a4d7870a8f3a9f744d1b3ce7c}{TSpline3\+\_\+red}} (\mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3\+::float\+\_\+t}} $\ast$X, \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3\+::float\+\_\+t}} $\ast$Y, \mbox{\hyperlink{namespaceM3_adb59b8ecdc4e1b2d5d4c826a13aa7463}{M3\+::int\+\_\+t}} N, \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3\+::float\+\_\+t}} $\ast$$\ast$P)
+\begin{DoxyCompactList}\small\item\em constructor taking parameters \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTSpline3__red_a80a5d6ec57e563e8e65c50d67e706057}{Set\+Func}} (TSpline3 $\ast$\&spline, \mbox{\hyperlink{Structs_8h_a6720d732608767153550aebebcf8fbf4}{Spline\+Interpolation}} Inter\+Polation=\mbox{\hyperlink{Structs_8h_a6720d732608767153550aebebcf8fbf4a56c886e7b34c938027a7140748999c8a}{k\+TSpline3}})
+\begin{DoxyCompactList}\small\item\em Set the function. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTSpline3__red_a275808bab562c82d155433c1d62ac1a1}{$\sim$\+TSpline3\+\_\+red}} ()
+\begin{DoxyCompactList}\small\item\em Empty destructor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classTSpline3__red_a39668a1dc14058a1f833e9621ec19caf}{FindX}} (double x)
+\begin{DoxyCompactList}\small\item\em Find the segment relevant to this variation in x See root/hist/hist/src/\+TSpline3\mbox{\hyperlink{classTSpline3__red_a39668a1dc14058a1f833e9621ec19caf}{Find\+X(double)}} or sample\+PDFND....\+::\+Find\+Spline\+Segment. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classTSpline3__red_a12bb3549bacb76c7d04ee303c4abe389}{Eval}} (double var) override
+\begin{DoxyCompactList}\small\item\em CW\+: Evaluate the weight from a variation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceM3_adb59b8ecdc4e1b2d5d4c826a13aa7463}{M3\+::int\+\_\+t}} \mbox{\hyperlink{classTSpline3__red_a6b680cfb96e11c55b8325e1274251b91}{Get\+Np}} () override
+\begin{DoxyCompactList}\small\item\em CW\+: Get the number of points. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTSpline3__red_a2c3cba5b93df5a08a8b6c1aee5ebb727}{Get\+Knot}} (int i, \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3\+::float\+\_\+t}} \&xtmp, \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3\+::float\+\_\+t}} \&ytmp)
+\item 
+void \mbox{\hyperlink{classTSpline3__red_a74d108b99a9060ab85c22343fa4a4532}{Get\+Coeff}} (int segment, \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3\+::float\+\_\+t}} \&x, \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3\+::float\+\_\+t}} \&y, \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3\+::float\+\_\+t}} \&b, \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3\+::float\+\_\+t}} \&c, \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3\+::float\+\_\+t}} \&d)
+\begin{DoxyCompactList}\small\item\em CW\+: Get the coefficient of a given segment. \end{DoxyCompactList}\item 
+TSpline3 $\ast$ \mbox{\hyperlink{classTSpline3__red_a597509d5b15f84e2ae77f91831e1266d}{Construct\+TSpline3}} ()
+\begin{DoxyCompactList}\small\item\em CW\+: Make a TSpline3 from the reduced splines. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTSpline3__red_a7e4e820b468ff523ed6c507a9b5167d1}{Print}} () override
+\begin{DoxyCompactList}\small\item\em Print detailed info. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{classTResponseFunction__red}{TResponse\+Function\+\_\+red}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTResponseFunction__red_a50443a78985e0c9b16ffc36ebc1d2e91}{TResponse\+Function\+\_\+red}} ()
+\begin{DoxyCompactList}\small\item\em Empty constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classTResponseFunction__red_a216998fd1fed9353073640ede950a916}{$\sim$\+TResponse\+Function\+\_\+red}} ()
+\begin{DoxyCompactList}\small\item\em Empty destructor. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classTResponseFunction__red_a9131d654c46da7e4ab1c9c679a5c9008}{Eval}} (const double var)=0
+\begin{DoxyCompactList}\small\item\em Evaluate a variation. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classTResponseFunction__red_abeb53f28dcb53965afba33bad5c89a02}{Print}} ()=0
+\begin{DoxyCompactList}\small\item\em KS\+: Printer. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespaceM3_adb59b8ecdc4e1b2d5d4c826a13aa7463}{M3\+::int\+\_\+t}} \mbox{\hyperlink{classTResponseFunction__red_a672da1d698b53fb2203cc51f92ed2875}{Get\+Np}} ()=0
+\begin{DoxyCompactList}\small\item\em DL\+: Get number of points. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceM3_adb59b8ecdc4e1b2d5d4c826a13aa7463}{M3\+::int\+\_\+t}} \mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{n\+Points}}
+\begin{DoxyCompactList}\small\item\em Number of points/knot in TSpline3. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3\+::float\+\_\+t}} $\ast$$\ast$ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}
+\begin{DoxyCompactList}\small\item\em Always uses a third order polynomial, so hard-\/code the number of coefficients in implementation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3\+::float\+\_\+t}} $\ast$ \mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}
+\begin{DoxyCompactList}\small\item\em Positions of each x for each knot. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3\+::float\+\_\+t}} $\ast$ \mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}}
+\begin{DoxyCompactList}\small\item\em y-\/value for each knot \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+CW\+: Reduced TSpline3 class. 
+
+Definition at line \mbox{\hyperlink{SplineStructs_8h_source_l00236}{236}} of file \mbox{\hyperlink{SplineStructs_8h_source}{Spline\+Structs.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTSpline3__red_ae76e72436b20a59ee33eb1d41dbe59eb}\label{classTSpline3__red_ae76e72436b20a59ee33eb1d41dbe59eb}} 
+\index{TSpline3\_red@{TSpline3\_red}!TSpline3\_red@{TSpline3\_red}}
+\index{TSpline3\_red@{TSpline3\_red}!TSpline3\_red@{TSpline3\_red}}
+\doxysubsubsection{\texorpdfstring{TSpline3\_red()}{TSpline3\_red()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily TSpline3\+\_\+red\+::\+TSpline3\+\_\+red (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Empty constructor. 
+
+
+
+Definition at line \mbox{\hyperlink{SplineStructs_8h_source_l00240}{240}} of file \mbox{\hyperlink{SplineStructs_8h_source}{Spline\+Structs.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classTResponseFunction__red_a50443a78985e0c9b16ffc36ebc1d2e91}{TResponseFunction\_red}}()\ \{}
+\DoxyCodeLine{00241\ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}}\ =\ 0;}
+\DoxyCodeLine{00242\ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}\ =\ NULL;}
+\DoxyCodeLine{00243\ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}\ =\ NULL;}
+\DoxyCodeLine{00244\ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}}\ =\ NULL;}
+\DoxyCodeLine{00245\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classTSpline3__red_a643d07969140e64bb55e8639552d1209}\label{classTSpline3__red_a643d07969140e64bb55e8639552d1209}} 
+\index{TSpline3\_red@{TSpline3\_red}!TSpline3\_red@{TSpline3\_red}}
+\index{TSpline3\_red@{TSpline3\_red}!TSpline3\_red@{TSpline3\_red}}
+\doxysubsubsection{\texorpdfstring{TSpline3\_red()}{TSpline3\_red()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily TSpline3\+\_\+red\+::\+TSpline3\+\_\+red (\begin{DoxyParamCaption}\item[{TSpline3 $\ast$\&}]{spline,  }\item[{\mbox{\hyperlink{Structs_8h_a6720d732608767153550aebebcf8fbf4}{Spline\+Interpolation}}}]{Inter\+Polation = {\ttfamily \mbox{\hyperlink{Structs_8h_a6720d732608767153550aebebcf8fbf4a56c886e7b34c938027a7140748999c8a}{k\+TSpline3}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The constructor that takes a TSpline3 pointer and copies in to memory. 
+
+
+
+Definition at line \mbox{\hyperlink{SplineStructs_8h_source_l00248}{248}} of file \mbox{\hyperlink{SplineStructs_8h_source}{Spline\+Structs.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classTResponseFunction__red_a50443a78985e0c9b16ffc36ebc1d2e91}{TResponseFunction\_red}}()\ \{}
+\DoxyCodeLine{00249\ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}\ =\ NULL;}
+\DoxyCodeLine{00250\ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}\ =\ NULL;}
+\DoxyCodeLine{00251\ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}}\ =\ NULL;}
+\DoxyCodeLine{00252\ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_a80a5d6ec57e563e8e65c50d67e706057}{SetFunc}}(spline,\ InterPolation);}
+\DoxyCodeLine{00253\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classTSpline3__red_a49e4386a4d7870a8f3a9f744d1b3ce7c}\label{classTSpline3__red_a49e4386a4d7870a8f3a9f744d1b3ce7c}} 
+\index{TSpline3\_red@{TSpline3\_red}!TSpline3\_red@{TSpline3\_red}}
+\index{TSpline3\_red@{TSpline3\_red}!TSpline3\_red@{TSpline3\_red}}
+\doxysubsubsection{\texorpdfstring{TSpline3\_red()}{TSpline3\_red()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily TSpline3\+\_\+red\+::\+TSpline3\+\_\+red (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3\+::float\+\_\+t}} $\ast$}]{X,  }\item[{\mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3\+::float\+\_\+t}} $\ast$}]{Y,  }\item[{\mbox{\hyperlink{namespaceM3_adb59b8ecdc4e1b2d5d4c826a13aa7463}{M3\+::int\+\_\+t}}}]{N,  }\item[{\mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3\+::float\+\_\+t}} $\ast$$\ast$}]{P }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+constructor taking parameters 
+
+
+
+Definition at line \mbox{\hyperlink{SplineStructs_8h_source_l00256}{256}} of file \mbox{\hyperlink{SplineStructs_8h_source}{Spline\+Structs.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classTResponseFunction__red_a50443a78985e0c9b16ffc36ebc1d2e91}{TResponseFunction\_red}}()\ \{}
+\DoxyCodeLine{00257\ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}}\ =\ N;}
+\DoxyCodeLine{00258\ \ \ \ \ \textcolor{comment}{//\ Save\ the\ parameters\ for\ each\ knot}}
+\DoxyCodeLine{00259\ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}*[\mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}}];}
+\DoxyCodeLine{00260\ \ \ \ \ \textcolor{comment}{//\ Save\ the\ positions\ of\ the\ knots}}
+\DoxyCodeLine{00261\ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}[\mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}}];}
+\DoxyCodeLine{00262\ \ \ \ \ \textcolor{comment}{//\ Save\ the\ y\ response\ at\ each\ knot}}
+\DoxyCodeLine{00263\ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}[\mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}}];}
+\DoxyCodeLine{00264\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ N;\ ++j)\{}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[j]\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}[3];}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[j][0]\ =\ P[j][0];}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[j][1]\ =\ P[j][1];}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[j][2]\ =\ P[j][2];}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}[j]\ =\ X[j];}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}}[j]\ =\ Y[j];}
+\DoxyCodeLine{00271\ }
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \textcolor{keywordflow}{if}((\mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[j][0]\ ==\ -\/999)\ |\ (\mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[j][1]\ ==-\/999)\ |\ (\mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[j][2]\ ==-\/999)\ |\ (\mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}[j]\ ==-\/999)\ |\ (\mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}}[j]\ ==-\/999))\{}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}*******************\ Bad\ parameter\ values\ when\ constructing\ TSpline3\_red\ *********************"{}});}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Passed\ values\ (i,\ x,\ y,\ b,\ c,\ d):\ \{\},\ \{\},\ \{\},\ \{\},\ \{\},\ \{\}"{}},\ j,\ X[j],\ Y[j],\ P[j][0],\ P[j][1],\ P[j][2]);}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Set\ values\ (i,\ x,\ y,\ b,\ c,\ d):\ \{\},\ \{\},\ \{\},\ \{\},\ \{\},\ \{\}"{}},\ j,\ \mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}[j],\ \mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}}[j],\ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[j][0],\ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[j][1],\ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[j][2]);}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}*********************************************************************************************"{}});}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00278\ \ \ \ \ \}}
+\DoxyCodeLine{00279\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classTSpline3__red_a275808bab562c82d155433c1d62ac1a1}\label{classTSpline3__red_a275808bab562c82d155433c1d62ac1a1}} 
+\index{TSpline3\_red@{TSpline3\_red}!````~TSpline3\_red@{$\sim$TSpline3\_red}}
+\index{````~TSpline3\_red@{$\sim$TSpline3\_red}!TSpline3\_red@{TSpline3\_red}}
+\doxysubsubsection{\texorpdfstring{$\sim$TSpline3\_red()}{~TSpline3\_red()}}
+{\footnotesize\ttfamily TSpline3\+\_\+red\+::$\sim$\+TSpline3\+\_\+red (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Empty destructor. 
+
+
+
+Definition at line \mbox{\hyperlink{SplineStructs_8h_source_l00549}{549}} of file \mbox{\hyperlink{SplineStructs_8h_source}{Spline\+Structs.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00549\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00550\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}\ !=\ NULL)\ \{}
+\DoxyCodeLine{00551\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}};\ ++i)\ \{}
+\DoxyCodeLine{00552\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[i]\ !=\ NULL)\ \{}
+\DoxyCodeLine{00553\ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[i];}
+\DoxyCodeLine{00554\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00555\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00556\ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}};}
+\DoxyCodeLine{00557\ \ \ \ \ \}}
+\DoxyCodeLine{00558\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}\ !=\ NULL)\ \textcolor{keyword}{delete}[]\ \mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}};}
+\DoxyCodeLine{00559\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}}\ !=\ NULL)\ \textcolor{keyword}{delete}[]\ \mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}};}
+\DoxyCodeLine{00560\ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}\ =\ NULL;}
+\DoxyCodeLine{00561\ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}\ =\ \mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}}\ =\ NULL;}
+\DoxyCodeLine{00562\ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTSpline3__red_a597509d5b15f84e2ae77f91831e1266d}\label{classTSpline3__red_a597509d5b15f84e2ae77f91831e1266d}} 
+\index{TSpline3\_red@{TSpline3\_red}!ConstructTSpline3@{ConstructTSpline3}}
+\index{ConstructTSpline3@{ConstructTSpline3}!TSpline3\_red@{TSpline3\_red}}
+\doxysubsubsection{\texorpdfstring{ConstructTSpline3()}{ConstructTSpline3()}}
+{\footnotesize\ttfamily TSpline3 $\ast$ TSpline3\+\_\+red\+::\+Construct\+TSpline3 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+CW\+: Make a TSpline3 from the reduced splines. 
+
+
+
+Definition at line \mbox{\hyperlink{SplineStructs_8h_source_l00630}{630}} of file \mbox{\hyperlink{SplineStructs_8h_source}{Spline\+Structs.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00630\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00631\ \ \ \ \ \textcolor{comment}{//\ KS:\ Sadly\ ROOT\ only\ accepts\ double...}}
+\DoxyCodeLine{00632\ \textcolor{preprocessor}{\ \ \ \ \#ifdef\ \_LOW\_MEMORY\_STRUCTS\_}}
+\DoxyCodeLine{00633\ \ \ \ \ std::vector<Double\_t>\ xPosDoubles(\mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}});}
+\DoxyCodeLine{00634\ \ \ \ \ std::vector<Double\_t>\ yPosDoubles(\mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}});}
+\DoxyCodeLine{00635\ \ \ \ \ \textcolor{keywordflow}{for}\ (Int\_t\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}};\ ++i)\ \{}
+\DoxyCodeLine{00636\ \ \ \ \ \ \ xPosDoubles[i]\ =\ \textcolor{keyword}{static\_cast<}Double\_t\textcolor{keyword}{>}(\mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}[i]);\ \textcolor{comment}{//\ Convert\ float\ to\ double}}
+\DoxyCodeLine{00637\ \ \ \ \ \ \ yPosDoubles[i]\ =\ \textcolor{keyword}{static\_cast<}Double\_t\textcolor{keyword}{>}(\mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}}[i]);\ \textcolor{comment}{//\ Convert\ float\ to\ double}}
+\DoxyCodeLine{00638\ \ \ \ \ \}}
+\DoxyCodeLine{00639\ \ \ \ \ TSpline3\ *spline\ =\ \textcolor{keyword}{new}\ TSpline3(\textcolor{stringliteral}{"{}Spline"{}},\ xPosDoubles.data(),\ yPosDoubles.data(),\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(\mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}}));}
+\DoxyCodeLine{00640\ \textcolor{preprocessor}{\ \ \ \ \#else}}
+\DoxyCodeLine{00641\ \ \ \ \ TSpline3\ *spline\ =\ \textcolor{keyword}{new}\ TSpline3(\textcolor{stringliteral}{"{}Spline"{}},\ \mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}},\ \mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}},\ \mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}});}
+\DoxyCodeLine{00642\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{00643\ \ \ \ \ \textcolor{keywordflow}{return}\ spline;}
+\DoxyCodeLine{00644\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classTSpline3__red_a12bb3549bacb76c7d04ee303c4abe389}\label{classTSpline3__red_a12bb3549bacb76c7d04ee303c4abe389}} 
+\index{TSpline3\_red@{TSpline3\_red}!Eval@{Eval}}
+\index{Eval@{Eval}!TSpline3\_red@{TSpline3\_red}}
+\doxysubsubsection{\texorpdfstring{Eval()}{Eval()}}
+{\footnotesize\ttfamily double TSpline3\+\_\+red\+::\+Eval (\begin{DoxyParamCaption}\item[{double}]{var }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+CW\+: Evaluate the weight from a variation. 
+
+
+
+Implements \mbox{\hyperlink{classTResponseFunction__red_a9131d654c46da7e4ab1c9c679a5c9008}{TResponse\+Function\+\_\+red}}.
+
+
+
+Definition at line \mbox{\hyperlink{SplineStructs_8h_source_l00600}{600}} of file \mbox{\hyperlink{SplineStructs_8h_source}{Spline\+Structs.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00600\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00601\ \ \ \ \ \textcolor{comment}{//\ Get\ the\ segment\ for\ this\ variation}}
+\DoxyCodeLine{00602\ \ \ \ \ \textcolor{keywordtype}{int}\ segment\ =\ \mbox{\hyperlink{classTSpline3__red_a39668a1dc14058a1f833e9621ec19caf}{FindX}}(var);}
+\DoxyCodeLine{00603\ \ \ \ \ \textcolor{comment}{//\ The\ get\ the\ coefficients\ for\ this\ variation}}
+\DoxyCodeLine{00604\ \ \ \ \ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}\ x\ =\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}(-\/999.99),\ y\ =\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}(-\/999.99),\ b\ =\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}(-\/999.99),\ c\ =\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}(-\/999.99),\ d\ =\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}(-\/999.99);}
+\DoxyCodeLine{00605\ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_a74d108b99a9060ab85c22343fa4a4532}{GetCoeff}}(segment,\ x,\ y,\ b,\ c,\ d);}
+\DoxyCodeLine{00606\ \ \ \ \ \textcolor{keywordtype}{double}\ dx\ =\ var\ -\/\ x;}
+\DoxyCodeLine{00607\ \ \ \ \ \textcolor{comment}{//\ Evaluate\ the\ third\ order\ polynomial}}
+\DoxyCodeLine{00608\ \ \ \ \ \textcolor{keywordtype}{double}\ weight\ =\ y+dx*(b+dx*(c+d*dx));}
+\DoxyCodeLine{00609\ \ \ \ \ \textcolor{keywordflow}{return}\ weight;}
+\DoxyCodeLine{00610\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classTSpline3__red_a39668a1dc14058a1f833e9621ec19caf}\label{classTSpline3__red_a39668a1dc14058a1f833e9621ec19caf}} 
+\index{TSpline3\_red@{TSpline3\_red}!FindX@{FindX}}
+\index{FindX@{FindX}!TSpline3\_red@{TSpline3\_red}}
+\doxysubsubsection{\texorpdfstring{FindX()}{FindX()}}
+{\footnotesize\ttfamily int TSpline3\+\_\+red\+::\+FindX (\begin{DoxyParamCaption}\item[{double}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Find the segment relevant to this variation in x See root/hist/hist/src/\+TSpline3\mbox{\hyperlink{classTSpline3__red_a39668a1dc14058a1f833e9621ec19caf}{Find\+X(double)}} or sample\+PDFND....\+::\+Find\+Spline\+Segment. 
+
+
+
+Definition at line \mbox{\hyperlink{SplineStructs_8h_source_l00566}{566}} of file \mbox{\hyperlink{SplineStructs_8h_source}{Spline\+Structs.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00566\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00567\ \ \ \ \ \textcolor{comment}{//\ The\ segment\ we're\ interested\ in\ (klow\ in\ ROOT\ code)}}
+\DoxyCodeLine{00568\ \ \ \ \ \textcolor{keywordtype}{int}\ segment\ =\ 0;}
+\DoxyCodeLine{00569\ \ \ \ \ \textcolor{keywordtype}{int}\ kHigh\ =\ \mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}}-\/1;}
+\DoxyCodeLine{00570\ \ \ \ \ \textcolor{comment}{//\ If\ the\ variation\ is\ below\ the\ lowest\ saved\ spline\ point}}
+\DoxyCodeLine{00571\ \ \ \ \ \textcolor{keywordflow}{if}\ (x\ <=\ \mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}[0])\{}
+\DoxyCodeLine{00572\ \ \ \ \ \ \ segment\ =\ 0;}
+\DoxyCodeLine{00573\ \ \ \ \ \ \ \textcolor{comment}{//\ If\ the\ variation\ is\ above\ the\ highest\ saved\ spline\ point}}
+\DoxyCodeLine{00574\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (x\ >=\ \mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}[\mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}}-\/1])\ \{}
+\DoxyCodeLine{00575\ \ \ \ \ \ \ \textcolor{comment}{//\ Yes,\ the\ -\/2\ is\ indeed\ correct,\ see\ TSpline.cxx:814\ and\ //see:\ https://savannah.cern.ch/bugs/?71651}}
+\DoxyCodeLine{00576\ \ \ \ \ \ \ segment\ =\ kHigh;}
+\DoxyCodeLine{00577\ \ \ \ \ \ \ \textcolor{comment}{//\ If\ the\ variation\ is\ between\ the\ maximum\ and\ minimum,\ perform\ a\ binary\ search}}
+\DoxyCodeLine{00578\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00579\ \ \ \ \ \ \ \textcolor{comment}{//\ The\ top\ point\ we've\ got}}
+\DoxyCodeLine{00580\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ kHalf\ =\ 0;}
+\DoxyCodeLine{00581\ \ \ \ \ \ \ \textcolor{comment}{//\ While\ there\ is\ still\ a\ difference\ in\ the\ points\ (we\ haven't\ yet\ found\ the\ segment)}}
+\DoxyCodeLine{00582\ \ \ \ \ \ \ \textcolor{comment}{//\ This\ is\ a\ binary\ search,\ incrementing\ segment\ and\ decrementing\ kHalf\ until\ we've\ found\ the\ segment}}
+\DoxyCodeLine{00583\ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (kHigh\ -\/\ segment\ >\ 1)\ \{}
+\DoxyCodeLine{00584\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Increment\ the\ half-\/step}}
+\DoxyCodeLine{00585\ \ \ \ \ \ \ \ \ kHalf\ =\ (segment\ +\ kHigh)/2;}
+\DoxyCodeLine{00586\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ our\ variation\ is\ above\ the\ kHalf,\ set\ the\ segment\ to\ kHalf}}
+\DoxyCodeLine{00587\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (x\ >\ \mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}[kHalf])\ \{}
+\DoxyCodeLine{00588\ \ \ \ \ \ \ \ \ \ \ segment\ =\ kHalf;}
+\DoxyCodeLine{00589\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Else\ move\ kHigh\ down}}
+\DoxyCodeLine{00590\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00591\ \ \ \ \ \ \ \ \ \ \ kHigh\ =\ kHalf;}
+\DoxyCodeLine{00592\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00593\ \ \ \ \ \ \ \}\ \textcolor{comment}{//\ End\ the\ while:\ we've\ now\ done\ our\ binary\ search}}
+\DoxyCodeLine{00594\ \ \ \ \ \}\ \textcolor{comment}{//\ End\ the\ else:\ we've\ now\ found\ our\ point}}
+\DoxyCodeLine{00595\ \ \ \ \ \textcolor{keywordflow}{if}\ (segment\ >=\ \mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}}-\/1\ \&\&\ \mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}}\ >\ 1)\ segment\ =\ \mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}}-\/2;}
+\DoxyCodeLine{00596\ \ \ \ \ \textcolor{keywordflow}{return}\ segment;}
+\DoxyCodeLine{00597\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classTSpline3__red_a74d108b99a9060ab85c22343fa4a4532}\label{classTSpline3__red_a74d108b99a9060ab85c22343fa4a4532}} 
+\index{TSpline3\_red@{TSpline3\_red}!GetCoeff@{GetCoeff}}
+\index{GetCoeff@{GetCoeff}!TSpline3\_red@{TSpline3\_red}}
+\doxysubsubsection{\texorpdfstring{GetCoeff()}{GetCoeff()}}
+{\footnotesize\ttfamily void TSpline3\+\_\+red\+::\+Get\+Coeff (\begin{DoxyParamCaption}\item[{int}]{segment,  }\item[{\mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3\+::float\+\_\+t}} \&}]{x,  }\item[{\mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3\+::float\+\_\+t}} \&}]{y,  }\item[{\mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3\+::float\+\_\+t}} \&}]{b,  }\item[{\mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3\+::float\+\_\+t}} \&}]{c,  }\item[{\mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3\+::float\+\_\+t}} \&}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+CW\+: Get the coefficient of a given segment. 
+
+
+
+Definition at line \mbox{\hyperlink{SplineStructs_8h_source_l00621}{621}} of file \mbox{\hyperlink{SplineStructs_8h_source}{Spline\+Structs.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00621\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00622\ \ \ \ \ b\ =\ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[segment][0];}
+\DoxyCodeLine{00623\ \ \ \ \ c\ =\ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[segment][1];}
+\DoxyCodeLine{00624\ \ \ \ \ d\ =\ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[segment][2];}
+\DoxyCodeLine{00625\ \ \ \ \ x\ =\ \mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}[segment];}
+\DoxyCodeLine{00626\ \ \ \ \ y\ =\ \mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}}[segment];}
+\DoxyCodeLine{00627\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classTSpline3__red_a2c3cba5b93df5a08a8b6c1aee5ebb727}\label{classTSpline3__red_a2c3cba5b93df5a08a8b6c1aee5ebb727}} 
+\index{TSpline3\_red@{TSpline3\_red}!GetKnot@{GetKnot}}
+\index{GetKnot@{GetKnot}!TSpline3\_red@{TSpline3\_red}}
+\doxysubsubsection{\texorpdfstring{GetKnot()}{GetKnot()}}
+{\footnotesize\ttfamily void TSpline3\+\_\+red\+::\+Get\+Knot (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{\mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3\+::float\+\_\+t}} \&}]{xtmp,  }\item[{\mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3\+::float\+\_\+t}} \&}]{ytmp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{SplineStructs_8h_source_l00615}{615}} of file \mbox{\hyperlink{SplineStructs_8h_source}{Spline\+Structs.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00615\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00616\ \ \ \ \ xtmp\ =\ \mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}[i];}
+\DoxyCodeLine{00617\ \ \ \ \ ytmp\ =\ \mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}}[i];}
+\DoxyCodeLine{00618\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classTSpline3__red_a6b680cfb96e11c55b8325e1274251b91}\label{classTSpline3__red_a6b680cfb96e11c55b8325e1274251b91}} 
+\index{TSpline3\_red@{TSpline3\_red}!GetNp@{GetNp}}
+\index{GetNp@{GetNp}!TSpline3\_red@{TSpline3\_red}}
+\doxysubsubsection{\texorpdfstring{GetNp()}{GetNp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceM3_adb59b8ecdc4e1b2d5d4c826a13aa7463}{M3\+::int\+\_\+t}} TSpline3\+\_\+red\+::\+Get\+Np (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+CW\+: Get the number of points. 
+
+
+
+Implements \mbox{\hyperlink{classTResponseFunction__red_a672da1d698b53fb2203cc51f92ed2875}{TResponse\+Function\+\_\+red}}.
+
+
+
+Definition at line \mbox{\hyperlink{SplineStructs_8h_source_l00613}{613}} of file \mbox{\hyperlink{SplineStructs_8h_source}{Spline\+Structs.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00613\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}};\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classTSpline3__red_a7e4e820b468ff523ed6c507a9b5167d1}\label{classTSpline3__red_a7e4e820b468ff523ed6c507a9b5167d1}} 
+\index{TSpline3\_red@{TSpline3\_red}!Print@{Print}}
+\index{Print@{Print}!TSpline3\_red@{TSpline3\_red}}
+\doxysubsubsection{\texorpdfstring{Print()}{Print()}}
+{\footnotesize\ttfamily void TSpline3\+\_\+red\+::\+Print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Print detailed info. 
+
+
+
+Implements \mbox{\hyperlink{classTResponseFunction__red_abeb53f28dcb53965afba33bad5c89a02}{TResponse\+Function\+\_\+red}}.
+
+
+
+Definition at line \mbox{\hyperlink{SplineStructs_8h_source_l00647}{647}} of file \mbox{\hyperlink{SplineStructs_8h_source}{Spline\+Structs.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00647\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00648\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Printing\ TSpline\_red:"{}});}
+\DoxyCodeLine{00649\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}\ Nknots\ =\ \{\}"{}},\ \mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}});}
+\DoxyCodeLine{00650\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}};\ ++i)\ \{}
+\DoxyCodeLine{00651\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}\ \ i\ =\ \{\}\ x\ =\ \{\}\ y\ =\ \{\}\ b\ =\ \{\}\ c\ =\ \{\}\ d\ =\ \{\}"{}},}
+\DoxyCodeLine{00652\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ i,\ \mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}[i],\ \mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}}[i],\ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[i][0],\ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[i][1],\ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[i][2]);}
+\DoxyCodeLine{00653\ \ \ \ \ \}}
+\DoxyCodeLine{00654\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classTSpline3__red_a80a5d6ec57e563e8e65c50d67e706057}\label{classTSpline3__red_a80a5d6ec57e563e8e65c50d67e706057}} 
+\index{TSpline3\_red@{TSpline3\_red}!SetFunc@{SetFunc}}
+\index{SetFunc@{SetFunc}!TSpline3\_red@{TSpline3\_red}}
+\doxysubsubsection{\texorpdfstring{SetFunc()}{SetFunc()}}
+{\footnotesize\ttfamily void TSpline3\+\_\+red\+::\+Set\+Func (\begin{DoxyParamCaption}\item[{TSpline3 $\ast$\&}]{spline,  }\item[{\mbox{\hyperlink{Structs_8h_a6720d732608767153550aebebcf8fbf4}{Spline\+Interpolation}}}]{Inter\+Polation = {\ttfamily \mbox{\hyperlink{Structs_8h_a6720d732608767153550aebebcf8fbf4a56c886e7b34c938027a7140748999c8a}{k\+TSpline3}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the function. 
+
+
+
+Definition at line \mbox{\hyperlink{SplineStructs_8h_source_l00281}{281}} of file \mbox{\hyperlink{SplineStructs_8h_source}{Spline\+Structs.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00282\ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}}\ =\ \mbox{\hyperlink{namespaceM3_adb59b8ecdc4e1b2d5d4c826a13aa7463}{M3::int\_t}}(spline-\/>GetNp());}
+\DoxyCodeLine{00283\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}\ !=\ NULL)\ \{}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}};\ ++i)\ \{}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[i];}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[i]\ =\ NULL;}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}};}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}\ =\ NULL;}
+\DoxyCodeLine{00290\ \ \ \ \ \}}
+\DoxyCodeLine{00291\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}\ !=\ NULL)\ \textcolor{keyword}{delete}[]\ \mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}};}
+\DoxyCodeLine{00292\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}}\ !=\ NULL)\ \textcolor{keyword}{delete}[]\ \mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}};}
+\DoxyCodeLine{00293\ \ \ \ \ \textcolor{comment}{//\ Save\ the\ parameters\ for\ each\ knot}}
+\DoxyCodeLine{00294\ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}*[\mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}}];}
+\DoxyCodeLine{00295\ \ \ \ \ \textcolor{comment}{//\ Save\ the\ positions\ of\ the\ knots}}
+\DoxyCodeLine{00296\ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}[\mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}}];}
+\DoxyCodeLine{00297\ \ \ \ \ \textcolor{comment}{//\ Save\ the\ y\ response\ at\ each\ knot}}
+\DoxyCodeLine{00298\ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}[\mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}}];}
+\DoxyCodeLine{00299\ }
+\DoxyCodeLine{00300\ \ \ \ \ \textcolor{comment}{//KS:\ Default\ TSpline3\ ROOT\ implementation}}
+\DoxyCodeLine{00301\ \ \ \ \ \textcolor{keywordflow}{if}(InterPolation\ ==\ \mbox{\hyperlink{Structs_8h_a6720d732608767153550aebebcf8fbf4a56c886e7b34c938027a7140748999c8a}{kTSpline3}})}
+\DoxyCodeLine{00302\ \ \ \ \ \{}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}};\ ++i)\ \{}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 3\ is\ the\ size\ of\ the\ TSpline3\ coefficients}}
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[i]\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}[3];}
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ x\ =\ -\/999.99,\ y\ =\ -\/999.99,\ b\ =\ -\/999.99,\ c\ =\ -\/999.99,\ d\ =\ -\/999.99;}
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ spline-\/>GetCoeff(i,\ x,\ y,\ b,\ c,\ d);}
+\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}[i]\ \ \ =\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}(x);}
+\DoxyCodeLine{00309\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}}[i]\ \ =\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}(y);}
+\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[i][0]\ =\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}(b);}
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[i][1]\ =\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}(c);}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[i][2]\ =\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}(d);}
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00314\ \ \ \ \ \}}
+\DoxyCodeLine{00315\ \ \ \ \ \textcolor{comment}{//CW:\ Reduce\ to\ use\ linear\ spline\ interpolation\ for\ certain\ parameters}}
+\DoxyCodeLine{00316\ \ \ \ \ \textcolor{comment}{//\ Not\ the\ most\ elegant\ way:\ use\ TSpline3\ object\ but\ set\ coefficients\ to\ zero\ and\ recalculate\ spline\ points;\ the\ smart\ way\ (but\ more\ human\ intensive)\ would\ be\ to\ save\ memory\ here\ and\ simply\ not\ store\ the\ zeros\ at\ all}}
+\DoxyCodeLine{00317\ \ \ \ \ \textcolor{comment}{//\ Get\ which\ parameters\ should\ be\ linear\ from\ the\ fit\ manager}}
+\DoxyCodeLine{00318\ \ \ \ \ \textcolor{comment}{//\ Convert\ the\ spline\ number\ to\ global\ xsec\ parameter}}
+\DoxyCodeLine{00319\ \ \ \ \ \textcolor{comment}{//\ Loop\ over\ the\ splines\ points}}
+\DoxyCodeLine{00320\ \ \ \ \ \textcolor{comment}{//\ KS:\ kLinearFunc\ should\ be\ used\ with\ TF1,\ this\ is\ just\ as\ safety}}
+\DoxyCodeLine{00321\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(InterPolation\ ==\ \mbox{\hyperlink{Structs_8h_a6720d732608767153550aebebcf8fbf4ac188c019178783e5be55110601309d7d}{kLinear}}\ ||\ InterPolation\ ==\ \mbox{\hyperlink{Structs_8h_a6720d732608767153550aebebcf8fbf4ade75212a78a5cf860f84473a80355f42}{kLinearFunc}})}
+\DoxyCodeLine{00322\ \ \ \ \ \{}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ k\ =\ 0;\ k\ <\ \mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}};\ ++k)\ \{}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 3\ is\ the\ size\ of\ the\ TSpline3\ coefficients}}
+\DoxyCodeLine{00325\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[k]\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}[3];}
+\DoxyCodeLine{00326\ \ \ \ \ \ \ \ \ Double\_t\ x1,\ y1,\ b1,\ c1,\ d1,\ x2,\ y2,\ b2,\ c2,\ d2\ =\ 0;}
+\DoxyCodeLine{00327\ \ \ \ \ \ \ \ \ spline-\/>GetCoeff(k,\ x1,\ y1,\ b1,\ c1,\ d1);}
+\DoxyCodeLine{00328\ \ \ \ \ \ \ \ \ spline-\/>GetCoeff(k+1,\ x2,\ y2,\ b2,\ c2,\ d2);}
+\DoxyCodeLine{00329\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ tempb\ =\ (y2-\/y1)/(x2-\/x1);}
+\DoxyCodeLine{00330\ }
+\DoxyCodeLine{00331\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}[k]\ \ \ =\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}(x1);}
+\DoxyCodeLine{00332\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}}[k]\ \ =\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}(y1);}
+\DoxyCodeLine{00333\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[k][0]\ =\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}(tempb);}
+\DoxyCodeLine{00334\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[k][1]\ =\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}(0);}
+\DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[k][2]\ =\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}(0);}
+\DoxyCodeLine{00336\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00337\ \ \ \ \ \}}
+\DoxyCodeLine{00338\ \ \ \ \ \textcolor{comment}{//EM:\ Akima\ spline\ is\ similar\ to\ regular\ cubic\ spline\ but\ is\ allowed\ to\ be\ discontinuous\ in\ 2nd\ derivative\ and\ coefficients\ in\ any\ segment}}
+\DoxyCodeLine{00339\ \ \ \ \ \textcolor{comment}{//\ only\ depend\ on\ th\ 2\ nearest\ points\ on\ either\ side}}
+\DoxyCodeLine{00340\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(InterPolation\ ==\ \mbox{\hyperlink{Structs_8h_a6720d732608767153550aebebcf8fbf4afe5701215b64da0194c6fead25edd976}{kAkima}})}
+\DoxyCodeLine{00341\ \ \ \ \ \{}
+\DoxyCodeLine{00342\ \ \ \ \ \ \ \textcolor{comment}{//\ get\ the\ knot\ values\ for\ the\ spline}}
+\DoxyCodeLine{00343\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}};\ ++i)\ \{}
+\DoxyCodeLine{00344\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 3\ is\ the\ size\ of\ the\ TSpline3\ coefficients}}
+\DoxyCodeLine{00345\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[i]\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}[3];}
+\DoxyCodeLine{00346\ }
+\DoxyCodeLine{00347\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ x\ =\ -\/999.99,\ y\ =\ -\/999.99;}
+\DoxyCodeLine{00348\ \ \ \ \ \ \ \ \ spline-\/>GetKnot(i,\ x,\ y);}
+\DoxyCodeLine{00349\ }
+\DoxyCodeLine{00350\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}[i]\ \ \ =\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}(x);}
+\DoxyCodeLine{00351\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}}[i]\ \ =\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}(y);}
+\DoxyCodeLine{00352\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00353\ }
+\DoxyCodeLine{00354\ \ \ \ \ \ \ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}*\ mvals\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}[\mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}}\ +\ 3];}
+\DoxyCodeLine{00355\ \ \ \ \ \ \ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}*\ svals\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}[\mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}}\ +\ 1];}
+\DoxyCodeLine{00356\ }
+\DoxyCodeLine{00357\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ -\/2;\ i\ <=\ \mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}};\ ++i)\ \{}
+\DoxyCodeLine{00358\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ segment\ is\ first\ or\ last\ or\ 2nd\ to\ first\ or\ last,\ needs\ to\ be\ dealt\ with\ slightly\ differently;}}
+\DoxyCodeLine{00359\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ need\ to\ estimate\ the\ values\ for\ additinal\ points\ which\ would\ lie\ outside\ of\ the\ spline}}
+\DoxyCodeLine{00360\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i\ ==-\/2)\{}
+\DoxyCodeLine{00361\ \ \ \ \ \ \ \ \ \ \ mvals[i+2]\ =\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}(3.0\ *\ (\mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}}[1]\ -\/\ \mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}}[0])\ /\ (\mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}[1]\ -\/\ \mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}[0])\ -\/\ 2.0*(\mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}}[2]\ -\/\ \mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}}[1])\ /\ (\mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}[2]\ -\/\ \mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}[1]));}
+\DoxyCodeLine{00362\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00363\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(i==-\/1)\{}
+\DoxyCodeLine{00364\ \ \ \ \ \ \ \ \ \ \ mvals[i+2]\ =\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}(2.0\ *\ (\mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}}[1]\ -\/\ \mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}}[0])\ /\ (\mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}[1]\ -\/\ \mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}[0])\ -\/\ (\mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}}[2]\ -\/\ \mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}}[1])\ /\ (\mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}[2]\ -\/\ \mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}[1]));}
+\DoxyCodeLine{00365\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00366\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(i==\mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}})\{}
+\DoxyCodeLine{00367\ \ \ \ \ \ \ \ \ \ \ mvals[i+2]\ =\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}(3.0\ *\ (\mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}}[\mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}}-\/1]\ -\/\ \mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}}[\mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}}-\/2])\ /\ (\mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}[\mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}}-\/1]\ -\/\ \mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}[\mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}}-\/2])\ -\/\ 2.0*(\mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}}[\mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}}-\/2]\ -\/\ \mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}}[\mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}}-\/3])\ /\ (\mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}[\mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}}-\/2]\ -\/\ \mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}[\mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}}-\/3]));}
+\DoxyCodeLine{00368\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00369\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(i\ ==\ \mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}}\ -\/\ 1)\{}
+\DoxyCodeLine{00370\ \ \ \ \ \ \ \ \ \ \ mvals[i+2]\ =\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}(2.0\ *\ (\mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}}[\mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}}-\/1]\ -\/\ \mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}}[\mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}}-\/2])\ /\ (\mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}[\mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}}-\/1]\ -\/\ \mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}[\mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}}-\/2])\ -\/\ (\mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}}[\mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}}-\/2]\ -\/\ \mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}}[\mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}}-\/3])\ /\ (\mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}[\mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}}-\/2]\ -\/\ \mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}[\mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}}-\/3]));}
+\DoxyCodeLine{00371\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00372\ \ \ \ \ \ \ \ \ \textcolor{comment}{//standard\ internal\ segment}}
+\DoxyCodeLine{00373\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00374\ \ \ \ \ \ \ \ \ \ \ mvals[i+2]\ =\ (\mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}}[i+1]\ -\/\ \mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}}[i])/\ (\mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}[i+1]\ -\/\ \mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}[i]);}
+\DoxyCodeLine{00375\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00376\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00377\ }
+\DoxyCodeLine{00378\ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =2;\ i<=\mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}}+2;\ i++)\{}
+\DoxyCodeLine{00379\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (std::abs(mvals[i+1]\ -\/\ mvals[i])\ +\ std::abs(mvals[i-\/1]\ -\/\ mvals[i-\/2])\ !=\ 0.0)\{}
+\DoxyCodeLine{00380\ \ \ \ \ \ \ \ \ \ \ svals[i-\/2]\ =\ (std::abs(mvals[i+1]\ -\/\ mvals[i])\ *\ mvals[i-\/1]\ +\ std::abs(mvals[i-\/1]\ -\/\ mvals[i-\/2])\ *mvals[i])\ /\ (std::abs(mvals[i+1]\ -\/\ mvals[i])\ +\ std::abs(mvals[i-\/1]\ -\/\ mvals[i-\/2]));}
+\DoxyCodeLine{00381\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00382\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{svals[i-\/2]\ =\ mvals[i];\}}
+\DoxyCodeLine{00383\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00384\ }
+\DoxyCodeLine{00385\ \ \ \ \ \ \ \textcolor{comment}{//\ calculate\ the\ coefficients\ for\ the\ spline}}
+\DoxyCodeLine{00386\ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}};\ i++)\{}
+\DoxyCodeLine{00387\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}\ b,\ c,\ d\ =\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}(-\/999.999);}
+\DoxyCodeLine{00388\ }
+\DoxyCodeLine{00389\ \ \ \ \ \ \ \ \ b\ =\ svals[i];}
+\DoxyCodeLine{00390\ \ \ \ \ \ \ \ \ c\ =\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}(3.0*\ (\mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}}[i+1]\ -\/\ \mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}}[i])\ /\ (\mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}[i+1]\ -\/\ \mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}[i])\ -\/2.0\ *svals[i]\ -\/\ svals[i\ +1])\ /(\mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}[i+1]\ -\/\ \mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}[i]);}
+\DoxyCodeLine{00391\ \ \ \ \ \ \ \ \ d\ =\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}((svals[i\ +\ 1]\ +svals[i])\ -\/\ 2.0*(\mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}}[i+1]\ -\/\ \mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}}[i])\ /\ (\mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}[i+1]\ -\/\ \mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}[i]))\ /\ ((\mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}[i+1]\ -\/\ \mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}[i])\ *\ (\mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}[i+1]\ -\/\ \mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}[i]));}
+\DoxyCodeLine{00392\ }
+\DoxyCodeLine{00393\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[i][0]\ =\ b;}
+\DoxyCodeLine{00394\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[i][1]\ =\ c;}
+\DoxyCodeLine{00395\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[i][2]\ =\ d;}
+\DoxyCodeLine{00396\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00397\ }
+\DoxyCodeLine{00398\ \ \ \ \ \ \ \textcolor{comment}{//\ check\ the\ input\ spline\ for\ linear\ segments,\ if\ there\ are\ any\ then\ overwrite\ the\ calculated\ coefficients}}
+\DoxyCodeLine{00399\ \ \ \ \ \ \ \textcolor{comment}{//\ this\ will\ pretty\ much\ only\ ever\ be\ the\ case\ if\ they\ are\ set\ to\ be\ linear\ in\ samplePDFND\ i.e.\ the\ user\ wants\ it\ to\ be\ linear}}
+\DoxyCodeLine{00400\ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}}-\/1;\ i++)\{}
+\DoxyCodeLine{00401\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ x\ =\ -\/999.99,\ y\ =\ -\/999.99,\ b\ =\ -\/999.99,\ c\ =\ -\/999.99,\ d\ =\ -\/999.99;}
+\DoxyCodeLine{00402\ \ \ \ \ \ \ \ \ spline-\/>GetCoeff(i,\ x,\ y,\ b,\ c,\ d);}
+\DoxyCodeLine{00403\ }
+\DoxyCodeLine{00404\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}((c\ ==\ 0.0\ \&\&\ d\ ==\ 0.0))\{}
+\DoxyCodeLine{00405\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[i][0]\ =\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}(b);}
+\DoxyCodeLine{00406\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[i][1]\ =\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}(0.0);}
+\DoxyCodeLine{00407\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[i][2]\ =\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}(0.0);}
+\DoxyCodeLine{00408\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00409\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00410\ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ mvals;}
+\DoxyCodeLine{00411\ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ svals;}
+\DoxyCodeLine{00412\ \ \ \ \ \}}
+\DoxyCodeLine{00413\ \ \ \ \ \textcolor{comment}{//EM:\ Monotone\ spline\ is\ similar\ to\ regular\ cubic\ spline\ but\ enforce\ the\ condition\ that\ the\ interpolated\ value\ at\ any\ point}}
+\DoxyCodeLine{00414\ \ \ \ \ \textcolor{comment}{//\ must\ be\ between\ its\ two\ nearest\ knots,\ DOES\ NOT\ make\ the\ entire\ spline\ monotonic,\ only\ the\ segments}}
+\DoxyCodeLine{00415\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(InterPolation\ ==\ \mbox{\hyperlink{Structs_8h_a6720d732608767153550aebebcf8fbf4a68f4b10c9689389fd8fea39dc6c097d3}{kMonotonic}})}
+\DoxyCodeLine{00416\ \ \ \ \ \{}
+\DoxyCodeLine{00417\ \ \ \ \ \ \ \textcolor{comment}{//\ values\ of\ the\ secants\ at\ each\ point\ (for\ calculating\ monotone\ spline)}}
+\DoxyCodeLine{00418\ \ \ \ \ \ \ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}\ *\ Secants\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}[\mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}}\ -\/1];}
+\DoxyCodeLine{00419\ \ \ \ \ \ \ \textcolor{comment}{//\ values\ of\ the\ tangens\ at\ each\ point\ (for\ calculating\ monotone\ spline)}}
+\DoxyCodeLine{00420\ \ \ \ \ \ \ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}\ *\ \ Tangents\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}[\mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}}];}
+\DoxyCodeLine{00421\ }
+\DoxyCodeLine{00422\ \ \ \ \ \ \ \textcolor{comment}{//\ get\ the\ knot\ values\ for\ the\ spline}}
+\DoxyCodeLine{00423\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}};\ ++i)\ \{}
+\DoxyCodeLine{00424\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 3\ is\ the\ size\ of\ the\ TSpline3\ coefficients}}
+\DoxyCodeLine{00425\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[i]\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}[3];}
+\DoxyCodeLine{00426\ }
+\DoxyCodeLine{00427\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ x\ =\ -\/999.99,\ y\ =\ -\/999.99;}
+\DoxyCodeLine{00428\ \ \ \ \ \ \ \ \ spline-\/>GetKnot(i,\ x,\ y);}
+\DoxyCodeLine{00429\ }
+\DoxyCodeLine{00430\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}[i]\ \ \ =\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}(x);}
+\DoxyCodeLine{00431\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}}[i]\ \ =\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}(y);}
+\DoxyCodeLine{00432\ }
+\DoxyCodeLine{00433\ \ \ \ \ \ \ \ \ Tangents[i]\ =\ 0.0;}
+\DoxyCodeLine{00434\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00435\ }
+\DoxyCodeLine{00436\ \ \ \ \ \ \ \textcolor{comment}{//\ deal\ with\ the\ case\ of\ two\ points\ (just\ do\ linear\ interpolation\ between\ them)}}
+\DoxyCodeLine{00437\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}}\ ==\ 2)\{}
+\DoxyCodeLine{00438\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[0][0]\ =\ (\mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}}[1]\ -\/\ \mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}}[0])\ /\ (\mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}[1]\ -\/\ \mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}[0]);}
+\DoxyCodeLine{00439\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[0][1]\ =\ 0.0;}
+\DoxyCodeLine{00440\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[0][2]\ =\ 0.0;}
+\DoxyCodeLine{00441\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ extra\ "{}virtual"{}\ segment\ at\ end\ to\ make\ Par\ array\ shape\ fit\ with\ knot\ arrays\ shapes}}
+\DoxyCodeLine{00442\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[1][1]\ =\ 0.0;}
+\DoxyCodeLine{00443\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[1][2]\ =\ 0.0;}
+\DoxyCodeLine{00444\ }
+\DoxyCodeLine{00445\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00446\ \ \ \ \ \ \ \}\ \textcolor{comment}{//\ if\ nPoints\ !=2\ do\ full\ monotonic\ spline\ treatment:}}
+\DoxyCodeLine{00447\ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00448\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00449\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ first\ pass\ over\ knots\ to\ calculate\ the\ secants}}
+\DoxyCodeLine{00450\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}}-\/1;\ ++i)\ \{}
+\DoxyCodeLine{00451\ \ \ \ \ \ \ \ \ \ \ Secants[i]\ =\ (\mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}}[i+1]\ -\/\ \mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}}[i])\ /\ (\mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}[i+1]\ -\/\ \mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}[i]);}
+\DoxyCodeLine{00452\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_afc88f0aa23c7127b2ff6e5c7ca3fa892}{MACH3LOG\_TRACE}}(\textcolor{stringliteral}{"{}Secant\ \{\}:\ \{\}"{}},\ i,\ Secants[i]);}
+\DoxyCodeLine{00453\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00454\ }
+\DoxyCodeLine{00455\ \ \ \ \ \ \ \ \ Tangents[0]\ =\ Secants[0];}
+\DoxyCodeLine{00456\ \ \ \ \ \ \ \ \ Tangents[\mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}}-\/1]\ =\ Secants[\mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}}\ -\/2];}
+\DoxyCodeLine{00457\ }
+\DoxyCodeLine{00458\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}\ alpha;}
+\DoxyCodeLine{00459\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}\ beta;}
+\DoxyCodeLine{00460\ }
+\DoxyCodeLine{00461\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ second\ pass\ over\ knots\ to\ calculate\ tangents}}
+\DoxyCodeLine{00462\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <\ \mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}}-\/1;\ ++i)\ \{}
+\DoxyCodeLine{00463\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((Secants[i-\/1]\ >=\ 0.0\ \&\&\ Secants[i]\ >=\ 0.0)\ |\ (Secants[i-\/1]\ <\ 0.0\ \&\&\ Secants[i]\ <\ 0.0))\{\ \textcolor{comment}{//check\ for\ same\ sign}}
+\DoxyCodeLine{00464\ \ \ \ \ \ \ \ \ \ \ \ \ Tangents[i]\ =\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}((Secants[i-\/1]\ +\ Secants[i])\ /2.0);}
+\DoxyCodeLine{00465\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00466\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00467\ }
+\DoxyCodeLine{00468\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ third\ pass\ over\ knots\ to\ rescale\ tangents}}
+\DoxyCodeLine{00469\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}}-\/1;\ ++i)\ \{}
+\DoxyCodeLine{00470\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Secants[i]\ ==\ 0.0)\{}
+\DoxyCodeLine{00471\ \ \ \ \ \ \ \ \ \ \ \ \ Tangents[i]\ =\ 0.0;}
+\DoxyCodeLine{00472\ \ \ \ \ \ \ \ \ \ \ \ \ Tangents[i+1]\ =\ 0.0;}
+\DoxyCodeLine{00473\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00474\ }
+\DoxyCodeLine{00475\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00476\ \ \ \ \ \ \ \ \ \ \ \ \ alpha\ =\ Tangents[i]\ \ /\ Secants[i];}
+\DoxyCodeLine{00477\ \ \ \ \ \ \ \ \ \ \ \ \ beta\ =\ Tangents[i+1]\ /\ Secants[i];}
+\DoxyCodeLine{00478\ }
+\DoxyCodeLine{00479\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (alpha\ <0.0)\{}
+\DoxyCodeLine{00480\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Tangents[i]\ =\ 0.0;}
+\DoxyCodeLine{00481\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00482\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (beta\ <\ 0.0)\{}
+\DoxyCodeLine{00483\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Tangents[i+1]\ =\ 0.0;}
+\DoxyCodeLine{00484\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00485\ }
+\DoxyCodeLine{00486\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (alpha\ *\ alpha\ +\ beta\ *\ beta\ >9.0)\{}
+\DoxyCodeLine{00487\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}\ tau\ =\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}(3.0\ /\ std::sqrt(alpha\ *\ alpha\ +\ beta\ *\ beta));}
+\DoxyCodeLine{00488\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Tangents[i]\ \ \ =\ tau\ *\ alpha\ *\ Secants[i];}
+\DoxyCodeLine{00489\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Tangents[i+1]\ =\ tau\ *\ beta\ \ *\ Secants[i];}
+\DoxyCodeLine{00490\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00491\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00492\ \ \ \ \ \ \ \ \ \}\ \textcolor{comment}{//\ finished\ rescaling\ tangents}}
+\DoxyCodeLine{00493\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ fourth\ pass\ over\ knots\ to\ calculate\ the\ coefficients\ for\ the\ spline}}
+\DoxyCodeLine{00494\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}\ dx;}
+\DoxyCodeLine{00495\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}}-\/1;\ i++)\{}
+\DoxyCodeLine{00496\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}\ b,\ c,\ d\ =\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}(-\/999.999);}
+\DoxyCodeLine{00497\ \ \ \ \ \ \ \ \ \ \ dx\ =\ \mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}[i+1]\ -\/\ \mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}[i];}
+\DoxyCodeLine{00498\ }
+\DoxyCodeLine{00499\ \ \ \ \ \ \ \ \ \ \ b\ =\ Tangents[i]\ *\ dx;}
+\DoxyCodeLine{00500\ \ \ \ \ \ \ \ \ \ \ c\ =\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}(3.0*\ (\mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}}[i+1]\ -\/\ \mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}}[i])\ -\/2.0\ *dx\ *\ Tangents[i]\ -\/\ dx\ *\ Tangents[i\ +1]);}
+\DoxyCodeLine{00501\ \ \ \ \ \ \ \ \ \ \ d\ =\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}(2.0*\ (\mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}}[i]\ -\/\ \mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}}[i+1])\ +\ dx\ *\ (Tangents[i]\ +\ Tangents[i+1]));}
+\DoxyCodeLine{00502\ }
+\DoxyCodeLine{00503\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[i][0]\ =\ b\ /\ \ dx;}
+\DoxyCodeLine{00504\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[i][1]\ =\ c\ /\ (dx\ *\ dx);}
+\DoxyCodeLine{00505\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[i][2]\ =\ d\ /\ (dx\ *\ dx\ *\ dx);}
+\DoxyCodeLine{00506\ }
+\DoxyCodeLine{00507\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}((\mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[i][0]\ ==\ -\/999)\ |\ (\mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[i][1]\ ==\ -\/999)\ |\ (\mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[i][2]\ ==-\/999)\ |\ (\mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[i][0]\ ==\ -\/999.999)\ |\ (\mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[i][1]\ ==\ -\/999.999)\ |\ (\mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[i][2]\ ==-\/999.999))\{}
+\DoxyCodeLine{00508\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Bad\ spline\ parameters\ for\ segment\ \{\}:\ (b,\ c,\ d)\ =\ \{\},\ \{\},\ \{\}.\ This\ will\ cause\ problems\ with\ GPU."{}},}
+\DoxyCodeLine{00509\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ i,\ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[i][0],\ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[i][1],\ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[i][2]);}
+\DoxyCodeLine{00510\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00511\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_afc88f0aa23c7127b2ff6e5c7ca3fa892}{MACH3LOG\_TRACE}}(\textcolor{stringliteral}{"{}b:\ \{\}"{}},\ b);}
+\DoxyCodeLine{00512\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_afc88f0aa23c7127b2ff6e5c7ca3fa892}{MACH3LOG\_TRACE}}(\textcolor{stringliteral}{"{}dx:\ \{\},\ x\_0:\ \{\},\ x\_1:\ \{\}"{}},\ dx,\ \mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}[i],\ \mbox{\hyperlink{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}{XPos}}[i+1]);}
+\DoxyCodeLine{00513\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_afc88f0aa23c7127b2ff6e5c7ca3fa892}{MACH3LOG\_TRACE}}(\textcolor{stringliteral}{"{}\ \ \ \ y\_0:\ \{\},\ y\_1:\ \{\}"{}},\ \mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}}[i],\ \mbox{\hyperlink{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}{YResp}}[i+1]);}
+\DoxyCodeLine{00514\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00515\ }
+\DoxyCodeLine{00516\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ include\ params\ for\ final\ "{}segment"{}\ outside\ of\ the\ spline\ so\ that\ par\ array\ fits\ with\ x\ and\ y\ arrays,}}
+\DoxyCodeLine{00517\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ should\ never\ actually\ get\ used\ but\ if\ not\ set\ then\ the\ GPU\ code\ gets\ very\ angry}}
+\DoxyCodeLine{00518\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[\mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}}-\/1][0]\ =\ 0.0;}
+\DoxyCodeLine{00519\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[\mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}}-\/1][1]\ =\ 0.0;}
+\DoxyCodeLine{00520\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[\mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}}-\/1][2]\ =\ 0.0;}
+\DoxyCodeLine{00521\ }
+\DoxyCodeLine{00522\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ check\ the\ input\ spline\ for\ linear\ segments,\ if\ there\ are\ any\ then\ overwrite\ the\ calculated\ coefficients}}
+\DoxyCodeLine{00523\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ this\ will\ pretty\ much\ only\ ever\ be\ the\ case\ if\ they\ are\ set\ to\ be\ linear\ in\ samplePDFND\ i.e.\ the\ user\ wants\ it\ to\ be\ linear}}
+\DoxyCodeLine{00524\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\mbox{\hyperlink{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}{nPoints}}-\/1;\ i++)\{}
+\DoxyCodeLine{00525\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ x\ =\ -\/999.99,\ y\ =\ -\/999.99,\ b\ =\ -\/999.99,\ c\ =\ -\/999.99,\ d\ =\ -\/999.99;}
+\DoxyCodeLine{00526\ \ \ \ \ \ \ \ \ \ \ spline-\/>GetCoeff(i,\ x,\ y,\ b,\ c,\ d);}
+\DoxyCodeLine{00527\ }
+\DoxyCodeLine{00528\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}((c\ ==\ 0.0\ \&\&\ d\ ==\ 0.0))\{}
+\DoxyCodeLine{00529\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[i][0]\ =\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}(b);}
+\DoxyCodeLine{00530\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[i][1]\ =\ 0.0;}
+\DoxyCodeLine{00531\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}{Par}}[i][2]\ =\ 0.0;}
+\DoxyCodeLine{00532\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00533\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00534\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ Secants;}
+\DoxyCodeLine{00535\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ Tangents;}
+\DoxyCodeLine{00536\ \ \ \ \ \ \ \}\ \textcolor{comment}{//\ end\ of\ if(nPoints\ !=2)}}
+\DoxyCodeLine{00537\ \ \ \ \ \}}
+\DoxyCodeLine{00538\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00539\ \ \ \ \ \{}
+\DoxyCodeLine{00540\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Unsupported\ interpolation\ type\ \{\}"{}},\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(InterPolation));}
+\DoxyCodeLine{00541\ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_\ ,\ \_\_LINE\_\_\ );}
+\DoxyCodeLine{00542\ \ \ \ \ \}}
+\DoxyCodeLine{00543\ }
+\DoxyCodeLine{00544\ \ \ \ \ \textcolor{keyword}{delete}\ spline;}
+\DoxyCodeLine{00545\ \ \ \ \ spline\ =\ NULL;}
+\DoxyCodeLine{00546\ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}\label{classTSpline3__red_a5ca79646cbc9dce56ed973274f860c0d}} 
+\index{TSpline3\_red@{TSpline3\_red}!nPoints@{nPoints}}
+\index{nPoints@{nPoints}!TSpline3\_red@{TSpline3\_red}}
+\doxysubsubsection{\texorpdfstring{nPoints}{nPoints}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceM3_adb59b8ecdc4e1b2d5d4c826a13aa7463}{M3\+::int\+\_\+t}} TSpline3\+\_\+red\+::n\+Points\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Number of points/knot in TSpline3. 
+
+
+
+Definition at line \mbox{\hyperlink{SplineStructs_8h_source_l00658}{658}} of file \mbox{\hyperlink{SplineStructs_8h_source}{Spline\+Structs.\+h}}.
+
+\mbox{\Hypertarget{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}\label{classTSpline3__red_a449ef081c6c2701865e371ab1c2e235e}} 
+\index{TSpline3\_red@{TSpline3\_red}!Par@{Par}}
+\index{Par@{Par}!TSpline3\_red@{TSpline3\_red}}
+\doxysubsubsection{\texorpdfstring{Par}{Par}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3\+::float\+\_\+t}}$\ast$$\ast$ TSpline3\+\_\+red\+::\+Par\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Always uses a third order polynomial, so hard-\/code the number of coefficients in implementation. 
+
+
+
+Definition at line \mbox{\hyperlink{SplineStructs_8h_source_l00660}{660}} of file \mbox{\hyperlink{SplineStructs_8h_source}{Spline\+Structs.\+h}}.
+
+\mbox{\Hypertarget{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}\label{classTSpline3__red_aa4b35c6ba0d90d3b13b49f99beadbf79}} 
+\index{TSpline3\_red@{TSpline3\_red}!XPos@{XPos}}
+\index{XPos@{XPos}!TSpline3\_red@{TSpline3\_red}}
+\doxysubsubsection{\texorpdfstring{XPos}{XPos}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3\+::float\+\_\+t}}$\ast$ TSpline3\+\_\+red\+::\+XPos\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Positions of each x for each knot. 
+
+
+
+Definition at line \mbox{\hyperlink{SplineStructs_8h_source_l00662}{662}} of file \mbox{\hyperlink{SplineStructs_8h_source}{Spline\+Structs.\+h}}.
+
+\mbox{\Hypertarget{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}\label{classTSpline3__red_af81e778c5cad933f48940e63857b4ffa}} 
+\index{TSpline3\_red@{TSpline3\_red}!YResp@{YResp}}
+\index{YResp@{YResp}!TSpline3\_red@{TSpline3\_red}}
+\doxysubsubsection{\texorpdfstring{YResp}{YResp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3\+::float\+\_\+t}}$\ast$ TSpline3\+\_\+red\+::\+YResp\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+y-\/value for each knot 
+
+
+
+Definition at line \mbox{\hyperlink{SplineStructs_8h_source_l00664}{664}} of file \mbox{\hyperlink{SplineStructs_8h_source}{Spline\+Structs.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/runner/work/\+Ma\+Ch3/\+Ma\+Ch3/splines/\mbox{\hyperlink{SplineStructs_8h}{Spline\+Structs.\+h}}\end{DoxyCompactItemize}

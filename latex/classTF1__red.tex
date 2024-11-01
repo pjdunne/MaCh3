@@ -1,0 +1,453 @@
+\hypertarget{classTF1__red}{}\doxysection{TF1\+\_\+red Class Reference}
+\label{classTF1__red}\index{TF1\_red@{TF1\_red}}
+
+
+CW\+: A reduced TF1 class only. Only saves parameters for each TF1 and how many parameters each parameter set has.  
+
+
+
+
+{\ttfamily \#include $<$/home/runner/work/\+Ma\+Ch3/\+Ma\+Ch3/splines/\+Spline\+Structs.\+h$>$}
+
+
+
+Inheritance diagram for TF1\+\_\+red\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{classTF1__red__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for TF1\+\_\+red\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{classTF1__red__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTF1__red_a503700d13da3bc04710c6a52e14877e6}{TF1\+\_\+red}} ()
+\begin{DoxyCompactList}\small\item\em Empty constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTF1__red_a154077c37858ec88449cae76c41d671b}{$\sim$\+TF1\+\_\+red}} ()
+\begin{DoxyCompactList}\small\item\em Empty destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTF1__red_adead62e9b0591aec30925907f6972086}{TF1\+\_\+red}} (\mbox{\hyperlink{namespaceM3_adb59b8ecdc4e1b2d5d4c826a13aa7463}{M3\+::int\+\_\+t}} n\+Size, \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3\+::float\+\_\+t}} $\ast$Array)
+\begin{DoxyCompactList}\small\item\em The useful constructor with deep copy. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTF1__red_a7ee6185f2184824a190d146375522952}{TF1\+\_\+red}} (TF1 $\ast$\&Function)
+\begin{DoxyCompactList}\small\item\em The TF1 constructor with deep copy. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTF1__red_a2622a66b8baafd26b66e6544b7de5bfe}{Set\+Func}} (TF1 $\ast$\&Func)
+\begin{DoxyCompactList}\small\item\em Set the function. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classTF1__red_a9e581e2dac4d95f26bef3aeb3cf1b8d9}{Eval}} (const double var) override
+\begin{DoxyCompactList}\small\item\em Evaluate a variation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTF1__red_ae317eec4bd889f37b9e6cc9c8c096f57}{Set\+Parameter}} (\mbox{\hyperlink{namespaceM3_adb59b8ecdc4e1b2d5d4c826a13aa7463}{M3\+::int\+\_\+t}} Parameter, \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3\+::float\+\_\+t}} Value)
+\begin{DoxyCompactList}\small\item\em Set a parameter to a value. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classTF1__red_ae0385a986d12257d806ba970646d1d15}{Get\+Parameter}} (\mbox{\hyperlink{namespaceM3_adb59b8ecdc4e1b2d5d4c826a13aa7463}{M3\+::int\+\_\+t}} Parameter)
+\begin{DoxyCompactList}\small\item\em Get a parameter value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTF1__red_a105267ba275921f9db49548e59798b3c}{Set\+Size}} (\mbox{\hyperlink{namespaceM3_adb59b8ecdc4e1b2d5d4c826a13aa7463}{M3\+::int\+\_\+t}} n\+Spline)
+\begin{DoxyCompactList}\small\item\em Set the size. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classTF1__red_af9e3b0e8d2edad0e7e08f3bf215525c9}{Get\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Get the size. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTF1__red_a70e93817adf5b7bf926f781b04fb1f04}{Print}} () override
+\begin{DoxyCompactList}\small\item\em Print detailed info. \end{DoxyCompactList}\item 
+TF1 $\ast$ \mbox{\hyperlink{classTF1__red_a06dd51dfd5a00286d99e688a8c0c5d6a}{Construct\+TF1}} (const std\+::string \&function, const int xmin, const int xmax)
+\begin{DoxyCompactList}\small\item\em KS\+: Make a TF1 from the reduced TF1. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceM3_adb59b8ecdc4e1b2d5d4c826a13aa7463}{M3\+::int\+\_\+t}} \mbox{\hyperlink{classTF1__red_a721bf5a3f06ae900cd592c94e59bed2f}{Get\+Np}} () override
+\begin{DoxyCompactList}\small\item\em DL\+: Get number of points. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{classTResponseFunction__red}{TResponse\+Function\+\_\+red}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTResponseFunction__red_a50443a78985e0c9b16ffc36ebc1d2e91}{TResponse\+Function\+\_\+red}} ()
+\begin{DoxyCompactList}\small\item\em Empty constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classTResponseFunction__red_a216998fd1fed9353073640ede950a916}{$\sim$\+TResponse\+Function\+\_\+red}} ()
+\begin{DoxyCompactList}\small\item\em Empty destructor. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classTResponseFunction__red_a9131d654c46da7e4ab1c9c679a5c9008}{Eval}} (const double var)=0
+\begin{DoxyCompactList}\small\item\em Evaluate a variation. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classTResponseFunction__red_abeb53f28dcb53965afba33bad5c89a02}{Print}} ()=0
+\begin{DoxyCompactList}\small\item\em KS\+: Printer. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespaceM3_adb59b8ecdc4e1b2d5d4c826a13aa7463}{M3\+::int\+\_\+t}} \mbox{\hyperlink{classTResponseFunction__red_a672da1d698b53fb2203cc51f92ed2875}{Get\+Np}} ()=0
+\begin{DoxyCompactList}\small\item\em DL\+: Get number of points. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3\+::float\+\_\+t}} $\ast$ \mbox{\hyperlink{classTF1__red_a89ff168cd938509a5081a2a39bcb0be8}{Par}}
+\begin{DoxyCompactList}\small\item\em The parameters. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceM3_adb59b8ecdc4e1b2d5d4c826a13aa7463}{M3\+::int\+\_\+t}} \mbox{\hyperlink{classTF1__red_a25a2d24932de29741a6d539328d715a7}{length}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+CW\+: A reduced TF1 class only. Only saves parameters for each TF1 and how many parameters each parameter set has. 
+
+Definition at line \mbox{\hyperlink{SplineStructs_8h_source_l00119}{119}} of file \mbox{\hyperlink{SplineStructs_8h_source}{Spline\+Structs.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTF1__red_a503700d13da3bc04710c6a52e14877e6}\label{classTF1__red_a503700d13da3bc04710c6a52e14877e6}} 
+\index{TF1\_red@{TF1\_red}!TF1\_red@{TF1\_red}}
+\index{TF1\_red@{TF1\_red}!TF1\_red@{TF1\_red}}
+\doxysubsubsection{\texorpdfstring{TF1\_red()}{TF1\_red()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily TF1\+\_\+red\+::\+TF1\+\_\+red (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Empty constructor. 
+
+
+
+Definition at line \mbox{\hyperlink{SplineStructs_8h_source_l00123}{123}} of file \mbox{\hyperlink{SplineStructs_8h_source}{Spline\+Structs.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classTResponseFunction__red_a50443a78985e0c9b16ffc36ebc1d2e91}{TResponseFunction\_red}}()\ \{}
+\DoxyCodeLine{00124\ \ \ \ \ \mbox{\hyperlink{classTF1__red_a25a2d24932de29741a6d539328d715a7}{length}}\ =\ 0;}
+\DoxyCodeLine{00125\ \ \ \ \ \mbox{\hyperlink{classTF1__red_a89ff168cd938509a5081a2a39bcb0be8}{Par}}\ =\ NULL;}
+\DoxyCodeLine{00126\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classTF1__red_a154077c37858ec88449cae76c41d671b}\label{classTF1__red_a154077c37858ec88449cae76c41d671b}} 
+\index{TF1\_red@{TF1\_red}!````~TF1\_red@{$\sim$TF1\_red}}
+\index{````~TF1\_red@{$\sim$TF1\_red}!TF1\_red@{TF1\_red}}
+\doxysubsubsection{\texorpdfstring{$\sim$TF1\_red()}{~TF1\_red()}}
+{\footnotesize\ttfamily TF1\+\_\+red\+::$\sim$\+TF1\+\_\+red (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Empty destructor. 
+
+
+
+Definition at line \mbox{\hyperlink{SplineStructs_8h_source_l00129}{129}} of file \mbox{\hyperlink{SplineStructs_8h_source}{Spline\+Structs.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classTF1__red_a89ff168cd938509a5081a2a39bcb0be8}{Par}}\ !=\ NULL)\ \{}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ \mbox{\hyperlink{classTF1__red_a89ff168cd938509a5081a2a39bcb0be8}{Par}};}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \mbox{\hyperlink{classTF1__red_a89ff168cd938509a5081a2a39bcb0be8}{Par}}\ =\ NULL;}
+\DoxyCodeLine{00133\ \ \ \ \ \}}
+\DoxyCodeLine{00134\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classTF1__red_adead62e9b0591aec30925907f6972086}\label{classTF1__red_adead62e9b0591aec30925907f6972086}} 
+\index{TF1\_red@{TF1\_red}!TF1\_red@{TF1\_red}}
+\index{TF1\_red@{TF1\_red}!TF1\_red@{TF1\_red}}
+\doxysubsubsection{\texorpdfstring{TF1\_red()}{TF1\_red()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily TF1\+\_\+red\+::\+TF1\+\_\+red (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceM3_adb59b8ecdc4e1b2d5d4c826a13aa7463}{M3\+::int\+\_\+t}}}]{n\+Size,  }\item[{\mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3\+::float\+\_\+t}} $\ast$}]{Array }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The useful constructor with deep copy. 
+
+
+
+Definition at line \mbox{\hyperlink{SplineStructs_8h_source_l00137}{137}} of file \mbox{\hyperlink{SplineStructs_8h_source}{Spline\+Structs.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classTResponseFunction__red_a50443a78985e0c9b16ffc36ebc1d2e91}{TResponseFunction\_red}}()\ \{}
+\DoxyCodeLine{00138\ \ \ \ \ \mbox{\hyperlink{classTF1__red_a25a2d24932de29741a6d539328d715a7}{length}}\ =\ nSize;}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classTF1__red_a25a2d24932de29741a6d539328d715a7}{length}};\ ++i)\ \{}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \mbox{\hyperlink{classTF1__red_a89ff168cd938509a5081a2a39bcb0be8}{Par}}[i]\ =\ Array[i];}
+\DoxyCodeLine{00141\ \ \ \ \ \}}
+\DoxyCodeLine{00142\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classTF1__red_a7ee6185f2184824a190d146375522952}\label{classTF1__red_a7ee6185f2184824a190d146375522952}} 
+\index{TF1\_red@{TF1\_red}!TF1\_red@{TF1\_red}}
+\index{TF1\_red@{TF1\_red}!TF1\_red@{TF1\_red}}
+\doxysubsubsection{\texorpdfstring{TF1\_red()}{TF1\_red()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily TF1\+\_\+red\+::\+TF1\+\_\+red (\begin{DoxyParamCaption}\item[{TF1 $\ast$\&}]{Function }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The TF1 constructor with deep copy. 
+
+
+
+Definition at line \mbox{\hyperlink{SplineStructs_8h_source_l00145}{145}} of file \mbox{\hyperlink{SplineStructs_8h_source}{Spline\+Structs.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classTResponseFunction__red_a50443a78985e0c9b16ffc36ebc1d2e91}{TResponseFunction\_red}}()\ \{}
+\DoxyCodeLine{00146\ \ \ \ \ \mbox{\hyperlink{classTF1__red_a89ff168cd938509a5081a2a39bcb0be8}{Par}}\ =\ NULL;}
+\DoxyCodeLine{00147\ \ \ \ \ \mbox{\hyperlink{classTF1__red_a2622a66b8baafd26b66e6544b7de5bfe}{SetFunc}}(Function);}
+\DoxyCodeLine{00148\ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTF1__red_a06dd51dfd5a00286d99e688a8c0c5d6a}\label{classTF1__red_a06dd51dfd5a00286d99e688a8c0c5d6a}} 
+\index{TF1\_red@{TF1\_red}!ConstructTF1@{ConstructTF1}}
+\index{ConstructTF1@{ConstructTF1}!TF1\_red@{TF1\_red}}
+\doxysubsubsection{\texorpdfstring{ConstructTF1()}{ConstructTF1()}}
+{\footnotesize\ttfamily TF1 $\ast$ TF1\+\_\+red\+::\+Construct\+TF1 (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{function,  }\item[{const int}]{xmin,  }\item[{const int}]{xmax }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+KS\+: Make a TF1 from the reduced TF1. 
+
+
+
+Definition at line \mbox{\hyperlink{SplineStructs_8h_source_l00217}{217}} of file \mbox{\hyperlink{SplineStructs_8h_source}{Spline\+Structs.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00218\ \ \ \ \ TF1\ *func\ =\ \textcolor{keyword}{new}\ TF1(\textcolor{stringliteral}{"{}TF1"{}},\ function.c\_str(),\ xmin,\ xmax);}
+\DoxyCodeLine{00219\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classTF1__red_a25a2d24932de29741a6d539328d715a7}{length}};\ ++i)\ \{}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ func-\/>SetParameter(i,\ \mbox{\hyperlink{classTF1__red_a89ff168cd938509a5081a2a39bcb0be8}{Par}}[i]);}
+\DoxyCodeLine{00221\ \ \ \ \ \}}
+\DoxyCodeLine{00222\ \ \ \ \ \textcolor{keywordflow}{return}\ func;}
+\DoxyCodeLine{00223\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classTF1__red_a9e581e2dac4d95f26bef3aeb3cf1b8d9}\label{classTF1__red_a9e581e2dac4d95f26bef3aeb3cf1b8d9}} 
+\index{TF1\_red@{TF1\_red}!Eval@{Eval}}
+\index{Eval@{Eval}!TF1\_red@{TF1\_red}}
+\doxysubsubsection{\texorpdfstring{Eval()}{Eval()}}
+{\footnotesize\ttfamily double TF1\+\_\+red\+::\+Eval (\begin{DoxyParamCaption}\item[{const double}]{var }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Evaluate a variation. 
+
+
+
+Implements \mbox{\hyperlink{classTResponseFunction__red_a9131d654c46da7e4ab1c9c679a5c9008}{TResponse\+Function\+\_\+red}}.
+
+
+
+Definition at line \mbox{\hyperlink{SplineStructs_8h_source_l00163}{163}} of file \mbox{\hyperlink{SplineStructs_8h_source}{Spline\+Structs.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classTF1__red_a89ff168cd938509a5081a2a39bcb0be8}{Par}}[1]+\mbox{\hyperlink{classTF1__red_a89ff168cd938509a5081a2a39bcb0be8}{Par}}[0]*var;}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{comment}{/*\ FIXME\ in\ future\ we\ might\ introduce\ more\ TF1}}
+\DoxyCodeLine{00167\ \textcolor{comment}{\ \ \ \ //If\ we\ have\ 5\ parameters\ we're\ using\ a\ fifth\ order\ polynomial}}
+\DoxyCodeLine{00168\ \textcolor{comment}{\ \ \ \ if\ (Type\ ==\ kFifthOrderPolynomial)\ \{}}
+\DoxyCodeLine{00169\ \textcolor{comment}{\ \ \ \ \ \ return\ 1+Par[0]*var+Par[1]*var*var+Par[2]*var*var*var+Par[3]*var*var*var*var+Par[4]*var*var*var*var*var;}}
+\DoxyCodeLine{00170\ \textcolor{comment}{\ \ \ \ \}\ else\ if\ (Type\ ==\ kTwoLinears)\ \{}}
+\DoxyCodeLine{00171\ \textcolor{comment}{\ \ \ \ \ \ return\ (var\ <=\ 0)*(Par[2]+Par[0]*var)+(var\ >\ 0)*(Par[2]+Par[1]*var);}}
+\DoxyCodeLine{00172\ \textcolor{comment}{\ \ \ \ \}\ else\ if\ (Type\ ==\ kLinear)\ \{}}
+\DoxyCodeLine{00173\ \textcolor{comment}{\ \ \ \ \ \ return\ (Par[1]+Par[0]*var);}}
+\DoxyCodeLine{00174\ \textcolor{comment}{\ \ \ \ \}\ else\ if\ (Type\ ==\ kPseudoHeaviside)\ \{}}
+\DoxyCodeLine{00175\ \textcolor{comment}{\ \ \ \ \ \ return\ (var\ <=\ 0)*(1+Par[0]*var)\ +\ (1\ >=\ var)*(var\ >\ 0)*(1+Par[1]*var)\ +\ (var\ >\ 1)*(Par[3]+Par[2]*var);}}
+\DoxyCodeLine{00176\ \textcolor{comment}{\ \ \ \ \}else\ \{}}
+\DoxyCodeLine{00177\ \textcolor{comment}{\ \ \ \ \ \ MACH3LOG\_ERROR("{}\ \ \ \ Class\ only\ knows\ about\ 5th\ order\ polynomial,\ two\ superposed\ linear\ functions,\ linear\ function,\ or\ pseudo\ Heaviside."{});}}
+\DoxyCodeLine{00178\ \textcolor{comment}{\ \ \ \ \ \ MACH3LOG\_ERROR("{}\ \ \ \ You\ have\ tried\ something\ else\ than\ this,\ which\ remains\ unimplemented."{});}}
+\DoxyCodeLine{00179\ \textcolor{comment}{\ \ \ \ \ \ MACH3LOG\_ERROR("{}\{\}:\ \{\}"{},\ \_\_FILE\_\_,\ \_\_LINE\_\_);}}
+\DoxyCodeLine{00180\ \textcolor{comment}{\ \ \ \ \ \ throw\ MaCh3Exception(\_\_FILE\_\_\ ,\ \_\_LINE\_\_\ );}}
+\DoxyCodeLine{00181\ \textcolor{comment}{\ \ \ \ \}}}
+\DoxyCodeLine{00182\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00183\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classTF1__red_a721bf5a3f06ae900cd592c94e59bed2f}\label{classTF1__red_a721bf5a3f06ae900cd592c94e59bed2f}} 
+\index{TF1\_red@{TF1\_red}!GetNp@{GetNp}}
+\index{GetNp@{GetNp}!TF1\_red@{TF1\_red}}
+\doxysubsubsection{\texorpdfstring{GetNp()}{GetNp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceM3_adb59b8ecdc4e1b2d5d4c826a13aa7463}{M3\+::int\+\_\+t}} TF1\+\_\+red\+::\+Get\+Np (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+DL\+: Get number of points. 
+
+
+
+Implements \mbox{\hyperlink{classTResponseFunction__red_a672da1d698b53fb2203cc51f92ed2875}{TResponse\+Function\+\_\+red}}.
+
+
+
+Definition at line \mbox{\hyperlink{SplineStructs_8h_source_l00226}{226}} of file \mbox{\hyperlink{SplineStructs_8h_source}{Spline\+Structs.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00226\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classTF1__red_a25a2d24932de29741a6d539328d715a7}{length}};\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classTF1__red_ae0385a986d12257d806ba970646d1d15}\label{classTF1__red_ae0385a986d12257d806ba970646d1d15}} 
+\index{TF1\_red@{TF1\_red}!GetParameter@{GetParameter}}
+\index{GetParameter@{GetParameter}!TF1\_red@{TF1\_red}}
+\doxysubsubsection{\texorpdfstring{GetParameter()}{GetParameter()}}
+{\footnotesize\ttfamily double TF1\+\_\+red\+::\+Get\+Parameter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceM3_adb59b8ecdc4e1b2d5d4c826a13aa7463}{M3\+::int\+\_\+t}}}]{Parameter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get a parameter value. 
+
+
+
+Definition at line \mbox{\hyperlink{SplineStructs_8h_source_l00191}{191}} of file \mbox{\hyperlink{SplineStructs_8h_source}{Spline\+Structs.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{keywordflow}{if}\ (Parameter\ >\ \mbox{\hyperlink{classTF1__red_a25a2d24932de29741a6d539328d715a7}{length}})\ \{}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}You\ requested\ parameter\ number\ \{\}\ but\ length\ is\ \{\}\ parameters"{}},\ Parameter,\ \mbox{\hyperlink{classTF1__red_a25a2d24932de29741a6d539328d715a7}{length}});}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_\ ,\ \_\_LINE\_\_\ );}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/999.999;}
+\DoxyCodeLine{00196\ \ \ \ \ \}}
+\DoxyCodeLine{00197\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classTF1__red_a89ff168cd938509a5081a2a39bcb0be8}{Par}}[Parameter];}
+\DoxyCodeLine{00198\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classTF1__red_af9e3b0e8d2edad0e7e08f3bf215525c9}\label{classTF1__red_af9e3b0e8d2edad0e7e08f3bf215525c9}} 
+\index{TF1\_red@{TF1\_red}!GetSize@{GetSize}}
+\index{GetSize@{GetSize}!TF1\_red@{TF1\_red}}
+\doxysubsubsection{\texorpdfstring{GetSize()}{GetSize()}}
+{\footnotesize\ttfamily int TF1\+\_\+red\+::\+Get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the size. 
+
+
+
+Definition at line \mbox{\hyperlink{SplineStructs_8h_source_l00206}{206}} of file \mbox{\hyperlink{SplineStructs_8h_source}{Spline\+Structs.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00206\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classTF1__red_a25a2d24932de29741a6d539328d715a7}{length}};\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classTF1__red_a70e93817adf5b7bf926f781b04fb1f04}\label{classTF1__red_a70e93817adf5b7bf926f781b04fb1f04}} 
+\index{TF1\_red@{TF1\_red}!Print@{Print}}
+\index{Print@{Print}!TF1\_red@{TF1\_red}}
+\doxysubsubsection{\texorpdfstring{Print()}{Print()}}
+{\footnotesize\ttfamily void TF1\+\_\+red\+::\+Print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Print detailed info. 
+
+
+
+Implements \mbox{\hyperlink{classTResponseFunction__red_abeb53f28dcb53965afba33bad5c89a02}{TResponse\+Function\+\_\+red}}.
+
+
+
+Definition at line \mbox{\hyperlink{SplineStructs_8h_source_l00208}{208}} of file \mbox{\hyperlink{SplineStructs_8h_source}{Spline\+Structs.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00209\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Printing\ TF1\_red:"{}});}
+\DoxyCodeLine{00210\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}\ \ Length\ \ =\ \{\}"{}},\ \mbox{\hyperlink{classTF1__red_a25a2d24932de29741a6d539328d715a7}{length}});}
+\DoxyCodeLine{00211\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classTF1__red_a25a2d24932de29741a6d539328d715a7}{length}};\ i++)\ \{}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}\ \ Coeff\ \{\}\ \ =\ \{\}"{}},\ i,\ \mbox{\hyperlink{classTF1__red_a89ff168cd938509a5081a2a39bcb0be8}{Par}}[i]);}
+\DoxyCodeLine{00213\ \ \ \ \ \}}
+\DoxyCodeLine{00214\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classTF1__red_a2622a66b8baafd26b66e6544b7de5bfe}\label{classTF1__red_a2622a66b8baafd26b66e6544b7de5bfe}} 
+\index{TF1\_red@{TF1\_red}!SetFunc@{SetFunc}}
+\index{SetFunc@{SetFunc}!TF1\_red@{TF1\_red}}
+\doxysubsubsection{\texorpdfstring{SetFunc()}{SetFunc()}}
+{\footnotesize\ttfamily void TF1\+\_\+red\+::\+Set\+Func (\begin{DoxyParamCaption}\item[{TF1 $\ast$\&}]{Func }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the function. 
+
+
+
+Definition at line \mbox{\hyperlink{SplineStructs_8h_source_l00151}{151}} of file \mbox{\hyperlink{SplineStructs_8h_source}{Spline\+Structs.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00152\ \ \ \ \ \mbox{\hyperlink{classTF1__red_a25a2d24932de29741a6d539328d715a7}{length}}\ =\ \mbox{\hyperlink{namespaceM3_adb59b8ecdc4e1b2d5d4c826a13aa7463}{M3::int\_t}}(Func-\/>GetNpar());}
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classTF1__red_a89ff168cd938509a5081a2a39bcb0be8}{Par}}\ !=\ NULL)\ \textcolor{keyword}{delete}[]\ \mbox{\hyperlink{classTF1__red_a89ff168cd938509a5081a2a39bcb0be8}{Par}};}
+\DoxyCodeLine{00154\ \ \ \ \ \mbox{\hyperlink{classTF1__red_a89ff168cd938509a5081a2a39bcb0be8}{Par}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}[\mbox{\hyperlink{classTF1__red_a25a2d24932de29741a6d539328d715a7}{length}}];}
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classTF1__red_a25a2d24932de29741a6d539328d715a7}{length}};\ ++i)\ \{}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \mbox{\hyperlink{classTF1__red_a89ff168cd938509a5081a2a39bcb0be8}{Par}}[i]\ =\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}(Func-\/>GetParameter(i));}
+\DoxyCodeLine{00157\ \ \ \ \ \}}
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keyword}{delete}\ Func;}
+\DoxyCodeLine{00159\ \ \ \ \ Func\ =\ NULL;}
+\DoxyCodeLine{00160\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classTF1__red_ae317eec4bd889f37b9e6cc9c8c096f57}\label{classTF1__red_ae317eec4bd889f37b9e6cc9c8c096f57}} 
+\index{TF1\_red@{TF1\_red}!SetParameter@{SetParameter}}
+\index{SetParameter@{SetParameter}!TF1\_red@{TF1\_red}}
+\doxysubsubsection{\texorpdfstring{SetParameter()}{SetParameter()}}
+{\footnotesize\ttfamily void TF1\+\_\+red\+::\+Set\+Parameter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceM3_adb59b8ecdc4e1b2d5d4c826a13aa7463}{M3\+::int\+\_\+t}}}]{Parameter,  }\item[{\mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3\+::float\+\_\+t}}}]{Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set a parameter to a value. 
+
+
+
+Definition at line \mbox{\hyperlink{SplineStructs_8h_source_l00186}{186}} of file \mbox{\hyperlink{SplineStructs_8h_source}{Spline\+Structs.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00187\ \ \ \ \ \mbox{\hyperlink{classTF1__red_a89ff168cd938509a5081a2a39bcb0be8}{Par}}[Parameter]\ =\ Value;}
+\DoxyCodeLine{00188\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classTF1__red_a105267ba275921f9db49548e59798b3c}\label{classTF1__red_a105267ba275921f9db49548e59798b3c}} 
+\index{TF1\_red@{TF1\_red}!SetSize@{SetSize}}
+\index{SetSize@{SetSize}!TF1\_red@{TF1\_red}}
+\doxysubsubsection{\texorpdfstring{SetSize()}{SetSize()}}
+{\footnotesize\ttfamily void TF1\+\_\+red\+::\+Set\+Size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceM3_adb59b8ecdc4e1b2d5d4c826a13aa7463}{M3\+::int\+\_\+t}}}]{n\+Spline }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the size. 
+
+
+
+Definition at line \mbox{\hyperlink{SplineStructs_8h_source_l00201}{201}} of file \mbox{\hyperlink{SplineStructs_8h_source}{Spline\+Structs.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00202\ \ \ \ \ \mbox{\hyperlink{classTF1__red_a25a2d24932de29741a6d539328d715a7}{length}}\ =\ nSpline;}
+\DoxyCodeLine{00203\ \ \ \ \ \mbox{\hyperlink{classTF1__red_a89ff168cd938509a5081a2a39bcb0be8}{Par}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}[\mbox{\hyperlink{classTF1__red_a25a2d24932de29741a6d539328d715a7}{length}}];}
+\DoxyCodeLine{00204\ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classTF1__red_a25a2d24932de29741a6d539328d715a7}\label{classTF1__red_a25a2d24932de29741a6d539328d715a7}} 
+\index{TF1\_red@{TF1\_red}!length@{length}}
+\index{length@{length}!TF1\_red@{TF1\_red}}
+\doxysubsubsection{\texorpdfstring{length}{length}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceM3_adb59b8ecdc4e1b2d5d4c826a13aa7463}{M3\+::int\+\_\+t}} TF1\+\_\+red\+::length\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{SplineStructs_8h_source_l00231}{231}} of file \mbox{\hyperlink{SplineStructs_8h_source}{Spline\+Structs.\+h}}.
+
+\mbox{\Hypertarget{classTF1__red_a89ff168cd938509a5081a2a39bcb0be8}\label{classTF1__red_a89ff168cd938509a5081a2a39bcb0be8}} 
+\index{TF1\_red@{TF1\_red}!Par@{Par}}
+\index{Par@{Par}!TF1\_red@{TF1\_red}}
+\doxysubsubsection{\texorpdfstring{Par}{Par}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3\+::float\+\_\+t}}$\ast$ TF1\+\_\+red\+::\+Par\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The parameters. 
+
+
+
+Definition at line \mbox{\hyperlink{SplineStructs_8h_source_l00230}{230}} of file \mbox{\hyperlink{SplineStructs_8h_source}{Spline\+Structs.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/runner/work/\+Ma\+Ch3/\+Ma\+Ch3/splines/\mbox{\hyperlink{SplineStructs_8h}{Spline\+Structs.\+h}}\end{DoxyCompactItemize}

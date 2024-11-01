@@ -1,0 +1,215 @@
+\hypertarget{gpuMCMCProcessorUtils_8cu_source}{}\doxysection{gpu\+MCMCProcessor\+Utils.\+cu}
+\label{gpuMCMCProcessorUtils_8cu_source}\index{/home/runner/work/MaCh3/MaCh3/mcmc/gpuMCMCProcessorUtils.cu@{/home/runner/work/MaCh3/MaCh3/mcmc/gpuMCMCProcessorUtils.cu}}
+\mbox{\hyperlink{gpuMCMCProcessorUtils_8cu}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{gpuMCMCProcessorUtils_8cuh}{mcmc/gpuMCMCProcessorUtils.cuh}}"{}}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00003}00003\ \textcolor{comment}{//\ ******************************************}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00004}00004\ \textcolor{comment}{//\ CONSTANTS}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00005}00005\ \textcolor{comment}{//\ ******************************************}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00007}00007\ \textcolor{comment}{//\ d\_NAME\ declares\ DEVICE\ constants\ (live\ on\ GPU)}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00008}\mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_af8f4968d58719d599f3d6ac1adecf9bd}{00008}}\ \_\_device\_\_\ \_\_constant\_\_\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_af8f4968d58719d599f3d6ac1adecf9bd}{d\_nLag}};}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00009}\mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_ad9b41c473ce2b52f562c1809d6b233ca}{00009}}\ \_\_device\_\_\ \_\_constant\_\_\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_ad9b41c473ce2b52f562c1809d6b233ca}{d\_nDraws}};}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00010}\mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_a2612fc014389124064ca4e2c9c2eb616}{00010}}\ \_\_device\_\_\ \_\_constant\_\_\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_a2612fc014389124064ca4e2c9c2eb616}{d\_nEntries}};}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00012}00012\ \textcolor{comment}{//\ h\_NAME\ declares\ HOST\ constants\ (live\ on\ CPU)}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00013}\mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_a3d609e7d3946c09c05beebd1f703f355}{00013}}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_a3d609e7d3946c09c05beebd1f703f355}{h\_nLag}}\ \ \ \ \ =\ -\/1;}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00014}\mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_afe4d63f9540a121d02444724ba2abe10}{00014}}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_afe4d63f9540a121d02444724ba2abe10}{h\_nDraws}}\ \ \ =\ -\/1;}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00015}\mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_adbc5ade24b4b04c29d1437f78a3f8923}{00015}}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_adbc5ade24b4b04c29d1437f78a3f8923}{h\_nEntries}}\ =\ -\/1;}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00017}00017\ \textcolor{comment}{//\ *******************************************}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00018}00018\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ INITIALISE\ GPU}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00019}00019\ \textcolor{comment}{//\ *******************************************}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00021}00021\ \textcolor{comment}{//\ *******************************************}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00023}\mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_a5f83eaf9a69d10b00a4078608bdd0674}{00023}}\ \textcolor{comment}{}\_\_host\_\_\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_a5f83eaf9a69d10b00a4078608bdd0674}{InitGPU\_AutoCorr}}(}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00024}00024\ \textcolor{comment}{//\ *******************************************}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ **ParStep\_gpu,}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ **NumeratorSum\_gpu,}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ **ParamSums\_gpu,}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ **DenomSum\_gpu,}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ n\_Entries,}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ n\_Pars,}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ n\_Lags)\ \{}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00034}00034\ \ \ \textcolor{comment}{//\ Write\ to\ the\ global\ statics\ (h\_*\ denotes\ host\ stored\ variable)}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00035}00035\ \ \ \mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_afe4d63f9540a121d02444724ba2abe10}{h\_nDraws}}\ =\ n\_Pars;}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00036}00036\ \ \ \mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_a3d609e7d3946c09c05beebd1f703f355}{h\_nLag}}\ =\ n\_Lags;}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00037}00037\ \ \ \mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_adbc5ade24b4b04c29d1437f78a3f8923}{h\_nEntries}}\ =\ n\_Entries;}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00039}00039\ \ \ \textcolor{comment}{//\ Copy\ the\ constants}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00040}00040\ \ \ cudaMemcpyToSymbol(\mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_af8f4968d58719d599f3d6ac1adecf9bd}{d\_nLag}},\ \ \ \&\mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_a3d609e7d3946c09c05beebd1f703f355}{h\_nLag}},\ \ \ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_a3d609e7d3946c09c05beebd1f703f355}{h\_nLag}}));}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00041}00041\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00043}00043\ \ \ cudaMemcpyToSymbol(\mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_ad9b41c473ce2b52f562c1809d6b233ca}{d\_nDraws}},\ \&\mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_afe4d63f9540a121d02444724ba2abe10}{h\_nDraws}},\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_afe4d63f9540a121d02444724ba2abe10}{h\_nDraws}}));}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00044}00044\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00046}00046\ \ \ cudaMemcpyToSymbol(\mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_a2612fc014389124064ca4e2c9c2eb616}{d\_nEntries}},\ \&\mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_adbc5ade24b4b04c29d1437f78a3f8923}{h\_nEntries}},\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_adbc5ade24b4b04c29d1437f78a3f8923}{h\_nEntries}}));}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00047}00047\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00049}00049\ \ \ \textcolor{comment}{//\ Allocate\ chunks\ of\ memory\ to\ GPU}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00050}00050\ \ \ \textcolor{comment}{//Numerator\ which\ is\ directly\ used\ for\ calculating\ LagL}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00051}00051\ \ \ cudaMalloc((\textcolor{keywordtype}{void}\ **)\ NumeratorSum\_gpu,\ \mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_a3d609e7d3946c09c05beebd1f703f355}{h\_nLag}}*\mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_afe4d63f9540a121d02444724ba2abe10}{h\_nDraws}}*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}));}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00052}00052\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00054}00054\ \ \ \textcolor{comment}{//Denominator\ which\ is\ directly\ used\ for\ calculating\ LagL}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00055}00055\ \ \ cudaMalloc((\textcolor{keywordtype}{void}\ **)\ DenomSum\_gpu,\ \mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_a3d609e7d3946c09c05beebd1f703f355}{h\_nLag}}*\mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_afe4d63f9540a121d02444724ba2abe10}{h\_nDraws}}*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}));}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00056}00056\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00058}00058\ \ \ \textcolor{comment}{//Mean\ value\ for\ a\ given\ parameter}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00059}00059\ \ \ cudaMalloc((\textcolor{keywordtype}{void}\ **)\ ParamSums\_gpu,\ \mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_afe4d63f9540a121d02444724ba2abe10}{h\_nDraws}}*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}));}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00060}00060\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00062}00062\ \ \ \textcolor{comment}{//store\ value\ of\ paramter\ for\ each\ step}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00063}00063\ \ \ cudaMalloc((\textcolor{keywordtype}{void}\ **)\ ParStep\_gpu,\ \mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_afe4d63f9540a121d02444724ba2abe10}{h\_nDraws}}*\mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_adbc5ade24b4b04c29d1437f78a3f8923}{h\_nEntries}}*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}*));}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00064}00064\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00066}00066\ \ \ printf(\textcolor{stringliteral}{"{}\ Allocated\ in\ total\ \%f\ MB\ for\ autocorrelations\ calculations\ on\ GPU\(\backslash\)n"{}},\ \textcolor{keywordtype}{double}(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float})*(\mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_a3d609e7d3946c09c05beebd1f703f355}{h\_nLag}}*\mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_afe4d63f9540a121d02444724ba2abe10}{h\_nDraws}}+\mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_a3d609e7d3946c09c05beebd1f703f355}{h\_nLag}}*\mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_afe4d63f9540a121d02444724ba2abe10}{h\_nDraws}}+\mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_afe4d63f9540a121d02444724ba2abe10}{h\_nDraws}}+\mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_afe4d63f9540a121d02444724ba2abe10}{h\_nDraws}}*\mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_adbc5ade24b4b04c29d1437f78a3f8923}{h\_nEntries}}))/1.E6);}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00068}00068\ \}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00070}00070\ \textcolor{comment}{//\ ******************************************************}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00071}00071\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ START\ COPY\ TO\ GPU}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00072}00072\ \textcolor{comment}{//\ ******************************************************}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00074}00074\ \textcolor{comment}{//\ ******************************************************}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00076}\mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_a6388d047bba2ea16de2bcb73ca0e398c}{00076}}\ \textcolor{comment}{}\_\_host\_\_\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_a6388d047bba2ea16de2bcb73ca0e398c}{CopyToGPU\_AutoCorr}}(}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00077}00077\ \textcolor{comment}{//\ ******************************************************}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ *ParStep\_cpu,}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ *NumeratorSum\_cpu,}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ *ParamSums\_cpu,}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ *DenomSum\_cpu,}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ *ParStep\_gpu,}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ *NumeratorSum\_gpu,}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ *ParamSums\_gpu,}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ *DenomSum\_gpu)\ \{}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00088}00088\ \ \ \textcolor{comment}{//store\ value\ of\ parameter\ for\ each\ step}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00089}00089\ \ \ cudaMemcpy(ParStep\_gpu,\ ParStep\_cpu,\ \mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_afe4d63f9540a121d02444724ba2abe10}{h\_nDraws}}*\mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_adbc5ade24b4b04c29d1437f78a3f8923}{h\_nEntries}}*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}),\ cudaMemcpyHostToDevice);}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00090}00090\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00092}00092\ \ \ \textcolor{comment}{//Mean\ value\ for\ a\ given\ parameter}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00093}00093\ \ \ cudaMemcpy(ParamSums\_gpu,\ ParamSums\_cpu,\ \mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_afe4d63f9540a121d02444724ba2abe10}{h\_nDraws}}*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}),\ cudaMemcpyHostToDevice);}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00094}00094\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00096}00096\ \ \ \textcolor{comment}{//Numerator\ which\ is\ directly\ used\ for\ calculating\ LagL}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00097}00097\ \ \ cudaMemcpy(NumeratorSum\_gpu,\ NumeratorSum\_cpu,\ \mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_a3d609e7d3946c09c05beebd1f703f355}{h\_nLag}}*\mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_afe4d63f9540a121d02444724ba2abe10}{h\_nDraws}}*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}),\ cudaMemcpyHostToDevice);}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00098}00098\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00100}00100\ \ \ \textcolor{comment}{//Denominator\ which\ is\ directly\ used\ for\ calculating\ LagL}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00101}00101\ \ \ cudaMemcpy(DenomSum\_gpu,\ DenomSum\_cpu,\ \mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_a3d609e7d3946c09c05beebd1f703f355}{h\_nLag}}*\mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_afe4d63f9540a121d02444724ba2abe10}{h\_nDraws}}*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}),\ cudaMemcpyHostToDevice);}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00102}00102\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00103}00103\ \}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00104}00104\ }
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00106}00106\ \textcolor{comment}{//\ ********************************************************}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00107}00107\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ START\ GPU\ KERNELS}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00108}00108\ \textcolor{comment}{//*********************************************************}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00110}00110\ \textcolor{comment}{//*********************************************************}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00112}\mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_a2e9d69f5be6976ac042f93045753acf9}{00112}}\ \textcolor{comment}{}\_\_global\_\_\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_a2e9d69f5be6976ac042f93045753acf9}{EvalOnGPU\_AutoCorr}}(}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00113}00113\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}*\ \_\_restrict\_\_\ ParStep\_gpu,}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00114}00114\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}*\ \_\_restrict\_\_\ ParamSums\_gpu,}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00115}00115\ \ \ \ \ \textcolor{keywordtype}{float}*\ \ NumeratorSum\_gpu,}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00116}00116\ \ \ \ \ \textcolor{keywordtype}{float}*\ \ DenomSum\_gpu)\ \{}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00117}00117\ \textcolor{comment}{//*********************************************************}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00118}00118\ }
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00119}00119\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ CurrentLagNum\ =\ (blockIdx.x\ *\ blockDim.x\ +\ threadIdx.x);}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00120}00120\ }
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00121}00121\ \ \ \textcolor{comment}{//KS:\ Accessing\ shared\ memory\ is\ much\ much\ faster\ than\ global\ memory\ hence\ we\ use\ shared\ memory\ for\ calculation\ and\ then\ write\ to\ global\ memory}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00122}00122\ \ \ \_\_shared\_\_\ \textcolor{keywordtype}{float}\ shared\_NumeratorSum[\mbox{\hyperlink{gpuUtils_8cuh_a393d21a8f493c2561a0ae703973dccc2}{\_BlockSize\_}}];}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00123}00123\ \ \ \_\_shared\_\_\ \textcolor{keywordtype}{float}\ shared\_DenomSum[\mbox{\hyperlink{gpuUtils_8cuh_a393d21a8f493c2561a0ae703973dccc2}{\_BlockSize\_}}];}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00124}00124\ }
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00125}00125\ \ \ \textcolor{comment}{//\ this\ is\ the\ stopping\ condition!}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00126}00126\ \ \ \textcolor{keywordflow}{if}\ (CurrentLagNum\ <\ \mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_af8f4968d58719d599f3d6ac1adecf9bd}{d\_nLag}}*\mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_ad9b41c473ce2b52f562c1809d6b233ca}{d\_nDraws}})}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00127}00127\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00128}00128\ \ \ \ \ \ \ shared\_NumeratorSum[threadIdx.x]\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00129}00129\ \ \ \ \ \ \ shared\_DenomSum[threadIdx.x]\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00130}00130\ }
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00131}00131\ \ \ \ \ \ \ \textcolor{comment}{//KS:\ Might\ consider\ caching\ this\ information,\ which\ MIGHT\ be\ faster\ too\ lazy\ right\ now}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00132}00132\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ Param\ =\ int(CurrentLagNum/\mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_af8f4968d58719d599f3d6ac1adecf9bd}{d\_nLag}});}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00133}00133\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ nLag\ =\ CurrentLagNum\ -\/\ Param*\mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_af8f4968d58719d599f3d6ac1adecf9bd}{d\_nLag}};}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00134}00134\ \ \ \ \ \ \ \textcolor{comment}{//\ Loop\ over\ the\ number\ of\ entries}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00135}00135\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_a2612fc014389124064ca4e2c9c2eb616}{d\_nEntries}};\ ++i)}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00136}00136\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00137}00137\ \ \ \ \ \ \ \ \ \textcolor{comment}{//KS:\ Use\ fmaf\ to\ have\ it\ tiny\ bit\ faster,\ for\ something\ easier\ to\ read:\ Param*d\_nEntries\ +\ i}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00138}00138\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ CurrParStep\ =\ fmaf(Param,\ \mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_a2612fc014389124064ca4e2c9c2eb616}{d\_nEntries}},\ i);}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00139}00139\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ Diff\ =\ ParStep\_gpu[CurrParStep]-\/ParamSums\_gpu[Param];}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00140}00140\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Only\ sum\ the\ numerator\ up\ to\ i\ =\ N-\/k}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00141}00141\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ <\ \mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_a2612fc014389124064ca4e2c9c2eb616}{d\_nEntries}}-\/nLag)}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00142}00142\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//KS:\ Use\ fmaf\ to\ have\ it\ tiny\ bit\ faster,\ for\ something\ easier\ to\ read:\ Param*d\_nEntries\ +\ (i\ +\ nLag)}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ CurrParStep\ =\ fmaf(Param,\ \mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_a2612fc014389124064ca4e2c9c2eb616}{d\_nEntries}},\ i\ +\ nLag);}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ LagTerm\ =\ ParStep\_gpu[CurrParStep]-\/ParamSums\_gpu[Param];}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ Product\ =\ Diff*LagTerm;}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ shared\_NumeratorSum[threadIdx.x]\ +=\ Product;}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00148}00148\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00149}00149\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Square\ the\ difference\ to\ form\ the\ denominator}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00150}00150\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ Denom\ =\ Diff*Diff;}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00151}00151\ \ \ \ \ \ \ \ \ shared\_DenomSum[threadIdx.x]\ +=\ Denom;}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00152}00152\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00153}00153\ }
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00154}00154\ \ \ \ \ \ \ \textcolor{comment}{//KS:\ Make\ sure\ threads\ are\ synchronised\ before\ moving\ to\ global\ memory}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00155}00155\ \ \ \ \ \ \ \_\_syncthreads();}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00156}00156\ \ \ \ \ \ \ NumeratorSum\_gpu[CurrentLagNum]\ =\ shared\_NumeratorSum[threadIdx.x];}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00157}00157\ \ \ \ \ \ \ DenomSum\_gpu[CurrentLagNum]\ \ \ \ \ =\ shared\_DenomSum[threadIdx.x];}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00158}00158\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00159}00159\ \}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00160}00160\ }
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00161}00161\ \textcolor{comment}{//\ *****************************************}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00163}\mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_a809672193d24a096e6d4865109357070}{00163}}\ \textcolor{comment}{}\_\_host\_\_\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_a809672193d24a096e6d4865109357070}{RunGPU\_AutoCorr}}(}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00164}00164\ \ \ \ \ \textcolor{keywordtype}{float}*\ \ ParStep\_gpu,}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00165}00165\ \ \ \ \ \textcolor{keywordtype}{float}*\ \ ParamSums\_gpu,}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00166}00166\ \ \ \ \ \textcolor{keywordtype}{float}*\ \ NumeratorSum\_gpu,}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00167}00167\ \ \ \ \ \textcolor{keywordtype}{float}*\ \ DenomSum\_gpu,}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00168}00168\ \ \ \ \ \textcolor{keywordtype}{float}*\ \ NumeratorSum\_cpu,}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00169}00169\ \ \ \ \ \textcolor{keywordtype}{float}*\ \ DenomSum\_cpu)\ \{}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00170}00170\ \textcolor{comment}{//\ *****************************************}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00171}00171\ }
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00172}00172\ \ \ dim3\ block\_size;}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00173}00173\ \ \ dim3\ grid\_size;}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00174}00174\ }
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00175}00175\ \ \ block\_size.x\ =\ \mbox{\hyperlink{gpuUtils_8cuh_a393d21a8f493c2561a0ae703973dccc2}{\_BlockSize\_}};}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00176}00176\ \ \ grid\_size.x\ =\ (\mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_a3d609e7d3946c09c05beebd1f703f355}{h\_nLag}}*\mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_afe4d63f9540a121d02444724ba2abe10}{h\_nDraws}}\ /\ block\_size.x)\ +\ 1;}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00177}00177\ }
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00178}00178\ \ \ EvalOnGPU\_AutoCorr<<<grid\_size,\ block\_size>>>(}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00179}00179\ \ \ \ \ \ \ ParStep\_gpu,}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00180}00180\ \ \ \ \ \ \ ParamSums\_gpu,}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00181}00181\ \ \ \ \ \ \ NumeratorSum\_gpu,}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00182}00182\ \ \ \ \ \ \ DenomSum\_gpu);}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00183}00183\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00184}00184\ }
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00185}00185\ \ \ printf(\textcolor{stringliteral}{"{}\ Finished\ calculating\ now\ copying\ results\ back\ to\ CPU\ \(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00186}00186\ }
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00187}00187\ \ \ \textcolor{comment}{//KS:\ Finally\ copy\ paste\ memory\ from\ GPU\ to\ CPU}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00188}00188\ \ \ cudaMemcpy(NumeratorSum\_cpu,\ NumeratorSum\_gpu,\ \mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_a3d609e7d3946c09c05beebd1f703f355}{h\_nLag}}*\mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_afe4d63f9540a121d02444724ba2abe10}{h\_nDraws}}*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}),\ cudaMemcpyDeviceToHost);}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00189}00189\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00190}00190\ }
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00191}00191\ \ \ cudaMemcpy(DenomSum\_cpu,\ DenomSum\_gpu,\ \mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_a3d609e7d3946c09c05beebd1f703f355}{h\_nLag}}*\mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_afe4d63f9540a121d02444724ba2abe10}{h\_nDraws}}*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}),\ cudaMemcpyDeviceToHost);}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00192}00192\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00193}00193\ \}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00194}00194\ }
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00195}00195\ \textcolor{comment}{//\ *********************************}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00196}00196\ \textcolor{comment}{//\ CLEANING}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00197}00197\ \textcolor{comment}{//\ *********************************}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00198}00198\ }
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00199}00199\ \textcolor{comment}{//\ *********************************}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00201}\mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_abb46837d774b5be81a6c601c762ab05a}{00201}}\ \textcolor{comment}{}\_\_host\_\_\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{gpuMCMCProcessorUtils_8cu_abb46837d774b5be81a6c601c762ab05a}{CleanupGPU\_AutoCorr}}(}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00202}00202\ \ \ \ \ \textcolor{keywordtype}{float}\ *ParStep\_gpu,}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00203}00203\ \ \ \ \ \textcolor{keywordtype}{float}\ *NumeratorSum\_gpu,}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00204}00204\ \ \ \ \ \textcolor{keywordtype}{float}\ *ParamSums\_gpu,}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00205}00205\ \ \ \ \ \textcolor{keywordtype}{float}\ *DenomSum\_gpu)\ \{}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00206}00206\ \textcolor{comment}{//\ *********************************}}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00207}00207\ \ \ cudaFree(ParStep\_gpu);}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00208}00208\ \ \ cudaFree(NumeratorSum\_gpu);}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00209}00209\ \ \ cudaFree(ParamSums\_gpu);}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00210}00210\ \ \ cudaFree(DenomSum\_gpu);}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00211}00211\ }
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00212}00212\ \ \ printf(\textcolor{stringliteral}{"{}\ Cleared\ memory\ at\ GPU,\ I\ am\ free\ \(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00213}00213\ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{gpuMCMCProcessorUtils_8cu_source_l00214}00214\ \}}
+
+\end{DoxyCode}

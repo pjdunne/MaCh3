@@ -1,0 +1,982 @@
+\hypertarget{splineFDBase_8cpp_source}{}\doxysection{spline\+FDBase.\+cpp}
+\label{splineFDBase_8cpp_source}\index{/home/runner/work/MaCh3/MaCh3/splines/splineFDBase.cpp@{/home/runner/work/MaCh3/MaCh3/splines/splineFDBase.cpp}}
+\mbox{\hyperlink{splineFDBase_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{splineFDBase_8h}{splineFDBase.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#pragma\ GCC\ diagnostic\ ignored\ "{}-\/Wuseless-\/cast"{}}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#pragma\ GCC\ diagnostic\ ignored\ "{}-\/Wfloat-\/conversion"{}}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00006}00006\ \textcolor{comment}{//****************************************}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00007}\mbox{\hyperlink{classsplineFDBase_a089883fce1a3f4180e3156215fb9c38a}{00007}}\ \mbox{\hyperlink{classsplineFDBase_a089883fce1a3f4180e3156215fb9c38a}{splineFDBase::splineFDBase}}(\mbox{\hyperlink{classcovarianceXsec}{covarianceXsec}}\ *xsec\_)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00008}00008\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classSplineBase}{SplineBase}}()\ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00009}00009\ \textcolor{comment}{//****************************************}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00010}00010\ \ \ \textcolor{keywordflow}{if}\ (!xsec\_)\ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00011}00011\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Trying\ to\ create\ splineSKBase\ with\ null\ covariance\ object"{}});}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00012}00012\ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_,\ \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00013}00013\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00014}00014\ \ \ \mbox{\hyperlink{classsplineFDBase_a891de87b873e079f6bbdb1355a9ff153}{xsec}}\ =\ xsec\_;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00016}00016\ \ \ \textcolor{comment}{//\ Keep\ these\ in\ class\ scope,\ important\ for\ using\ 1\ monolith/sample!}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00017}00017\ \ \ \mbox{\hyperlink{classsplineFDBase_addec38a8493974ccc3ee16931d5b794a}{MonolithIndex}}\ =\ 0;\ \textcolor{comment}{//Keeps\ track\ of\ the\ monolith\ index\ we're\ on\ when\ filling\ arrays\ (declared\ here\ so\ we\ can\ have\ multiple\ FillSampleArray\ calls)}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00018}00018\ \ \ \mbox{\hyperlink{classsplineFDBase_abcff04fee3e6790a099a0df9dbee74c2}{CoeffIndex}}\ =\ 0;\ \textcolor{comment}{//Keeps\ track\ of\ our\ indexing\ the\ coefficient\ arrays\ [x,\ ybcd]}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00019}00019\ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00020}00020\ \textcolor{comment}{//****************************************}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00021}\mbox{\hyperlink{classsplineFDBase_a16c33124874a336255a3cba480b835c2}{00021}}\ \mbox{\hyperlink{classsplineFDBase_a16c33124874a336255a3cba480b835c2}{splineFDBase::\string~splineFDBase}}()\{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00022}00022\ \textcolor{comment}{//****************************************}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00023}00023\ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classsplineFDBase_ab883a1f2cdae707c36fa27b86ed7f279}{manycoeff\_arr}}\ !=\ \textcolor{keyword}{nullptr})\ \textcolor{keyword}{delete}[]\ \mbox{\hyperlink{classsplineFDBase_ab883a1f2cdae707c36fa27b86ed7f279}{manycoeff\_arr}};}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00024}00024\ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classsplineFDBase_a00f046c4c64c0aa11334b32b0701a9f1}{xcoeff\_arr}}\ !=\ \textcolor{keyword}{nullptr})\ \textcolor{keyword}{delete}[]\ \mbox{\hyperlink{classsplineFDBase_a00f046c4c64c0aa11334b32b0701a9f1}{xcoeff\_arr}};}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00026}00026\ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00027}00027\ \textcolor{comment}{//****************************************}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00028}\mbox{\hyperlink{classsplineFDBase_a6e765571776f8affeca355a184fef11a}{00028}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsplineFDBase_a6e765571776f8affeca355a184fef11a}{splineFDBase::cleanUpMemory}}()\ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00029}00029\ \textcolor{comment}{//****************************************}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00031}00031\ \ \ \textcolor{comment}{//Call\ once\ everything's\ been\ allocated\ in\ samplePDFSKBase,\ cleans\ up\ junk\ from\ memory!}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00032}00032\ \ \ \textcolor{comment}{//Not\ a\ huge\ saving\ but\ it's\ better\ than\ leaving\ everything\ up\ to\ the\ compiler}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00033}00033\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Cleaning\ up\ spline\ memory"{}});}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00035}00035\ \ \ \mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}.clear();}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00036}00036\ \ \ \mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}.shrink\_to\_fit();}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00037}00037\ \ \ \mbox{\hyperlink{classsplineFDBase_a5619363447e607cd835c46d601b10675}{SplineFileParPrefixNames}}.clear();}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00038}00038\ \ \ \mbox{\hyperlink{classsplineFDBase_a5619363447e607cd835c46d601b10675}{SplineFileParPrefixNames}}.shrink\_to\_fit();}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00039}00039\ \ \ \mbox{\hyperlink{classsplineFDBase_af71b65713518f42e59c543dbad5dab70}{SplineBinning}}.clear();}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00040}00040\ \ \ \mbox{\hyperlink{classsplineFDBase_af71b65713518f42e59c543dbad5dab70}{SplineBinning}}.shrink\_to\_fit();}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00041}00041\ \ \ \mbox{\hyperlink{classsplineFDBase_af036372a158b4e463683a8d02a20ec3d}{GlobalSystIndex}}.clear();}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00042}00042\ \ \ \mbox{\hyperlink{classsplineFDBase_af036372a158b4e463683a8d02a20ec3d}{GlobalSystIndex}}.shrink\_to\_fit();}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00043}00043\ \ \ \mbox{\hyperlink{classsplineFDBase_aacf850f4ec22e4f7338f243999ecc7dd}{UniqueSystNames}}.clear();}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00044}00044\ \ \ \mbox{\hyperlink{classsplineFDBase_aacf850f4ec22e4f7338f243999ecc7dd}{UniqueSystNames}}.shrink\_to\_fit();}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00045}00045\ \ \ \mbox{\hyperlink{classsplineFDBase_a84ec9ea208503053b9735b1cb1bc417d}{splinevec\_Monolith}}.clear();}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00046}00046\ \ \ \mbox{\hyperlink{classsplineFDBase_a84ec9ea208503053b9735b1cb1bc417d}{splinevec\_Monolith}}.shrink\_to\_fit();}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00047}00047\ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classsplineFDBase_aa8a204355df78af3f79bf8f2815258d3}{isflatarray}}\ !=\ \textcolor{keyword}{nullptr})\ \textcolor{keyword}{delete}\ \mbox{\hyperlink{classsplineFDBase_aa8a204355df78af3f79bf8f2815258d3}{isflatarray}};}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00048}00048\ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00050}00050\ \textcolor{comment}{//****************************************}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00051}\mbox{\hyperlink{classsplineFDBase_a464e0baa86158e9ffcc6918359da3b30}{00051}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classsplineFDBase_a464e0baa86158e9ffcc6918359da3b30}{splineFDBase::AddSample}}(std::string\ SampleName,\ \textcolor{keywordtype}{int}\ DetID,\ std::vector<std::string>\ OscChanFileNames,\ std::vector<std::string>\ SplineVarNames)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00052}00052\ \textcolor{comment}{//Adds\ samples\ to\ the\ large\ array}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00053}00053\ \textcolor{comment}{//****************************************}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00054}00054\ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00055}00055\ \ \ \mbox{\hyperlink{classsplineFDBase_a78508c5d0d4ef09457beb723dc796208}{SampleNames}}.push\_back(SampleName);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00056}00056\ \ \ \mbox{\hyperlink{classsplineFDBase_a6c28400605049bdee229885c46463dcd}{Dimensions}}.push\_back(\textcolor{keywordtype}{int}(SplineVarNames.size()));}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00057}00057\ \ \ \mbox{\hyperlink{classsplineFDBase_a00e1aeea8e9389c41f93469a26c83adc}{DimensionLabels}}.push\_back(SplineVarNames);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00058}00058\ \ \ \mbox{\hyperlink{classsplineFDBase_aeb743760ca4a477771132aaf0e334d15}{DetIDs}}.push\_back(DetID);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00060}00060\ \ \ \textcolor{keywordtype}{int}\ nSplineParam\ =\ \mbox{\hyperlink{classsplineFDBase_a891de87b873e079f6bbdb1355a9ff153}{xsec}}-\/>\mbox{\hyperlink{classcovarianceXsec_a0103e8fe156dccedee05619697fe0467}{GetNumParamsFromDetID}}(DetID,\ SystType::kSpline);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00061}00061\ \ \ \mbox{\hyperlink{classsplineFDBase_aad64c7c63db8ea676f86eb2279f04d40}{nSplineParams}}.push\_back(nSplineParam);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00063}00063\ \ \ \textcolor{comment}{//This\ holds\ the\ global\ index\ of\ the\ spline\ i.e.\ 0\ -\/>\ \_fNumPar}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00064}00064\ \ \ std::vector<int>\ GlobalSystIndex\_Sample\ =\ \mbox{\hyperlink{classsplineFDBase_a891de87b873e079f6bbdb1355a9ff153}{xsec}}-\/>\mbox{\hyperlink{classcovarianceXsec_a7669f8e01cc0aba5670784c786ff2645}{GetGlobalSystIndexFromDetID}}(DetID,\ SystType::kSpline);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00065}00065\ \ \ \textcolor{comment}{//Keep\ track\ of\ this\ for\ all\ the\ samples}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00066}00066\ \ \ \mbox{\hyperlink{classsplineFDBase_af036372a158b4e463683a8d02a20ec3d}{GlobalSystIndex}}.push\_back(GlobalSystIndex\_Sample);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00068}00068\ \ \ \textcolor{comment}{//std::vector<int>\ SplineParsIndex\_Sample\_temp\ =\ xsec-\/>GetSplineParsIndexFromDetID(DetID);}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00070}00070\ \ \ std::vector<std::string>\ SplineFileParPrefixNames\_Sample\ =\ \mbox{\hyperlink{classsplineFDBase_a891de87b873e079f6bbdb1355a9ff153}{xsec}}-\/>\mbox{\hyperlink{classcovarianceXsec_a7678bbdb59c36f032fb414d62928f47e}{GetSplineParsNamesFromDetID}}(DetID);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00071}00071\ \ \ \mbox{\hyperlink{classsplineFDBase_a5619363447e607cd835c46d601b10675}{SplineFileParPrefixNames}}.push\_back(SplineFileParPrefixNames\_Sample);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00073}00073\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Create\ SplineModeVecs\_Sample"{}});}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00074}00074\ \ \ std::vector<std::vector<int>>\ SplineModeVecs\_Sample\ =\ \mbox{\hyperlink{classsplineFDBase_a62f37395f7b1eb73c3ad0a1204bb3c2d}{StripDuplicatedModes}}(\mbox{\hyperlink{classsplineFDBase_a891de87b873e079f6bbdb1355a9ff153}{xsec}}-\/>\mbox{\hyperlink{classcovarianceXsec_a63b4fb1e0caf3b71f372db7273c40c47}{GetSplineModeVecFromDetID}}(DetID));}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00075}00075\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}SplineModeVecs\_Sample\ is\ of\ size\ \{\}"{}},\ SplineModeVecs\_Sample.size());}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00076}00076\ \ \ \mbox{\hyperlink{classsplineFDBase_a6b7aeec6d03dad01975582226b39632b}{SplineModeVecs}}.push\_back(SplineModeVecs\_Sample);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00077}00077\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}SplineModeVecs\ is\ of\ size\ \{\}"{}},\ \mbox{\hyperlink{classsplineFDBase_a6b7aeec6d03dad01975582226b39632b}{SplineModeVecs}}.size());}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00079}00079\ \ \ \textcolor{keywordtype}{int}\ nOscChan\ =\ int(OscChanFileNames.size());}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00080}00080\ \ \ \mbox{\hyperlink{classsplineFDBase_aa10670a64bbdef3ffd69f4b8f102fff3}{nOscChans}}.push\_back(nOscChan);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00082}00082\ \ \ \mbox{\hyperlink{classsplineFDBase_a7ff003d3c05fe8a6f9723557910b7a90}{PrintSampleDetails}}(SampleName);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00084}00084\ \ \ std::vector<std::vector<TAxis\ *>>\ SampleBinning(nOscChan);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00085}00085\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ iOscChan\ =\ 0;\ iOscChan\ <\ nOscChan;\ iOscChan++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00086}00086\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00087}00087\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\#-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\#"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00088}00088\ \ \ \ \ SampleBinning[iOscChan]\ =\ \mbox{\hyperlink{classsplineFDBase_a00c0e93b4c4799ffacaa58578e5dcf6b}{FindSplineBinning}}(OscChanFileNames[iOscChan],\ SampleName);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00089}00089\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00090}00090\ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\#-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\#"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00091}00091\ \ \ \mbox{\hyperlink{classsplineFDBase_af71b65713518f42e59c543dbad5dab70}{SplineBinning}}.push\_back(SampleBinning);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00093}00093\ \ \ \mbox{\hyperlink{classsplineFDBase_aaa699bd90abc662ce3af907733b3b704}{BuildSampleIndexingArray}}(SampleName);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00094}00094\ \ \ \mbox{\hyperlink{classsplineFDBase_aee80975a1a2892b61fb27b2044e7c9bc}{PrintArrayDetails}}(SampleName);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00095}00095\ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\#-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\#"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00097}00097\ \ \ \mbox{\hyperlink{classsplineFDBase_addabdf30ee85c6975422c0ccf3f1844f}{FillSampleArray}}(SampleName,\ OscChanFileNames);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00098}00098\ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\#-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\#"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00100}00100\ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00101}00101\ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00102}00102\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00103}00103\ \textcolor{comment}{//****************************************}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00104}\mbox{\hyperlink{classsplineFDBase_a6d1872fe4be72c735bd55fa00e1674b8}{00104}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsplineFDBase_a6d1872fe4be72c735bd55fa00e1674b8}{splineFDBase::TransferToMonolith}}()}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00105}00105\ \textcolor{comment}{//****************************************}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00106}00106\ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00107}00107\ \ \ \mbox{\hyperlink{classsplineFDBase_a2eb495f4d63c9e4ee10b97c47e982b28}{PrepForReweight}}();\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00108}00108\ \ \ \mbox{\hyperlink{classsplineFDBase_ad1fefa7f796f2a28a69f5336f5777bce}{MonolithSize}}\ =\ \mbox{\hyperlink{classsplineFDBase_a0bfc616fab953333e6e938de52ce3bed}{CountNumberOfLoadedSplines}}(\textcolor{keyword}{false},\ 1);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00110}00110\ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classsplineFDBase_ad1fefa7f796f2a28a69f5336f5777bce}{MonolithSize}}!=\mbox{\hyperlink{classsplineFDBase_addec38a8493974ccc3ee16931d5b794a}{MonolithIndex}})\{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00111}00111\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Something's\ gone\ wrong\ when\ we\ tried\ to\ get\ the\ size\ of\ your\ monolith"{}});}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00112}00112\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}MonolithSize\ is\ \{\}"{}},\ \mbox{\hyperlink{classsplineFDBase_ad1fefa7f796f2a28a69f5336f5777bce}{MonolithSize}});}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00113}00113\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}MonolithIndex\ is\ \{\}"{}},\ \mbox{\hyperlink{classsplineFDBase_addec38a8493974ccc3ee16931d5b794a}{MonolithIndex}});}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00114}00114\ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_\ ,\ \_\_LINE\_\_\ );}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00115}00115\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00117}00117\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Now\ transferring\ splines\ to\ a\ monolith\ if\ size\ \{\}"{}},\ \mbox{\hyperlink{classsplineFDBase_ad1fefa7f796f2a28a69f5336f5777bce}{MonolithSize}});}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00118}00118\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00119}00119\ \ \ \mbox{\hyperlink{classsplineFDBase_ae237cc1c6d97e35bf4f7f64e369a5781}{uniquesplinevec\_Monolith}}.resize(\mbox{\hyperlink{classsplineFDBase_ad1fefa7f796f2a28a69f5336f5777bce}{MonolithSize}});}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00120}00120\ \ \ \mbox{\hyperlink{classsplineFDBase_a09320defd042ffffb7bacda58133f12a}{weightvec\_Monolith}}.resize(\mbox{\hyperlink{classsplineFDBase_ad1fefa7f796f2a28a69f5336f5777bce}{MonolithSize}});}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00121}00121\ \ \ \mbox{\hyperlink{classsplineFDBase_aa8a204355df78af3f79bf8f2815258d3}{isflatarray}}\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{bool}[\mbox{\hyperlink{classsplineFDBase_ad1fefa7f796f2a28a69f5336f5777bce}{MonolithSize}}];}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00122}00122\ \ \ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00123}00123\ \ \ \mbox{\hyperlink{classsplineFDBase_a00f046c4c64c0aa11334b32b0701a9f1}{xcoeff\_arr}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}[\mbox{\hyperlink{classsplineFDBase_abcff04fee3e6790a099a0df9dbee74c2}{CoeffIndex}}];}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00124}00124\ \ \ \mbox{\hyperlink{classsplineFDBase_ab883a1f2cdae707c36fa27b86ed7f279}{manycoeff\_arr}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}[\mbox{\hyperlink{classsplineFDBase_abcff04fee3e6790a099a0df9dbee74c2}{CoeffIndex}}*4];}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00125}00125\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00126}00126\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ iSample\ =\ 0;\ iSample\ <\ \mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}.size();\ iSample++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00127}00127\ \ \ \{\ \textcolor{comment}{//\ Loop\ over\ sample}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00128}00128\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ iOscChan\ =\ 0;\ iOscChan\ <\ \mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}[iSample].size();\ iOscChan++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00129}00129\ \ \ \ \ \{\ \textcolor{comment}{//\ Loop\ over\ oscillation\ channels}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00130}00130\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ iSyst\ =\ 0;\ iSyst\ <\ \mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}[iSample][iOscChan].size();\ iSyst++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00131}00131\ \ \ \ \ \ \ \{\ \textcolor{comment}{//\ Loop\ over\ systematics}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00132}00132\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ iMode\ =\ 0;\ iMode\ <\ \mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}[iSample][iOscChan][iSyst].size();\ iMode++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00133}00133\ \ \ \ \ \ \ \ \ \{\ \textcolor{comment}{//\ Loop\ over\ modes}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ iVar1\ =\ 0;\ iVar1\ <\ \mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}[iSample][iOscChan][iSyst][iMode].size();\ iVar1++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00135}00135\ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{comment}{//\ Loop\ over\ first\ dimension}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ iVar2\ =\ 0;\ iVar2\ <\ \mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}[iSample][iOscChan][iSyst][iMode][iVar1].size();\ iVar2++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{comment}{//\ Loop\ over\ second\ dimension}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ iVar3\ =\ 0;\ iVar3\ <\ \mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}[iSample][iOscChan][iSyst][iMode][iVar1][iVar2].size();\ iVar3++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00139}00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ splineindex=\mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}[iSample][iOscChan][iSyst][iMode][iVar1][iVar2][iVar3];}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsplineFDBase_a09320defd042ffffb7bacda58133f12a}{weightvec\_Monolith}}[splineindex]\ =\ 1.0;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00142}00142\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ foundUniqueSpline\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ iUniqueSyst\ =\ 0;\ iUniqueSyst\ <\ \mbox{\hyperlink{classsplineFDBase_a0d42cbfc22f21906264af285fd57b1af}{nUniqueSysts}};\ iUniqueSyst++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classsplineFDBase_a5619363447e607cd835c46d601b10675}{SplineFileParPrefixNames}}[iSample][iSyst]\ ==\ \mbox{\hyperlink{classsplineFDBase_aacf850f4ec22e4f7338f243999ecc7dd}{UniqueSystNames}}[iUniqueSyst])}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00148}00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsplineFDBase_ae237cc1c6d97e35bf4f7f64e369a5781}{uniquesplinevec\_Monolith}}[splineindex]\ =\ iUniqueSyst;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00149}00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ foundUniqueSpline\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00150}00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00151}00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{comment}{//unique\ syst\ loop\ end}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00152}00152\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00153}00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!foundUniqueSpline)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00154}00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00155}00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Unique\ spline\ index\ not\ found"{}});}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00156}00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}For\ Spline\ \{\}"{}},\ \mbox{\hyperlink{classsplineFDBase_a5619363447e607cd835c46d601b10675}{SplineFileParPrefixNames}}[iSample][iSyst]);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Couldn't\ match\ \{\}\ with\ any\ of\ the\ following\ \{\}\ systs:"{}},\ \mbox{\hyperlink{classsplineFDBase_a5619363447e607cd835c46d601b10675}{SplineFileParPrefixNames}}[iSample][iSyst],\ \mbox{\hyperlink{classsplineFDBase_a0d42cbfc22f21906264af285fd57b1af}{nUniqueSysts}});}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ iUniqueSyst\ =\ 0;\ iUniqueSyst\ <\ \mbox{\hyperlink{classsplineFDBase_a0d42cbfc22f21906264af285fd57b1af}{nUniqueSysts}};\ iUniqueSyst++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00159}00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00160}00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}\{\},"{}},\ \mbox{\hyperlink{classsplineFDBase_aacf850f4ec22e4f7338f243999ecc7dd}{UniqueSystNames}}.at(iUniqueSyst));}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00161}00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{comment}{//unique\ syst\ loop\ end}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00162}00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_\ ,\ \_\_LINE\_\_\ );}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00163}00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00164}00164\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00165}00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ splineKnots;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00166}00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classsplineFDBase_a84ec9ea208503053b9735b1cb1bc417d}{splinevec\_Monolith}}[splineindex]!=NULL)\{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00167}00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsplineFDBase_aa8a204355df78af3f79bf8f2815258d3}{isflatarray}}[splineindex]=\textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00168}00168\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ splineKnots=\mbox{\hyperlink{classsplineFDBase_a84ec9ea208503053b9735b1cb1bc417d}{splinevec\_Monolith}}[splineindex]-\/>GetNp();}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00169}00169\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00170}00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Now\ to\ fill\ up\ our\ coefficient\ arrayss}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00171}00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}*\ tmpXCoeffArr\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}[splineKnots];}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00172}00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}*\ tmpManyCoeffArr\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}[splineKnots*4];}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00173}00173\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00174}00174\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ iCoeff=\mbox{\hyperlink{classsplineFDBase_af63885ddb6731f77808d029372e6b187}{coeffindexvec}}[splineindex];}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00175}00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsplineFDBase_a8b7b34479c3240a9827d6a0b5b7da4b4}{getSplineCoeff\_SepMany}}(splineindex,\ tmpXCoeffArr,\ tmpManyCoeffArr);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00176}00176\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00177}00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ splineKnots;\ i++)\{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00178}00178\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00179}00179\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsplineFDBase_a00f046c4c64c0aa11334b32b0701a9f1}{xcoeff\_arr}}[iCoeff+i]=tmpXCoeffArr[i];}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00180}00180\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00181}00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j=0;\ j<4;\ j++)\{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsplineFDBase_ab883a1f2cdae707c36fa27b86ed7f279}{manycoeff\_arr}}[(iCoeff+i)*4+j]=tmpManyCoeffArr[i*4+j];}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00183}00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00184}00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00185}00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ tmpXCoeffArr;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00186}00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ tmpManyCoeffArr;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00188}00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00189}00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsplineFDBase_aa8a204355df78af3f79bf8f2815258d3}{isflatarray}}[splineindex]=\textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00190}00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00191}00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{comment}{//3d\ loop\ end}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00192}00192\ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{comment}{//2d\ loop\ end}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00193}00193\ \ \ \ \ \ \ \ \ \ \ \}\textcolor{comment}{//1d\ loop\ end}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00194}00194\ \ \ \ \ \ \ \ \ \}\textcolor{comment}{//mode\ loop\ end}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00195}00195\ \ \ \ \ \ \ \}\textcolor{comment}{//syst2\ loop\ end}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00196}00196\ \ \ \ \ \}\textcolor{comment}{//osc\ loop\ end}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00197}00197\ \ \ \}\textcolor{comment}{//syst1\ loop\ end}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00198}00198\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00199}00199\ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00200}00200\ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00201}00201\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00202}00202\ \textcolor{comment}{//\ *****************************************}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00203}\mbox{\hyperlink{classsplineFDBase_af6e248be25f753c85c4fbf2f3b72cf88}{00203}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsplineFDBase_af6e248be25f753c85c4fbf2f3b72cf88}{splineFDBase::Evaluate}}()\ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00204}00204\ \textcolor{comment}{//\ *****************************************}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00205}00205\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00206}00206\ \ \ \textcolor{comment}{//\ There's\ a\ parameter\ mapping\ that\ goes\ from\ spline\ parameter\ to\ a\ global\ parameter\ index}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00207}00207\ \ \ \textcolor{comment}{//\ Find\ the\ spline\ segments}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00208}00208\ \ \ \mbox{\hyperlink{classsplineFDBase_ab4a852337aab961abbcaa0c9f70c88ba}{FindSplineSegment}}();}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00209}00209\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00210}00210\ \ \ \textcolor{comment}{//KS:\ Huge\ MP\ loop\ over\ all\ valid\ splines}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00211}00211\ \ \ \mbox{\hyperlink{classsplineFDBase_a9eceab58c0aa06b58eb4e3708c00ee0e}{CalcSplineWeights}}();}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00212}00212\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00213}00213\ \ \ \textcolor{comment}{//KS:\ Huge\ MP\ loop\ over\ all\ events\ calculating\ total\ weight}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00214}00214\ \ \ \mbox{\hyperlink{classsplineFDBase_a1a237a8b8c3c165c82ebe15d2ca740c7}{ModifyWeights}}();}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00215}00215\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00216}00216\ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00217}00217\ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00218}00218\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00219}00219\ \textcolor{comment}{//****************************************}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00220}00220\ \textcolor{comment}{//\ ETA\ -\/\ find\ the\ spline\ segment\ that\ the\ current\ parameter}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00221}00221\ \textcolor{comment}{//\ value\ is\ in.\ This\ is\ now\ extremely\ similar\ to\ the}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00222}00222\ \textcolor{comment}{//\ function\ in\ SplineMonolith.cpp}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00223}\mbox{\hyperlink{classsplineFDBase_ab4a852337aab961abbcaa0c9f70c88ba}{00223}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsplineFDBase_ab4a852337aab961abbcaa0c9f70c88ba}{splineFDBase::FindSplineSegment}}()}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00224}00224\ \textcolor{comment}{//****************************************}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00225}00225\ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00226}00226\ \ \ \textcolor{comment}{//HW\ okay\ let's\ try\ this,\ we\ delete+refill\ a\ new\ array\ which\ we'll\ fill\ with\ x-\/s\ for\ our\ segment}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00227}00227\ \textcolor{preprocessor}{\ \ \#ifdef\ MULTITHREAD}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00228}00228\ \textcolor{preprocessor}{\ \ \#pragma\ omp\ parallel\ }\textcolor{comment}{//for\ schedule(dynamic)}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00229}00229\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00230}00230\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ iSyst\ =\ 0;\ iSyst\ <\ \mbox{\hyperlink{classsplineFDBase_a0d42cbfc22f21906264af285fd57b1af}{nUniqueSysts}};\ iSyst++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00231}00231\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00232}00232\ \ \ \ \ \textcolor{keywordtype}{int}\ nPoints\ =\ \mbox{\hyperlink{classsplineFDBase_a176d42bb137d3c8c3771eb1a4a8440c8}{UniqueSystNKnots}}[iSyst];}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00233}00233\ \ \ \ \ std::vector<M3::float\_t>\ xArray\ =\ \mbox{\hyperlink{classsplineFDBase_a5112a1bbd658d3a90c6a785c12aebf34}{UniqueSystXPts}}[iSyst];}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00234}00234\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00235}00235\ \ \ \ \ \textcolor{comment}{//\ Get\ the\ variation\ for\ this\ reconfigure\ for\ the\ ith\ parameter}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00236}00236\ \ \ \ \ \textcolor{keywordtype}{int}\ GlobalIndex\ =\ \mbox{\hyperlink{classsplineFDBase_a3b821b95c2db6063a9baa244b28aeaa6}{UniqueSystIndices}}[iSyst];}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00237}00237\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00238}00238\ \ \ \ \ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}\ xvar\ =\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}(\mbox{\hyperlink{classsplineFDBase_a891de87b873e079f6bbdb1355a9ff153}{xsec}}-\/>\mbox{\hyperlink{classcovarianceBase_a37c87fa18db7e4ac087d120bca955617}{getParProp}}(GlobalIndex));}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00239}00239\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00240}00240\ \ \ \ \ \mbox{\hyperlink{classsplineFDBase_a324c4b50910454092ba45d945ef57bda}{xVarArray}}[iSyst]=xvar;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00241}00241\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00242}00242\ \ \ \ \ \mbox{\hyperlink{namespaceM3_adb59b8ecdc4e1b2d5d4c826a13aa7463}{M3::int\_t}}\ segment\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00243}00243\ \ \ \ \ \ \ \mbox{\hyperlink{namespaceM3_adb59b8ecdc4e1b2d5d4c826a13aa7463}{M3::int\_t}}\ kHigh\ =\ \mbox{\hyperlink{namespaceM3_adb59b8ecdc4e1b2d5d4c826a13aa7463}{M3::int\_t}}(nPoints\ -\/\ 1);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00244}00244\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00245}00245\ \ \ \ \ \textcolor{comment}{//KS:\ We\ expect\ new\ segment\ is\ very\ close\ to\ previous}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00246}00246\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{namespaceM3_adb59b8ecdc4e1b2d5d4c826a13aa7463}{M3::int\_t}}\ PreviousSegment\ =\ \mbox{\hyperlink{namespaceM3_adb59b8ecdc4e1b2d5d4c826a13aa7463}{M3::int\_t}}(\mbox{\hyperlink{classsplineFDBase_aa36e6889d054ad0f86f33a53dd3fe036}{UniqueSystCurrSegment}}[iSyst]);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00247}00247\ \ \ \ \ \textcolor{comment}{//KS:\ It\ is\ quite\ probable\ the\ new\ segment\ is\ same\ as\ in\ previous\ step\ so\ try\ to\ avoid\ binary\ search}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00248}00248\ \ \ \ \ \textcolor{keywordflow}{if}(\ xArray[PreviousSegment+1]\ >\ xvar\ \&\&\ xvar\ >=\ xArray[PreviousSegment]\ )\{segment\ =\ PreviousSegment;\}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00249}00249\ \ \ \ \ \textcolor{comment}{//\ If\ the\ variation\ is\ below\ the\ lowest\ saved\ spline\ point}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00250}00250\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (xvar\ <=\ xArray[0])\ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00251}00251\ \ \ \ \ \ \ segment\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00252}00252\ \ \ \ \ \ \ \textcolor{comment}{//\ If\ the\ variation\ is\ above\ the\ highest\ saved\ spline\ point}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00253}00253\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (xvar\ >=\ xArray[nPoints-\/1])\ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00254}00254\ \ \ \ \ \ \ \textcolor{comment}{//CW:\ Yes,\ the\ -\/2\ is\ indeed\ correct,\ see\ TSpline.cxx:814\ and\ //see:\ https://savannah.cern.ch/bugs/?71651}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00255}00255\ \ \ \ \ \ \ segment\ =\ kHigh;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00256}00256\ \ \ \ \ \ \ \textcolor{comment}{//KS:\ It\ is\ quite\ probable\ the\ new\ segment\ is\ same\ as\ in\ previous\ step\ so\ try\ to\ avoid\ binary\ search}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00257}00257\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00258}00258\ \ \ \ \ \ \ \textcolor{comment}{//\ The\ top\ point\ we've\ got}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00259}00259\ \ \ \ \ \ \ \mbox{\hyperlink{namespaceM3_adb59b8ecdc4e1b2d5d4c826a13aa7463}{M3::int\_t}}\ kHalf\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00260}00260\ \ \ \ \ \ \ \textcolor{comment}{//\ While\ there\ is\ still\ a\ difference\ in\ the\ points\ (we\ haven't\ yet\ found\ the\ segment)}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00261}00261\ \ \ \ \ \ \ \textcolor{comment}{//\ This\ is\ a\ binary\ search,\ incrementing\ segment\ and\ decrementing\ kHalf\ until\ we've\ found\ the\ segment}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00262}00262\ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (kHigh\ -\/\ segment\ >\ 1)\ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00263}00263\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Increment\ the\ half-\/step}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00264}00264\ \ \ \ \ \ \ \ \ kHalf\ =\ \mbox{\hyperlink{namespaceM3_adb59b8ecdc4e1b2d5d4c826a13aa7463}{M3::int\_t}}((segment\ +\ kHigh)/2);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00265}00265\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ our\ variation\ is\ above\ the\ kHalf,\ set\ the\ segment\ to\ kHalf}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00266}00266\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (xvar\ >\ xArray[kHalf])\ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00267}00267\ \ \ \ \ \ \ \ \ \ \ segment\ =\ kHalf;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00268}00268\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Else\ move\ kHigh\ down}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00269}00269\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00270}00270\ \ \ \ \ \ \ \ \ \ \ kHigh\ =\ kHalf;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00271}00271\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00272}00272\ \ \ \ \ \ \ \}\ \textcolor{comment}{//\ End\ the\ while:\ we've\ now\ done\ our\ binary\ search}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00273}00273\ \ \ \ \ \}\ \textcolor{comment}{//\ End\ the\ else:\ we've\ now\ found\ our\ point}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00274}00274\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00275}00275\ \ \ \ \ \textcolor{keywordflow}{if}\ (segment\ >=\ nPoints-\/1\ \&\&\ nPoints\ >\ 1)\{segment\ =\ \mbox{\hyperlink{namespaceM3_adb59b8ecdc4e1b2d5d4c826a13aa7463}{M3::int\_t}}(nPoints-\/2);\}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00276}00276\ \ \ \ \ \mbox{\hyperlink{classsplineFDBase_aa36e6889d054ad0f86f33a53dd3fe036}{UniqueSystCurrSegment}}[iSyst]\ =\ segment;\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00277}00277\ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00278}00278\ \textcolor{comment}{//\#ifdef\ DEBUG}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00279}00279\ \textcolor{comment}{//\ \ \ \ if\ (SplineInfoArray[i].xPts[segment]\ >\ xvar\ \&\&\ segment\ !=\ 0)\ \{}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00280}00280\ \textcolor{comment}{//\ \ \ \ \ \ std::cerr\ <<\ "{}Found\ a\ segment\ which\ is\ \_ABOVE\_\ the\ variation!"{}\ <<\ std::endl;}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00281}00281\ \textcolor{comment}{//\ \ \ \ \ \ std::cerr\ <<\ "{}IT\ SHOULD\ ALWAYS\ BE\ BELOW!\ (except\ when\ segment\ 0)"{}\ <<\ std::endl;}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00282}00282\ \textcolor{comment}{//\ \ \ \ \ \ std::cerr\ <<\ "{}Spline:\ "{}<<\ i\ <<\ std::endl;}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00283}00283\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00284}00284\ \textcolor{comment}{//\ \ \ \ \ \ std::cerr\ <<\ "{}Found\ segment\ \ \ =\ "{}\ <<\ segment\ <<\ std::endl;}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00285}00285\ \textcolor{comment}{//\ \ \ \ \ \ std::cerr\ <<\ "{}Doing\ variation\ =\ "{}\ <<\ xvar\ <<\ std::endl;}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00286}00286\ \textcolor{comment}{//\ \ \ \ \ \ std::cerr\ <<\ "{}x\ in\ spline\ \ \ \ \ =\ "{}\ <<\ SplineInfoArray[i].xPts[segment]\ <<\ std::endl;}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00287}00287\ \textcolor{comment}{//\ \ \ \ \ \ for\ (\_M3::int\_t\_\ j\ =\ 0;\ j\ <\ SplineInfoArray[j].nPts;\ ++j)\ \{}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00288}00288\ \textcolor{comment}{//\ \ \ \ \ \ \ \ std::cerr\ <<\ "{}\ \ \ \ "{}\ <<\ j\ <<\ "{}\ =\ "{}\ <<\ SplineInfoArray[i].xPts[j]\ <<\ std::endl;}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00289}00289\ \textcolor{comment}{//\ \ \ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00290}00290\ \textcolor{comment}{//\ \ \ \ \ \ std::cerr\ <<\ \_\_FILE\_\_\ <<\ "{}:"{}\ <<\ \_\_LINE\_\_\ <<\ std::endl;}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00291}00291\ \textcolor{comment}{//\ \ \ \ \ \ throw;}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00292}00292\ \textcolor{comment}{//\ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00293}00293\ \textcolor{comment}{//\#endif}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00294}00294\ \ \ \}\ \textcolor{comment}{//end\ loop\ over\ params}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00295}00295\ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00296}00296\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00297}00297\ \textcolor{comment}{//****************************************}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00298}\mbox{\hyperlink{classsplineFDBase_a9eceab58c0aa06b58eb4e3708c00ee0e}{00298}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsplineFDBase_a9eceab58c0aa06b58eb4e3708c00ee0e}{splineFDBase::CalcSplineWeights}}()}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00299}00299\ \textcolor{comment}{//****************************************}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00300}00300\ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00301}00301\ \textcolor{preprocessor}{\ \ \#ifdef\ MULTITHREAD}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00302}00302\ \textcolor{preprocessor}{\ \ \#pragma\ omp\ parallel\ for\ simd}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00303}00303\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00304}00304\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ iCoeff\ =\ 0;\ iCoeff\ <\ \mbox{\hyperlink{classsplineFDBase_a7a564f5748f16d97ebf1e1c300a1cc5c}{uniquecoeffindices}}.size();\ iCoeff++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00305}00305\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00306}00306\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00307}00307\ \ \ \ \ \textcolor{keywordtype}{int}\ iSpline\ =\ \mbox{\hyperlink{classsplineFDBase_a7a564f5748f16d97ebf1e1c300a1cc5c}{uniquecoeffindices}}[iCoeff];}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00308}00308\ \ \ \ \ \textcolor{keywordtype}{short}\ \textcolor{keywordtype}{int}\ uniqueIndex=short(\mbox{\hyperlink{classsplineFDBase_ae237cc1c6d97e35bf4f7f64e369a5781}{uniquesplinevec\_Monolith}}[iSpline]);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00309}00309\ \ \ \ \ \textcolor{keywordtype}{short}\ \textcolor{keywordtype}{int}\ currentsegment=short(\mbox{\hyperlink{classsplineFDBase_aa36e6889d054ad0f86f33a53dd3fe036}{UniqueSystCurrSegment}}[uniqueIndex]);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00310}00310\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00311}00311\ \ \ \ \ \textcolor{keywordtype}{int}\ segCoeff\ =\ \mbox{\hyperlink{classsplineFDBase_af63885ddb6731f77808d029372e6b187}{coeffindexvec}}[iSpline]+currentsegment;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00312}00312\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00313}00313\ \ \ \ \ \textcolor{comment}{//\ These\ are\ what\ we\ can\ extract\ from\ the\ TSpline3}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00314}00314\ \ \ \ \ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}\ x\ =\ \mbox{\hyperlink{classsplineFDBase_a00f046c4c64c0aa11334b32b0701a9f1}{xcoeff\_arr}}[segCoeff];}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00315}00315\ \ \ \ \ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}\ y\ =\ \mbox{\hyperlink{classsplineFDBase_ab883a1f2cdae707c36fa27b86ed7f279}{manycoeff\_arr}}[(segCoeff)*4+\mbox{\hyperlink{SplineCommon_8h_aac6312c7a4c683e6d016d9fccdc7d7c0a9e87d802f64d8929291c58eeb0eb16e6}{kCoeffY}}];}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00316}00316\ \ \ \ \ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}\ b\ =\ \mbox{\hyperlink{classsplineFDBase_ab883a1f2cdae707c36fa27b86ed7f279}{manycoeff\_arr}}[(segCoeff)*4+\mbox{\hyperlink{SplineCommon_8h_aac6312c7a4c683e6d016d9fccdc7d7c0a546352c58e328d9b57692a033eee8a42}{kCoeffB}}];}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00317}00317\ \ \ \ \ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}\ c\ =\ \mbox{\hyperlink{classsplineFDBase_ab883a1f2cdae707c36fa27b86ed7f279}{manycoeff\_arr}}[(segCoeff)*4+\mbox{\hyperlink{SplineCommon_8h_aac6312c7a4c683e6d016d9fccdc7d7c0af73b429597449e82d2920f69d03cef36}{kCoeffC}}];}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00318}00318\ \ \ \ \ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}\ d\ =\ \mbox{\hyperlink{classsplineFDBase_ab883a1f2cdae707c36fa27b86ed7f279}{manycoeff\_arr}}[(segCoeff)*4+\mbox{\hyperlink{SplineCommon_8h_aac6312c7a4c683e6d016d9fccdc7d7c0a82b4ea363cc5a4b0429efcc46582769d}{kCoeffD}}];}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00319}00319\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00320}00320\ \ \ \ \ \textcolor{comment}{//\ Get\ the\ variation\ for\ this\ reconfigure\ for\ the\ ith\ parameter}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00321}00321\ \ \ \ \ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}\ xvar\ =\ \mbox{\hyperlink{classsplineFDBase_a324c4b50910454092ba45d945ef57bda}{xVarArray}}[uniqueIndex];}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00322}00322\ \ \ \ \ \textcolor{comment}{//\ The\ Delta(x)}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00323}00323\ \ \ \ \ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}\ dx\ =\ xvar\ -\/\ x;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00324}00324\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00325}00325\ \ \ \ \ \textcolor{comment}{//Speedy\ 1\%\ time\ boost\ https://en.cppreference.com/w/c/numeric/math/fma\ (see\ ND\ code!)}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00326}00326\ \ \ \ \ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}\ weight\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00327}00327\ \textcolor{preprocessor}{\#ifdef\ \_LOW\_MEMORY\_STRUCTS\_}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00328}00328\ \ \ \ \ \ \ weight\ =\ std::fmaf(dx,\ std::fmaf(dx,\ std::fmaf(dx,\ d,\ c),\ b),\ y);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00329}00329\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00330}00330\ \ \ \ \ \ \ weight\ =\ std::fma(dx,\ std::fma(dx,\ std::fma(dx,\ d,\ c),\ b),\ y);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00331}00331\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00332}00332\ \ \ \ \ \textcolor{comment}{//This\ is\ the\ speedy\ version\ of\ writing\ dx\string^3+b*dx\string^2+c*dx+d}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00333}00333\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00334}00334\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00335}00335\ \ \ \ \ \textcolor{comment}{//ETA\ -\/\ do\ we\ need\ this?\ We\ check\ later\ for\ negative\ weights\ and\ I\ wonder\ if\ this\ is\ even}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00336}00336\ \ \ \ \ \textcolor{comment}{//possible\ with\ the\ fmaf\ line\ above?}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00337}00337\ \ \ \ \ \textcolor{keywordflow}{if}(weight<0)\{weight=0;\}\ \ \textcolor{comment}{//Stops\ is\ getting\ negative\ weights}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00338}00338\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00339}00339\ \textcolor{comment}{//\ LP\ -\/\ ignore\ the\ diagnostic\ here\ as\ it\ is\ only\ useless\ if\ M3::float\_t\ =\ double}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00340}00340\ \textcolor{preprocessor}{\#pragma\ GCC\ diagnostic\ push}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00341}00341\ \textcolor{preprocessor}{\#pragma\ GCC\ diagnostic\ ignored\ "{}-\/Wuseless-\/cast"{}}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00342}00342\ \ \ \ \ \mbox{\hyperlink{classsplineFDBase_a09320defd042ffffb7bacda58133f12a}{weightvec\_Monolith}}[iSpline]\ =\ double(weight);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00343}00343\ \textcolor{preprocessor}{\#pragma\ GCC\ diagnostic\ pop}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00344}00344\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00345}00345\ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00346}00346\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00347}00347\ \textcolor{comment}{//****************************************}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00348}\mbox{\hyperlink{classsplineFDBase_aaa699bd90abc662ce3af907733b3b704}{00348}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsplineFDBase_aaa699bd90abc662ce3af907733b3b704}{splineFDBase::BuildSampleIndexingArray}}(std::string\ SampleName)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00349}00349\ \textcolor{comment}{//Creates\ an\ array\ to\ be\ filled\ with\ monolith\ indexes\ for\ each\ sample\ (allows\ for\ indexing\ between\ 7D\ binning\ and\ 1D\ Vector)}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00350}00350\ \textcolor{comment}{//Only\ need\ 1\ indexing\ array\ everything\ else\ interfaces\ with\ this\ to\ get\ binning\ properties}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00351}00351\ \textcolor{comment}{//****************************************}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00352}00352\ \{\ \ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00353}00353\ \ \ \textcolor{keywordtype}{int}\ iSample\ =\ \mbox{\hyperlink{classsplineFDBase_a2d19b4bd235644d4c6a1ca6d589be6ca}{getSampleIndex}}(SampleName);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00354}00354\ \ \ \textcolor{keywordtype}{int}\ nSplineSysts\ =\ \mbox{\hyperlink{classsplineFDBase_aad64c7c63db8ea676f86eb2279f04d40}{nSplineParams}}[iSample];}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00355}00355\ \ \ \textcolor{keywordtype}{int}\ nOscChannels\ =\ \mbox{\hyperlink{classsplineFDBase_aa10670a64bbdef3ffd69f4b8f102fff3}{nOscChans}}[iSample];}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00356}00356\ \ \ std::vector<std::vector<std::vector<std::vector<std::vector<std::vector<int>>>>>>\ indexvec\_OscChan;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00357}00357\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ iOscChan\ =\ 0;\ iOscChan\ <\ nOscChannels;\ iOscChan++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00358}00358\ \ \ \{\ \textcolor{comment}{//\ Loop\ over\ oscillation\ channels}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00359}00359\ \ \ \ \ std::vector<std::vector<std::vector<std::vector<std::vector<int\ >>>>>\ indexvec\_Syst;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00360}00360\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ iSyst\ =\ 0;\ iSyst\ <\ nSplineSysts;\ iSyst++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00361}00361\ \ \ \ \ \{\ \textcolor{comment}{//\ Loop\ over\ systematics}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00362}00362\ \ \ \ \ \ \ std::vector<std::vector<std::vector<std::vector<int\ >>>>\ indexvec\_Mode;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00363}00363\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ nModesInSyst\ =\ int(\mbox{\hyperlink{classsplineFDBase_a6b7aeec6d03dad01975582226b39632b}{SplineModeVecs}}[iSample][iSyst].\mbox{\hyperlink{GetPenaltyTerm_8cpp_a439227feff9d7f55384e8780cfc2eb82}{size}}());}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00364}00364\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ iMode\ =\ 0;\ iMode\ <\ nModesInSyst;\ iMode++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00365}00365\ \ \ \ \ \ \ \{\ \textcolor{comment}{//\ Loop\ over\ modes}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00366}00366\ \ \ \ \ \ \ \ \ std::vector<std::vector<std::vector<int\ >>>\ indexvec\_Var1;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00367}00367\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ iVar1\ =\ 0;\ iVar1\ <\ (\mbox{\hyperlink{classsplineFDBase_af71b65713518f42e59c543dbad5dab70}{SplineBinning}}[iSample][iOscChan][0])-\/>GetNbins();\ iVar1++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00368}00368\ \ \ \ \ \ \ \ \ \{\ \textcolor{comment}{//\ Loop\ over\ first\ dimension}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00369}00369\ \ \ \ \ \ \ \ \ \ \ std::vector<std::vector<int\ >>\ indexvec\_Var2;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00370}00370\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ iVar2\ =\ 0;\ iVar2\ <\ (\mbox{\hyperlink{classsplineFDBase_af71b65713518f42e59c543dbad5dab70}{SplineBinning}}[iSample][iOscChan][1])-\/>GetNbins();\ iVar2++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00371}00371\ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{comment}{//\ Loop\ over\ second\ dimension}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00372}00372\ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<int>\ indexvec\_Var3;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00373}00373\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ iVar3\ =\ 0;\ iVar3\ <\ (\mbox{\hyperlink{classsplineFDBase_af71b65713518f42e59c543dbad5dab70}{SplineBinning}}[iSample][iOscChan][2])-\/>GetNbins();\ iVar3++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00374}00374\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{comment}{//\ Loop\ over\ third\ dimension}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00375}00375\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ indexvec\_Var3.push\_back(0);\ \textcolor{comment}{//Don't\ start\ counting\ yet!}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00376}00376\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{comment}{//\ end\ iVar3\ loop}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00377}00377\ \ \ \ \ \ \ \ \ \ \ \ \ indexvec\_Var2.push\_back(indexvec\_Var3);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00378}00378\ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{comment}{//\ end\ iVar2\ loop}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00379}00379\ \ \ \ \ \ \ \ \ \ \ indexvec\_Var1.push\_back(indexvec\_Var2);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00380}00380\ \ \ \ \ \ \ \ \ \}\ \textcolor{comment}{//\ end\ iVar1\ loop}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00381}00381\ \ \ \ \ \ \ \ \ indexvec\_Mode.push\_back(indexvec\_Var1);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00382}00382\ \ \ \ \ \ \ \}\ \textcolor{comment}{//\ end\ of\ iMode\ loop}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00383}00383\ \ \ \ \ \ \ indexvec\_Syst.push\_back(indexvec\_Mode);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00384}00384\ \ \ \ \ \}\ \textcolor{comment}{//\ end\ of\ iOscChan\ loop}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00385}00385\ \ \ \ \ indexvec\_OscChan.push\_back(indexvec\_Syst);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00386}00386\ \ \ \}\ \textcolor{comment}{//\ end\ of\ iSyst\ loop}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00387}00387\ \ \ \mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}.push\_back(indexvec\_OscChan);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00388}00388\ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00389}00389\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00390}00390\ \textcolor{comment}{//****************************************}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00391}\mbox{\hyperlink{classsplineFDBase_a00c0e93b4c4799ffacaa58578e5dcf6b}{00391}}\ std::vector<TAxis\ *>\ \mbox{\hyperlink{classsplineFDBase_a00c0e93b4c4799ffacaa58578e5dcf6b}{splineFDBase::FindSplineBinning}}(std::string\ FileName,\ std::string\ SampleName)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00392}00392\ \textcolor{comment}{//****************************************}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00393}00393\ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00394}00394\ \ \ std::vector<TAxis\ *>\ ReturnVec;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00395}00395\ \ \ \textcolor{keywordtype}{int}\ iSample=\mbox{\hyperlink{classsplineFDBase_a2d19b4bd235644d4c6a1ca6d589be6ca}{getSampleIndex}}(SampleName);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00396}00396\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00397}00397\ \ \ TH2F*\ Hist2D\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00398}00398\ \ \ TH3F*\ Hist3D\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00399}00399\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00400}00400\ \ \ \textcolor{keyword}{auto}\ File\ =\ std::unique\_ptr<TFile>(TFile::Open(FileName.c\_str(),\ \textcolor{stringliteral}{"{}READ"{}}));}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00401}00401\ \ \ \textcolor{keywordflow}{if}\ (!File\ ||\ File-\/>IsZombie())}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00402}00402\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00403}00403\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}File\ \{\}\ not\ found"{}},\ FileName);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00404}00404\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}This\ is\ caused\ by\ something\ here!\ \{\}\ :\ \{\}"{}},\ \_\_FILE\_\_,\ \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00405}00405\ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_\ ,\ \_\_LINE\_\_\ );}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00406}00406\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00407}00407\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00408}00408\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Finding\ binning\ for:"{}});}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00409}00409\ \ \ spdlog::info(\textcolor{stringliteral}{"{}\{\}"{}},\ FileName);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00410}00410\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00411}00411\ \ \ \textcolor{keywordtype}{bool}\ isHist2D\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00412}00412\ \ \ \textcolor{keywordtype}{bool}\ isHist3D\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00413}00413\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00414}00414\ \ \ TObject\ *Obj\ =\ File-\/>Get(\textcolor{stringliteral}{"{}dev\_tmp\_0\_0"{}});}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00415}00415\ \ \ \textcolor{comment}{//If\ you\ can't\ find\ dev\_tmp\_0\_0\ then\ this\ will\ cause\ a\ problem}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00416}00416\ \ \ \textcolor{keywordflow}{if}\ (!Obj)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00417}00417\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00418}00418\ \ \ \ \ Obj\ =\ File-\/>Get(\textcolor{stringliteral}{"{}dev\_tmp.0.0"{}});}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00419}00419\ \ \ \ \ \textcolor{keywordflow}{if}\ (!Obj)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00420}00420\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00421}00421\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Error:\ could\ not\ find\ dev\_tmp\_0\_0\ in\ spline\ file.\ Spline\ binning\ cannot\ be\ set!"{}});}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00422}00422\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}FileName:\ \{\}"{}},\ FileName);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00423}00423\ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_\ ,\ \_\_LINE\_\_\ );}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00424}00424\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00425}00425\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00426}00426\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00427}00427\ \ \ \textcolor{comment}{//Now\ check\ if\ dev\_tmp\_0\_0\ is\ a\ TH2\ i.e.\ specifying\ the\ dimensions\ of\ the\ splines\ is\ 2D}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00428}00428\ \ \ \textcolor{keywordflow}{if}\ (Obj-\/>IsA()\ ==\ TH2F::Class())}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00429}00429\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00430}00430\ \ \ \ \ isHist2D\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00431}00431\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00432}00432\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00433}00433\ \ \ \textcolor{comment}{//For\ T2K\ annoyingly\ all\ objects\ are\ TH3Fs}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00434}00434\ \ \ \textcolor{keywordflow}{if}\ (Obj-\/>IsA()\ ==\ TH3F::Class())}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00435}00435\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00436}00436\ \ \ \ \ isHist3D\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00437}00437\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00438}00438\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00439}00439\ \ \ \textcolor{keywordflow}{if}\ (!isHist2D\ \&\&\ !isHist3D)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00440}00440\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00441}00441\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Object\ doesn't\ inherit\ from\ either\ TH2D\ and\ TH3D\ -\/\ Odd\ A"{}});}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00442}00442\ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_\ ,\ \_\_LINE\_\_\ );}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00443}00443\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00444}00444\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00445}00445\ \ \ \textcolor{keywordflow}{if}\ (isHist2D)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00446}00446\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00447}00447\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classsplineFDBase_a6c28400605049bdee229885c46463dcd}{Dimensions}}[iSample]\ !=\ 2)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00448}00448\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00449}00449\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Trying\ to\ load\ a\ 2D\ spline\ template\ when\ nDim=\{\}"{}},\ \mbox{\hyperlink{classsplineFDBase_a6c28400605049bdee229885c46463dcd}{Dimensions}}[iSample]);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00450}00450\ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_,\ \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00451}00451\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00452}00452\ \ \ \ \ Hist2D\ =\ File-\/>Get<TH2F>(\textcolor{stringliteral}{"{}dev\_tmp\_0\_0"{}});}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00453}00453\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00454}00454\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00455}00455\ \ \ \textcolor{keywordflow}{if}\ (isHist3D)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00456}00456\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00457}00457\ \ \ \ \ Hist3D\ =\ File-\/>Get<TH3F>((\textcolor{stringliteral}{"{}dev\_tmp\_0\_0"{}}));}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00458}00458\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00459}00459\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classsplineFDBase_a6c28400605049bdee229885c46463dcd}{Dimensions}}[iSample]\ !=\ 3\ \&\&\ Hist3D-\/>GetZaxis()-\/>GetNbins()\ !=\ 1)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00460}00460\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00461}00461\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Trying\ to\ load\ a\ 3D\ spline\ template\ when\ nDim=\{\}"{}},\ \mbox{\hyperlink{classsplineFDBase_a6c28400605049bdee229885c46463dcd}{Dimensions}}[iSample]);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00462}00462\ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_\ ,\ \_\_LINE\_\_\ );}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00463}00463\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00464}00464\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00465}00465\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00466}00466\ \ \ \textcolor{keywordtype}{double}\ DummyEdges[2]\ =\ \{-\/1e-\/15,\ 1e15\};}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00467}00467\ \ \ \textcolor{keyword}{auto}\ DummyAxis\ =\ std::unique\_ptr<TAxis>(\textcolor{keyword}{new}\ TAxis(1,\ DummyEdges));}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00468}00468\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00469}00469\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classsplineFDBase_a6c28400605049bdee229885c46463dcd}{Dimensions}}[iSample]\ ==\ 2)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00470}00470\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00471}00471\ \ \ \ \ \textcolor{keywordflow}{if}(isHist2D)\{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00472}00472\ \ \ \ \ \ \ ReturnVec.push\_back(\textcolor{keyword}{static\_cast<}TAxis\ *\textcolor{keyword}{>}(Hist2D-\/>GetXaxis()-\/>Clone()));}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00473}00473\ \ \ \ \ \ \ ReturnVec.push\_back(\textcolor{keyword}{static\_cast<}TAxis\ *\textcolor{keyword}{>}(Hist2D-\/>GetYaxis()-\/>Clone()));}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00474}00474\ \ \ \ \ \ \ ReturnVec.push\_back(\textcolor{keyword}{static\_cast<}TAxis\ *\textcolor{keyword}{>}(DummyAxis-\/>Clone()));}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00475}00475\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00476}00476\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(isHist3D)\{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00477}00477\ \ \ \ \ \ \ ReturnVec.push\_back(\textcolor{keyword}{static\_cast<}TAxis\ *\textcolor{keyword}{>}(Hist3D-\/>GetXaxis()-\/>Clone()));}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00478}00478\ \ \ \ \ \ \ ReturnVec.push\_back(\textcolor{keyword}{static\_cast<}TAxis\ *\textcolor{keyword}{>}(Hist3D-\/>GetYaxis()-\/>Clone()));}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00479}00479\ \ \ \ \ \ \ ReturnVec.push\_back(\textcolor{keyword}{static\_cast<}TAxis\ *\textcolor{keyword}{>}(DummyAxis-\/>Clone()));}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00480}00480\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00481}00481\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00482}00482\ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classsplineFDBase_a6c28400605049bdee229885c46463dcd}{Dimensions}}[iSample]\ ==\ 3)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00483}00483\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00484}00484\ \ \ \ \ ReturnVec.push\_back(\textcolor{keyword}{static\_cast<}TAxis\ *\textcolor{keyword}{>}(Hist3D-\/>GetXaxis()-\/>Clone()));}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00485}00485\ \ \ \ \ ReturnVec.push\_back(\textcolor{keyword}{static\_cast<}TAxis\ *\textcolor{keyword}{>}(Hist3D-\/>GetYaxis()-\/>Clone()));}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00486}00486\ \ \ \ \ ReturnVec.push\_back(\textcolor{keyword}{static\_cast<}TAxis\ *\textcolor{keyword}{>}(Hist3D-\/>GetZaxis()-\/>Clone()));}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00487}00487\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00488}00488\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00489}00489\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00490}00490\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Number\ of\ dimensions\ not\ valid!\ Given:\ \{\}"{}},\ \mbox{\hyperlink{classsplineFDBase_a6c28400605049bdee229885c46463dcd}{Dimensions}}[iSample]);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00491}00491\ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_\ ,\ \_\_LINE\_\_\ );}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00492}00492\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00493}00493\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00494}00494\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ iAxis\ =\ 0;\ iAxis\ <\ ReturnVec.size();\ ++iAxis)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00495}00495\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00496}00496\ \ \ \ \ \mbox{\hyperlink{classsplineFDBase_a7f5b16b65dc7da748f20bdc803b7e593}{PrintBinning}}(ReturnVec[iAxis]);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00497}00497\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00498}00498\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00499}00499\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Left\ PrintBinning\ now\ tidying\ up"{}});}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00500}00500\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00501}00501\ \ \ \textcolor{comment}{//Make\ sure\ these\ actually\ get\ deleted}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00502}00502\ \ \ \textcolor{keyword}{delete}\ Hist2D;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00503}00503\ \ \ \textcolor{keyword}{delete}\ Hist3D;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00504}00504\ \ \ File-\/>Close();}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00505}00505\ \ \ \textcolor{keywordflow}{return}\ ReturnVec;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00506}00506\ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00507}00507\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00508}00508\ \textcolor{comment}{//****************************************}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00509}\mbox{\hyperlink{classsplineFDBase_a0bfc616fab953333e6e938de52ce3bed}{00509}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classsplineFDBase_a0bfc616fab953333e6e938de52ce3bed}{splineFDBase::CountNumberOfLoadedSplines}}(\textcolor{keywordtype}{bool}\ NonFlat,\ \textcolor{keywordtype}{int}\ Verbosity)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00510}00510\ \textcolor{comment}{//****************************************}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00511}00511\ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00512}00512\ \ \ \textcolor{keywordtype}{int}\ SampleCounter\_NonFlat\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00513}00513\ \ \ \textcolor{keywordtype}{int}\ SampleCounter\_All\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00514}00514\ \ \ \textcolor{keywordtype}{int}\ FullCounter\_NonFlat\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00515}00515\ \ \ \textcolor{keywordtype}{int}\ FullCounter\_All\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00516}00516\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00517}00517\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ iSample\ =\ 0;\ iSample\ <\ \mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}.size();\ iSample++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00518}00518\ \ \ \{\ \textcolor{comment}{//\ Loop\ over\ systematics}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00519}00519\ \ \ \ \ SampleCounter\_NonFlat\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00520}00520\ \ \ \ \ SampleCounter\_All\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00521}00521\ \ \ \ \ std::string\ SampleName\ =\ \mbox{\hyperlink{classsplineFDBase_a78508c5d0d4ef09457beb723dc796208}{SampleNames}}[iSample];}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00522}00522\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ iOscChan\ =\ 0;\ iOscChan\ <\ \mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}[iSample].size();\ iOscChan++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00523}00523\ \ \ \ \ \{\ \textcolor{comment}{//\ Loop\ over\ oscillation\ channels}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00524}00524\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ iSyst\ =\ 0;\ iSyst\ <\ \mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}[iSample][iOscChan].size();\ iSyst++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00525}00525\ \ \ \ \ \ \ \{\ \textcolor{comment}{//\ Loop\ over\ systematics}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00526}00526\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ iMode\ =\ 0;\ iMode\ <\ \mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}[iSample][iOscChan][iSyst].size();\ iMode++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00527}00527\ \ \ \ \ \ \ \ \ \{\ \textcolor{comment}{//\ Loop\ over\ modes}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00528}00528\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ iVar1\ =\ 0;\ iVar1\ <\ \mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}[iSample][iOscChan][iSyst][iMode].size();\ iVar1++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00529}00529\ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{comment}{//\ Loop\ over\ first\ dimension}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00530}00530\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ iVar2\ =\ 0;\ iVar2\ <\ \mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}[iSample][iOscChan][iSyst][iMode][iVar1].size();\ iVar2++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00531}00531\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{comment}{//\ Loop\ over\ second\ dimension}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00532}00532\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ iVar3\ =\ 0;\ iVar3\ <\ \mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}[iSample][iOscChan][iSyst][iMode][iVar1][iVar2].size();\ iVar3++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00533}00533\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{comment}{//\ Loop\ over\ third\ dimension}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00534}00534\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classsplineFDBase_ae66addf83262b03969d0b3b89737a42b}{isValidSplineIndex}}(SampleName,\ iOscChan,\ iSyst,\ iMode,\ iVar1,\ iVar2,\ iVar3))}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00535}00535\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00536}00536\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ splineindex\ =\ \mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}[iSample][iOscChan][iSyst][iMode][iVar1][iVar2][iVar3];}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00537}00537\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classsplineFDBase_a84ec9ea208503053b9735b1cb1bc417d}{splinevec\_Monolith}}[splineindex]\ !=\ NULL)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00538}00538\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00539}00539\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SampleCounter\_NonFlat\ +=\ 1;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00540}00540\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00541}00541\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SampleCounter\_All\ +=\ 1;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00542}00542\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00543}00543\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00544}00544\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00545}00545\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00546}00546\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00547}00547\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00548}00548\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00549}00549\ \ \ \ \ \textcolor{keywordflow}{if}\ (Verbosity\ >\ 0)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00550}00550\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00551}00551\ \ \ \ \ \ \ std::cout\ <<\ std::setw(10)\ <<\ \mbox{\hyperlink{classsplineFDBase_a78508c5d0d4ef09457beb723dc796208}{SampleNames}}[iSample]\ <<\ \textcolor{stringliteral}{"{}\ has\ "{}}\ <<\ std::setw(10)\ <<\ SampleCounter\_All\ <<\ \textcolor{stringliteral}{"{}\ splines,\ of\ which\ "{}}\ <<\ std::setw(10)\ <<\ SampleCounter\_NonFlat\ <<\ \textcolor{stringliteral}{"{}\ are\ not\ flat"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00552}00552\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00553}00553\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00554}00554\ \ \ \ \ FullCounter\_NonFlat\ +=\ SampleCounter\_NonFlat;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00555}00555\ \ \ \ \ FullCounter\_All\ +=\ SampleCounter\_All;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00556}00556\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00557}00557\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00558}00558\ \ \ \textcolor{keywordflow}{if}\ (Verbosity\ >\ 0)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00559}00559\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00560}00560\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Total\ number\ of\ splines\ loaded:\ \{\}"{}},\ FullCounter\_All);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00561}00561\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Total\ number\ of\ non-\/flat\ splines\ loaded:\ \{\}"{}},\ FullCounter\_NonFlat);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00562}00562\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00563}00563\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00564}00564\ \ \ \textcolor{keywordflow}{if}\ (NonFlat)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00565}00565\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00566}00566\ \ \ \ \ \textcolor{keywordflow}{return}\ FullCounter\_NonFlat;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00567}00567\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00568}00568\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00569}00569\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00570}00570\ \ \ \ \ \textcolor{keywordflow}{return}\ FullCounter\_All;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00571}00571\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00572}00572\ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00573}00573\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00574}00574\ \textcolor{comment}{//****************************************}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00575}\mbox{\hyperlink{classsplineFDBase_a2eb495f4d63c9e4ee10b97c47e982b28}{00575}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsplineFDBase_a2eb495f4d63c9e4ee10b97c47e982b28}{splineFDBase::PrepForReweight}}()}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00576}00576\ \textcolor{comment}{//****************************************}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00577}00577\ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00578}00578\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00579}00579\ \ \ std::vector<TSpline3\_red*>\ UniqueSystSplines;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00580}00580\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00581}00581\ \ \ \textcolor{comment}{//\ DB\ Find\ all\ the\ Unique\ systs\ across\ each\ sample\ and\ oscillation\ channel}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00582}00582\ \ \ \textcolor{comment}{//\ \ \ \ This\ assumes\ that\ each\ occurence\ of\ the\ same\ systematic\ spline\ has\ the\ same\ knot\ spacing}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00583}00583\ \ \ \textcolor{comment}{//\ \ \ \ Which\ is\ a\ reasonable\ assumption\ for\ the\ current\ implementation\ of\ spline\ evaluations}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00584}00584\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ iSample\ =\ 0;\ iSample\ <\ \mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}.size();\ iSample++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00585}00585\ \ \ \{\ \textcolor{comment}{//\ Loop\ over\ systematics}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00586}00586\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ iSyst\ =\ 0;\ iSyst\ <\ \mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}[iSample][0].size();\ iSyst++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00587}00587\ \ \ \ \ \{\ \textcolor{comment}{//\ Loop\ over\ systematics}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00588}00588\ \ \ \ \ \ \ std::string\ SystName\ =\ \mbox{\hyperlink{classsplineFDBase_a5619363447e607cd835c46d601b10675}{SplineFileParPrefixNames}}[iSample][iSyst];}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00589}00589\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ FoundSyst\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00590}00590\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00591}00591\ \ \ \ \ \ \ \textcolor{comment}{//ETA\ -\/\ this\ always\ seems\ to\ be\ empty\ to\ begin\ with??}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00592}00592\ \ \ \ \ \ \ \textcolor{comment}{//so\ this\ loop\ never\ gets\ used?}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00593}00593\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ iFoundSyst\ =\ 0;\ iFoundSyst\ <\ \mbox{\hyperlink{classsplineFDBase_aacf850f4ec22e4f7338f243999ecc7dd}{UniqueSystNames}}.size();\ iFoundSyst++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00594}00594\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00595}00595\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (SystName\ ==\ \mbox{\hyperlink{classsplineFDBase_aacf850f4ec22e4f7338f243999ecc7dd}{UniqueSystNames}}[iFoundSyst])}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00596}00596\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00597}00597\ \ \ \ \ \ \ \ \ \ \ FoundSyst\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00598}00598\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00599}00599\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00600}00600\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!FoundSyst)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00601}00601\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00602}00602\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ FoundNonFlatSpline\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00603}00603\ \ \ \ \ \ \ \ \ \textcolor{comment}{//This\ is\ all\ basically\ to\ check\ that\ you\ have\ some\ resposne\ from\ a\ spline}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00604}00604\ \ \ \ \ \ \ \ \ \textcolor{comment}{//systematic\ somewhere}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00605}00605\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ iOscChan\ =\ 0;\ iOscChan\ <\ \mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}[iSample].size();\ iOscChan++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00606}00606\ \ \ \ \ \ \ \ \ \{\ \textcolor{comment}{//\ Loop\ over\ oscillation\ channels}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00607}00607\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ iMode\ =\ 0;\ iMode\ <\ \mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}[iSample][iOscChan][iSyst].size();\ iMode++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00608}00608\ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{comment}{//\ Loop\ over\ modes}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00609}00609\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ iVar1\ =\ 0;\ iVar1\ <\ \mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}[iSample][iOscChan][iSyst][iMode].size();\ iVar1++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00610}00610\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{comment}{//\ Loop\ over\ first\ dimension}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00611}00611\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ iVar2\ =\ 0;\ iVar2\ <\ \mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}[iSample][iOscChan][iSyst][iMode][iVar1].size();\ iVar2++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00612}00612\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{comment}{//\ Loop\ over\ second\ dimension}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00613}00613\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ iVar3\ =\ 0;\ iVar3\ <\ \mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}[iSample][iOscChan][iSyst][iMode][iVar1][iVar2].size();\ iVar3++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00614}00614\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{comment}{//\ Loop\ over\ third\ dimension}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00615}00615\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ splineindex=\mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}[iSample][iOscChan][iSyst][iMode][iVar1][iVar2][iVar3];}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00616}00616\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classsplineFDBase_a84ec9ea208503053b9735b1cb1bc417d}{splinevec\_Monolith}}[splineindex]\ !=\ NULL)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00617}00617\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00618}00618\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UniqueSystSplines.push\_back(\mbox{\hyperlink{classsplineFDBase_a84ec9ea208503053b9735b1cb1bc417d}{splinevec\_Monolith}}[splineindex]);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00619}00619\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsplineFDBase_a3b821b95c2db6063a9baa244b28aeaa6}{UniqueSystIndices}}.push\_back(\mbox{\hyperlink{classsplineFDBase_af036372a158b4e463683a8d02a20ec3d}{GlobalSystIndex}}[iSample][iSyst]);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00620}00620\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ FoundNonFlatSpline\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00621}00621\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00622}00622\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (FoundNonFlatSpline)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00623}00623\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00624}00624\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00625}00625\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00626}00626\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{comment}{//3D\ loop\ end}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00627}00627\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (FoundNonFlatSpline)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00628}00628\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00629}00629\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00630}00630\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00631}00631\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{comment}{//2D\ loop\ end}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00632}00632\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (FoundNonFlatSpline)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00633}00633\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00634}00634\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00635}00635\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00636}00636\ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{comment}{//1D\ loop\ end}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00637}00637\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (FoundNonFlatSpline)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00638}00638\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00639}00639\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00640}00640\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00641}00641\ \ \ \ \ \ \ \ \ \ \ \}\textcolor{comment}{//mode\ loop\ end}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00642}00642\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (FoundNonFlatSpline)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00643}00643\ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00644}00644\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00645}00645\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00646}00646\ \ \ \ \ \ \ \ \ \}\textcolor{comment}{//osc\ loop\ end}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00647}00647\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//ETA\ -\/\ only\ push\ back\ unique\ name\ if\ a\ non-\/flat\ response\ has\ been\ found}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00648}00648\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(FoundNonFlatSpline)\{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00649}00649\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsplineFDBase_aacf850f4ec22e4f7338f243999ecc7dd}{UniqueSystNames}}.push\_back(SystName);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00650}00650\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00651}00651\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00652}00652\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!FoundNonFlatSpline)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00653}00653\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00654}00654\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}\{\}\ syst\ has\ no\ response\ in\ sample\ \{\}"{}},\ SystName,\ iSample);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00655}00655\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Whilst\ this\ isn't\ neccessarily\ a\ problem,\ it\ seems\ odd"{}});}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00656}00656\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00657}00657\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00658}00658\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00659}00659\ \ \ \ \ \}\textcolor{comment}{//Syst\ loop\ end}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00660}00660\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00661}00661\ \ \ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00662}00662\ \ \ \mbox{\hyperlink{classsplineFDBase_a0d42cbfc22f21906264af285fd57b1af}{nUniqueSysts}}\ =\ int(UniqueSystSplines.size());}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00663}00663\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00664}00664\ \ \ \textcolor{comment}{//\ DB\ Find\ the\ number\ of\ splines\ knots\ which\ assumes\ each\ instance\ of\ the\ syst\ has\ the\ same\ number\ of\ knots}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00665}00665\ \ \ \mbox{\hyperlink{classsplineFDBase_a176d42bb137d3c8c3771eb1a4a8440c8}{UniqueSystNKnots}}.resize(\mbox{\hyperlink{classsplineFDBase_a0d42cbfc22f21906264af285fd57b1af}{nUniqueSysts}});}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00666}00666\ \ \ \mbox{\hyperlink{classsplineFDBase_aa36e6889d054ad0f86f33a53dd3fe036}{UniqueSystCurrSegment}}.resize(\mbox{\hyperlink{classsplineFDBase_a0d42cbfc22f21906264af285fd57b1af}{nUniqueSysts}});}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00667}00667\ \ \ \mbox{\hyperlink{classsplineFDBase_a5112a1bbd658d3a90c6a785c12aebf34}{UniqueSystXPts}}.resize(\mbox{\hyperlink{classsplineFDBase_a0d42cbfc22f21906264af285fd57b1af}{nUniqueSysts}});}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00668}00668\ \ \ \mbox{\hyperlink{classsplineFDBase_a324c4b50910454092ba45d945ef57bda}{xVarArray}}=\textcolor{keyword}{new}\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}[\mbox{\hyperlink{classsplineFDBase_a0d42cbfc22f21906264af285fd57b1af}{nUniqueSysts}}];}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00669}00669\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00670}00670\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ iSpline\ =\ 0;\ iSpline\ <\ \mbox{\hyperlink{classsplineFDBase_a0d42cbfc22f21906264af285fd57b1af}{nUniqueSysts}};\ iSpline++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00671}00671\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00672}00672\ \ \ \ \ \mbox{\hyperlink{classsplineFDBase_a176d42bb137d3c8c3771eb1a4a8440c8}{UniqueSystNKnots}}[iSpline]\ =\ UniqueSystSplines[iSpline]-\/>GetNp();}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00673}00673\ \ \ \ \ \mbox{\hyperlink{classsplineFDBase_a5112a1bbd658d3a90c6a785c12aebf34}{UniqueSystXPts}}[iSpline].resize(\mbox{\hyperlink{classsplineFDBase_a176d42bb137d3c8c3771eb1a4a8440c8}{UniqueSystNKnots}}[iSpline]);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00674}00674\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ iKnot\ =\ 0;\ iKnot\ <\ \mbox{\hyperlink{classsplineFDBase_a176d42bb137d3c8c3771eb1a4a8440c8}{UniqueSystNKnots}}[iSpline];\ iKnot++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00675}00675\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00676}00676\ \ \ \ \ \ \ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}\ xPoint;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00677}00677\ \ \ \ \ \ \ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}\ yPoint;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00678}00678\ \ \ \ \ \ \ UniqueSystSplines[iSpline]-\/>GetKnot(iKnot,\ xPoint,\ yPoint);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00679}00679\ \ \ \ \ \ \ \mbox{\hyperlink{classsplineFDBase_a5112a1bbd658d3a90c6a785c12aebf34}{UniqueSystXPts}}[iSpline][iKnot]\ =\ xPoint;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00680}00680\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00681}00681\ \ \ \ \ \textcolor{comment}{//ETA\ -\/\ let\ this\ just\ be\ set\ as\ the\ first\ segment\ by\ default}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00682}00682\ \ \ \ \ \mbox{\hyperlink{classsplineFDBase_aa36e6889d054ad0f86f33a53dd3fe036}{UniqueSystCurrSegment}}[iSpline]\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00683}00683\ \ \ \ \ \mbox{\hyperlink{classsplineFDBase_a324c4b50910454092ba45d945ef57bda}{xVarArray}}[iSpline]=0;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00684}00684\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00685}00685\ \ \ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00686}00686\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00687}00687\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}nUniqueSysts:\ \{\}"{}},\ \mbox{\hyperlink{classsplineFDBase_a0d42cbfc22f21906264af285fd57b1af}{nUniqueSysts}});}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00688}00688\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00689}00689\ \ \ std::cout\ <<\ std::setw(15)\ <<\ \textcolor{stringliteral}{"{}Spline\ Index"{}}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00690}00690\ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ |\ "{}}\ <<\ std::setw(20)\ <<\ \textcolor{stringliteral}{"{}Syst\ Name"{}}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00691}00691\ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ |\ "{}}\ <<\ std::setw(6)\ <<\ \textcolor{stringliteral}{"{}nKnots"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00692}00692\ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00693}00693\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ iUniqueSyst\ =\ 0;\ iUniqueSyst\ <\ \mbox{\hyperlink{classsplineFDBase_a0d42cbfc22f21906264af285fd57b1af}{nUniqueSysts}};\ iUniqueSyst++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00694}00694\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00695}00695\ \ \ \ \ std::cout\ <<\ std::setw(15)\ <<\ iUniqueSyst\ <<\ \textcolor{stringliteral}{"{}\ |\ "{}}\ <<\ std::setw(20)\ <<\ \mbox{\hyperlink{classsplineFDBase_aacf850f4ec22e4f7338f243999ecc7dd}{UniqueSystNames}}[iUniqueSyst]\ <<\ \textcolor{stringliteral}{"{}\ |\ "{}}\ <<\ std::setw(6)\ <<\ \mbox{\hyperlink{classsplineFDBase_a176d42bb137d3c8c3771eb1a4a8440c8}{UniqueSystNKnots}}[iUniqueSyst]\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00696}00696\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00697}00697\ \ \ std::cout\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00698}00698\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00699}00699\ \ \ \textcolor{comment}{//ETA}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00700}00700\ \ \ \textcolor{comment}{//Isn't\ this\ just\ doing\ what\ CountNumberOfLoadedSplines()\ does?}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00701}00701\ \ \ \textcolor{keywordtype}{int}\ nCombinations\_FlatSplines\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00702}00702\ \ \ \textcolor{keywordtype}{int}\ nCombinations\_All\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00703}00703\ \ \ \textcolor{comment}{//\ DB\ Now\ actually\ loop\ over\ splines\ to\ determine\ which\ are\ all\ NULL}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00704}00704\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ iSample\ =\ 0;\ iSample\ <\ \mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}.size();\ iSample++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00705}00705\ \ \ \{\ \textcolor{comment}{//\ Loop\ over\ systematics}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00706}00706\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ iOscChan\ =\ 0;\ iOscChan\ <\ \mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}[iSample].size();\ iOscChan++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00707}00707\ \ \ \ \ \{\ \textcolor{comment}{//\ Loop\ over\ oscillation\ channels}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00708}00708\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ iSyst\ =\ 0;\ iSyst\ <\ \mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}[iSample][iOscChan].size();\ iSyst++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00709}00709\ \ \ \ \ \ \ \{\ \textcolor{comment}{//\ Loop\ over\ systematics}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00710}00710\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ iMode\ =\ 0;\ iMode\ <\ \mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}[iSample][iOscChan][iSyst].size();\ iMode++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00711}00711\ \ \ \ \ \ \ \ \ \{\ \textcolor{comment}{//\ Loop\ over\ modes}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00712}00712\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//bool\ isFlat\ =\ false;}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00713}00713\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ iVar1\ =\ 0;\ iVar1\ <\ \mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}[iSample][iOscChan][iSyst][iMode].size();\ iVar1++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00714}00714\ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{comment}{//\ Loop\ over\ first\ dimension}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00715}00715\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ iVar2\ =\ 0;\ iVar2\ <\ \mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}[iSample][iOscChan][iSyst][iMode][iVar1].size();\ iVar2++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00716}00716\ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{comment}{//\ Loop\ over\ second\ dimension}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00717}00717\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ iVar3\ =\ 0;\ iVar3\ <\ \mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}[iSample][iOscChan][iSyst][iMode][iVar1][iVar2].size();\ iVar3++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00718}00718\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{comment}{//\ Loop\ over\ third\ dimension}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00719}00719\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ splineindex=\mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}[iSample][iOscChan][iSyst][iMode][iVar1][iVar2][iVar3];}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00720}00720\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classsplineFDBase_a84ec9ea208503053b9735b1cb1bc417d}{splinevec\_Monolith}}[splineindex]\ !=\ NULL)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00721}00721\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00722}00722\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nCombinations\_All\ +=\ 1;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00723}00723\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00724}00724\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nCombinations\_FlatSplines\ +=\ 1;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00725}00725\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nCombinations\_All\ +=\ 1;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00726}00726\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00727}00727\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00728}00728\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00729}00729\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00730}00730\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00731}00731\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00732}00732\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00733}00733\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00734}00734\ \ \ \textcolor{comment}{//\ We\ need\ to\ grab\ the\ maximum\ number\ of\ knots}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00735}00735\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Number\ of\ combinations\ of\ Sample,\ OscChan,\ Syst\ and\ Mode\ which\ have\ entirely\ flat\ response:\ \{\}\ /\ \{\}"{}},\ nCombinations\_FlatSplines,\ nCombinations\_All);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00736}00736\ \ \ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00737}00737\ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00738}00738\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00739}00739\ \textcolor{comment}{//****************************************}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00740}00740\ \textcolor{comment}{//\ Rather\ work\ with\ spline\ coefficients\ in\ the\ splines,\ let's\ copy\ ND\ and\ use\ coefficient\ arrays}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00741}\mbox{\hyperlink{classsplineFDBase_a8b7b34479c3240a9827d6a0b5b7da4b4}{00741}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsplineFDBase_a8b7b34479c3240a9827d6a0b5b7da4b4}{splineFDBase::getSplineCoeff\_SepMany}}(\textcolor{keywordtype}{int}\ splineindex,\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}*\ \&xArray,\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}*\ \&manyArray)\{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00742}00742\ \textcolor{comment}{//****************************************}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00743}00743\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00744}00744\ \ \ \textcolor{comment}{//\ Initialise\ all\ arrays\ to\ 1.0}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00745}00745\ \ \ \textcolor{keywordtype}{int}\ nPoints;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00746}00746\ \ \ \textcolor{comment}{//No\ point\ evaluating\ a\ flat\ spline}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00747}00747\ \ \ nPoints\ =\ \mbox{\hyperlink{classsplineFDBase_a84ec9ea208503053b9735b1cb1bc417d}{splinevec\_Monolith}}[splineindex]-\/>GetNp();}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00748}00748\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00749}00749\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ nPoints;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00750}00750\ \ \ \ \ xArray[i]\ =\ 1.0;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00751}00751\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ 4;\ j++)\ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00752}00752\ \ \ \ \ \ \ manyArray[i*4+j]\ =\ 1.0;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00753}00753\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00754}00754\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00755}00755\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00756}00756\ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i=0;\ i<nPoints;\ i++)\{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00757}00757\ \ \ \ \ \textcolor{comment}{//\ Spline\ coefficients\ to\ be}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00758}00758\ \ \ \ \ \textcolor{comment}{//\ M3::float\_t\ type\ is\ defined\ by\ the\ LOW\_MEMORY\_STRUCTS\ compiler\ flag}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00759}00759\ \ \ \ \ \textcolor{comment}{//\ so\ M3::float\_t\ can\ be\ double\ or\ float\ depending\ on\ this}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00760}00760\ \ \ \ \ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}\ x\ =\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}(-\/999.99);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00761}00761\ \ \ \ \ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}\ y\ =\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}(-\/999.99);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00762}00762\ \ \ \ \ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}\ b\ =\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}(-\/999.99);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00763}00763\ \ \ \ \ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}\ c\ =\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}(-\/999.99);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00764}00764\ \ \ \ \ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}\ d\ =\ \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3::float\_t}}(-\/999.99);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00765}00765\ \ \ \ \ \mbox{\hyperlink{classsplineFDBase_a84ec9ea208503053b9735b1cb1bc417d}{splinevec\_Monolith}}[splineindex]-\/>GetCoeff(i,\ x,\ y,\ b,\ c,\ d);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00766}00766\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00767}00767\ \ \ \ \ \textcolor{comment}{//\ Store\ the\ coefficients\ for\ each\ knot\ contiguously\ in\ memory}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00768}00768\ \ \ \ \ \textcolor{comment}{//\ 4\ because\ manyArray\ stores\ y,b,c,d}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00769}00769\ \ \ \ \ xArray[i]\ =\ x;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00770}00770\ \ \ \ \ manyArray[i*4]\ =\ y;\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00771}00771\ \ \ \ \ manyArray[i*4+1]\ =\ b;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00772}00772\ \ \ \ \ manyArray[i*4+2]\ =\ c;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00773}00773\ \ \ \ \ manyArray[i*4+3]\ =\ d;\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00774}00774\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00775}00775\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00776}00776\ \ \ \textcolor{comment}{//We\ now\ clean\ up\ the\ splines!}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00777}00777\ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{classsplineFDBase_a84ec9ea208503053b9735b1cb1bc417d}{splinevec\_Monolith}}[splineindex];}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00778}00778\ \ \ \mbox{\hyperlink{classsplineFDBase_a84ec9ea208503053b9735b1cb1bc417d}{splinevec\_Monolith}}[splineindex]\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00779}00779\ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00780}00780\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00781}00781\ \textcolor{comment}{//****************************************}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00782}00782\ \textcolor{comment}{//ETA\ -\/\ this\ may\ need\ to\ be\ virtual\ and\ then\ we\ can\ define\ this\ in\ the\ experiment.}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00783}00783\ \textcolor{comment}{//Equally\ though\ could\ just\ use\ KinematicVariable\ to\ map\ back}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00784}\mbox{\hyperlink{classsplineFDBase_a85302df644fb84ff00201624c454636f}{00784}}\ std::string\ \mbox{\hyperlink{classsplineFDBase_a85302df644fb84ff00201624c454636f}{splineFDBase::getDimLabel}}(\textcolor{keywordtype}{int}\ iSample,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ Axis)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00785}00785\ \textcolor{comment}{//****************************************}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00786}00786\ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00787}00787\ \ \ \textcolor{keywordflow}{if}(Axis\ >\ \mbox{\hyperlink{classsplineFDBase_a00e1aeea8e9389c41f93469a26c83adc}{DimensionLabels}}[iSample].\mbox{\hyperlink{GetPenaltyTerm_8cpp_a439227feff9d7f55384e8780cfc2eb82}{size}}())\{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00788}00788\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}The\ spline\ Axis\ you\ are\ trying\ to\ get\ the\ label\ of\ is\ larger\ than\ the\ number\ of\ dimensions"{}});}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00789}00789\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}You\ are\ trying\ to\ get\ axis\ \{\}\ but\ have\ only\ got\ \{\}"{}},\ Axis,\ \mbox{\hyperlink{classsplineFDBase_a6c28400605049bdee229885c46463dcd}{Dimensions}}[iSample]);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00790}00790\ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_\ ,\ \_\_LINE\_\_\ );}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00791}00791\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00792}00792\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classsplineFDBase_a00e1aeea8e9389c41f93469a26c83adc}{DimensionLabels}}.at(iSample).at(Axis);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00793}00793\ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00794}00794\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00795}00795\ \textcolor{comment}{//Returns\ sample\ index\ in\ }}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00796}\mbox{\hyperlink{classsplineFDBase_a2d19b4bd235644d4c6a1ca6d589be6ca}{00796}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classsplineFDBase_a2d19b4bd235644d4c6a1ca6d589be6ca}{splineFDBase::getSampleIndex}}(std::string\ SampleName)\{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00797}00797\ \ \ \textcolor{keywordtype}{int}\ SampleIndex\ =\ -\/1;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00798}00798\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ iSample\ =\ 0;\ iSample\ <\ \mbox{\hyperlink{classsplineFDBase_a78508c5d0d4ef09457beb723dc796208}{SampleNames}}.size();\ iSample++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00799}00799\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00800}00800\ \ \ \ \ \textcolor{keywordflow}{if}\ (SampleName\ ==\ \mbox{\hyperlink{classsplineFDBase_a78508c5d0d4ef09457beb723dc796208}{SampleNames}}[iSample])}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00801}00801\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00802}00802\ \ \ \ \ \ \ SampleIndex\ =\ iSample;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00803}00803\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00804}00804\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00805}00805\ \ \ \textcolor{keywordflow}{if}\ (SampleIndex\ ==\ -\/1)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00806}00806\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00807}00807\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Sample\ name\ not\ found\ :\ \{\}"{}},\ SampleName);\ \ \ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00808}00808\ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_\ ,\ \_\_LINE\_\_\ );}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00809}00809\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00810}00810\ \ \ \textcolor{keywordflow}{return}\ SampleIndex;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00811}00811\ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00812}00812\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00813}00813\ \textcolor{comment}{//****************************************}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00814}\mbox{\hyperlink{classsplineFDBase_a7ff003d3c05fe8a6f9723557910b7a90}{00814}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsplineFDBase_a7ff003d3c05fe8a6f9723557910b7a90}{splineFDBase::PrintSampleDetails}}(std::string\ SampleName)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00815}00815\ \textcolor{comment}{//****************************************}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00816}00816\ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00817}00817\ \ \ \textcolor{keywordtype}{int}\ iSample\ =\ \mbox{\hyperlink{classsplineFDBase_a2d19b4bd235644d4c6a1ca6d589be6ca}{getSampleIndex}}(SampleName);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00818}00818\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00819}00819\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Details\ about\ sample:\ \{:<20\}"{}},\ \mbox{\hyperlink{classsplineFDBase_a78508c5d0d4ef09457beb723dc796208}{SampleNames}}[iSample]);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00820}00820\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}\(\backslash\)t\ Dimension:\ \{:<35\}"{}},\ \mbox{\hyperlink{classsplineFDBase_a6c28400605049bdee229885c46463dcd}{Dimensions}}[iSample]);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00821}00821\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}\(\backslash\)t\ DetID:\ \{:<35\}"{}},\ \mbox{\hyperlink{classsplineFDBase_aeb743760ca4a477771132aaf0e334d15}{DetIDs}}[iSample]);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00822}00822\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}\(\backslash\)t\ nSplineParam:\ \{:<35\}"{}},\ \mbox{\hyperlink{classsplineFDBase_aad64c7c63db8ea676f86eb2279f04d40}{nSplineParams}}[iSample]);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00823}00823\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}\(\backslash\)t\ nOscChan:\ \{:<35\}"{}},\ \mbox{\hyperlink{classsplineFDBase_aa10670a64bbdef3ffd69f4b8f102fff3}{nOscChans}}[iSample]);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00824}00824\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00825}00825\ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00826}00826\ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00827}00827\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00828}00828\ \textcolor{comment}{//****************************************}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00829}\mbox{\hyperlink{classsplineFDBase_aee80975a1a2892b61fb27b2044e7c9bc}{00829}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsplineFDBase_aee80975a1a2892b61fb27b2044e7c9bc}{splineFDBase::PrintArrayDetails}}(std::string\ SampleName)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00830}00830\ \textcolor{comment}{//****************************************}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00831}00831\ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00832}00832\ \ \ \textcolor{keywordtype}{int}\ iSample\ =\ \mbox{\hyperlink{classsplineFDBase_a2d19b4bd235644d4c6a1ca6d589be6ca}{getSampleIndex}}(SampleName);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00833}00833\ \ \ \textcolor{keywordtype}{int}\ nOscChannels\ =\ int(\mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}[iSample].\mbox{\hyperlink{GetPenaltyTerm_8cpp_a439227feff9d7f55384e8780cfc2eb82}{size}}());}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00834}00834\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Sample\ \{\}\ has\ \{\}\ oscillation\ channels"{}},\ iSample,\ nOscChannels);\ \ \ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00835}00835\ \ \ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00836}00836\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ iOscChan\ =\ 0;\ iOscChan\ <\ nOscChannels;\ iOscChan++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00837}00837\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00838}00838\ \ \ \ \ \textcolor{keywordtype}{int}\ nSysts\ =\ int(\mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}[iSample][iOscChan].\mbox{\hyperlink{GetPenaltyTerm_8cpp_a439227feff9d7f55384e8780cfc2eb82}{size}}());}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00839}00839\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Oscillation\ channel\ \{\}\ has\ \{\}\ systematics"{}},\ iOscChan,\ nSysts);\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00840}00840\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00841}00841\ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00842}00842\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00843}00843\ \textcolor{comment}{//****************************************}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00844}\mbox{\hyperlink{classsplineFDBase_ab1f9479d702cfee2d0e5ea7edd2aca81}{00844}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsplineFDBase_ab1f9479d702cfee2d0e5ea7edd2aca81}{splineFDBase::PrintArrayDimension}}()}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00845}00845\ \textcolor{comment}{//****************************************}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00846}00846\ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00847}00847\ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\#-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\#"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00848}00848\ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Array\ dimensions.."{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00849}00849\ \ \ std::cout\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00850}00850\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00851}00851\ \ \ std::cout\ <<\ std::setw(20)\ <<\ \textcolor{stringliteral}{"{}nSamples:"{}}\ <<\ \mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}.size()\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00852}00852\ \ \ std::cout\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00853}00853\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00854}00854\ \ \ std::cout\ <<\ std::setw(20)\ <<\ \textcolor{stringliteral}{"{}nOscChans:"{}};}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00855}00855\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ iSample\ =\ 0;\ iSample\ <\ \mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}.size();\ iSample++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00856}00856\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00857}00857\ \ \ \ \ std::cout\ <<\ \mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}[iSample].size()\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00858}00858\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00859}00859\ \ \ std::cout\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00860}00860\ \ \ std::cout\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00861}00861\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00862}00862\ \ \ std::cout\ <<\ std::setw(20)\ <<\ \textcolor{stringliteral}{"{}nSysts:"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00863}00863\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ iSample\ =\ 0;\ iSample\ <\ \mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}.size();\ iSample++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00864}00864\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00865}00865\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)t"{}}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00866}00866\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}Sample:"{}}\ <<\ iSample\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)t"{}};}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00867}00867\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ iOscChan\ =\ 0;\ iOscChan\ <\ \mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}[iSample].size();\ iOscChan++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00868}00868\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00869}00869\ \ \ \ \ \ \ std::cout\ <<\ \mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}[iSample][iOscChan].size()\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00870}00870\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00871}00871\ \ \ \ \ std::cout\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00872}00872\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00873}00873\ \ \ std::cout\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00874}00874\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00875}00875\ \ \ std::cout\ <<\ std::setw(20)\ <<\ \textcolor{stringliteral}{"{}nModes:"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00876}00876\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ iSample\ =\ 0;\ iSample\ <\ \mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}.size();\ iSample++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00877}00877\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00878}00878\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)t"{}}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00879}00879\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}Sample:"{}}\ <<\ iSample\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)t"{}}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00880}00880\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00881}00881\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ iOscChan\ =\ 0;\ iOscChan\ <\ \mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}[iSample].size();\ iOscChan++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00882}00882\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00883}00883\ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)t\(\backslash\)t"{}}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00884}00884\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}OscChan:"{}}\ <<\ iOscChan\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)t"{}};}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00885}00885\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ iSyst\ =\ 0;\ iSyst\ <\ \mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}[iSample][iOscChan].size();\ iSyst++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00886}00886\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00887}00887\ \ \ \ \ \ \ \ \ std::cout\ <<\ \mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}[iSample][iOscChan][iSyst].size()\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00888}00888\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00889}00889\ \ \ \ \ \ \ std::cout\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00890}00890\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00891}00891\ \ \ \ \ std::cout\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00892}00892\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00893}00893\ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\#-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\#"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00894}00894\ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00895}00895\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00896}00896\ \textcolor{comment}{//****************************************}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00897}\mbox{\hyperlink{classsplineFDBase_ae66addf83262b03969d0b3b89737a42b}{00897}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classsplineFDBase_ae66addf83262b03969d0b3b89737a42b}{splineFDBase::isValidSplineIndex}}(std::string\ SampleName,\ \textcolor{keywordtype}{int}\ iOscChan,\ \textcolor{keywordtype}{int}\ iSyst,\ \textcolor{keywordtype}{int}\ iMode,\ \textcolor{keywordtype}{int}\ iVar1,\ \textcolor{keywordtype}{int}\ iVar2,\ \textcolor{keywordtype}{int}\ iVar3)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00898}00898\ \textcolor{comment}{//****************************************}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00899}00899\ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00900}00900\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00901}00901\ \ \ \textcolor{keywordtype}{int}\ iSample=\mbox{\hyperlink{classsplineFDBase_a2d19b4bd235644d4c6a1ca6d589be6ca}{getSampleIndex}}(SampleName);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00902}00902\ \ \ \textcolor{keywordtype}{bool}\ isValid\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00903}00903\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00904}00904\ \ \ \textcolor{keywordflow}{if}\ (iSample\ <\ 0\ ||\ iSample\ >=\ \textcolor{keywordtype}{int}(\mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}.size()))}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00905}00905\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00906}00906\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Sample\ index\ is\ invalid!\ 0\ <=\ Index\ <\ \{\}\ "{}},\ \mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}.size());}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00907}00907\ \ \ \ \ isValid\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00908}00908\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00909}00909\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00910}00910\ \ \ \textcolor{keywordflow}{if}\ (iOscChan\ <\ 0\ ||\ iOscChan\ >=\ \textcolor{keywordtype}{int}(\mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}[iSample].\mbox{\hyperlink{GetPenaltyTerm_8cpp_a439227feff9d7f55384e8780cfc2eb82}{size}}()))}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00911}00911\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00912}00912\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}OscChan\ index\ is\ invalid!\ 0\ <=\ Index\ <\ \{\}\ "{}},\ \mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}[iSample].\mbox{\hyperlink{GetPenaltyTerm_8cpp_a439227feff9d7f55384e8780cfc2eb82}{size}}());}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00913}00913\ \ \ \ \ isValid\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00914}00914\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00915}00915\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00916}00916\ \ \ \textcolor{keywordflow}{if}\ (iSyst\ <\ 0\ ||\ iSyst\ >=\ \textcolor{keywordtype}{int}(\mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}[iSample][iOscChan].\mbox{\hyperlink{GetPenaltyTerm_8cpp_a439227feff9d7f55384e8780cfc2eb82}{size}}()))}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00917}00917\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00918}00918\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Syst\ index\ is\ invalid!\ 0\ <=\ Index\ <\ \{\}\ "{}},\ \mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}[iSample][iOscChan].\mbox{\hyperlink{GetPenaltyTerm_8cpp_a439227feff9d7f55384e8780cfc2eb82}{size}}());}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00919}00919\ \ \ \ \ isValid\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00920}00920\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00921}00921\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00922}00922\ \ \ \textcolor{keywordflow}{if}\ (iMode\ <\ 0\ ||\ iMode\ >=\ \textcolor{keywordtype}{int}(\mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}[iSample][iOscChan][iSyst].\mbox{\hyperlink{GetPenaltyTerm_8cpp_a439227feff9d7f55384e8780cfc2eb82}{size}}()))}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00923}00923\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00924}00924\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Mode\ index\ is\ invalid!\ 0\ <=\ Index\ <\ \{\}\ "{}},\ \mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}[iSample][iOscChan][iSyst].\mbox{\hyperlink{GetPenaltyTerm_8cpp_a439227feff9d7f55384e8780cfc2eb82}{size}}());}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00925}00925\ \ \ \ \ isValid\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00926}00926\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00927}00927\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00928}00928\ \ \ \textcolor{keywordflow}{if}\ (iVar1\ <\ 0\ ||\ iVar1\ >=\ \textcolor{keywordtype}{int}(\mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}[iSample][iOscChan][iSyst][iMode].\mbox{\hyperlink{GetPenaltyTerm_8cpp_a439227feff9d7f55384e8780cfc2eb82}{size}}()))}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00929}00929\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00930}00930\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Var1\ index\ is\ invalid!\ 0\ <=\ Index\ <\ \{\}\ "{}},\ \mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}[iSample][iOscChan][iSyst][iMode].\mbox{\hyperlink{GetPenaltyTerm_8cpp_a439227feff9d7f55384e8780cfc2eb82}{size}}());\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00931}00931\ \ \ \ \ isValid\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00932}00932\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00933}00933\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00934}00934\ \ \ \textcolor{keywordflow}{if}\ (iVar2\ <\ 0\ ||\ iVar2\ >=\ \textcolor{keywordtype}{int}(\mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}[iSample][iOscChan][iSyst][iMode][iVar1].\mbox{\hyperlink{GetPenaltyTerm_8cpp_a439227feff9d7f55384e8780cfc2eb82}{size}}()))}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00935}00935\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00936}00936\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Var2\ index\ is\ invalid!\ 0\ <=\ Index\ <\ \{\}\ "{}},\ \mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}[iSample][iOscChan][iSyst][iMode][iVar1].\mbox{\hyperlink{GetPenaltyTerm_8cpp_a439227feff9d7f55384e8780cfc2eb82}{size}}());}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00937}00937\ \ \ \ \ isValid\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00938}00938\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00939}00939\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00940}00940\ \ \ \textcolor{keywordflow}{if}\ (iVar3\ <\ 0\ ||\ iVar3\ >=\ \textcolor{keywordtype}{int}(\mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}[iSample][iOscChan][iSyst][iMode][iVar1][iVar2].\mbox{\hyperlink{GetPenaltyTerm_8cpp_a439227feff9d7f55384e8780cfc2eb82}{size}}()))}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00941}00941\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00942}00942\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Var3\ index\ is\ invalid!\ 0\ <=\ Index\ <\ \{\}\ "{}},\ \mbox{\hyperlink{classsplineFDBase_ab3a4e79bfe675a4070597557e6226e12}{indexvec}}[iSample][iOscChan][iSyst][iMode][iVar1][iVar2].\mbox{\hyperlink{GetPenaltyTerm_8cpp_a439227feff9d7f55384e8780cfc2eb82}{size}}());}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00943}00943\ \ \ \ \ isValid\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00944}00944\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00945}00945\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00946}00946\ \ \ \textcolor{keywordflow}{if}\ (!isValid)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00947}00947\ \ \ \{\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00948}00948\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Given\ iSample:\ \{\}"{}},\ iSample);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00949}00949\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Given\ iOscChan:\ \{\}"{}},\ iOscChan);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00950}00950\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Given\ iSyst:\ \{\}"{}},\ iSyst);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00951}00951\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Given\ iMode:\ \{\}"{}},\ iMode);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00952}00952\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Given\ iVar1:\ \{\}"{}},\ iVar1);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00953}00953\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Given\ iVar2:\ \{\}"{}},\ iVar2);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00954}00954\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Given\ iVar3:\ \{\}"{}},\ iVar3);\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00955}00955\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Come\ visit\ me\ at\ :\ \{\}\ :\ \{\}"{}},\ \_\_FILE\_\_,\ \_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00956}00956\ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_\ ,\ \_\_LINE\_\_\ );}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00957}00957\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00958}00958\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00959}00959\ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00960}00960\ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00961}00961\ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00962}00962\ \textcolor{comment}{//****************************************}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00963}\mbox{\hyperlink{classsplineFDBase_a7f5b16b65dc7da748f20bdc803b7e593}{00963}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsplineFDBase_a7f5b16b65dc7da748f20bdc803b7e593}{splineFDBase::PrintBinning}}(TAxis\ *Axis)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00964}00964\ \textcolor{comment}{//****************************************}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00965}00965\ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00966}00966\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ NBins\ =\ Axis-\/>GetNbins();}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00967}00967\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ *BinEdges\ =\ Axis-\/>GetXbins()-\/>GetArray();}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00968}00968\ \ \ }
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00969}00969\ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)t"{}};}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00970}00970\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ iBin\ =\ 0;\ iBin\ <\ (NBins\ +\ 1);\ iBin++)}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00971}00971\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00972}00972\ \ \ \ \ std::cout\ <<\ BinEdges[iBin]\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00973}00973\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00974}00974\ \ \ std::cout\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00975}00975\ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{splineFDBase_8cpp_source_l00976}00976\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,714 @@
+\hypertarget{Structs_8cpp}{}\doxysection{/home/runner/work/\+Ma\+Ch3/\+Ma\+Ch3/sample\+PDF/\+Structs.cpp File Reference}
+\label{Structs_8cpp}\index{/home/runner/work/MaCh3/MaCh3/samplePDF/Structs.cpp@{/home/runner/work/MaCh3/MaCh3/samplePDF/Structs.cpp}}
+{\ttfamily \#include \char`\"{}sample\+PDF/\+Structs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}TList.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}TObj\+Array.\+h\char`\"{}}\newline
+Include dependency graph for Structs.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Structs_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceMaCh3Utils}{Ma\+Ch3\+Utils}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{namespaceMaCh3Utils_a86d34372bb55524024fbdadd65834967}{Ma\+Ch3\+Utils\+::\+Get\+Mass\+From\+PDG}} (int PDG)
+\begin{DoxyCompactList}\small\item\em Return mass for given PDG. \end{DoxyCompactList}\item 
+std\+::unordered\+\_\+map$<$ int, int $>$ \mbox{\hyperlink{namespaceMaCh3Utils_ad70f340fe7d2128586d54797f6501514}{Ma\+Ch3\+Utils\+::\+Known\+Det\+IDs\+Map}} (\{ \{0, 1\}, \{1, 8\}, \{2, 16\}, \{3, 32\}, \{4, 64\}, \{5, 128\}, \{6, 256\}, \{7, 512\}, \})
+\item 
+void \mbox{\hyperlink{Structs_8cpp_a1aa25e8399ca7a229b8aa77c25407832}{Check\+TH2\+Poly\+File\+Version}} (TFile $\ast$file)
+\begin{DoxyCompactList}\small\item\em KS\+: ROOT changes something with binning when moving from ROOT 5 to ROOT 6. If you open ROOT5 produced file with ROOT6 you will be missing 9 last bins. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{Structs_8cpp_a34345b88bcd0e45db5612d58a972a154}{Overflow\+Integral}} (TH2\+Poly $\ast$poly)
+\begin{DoxyCompactList}\small\item\em WP\+: Helper function for calculating unbinned Integral of TH2\+Poly i.\+e including overflow. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{Structs_8cpp_ab18c6b2408d7b9021bad06d47a06ee8d}{No\+Overflow\+Integral}} (TH2\+Poly $\ast$poly)
+\begin{DoxyCompactList}\small\item\em WP\+: Helper function for calculating binned Integral of TH2\+Poly i.\+e not including overflow. \end{DoxyCompactList}\item 
+TH1D $\ast$ \mbox{\hyperlink{Structs_8cpp_a1ab7c868447cffff71227e07655b47ad}{Poly\+ProjectionX}} (TObject $\ast$poly, std\+::string Temp\+Name, const std\+::vector$<$ double $>$ \&xbins, const bool compute\+Errors)
+\begin{DoxyCompactList}\small\item\em WP\+: Poly Projectors. \end{DoxyCompactList}\item 
+TH1D $\ast$ \mbox{\hyperlink{Structs_8cpp_aa26af438a657c81f2fb3f1506c6e35f6}{Poly\+ProjectionY}} (TObject $\ast$poly, std\+::string Temp\+Name, const std\+::vector$<$ double $>$ \&ybins, const bool compute\+Errors)
+\begin{DoxyCompactList}\small\item\em WP\+: Poly Projectors. \end{DoxyCompactList}\item 
+TH2\+Poly $\ast$ \mbox{\hyperlink{Structs_8cpp_ae28c217f8e8591248bfa54e95fdd7741}{Normalise\+Poly}} (TH2\+Poly $\ast$Histogram)
+\begin{DoxyCompactList}\small\item\em WP\+: Helper to Normalise histograms. \end{DoxyCompactList}\item 
+TH2D $\ast$ \mbox{\hyperlink{Structs_8cpp_a1033cf3aa8abe6ab7135896aa9f3790b}{Convert\+TH2\+Poly\+To\+TH2D}} (TH2\+Poly $\ast$poly, TH2D $\ast$h2dhist)
+\begin{DoxyCompactList}\small\item\em KS\+: Convert TH2D to TH2\+Poly. \end{DoxyCompactList}\item 
+TH2\+Poly $\ast$ \mbox{\hyperlink{Structs_8cpp_a7b09dee9c914bc3c3dd450e4a5cd2ce5}{Convert\+TH2\+DTo\+TH2\+Poly}} (TH2D $\ast$hist)
+\item 
+TH2\+Poly $\ast$ \mbox{\hyperlink{Structs_8cpp_a61d8f295d13a5fe82a552c08d42c8bfa}{Poly\+Scale\+Width}} (TH2\+Poly $\ast$Histogram, double scale)
+\begin{DoxyCompactList}\small\item\em WP\+: Helper to scale th2poly analogous to th2d scale with option \char`\"{}width\char`\"{}. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{Structs_8cpp_a8bab8af5f0339c6ec0310ff5ea87f26d}{Poly\+Integral\+Width}} (TH2\+Poly $\ast$Histogram)
+\begin{DoxyCompactList}\small\item\em WP\+: Helper to calc integral of th2poly analogous to th2d integra; with option \char`\"{}width\char`\"{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{Structs_8cpp_a85463c0c6943e3d544d5fcb3f96bf18a}{Remove\+Fitter}} (TH1D $\ast$hist, const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em KS\+: Remove fitted TF1 from hist to make comparison easier. \end{DoxyCompactList}\item 
+TGraph\+Asymm\+Errors $\ast$ \mbox{\hyperlink{Structs_8cpp_a3b61160c5ff362348884cb311e827221}{Make\+Asym\+Graph}} (TH1D $\ast$sigma\+Array\+Left, TH1D $\ast$sigma\+Array\+Centr, TH1D $\ast$sigma\+Array\+Right, const std\+::string \&title)
+\begin{DoxyCompactList}\small\item\em Used by sigma variation, check how 1 sigma changes spectra. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{Structs_8cpp_a6c6f918bcc5cfc261888be8d8ce2e444}{return\+Cherenkov\+Threshold\+Momentum}} (int PDG)
+\begin{DoxyCompactList}\small\item\em DB Get the Cherenkov momentum threshold in MeV. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{Structs_8cpp_af6c0e794fc9fe6b93be0d07fc84ca67a}{Calculate\+Q2}} (double PLep, double PUpd, double Enu\+True, double Initial\+Q2)
+\item 
+double \mbox{\hyperlink{Structs_8cpp_a887ec835f8432e04f3a1eba147d796d9}{Calculate\+Enu}} (double PLep, double costh, double Eb, bool neutrino)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{namespaceMaCh3Utils_a24bdf4d0354265aecdd2b7e357a3c64b}{Ma\+Ch3\+Utils\+::n\+Known\+Det\+IDs}} = int(\mbox{\hyperlink{GetPenaltyTerm_8cpp_a439227feff9d7f55384e8780cfc2eb82}{Known\+Det\+IDs\+Map.\+size}}())
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{Structs_8cpp_a887ec835f8432e04f3a1eba147d796d9}\label{Structs_8cpp_a887ec835f8432e04f3a1eba147d796d9}} 
+\index{Structs.cpp@{Structs.cpp}!CalculateEnu@{CalculateEnu}}
+\index{CalculateEnu@{CalculateEnu}!Structs.cpp@{Structs.cpp}}
+\doxysubsubsection{\texorpdfstring{CalculateEnu()}{CalculateEnu()}}
+{\footnotesize\ttfamily double Calculate\+Enu (\begin{DoxyParamCaption}\item[{double}]{PLep,  }\item[{double}]{costh,  }\item[{double}]{Eb,  }\item[{bool}]{neutrino }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Structs_8cpp_source_l00491}{491}} of file \mbox{\hyperlink{Structs_8cpp_source}{Structs.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00491\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00492\ \textcolor{comment}{//\ ***************************************************************************}}
+\DoxyCodeLine{00493\ \ \ \textcolor{keywordtype}{double}\ mNeff\ =\ 0.93956536\ -\/\ Eb\ /\ 1000.;}
+\DoxyCodeLine{00494\ \ \ \textcolor{keywordtype}{double}\ mNoth\ =\ 0.93827203;}
+\DoxyCodeLine{00495\ }
+\DoxyCodeLine{00496\ \ \ \textcolor{keywordflow}{if}\ (!neutrino)\ \{}
+\DoxyCodeLine{00497\ \ \ \ \ mNeff\ =\ 0.93827203\ -\/\ Eb\ /\ 1000.;}
+\DoxyCodeLine{00498\ \ \ \ \ mNoth\ =\ 0.93956536;}
+\DoxyCodeLine{00499\ \ \ \}}
+\DoxyCodeLine{00500\ }
+\DoxyCodeLine{00501\ \ \ \textcolor{keywordtype}{double}\ mLep\ =\ 0.10565837;}
+\DoxyCodeLine{00502\ \ \ \textcolor{keywordtype}{double}\ eLep\ =\ sqrt(PLep\ *\ PLep\ +\ mLep\ *\ mLep);}
+\DoxyCodeLine{00503\ }
+\DoxyCodeLine{00504\ \ \ \textcolor{keywordtype}{double}\ Enu\ =\ (2\ *\ mNeff\ *\ eLep\ -\/\ mLep\ *\ mLep\ +\ mNoth\ *\ mNoth\ -\/\ mNeff\ *\ mNeff)\ /(2\ *\ (mNeff\ -\/\ eLep\ +\ PLep\ *\ costh));}
+\DoxyCodeLine{00505\ }
+\DoxyCodeLine{00506\ \ \ \textcolor{keywordflow}{return}\ Enu;}
+\DoxyCodeLine{00507\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Structs_8cpp_af6c0e794fc9fe6b93be0d07fc84ca67a}\label{Structs_8cpp_af6c0e794fc9fe6b93be0d07fc84ca67a}} 
+\index{Structs.cpp@{Structs.cpp}!CalculateQ2@{CalculateQ2}}
+\index{CalculateQ2@{CalculateQ2}!Structs.cpp@{Structs.cpp}}
+\doxysubsubsection{\texorpdfstring{CalculateQ2()}{CalculateQ2()}}
+{\footnotesize\ttfamily double Calculate\+Q2 (\begin{DoxyParamCaption}\item[{double}]{PLep,  }\item[{double}]{PUpd,  }\item[{double}]{Enu\+True,  }\item[{double}]{Initial\+Q2 }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Structs_8cpp_source_l00472}{472}} of file \mbox{\hyperlink{Structs_8cpp_source}{Structs.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00472\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00473\ \textcolor{comment}{//\ ***************************************************************************}}
+\DoxyCodeLine{00474\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ MLep\ =\ 0.10565837;}
+\DoxyCodeLine{00475\ }
+\DoxyCodeLine{00476\ \ \ \textcolor{comment}{//\ Caluclate\ muon\ energy}}
+\DoxyCodeLine{00477\ \ \ \textcolor{keywordtype}{double}\ ELep\ =\ sqrt((MLep*MLep)+(PLep*PLep));}
+\DoxyCodeLine{00478\ }
+\DoxyCodeLine{00479\ \ \ \textcolor{keywordtype}{double}\ CosTh\ =\ (2*EnuTrue*ELep\ -\/\ MLep*MLep\ -\/\ InitialQ2)/(2*EnuTrue*PLep);}
+\DoxyCodeLine{00480\ }
+\DoxyCodeLine{00481\ \ \ ELep\ =\ sqrt((MLep*MLep)+(PUpd*PUpd));}
+\DoxyCodeLine{00482\ }
+\DoxyCodeLine{00483\ \ \ \textcolor{comment}{//\ Calculate\ the\ new\ Q2}}
+\DoxyCodeLine{00484\ \ \ \textcolor{keywordtype}{double}\ Q2Upd\ =\ -\/(MLep*MLep)\ +\ 2.0*EnuTrue*(ELep\ -\/\ PUpd*CosTh);}
+\DoxyCodeLine{00485\ }
+\DoxyCodeLine{00486\ \ \ \textcolor{keywordflow}{return}\ Q2Upd\ -\/\ InitialQ2;}
+\DoxyCodeLine{00487\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Structs_8cpp_a1aa25e8399ca7a229b8aa77c25407832}\label{Structs_8cpp_a1aa25e8399ca7a229b8aa77c25407832}} 
+\index{Structs.cpp@{Structs.cpp}!CheckTH2PolyFileVersion@{CheckTH2PolyFileVersion}}
+\index{CheckTH2PolyFileVersion@{CheckTH2PolyFileVersion}!Structs.cpp@{Structs.cpp}}
+\doxysubsubsection{\texorpdfstring{CheckTH2PolyFileVersion()}{CheckTH2PolyFileVersion()}}
+{\footnotesize\ttfamily void Check\+TH2\+Poly\+File\+Version (\begin{DoxyParamCaption}\item[{TFile $\ast$}]{file }\end{DoxyParamCaption})}
+
+
+
+KS\+: ROOT changes something with binning when moving from ROOT 5 to ROOT 6. If you open ROOT5 produced file with ROOT6 you will be missing 9 last bins. 
+
+However if you use ROOT6 and have ROOT6 file exactly the same code will work. Something have changed with how TH2\+Poly bins are stored in TFile 
+\begin{DoxyParams}{Parameters}
+{\em file} & ROOT file that we will make version checks \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Structs_8cpp_source_l00096}{96}} of file \mbox{\hyperlink{Structs_8cpp_source}{Structs.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00097\ \textcolor{comment}{//\ **************************************************}}
+\DoxyCodeLine{00098\ \ \ \textcolor{keywordtype}{int}\ FileROOTVersion\ =\ file-\/>GetVersion();}
+\DoxyCodeLine{00099\ \ \ \textcolor{keywordtype}{int}\ MainFileROOTVersion\ =\ FileROOTVersion;}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \textcolor{comment}{//\ Remove\ last\ digit\ from\ number}}
+\DoxyCodeLine{00102\ \ \ \textcolor{comment}{//\ till\ only\ one\ digit\ is\ left}}
+\DoxyCodeLine{00103\ \ \ \textcolor{keywordflow}{while}\ (MainFileROOTVersion\ >=\ 10)}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ MainFileROOTVersion\ /=\ 10;}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \ \ std::string\ SystemROOTVersion\ =\ std::string(ROOT\_RELEASE);}
+\DoxyCodeLine{00107\ \ \ \textcolor{keywordtype}{int}\ MainSystemROOTVersion\ =\ SystemROOTVersion.at(0)\ \ -\/\ \textcolor{charliteral}{'0'};}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \textcolor{keywordflow}{if}(MainFileROOTVersion\ !=\ MainSystemROOTVersion)}
+\DoxyCodeLine{00110\ \ \ \{}
+\DoxyCodeLine{00111\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}File\ was\ produced\ with:\ \{\}\ ROOT\ version"{}},\ FileROOTVersion);}
+\DoxyCodeLine{00112\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Found:\ \{\}\ ROOT\ version\ in\ the\ system"{}},\ SystemROOTVersion);}
+\DoxyCodeLine{00113\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}For\ some\ documentation\ please\ visit\ me"{}});}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_,\ \_\_LINE\_\_);}
+\DoxyCodeLine{00115\ \ \ \}}
+\DoxyCodeLine{00116\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Structs_8cpp_a7b09dee9c914bc3c3dd450e4a5cd2ce5}\label{Structs_8cpp_a7b09dee9c914bc3c3dd450e4a5cd2ce5}} 
+\index{Structs.cpp@{Structs.cpp}!ConvertTH2DToTH2Poly@{ConvertTH2DToTH2Poly}}
+\index{ConvertTH2DToTH2Poly@{ConvertTH2DToTH2Poly}!Structs.cpp@{Structs.cpp}}
+\doxysubsubsection{\texorpdfstring{ConvertTH2DToTH2Poly()}{ConvertTH2DToTH2Poly()}}
+{\footnotesize\ttfamily TH2\+Poly $\ast$ Convert\+TH2\+DTo\+TH2\+Poly (\begin{DoxyParamCaption}\item[{TH2D $\ast$}]{hist }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Structs_8cpp_source_l00330}{330}} of file \mbox{\hyperlink{Structs_8cpp_source}{Structs.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00330\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00331\ \textcolor{comment}{//\ ****************}}
+\DoxyCodeLine{00332\ \ \ \textcolor{comment}{//\ Make\ the\ x\ axis\ from\ the\ momentum\ of\ lepton}}
+\DoxyCodeLine{00333\ \ \ TAxis*\ xaxis\ =\ hist-\/>GetXaxis();}
+\DoxyCodeLine{00334\ \ \ \textcolor{comment}{//\ Make\ the\ y\ axis\ from\ the\ cos\ theta\ of\ lepton}}
+\DoxyCodeLine{00335\ \ \ TAxis*\ yaxis\ =\ hist-\/>GetYaxis();}
+\DoxyCodeLine{00336\ }
+\DoxyCodeLine{00337\ \ \ TString\ histname\ =\ hist-\/>GetName();}
+\DoxyCodeLine{00338\ \ \ \textcolor{comment}{//\ Convert\ TH2D\ binning\ to\ TH2Poly}}
+\DoxyCodeLine{00339\ \ \ TH2Poly*\ poly\ =\ \textcolor{keyword}{new}\ TH2Poly();}
+\DoxyCodeLine{00340\ \ \ poly-\/>SetName(histname);}
+\DoxyCodeLine{00341\ \ \ poly-\/>SetTitle(histname);}
+\DoxyCodeLine{00342\ }
+\DoxyCodeLine{00343\ \ \ \textcolor{comment}{//\ Copy\ axis\ titles}}
+\DoxyCodeLine{00344\ \ \ poly-\/>GetXaxis()-\/>SetTitle(xaxis-\/>GetTitle());}
+\DoxyCodeLine{00345\ \ \ poly-\/>GetYaxis()-\/>SetTitle(yaxis-\/>GetTitle());}
+\DoxyCodeLine{00346\ }
+\DoxyCodeLine{00347\ \ \ \textcolor{keywordtype}{double}\ xmax,\ xmin,\ ymax,\ ymin;}
+\DoxyCodeLine{00348\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ iy\ =\ 1;\ iy\ <=\ yaxis-\/>GetNbins();\ iy++)\ \{}
+\DoxyCodeLine{00349\ \ \ \ \ ymax\ =\ yaxis-\/>GetBinUpEdge(iy);}
+\DoxyCodeLine{00350\ \ \ \ \ ymin\ =\ yaxis-\/>GetBinLowEdge(iy);}
+\DoxyCodeLine{00351\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ ix\ =\ 1;\ ix\ <=\ xaxis-\/>GetNbins();\ ix++)\ \{}
+\DoxyCodeLine{00352\ \ \ \ \ \ \ xmax\ =\ xaxis-\/>GetBinUpEdge(ix);}
+\DoxyCodeLine{00353\ \ \ \ \ \ \ xmin\ =\ xaxis-\/>GetBinLowEdge(ix);}
+\DoxyCodeLine{00354\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ binofx[]\ =\ \{xmin,\ xmax,\ xmax,\ xmin\};}
+\DoxyCodeLine{00355\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ binofy[]\ =\ \{ymin,\ ymin,\ ymax,\ ymax\};}
+\DoxyCodeLine{00356\ \ \ \ \ \ \ poly-\/>AddBin(4,\ binofx,\ binofy);}
+\DoxyCodeLine{00357\ \ \ \ \ \}}
+\DoxyCodeLine{00358\ \ \ \}}
+\DoxyCodeLine{00359\ }
+\DoxyCodeLine{00360\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ iy\ =\ 1;\ iy\ <=\ yaxis-\/>GetNbins();\ iy++)\ \{}
+\DoxyCodeLine{00361\ \ \ \ \ ymax\ =\ yaxis-\/>GetBinUpEdge(iy);}
+\DoxyCodeLine{00362\ \ \ \ \ ymin\ =\ yaxis-\/>GetBinLowEdge(iy);}
+\DoxyCodeLine{00363\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ ix\ =\ 1;\ ix\ <=\ xaxis-\/>GetNbins();\ ix++)\ \{}
+\DoxyCodeLine{00364\ \ \ \ \ \ \ xmax\ =\ xaxis-\/>GetBinUpEdge(ix);}
+\DoxyCodeLine{00365\ \ \ \ \ \ \ xmin\ =\ xaxis-\/>GetBinLowEdge(ix);}
+\DoxyCodeLine{00366\ }
+\DoxyCodeLine{00367\ \ \ \ \ \ \ \textcolor{comment}{//\ Get\ the\ content\ of\ the\ corresponding\ bin\ in\ TH2D\ and\ set\ it\ in\ TH2Poly}}
+\DoxyCodeLine{00368\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ bin\ =\ hist-\/>GetBin(ix,\ iy);}
+\DoxyCodeLine{00369\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ content\ =\ hist-\/>GetBinContent(bin);}
+\DoxyCodeLine{00370\ \ \ \ \ \ \ poly-\/>SetBinContent(poly-\/>FindBin((xmin\ +\ xmax)\ /\ 2,\ (ymin\ +\ ymax)\ /\ 2),\ content);}
+\DoxyCodeLine{00371\ \ \ \ \ \}}
+\DoxyCodeLine{00372\ \ \ \}}
+\DoxyCodeLine{00373\ }
+\DoxyCodeLine{00374\ \ \ \textcolor{keywordflow}{return}\ poly;}
+\DoxyCodeLine{00375\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Structs_8cpp_a1033cf3aa8abe6ab7135896aa9f3790b}\label{Structs_8cpp_a1033cf3aa8abe6ab7135896aa9f3790b}} 
+\index{Structs.cpp@{Structs.cpp}!ConvertTH2PolyToTH2D@{ConvertTH2PolyToTH2D}}
+\index{ConvertTH2PolyToTH2D@{ConvertTH2PolyToTH2D}!Structs.cpp@{Structs.cpp}}
+\doxysubsubsection{\texorpdfstring{ConvertTH2PolyToTH2D()}{ConvertTH2PolyToTH2D()}}
+{\footnotesize\ttfamily TH2D $\ast$ Convert\+TH2\+Poly\+To\+TH2D (\begin{DoxyParamCaption}\item[{TH2\+Poly $\ast$}]{poly,  }\item[{TH2D $\ast$}]{h2dhist }\end{DoxyParamCaption})}
+
+
+
+KS\+: Convert TH2D to TH2\+Poly. 
+
+
+
+Definition at line \mbox{\hyperlink{Structs_8cpp_source_l00296}{296}} of file \mbox{\hyperlink{Structs_8cpp_source}{Structs.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00297\ \textcolor{comment}{//\ ****************}}
+\DoxyCodeLine{00298\ \ \ \textcolor{keywordtype}{double}\ xlow,\ xup,\ ylow,\ yup;}
+\DoxyCodeLine{00299\ \ \ std::string\ HistTempName\ =\ poly-\/>GetName();}
+\DoxyCodeLine{00300\ }
+\DoxyCodeLine{00301\ \ \ HistTempName\ +=\ \textcolor{stringliteral}{"{}\_"{}};}
+\DoxyCodeLine{00302\ \ \ \textcolor{comment}{//make\ the\ th2d}}
+\DoxyCodeLine{00303\ \ \ TH2D\ *hist\ =\ \textcolor{keyword}{static\_cast<}TH2D*\textcolor{keyword}{>}(h2dhist-\/>Clone());}
+\DoxyCodeLine{00304\ \ \ hist-\/>SetNameTitle(HistTempName.c\_str(),\ HistTempName.c\_str());}
+\DoxyCodeLine{00305\ }
+\DoxyCodeLine{00306\ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ ix\ =\ 0;\ ix\ <\ hist-\/>GetNbinsX()\ +\ 2;\ ix++)\ \{}
+\DoxyCodeLine{00307\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ iy\ =\ 0;\ iy\ <\ hist-\/>GetNbinsY()\ +\ 2;\ iy++)\ \{}
+\DoxyCodeLine{00308\ \ \ \ \ \ \ hist-\/>SetBinContent(ix,\ iy,\ 0);}
+\DoxyCodeLine{00309\ \ \ \ \ \}}
+\DoxyCodeLine{00310\ \ \ \}}
+\DoxyCodeLine{00311\ \ \ \textcolor{comment}{//Loop\ over\ poly\ bins,\ find\ the\ corresponding\ th2d\ and\ setbincontent!}}
+\DoxyCodeLine{00312\ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i<\ poly-\/>GetNumberOfBins();\ i++)\{}
+\DoxyCodeLine{00313\ \ \ \ \ TH2PolyBin\ \&\ polybin\ =\ \textcolor{keyword}{static\_cast<}TH2PolyBin\ \&\textcolor{keyword}{>}(*poly-\/>GetBins()-\/>At(i));}
+\DoxyCodeLine{00314\ \ \ \ \ xlow\ =\ polybin.GetXMin();}
+\DoxyCodeLine{00315\ \ \ \ \ xup\ =\ polybin.GetXMax();}
+\DoxyCodeLine{00316\ \ \ \ \ ylow\ =\ polybin.GetYMin();}
+\DoxyCodeLine{00317\ \ \ \ \ yup\ =\ polybin.GetYMax();}
+\DoxyCodeLine{00318\ \ \ \ \ \textcolor{keywordtype}{int}\ xbin,\ ybin;}
+\DoxyCodeLine{00319\ }
+\DoxyCodeLine{00320\ \ \ \ \ xbin\ =\ hist-\/>GetXaxis()-\/>FindBin(xlow+(xup-\/xlow)/2);}
+\DoxyCodeLine{00321\ \ \ \ \ ybin\ =\ hist-\/>GetYaxis()-\/>FindBin(ylow+(yup-\/ylow)/2);}
+\DoxyCodeLine{00322\ }
+\DoxyCodeLine{00323\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_afc88f0aa23c7127b2ff6e5c7ca3fa892}{MACH3LOG\_TRACE}}(\textcolor{stringliteral}{"{}Poly\ bin\ \{\},\ xlow:\ \{\},\ xup:\ \{\},\ ylow:\ \{\},\ yup:\ \{\}.\ Finding\ bin\ for\ (\{\},\ \{\}).\ Found\ Bin\ (\{\},\ \{\})\ with\ content\ \{\}.\ But\ Poly\ content:\ \{\}"{}},}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ i,\ xlow,\ xup,\ ylow,\ yup,\ (xlow\ +\ (xup\ -\/\ xlow)\ /\ 2),\ (ylow\ +\ (yup\ -\/\ ylow)\ /\ 2),\ xbin,\ ybin,\ polybin.GetContent(),\ poly-\/>GetBinContent(i));}
+\DoxyCodeLine{00325\ \ \ \ \ hist-\/>SetBinContent(xbin,\ ybin,\ polybin.GetContent());}
+\DoxyCodeLine{00326\ \ \ \}}
+\DoxyCodeLine{00327\ \ \ \textcolor{keywordflow}{return}\ hist;}
+\DoxyCodeLine{00328\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Structs_8cpp_a3b61160c5ff362348884cb311e827221}\label{Structs_8cpp_a3b61160c5ff362348884cb311e827221}} 
+\index{Structs.cpp@{Structs.cpp}!MakeAsymGraph@{MakeAsymGraph}}
+\index{MakeAsymGraph@{MakeAsymGraph}!Structs.cpp@{Structs.cpp}}
+\doxysubsubsection{\texorpdfstring{MakeAsymGraph()}{MakeAsymGraph()}}
+{\footnotesize\ttfamily TGraph\+Asymm\+Errors $\ast$ Make\+Asym\+Graph (\begin{DoxyParamCaption}\item[{TH1D $\ast$}]{sigma\+Array\+Left,  }\item[{TH1D $\ast$}]{sigma\+Array\+Centr,  }\item[{TH1D $\ast$}]{sigma\+Array\+Right,  }\item[{const std\+::string \&}]{title }\end{DoxyParamCaption})}
+
+
+
+Used by sigma variation, check how 1 sigma changes spectra. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sigma\+Array\+Left} & sigma var hist at -\/1 or -\/3 sigma shift \\
+\hline
+{\em sigma\+Array\+Centr} & sigma var hist at prior values \\
+\hline
+{\em sigma\+Array\+Right} & sigma var hist at +1 or +3 sigma shift \\
+\hline
+{\em title} & A tittle for returned object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A {\ttfamily TGraph\+Asymm\+Errors} object that visualizes the sigma variation of spectra, showing confidence intervals between different sigma shifts. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Structs_8cpp_source_l00430}{430}} of file \mbox{\hyperlink{Structs_8cpp_source}{Structs.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00430\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00431\ \textcolor{comment}{//\ *************************}}
+\DoxyCodeLine{00432\ \ \ TGraphAsymmErrors\ *var\ =\ \textcolor{keyword}{new}\ TGraphAsymmErrors(sigmaArrayCentr);}
+\DoxyCodeLine{00433\ \ \ var-\/>SetNameTitle((title).c\_str(),\ (title).c\_str());}
+\DoxyCodeLine{00434\ }
+\DoxyCodeLine{00435\ \ \ \textcolor{comment}{//\ Need\ to\ draw\ TGraphs\ to\ set\ axes\ labels}}
+\DoxyCodeLine{00436\ \ \ var-\/>Draw(\textcolor{stringliteral}{"{}AP"{}});}
+\DoxyCodeLine{00437\ \ \ var-\/>GetXaxis()-\/>SetTitle(sigmaArrayCentr-\/>GetXaxis()-\/>GetTitle());}
+\DoxyCodeLine{00438\ \ \ var-\/>GetYaxis()-\/>SetTitle(\textcolor{stringliteral}{"{}Number\ of\ events/bin"{}});}
+\DoxyCodeLine{00439\ }
+\DoxyCodeLine{00440\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ m\ =\ 0;\ m\ <\ var-\/>GetN();\ ++m)}
+\DoxyCodeLine{00441\ \ \ \{}
+\DoxyCodeLine{00442\ \ \ \ \ \textcolor{keywordtype}{double}\ xlow\ =\ sigmaArrayLeft-\/>GetBinContent(m+1);}
+\DoxyCodeLine{00443\ \ \ \ \ \textcolor{keywordtype}{double}\ xhigh\ =\ sigmaArrayRight-\/>GetBinContent(m+1);}
+\DoxyCodeLine{00444\ \ \ \ \ \textcolor{keywordtype}{double}\ xtemp;}
+\DoxyCodeLine{00445\ }
+\DoxyCodeLine{00446\ \ \ \ \ \textcolor{comment}{//\ Figure\ out\ which\ variation\ is\ larger\ so\ we\ set\ the\ error\ correctly}}
+\DoxyCodeLine{00447\ \ \ \ \ \textcolor{keywordflow}{if}\ (xlow\ >\ xhigh)}
+\DoxyCodeLine{00448\ \ \ \ \ \{}
+\DoxyCodeLine{00449\ \ \ \ \ \ \ xtemp\ =\ xlow;}
+\DoxyCodeLine{00450\ \ \ \ \ \ \ xlow\ =\ xhigh;}
+\DoxyCodeLine{00451\ \ \ \ \ \ \ xhigh\ =\ xtemp;}
+\DoxyCodeLine{00452\ \ \ \ \ \}}
+\DoxyCodeLine{00453\ }
+\DoxyCodeLine{00454\ \ \ \ \ var-\/>SetPointEYhigh(m,\ xhigh\ -\/\ var-\/>GetY()[m]);}
+\DoxyCodeLine{00455\ \ \ \ \ var-\/>SetPointEYlow(m,\ var-\/>GetY()[m]\ -\/\ xlow);}
+\DoxyCodeLine{00456\ \ \ \}}
+\DoxyCodeLine{00457\ \ \ \textcolor{keywordflow}{return}\ var;}
+\DoxyCodeLine{00458\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Structs_8cpp_ab18c6b2408d7b9021bad06d47a06ee8d}\label{Structs_8cpp_ab18c6b2408d7b9021bad06d47a06ee8d}} 
+\index{Structs.cpp@{Structs.cpp}!NoOverflowIntegral@{NoOverflowIntegral}}
+\index{NoOverflowIntegral@{NoOverflowIntegral}!Structs.cpp@{Structs.cpp}}
+\doxysubsubsection{\texorpdfstring{NoOverflowIntegral()}{NoOverflowIntegral()}}
+{\footnotesize\ttfamily double No\+Overflow\+Integral (\begin{DoxyParamCaption}\item[{TH2\+Poly $\ast$}]{poly }\end{DoxyParamCaption})}
+
+
+
+WP\+: Helper function for calculating binned Integral of TH2\+Poly i.\+e not including overflow. 
+
+
+
+Definition at line \mbox{\hyperlink{Structs_8cpp_source_l00135}{135}} of file \mbox{\hyperlink{Structs_8cpp_source}{Structs.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00136\ \textcolor{comment}{//\ **************************************************}}
+\DoxyCodeLine{00137\ \ \ \textcolor{keywordtype}{double}\ integral\ =\ 0.;}
+\DoxyCodeLine{00138\ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <\ poly-\/>GetNumberOfBins()+1;\ i++)}
+\DoxyCodeLine{00139\ \ \ \{}
+\DoxyCodeLine{00140\ \ \ \ \ integral\ +=\ poly-\/>GetBinContent(i);}
+\DoxyCodeLine{00141\ \ \ \}}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \ \ \textcolor{keywordflow}{return}\ integral;}
+\DoxyCodeLine{00144\ \}\ \textcolor{comment}{//\ end\ function}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Structs_8cpp_ae28c217f8e8591248bfa54e95fdd7741}\label{Structs_8cpp_ae28c217f8e8591248bfa54e95fdd7741}} 
+\index{Structs.cpp@{Structs.cpp}!NormalisePoly@{NormalisePoly}}
+\index{NormalisePoly@{NormalisePoly}!Structs.cpp@{Structs.cpp}}
+\doxysubsubsection{\texorpdfstring{NormalisePoly()}{NormalisePoly()}}
+{\footnotesize\ttfamily TH2\+Poly $\ast$ Normalise\+Poly (\begin{DoxyParamCaption}\item[{TH2\+Poly $\ast$}]{Histogram }\end{DoxyParamCaption})}
+
+
+
+WP\+: Helper to Normalise histograms. 
+
+
+
+Definition at line \mbox{\hyperlink{Structs_8cpp_source_l00284}{284}} of file \mbox{\hyperlink{Structs_8cpp_source}{Structs.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00285\ \textcolor{comment}{//\ ****************}}
+\DoxyCodeLine{00286\ \ \ TH2Poly*\ HistCopy\ =\ \textcolor{keyword}{static\_cast<}TH2Poly*\textcolor{keyword}{>}(Histogram-\/>Clone());}
+\DoxyCodeLine{00287\ \ \ \textcolor{keywordtype}{double}\ IntegralWidth\ =\ \mbox{\hyperlink{Structs_8cpp_a8bab8af5f0339c6ec0310ff5ea87f26d}{PolyIntegralWidth}}(HistCopy);}
+\DoxyCodeLine{00288\ \ \ HistCopy\ =\ \mbox{\hyperlink{Structs_8cpp_a61d8f295d13a5fe82a552c08d42c8bfa}{PolyScaleWidth}}(HistCopy,\ IntegralWidth);}
+\DoxyCodeLine{00289\ \ \ std::string\ title\ =\ std::string(HistCopy-\/>GetName())+\textcolor{stringliteral}{"{}\_norm"{}};}
+\DoxyCodeLine{00290\ \ \ HistCopy-\/>SetNameTitle(title.c\_str(),\ title.c\_str());}
+\DoxyCodeLine{00291\ }
+\DoxyCodeLine{00292\ \ \ \textcolor{keywordflow}{return}\ HistCopy;}
+\DoxyCodeLine{00293\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Structs_8cpp_a34345b88bcd0e45db5612d58a972a154}\label{Structs_8cpp_a34345b88bcd0e45db5612d58a972a154}} 
+\index{Structs.cpp@{Structs.cpp}!OverflowIntegral@{OverflowIntegral}}
+\index{OverflowIntegral@{OverflowIntegral}!Structs.cpp@{Structs.cpp}}
+\doxysubsubsection{\texorpdfstring{OverflowIntegral()}{OverflowIntegral()}}
+{\footnotesize\ttfamily double Overflow\+Integral (\begin{DoxyParamCaption}\item[{TH2\+Poly $\ast$}]{poly }\end{DoxyParamCaption})}
+
+
+
+WP\+: Helper function for calculating unbinned Integral of TH2\+Poly i.\+e including overflow. 
+
+
+
+Definition at line \mbox{\hyperlink{Structs_8cpp_source_l00120}{120}} of file \mbox{\hyperlink{Structs_8cpp_source}{Structs.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00121\ \textcolor{comment}{//\ **************************************************}}
+\DoxyCodeLine{00122\ \ \ \textcolor{keywordtype}{double}\ overflow\ =\ 0.;}
+\DoxyCodeLine{00123\ \ \ \textcolor{comment}{//TH2Polys\ have\ 9\ overflow\ bins}}
+\DoxyCodeLine{00124\ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ iOverflow\ =\ -\/1;\ iOverflow\ >\ -\/10;\ iOverflow-\/-\/)}
+\DoxyCodeLine{00125\ \ \ \{}
+\DoxyCodeLine{00126\ \ \ \ \ overflow\ +=\ poly-\/>GetBinContent(iOverflow);}
+\DoxyCodeLine{00127\ \ \ \}}
+\DoxyCodeLine{00128\ \ \ \textcolor{keywordtype}{double}\ IntegralUn\ =\ \mbox{\hyperlink{Structs_8cpp_ab18c6b2408d7b9021bad06d47a06ee8d}{NoOverflowIntegral}}(poly)\ +\ overflow;}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \ \ \textcolor{keywordflow}{return}\ IntegralUn;}
+\DoxyCodeLine{00131\ \}\ \textcolor{comment}{//\ end\ function}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Structs_8cpp_a8bab8af5f0339c6ec0310ff5ea87f26d}\label{Structs_8cpp_a8bab8af5f0339c6ec0310ff5ea87f26d}} 
+\index{Structs.cpp@{Structs.cpp}!PolyIntegralWidth@{PolyIntegralWidth}}
+\index{PolyIntegralWidth@{PolyIntegralWidth}!Structs.cpp@{Structs.cpp}}
+\doxysubsubsection{\texorpdfstring{PolyIntegralWidth()}{PolyIntegralWidth()}}
+{\footnotesize\ttfamily double Poly\+Integral\+Width (\begin{DoxyParamCaption}\item[{TH2\+Poly $\ast$}]{Histogram }\end{DoxyParamCaption})}
+
+
+
+WP\+: Helper to calc integral of th2poly analogous to th2d integra; with option \char`\"{}width\char`\"{}. 
+
+
+
+Definition at line \mbox{\hyperlink{Structs_8cpp_source_l00399}{399}} of file \mbox{\hyperlink{Structs_8cpp_source}{Structs.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00399\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00400\ \textcolor{comment}{//\ ****************}}
+\DoxyCodeLine{00401\ \ \ \textcolor{keywordtype}{double}\ integral\ =\ 0;}
+\DoxyCodeLine{00402\ \ \ \textcolor{keywordtype}{double}\ xlow,\ xup,\ ylow,\ yup,\ area;}
+\DoxyCodeLine{00403\ }
+\DoxyCodeLine{00404\ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <\ Histogram-\/>GetNumberOfBins()+1;\ i++)}
+\DoxyCodeLine{00405\ \ \ \{}
+\DoxyCodeLine{00406\ \ \ \ \ TH2PolyBin*\ bin\ =\ \textcolor{keyword}{static\_cast<}TH2PolyBin*\textcolor{keyword}{>}(Histogram-\/>GetBins()-\/>At(i\ -\/\ 1));}
+\DoxyCodeLine{00407\ \ \ \ \ xlow\ =\ bin-\/>GetXMin();}
+\DoxyCodeLine{00408\ \ \ \ \ xup\ =\ bin-\/>GetXMax();}
+\DoxyCodeLine{00409\ \ \ \ \ ylow\ =\ bin-\/>GetYMin();}
+\DoxyCodeLine{00410\ \ \ \ \ yup\ =\ bin-\/>GetYMax();}
+\DoxyCodeLine{00411\ \ \ \ \ area\ =\ (xup-\/xlow)*(yup-\/ylow);}
+\DoxyCodeLine{00412\ \ \ \ \ integral\ +=\ Histogram-\/>GetBinContent(i)*area;}
+\DoxyCodeLine{00413\ \ \ \}}
+\DoxyCodeLine{00414\ \ \ \textcolor{keywordflow}{return}\ integral;}
+\DoxyCodeLine{00415\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Structs_8cpp_a1ab7c868447cffff71227e07655b47ad}\label{Structs_8cpp_a1ab7c868447cffff71227e07655b47ad}} 
+\index{Structs.cpp@{Structs.cpp}!PolyProjectionX@{PolyProjectionX}}
+\index{PolyProjectionX@{PolyProjectionX}!Structs.cpp@{Structs.cpp}}
+\doxysubsubsection{\texorpdfstring{PolyProjectionX()}{PolyProjectionX()}}
+{\footnotesize\ttfamily TH1D $\ast$ Poly\+ProjectionX (\begin{DoxyParamCaption}\item[{TObject $\ast$}]{poly,  }\item[{std\+::string}]{Temp\+Name,  }\item[{const std\+::vector$<$ double $>$ \&}]{xbins,  }\item[{const bool}]{compute\+Errors }\end{DoxyParamCaption})}
+
+
+
+WP\+: Poly Projectors. 
+
+
+
+Definition at line \mbox{\hyperlink{Structs_8cpp_source_l00148}{148}} of file \mbox{\hyperlink{Structs_8cpp_source}{Structs.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00149\ \textcolor{comment}{//\ **************************************************}}
+\DoxyCodeLine{00150\ \ \ TH1D*\ hProjX\ =\ \textcolor{keyword}{new}\ TH1D((TempName+\textcolor{stringliteral}{"{}\_x"{}}).c\_str(),(TempName+\textcolor{stringliteral}{"{}\_x"{}}).c\_str(),\ \textcolor{keywordtype}{int}(xbins.size()-\/1),\ \&xbins[0]);}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ \ \ \textcolor{comment}{//KS:\ Temp\ Histogram\ to\ store\ error,\ use\ double\ as\ this\ is\ thread\ safe}}
+\DoxyCodeLine{00153\ \ \ std::vector<double>\ hProjX\_Error(hProjX-\/>GetXaxis()-\/>GetNbins()\ +\ 1,\ 0.0);}
+\DoxyCodeLine{00154\ \ \ \textcolor{keywordtype}{double}\ xlow,\ xup,\ frac\ =\ 0.;}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \ \ \textcolor{comment}{//loop\ over\ bins\ in\ the\ poly}}
+\DoxyCodeLine{00157\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ static\_cast<TH2Poly*>(poly)-\/>GetNumberOfBins();\ i++)}
+\DoxyCodeLine{00158\ \ \ \{}
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{comment}{//get\ bin\ and\ its\ edges}}
+\DoxyCodeLine{00160\ \ \ \ \ TH2PolyBin*\ bin\ =\ \textcolor{keyword}{static\_cast<}TH2PolyBin*\textcolor{keyword}{>}(\textcolor{keyword}{static\_cast<}TH2Poly*\textcolor{keyword}{>}(poly)-\/>GetBins()-\/>At(i));}
+\DoxyCodeLine{00161\ \ \ \ \ xlow\ =\ bin-\/>GetXMin();}
+\DoxyCodeLine{00162\ \ \ \ \ xup\ =\ bin-\/>GetXMax();}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{comment}{//Loop\ over\ projected\ bins,\ find\ fraction\ of\ poly\ bin\ in\ each}}
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ dx\ =\ 0;\ dx\ <\ int(xbins.size());\ dx++)}
+\DoxyCodeLine{00166\ \ \ \ \ \{}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \textcolor{keywordflow}{if}(xbins[dx+1]\ <=\ xlow\ ||\ xbins[dx]\ >=\ xup)}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ frac\ =\ 0;}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(xbins[dx]\ <=\ xlow\ \&\&\ xbins[dx+1]\ >=\ xup)}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ frac\ =\ 1;}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(xbins[dx]\ <=\ xlow\ \&\&\ xbins[dx+1]\ <=\ xup)}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ frac\ =\ (xbins[dx+1]-\/xlow)/(xup-\/xlow);}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(xbins[dx]\ >=\ xlow\ \&\&\ xbins[dx+1]\ >=\ xup)}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ frac\ =\ (xup-\/xbins[dx])/(xup-\/xlow);}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(xbins[dx]\ >=\ xlow\ \&\&\ xbins[dx+1]\ <=\ xup)}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ frac\ =\ (xbins[dx+1]-\/xbins[dx])/(xup-\/xlow);}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ frac\ =\ 0;}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ hProjX-\/>SetBinContent(dx+1,hProjX-\/>GetBinContent(dx+1)+frac*bin-\/>GetContent());}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \textcolor{comment}{//KS:\ Follow\ ROOT\ implementation\ and\ sum\ up\ the\ variance}}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \textcolor{keywordflow}{if}(computeErrors)}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \textcolor{comment}{//KS:\ TH2PolyBin\ doesn't\ have\ GetError\ so\ we\ have\ to\ use\ TH2Poly,}}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \textcolor{comment}{//but\ numbering\ of\ GetBinError\ is\ different\ than\ GetBins...}}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ Temp\_Err\ =\ frac*\textcolor{keyword}{static\_cast<}TH2Poly*\textcolor{keyword}{>}(poly)-\/>GetBinError(i+1)*frac*\textcolor{keyword}{static\_cast<}TH2Poly*\textcolor{keyword}{>}(poly)-\/>GetBinError(i+1);}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ hProjX\_Error[dx+1]\ +=\ Temp\_Err;}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00200\ \ \ \ \ \}}
+\DoxyCodeLine{00201\ \ \ \}}
+\DoxyCodeLine{00202\ \ \ \textcolor{comment}{//KS:\ The\ error\ is\ sqrt(summed\ variance))\ https://root.cern.ch/doc/master/TH2\_8cxx\_source.html\#l02266}}
+\DoxyCodeLine{00203\ \ \ \textcolor{keywordflow}{if}(computeErrors)}
+\DoxyCodeLine{00204\ \ \ \{}
+\DoxyCodeLine{00205\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <=\ hProjX-\/>GetXaxis()-\/>GetNbins();\ ++i)}
+\DoxyCodeLine{00206\ \ \ \ \ \{}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ Error\ =\ std::sqrt(hProjX\_Error[i]);}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ hProjX-\/>SetBinError(i,\ Error);}
+\DoxyCodeLine{00209\ \ \ \ \ \}}
+\DoxyCodeLine{00210\ \ \ \}}
+\DoxyCodeLine{00211\ \ \ \textcolor{keywordflow}{return}\ hProjX;}
+\DoxyCodeLine{00212\ \}\ \textcolor{comment}{//\ end\ project\ poly\ X\ function}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Structs_8cpp_aa26af438a657c81f2fb3f1506c6e35f6}\label{Structs_8cpp_aa26af438a657c81f2fb3f1506c6e35f6}} 
+\index{Structs.cpp@{Structs.cpp}!PolyProjectionY@{PolyProjectionY}}
+\index{PolyProjectionY@{PolyProjectionY}!Structs.cpp@{Structs.cpp}}
+\doxysubsubsection{\texorpdfstring{PolyProjectionY()}{PolyProjectionY()}}
+{\footnotesize\ttfamily TH1D $\ast$ Poly\+ProjectionY (\begin{DoxyParamCaption}\item[{TObject $\ast$}]{poly,  }\item[{std\+::string}]{Temp\+Name,  }\item[{const std\+::vector$<$ double $>$ \&}]{ybins,  }\item[{const bool}]{compute\+Errors }\end{DoxyParamCaption})}
+
+
+
+WP\+: Poly Projectors. 
+
+
+
+Definition at line \mbox{\hyperlink{Structs_8cpp_source_l00216}{216}} of file \mbox{\hyperlink{Structs_8cpp_source}{Structs.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00217\ \textcolor{comment}{//\ **************************************************}}
+\DoxyCodeLine{00218\ }
+\DoxyCodeLine{00219\ \ \ TH1D*\ hProjY\ =\ \textcolor{keyword}{new}\ TH1D((TempName+\textcolor{stringliteral}{"{}\_y"{}}).c\_str(),(TempName+\textcolor{stringliteral}{"{}\_y"{}}).c\_str(),\textcolor{keywordtype}{int}(ybins.size()-\/1),\&ybins[0]);}
+\DoxyCodeLine{00220\ \ \ \textcolor{comment}{//KS:\ Temp\ Histogram\ to\ store\ error,\ use\ double\ as\ this\ is\ thread\ safe}}
+\DoxyCodeLine{00221\ \ \ std::vector<double>\ hProjY\_Error(hProjY-\/>GetXaxis()-\/>GetNbins()\ +\ 1,\ 0.0);}
+\DoxyCodeLine{00222\ \ \ \textcolor{keywordtype}{double}\ ylow,\ yup,\ frac\ =\ 0.;}
+\DoxyCodeLine{00223\ }
+\DoxyCodeLine{00224\ \ \ \textcolor{comment}{//loop\ over\ bins\ in\ the\ poly}}
+\DoxyCodeLine{00225\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ static\_cast<TH2Poly*>(poly)-\/>GetNumberOfBins();\ i++)}
+\DoxyCodeLine{00226\ \ \ \{}
+\DoxyCodeLine{00227\ \ \ \ \ \textcolor{comment}{//get\ bin\ and\ its\ edges}}
+\DoxyCodeLine{00228\ \ \ \ \ TH2PolyBin*\ bin\ =\ \textcolor{keyword}{static\_cast<}TH2PolyBin*\textcolor{keyword}{>}(\textcolor{keyword}{static\_cast<}TH2Poly*\textcolor{keyword}{>}(poly)-\/>GetBins()-\/>At(i));}
+\DoxyCodeLine{00229\ \ \ \ \ ylow\ =\ bin-\/>GetYMin();}
+\DoxyCodeLine{00230\ \ \ \ \ yup\ =\ bin-\/>GetYMax();}
+\DoxyCodeLine{00231\ }
+\DoxyCodeLine{00232\ \ \ \ \ \textcolor{comment}{//Loop\ over\ projected\ bins,\ find\ fraction\ of\ poly\ bin\ in\ each}}
+\DoxyCodeLine{00233\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ dy\ =\ 0;\ dy\ <\ int(ybins.size());\ dy++)}
+\DoxyCodeLine{00234\ \ \ \ \ \{}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \textcolor{keywordflow}{if}(ybins[dy+1]<=ylow\ ||\ ybins[dy]\ >=\ yup)}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ frac\ =\ 0;}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(ybins[dy]\ <=\ ylow\ \&\&\ ybins[dy+1]\ >=\ yup)}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ frac\ =\ 1;}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(ybins[dy]\ <=\ ylow\ \&\&\ ybins[dy+1]\ <=\ yup)}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ frac\ =\ (ybins[dy+1]-\/ylow)/(yup-\/ylow);}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(ybins[dy]\ >=\ ylow\ \&\&\ ybins[dy+1]\ >=\ yup)}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ frac\ =\ (yup-\/ybins[dy])/(yup-\/ylow);}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(ybins[dy]\ >=\ ylow\ \&\&\ ybins[dy+1]\ <=\ yup)}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ frac\ =\ (ybins[dy+1]-\/ybins[dy])/(yup-\/ylow);}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ frac\ =\ 0;}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ hProjY-\/>SetBinContent(dy+1,hProjY-\/>GetBinContent(dy+1)+frac*bin-\/>GetContent());}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \textcolor{comment}{//KS:\ Follow\ ROOT\ implementation\ and\ sum\ up\ the\ variance}}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \textcolor{keywordflow}{if}(computeErrors)}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \textcolor{comment}{//KS:\ TH2PolyBin\ doesn't\ have\ GetError\ so\ we\ have\ to\ use\ TH2Poly,}}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \textcolor{comment}{//but\ numbering\ of\ GetBinError\ is\ different\ than\ GetBins...}}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ Temp\_Err\ =\ frac*\textcolor{keyword}{static\_cast<}TH2Poly*\textcolor{keyword}{>}(poly)-\/>GetBinError(i+1)*frac*\textcolor{keyword}{static\_cast<}TH2Poly*\textcolor{keyword}{>}(poly)-\/>GetBinError(i+1);}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ hProjY\_Error[dy+1]\ +=\ Temp\_Err;}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00268\ \ \ \ \ \}}
+\DoxyCodeLine{00269\ \ \ \}}
+\DoxyCodeLine{00270\ \ \ \textcolor{comment}{//KS:\ The\ error\ is\ sqrt(summed\ variance))\ https://root.cern.ch/doc/master/TH2\_8cxx\_source.html\#l02266}}
+\DoxyCodeLine{00271\ \ \ \textcolor{keywordflow}{if}(computeErrors)}
+\DoxyCodeLine{00272\ \ \ \{}
+\DoxyCodeLine{00273\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <=\ hProjY-\/>GetXaxis()-\/>GetNbins();\ ++i)}
+\DoxyCodeLine{00274\ \ \ \ \ \{}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ Error\ =\ std::sqrt(hProjY\_Error[i]);}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ hProjY-\/>SetBinError(i,\ Error);}
+\DoxyCodeLine{00277\ \ \ \ \ \}}
+\DoxyCodeLine{00278\ \ \ \}}
+\DoxyCodeLine{00279\ \ \ \textcolor{keywordflow}{return}\ hProjY;}
+\DoxyCodeLine{00280\ \}\ \textcolor{comment}{//\ end\ project\ poly\ Y\ function}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Structs_8cpp_a61d8f295d13a5fe82a552c08d42c8bfa}\label{Structs_8cpp_a61d8f295d13a5fe82a552c08d42c8bfa}} 
+\index{Structs.cpp@{Structs.cpp}!PolyScaleWidth@{PolyScaleWidth}}
+\index{PolyScaleWidth@{PolyScaleWidth}!Structs.cpp@{Structs.cpp}}
+\doxysubsubsection{\texorpdfstring{PolyScaleWidth()}{PolyScaleWidth()}}
+{\footnotesize\ttfamily TH2\+Poly $\ast$ Poly\+Scale\+Width (\begin{DoxyParamCaption}\item[{TH2\+Poly $\ast$}]{Histogram,  }\item[{double}]{scale }\end{DoxyParamCaption})}
+
+
+
+WP\+: Helper to scale th2poly analogous to th2d scale with option \char`\"{}width\char`\"{}. 
+
+
+
+Definition at line \mbox{\hyperlink{Structs_8cpp_source_l00379}{379}} of file \mbox{\hyperlink{Structs_8cpp_source}{Structs.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00379\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00380\ \textcolor{comment}{//\ ****************}}
+\DoxyCodeLine{00381\ \ \ TH2Poly*\ HistCopy\ =\ \textcolor{keyword}{static\_cast<}TH2Poly*\textcolor{keyword}{>}(Histogram-\/>Clone());}
+\DoxyCodeLine{00382\ \ \ \textcolor{keywordtype}{double}\ xlow,\ xup,\ ylow,\ yup,\ area;}
+\DoxyCodeLine{00383\ }
+\DoxyCodeLine{00384\ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <\ HistCopy-\/>GetNumberOfBins()+1;\ i++)}
+\DoxyCodeLine{00385\ \ \ \{}
+\DoxyCodeLine{00386\ \ \ \ \ TH2PolyBin*\ bin\ =\ \textcolor{keyword}{static\_cast<}TH2PolyBin*\textcolor{keyword}{>}(Histogram-\/>GetBins()-\/>At(i\ -\/\ 1));}
+\DoxyCodeLine{00387\ \ \ \ \ xlow\ =\ bin-\/>GetXMin();}
+\DoxyCodeLine{00388\ \ \ \ \ xup\ =\ bin-\/>GetXMax();}
+\DoxyCodeLine{00389\ \ \ \ \ ylow\ =\ bin-\/>GetYMin();}
+\DoxyCodeLine{00390\ \ \ \ \ yup\ =\ bin-\/>GetYMax();}
+\DoxyCodeLine{00391\ \ \ \ \ area\ =\ (xup-\/xlow)*(yup-\/ylow);}
+\DoxyCodeLine{00392\ \ \ \ \ HistCopy-\/>SetBinContent(i,\ Histogram-\/>GetBinContent(i)/(area*scale));}
+\DoxyCodeLine{00393\ \ \ \}}
+\DoxyCodeLine{00394\ \ \ \textcolor{keywordflow}{return}\ HistCopy;}
+\DoxyCodeLine{00395\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Structs_8cpp_a85463c0c6943e3d544d5fcb3f96bf18a}\label{Structs_8cpp_a85463c0c6943e3d544d5fcb3f96bf18a}} 
+\index{Structs.cpp@{Structs.cpp}!RemoveFitter@{RemoveFitter}}
+\index{RemoveFitter@{RemoveFitter}!Structs.cpp@{Structs.cpp}}
+\doxysubsubsection{\texorpdfstring{RemoveFitter()}{RemoveFitter()}}
+{\footnotesize\ttfamily void Remove\+Fitter (\begin{DoxyParamCaption}\item[{TH1D $\ast$}]{hist,  }\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+KS\+: Remove fitted TF1 from hist to make comparison easier. 
+
+
+
+Definition at line \mbox{\hyperlink{Structs_8cpp_source_l00419}{419}} of file \mbox{\hyperlink{Structs_8cpp_source}{Structs.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00419\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00420\ \textcolor{comment}{//\ *********************}}
+\DoxyCodeLine{00421\ }
+\DoxyCodeLine{00422\ \ \ TList\ *listOfFunctions\ =\ hist-\/>GetListOfFunctions();}
+\DoxyCodeLine{00423\ \ \ TF1\ *fitter\ =\ \textcolor{keyword}{dynamic\_cast<}TF1*\textcolor{keyword}{>}(listOfFunctions-\/>FindObject(name.c\_str()));}
+\DoxyCodeLine{00424\ }
+\DoxyCodeLine{00425\ \ \ listOfFunctions-\/>Remove(fitter);}
+\DoxyCodeLine{00426\ \ \ \textcolor{keyword}{delete}\ fitter;}
+\DoxyCodeLine{00427\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Structs_8cpp_a6c6f918bcc5cfc261888be8d8ce2e444}\label{Structs_8cpp_a6c6f918bcc5cfc261888be8d8ce2e444}} 
+\index{Structs.cpp@{Structs.cpp}!returnCherenkovThresholdMomentum@{returnCherenkovThresholdMomentum}}
+\index{returnCherenkovThresholdMomentum@{returnCherenkovThresholdMomentum}!Structs.cpp@{Structs.cpp}}
+\doxysubsubsection{\texorpdfstring{returnCherenkovThresholdMomentum()}{returnCherenkovThresholdMomentum()}}
+{\footnotesize\ttfamily double return\+Cherenkov\+Threshold\+Momentum (\begin{DoxyParamCaption}\item[{int}]{PDG }\end{DoxyParamCaption})}
+
+
+
+DB Get the Cherenkov momentum threshold in MeV. 
+
+
+
+Definition at line \mbox{\hyperlink{Structs_8cpp_source_l00462}{462}} of file \mbox{\hyperlink{Structs_8cpp_source}{Structs.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00462\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00463\ \textcolor{comment}{//\ ****************}}
+\DoxyCodeLine{00464\ \ \ \textcolor{keywordtype}{double}\ refractiveIndex\ =\ 1.334;\ \textcolor{comment}{//DB\ From\ https://github.com/fiTQun/fiTQun/blob/646cf9c8ba3d4f7400bcbbde029d5ca15513a3bf/fiTQun\_shared.cc\#L757}}
+\DoxyCodeLine{00465\ \ \ \textcolor{keywordtype}{double}\ mass\ =\ \ \mbox{\hyperlink{namespaceMaCh3Utils_a86d34372bb55524024fbdadd65834967}{MaCh3Utils::GetMassFromPDG}}(PDG)*1e3;}
+\DoxyCodeLine{00466\ \ \ \textcolor{keywordtype}{double}\ momentumThreshold\ =\ mass/sqrt(refractiveIndex*refractiveIndex-\/1.);}
+\DoxyCodeLine{00467\ \ \ \textcolor{keywordflow}{return}\ momentumThreshold;}
+\DoxyCodeLine{00468\ \}}
+
+\end{DoxyCode}

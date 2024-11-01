@@ -1,0 +1,117 @@
+\hypertarget{structMaCh3ModeInfo}{}\doxysection{Ma\+Ch3\+Mode\+Info Struct Reference}
+\label{structMaCh3ModeInfo}\index{MaCh3ModeInfo@{MaCh3ModeInfo}}
+
+
+KS\+: Class containing information for a single Ma\+Ch3\+Mode.  
+
+
+
+
+{\ttfamily \#include $<$/home/runner/work/\+Ma\+Ch3/\+Ma\+Ch3/manager/\+Ma\+Ch3\+Modes.\+h$>$}
+
+
+
+Collaboration diagram for Ma\+Ch3\+Mode\+Info\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{structMaCh3ModeInfo__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structMaCh3ModeInfo_a9a89a0394f9f5eb780008253716836fc}{Is\+Mode}} (const int Gen\+Mode)
+\begin{DoxyCompactList}\small\item\em KS\+: Checks Ma\+Ch3 modes is associated with a given generator mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{structMaCh3ModeInfo_a8c957d49742a2ad0faa79fbc07427767}{Name}}
+\begin{DoxyCompactList}\small\item\em Mode name. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{structMaCh3ModeInfo_a676486427e885ed2deab5ffa5f40bfd7}{Fancy\+Name}}
+\begin{DoxyCompactList}\small\item\em Mode fancy name. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{structMaCh3ModeInfo_a02a4f32a5a65b723a0849539a315cc1a}{Generator\+Maping}}
+\begin{DoxyCompactList}\small\item\em Mapping between mode and generator integers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+KS\+: Class containing information for a single Ma\+Ch3\+Mode. 
+
+Definition at line \mbox{\hyperlink{MaCh3Modes_8h_source_l00017}{17}} of file \mbox{\hyperlink{MaCh3Modes_8h_source}{Ma\+Ch3\+Modes.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structMaCh3ModeInfo_a9a89a0394f9f5eb780008253716836fc}\label{structMaCh3ModeInfo_a9a89a0394f9f5eb780008253716836fc}} 
+\index{MaCh3ModeInfo@{MaCh3ModeInfo}!IsMode@{IsMode}}
+\index{IsMode@{IsMode}!MaCh3ModeInfo@{MaCh3ModeInfo}}
+\doxysubsubsection{\texorpdfstring{IsMode()}{IsMode()}}
+{\footnotesize\ttfamily bool Ma\+Ch3\+Mode\+Info\+::\+Is\+Mode (\begin{DoxyParamCaption}\item[{const int}]{Gen\+Mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+KS\+: Checks Ma\+Ch3 modes is associated with a given generator mode. 
+
+
+
+Definition at line \mbox{\hyperlink{MaCh3Modes_8h_source_l00025}{25}} of file \mbox{\hyperlink{MaCh3Modes_8h_source}{Ma\+Ch3\+Modes.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{bool}\ exists\ =\ std::find(\mbox{\hyperlink{structMaCh3ModeInfo_a02a4f32a5a65b723a0849539a315cc1a}{GeneratorMaping}}.begin(),\ \mbox{\hyperlink{structMaCh3ModeInfo_a02a4f32a5a65b723a0849539a315cc1a}{GeneratorMaping}}.end(),\ GenMode)\ !=\ \mbox{\hyperlink{structMaCh3ModeInfo_a02a4f32a5a65b723a0849539a315cc1a}{GeneratorMaping}}.end();}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordflow}{return}\ exists;}
+\DoxyCodeLine{00028\ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structMaCh3ModeInfo_a676486427e885ed2deab5ffa5f40bfd7}\label{structMaCh3ModeInfo_a676486427e885ed2deab5ffa5f40bfd7}} 
+\index{MaCh3ModeInfo@{MaCh3ModeInfo}!FancyName@{FancyName}}
+\index{FancyName@{FancyName}!MaCh3ModeInfo@{MaCh3ModeInfo}}
+\doxysubsubsection{\texorpdfstring{FancyName}{FancyName}}
+{\footnotesize\ttfamily std\+::string Ma\+Ch3\+Mode\+Info\+::\+Fancy\+Name}
+
+
+
+Mode fancy name. 
+
+
+
+Definition at line \mbox{\hyperlink{MaCh3Modes_8h_source_l00021}{21}} of file \mbox{\hyperlink{MaCh3Modes_8h_source}{Ma\+Ch3\+Modes.\+h}}.
+
+\mbox{\Hypertarget{structMaCh3ModeInfo_a02a4f32a5a65b723a0849539a315cc1a}\label{structMaCh3ModeInfo_a02a4f32a5a65b723a0849539a315cc1a}} 
+\index{MaCh3ModeInfo@{MaCh3ModeInfo}!GeneratorMaping@{GeneratorMaping}}
+\index{GeneratorMaping@{GeneratorMaping}!MaCh3ModeInfo@{MaCh3ModeInfo}}
+\doxysubsubsection{\texorpdfstring{GeneratorMaping}{GeneratorMaping}}
+{\footnotesize\ttfamily std\+::vector$<$int$>$ Ma\+Ch3\+Mode\+Info\+::\+Generator\+Maping}
+
+
+
+Mapping between mode and generator integers. 
+
+
+
+Definition at line \mbox{\hyperlink{MaCh3Modes_8h_source_l00023}{23}} of file \mbox{\hyperlink{MaCh3Modes_8h_source}{Ma\+Ch3\+Modes.\+h}}.
+
+\mbox{\Hypertarget{structMaCh3ModeInfo_a8c957d49742a2ad0faa79fbc07427767}\label{structMaCh3ModeInfo_a8c957d49742a2ad0faa79fbc07427767}} 
+\index{MaCh3ModeInfo@{MaCh3ModeInfo}!Name@{Name}}
+\index{Name@{Name}!MaCh3ModeInfo@{MaCh3ModeInfo}}
+\doxysubsubsection{\texorpdfstring{Name}{Name}}
+{\footnotesize\ttfamily std\+::string Ma\+Ch3\+Mode\+Info\+::\+Name}
+
+
+
+Mode name. 
+
+
+
+Definition at line \mbox{\hyperlink{MaCh3Modes_8h_source_l00019}{19}} of file \mbox{\hyperlink{MaCh3Modes_8h_source}{Ma\+Ch3\+Modes.\+h}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/runner/work/\+Ma\+Ch3/\+Ma\+Ch3/manager/\mbox{\hyperlink{MaCh3Modes_8h}{Ma\+Ch3\+Modes.\+h}}\end{DoxyCompactItemize}

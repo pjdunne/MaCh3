@@ -1,0 +1,946 @@
+\hypertarget{StatisticalUtils_8h}{}\doxysection{/home/runner/work/\+Ma\+Ch3/\+Ma\+Ch3/mcmc/\+Statistical\+Utils.h File Reference}
+\label{StatisticalUtils_8h}\index{/home/runner/work/MaCh3/MaCh3/mcmc/StatisticalUtils.h@{/home/runner/work/MaCh3/MaCh3/mcmc/StatisticalUtils.h}}
+
+
+Utility functions for statistical interpretations in Ma\+Ch3.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include \char`\"{}sample\+PDF/\+Structs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}manager/manager.\+h\char`\"{}}\newline
+Include dependency graph for Statistical\+Utils.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{StatisticalUtils_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{StatisticalUtils_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{StatisticalUtils_8h_aac0e253784ed2f2a3258d68df22a2568}{Get\+Jeffreys\+Scale}} (const double Bayes\+Factor)
+\begin{DoxyCompactList}\small\item\em KS\+: Following H. Jeffreys \cite{jeffreys1998theory}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{StatisticalUtils_8h_acf403b05be9baa719893db7449e833c7}{Get\+Dunne\+Kaboth}} (const double Bayes\+Factor)
+\begin{DoxyCompactList}\small\item\em KS\+: Based on Table 1 in \href{https://www.t2k.org/docs/technotes/435}{\texttt{ https\+://www.\+t2k.\+org/docs/technotes/435}}. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{StatisticalUtils_8h_a04394b98587b44b98b003bd1226606ed}{Get\+Sigma\+Value}} (const int sigma)
+\begin{DoxyCompactList}\small\item\em KS\+: Convert sigma from normal distribution into percentage. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{StatisticalUtils_8h_a3dbcf2e503dd81c1c26f063a7e6b3362}{Get\+BIC}} (const double llh, const int data, const int n\+Pars)
+\begin{DoxyCompactList}\small\item\em Get the Bayesian Information Criterion (BIC) or Schwarz information criterion (also SIC, SBC, SBIC) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{StatisticalUtils_8h_aaf02981e45bb7adc146cebb4d82c6f36}{Get\+Neffective}} (const int N1, const int N2)
+\begin{DoxyCompactList}\small\item\em KS\+: See 14.\+3.\+10 in Numerical Recipes in C \cite{press1992numerical}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{StatisticalUtils_8h_adba5abb16555092305a8b459f94a24c1}{Check\+Bonferoni\+Correctedp\+Value}} (const std\+::vector$<$ std\+::string $>$ \&Sample\+Name\+Vec, const std\+::vector$<$ double $>$ \&PVal\+Vec, const double Threshold=0.\+05)
+\begin{DoxyCompactList}\small\item\em KS\+: For more see \href{https://www.t2k.org/docs/technotes/429/TN429_v8\#page=63}{\texttt{ https\+://www.\+t2k.\+org/docs/technotes/429/\+TN429\+\_\+v8\#page=63}}. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{StatisticalUtils_8h_a807e7b865e4ac63b979f7c8bbe5d8475}{Get\+Anderson\+Darling\+Test\+Stat}} (const double Cumulative\+Data, const double Cumulative\+MC, const double Cumulative\+Joint)
+\item 
+int \mbox{\hyperlink{StatisticalUtils_8h_ad58f0ddda31283c3598fc09f98046192}{Get\+Number\+Of\+Runs}} (const std\+::vector$<$ int $>$ \&Group\+Clasifier)
+\begin{DoxyCompactList}\small\item\em KS\+: \href{https://esjeevanand.uccollege.edu.in/wp-content/uploads/sites/114/2020/08/NON-PARAMTERIC-TEST-6.pdf}{\texttt{ https\+://esjeevanand.\+uccollege.\+edu.\+in/wp-\/content/uploads/sites/114/2020/08/\+NON-\/\+PARAMTERIC-\/\+TEST-\/6.\+pdf}}. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{StatisticalUtils_8h_afecd84c56d6546271c4547192aae31af}{Get\+Beta\+Parameter}} (const double data, const double mc, const double w2, \mbox{\hyperlink{Structs_8h_a960da89e33ac45a56f7bbfac3068dc67}{Test\+Statistic}} Test\+Stat)
+\begin{DoxyCompactList}\small\item\em KS\+: Calculate Beta parameter which will be different based on specified test statistic. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{StatisticalUtils_8h_a34d5232bfb12e29ec9d63acaa8744b58}{Get\+Sub\+Optimality}} (const std\+::vector$<$ double $>$ \&Eigen\+Values, const int Total\+Tarameters)
+\begin{DoxyCompactList}\small\item\em Based on \cite{roberts2009adaptive}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{StatisticalUtils_8h_ab4dc9e4455015e55031e2cc8a076349d}{Get\+Arithmetic}} (TH1D $\ast$const hist, double \&\mbox{\hyperlink{RHat_8cpp_ab7d224b5fffa9367046f2976bb4972d1}{Mean}}, double \&Error)
+\begin{DoxyCompactList}\small\item\em CW\+: Get Arithmetic mean from posterior. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{StatisticalUtils_8h_a7237fc819d10a341c286a5597f584a96}{Get\+Gaussian}} (TH1D $\ast$\&hist, TF1 $\ast$gauss, double \&\mbox{\hyperlink{RHat_8cpp_ab7d224b5fffa9367046f2976bb4972d1}{Mean}}, double \&Error)
+\begin{DoxyCompactList}\small\item\em CW\+: Fit Gaussian to posterior. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{StatisticalUtils_8h_aadbb121e8fc7db8e4e28d6b04d351460}{Get\+HPD}} (TH1D $\ast$const hist, double \&\mbox{\hyperlink{RHat_8cpp_ab7d224b5fffa9367046f2976bb4972d1}{Mean}}, double \&Error, double \&Error\+\_\+p, double \&Error\+\_\+m, const double coverage=0.\+6827)
+\begin{DoxyCompactList}\small\item\em Get Highest Posterior Density (HPD) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{StatisticalUtils_8h_aac24043cc7a5ef6a05fc1b10d3860875}{Get\+Credible\+Interval}} (TH1D $\ast$const hist, TH1D $\ast$hpost\+\_\+copy, const double coverage=0.\+6827)
+\begin{DoxyCompactList}\small\item\em KS\+: Get 1D histogram within credible interval, hpost\+\_\+copy has to have the same binning, I don\textquotesingle{}t do Copy() as this will lead to problems if this is used under multithreading. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{StatisticalUtils_8h_add6570517afa2cca738b9aca56aa3883}{Get\+Credible\+Region}} (TH2D $\ast$const hist2D, const double coverage=0.\+6827)
+\begin{DoxyCompactList}\small\item\em KS\+: Set 2D contour within some coverage. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{StatisticalUtils_8h_a94e492e3e9142db9e1cb1c4c027259f3}{Get\+IQR}} (TH1D $\ast$Hist)
+\begin{DoxyCompactList}\small\item\em Interquartile Range (IQR) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{StatisticalUtils_8h_a13aa52c404712954271d7c7faa728334}{Compute\+KLDivergence}} (TH2\+Poly $\ast$Data\+Poly, TH2\+Poly $\ast$Poly\+MC)
+\begin{DoxyCompactList}\small\item\em Compute the Kullback-\/\+Leibler divergence between two TH2\+Poly histograms. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{StatisticalUtils_8h_a8ba1090ae92f61008a6576c45b4b3b7b}{Fisher\+Combined\+PValue}} (const std\+::vector$<$ double $>$ \&pvalues)
+\begin{DoxyCompactList}\small\item\em KS\+: Combine p-\/values using Fisher\textquotesingle{}s method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Utility functions for statistical interpretations in Ma\+Ch3. 
+
+
+
+Definition in file \mbox{\hyperlink{StatisticalUtils_8h_source}{Statistical\+Utils.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{StatisticalUtils_8h_adba5abb16555092305a8b459f94a24c1}\label{StatisticalUtils_8h_adba5abb16555092305a8b459f94a24c1}} 
+\index{StatisticalUtils.h@{StatisticalUtils.h}!CheckBonferoniCorrectedpValue@{CheckBonferoniCorrectedpValue}}
+\index{CheckBonferoniCorrectedpValue@{CheckBonferoniCorrectedpValue}!StatisticalUtils.h@{StatisticalUtils.h}}
+\doxysubsubsection{\texorpdfstring{CheckBonferoniCorrectedpValue()}{CheckBonferoniCorrectedpValue()}}
+{\footnotesize\ttfamily void Check\+Bonferoni\+Correctedp\+Value (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{Sample\+Name\+Vec,  }\item[{const std\+::vector$<$ double $>$ \&}]{PVal\+Vec,  }\item[{const double}]{Threshold = {\ttfamily 0.05} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+KS\+: For more see \href{https://www.t2k.org/docs/technotes/429/TN429_v8\#page=63}{\texttt{ https\+://www.\+t2k.\+org/docs/technotes/429/\+TN429\+\_\+v8\#page=63}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Sample\+Name\+Vec} & vector of sample names \\
+\hline
+{\em PVal\+Vec} & pvalue for each sample \\
+\hline
+{\em Threshold} & pvalue accepted threshold, usually 5\% \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{StatisticalUtils_8h_source_l00116}{116}} of file \mbox{\hyperlink{StatisticalUtils_8h_source}{Statistical\+Utils.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00119\ \textcolor{comment}{//\ ****************}}
+\DoxyCodeLine{00120\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00121\ \ \ \textcolor{keywordflow}{if}(SampleNameVec.size()\ !=\ PValVec.size())}
+\DoxyCodeLine{00122\ \ \ \{}
+\DoxyCodeLine{00123\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Size\ of\ vectors\ do\ not\ match"{}});}
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_\ ,\ \_\_LINE\_\_\ );}
+\DoxyCodeLine{00125\ \ \ \}}
+\DoxyCodeLine{00126\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ NumberOfStatisticalTests\ =\ SampleNameVec.size();}
+\DoxyCodeLine{00127\ \ \ \textcolor{comment}{//KS:\ 0.05\ or\ 5\%\ is\ value\ used\ by\ T2K.}}
+\DoxyCodeLine{00128\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ StatisticalSignificanceDown\ =\ Threshold\ /\ double(NumberOfStatisticalTests);}
+\DoxyCodeLine{00129\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ StatisticalSignificanceUp\ =\ 1\ -\/\ StatisticalSignificanceDown;}
+\DoxyCodeLine{00130\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Bonferroni-\/corrected\ statistical\ significance\ level:\ \{:.2f\}"{}},\ StatisticalSignificanceDown);}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \ \ \textcolor{keywordtype}{int}\ Counter\ =\ 0;}
+\DoxyCodeLine{00133\ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ SampleNameVec.size();\ i++)}
+\DoxyCodeLine{00134\ \ \ \{}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordflow}{if}(\ \ (PValVec[i]\ <\ 0.5\ \&\&\ PValVec[i]\ <\ StatisticalSignificanceDown)\ )}
+\DoxyCodeLine{00136\ \ \ \ \ \{}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Sample\ \{\}\ indicates\ disagreement\ between\ the\ model\ predictions\ and\ the\ data"{}},\ SampleNameVec[i]);}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Bonferroni-\/corrected\ statistical\ significance\ level:\ \{:.2f\}\ p-\/value:\ \{:.2f\}"{}},\ StatisticalSignificanceDown,\ PValVec[i]);}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ Counter++;}
+\DoxyCodeLine{00140\ \ \ \ \ \}}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(\ (PValVec[i]\ >\ 0.5\ \&\&\ PValVec[i]\ >\ StatisticalSignificanceUp)\ )}
+\DoxyCodeLine{00142\ \ \ \ \ \{}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Sample\ \{\}\ indicates\ disagreement\ between\ the\ model\ predictions\ and\ the\ data"{}},\ SampleNameVec[i]);}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Bonferroni-\/corrected\ statistical\ significance\ level:\ \{:.2f\}\ p-\/value:\ \{:.2f\}"{}},\ StatisticalSignificanceUp,\ PValVec[i]);}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ Counter++;}
+\DoxyCodeLine{00146\ \ \ \ \ \}}
+\DoxyCodeLine{00147\ \ \ \}}
+\DoxyCodeLine{00148\ \ \ \textcolor{keywordflow}{if}(Counter\ ==\ 0)\ \{}
+\DoxyCodeLine{00149\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Every\ sample\ passed\ Bonferroni-\/corrected\ statistical\ significance\ level\ test"{}});}
+\DoxyCodeLine{00150\ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00151\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_ad5b2eb6377721e3ac95def22c2386bb1}{MACH3LOG\_WARN}}(\textcolor{stringliteral}{"{}\{\}\ samples\ didn't\ pass\ Bonferroni-\/corrected\ statistical\ significance\ level\ test"{}},\ Counter);}
+\DoxyCodeLine{00152\ \ \ \}}
+\DoxyCodeLine{00153\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00154\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{StatisticalUtils_8h_a13aa52c404712954271d7c7faa728334}\label{StatisticalUtils_8h_a13aa52c404712954271d7c7faa728334}} 
+\index{StatisticalUtils.h@{StatisticalUtils.h}!ComputeKLDivergence@{ComputeKLDivergence}}
+\index{ComputeKLDivergence@{ComputeKLDivergence}!StatisticalUtils.h@{StatisticalUtils.h}}
+\doxysubsubsection{\texorpdfstring{ComputeKLDivergence()}{ComputeKLDivergence()}}
+{\footnotesize\ttfamily double Compute\+KLDivergence (\begin{DoxyParamCaption}\item[{TH2\+Poly $\ast$}]{Data\+Poly,  }\item[{TH2\+Poly $\ast$}]{Poly\+MC }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compute the Kullback-\/\+Leibler divergence between two TH2\+Poly histograms. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Data\+Poly} & Pointer to the data histogram (TH2\+Poly). \\
+\hline
+{\em Poly\+MC} & Pointer to the Monte Carlo histogram (TH2\+Poly). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Kullback-\/\+Leibler divergence value. Returns 0 if the data or MC integral is zero. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{StatisticalUtils_8h_source_l00504}{504}} of file \mbox{\hyperlink{StatisticalUtils_8h_source}{Statistical\+Utils.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00504\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00505\ \textcolor{comment}{//\ *********************}}
+\DoxyCodeLine{00506\ \ \ \textcolor{keywordtype}{double}\ klDivergence\ =\ 0.0;}
+\DoxyCodeLine{00507\ \ \ \textcolor{keywordtype}{double}\ DataIntegral\ =\ \mbox{\hyperlink{Structs_8cpp_ab18c6b2408d7b9021bad06d47a06ee8d}{NoOverflowIntegral}}(DataPoly);}
+\DoxyCodeLine{00508\ \ \ \textcolor{keywordtype}{double}\ MCIntegral\ =\ \mbox{\hyperlink{Structs_8cpp_ab18c6b2408d7b9021bad06d47a06ee8d}{NoOverflowIntegral}}(PolyMC);}
+\DoxyCodeLine{00509\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <\ DataPoly-\/>GetNumberOfBins()+1;\ ++i)}
+\DoxyCodeLine{00510\ \ \ \{}
+\DoxyCodeLine{00511\ \ \ \ \ \textcolor{keywordflow}{if}\ (DataPoly-\/>GetBinContent(i)\ >\ 0\ \&\&\ PolyMC-\/>GetBinContent(i)\ >\ 0)\ \{}
+\DoxyCodeLine{00512\ \ \ \ \ \ \ klDivergence\ +=\ DataPoly-\/>GetBinContent(i)\ /\ DataIntegral\ *}
+\DoxyCodeLine{00513\ \ \ \ \ \ \ std::log((DataPoly-\/>GetBinContent(i)\ /\ DataIntegral)\ /\ (\ PolyMC-\/>GetBinContent(i)\ /\ MCIntegral));}
+\DoxyCodeLine{00514\ \ \ \ \ \}}
+\DoxyCodeLine{00515\ \ \ \}}
+\DoxyCodeLine{00516\ \ \ \textcolor{keywordflow}{return}\ klDivergence;}
+\DoxyCodeLine{00517\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{StatisticalUtils_8h_a8ba1090ae92f61008a6576c45b4b3b7b}\label{StatisticalUtils_8h_a8ba1090ae92f61008a6576c45b4b3b7b}} 
+\index{StatisticalUtils.h@{StatisticalUtils.h}!FisherCombinedPValue@{FisherCombinedPValue}}
+\index{FisherCombinedPValue@{FisherCombinedPValue}!StatisticalUtils.h@{StatisticalUtils.h}}
+\doxysubsubsection{\texorpdfstring{FisherCombinedPValue()}{FisherCombinedPValue()}}
+{\footnotesize\ttfamily double Fisher\+Combined\+PValue (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{pvalues }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+KS\+: Combine p-\/values using Fisher\textquotesingle{}s method. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pvalues} & A vector of individual p-\/values to combine. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The combined p-\/value, representing the overall significance. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{StatisticalUtils_8h_source_l00523}{523}} of file \mbox{\hyperlink{StatisticalUtils_8h_source}{Statistical\+Utils.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00523\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00524\ \textcolor{comment}{//\ ********************}}
+\DoxyCodeLine{00525\ }
+\DoxyCodeLine{00526\ \ \ \textcolor{keywordtype}{double}\ testStatistic\ =\ 0;}
+\DoxyCodeLine{00527\ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ pvalues.size();\ i++)}
+\DoxyCodeLine{00528\ \ \ \{}
+\DoxyCodeLine{00529\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ pval\ =\ std::max(0.00001,\ pvalues[i]);}
+\DoxyCodeLine{00530\ \ \ \ \ testStatistic\ +=\ -\/2.0\ *\ std::log(pval);}
+\DoxyCodeLine{00531\ \ \ \}}
+\DoxyCodeLine{00532\ \ \ \textcolor{comment}{//\ Degrees\ of\ freedom\ is\ twice\ the\ number\ of\ p-\/values}}
+\DoxyCodeLine{00533\ \ \ \textcolor{keywordtype}{int}\ degreesOfFreedom\ =\ int(2\ *\ pvalues.size());}
+\DoxyCodeLine{00534\ \ \ \textcolor{keywordtype}{double}\ pValue\ =\ TMath::Prob(testStatistic,\ degreesOfFreedom);}
+\DoxyCodeLine{00535\ }
+\DoxyCodeLine{00536\ \ \ \textcolor{keywordflow}{return}\ pValue;}
+\DoxyCodeLine{00537\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{StatisticalUtils_8h_a807e7b865e4ac63b979f7c8bbe5d8475}\label{StatisticalUtils_8h_a807e7b865e4ac63b979f7c8bbe5d8475}} 
+\index{StatisticalUtils.h@{StatisticalUtils.h}!GetAndersonDarlingTestStat@{GetAndersonDarlingTestStat}}
+\index{GetAndersonDarlingTestStat@{GetAndersonDarlingTestStat}!StatisticalUtils.h@{StatisticalUtils.h}}
+\doxysubsubsection{\texorpdfstring{GetAndersonDarlingTestStat()}{GetAndersonDarlingTestStat()}}
+{\footnotesize\ttfamily double Get\+Anderson\+Darling\+Test\+Stat (\begin{DoxyParamCaption}\item[{const double}]{Cumulative\+Data,  }\item[{const double}]{Cumulative\+MC,  }\item[{const double}]{Cumulative\+Joint }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em Cumulative\+Data} & Value of CDF for data \\
+\hline
+{\em Cumulative\+MC} & Value of CDF for MC \\
+\hline
+{\em Cumulative\+Joint} & Value of CDF for joint data and MC distribution \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{StatisticalUtils_8h_source_l00160}{160}} of file \mbox{\hyperlink{StatisticalUtils_8h_source}{Statistical\+Utils.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00161\ \textcolor{comment}{//\ ****************}}
+\DoxyCodeLine{00162\ \ \ \textcolor{keywordtype}{double}\ ADstat\ =\ std::fabs(CumulativeData\ -\/\ CumulativeMC)/\ std::sqrt(CumulativeJoint*(1\ -\/\ CumulativeJoint));}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00164\ \ \ \textcolor{keywordflow}{if}(\ std::isinf(ADstat)\ ||\ std::isnan(ADstat))\ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00165\ \ \ \textcolor{keywordflow}{return}\ ADstat;}
+\DoxyCodeLine{00166\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{StatisticalUtils_8h_ab4dc9e4455015e55031e2cc8a076349d}\label{StatisticalUtils_8h_ab4dc9e4455015e55031e2cc8a076349d}} 
+\index{StatisticalUtils.h@{StatisticalUtils.h}!GetArithmetic@{GetArithmetic}}
+\index{GetArithmetic@{GetArithmetic}!StatisticalUtils.h@{StatisticalUtils.h}}
+\doxysubsubsection{\texorpdfstring{GetArithmetic()}{GetArithmetic()}}
+{\footnotesize\ttfamily void Get\+Arithmetic (\begin{DoxyParamCaption}\item[{TH1D $\ast$const}]{hist,  }\item[{double \&}]{Mean,  }\item[{double \&}]{Error }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+CW\+: Get Arithmetic mean from posterior. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hist} & histograms from which we extract arithmetic mean \\
+\hline
+{\em Mean} & Arithmetic Mean value \\
+\hline
+{\em Error} & Arithmetic Error value \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{StatisticalUtils_8h_source_l00245}{245}} of file \mbox{\hyperlink{StatisticalUtils_8h_source}{Statistical\+Utils.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00246\ \textcolor{comment}{//\ **************************}}
+\DoxyCodeLine{00247\ \ \ \mbox{\hyperlink{RHat_8cpp_ab7d224b5fffa9367046f2976bb4972d1}{Mean}}\ =\ hist-\/>GetMean();}
+\DoxyCodeLine{00248\ \ \ Error\ =\ hist-\/>GetRMS();}
+\DoxyCodeLine{00249\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{StatisticalUtils_8h_afecd84c56d6546271c4547192aae31af}\label{StatisticalUtils_8h_afecd84c56d6546271c4547192aae31af}} 
+\index{StatisticalUtils.h@{StatisticalUtils.h}!GetBetaParameter@{GetBetaParameter}}
+\index{GetBetaParameter@{GetBetaParameter}!StatisticalUtils.h@{StatisticalUtils.h}}
+\doxysubsubsection{\texorpdfstring{GetBetaParameter()}{GetBetaParameter()}}
+{\footnotesize\ttfamily double Get\+Beta\+Parameter (\begin{DoxyParamCaption}\item[{const double}]{data,  }\item[{const double}]{mc,  }\item[{const double}]{w2,  }\item[{\mbox{\hyperlink{Structs_8h_a960da89e33ac45a56f7bbfac3068dc67}{Test\+Statistic}}}]{Test\+Stat }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+KS\+: Calculate Beta parameter which will be different based on specified test statistic. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Number of data events in a bin \\
+\hline
+{\em mc} & Number of MC events in a bin \\
+\hline
+{\em w2} & Value of weight squared in a bin \\
+\hline
+{\em Test\+Stat} & Test statistic based on which we calculate beta \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{StatisticalUtils_8h_source_l00192}{192}} of file \mbox{\hyperlink{StatisticalUtils_8h_source}{Statistical\+Utils.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00193\ \textcolor{comment}{//\ ****************}}
+\DoxyCodeLine{00194\ \ \ \textcolor{keywordtype}{double}\ Beta\ =\ 0.0;}
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00196\ \ \ \textcolor{keywordflow}{if}\ (TestStat\ ==\ \mbox{\hyperlink{Structs_8h_a960da89e33ac45a56f7bbfac3068dc67a6589bdeaef8de84e7ef545fd709772bb}{kDembinskiAbdelmottele}})\ \{}
+\DoxyCodeLine{00197\ \ \ \ \ \textcolor{comment}{//the\ so-\/called\ effective\ count}}
+\DoxyCodeLine{00198\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ k\ =\ mc*mc\ /\ w2;}
+\DoxyCodeLine{00199\ \ \ \ \ \textcolor{comment}{//Calculate\ beta\ which\ is\ scaling\ factor\ between\ true\ and\ generated\ MC}}
+\DoxyCodeLine{00200\ \ \ \ \ Beta\ =\ (data\ +\ k)\ /\ (mc\ +\ k);}
+\DoxyCodeLine{00201\ \ \ \}}
+\DoxyCodeLine{00202\ \ \ \textcolor{comment}{//KS:\ Below\ is\ technically\ only\ true\ for\ Cowan's\ BB,\ which\ will\ not\ be\ true\ for\ Poisson\ or\ IceCube,\ because\ why\ not...}}
+\DoxyCodeLine{00203\ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00204\ \ \ \ \ \textcolor{comment}{//\ CW:\ Barlow-\/Beeston\ uses\ fractional\ uncertainty\ on\ MC,\ so\ sqrt(sum[w\string^2])/mc}}
+\DoxyCodeLine{00205\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ fractional\ =\ std::sqrt(w2)/mc;}
+\DoxyCodeLine{00206\ \ \ \ \ \textcolor{comment}{//\ CW:\ -\/b/2a\ in\ quadratic\ equation}}
+\DoxyCodeLine{00207\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ temp\ =\ mc*fractional*fractional-\/1;}
+\DoxyCodeLine{00208\ \ \ \ \ \textcolor{comment}{//\ CW:\ b\string^2\ -\/\ 4ac\ in\ quadratic\ equation}}
+\DoxyCodeLine{00209\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ temp2\ =\ temp*temp\ +\ 4*data*fractional*fractional;}
+\DoxyCodeLine{00210\ \ \ \ \ \textcolor{keywordflow}{if}\ (temp2\ <\ 0)\ \{}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Negative\ square\ root\ in\ Barlow\ Beeston\ coefficient\ calculation!"{}});}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_\ ,\ \_\_LINE\_\_\ );}
+\DoxyCodeLine{00213\ \ \ \ \ \}}
+\DoxyCodeLine{00214\ \ \ \ \ \textcolor{comment}{//\ CW:\ Solve\ for\ the\ positive\ beta}}
+\DoxyCodeLine{00215\ \ \ \ \ Beta\ =\ (-\/1*temp+std::sqrt(temp2))/2.;}
+\DoxyCodeLine{00216\ \ \ \}}
+\DoxyCodeLine{00217\ \ \ \textcolor{keywordflow}{return}\ Beta;}
+\DoxyCodeLine{00218\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{StatisticalUtils_8h_a3dbcf2e503dd81c1c26f063a7e6b3362}\label{StatisticalUtils_8h_a3dbcf2e503dd81c1c26f063a7e6b3362}} 
+\index{StatisticalUtils.h@{StatisticalUtils.h}!GetBIC@{GetBIC}}
+\index{GetBIC@{GetBIC}!StatisticalUtils.h@{StatisticalUtils.h}}
+\doxysubsubsection{\texorpdfstring{GetBIC()}{GetBIC()}}
+{\footnotesize\ttfamily double Get\+BIC (\begin{DoxyParamCaption}\item[{const double}]{llh,  }\item[{const int}]{data,  }\item[{const int}]{n\+Pars }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Bayesian Information Criterion (BIC) or Schwarz information criterion (also SIC, SBC, SBIC) 
+
+
+
+Definition at line \mbox{\hyperlink{StatisticalUtils_8h_source_l00088}{88}} of file \mbox{\hyperlink{StatisticalUtils_8h_source}{Statistical\+Utils.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00089\ \textcolor{comment}{//\ ****************}}
+\DoxyCodeLine{00090\ \ \ \textcolor{keywordflow}{if}(nPars\ ==\ 0)}
+\DoxyCodeLine{00091\ \ \ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}You\ haven't\ passed\ number\ of\ model\ parameters\ as\ it\ is\ still\ zero"{}});}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_\ ,\ \_\_LINE\_\_\ );}
+\DoxyCodeLine{00094\ \ \ \}}
+\DoxyCodeLine{00095\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ BIC\ =\ double(nPars\ *\ logl(data)\ +\ llh);}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \textcolor{keywordflow}{return}\ BIC;}
+\DoxyCodeLine{00098\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{StatisticalUtils_8h_aac24043cc7a5ef6a05fc1b10d3860875}\label{StatisticalUtils_8h_aac24043cc7a5ef6a05fc1b10d3860875}} 
+\index{StatisticalUtils.h@{StatisticalUtils.h}!GetCredibleInterval@{GetCredibleInterval}}
+\index{GetCredibleInterval@{GetCredibleInterval}!StatisticalUtils.h@{StatisticalUtils.h}}
+\doxysubsubsection{\texorpdfstring{GetCredibleInterval()}{GetCredibleInterval()}}
+{\footnotesize\ttfamily void Get\+Credible\+Interval (\begin{DoxyParamCaption}\item[{TH1D $\ast$const}]{hist,  }\item[{TH1D $\ast$}]{hpost\+\_\+copy,  }\item[{const double}]{coverage = {\ttfamily 0.6827} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+KS\+: Get 1D histogram within credible interval, hpost\+\_\+copy has to have the same binning, I don\textquotesingle{}t do Copy() as this will lead to problems if this is used under multithreading. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hist} & histograms based on which we calculate credible interval \\
+\hline
+{\em coverage} & What is defined coverage, by default 0.\+6827 (1 sigma) \\
+\hline
+\end{DoxyParams}
+Loop over histogram bins with highest number of entries until covered 90 or 68.\+3\%
+
+Get bin of highest content and save the number of entries reached so far
+
+Replace bin value by -\/1 so it is not looped over as being maximum bin again
+
+Definition at line \mbox{\hyperlink{StatisticalUtils_8h_source_l00375}{375}} of file \mbox{\hyperlink{StatisticalUtils_8h_source}{Statistical\+Utils.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00375\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00376\ \textcolor{comment}{//\ ***************}}
+\DoxyCodeLine{00377\ \ \ \textcolor{keywordflow}{if}(coverage\ >\ 1)}
+\DoxyCodeLine{00378\ \ \ \{}
+\DoxyCodeLine{00379\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Specified\ Credible\ Interval\ is\ greater\ that\ 1\ and\ equal\ to\ \{\}\ Should\ be\ between\ 0\ and\ 1"{}},\ coverage);}
+\DoxyCodeLine{00380\ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_\ ,\ \_\_LINE\_\_\ );}
+\DoxyCodeLine{00381\ \ \ \}}
+\DoxyCodeLine{00382\ \ \ \textcolor{comment}{//KS:\ Reset\ first\ copy\ of\ histogram}}
+\DoxyCodeLine{00383\ \ \ hpost\_copy-\/>Reset(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00384\ \ \ hpost\_copy-\/>Fill(0.0,\ 0.0);}
+\DoxyCodeLine{00385\ }
+\DoxyCodeLine{00386\ \ \ \textcolor{comment}{//KS:\ Temporary\ structure\ to\ be\ thread\ save}}
+\DoxyCodeLine{00387\ \ \ std::vector<double>\ hist\_copy(hist-\/>GetXaxis()-\/>GetNbins()+1);}
+\DoxyCodeLine{00388\ \ \ std::vector<bool>\ hist\_copy\_fill(hist-\/>GetXaxis()-\/>GetNbins()+1);}
+\DoxyCodeLine{00389\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <=\ hist-\/>GetXaxis()-\/>GetNbins();\ ++i)}
+\DoxyCodeLine{00390\ \ \ \{}
+\DoxyCodeLine{00391\ \ \ \ \ hist\_copy[i]\ =\ hist-\/>GetBinContent(i);}
+\DoxyCodeLine{00392\ \ \ \ \ hist\_copy\_fill[i]\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00393\ \ \ \}}
+\DoxyCodeLine{00394\ }
+\DoxyCodeLine{00396\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ Integral\ =\ hist-\/>Integral();}
+\DoxyCodeLine{00397\ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ sum\ =\ 0;}
+\DoxyCodeLine{00398\ }
+\DoxyCodeLine{00399\ \ \ \textcolor{keywordflow}{while}\ ((sum\ /\ Integral)\ <\ coverage)}
+\DoxyCodeLine{00400\ \ \ \{}
+\DoxyCodeLine{00402\ \ \ \ \ \textcolor{keywordtype}{int}\ max\_entry\_bin\ =\ 0;}
+\DoxyCodeLine{00403\ \ \ \ \ \textcolor{keywordtype}{double}\ max\_entries\ =\ 0.;}
+\DoxyCodeLine{00404\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <=\ hist-\/>GetXaxis()-\/>GetNbins();\ ++i)}
+\DoxyCodeLine{00405\ \ \ \ \ \{}
+\DoxyCodeLine{00406\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (hist\_copy[i]\ >\ max\_entries)}
+\DoxyCodeLine{00407\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00408\ \ \ \ \ \ \ \ \ max\_entries\ =\ hist\_copy[i];}
+\DoxyCodeLine{00409\ \ \ \ \ \ \ \ \ max\_entry\_bin\ =\ i;}
+\DoxyCodeLine{00410\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00411\ \ \ \ \ \}}
+\DoxyCodeLine{00413\ \ \ \ \ hist\_copy[max\_entry\_bin]\ =\ -\/1.;}
+\DoxyCodeLine{00414\ \ \ \ \ hist\_copy\_fill[max\_entry\_bin]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00415\ }
+\DoxyCodeLine{00416\ \ \ \ \ sum\ +=\ max\_entries;}
+\DoxyCodeLine{00417\ \ \ \}}
+\DoxyCodeLine{00418\ \ \ \textcolor{comment}{//KS:\ Now\ fill\ our\ copy\ only\ for\ bins\ which\ got\ included\ in\ coverage\ region}}
+\DoxyCodeLine{00419\ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <=\ hist-\/>GetXaxis()-\/>GetNbins();\ ++i)}
+\DoxyCodeLine{00420\ \ \ \{}
+\DoxyCodeLine{00421\ \ \ \ \ \textcolor{keywordflow}{if}(hist\_copy\_fill[i])\ hpost\_copy-\/>SetBinContent(i,\ hist-\/>GetBinContent(i));}
+\DoxyCodeLine{00422\ \ \ \}}
+\DoxyCodeLine{00423\ }
+\DoxyCodeLine{00424\ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00425\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{StatisticalUtils_8h_add6570517afa2cca738b9aca56aa3883}\label{StatisticalUtils_8h_add6570517afa2cca738b9aca56aa3883}} 
+\index{StatisticalUtils.h@{StatisticalUtils.h}!GetCredibleRegion@{GetCredibleRegion}}
+\index{GetCredibleRegion@{GetCredibleRegion}!StatisticalUtils.h@{StatisticalUtils.h}}
+\doxysubsubsection{\texorpdfstring{GetCredibleRegion()}{GetCredibleRegion()}}
+{\footnotesize\ttfamily void Get\+Credible\+Region (\begin{DoxyParamCaption}\item[{TH2D $\ast$const}]{hist2D,  }\item[{const double}]{coverage = {\ttfamily 0.6827} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+KS\+: Set 2D contour within some coverage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hist2D} & histograms based on which we calculate credible regions \\
+\hline
+{\em coverage} & What is defined coverage, by default 0.\+6827 (1 sigma) \\
+\hline
+\end{DoxyParams}
+Loop over histogram bins with highest number of entries until covered 90 or 68.\+3\%
+
+Get bin of highest content and save the number of entries reached so far
+
+Replace bin value by -\/1 so it is not looped over as being maximum bin again
+
+Definition at line \mbox{\hyperlink{StatisticalUtils_8h_source_l00431}{431}} of file \mbox{\hyperlink{StatisticalUtils_8h_source}{Statistical\+Utils.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00431\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00432\ \textcolor{comment}{//\ ***************}}
+\DoxyCodeLine{00433\ \ \ \textcolor{keywordflow}{if}(coverage\ >\ 1)}
+\DoxyCodeLine{00434\ \ \ \{}
+\DoxyCodeLine{00435\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Specified\ Credible\ Region\ is\ greater\ than\ 1\ and\ equal\ to\ \{:.2f\}\ Should\ be\ between\ 0\ and\ 1\ \{\}"{}},\ coverage);}
+\DoxyCodeLine{00436\ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_\ ,\ \_\_LINE\_\_\ );}
+\DoxyCodeLine{00437\ \ \ \}}
+\DoxyCodeLine{00438\ }
+\DoxyCodeLine{00439\ \ \ \textcolor{comment}{//KS:\ Temporary\ structure\ to\ be\ thread\ save}}
+\DoxyCodeLine{00440\ \ \ std::vector<std::vector<double>>\ hist\_copy(hist2D-\/>GetXaxis()-\/>GetNbins()+1,}
+\DoxyCodeLine{00441\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<double>(hist2D-\/>GetYaxis()-\/>GetNbins()+1));}
+\DoxyCodeLine{00442\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <=\ hist2D-\/>GetXaxis()-\/>GetNbins();\ ++i)\ \{}
+\DoxyCodeLine{00443\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <=\ hist2D-\/>GetYaxis()-\/>GetNbins();\ ++j)\ \{}
+\DoxyCodeLine{00444\ \ \ \ \ \ \ hist\_copy[i][j]\ =\ hist2D-\/>GetBinContent(i,\ j);}
+\DoxyCodeLine{00445\ \ \ \ \ \}}
+\DoxyCodeLine{00446\ \ \ \}}
+\DoxyCodeLine{00447\ }
+\DoxyCodeLine{00449\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ Integral\ =\ hist2D-\/>Integral();}
+\DoxyCodeLine{00450\ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ sum\ =\ 0;}
+\DoxyCodeLine{00451\ }
+\DoxyCodeLine{00452\ \ \ \textcolor{comment}{//We\ need\ to\ as\ ROOT\ requires\ array\ to\ set\ to\ contour}}
+\DoxyCodeLine{00453\ \ \ \textcolor{keywordtype}{double}\ Contour[1];}
+\DoxyCodeLine{00454\ \ \ \textcolor{keywordflow}{while}\ ((sum\ /\ Integral)\ <\ coverage)}
+\DoxyCodeLine{00455\ \ \ \{}
+\DoxyCodeLine{00457\ \ \ \ \ \textcolor{keywordtype}{int}\ max\_entry\_bin\_x\ =\ 0;}
+\DoxyCodeLine{00458\ \ \ \ \ \textcolor{keywordtype}{int}\ max\_entry\_bin\_y\ =\ 0;}
+\DoxyCodeLine{00459\ \ \ \ \ \textcolor{keywordtype}{double}\ max\_entries\ =\ 0.;}
+\DoxyCodeLine{00460\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <=\ hist2D-\/>GetXaxis()-\/>GetNbins();\ ++i)}
+\DoxyCodeLine{00461\ \ \ \ \ \{}
+\DoxyCodeLine{00462\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <=\ hist2D-\/>GetYaxis()-\/>GetNbins();\ ++j)}
+\DoxyCodeLine{00463\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00464\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (hist\_copy[i][j]\ >\ max\_entries)}
+\DoxyCodeLine{00465\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00466\ \ \ \ \ \ \ \ \ \ \ max\_entries\ =\ hist\_copy[i][j];}
+\DoxyCodeLine{00467\ \ \ \ \ \ \ \ \ \ \ max\_entry\_bin\_x\ =\ i;}
+\DoxyCodeLine{00468\ \ \ \ \ \ \ \ \ \ \ max\_entry\_bin\_y\ =\ j;}
+\DoxyCodeLine{00469\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00470\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00471\ \ \ \ \ \}}
+\DoxyCodeLine{00473\ \ \ \ \ hist\_copy[max\_entry\_bin\_x][max\_entry\_bin\_y]\ =\ -\/1.;}
+\DoxyCodeLine{00474\ }
+\DoxyCodeLine{00475\ \ \ \ \ sum\ +=\ max\_entries;}
+\DoxyCodeLine{00476\ \ \ \ \ Contour[0]\ =\ max\_entries;}
+\DoxyCodeLine{00477\ \ \ \}}
+\DoxyCodeLine{00478\ \ \ hist2D-\/>SetContour(1,\ Contour);}
+\DoxyCodeLine{00479\ }
+\DoxyCodeLine{00480\ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00481\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{StatisticalUtils_8h_acf403b05be9baa719893db7449e833c7}\label{StatisticalUtils_8h_acf403b05be9baa719893db7449e833c7}} 
+\index{StatisticalUtils.h@{StatisticalUtils.h}!GetDunneKaboth@{GetDunneKaboth}}
+\index{GetDunneKaboth@{GetDunneKaboth}!StatisticalUtils.h@{StatisticalUtils.h}}
+\doxysubsubsection{\texorpdfstring{GetDunneKaboth()}{GetDunneKaboth()}}
+{\footnotesize\ttfamily std\+::string Get\+Dunne\+Kaboth (\begin{DoxyParamCaption}\item[{const double}]{Bayes\+Factor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+KS\+: Based on Table 1 in \href{https://www.t2k.org/docs/technotes/435}{\texttt{ https\+://www.\+t2k.\+org/docs/technotes/435}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Bayes\+Factor} & Obtained value of Bayes factor \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{StatisticalUtils_8h_source_l00038}{38}} of file \mbox{\hyperlink{StatisticalUtils_8h_source}{Statistical\+Utils.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \textcolor{comment}{//\ **************************}}
+\DoxyCodeLine{00040\ \ \ std::string\ DunneKaboth\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00041\ \ \ \textcolor{comment}{//KS:\ Get\ fancy\ DunneKaboth\ Scale\ as\ I\ am\ to\ lazy\ to\ look\ into\ table\ every\ time}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \textcolor{keywordflow}{if}(2.125\ >\ BayesFactor)\ \ \ \ \ \ \ \ \ DunneKaboth\ =\ \textcolor{stringliteral}{"{}<\ 1\ \#sigma"{}};}
+\DoxyCodeLine{00044\ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(\ 20.74\ >\ BayesFactor)\ \ \ DunneKaboth\ =\ \textcolor{stringliteral}{"{}>\ 1\ \#sigma"{}};}
+\DoxyCodeLine{00045\ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(\ 369.4\ >\ BayesFactor)\ \ \ DunneKaboth\ =\ \textcolor{stringliteral}{"{}>\ 2\ \#sigma"{}};}
+\DoxyCodeLine{00046\ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(\ 15800\ >\ BayesFactor)\ \ \ DunneKaboth\ =\ \textcolor{stringliteral}{"{}>\ 3\ \#sigma"{}};}
+\DoxyCodeLine{00047\ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(\ 1745000\ >\ BayesFactor)\ DunneKaboth\ =\ \textcolor{stringliteral}{"{}>\ 4\ \#sigma"{}};}
+\DoxyCodeLine{00048\ \ \ \textcolor{keywordflow}{else}\ DunneKaboth\ =\ \textcolor{stringliteral}{"{}>\ 5\ \#sigma"{}};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \textcolor{keywordflow}{return}\ DunneKaboth;}
+\DoxyCodeLine{00051\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{StatisticalUtils_8h_a7237fc819d10a341c286a5597f584a96}\label{StatisticalUtils_8h_a7237fc819d10a341c286a5597f584a96}} 
+\index{StatisticalUtils.h@{StatisticalUtils.h}!GetGaussian@{GetGaussian}}
+\index{GetGaussian@{GetGaussian}!StatisticalUtils.h@{StatisticalUtils.h}}
+\doxysubsubsection{\texorpdfstring{GetGaussian()}{GetGaussian()}}
+{\footnotesize\ttfamily void Get\+Gaussian (\begin{DoxyParamCaption}\item[{TH1D $\ast$\&}]{hist,  }\item[{TF1 $\ast$}]{gauss,  }\item[{double \&}]{Mean,  }\item[{double \&}]{Error }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+CW\+: Fit Gaussian to posterior. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hist} & histograms to which we fit gaussian \\
+\hline
+{\em gauss} & tf1 with gaussian, we pass pointer to make things faster \\
+\hline
+{\em Mean} & Gaussian Mean value \\
+\hline
+{\em Error} & Gaussian Error value \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{StatisticalUtils_8h_source_l00257}{257}} of file \mbox{\hyperlink{StatisticalUtils_8h_source}{Statistical\+Utils.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00258\ \textcolor{comment}{//\ **************************}}
+\DoxyCodeLine{00259\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ meanval\ =\ hist-\/>GetMean();}
+\DoxyCodeLine{00260\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ err\ =\ hist-\/>GetRMS();}
+\DoxyCodeLine{00261\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ peakval\ =\ hist-\/>GetBinCenter(hist-\/>GetMaximumBin());}
+\DoxyCodeLine{00262\ }
+\DoxyCodeLine{00263\ \ \ \textcolor{comment}{//\ Set\ the\ range\ for\ the\ Gaussian\ fit}}
+\DoxyCodeLine{00264\ \ \ gauss-\/>SetRange(meanval\ -\/\ 1.5*err\ ,\ meanval\ +\ 1.5*err);}
+\DoxyCodeLine{00265\ \ \ \textcolor{comment}{//\ Set\ the\ starting\ parameters\ close\ to\ RMS\ and\ peaks\ of\ the\ histograms}}
+\DoxyCodeLine{00266\ \ \ gauss-\/>SetParameters(hist-\/>GetMaximum()*err*std::sqrt(2*3.14),\ peakval,\ err);}
+\DoxyCodeLine{00267\ }
+\DoxyCodeLine{00268\ \ \ \textcolor{comment}{//\ Perform\ the\ fit}}
+\DoxyCodeLine{00269\ \ \ hist-\/>Fit(gauss-\/>GetName(),\textcolor{stringliteral}{"{}Rq"{}});}
+\DoxyCodeLine{00270\ \ \ hist-\/>SetStats(0);}
+\DoxyCodeLine{00271\ }
+\DoxyCodeLine{00272\ \ \ \mbox{\hyperlink{RHat_8cpp_ab7d224b5fffa9367046f2976bb4972d1}{Mean}}\ =\ gauss-\/>GetParameter(1);}
+\DoxyCodeLine{00273\ \ \ Error\ =\ gauss-\/>GetParameter(2);}
+\DoxyCodeLine{00274\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{StatisticalUtils_8h_aadbb121e8fc7db8e4e28d6b04d351460}\label{StatisticalUtils_8h_aadbb121e8fc7db8e4e28d6b04d351460}} 
+\index{StatisticalUtils.h@{StatisticalUtils.h}!GetHPD@{GetHPD}}
+\index{GetHPD@{GetHPD}!StatisticalUtils.h@{StatisticalUtils.h}}
+\doxysubsubsection{\texorpdfstring{GetHPD()}{GetHPD()}}
+{\footnotesize\ttfamily void Get\+HPD (\begin{DoxyParamCaption}\item[{TH1D $\ast$const}]{hist,  }\item[{double \&}]{Mean,  }\item[{double \&}]{Error,  }\item[{double \&}]{Error\+\_\+p,  }\item[{double \&}]{Error\+\_\+m,  }\item[{const double}]{coverage = {\ttfamily 0.6827} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get Highest Posterior Density (HPD) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hist} & histograms from which we HPD \\
+\hline
+{\em Mean} & HPD Mean value \\
+\hline
+{\em Error} & HPD Error value \\
+\hline
+{\em Error\+\_\+p} & HPD Negative (left hand side) Error value \\
+\hline
+{\em Error\+\_\+m} & HPD Positive (right hand side) Error value \\
+\hline
+{\em coverage} & What is defined coverage, by default 0.\+6827 (1 sigma) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{StatisticalUtils_8h_source_l00284}{284}} of file \mbox{\hyperlink{StatisticalUtils_8h_source}{Statistical\+Utils.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00285\ \textcolor{comment}{//\ ****************}}
+\DoxyCodeLine{00286\ \ \ \textcolor{comment}{//\ Get\ the\ bin\ which\ has\ the\ largest\ posterior\ density}}
+\DoxyCodeLine{00287\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ MaxBin\ =\ hist-\/>GetMaximumBin();}
+\DoxyCodeLine{00288\ \ \ \textcolor{comment}{//\ And\ it's\ value}}
+\DoxyCodeLine{00289\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ peakval\ =\ hist-\/>GetBinCenter(MaxBin);}
+\DoxyCodeLine{00290\ }
+\DoxyCodeLine{00291\ \ \ \textcolor{comment}{//\ The\ total\ integral\ of\ the\ posterior}}
+\DoxyCodeLine{00292\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ Integral\ =\ hist-\/>Integral();}
+\DoxyCodeLine{00293\ \ \ \textcolor{comment}{//KS:\ and\ integral\ of\ left\ handed\ and\ right\ handed\ parts}}
+\DoxyCodeLine{00294\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ LowIntegral\ =\ hist-\/>Integral(1,\ MaxBin-\/1)\ +\ hist-\/>GetBinContent(MaxBin)/2.0;}
+\DoxyCodeLine{00295\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ HighIntegral\ =\ hist-\/>Integral(MaxBin+1,\ hist-\/>GetNbinsX())\ +\ hist-\/>GetBinContent(MaxBin)/2.0;}
+\DoxyCodeLine{00296\ }
+\DoxyCodeLine{00297\ \ \ \textcolor{comment}{//\ Keep\ count\ of\ how\ much\ area\ we're\ covering}}
+\DoxyCodeLine{00298\ \ \ \textcolor{comment}{//KS:\ Take\ only\ half\ content\ of\ HPD\ bin\ as\ one\ half\ goes\ for\ right\ handed\ error\ and\ the\ other\ for\ left\ handed\ error}}
+\DoxyCodeLine{00299\ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ sum\ =\ hist-\/>GetBinContent(MaxBin)/2.0;}
+\DoxyCodeLine{00300\ }
+\DoxyCodeLine{00301\ \ \ \textcolor{comment}{//\ Counter\ for\ current\ bin}}
+\DoxyCodeLine{00302\ \ \ \textcolor{keywordtype}{int}\ CurrBin\ =\ MaxBin;}
+\DoxyCodeLine{00303\ \ \ \textcolor{keywordflow}{while}\ (sum/HighIntegral\ <\ coverage\ \&\&\ CurrBin\ <\ hist-\/>GetNbinsX())\ \{}
+\DoxyCodeLine{00304\ \ \ \ \ CurrBin++;}
+\DoxyCodeLine{00305\ \ \ \ \ sum\ +=\ hist-\/>GetBinContent(CurrBin);}
+\DoxyCodeLine{00306\ \ \ \}}
+\DoxyCodeLine{00307\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ sigma\_p\ =\ std::fabs(hist-\/>GetBinCenter(MaxBin)-\/hist-\/>GetXaxis()-\/>GetBinUpEdge(CurrBin));}
+\DoxyCodeLine{00308\ \ \ \textcolor{comment}{//\ Reset\ the\ sum}}
+\DoxyCodeLine{00309\ \ \ \textcolor{comment}{//KS:\ Take\ only\ half\ content\ of\ HPD\ bin\ as\ one\ half\ goes\ for\ right\ handed\ error\ and\ the\ other\ for\ left\ handed\ error}}
+\DoxyCodeLine{00310\ \ \ sum\ =\ hist-\/>GetBinContent(MaxBin)/2.0;}
+\DoxyCodeLine{00311\ }
+\DoxyCodeLine{00312\ \ \ \textcolor{comment}{//\ Reset\ the\ bin\ counter}}
+\DoxyCodeLine{00313\ \ \ CurrBin\ =\ MaxBin;}
+\DoxyCodeLine{00314\ \ \ \textcolor{comment}{//\ Counter\ for\ current\ bin}}
+\DoxyCodeLine{00315\ \ \ \textcolor{keywordflow}{while}\ (sum/LowIntegral\ <\ coverage\ \&\&\ CurrBin\ >\ 1)\ \{}
+\DoxyCodeLine{00316\ \ \ \ \ CurrBin-\/-\/;}
+\DoxyCodeLine{00317\ \ \ \ \ sum\ +=\ hist-\/>GetBinContent(CurrBin);}
+\DoxyCodeLine{00318\ \ \ \}}
+\DoxyCodeLine{00319\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ sigma\_m\ =\ std::fabs(hist-\/>GetBinCenter(CurrBin)-\/hist-\/>GetBinLowEdge(MaxBin));}
+\DoxyCodeLine{00320\ }
+\DoxyCodeLine{00321\ \ \ \textcolor{comment}{//\ Now\ do\ the\ double\ sided\ HPD}}
+\DoxyCodeLine{00322\ \ \ \textcolor{comment}{//KS:\ Start\ sum\ from\ the\ HPD}}
+\DoxyCodeLine{00323\ \ \ sum\ =\ hist-\/>GetBinContent(MaxBin);}
+\DoxyCodeLine{00324\ \ \ \textcolor{keywordtype}{int}\ LowBin\ =\ MaxBin;}
+\DoxyCodeLine{00325\ \ \ \textcolor{keywordtype}{int}\ HighBin\ =\ MaxBin;}
+\DoxyCodeLine{00326\ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ LowCon\ =\ 0.0;}
+\DoxyCodeLine{00327\ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ HighCon\ =\ 0.0;}
+\DoxyCodeLine{00328\ }
+\DoxyCodeLine{00329\ \ \ \textcolor{keywordflow}{while}\ (sum/Integral\ <\ coverage\ \&\&\ (LowBin\ >\ 0\ ||\ HighBin\ <\ hist-\/>GetNbinsX()+1))}
+\DoxyCodeLine{00330\ \ \ \{}
+\DoxyCodeLine{00331\ \ \ \ \ LowCon\ =\ 0.0;}
+\DoxyCodeLine{00332\ \ \ \ \ HighCon\ =\ 0.0;}
+\DoxyCodeLine{00333\ \ \ \ \ \textcolor{comment}{//KS::\ Move\ further\ only\ if\ you\ haven't\ reached\ histogram\ end}}
+\DoxyCodeLine{00334\ \ \ \ \ \textcolor{keywordflow}{if}(LowBin\ >\ 1)}
+\DoxyCodeLine{00335\ \ \ \ \ \{}
+\DoxyCodeLine{00336\ \ \ \ \ \ \ LowBin-\/-\/;}
+\DoxyCodeLine{00337\ \ \ \ \ \ \ LowCon\ =\ hist-\/>GetBinContent(LowBin);}
+\DoxyCodeLine{00338\ \ \ \ \ \}}
+\DoxyCodeLine{00339\ \ \ \ \ \textcolor{keywordflow}{if}(HighBin\ <\ hist-\/>GetNbinsX())}
+\DoxyCodeLine{00340\ \ \ \ \ \{}
+\DoxyCodeLine{00341\ \ \ \ \ \ \ HighBin++;}
+\DoxyCodeLine{00342\ \ \ \ \ \ \ HighCon\ =\ hist-\/>GetBinContent(HighBin);}
+\DoxyCodeLine{00343\ \ \ \ \ \}}
+\DoxyCodeLine{00344\ }
+\DoxyCodeLine{00345\ \ \ \ \ \textcolor{comment}{//\ If\ we're\ on\ the\ last\ slice\ and\ the\ lower\ contour\ is\ larger\ than\ the\ upper}}
+\DoxyCodeLine{00346\ \ \ \ \ \textcolor{keywordflow}{if}\ ((sum+LowCon+HighCon)/Integral\ >\ coverage\ \&\&\ LowCon\ >\ HighCon)\ \{}
+\DoxyCodeLine{00347\ \ \ \ \ \ \ sum\ +=\ LowCon;}
+\DoxyCodeLine{00348\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00349\ \ \ \ \ \ \ \textcolor{comment}{//\ If\ we're\ on\ the\ last\ slice\ and\ the\ upper\ contour\ is\ larger\ than\ the\ lower}}
+\DoxyCodeLine{00350\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ ((sum+LowCon+HighCon)/Integral\ >\ coverage\ \&\&\ HighCon\ >=\ LowCon)\ \{}
+\DoxyCodeLine{00351\ \ \ \ \ \ \ sum\ +=\ HighCon;}
+\DoxyCodeLine{00352\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00353\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00354\ \ \ \ \ \ \ sum\ +=\ LowCon\ +\ HighCon;}
+\DoxyCodeLine{00355\ \ \ \ \ \}}
+\DoxyCodeLine{00356\ \ \ \}}
+\DoxyCodeLine{00357\ }
+\DoxyCodeLine{00358\ \ \ \textcolor{keywordtype}{double}\ sigma\_hpd\ =\ 0.0;}
+\DoxyCodeLine{00359\ \ \ \textcolor{keywordflow}{if}\ (LowCon\ >\ HighCon)\ \{}
+\DoxyCodeLine{00360\ \ \ \ \ sigma\_hpd\ =\ std::fabs(hist-\/>GetBinLowEdge(LowBin)-\/hist-\/>GetBinCenter(MaxBin));}
+\DoxyCodeLine{00361\ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00362\ \ \ \ \ sigma\_hpd\ =\ std::fabs(hist-\/>GetXaxis()-\/>GetBinUpEdge(HighBin)-\/hist-\/>GetBinCenter(MaxBin));}
+\DoxyCodeLine{00363\ \ \ \}}
+\DoxyCodeLine{00364\ }
+\DoxyCodeLine{00365\ \ \ \mbox{\hyperlink{RHat_8cpp_ab7d224b5fffa9367046f2976bb4972d1}{Mean}}\ =\ peakval;}
+\DoxyCodeLine{00366\ \ \ Error\ =\ sigma\_hpd;}
+\DoxyCodeLine{00367\ \ \ Error\_p\ =\ sigma\_p;}
+\DoxyCodeLine{00368\ \ \ Error\_m\ =\ sigma\_m;}
+\DoxyCodeLine{00369\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{StatisticalUtils_8h_a94e492e3e9142db9e1cb1c4c027259f3}\label{StatisticalUtils_8h_a94e492e3e9142db9e1cb1c4c027259f3}} 
+\index{StatisticalUtils.h@{StatisticalUtils.h}!GetIQR@{GetIQR}}
+\index{GetIQR@{GetIQR}!StatisticalUtils.h@{StatisticalUtils.h}}
+\doxysubsubsection{\texorpdfstring{GetIQR()}{GetIQR()}}
+{\footnotesize\ttfamily double Get\+IQR (\begin{DoxyParamCaption}\item[{TH1D $\ast$}]{Hist }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Interquartile Range (IQR) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hist} & histograms from which we IQR \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{StatisticalUtils_8h_source_l00486}{486}} of file \mbox{\hyperlink{StatisticalUtils_8h_source}{Statistical\+Utils.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00486\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00487\ \textcolor{comment}{//\ *********************}}
+\DoxyCodeLine{00488\ \ \ \textcolor{keywordflow}{if}(Hist-\/>Integral()\ ==\ 0)\ \textcolor{keywordflow}{return}\ 0.0;}
+\DoxyCodeLine{00489\ }
+\DoxyCodeLine{00490\ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{double}\ quartiles\_x[3]\ =\ \{0.25,\ 0.5,\ 0.75\};}
+\DoxyCodeLine{00491\ \ \ \textcolor{keywordtype}{double}\ quartiles[3];}
+\DoxyCodeLine{00492\ }
+\DoxyCodeLine{00493\ \ \ Hist-\/>GetQuantiles(3,\ quartiles,\ quartiles\_x);}
+\DoxyCodeLine{00494\ }
+\DoxyCodeLine{00495\ \ \ \textcolor{keywordflow}{return}\ quartiles[2]\ -\/\ quartiles[0];}
+\DoxyCodeLine{00496\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{StatisticalUtils_8h_aac0e253784ed2f2a3258d68df22a2568}\label{StatisticalUtils_8h_aac0e253784ed2f2a3258d68df22a2568}} 
+\index{StatisticalUtils.h@{StatisticalUtils.h}!GetJeffreysScale@{GetJeffreysScale}}
+\index{GetJeffreysScale@{GetJeffreysScale}!StatisticalUtils.h@{StatisticalUtils.h}}
+\doxysubsubsection{\texorpdfstring{GetJeffreysScale()}{GetJeffreysScale()}}
+{\footnotesize\ttfamily std\+::string Get\+Jeffreys\+Scale (\begin{DoxyParamCaption}\item[{const double}]{Bayes\+Factor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+KS\+: Following H. Jeffreys \cite{jeffreys1998theory}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Bayes\+Factor} & Obtained value of Bayes factor \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{StatisticalUtils_8h_source_l00021}{21}} of file \mbox{\hyperlink{StatisticalUtils_8h_source}{Statistical\+Utils.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ **************************}}
+\DoxyCodeLine{00023\ \ \ std::string\ JeffreysScale\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00024\ \ \ \textcolor{comment}{//KS:\ Get\ fancy\ Jeffreys\ Scale\ as\ I\ am\ to\ lazy\ to\ look\ into\ table\ every\ time}}
+\DoxyCodeLine{00025\ \ \ \textcolor{keywordflow}{if}(BayesFactor\ <\ 0)\ \ \ \ \ \ \ \ JeffreysScale\ =\ \textcolor{stringliteral}{"{}Negative"{}};}
+\DoxyCodeLine{00026\ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(\ 5\ >\ BayesFactor)\ \ JeffreysScale\ =\ \textcolor{stringliteral}{"{}Barely\ worth\ mentioning"{}};}
+\DoxyCodeLine{00027\ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(\ 10\ >\ BayesFactor)\ JeffreysScale\ =\ \textcolor{stringliteral}{"{}Substantial"{}};}
+\DoxyCodeLine{00028\ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(\ 15\ >\ BayesFactor)\ JeffreysScale\ =\ \textcolor{stringliteral}{"{}Strong"{}};}
+\DoxyCodeLine{00029\ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(\ 20\ >\ BayesFactor)\ JeffreysScale\ =\ \textcolor{stringliteral}{"{}Very\ strong"{}};}
+\DoxyCodeLine{00030\ \ \ \textcolor{keywordflow}{else}\ JeffreysScale\ =\ \textcolor{stringliteral}{"{}Decisive"{}};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \textcolor{keywordflow}{return}\ JeffreysScale;}
+\DoxyCodeLine{00033\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{StatisticalUtils_8h_aaf02981e45bb7adc146cebb4d82c6f36}\label{StatisticalUtils_8h_aaf02981e45bb7adc146cebb4d82c6f36}} 
+\index{StatisticalUtils.h@{StatisticalUtils.h}!GetNeffective@{GetNeffective}}
+\index{GetNeffective@{GetNeffective}!StatisticalUtils.h@{StatisticalUtils.h}}
+\doxysubsubsection{\texorpdfstring{GetNeffective()}{GetNeffective()}}
+{\footnotesize\ttfamily double Get\+Neffective (\begin{DoxyParamCaption}\item[{const int}]{N1,  }\item[{const int}]{N2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+KS\+: See 14.\+3.\+10 in Numerical Recipes in C \cite{press1992numerical}. 
+
+
+
+Definition at line \mbox{\hyperlink{StatisticalUtils_8h_source_l00103}{103}} of file \mbox{\hyperlink{StatisticalUtils_8h_source}{Statistical\+Utils.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00104\ \textcolor{comment}{//\ ****************}}
+\DoxyCodeLine{00105\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ Nominator\ =\ (N1+N2);}
+\DoxyCodeLine{00106\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ Denominator\ =\ (N1*N2);}
+\DoxyCodeLine{00107\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ N\_e\ =\ Nominator/Denominator;}
+\DoxyCodeLine{00108\ \ \ \textcolor{keywordflow}{return}\ N\_e;}
+\DoxyCodeLine{00109\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{StatisticalUtils_8h_ad58f0ddda31283c3598fc09f98046192}\label{StatisticalUtils_8h_ad58f0ddda31283c3598fc09f98046192}} 
+\index{StatisticalUtils.h@{StatisticalUtils.h}!GetNumberOfRuns@{GetNumberOfRuns}}
+\index{GetNumberOfRuns@{GetNumberOfRuns}!StatisticalUtils.h@{StatisticalUtils.h}}
+\doxysubsubsection{\texorpdfstring{GetNumberOfRuns()}{GetNumberOfRuns()}}
+{\footnotesize\ttfamily int Get\+Number\+Of\+Runs (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{Group\+Clasifier }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+KS\+: \href{https://esjeevanand.uccollege.edu.in/wp-content/uploads/sites/114/2020/08/NON-PARAMTERIC-TEST-6.pdf}{\texttt{ https\+://esjeevanand.\+uccollege.\+edu.\+in/wp-\/content/uploads/sites/114/2020/08/\+NON-\/\+PARAMTERIC-\/\+TEST-\/6.\+pdf}}. 
+
+
+
+Definition at line \mbox{\hyperlink{StatisticalUtils_8h_source_l00170}{170}} of file \mbox{\hyperlink{StatisticalUtils_8h_source}{Statistical\+Utils.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00171\ \textcolor{comment}{//\ ****************}}
+\DoxyCodeLine{00172\ \ \ \textcolor{keywordtype}{int}\ NumberOfRuns\ =\ 0;}
+\DoxyCodeLine{00173\ \ \ \textcolor{keywordtype}{int}\ PreviousGroup\ =\ -\/999;}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00175\ \ \ \textcolor{comment}{//KS:\ If\ group\ changed\ increment\ run}}
+\DoxyCodeLine{00176\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ GroupClasifier.size();\ i++)}
+\DoxyCodeLine{00177\ \ \ \{}
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keywordflow}{if}(GroupClasifier[i]\ !=\ PreviousGroup)}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ NumberOfRuns++;}
+\DoxyCodeLine{00180\ \ \ \ \ PreviousGroup\ =\ GroupClasifier[i];}
+\DoxyCodeLine{00181\ \ \ \}}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00183\ \ \ \textcolor{keywordflow}{return}\ NumberOfRuns;}
+\DoxyCodeLine{00184\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{StatisticalUtils_8h_a04394b98587b44b98b003bd1226606ed}\label{StatisticalUtils_8h_a04394b98587b44b98b003bd1226606ed}} 
+\index{StatisticalUtils.h@{StatisticalUtils.h}!GetSigmaValue@{GetSigmaValue}}
+\index{GetSigmaValue@{GetSigmaValue}!StatisticalUtils.h@{StatisticalUtils.h}}
+\doxysubsubsection{\texorpdfstring{GetSigmaValue()}{GetSigmaValue()}}
+{\footnotesize\ttfamily double Get\+Sigma\+Value (\begin{DoxyParamCaption}\item[{const int}]{sigma }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+KS\+: Convert sigma from normal distribution into percentage. 
+
+
+
+Definition at line \mbox{\hyperlink{StatisticalUtils_8h_source_l00055}{55}} of file \mbox{\hyperlink{StatisticalUtils_8h_source}{Statistical\+Utils.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00056\ \textcolor{comment}{//\ *********************}}
+\DoxyCodeLine{00057\ \ \ \textcolor{keywordtype}{double}\ width\ =\ 0;}
+\DoxyCodeLine{00058\ \ \ \textcolor{keywordflow}{switch}\ (std::abs(sigma))}
+\DoxyCodeLine{00059\ \ \ \{}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordflow}{case}\ 1:}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ width\ =\ 0.682689492137;}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordflow}{case}\ 2:}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ width\ =\ 0.954499736104;}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordflow}{case}\ 3:}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ width\ =\ 0.997300203937;}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordflow}{case}\ 4:}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ width\ =\ 0.999936657516;}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordflow}{case}\ 5:}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ width\ =\ 0.999999426697;}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordflow}{case}\ 6:}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ width\ =\ 0.999999998027;}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}\{\}\ \ is\ unsupported\ value\ of\ sigma"{}},\ sigma);}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_\ ,\ \_\_LINE\_\_\ );}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00082\ \ \ \}}
+\DoxyCodeLine{00083\ \ \ \textcolor{keywordflow}{return}\ width;}
+\DoxyCodeLine{00084\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{StatisticalUtils_8h_a34d5232bfb12e29ec9d63acaa8744b58}\label{StatisticalUtils_8h_a34d5232bfb12e29ec9d63acaa8744b58}} 
+\index{StatisticalUtils.h@{StatisticalUtils.h}!GetSubOptimality@{GetSubOptimality}}
+\index{GetSubOptimality@{GetSubOptimality}!StatisticalUtils.h@{StatisticalUtils.h}}
+\doxysubsubsection{\texorpdfstring{GetSubOptimality()}{GetSubOptimality()}}
+{\footnotesize\ttfamily double Get\+Sub\+Optimality (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{Eigen\+Values,  }\item[{const int}]{Total\+Tarameters }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Based on \cite{roberts2009adaptive}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Eigen\+Values} & Eigen values of covariance matrix \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{StatisticalUtils_8h_source_l00224}{224}} of file \mbox{\hyperlink{StatisticalUtils_8h_source}{Statistical\+Utils.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00225\ \textcolor{comment}{//\ *********************}}
+\DoxyCodeLine{00226\ \ \ \textcolor{keywordtype}{double}\ sum\_eigenvalues\_squared\_inv\ =\ 0.0;}
+\DoxyCodeLine{00227\ \ \ \textcolor{keywordtype}{double}\ sum\_eigenvalues\_inv\ =\ 0.0;}
+\DoxyCodeLine{00228\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ EigenValues.size();\ j++)}
+\DoxyCodeLine{00229\ \ \ \{}
+\DoxyCodeLine{00230\ \ \ \ \ \textcolor{comment}{//KS:\ IF\ Eigen\ values\ are\ super\ small\ skip\ them}}
+\DoxyCodeLine{00231\ \ \ \ \ \textcolor{comment}{//if(EigenValues[j]\ <\ 0.0000001)\ continue;}}
+\DoxyCodeLine{00232\ \ \ \ \ sum\_eigenvalues\_squared\_inv\ +=\ std::pow(EigenValues[j],\ -\/2);}
+\DoxyCodeLine{00233\ \ \ \ \ sum\_eigenvalues\_inv\ +=\ 1.0\ /\ EigenValues[j];}
+\DoxyCodeLine{00234\ \ \ \}}
+\DoxyCodeLine{00235\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ SubOptimality\ =\ TotalTarameters\ *\ sum\_eigenvalues\_squared\_inv\ /\ std::pow(sum\_eigenvalues\_inv,\ 2);}
+\DoxyCodeLine{00236\ \ \ \textcolor{keywordflow}{return}\ SubOptimality;}
+\DoxyCodeLine{00237\ \}}
+
+\end{DoxyCode}

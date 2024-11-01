@@ -1,0 +1,519 @@
+\hypertarget{GetPenaltyTerm_8cpp}{}\doxysection{/home/runner/work/\+Ma\+Ch3/\+Ma\+Ch3/\+Diagnostics/\+Get\+Penalty\+Term.cpp File Reference}
+\label{GetPenaltyTerm_8cpp}\index{/home/runner/work/MaCh3/MaCh3/Diagnostics/GetPenaltyTerm.cpp@{/home/runner/work/MaCh3/MaCh3/Diagnostics/GetPenaltyTerm.cpp}}
+
+
+KS\+: This file contains the implementation of the function to extract specific penalty terms from systematic chains.  
+
+
+{\ttfamily \#include \char`\"{}TFile.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}TBranch.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}TCanvas.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}TLine.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}TLegend.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}TString.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}TStyle.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}TMatrix\+T.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}TMatrix\+DSym.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}TVector\+D.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}TObject.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}TChain.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}TH1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}TColor.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}TObj\+String.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}TROOT.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}manager/manager.\+h\char`\"{}}\newline
+Include dependency graph for Get\+Penalty\+Term.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{GetPenaltyTerm_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{GetPenaltyTerm_8cpp_a85332b9994750992c48e45f0bba7f43d}{Read\+XSec\+File}} (const std\+::string \&input\+File)
+\item 
+void \mbox{\hyperlink{GetPenaltyTerm_8cpp_a84a9174999180db166e835e930e20b59}{Get\+Penalty\+Term}} (const std\+::string \&input\+File, const std\+::string \&config\+File)
+\item 
+int \mbox{\hyperlink{GetPenaltyTerm_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{GetPenaltyTerm_8cpp_a35f9d8ea46badc9ea84d62feaa0e73df}{nominal}}
+\item 
+std\+::vector$<$ bool $>$ \mbox{\hyperlink{GetPenaltyTerm_8cpp_ae7c3a438d4508eba7ac26e26135b2c17}{is\+Flat}}
+\item 
+std\+::vector$<$ TString $>$ \mbox{\hyperlink{GetPenaltyTerm_8cpp_a871d6466cea2597401bdb203293f4033}{Branch\+Names}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{GetPenaltyTerm_8cpp_a7428f3d1db32b479cffb2572cba8725c}{Param\+Names}}
+\item 
+int \mbox{\hyperlink{GetPenaltyTerm_8cpp_a439227feff9d7f55384e8780cfc2eb82}{size}}
+\item 
+double $\ast$$\ast$ \mbox{\hyperlink{GetPenaltyTerm_8cpp_a3fd4dd88b1fa6119298781296ea761c5}{inv\+Cov\+Matrix}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+KS\+: This file contains the implementation of the function to extract specific penalty terms from systematic chains. 
+
+This script is designed to retrieve penalty terms from various sources, such as flux and cross-\/section systematic chains. Since flux and cross-\/section uncertainties are handled systematically, the penalty term cannot be taken directly from the chain.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000013}{Todo}}]KS\+: This should really be moved to MCMC Processor \end{DoxyRefDesc}
+
+
+Definition in file \mbox{\hyperlink{GetPenaltyTerm_8cpp_source}{Get\+Penalty\+Term.\+cpp}}.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{GetPenaltyTerm_8cpp_a84a9174999180db166e835e930e20b59}\label{GetPenaltyTerm_8cpp_a84a9174999180db166e835e930e20b59}} 
+\index{GetPenaltyTerm.cpp@{GetPenaltyTerm.cpp}!GetPenaltyTerm@{GetPenaltyTerm}}
+\index{GetPenaltyTerm@{GetPenaltyTerm}!GetPenaltyTerm.cpp@{GetPenaltyTerm.cpp}}
+\doxysubsubsection{\texorpdfstring{GetPenaltyTerm()}{GetPenaltyTerm()}}
+{\footnotesize\ttfamily void Get\+Penalty\+Term (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{input\+File,  }\item[{const std\+::string \&}]{config\+File }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{GetPenaltyTerm_8cpp_source_l00127}{127}} of file \mbox{\hyperlink{GetPenaltyTerm_8cpp_source}{Get\+Penalty\+Term.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00128\ \{}
+\DoxyCodeLine{00129\ \ \ \textcolor{keyword}{auto}\ canvas\ =\ std::make\_unique<TCanvas>(\textcolor{stringliteral}{"{}canvas"{}},\ \textcolor{stringliteral}{"{}canvas"{}},\ 0,\ 0,\ 1024,\ 1024);}
+\DoxyCodeLine{00130\ \ \ canvas-\/>SetGrid();}
+\DoxyCodeLine{00131\ \ \ canvas-\/>SetTickx();}
+\DoxyCodeLine{00132\ \ \ canvas-\/>SetTicky();}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \ \ canvas-\/>SetBottomMargin(0.1f);}
+\DoxyCodeLine{00135\ \ \ canvas-\/>SetTopMargin(0.02f);}
+\DoxyCodeLine{00136\ \ \ canvas-\/>SetRightMargin(0.08f);}
+\DoxyCodeLine{00137\ \ \ canvas-\/>SetLeftMargin(0.15f);}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \ \ gStyle-\/>SetOptTitle(0);\ }
+\DoxyCodeLine{00140\ \ \ gStyle-\/>SetOptStat(0);\ }
+\DoxyCodeLine{00141\ \ \ gStyle-\/>SetPalette(51);}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \ \ \mbox{\hyperlink{GetPenaltyTerm_8cpp_a85332b9994750992c48e45f0bba7f43d}{ReadXSecFile}}(inputFile);}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \ \ \textcolor{comment}{//\ Open\ the\ Chain}}
+\DoxyCodeLine{00146\ \ \ TChain*\ Chain\ =\ \textcolor{keyword}{new}\ TChain(\textcolor{stringliteral}{"{}posteriors"{}},\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00147\ \ \ Chain-\/>Add(inputFile.c\_str());\ }
+\DoxyCodeLine{00148\ \ \ \ \ }
+\DoxyCodeLine{00149\ \ \ \textcolor{comment}{//\ Get\ the\ list\ of\ branches}}
+\DoxyCodeLine{00150\ \ \ TObjArray*\ brlis\ =\ Chain-\/>GetListOfBranches();}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ \ \ \textcolor{comment}{//\ Get\ the\ number\ of\ branches}}
+\DoxyCodeLine{00153\ \ \ \textcolor{keywordtype}{int}\ nBranches\ =\ brlis-\/>GetEntries();}
+\DoxyCodeLine{00154\ \ \ \textcolor{keywordtype}{int}\ RelevantBranches\ =\ 0;}
+\DoxyCodeLine{00155\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ nBranches;\ i++)\ }
+\DoxyCodeLine{00156\ \ \ \{}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{comment}{//\ Get\ the\ TBranch\ and\ its\ name}}
+\DoxyCodeLine{00158\ \ \ \ \ TBranch*\ br\ =\ \textcolor{keyword}{static\_cast<}TBranch*\textcolor{keyword}{>}(brlis-\/>At(i));}
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keywordflow}{if}(!br)\{}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Invalid\ branch\ at\ position\ \{\}"{}},\ i);}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_,\_\_LINE\_\_);}
+\DoxyCodeLine{00162\ \ \ \ \ \}}
+\DoxyCodeLine{00163\ \ \ \ \ TString\ bname\ =\ br-\/>GetName();}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{comment}{//\ If\ we're\ on\ beam\ systematics}}
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keywordflow}{if}(bname.BeginsWith(\textcolor{stringliteral}{"{}xsec\_"{}}))}
+\DoxyCodeLine{00167\ \ \ \ \ \{}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \mbox{\hyperlink{GetPenaltyTerm_8cpp_a871d6466cea2597401bdb203293f4033}{BranchNames}}.push\_back(bname);}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ RelevantBranches++;}
+\DoxyCodeLine{00170\ \ \ \ \ \}}
+\DoxyCodeLine{00171\ \ \ \}}
+\DoxyCodeLine{00172\ \ \ }
+\DoxyCodeLine{00173\ \ \ \textcolor{comment}{//\ Set\ all\ the\ branches\ to\ off}}
+\DoxyCodeLine{00174\ \ \ Chain-\/>SetBranchStatus(\textcolor{stringliteral}{"{}*"{}},\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00175\ \ \ }
+\DoxyCodeLine{00176\ \ \ std::vector<double>\ fParProp(RelevantBranches);}
+\DoxyCodeLine{00177\ \ \ \textcolor{comment}{//\ Turn\ on\ the\ branches\ which\ we\ want\ for\ parameters}}
+\DoxyCodeLine{00178\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ RelevantBranches;\ ++i)\ }
+\DoxyCodeLine{00179\ \ \ \{}
+\DoxyCodeLine{00180\ \ \ \ \ Chain-\/>SetBranchStatus(\mbox{\hyperlink{GetPenaltyTerm_8cpp_a871d6466cea2597401bdb203293f4033}{BranchNames}}[i].Data(),\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00181\ \ \ \ \ Chain-\/>SetBranchAddress(\mbox{\hyperlink{GetPenaltyTerm_8cpp_a871d6466cea2597401bdb203293f4033}{BranchNames}}[i].Data(),\ \&fParProp[i]);}
+\DoxyCodeLine{00182\ \ \ \}}
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00184\ \ \ YAML::Node\ Settings\ =\ YAML::LoadFile(configFile.c\_str());}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00186\ \ \ std::vector<std::string>\ SetsNames;}
+\DoxyCodeLine{00187\ \ \ std::vector<std::vector<std::string>>\ RemoveNames;}
+\DoxyCodeLine{00188\ \ \ std::vector<bool>\ Exclude;}
+\DoxyCodeLine{00189\ \ \ std::vector<std::string>\ FancyTittle;}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00191\ \ \ std::vector<std::vector<bool>>\ isRelevantParam;}
+\DoxyCodeLine{00192\ \ \ std::vector<std::string>\ node\ =\ Settings[\textcolor{stringliteral}{"{}GetPenaltyTerm"{}}][\textcolor{stringliteral}{"{}PenaltySets"{}}].as<std::vector<std::string>>();}
+\DoxyCodeLine{00193\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ node.size();\ i++)}
+\DoxyCodeLine{00194\ \ \ \{}
+\DoxyCodeLine{00195\ \ \ \ \ std::string\ ParName\ =\ node[i];}
+\DoxyCodeLine{00196\ \ \ \ \ SetsNames.push\_back(ParName);}
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00198\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ Set\ =\ Settings[\textcolor{stringliteral}{"{}GetPenaltyTerm"{}}][ParName];}
+\DoxyCodeLine{00199\ }
+\DoxyCodeLine{00200\ \ \ \ \ RemoveNames.push\_back(Set[0].as<std::vector<std::string>>());}
+\DoxyCodeLine{00201\ \ \ \ \ Exclude.push\_back(Set[1].as<bool>());}
+\DoxyCodeLine{00202\ \ \ \ \ FancyTittle.push\_back(Set[2].as<std::string>());}
+\DoxyCodeLine{00203\ \ \ \}}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00205\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ NSets\ =\ int(SetsNames.size());}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00207\ \ \ isRelevantParam.resize(NSets);}
+\DoxyCodeLine{00208\ \ \ \textcolor{comment}{//Loop\ over\ sets\ in\ the\ config}}
+\DoxyCodeLine{00209\ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ NSets;\ i++)}
+\DoxyCodeLine{00210\ \ \ \{}
+\DoxyCodeLine{00211\ \ \ \ \ isRelevantParam[i].resize(\mbox{\hyperlink{GetPenaltyTerm_8cpp_a439227feff9d7f55384e8780cfc2eb82}{size}});}
+\DoxyCodeLine{00212\ \ \ \ \ \textcolor{keywordtype}{int}\ counter\ =\ 0;}
+\DoxyCodeLine{00213\ \ \ \ \ \textcolor{comment}{//Loop\ over\ parameters\ in\ the\ Covariance\ object}}
+\DoxyCodeLine{00214\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ \mbox{\hyperlink{GetPenaltyTerm_8cpp_a439227feff9d7f55384e8780cfc2eb82}{size}};\ j++)}
+\DoxyCodeLine{00215\ \ \ \ \ \{}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ isRelevantParam[i][j]\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00217\ }
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \textcolor{comment}{//KS:\ Here\ we\ loop\ over\ all\ names\ and\ if\ parameters\ wasn't\ matched\ then\ we\ set\ it\ is\ relevant.\ For\ xsec\ it\ is\ easier\ to\ do\ it\ like\ this}}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \textcolor{keywordflow}{if}(Exclude[i])}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ found\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ k\ =\ 0;\ k\ <\ RemoveNames[i].size();\ k++)}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{GetPenaltyTerm_8cpp_a7428f3d1db32b479cffb2572cba8725c}{ParamNames}}[j].rfind(RemoveNames[i][k],\ 0)\ ==\ 0)}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \ \ \ \ found\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!found)}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ isRelevantParam[i][j]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \ \ counter++;}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \textcolor{comment}{//KS:\ Here\ is\ much\ simpler,\ if\ parameter\ matched\ then\ it\ is\ relevant}}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ k\ =\ 0;\ k\ <\ RemoveNames[i].size();\ k++)}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{GetPenaltyTerm_8cpp_a7428f3d1db32b479cffb2572cba8725c}{ParamNames}}[j].rfind(RemoveNames[i][k],\ 0)\ ==\ 0)}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ isRelevantParam[i][j]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ counter++;}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00248\ \ \ \ \ \}}
+\DoxyCodeLine{00249\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}\ Found\ \{\}\ params\ for\ set\ \{\}"{}},\ counter,\ SetsNames[i]);}
+\DoxyCodeLine{00250\ \ \ \}}
+\DoxyCodeLine{00251\ }
+\DoxyCodeLine{00252\ \ \ \textcolor{keywordtype}{int}\ AllEvents\ =\ int(Chain-\/>GetEntries());}
+\DoxyCodeLine{00253\ \ \ std::vector<std::unique\_ptr<TH1D>>\ hLogL(NSets);}
+\DoxyCodeLine{00254\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ NSets;\ i++)\ \{}
+\DoxyCodeLine{00255\ \ \ \ \ std::string\ NameTemp\ =\ \textcolor{stringliteral}{"{}LogL\_"{}}\ +\ SetsNames[i];}
+\DoxyCodeLine{00256\ \ \ \ \ hLogL[i]\ =\ std::make\_unique<TH1D>(NameTemp.c\_str(),\ NameTemp.c\_str(),\ AllEvents,\ 0,\ AllEvents);}
+\DoxyCodeLine{00257\ \ \ \ \ hLogL[i]-\/>SetLineColor(kBlue);}
+\DoxyCodeLine{00258\ \ \ \}}
+\DoxyCodeLine{00259\ \ \ std::vector<double>\ logL(NSets,\ 0.0);}
+\DoxyCodeLine{00260\ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ n\ =\ 0;\ n\ <\ AllEvents;\ ++n)}
+\DoxyCodeLine{00261\ \ \ \{}
+\DoxyCodeLine{00262\ \ \ \ \ \textcolor{keywordflow}{if}(n\%10000\ ==\ 0)\ \mbox{\hyperlink{namespaceMaCh3Utils_a4c8bdeb1d34606aed192e9f1311a72f5}{MaCh3Utils::PrintProgressBar}}(n,\ AllEvents);}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ }
+\DoxyCodeLine{00264\ \ \ \ \ Chain-\/>GetEntry(n);}
+\DoxyCodeLine{00265\ }
+\DoxyCodeLine{00266\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ k\ =\ 0;\ k\ <\ NSets;\ ++k)\ logL[k]\ =\ 0.;}
+\DoxyCodeLine{00267\ \textcolor{preprocessor}{\#ifdef\ MULTITHREAD}}
+\DoxyCodeLine{00268\ \ \ \ \ \textcolor{comment}{//\ The\ per-\/thread\ array}}
+\DoxyCodeLine{00269\ \ \ \ \ \textcolor{keywordtype}{double}\ *logL\_private\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00270\ }
+\DoxyCodeLine{00271\ \ \ \ \ \textcolor{comment}{//\ Declare\ the\ omp\ parallel\ region}}
+\DoxyCodeLine{00272\ \ \ \ \ \textcolor{comment}{//\ The\ parallel\ region\ needs\ to\ stretch\ beyond\ the\ for\ loop!}}
+\DoxyCodeLine{00273\ \textcolor{preprocessor}{\ \ \ \ \#pragma\ omp\ parallel\ private(logL\_private)}}
+\DoxyCodeLine{00274\ \ \ \ \ \{}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ logL\_private\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}[NSets]();}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ k\ =\ 0;\ k\ <\ NSets;\ ++k)\ logL\_private[k]\ =\ 0.;}
+\DoxyCodeLine{00277\ }
+\DoxyCodeLine{00278\ \textcolor{preprocessor}{\ \ \ \ \ \ \#pragma\ omp\ for}}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{GetPenaltyTerm_8cpp_a439227feff9d7f55384e8780cfc2eb82}{size}};\ i++)}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <=\ i;\ ++j)}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//check\ if\ flat\ prior}}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{GetPenaltyTerm_8cpp_ae7c3a438d4508eba7ac26e26135b2c17}{isFlat}}[i]\ \&\&\ !\mbox{\hyperlink{GetPenaltyTerm_8cpp_ae7c3a438d4508eba7ac26e26135b2c17}{isFlat}}[j])}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ k\ =\ 0;\ k\ <\ NSets;\ ++k)}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Check\ if\ parameter\ is\ relevant\ for\ this\ set}}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (isRelevantParam[k][i]\ \&\&\ isRelevantParam[k][j])}
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//KS:\ Since\ matrix\ is\ symmetric\ we\ can\ calculate\ non\ diagonal\ elements\ only\ once\ and\ multiply\ by\ 2,\ can\ bring\ up\ to\ factor\ speed\ decrease.}}
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ scale\ =\ 1;}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i\ !=\ j)\ scale\ =\ 2;}
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ logL\_private[k]\ +=\ scale\ *\ 0.5*(fParProp[i]\ -\/\ \mbox{\hyperlink{GetPenaltyTerm_8cpp_a35f9d8ea46badc9ea84d62feaa0e73df}{nominal}}[i])*(fParProp[j]\ -\/\ \mbox{\hyperlink{GetPenaltyTerm_8cpp_a35f9d8ea46badc9ea84d62feaa0e73df}{nominal}}[j])*\mbox{\hyperlink{GetPenaltyTerm_8cpp_a3fd4dd88b1fa6119298781296ea761c5}{invCovMatrix}}[i][j];}
+\DoxyCodeLine{00295\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00297\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00298\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \textcolor{comment}{//\ Now\ we\ can\ write\ the\ individual\ arrays\ from\ each\ thread\ to\ the\ main\ array}}
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ k\ =\ 0;\ k\ <\ NSets;\ ++k)}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00303\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#pragma\ omp\ atomic}}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ logL[k]\ +=\ logL\_private[k];}
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \textcolor{comment}{//Delete\ private\ arrays}}
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ logL\_private;}
+\DoxyCodeLine{00308\ \ \ \ \ \}\textcolor{comment}{//End\ omp\ range}}
+\DoxyCodeLine{00309\ }
+\DoxyCodeLine{00310\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00311\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{GetPenaltyTerm_8cpp_a439227feff9d7f55384e8780cfc2eb82}{size}};\ i++)}
+\DoxyCodeLine{00312\ \ \ \ \ \{}
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <=\ i;\ ++j)}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \textcolor{comment}{//check\ if\ flat\ prior}}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{GetPenaltyTerm_8cpp_ae7c3a438d4508eba7ac26e26135b2c17}{isFlat}}[i]\ \&\&\ !\mbox{\hyperlink{GetPenaltyTerm_8cpp_ae7c3a438d4508eba7ac26e26135b2c17}{isFlat}}[j])}
+\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ k\ =\ 0;\ k\ <\ NSets;\ ++k)}
+\DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00320\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Check\ if\ parameter\ is\ relevant\ for\ this\ set}}
+\DoxyCodeLine{00321\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (isRelevantParam[k][i]\ \&\&\ isRelevantParam[k][j])}
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//KS:\ Since\ matrix\ is\ symmetric\ we\ can\ calculate\ non\ diagonal\ elements\ only\ once\ and\ multiply\ by\ 2,\ can\ bring\ up\ to\ factor\ speed\ decrease.}}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ scale\ =\ 1;}
+\DoxyCodeLine{00325\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i\ !=\ j)\ scale\ =\ 2;}
+\DoxyCodeLine{00326\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ logL[k]\ +=\ scale\ *\ 0.5*(fParProp[i]\ -\/\ \mbox{\hyperlink{GetPenaltyTerm_8cpp_a35f9d8ea46badc9ea84d62feaa0e73df}{nominal}}[i])*(fParProp[j]\ -\/\ \mbox{\hyperlink{GetPenaltyTerm_8cpp_a35f9d8ea46badc9ea84d62feaa0e73df}{nominal}}[j])*\mbox{\hyperlink{GetPenaltyTerm_8cpp_a3fd4dd88b1fa6119298781296ea761c5}{invCovMatrix}}[i][j];}
+\DoxyCodeLine{00327\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00328\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00329\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00330\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00331\ \ \ \ \ \}}
+\DoxyCodeLine{00332\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00333\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ k\ =\ 0;\ k\ <\ NSets;\ ++k)}
+\DoxyCodeLine{00334\ \ \ \ \ \{}
+\DoxyCodeLine{00335\ \ \ \ \ \ \ hLogL[k]-\/>SetBinContent(n,\ logL[k]);}
+\DoxyCodeLine{00336\ \ \ \ \ \}}
+\DoxyCodeLine{00337\ \ \ \}\textcolor{comment}{//End\ loop\ over\ steps}}
+\DoxyCodeLine{00338\ }
+\DoxyCodeLine{00339\ \ \ \textcolor{comment}{//\ Directory\ for\ posteriors}}
+\DoxyCodeLine{00340\ \ \ std::string\ OutputName\ =\ inputFile\ +\ \textcolor{stringliteral}{"{}\_PenaltyTerm"{}}\ +\textcolor{stringliteral}{"{}.root"{}};}
+\DoxyCodeLine{00341\ \ \ TFile*\ OutputFile\ =\ \textcolor{keyword}{new}\ TFile(OutputName.c\_str(),\ \textcolor{stringliteral}{"{}recreate"{}});}
+\DoxyCodeLine{00342\ \ \ TDirectory\ *PenaltyTermDir\ =\ OutputFile-\/>mkdir(\textcolor{stringliteral}{"{}PenaltyTerm"{}});}
+\DoxyCodeLine{00343\ }
+\DoxyCodeLine{00344\ \ \ canvas-\/>Print(Form(\textcolor{stringliteral}{"{}\%s\_PenaltyTerm.pdf["{}},inputFile.c\_str()),\ \textcolor{stringliteral}{"{}pdf"{}});}
+\DoxyCodeLine{00345\ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ NSets;\ i++)}
+\DoxyCodeLine{00346\ \ \ \{}
+\DoxyCodeLine{00347\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ Maximum\ =\ hLogL[i]-\/>GetMaximum();}
+\DoxyCodeLine{00348\ \ \ \ \ hLogL[i]-\/>GetYaxis()-\/>SetRangeUser(0.,\ Maximum*1.2);}
+\DoxyCodeLine{00349\ \ \ \ \ hLogL[i]-\/>SetTitle(FancyTittle[i].c\_str());}
+\DoxyCodeLine{00350\ \ \ \ \ hLogL[i]-\/>GetXaxis()-\/>SetTitle(\textcolor{stringliteral}{"{}Step"{}});}
+\DoxyCodeLine{00351\ \ \ \ \ hLogL[i]-\/>GetYaxis()-\/>SetTitle(FancyTittle[i].c\_str());}
+\DoxyCodeLine{00352\ \ \ \ \ hLogL[i]-\/>GetYaxis()-\/>SetTitleOffset(1.4f);}
+\DoxyCodeLine{00353\ }
+\DoxyCodeLine{00354\ \ \ \ \ hLogL[i]-\/>Draw(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00355\ }
+\DoxyCodeLine{00356\ \ \ \ \ PenaltyTermDir-\/>cd();}
+\DoxyCodeLine{00357\ \ \ \ \ hLogL[i]-\/>Write();}
+\DoxyCodeLine{00358\ }
+\DoxyCodeLine{00359\ \ \ \ \ canvas-\/>Print(Form(\textcolor{stringliteral}{"{}\%s\_PenaltyTerm.pdf"{}},inputFile.c\_str()),\ \textcolor{stringliteral}{"{}pdf"{}});}
+\DoxyCodeLine{00360\ \ \ \}}
+\DoxyCodeLine{00361\ \ \ canvas-\/>Print(Form(\textcolor{stringliteral}{"{}\%s\_PenaltyTerm.pdf]"{}},inputFile.c\_str()),\ \textcolor{stringliteral}{"{}pdf"{}});}
+\DoxyCodeLine{00362\ \ \ \textcolor{keyword}{delete}\ Chain;}
+\DoxyCodeLine{00363\ }
+\DoxyCodeLine{00364\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{GetPenaltyTerm_8cpp_a439227feff9d7f55384e8780cfc2eb82}{size}};\ i++)}
+\DoxyCodeLine{00365\ \ \ \{}
+\DoxyCodeLine{00366\ \ \ \ \ \textcolor{keyword}{delete}[]\ \mbox{\hyperlink{GetPenaltyTerm_8cpp_a3fd4dd88b1fa6119298781296ea761c5}{invCovMatrix}}[i];}
+\DoxyCodeLine{00367\ \ \ \}}
+\DoxyCodeLine{00368\ \ \ \textcolor{keyword}{delete}[]\ \mbox{\hyperlink{GetPenaltyTerm_8cpp_a3fd4dd88b1fa6119298781296ea761c5}{invCovMatrix}};}
+\DoxyCodeLine{00369\ \ \ OutputFile-\/>Close();}
+\DoxyCodeLine{00370\ \ \ \textcolor{keyword}{delete}\ OutputFile;}
+\DoxyCodeLine{00371\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{GetPenaltyTerm_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{GetPenaltyTerm_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{GetPenaltyTerm.cpp@{GetPenaltyTerm.cpp}!main@{main}}
+\index{main@{main}!GetPenaltyTerm.cpp@{GetPenaltyTerm.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{GetPenaltyTerm_8cpp_source_l00373}{373}} of file \mbox{\hyperlink{GetPenaltyTerm_8cpp_source}{Get\+Penalty\+Term.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00374\ \{}
+\DoxyCodeLine{00375\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_aa603c55ea73cd86d1994901227883e1e}{SetMaCh3LoggerFormat}}();}
+\DoxyCodeLine{00376\ \ \ \mbox{\hyperlink{namespaceMaCh3Utils_ac6f4a3b6a7749967ff9a011469352f6c}{MaCh3Utils::MaCh3Welcome}}();}
+\DoxyCodeLine{00377\ \ \ \textcolor{keywordflow}{if}\ (argc\ !=\ 3\ )}
+\DoxyCodeLine{00378\ \ \ \{}
+\DoxyCodeLine{00379\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_ad5b2eb6377721e3ac95def22c2386bb1}{MACH3LOG\_WARN}}(\textcolor{stringliteral}{"{}Something\ went\ wrong\ "{}});}
+\DoxyCodeLine{00380\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_ad5b2eb6377721e3ac95def22c2386bb1}{MACH3LOG\_WARN}}(\textcolor{stringliteral}{"{}./GetPenaltyTerm\ root\_file\_to\_analyse.root\ "{}});}
+\DoxyCodeLine{00381\ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_\ ,\ \_\_LINE\_\_\ );}
+\DoxyCodeLine{00382\ \ \ \}}
+\DoxyCodeLine{00383\ \ \ std::string\ filename\ =\ argv[1];}
+\DoxyCodeLine{00384\ \ \ std::string\ \mbox{\hyperlink{ProcessMCMC_8cpp_a13056efd080ab16304b6f7be0ebf0a61}{config}}\ =\ argv[2];}
+\DoxyCodeLine{00385\ \ \ \mbox{\hyperlink{GetPenaltyTerm_8cpp_a84a9174999180db166e835e930e20b59}{GetPenaltyTerm}}(filename,\ \mbox{\hyperlink{ProcessMCMC_8cpp_a13056efd080ab16304b6f7be0ebf0a61}{config}});}
+\DoxyCodeLine{00386\ }
+\DoxyCodeLine{00387\ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00388\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{GetPenaltyTerm_8cpp_a85332b9994750992c48e45f0bba7f43d}\label{GetPenaltyTerm_8cpp_a85332b9994750992c48e45f0bba7f43d}} 
+\index{GetPenaltyTerm.cpp@{GetPenaltyTerm.cpp}!ReadXSecFile@{ReadXSecFile}}
+\index{ReadXSecFile@{ReadXSecFile}!GetPenaltyTerm.cpp@{GetPenaltyTerm.cpp}}
+\doxysubsubsection{\texorpdfstring{ReadXSecFile()}{ReadXSecFile()}}
+{\footnotesize\ttfamily void Read\+XSec\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{input\+File }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{GetPenaltyTerm_8cpp_source_l00042}{42}} of file \mbox{\hyperlink{GetPenaltyTerm_8cpp_source}{Get\+Penalty\+Term.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00043\ \{}
+\DoxyCodeLine{00044\ \ \ \textcolor{comment}{//\ Now\ read\ the\ MCMC\ file}}
+\DoxyCodeLine{00045\ \ \ TFile\ *TempFile\ =\ \textcolor{keyword}{new}\ TFile(inputFile.c\_str(),\ \textcolor{stringliteral}{"{}open"{}});}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \textcolor{comment}{//\ Get\ the\ matrix}}
+\DoxyCodeLine{00048\ \ \ TMatrixDSym\ *XSecMatrix\ =\ TempFile-\/>Get<TMatrixDSym>(\textcolor{stringliteral}{"{}CovarianceFolder/xsec\_cov"{}});}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \textcolor{comment}{//\ Get\ the\ settings\ for\ the\ MCMC}}
+\DoxyCodeLine{00051\ \ \ TMacro\ *Config\ =\ TempFile-\/>Get<TMacro>(\textcolor{stringliteral}{"{}MaCh3\_Config"{}});}
+\DoxyCodeLine{00052\ \ \ \textcolor{keywordflow}{if}\ (Config\ ==\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Didn't\ find\ MaCh3\_Config\ tree\ in\ MCMC\ file!\ \{\}"{}},\ inputFile);}
+\DoxyCodeLine{00054\ \ \ \ \ TempFile-\/>ls();}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_\ ,\ \_\_LINE\_\_\ );}
+\DoxyCodeLine{00056\ \ \ \}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ YAML::Node\ Settings\ =\ \mbox{\hyperlink{YamlHelper_8h_a7e0ade2fd295a927676c243c97d0aa64}{TMacroToYAML}}(*Config);}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \textcolor{comment}{//CW:\ Get\ the\ xsec\ Covariance\ matrix}}
+\DoxyCodeLine{00061\ \ \ std::vector<std::string>\ XsecCovPos\ =\ GetFromManager<std::vector<std::string>>(Settings[\textcolor{stringliteral}{"{}General"{}}][\textcolor{stringliteral}{"{}Systematics"{}}][\textcolor{stringliteral}{"{}XsecCovFile"{}}],\ \{\textcolor{stringliteral}{"{}none"{}}\});}
+\DoxyCodeLine{00062\ \ \ \textcolor{keywordflow}{if}(XsecCovPos.back()\ ==\ \textcolor{stringliteral}{"{}none"{}})}
+\DoxyCodeLine{00063\ \ \ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_ad5b2eb6377721e3ac95def22c2386bb1}{MACH3LOG\_WARN}}(\textcolor{stringliteral}{"{}Couldn't\ find\ XsecCov\ branch\ in\ output"{}});}
+\DoxyCodeLine{00065\ \ \ \ \ \mbox{\hyperlink{namespaceMaCh3Utils_aaf39f873ebf93550a417418e583ebcf8}{MaCh3Utils::PrintConfig}}(Settings);}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_\ ,\ \_\_LINE\_\_\ );}
+\DoxyCodeLine{00067\ \ \ \}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \textcolor{comment}{//KS:Most\ inputs\ are\ in\ \$\{MACH3\}/inputs/blarb.root}}
+\DoxyCodeLine{00070\ \ \ \textcolor{keywordflow}{if}\ (std::getenv(\textcolor{stringliteral}{"{}MACH3"{}})\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Found\ MACH3\ environment\ variable:\ \{\}"{}},\ std::getenv(\textcolor{stringliteral}{"{}MACH3"{}}));}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ XsecCovPos.size();\ i++)}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ XsecCovPos[i].insert(0,\ std::string(std::getenv(\textcolor{stringliteral}{"{}MACH3"{}}))+\textcolor{stringliteral}{"{}/"{}});}
+\DoxyCodeLine{00074\ \ \ \}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ YAML::Node\ XSecFile;}
+\DoxyCodeLine{00077\ \ \ XSecFile[\textcolor{stringliteral}{"{}Systematics"{}}]\ =\ YAML::Node(YAML::NodeType::Sequence);}
+\DoxyCodeLine{00078\ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ XsecCovPos.size();\ i++)}
+\DoxyCodeLine{00079\ \ \ \{}
+\DoxyCodeLine{00080\ \ \ \ \ YAML::Node\ YAMLDocTemp\ =\ YAML::LoadFile(XsecCovPos[i]);}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ item\ :\ YAMLDocTemp[\textcolor{stringliteral}{"{}Systematics"{}}])\ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ XSecFile[\textcolor{stringliteral}{"{}Systematics"{}}].push\_back(item);}
+\DoxyCodeLine{00083\ \ \ \ \ \}}
+\DoxyCodeLine{00084\ \ \ \}}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \mbox{\hyperlink{GetPenaltyTerm_8cpp_a439227feff9d7f55384e8780cfc2eb82}{size}}\ =\ XSecMatrix-\/>GetNrows();}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \textcolor{keyword}{auto}\ systematics\ =\ XSecFile[\textcolor{stringliteral}{"{}Systematics"{}}];}
+\DoxyCodeLine{00089\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ it\ =\ systematics.begin();\ it\ !=\ systematics.end();\ ++it)}
+\DoxyCodeLine{00090\ \ \ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keyword}{auto}\ \textcolor{keyword}{const}\ \&param\ =\ *it;}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ \mbox{\hyperlink{GetPenaltyTerm_8cpp_a7428f3d1db32b479cffb2572cba8725c}{ParamNames}}.push\_back(param[\textcolor{stringliteral}{"{}Systematic"{}}][\textcolor{stringliteral}{"{}Names"{}}][\textcolor{stringliteral}{"{}FancyName"{}}].as<std::string>());}
+\DoxyCodeLine{00094\ \ \ \ \ \mbox{\hyperlink{GetPenaltyTerm_8cpp_a35f9d8ea46badc9ea84d62feaa0e73df}{nominal}}.push\_back(\ param[\textcolor{stringliteral}{"{}Systematic"{}}][\textcolor{stringliteral}{"{}ParameterValues"{}}][\textcolor{stringliteral}{"{}PreFitValue"{}}].as<double>()\ );}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{bool}\ flat\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordflow}{if}\ (param[\textcolor{stringliteral}{"{}Systematic"{}}][\textcolor{stringliteral}{"{}FlatPrior"{}}])\ \{\ flat\ =\ param[\textcolor{stringliteral}{"{}Systematic"{}}][\textcolor{stringliteral}{"{}FlatPrior"{}}].as<\textcolor{keywordtype}{bool}>();\ \}}
+\DoxyCodeLine{00098\ \ \ \ \ \mbox{\hyperlink{GetPenaltyTerm_8cpp_ae7c3a438d4508eba7ac26e26135b2c17}{isFlat}}.push\_back(\ flat\ );}
+\DoxyCodeLine{00099\ \ \ \}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ XSecMatrix-\/>Invert();}
+\DoxyCodeLine{00102\ \ \ \textcolor{comment}{//KS:\ Let's\ use\ double\ as\ it\ is\ faster\ than\ TMatrix}}
+\DoxyCodeLine{00103\ \ \ \mbox{\hyperlink{GetPenaltyTerm_8cpp_a3fd4dd88b1fa6119298781296ea761c5}{invCovMatrix}}\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}*[\mbox{\hyperlink{GetPenaltyTerm_8cpp_a439227feff9d7f55384e8780cfc2eb82}{size}}];}
+\DoxyCodeLine{00104\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{GetPenaltyTerm_8cpp_a439227feff9d7f55384e8780cfc2eb82}{size}};\ i++)}
+\DoxyCodeLine{00105\ \ \ \{}
+\DoxyCodeLine{00106\ \ \ \ \ \mbox{\hyperlink{GetPenaltyTerm_8cpp_a3fd4dd88b1fa6119298781296ea761c5}{invCovMatrix}}[i]\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}[\mbox{\hyperlink{GetPenaltyTerm_8cpp_a439227feff9d7f55384e8780cfc2eb82}{size}}];}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ \mbox{\hyperlink{GetPenaltyTerm_8cpp_a439227feff9d7f55384e8780cfc2eb82}{size}};\ ++j)}
+\DoxyCodeLine{00108\ \ \ \ \ \{}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \mbox{\hyperlink{GetPenaltyTerm_8cpp_a3fd4dd88b1fa6119298781296ea761c5}{invCovMatrix}}[i][j]\ =\ -\/999;}
+\DoxyCodeLine{00110\ \ \ \ \ \}}
+\DoxyCodeLine{00111\ \ \ \}}
+\DoxyCodeLine{00112\ \textcolor{preprocessor}{\ \ \#ifdef\ MULTITHREAD}}
+\DoxyCodeLine{00113\ \textcolor{preprocessor}{\ \ \#pragma\ omp\ parallel\ for\ collapse(2)}}
+\DoxyCodeLine{00114\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{00115\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{GetPenaltyTerm_8cpp_a439227feff9d7f55384e8780cfc2eb82}{size}};\ i++)}
+\DoxyCodeLine{00116\ \ \ \{}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ \mbox{\hyperlink{GetPenaltyTerm_8cpp_a439227feff9d7f55384e8780cfc2eb82}{size}};\ ++j)}
+\DoxyCodeLine{00118\ \ \ \ \ \{}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \mbox{\hyperlink{GetPenaltyTerm_8cpp_a3fd4dd88b1fa6119298781296ea761c5}{invCovMatrix}}[i][j]\ =\ (*XSecMatrix)(i,j);}
+\DoxyCodeLine{00120\ \ \ \ \ \}}
+\DoxyCodeLine{00121\ \ \ \}}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \ \ TempFile-\/>Close();}
+\DoxyCodeLine{00124\ \ \ \textcolor{keyword}{delete}\ TempFile;}
+\DoxyCodeLine{00125\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{GetPenaltyTerm_8cpp_a871d6466cea2597401bdb203293f4033}\label{GetPenaltyTerm_8cpp_a871d6466cea2597401bdb203293f4033}} 
+\index{GetPenaltyTerm.cpp@{GetPenaltyTerm.cpp}!BranchNames@{BranchNames}}
+\index{BranchNames@{BranchNames}!GetPenaltyTerm.cpp@{GetPenaltyTerm.cpp}}
+\doxysubsubsection{\texorpdfstring{BranchNames}{BranchNames}}
+{\footnotesize\ttfamily std\+::vector$<$TString$>$ Branch\+Names}
+
+
+
+Definition at line \mbox{\hyperlink{GetPenaltyTerm_8cpp_source_l00036}{36}} of file \mbox{\hyperlink{GetPenaltyTerm_8cpp_source}{Get\+Penalty\+Term.\+cpp}}.
+
+\mbox{\Hypertarget{GetPenaltyTerm_8cpp_a3fd4dd88b1fa6119298781296ea761c5}\label{GetPenaltyTerm_8cpp_a3fd4dd88b1fa6119298781296ea761c5}} 
+\index{GetPenaltyTerm.cpp@{GetPenaltyTerm.cpp}!invCovMatrix@{invCovMatrix}}
+\index{invCovMatrix@{invCovMatrix}!GetPenaltyTerm.cpp@{GetPenaltyTerm.cpp}}
+\doxysubsubsection{\texorpdfstring{invCovMatrix}{invCovMatrix}}
+{\footnotesize\ttfamily double$\ast$$\ast$ inv\+Cov\+Matrix}
+
+
+
+Definition at line \mbox{\hyperlink{GetPenaltyTerm_8cpp_source_l00040}{40}} of file \mbox{\hyperlink{GetPenaltyTerm_8cpp_source}{Get\+Penalty\+Term.\+cpp}}.
+
+\mbox{\Hypertarget{GetPenaltyTerm_8cpp_ae7c3a438d4508eba7ac26e26135b2c17}\label{GetPenaltyTerm_8cpp_ae7c3a438d4508eba7ac26e26135b2c17}} 
+\index{GetPenaltyTerm.cpp@{GetPenaltyTerm.cpp}!isFlat@{isFlat}}
+\index{isFlat@{isFlat}!GetPenaltyTerm.cpp@{GetPenaltyTerm.cpp}}
+\doxysubsubsection{\texorpdfstring{isFlat}{isFlat}}
+{\footnotesize\ttfamily std\+::vector$<$bool$>$ is\+Flat}
+
+
+
+Definition at line \mbox{\hyperlink{GetPenaltyTerm_8cpp_source_l00035}{35}} of file \mbox{\hyperlink{GetPenaltyTerm_8cpp_source}{Get\+Penalty\+Term.\+cpp}}.
+
+\mbox{\Hypertarget{GetPenaltyTerm_8cpp_a35f9d8ea46badc9ea84d62feaa0e73df}\label{GetPenaltyTerm_8cpp_a35f9d8ea46badc9ea84d62feaa0e73df}} 
+\index{GetPenaltyTerm.cpp@{GetPenaltyTerm.cpp}!nominal@{nominal}}
+\index{nominal@{nominal}!GetPenaltyTerm.cpp@{GetPenaltyTerm.cpp}}
+\doxysubsubsection{\texorpdfstring{nominal}{nominal}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ nominal}
+
+
+
+Definition at line \mbox{\hyperlink{GetPenaltyTerm_8cpp_source_l00034}{34}} of file \mbox{\hyperlink{GetPenaltyTerm_8cpp_source}{Get\+Penalty\+Term.\+cpp}}.
+
+\mbox{\Hypertarget{GetPenaltyTerm_8cpp_a7428f3d1db32b479cffb2572cba8725c}\label{GetPenaltyTerm_8cpp_a7428f3d1db32b479cffb2572cba8725c}} 
+\index{GetPenaltyTerm.cpp@{GetPenaltyTerm.cpp}!ParamNames@{ParamNames}}
+\index{ParamNames@{ParamNames}!GetPenaltyTerm.cpp@{GetPenaltyTerm.cpp}}
+\doxysubsubsection{\texorpdfstring{ParamNames}{ParamNames}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ Param\+Names}
+
+
+
+Definition at line \mbox{\hyperlink{GetPenaltyTerm_8cpp_source_l00037}{37}} of file \mbox{\hyperlink{GetPenaltyTerm_8cpp_source}{Get\+Penalty\+Term.\+cpp}}.
+
+\mbox{\Hypertarget{GetPenaltyTerm_8cpp_a439227feff9d7f55384e8780cfc2eb82}\label{GetPenaltyTerm_8cpp_a439227feff9d7f55384e8780cfc2eb82}} 
+\index{GetPenaltyTerm.cpp@{GetPenaltyTerm.cpp}!size@{size}}
+\index{size@{size}!GetPenaltyTerm.cpp@{GetPenaltyTerm.cpp}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily int size}
+
+
+
+Definition at line \mbox{\hyperlink{GetPenaltyTerm_8cpp_source_l00038}{38}} of file \mbox{\hyperlink{GetPenaltyTerm_8cpp_source}{Get\+Penalty\+Term.\+cpp}}.
+

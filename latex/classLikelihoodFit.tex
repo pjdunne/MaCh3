@@ -1,0 +1,487 @@
+\hypertarget{classLikelihoodFit}{}\doxysection{Likelihood\+Fit Class Reference}
+\label{classLikelihoodFit}\index{LikelihoodFit@{LikelihoodFit}}
+
+
+Implementation of base Likelihood Fit class, it is mostly responsible for likelihood calculation while actual use depend on classes which inherits.  
+
+
+
+
+{\ttfamily \#include $<$/home/runner/work/\+Ma\+Ch3/\+Ma\+Ch3/mcmc/\+Likelihood\+Fit.\+h$>$}
+
+
+
+Inheritance diagram for Likelihood\+Fit\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{classLikelihoodFit__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Likelihood\+Fit\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classLikelihoodFit__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLikelihoodFit_a1d3cb4fbaa7a0e6e1d7f4804a434e1ea}{Likelihood\+Fit}} (\mbox{\hyperlink{classmanager}{manager}} $\ast$const \mbox{\hyperlink{classFitterBase_a4fceb68f242feeb04a0ddf42a5a37095}{fit\+Man}})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classLikelihoodFit_a29f6b86b13948c58c0dd8b16daf8d757}{$\sim$\+Likelihood\+Fit}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classLikelihoodFit_af7383703e9f93e5aebcf699d80a6fb9e}{Calc\+Chi2}} (const double $\ast$x)
+\begin{DoxyCompactList}\small\item\em Chi2 calculation over all included samples and syst objects. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classLikelihoodFit_a18cec4a653bda51d551a779db1ccb596}{Get\+NPars}} ()
+\begin{DoxyCompactList}\small\item\em Get total number of params, this sums over all covariance objects. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classLikelihoodFit_a97f28cf4797fd2f6e3fac267dcdafb27}{run\+MCMC}} ()=0
+\begin{DoxyCompactList}\small\item\em Implementation of fitting algorithm. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classLikelihoodFit_aff5ac0361aa016cebb24d4687e0da4ac}{Get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Get name of class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{classFitterBase}{Fitter\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFitterBase_a2d45811f9bcb9719f312048bbd36a423}{Fitter\+Base}} (\mbox{\hyperlink{classmanager}{manager}} $\ast$const \mbox{\hyperlink{classFitterBase_a4fceb68f242feeb04a0ddf42a5a37095}{fit\+Man}})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classFitterBase_ae8677b449e49ca86bafee685e8dbe93f}{$\sim$\+Fitter\+Base}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \mbox{\hyperlink{classFitterBase}{Fitter\+Base}} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFitterBase_abe93c6d49aa079d811a9021de59691b1}{add\+Sample\+PDF}} (\mbox{\hyperlink{classsamplePDFBase}{sample\+PDFBase}} $\ast$sample)
+\begin{DoxyCompactList}\small\item\em This function adds a sample PDF object to the analysis framework. The sample PDF object will be utilized in fitting procedures or likelihood scans. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFitterBase_a1d0068193922448a6fed0e0d3ff4305a}{add\+Syst\+Obj}} (\mbox{\hyperlink{classcovarianceBase}{covariance\+Base}} $\ast$cov)
+\begin{DoxyCompactList}\small\item\em This function adds a Covariance object to the analysis framework. The Covariance object will be utilized in fitting procedures or likelihood scans. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classFitterBase_a1a9666dc09f91af804954e8968bc7b24}{run\+MCMC}} ()=0
+\begin{DoxyCompactList}\small\item\em The specific fitting algorithm implemented in this function depends on the derived class. It could be Markov Chain Monte Carlo (MCMC), \mbox{\hyperlink{classMinuitFit}{Minuit\+Fit}}, or another algorithm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFitterBase_ab3db1d0bb7364e70cd432a3e1c0a600e}{Drag\+Race}} (const int NLaps=100)
+\begin{DoxyCompactList}\small\item\em Calculates the required time for each sample or covariance object in a drag race simulation. Inspired by Dan\textquotesingle{}s feature. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFitterBase_a018e8d09a62bca19840e1321b49df2c0}{Run\+LLHScan}} ()
+\begin{DoxyCompactList}\small\item\em Perform a 1D likelihood scan. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFitterBase_a63820450a9089d5281769288c007db55}{Get\+Step\+Scale\+Based\+On\+LLHScan}} ()
+\begin{DoxyCompactList}\small\item\em LLH scan is good first estimate of step scale. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFitterBase_ab8b32ca268c20dd643eaf92dae04cd0a}{Run2\+DLLHScan}} ()
+\begin{DoxyCompactList}\small\item\em Perform a 2D likelihood scan. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFitterBase_a71e43b96395568e54879d9bd1b57c0f8}{Run\+Sigma\+Var}} ()
+\begin{DoxyCompactList}\small\item\em Perform a 2D and 1D sigma var for all samples. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classFitterBase_a655ccea31627627e2b36745c97e5c0f0}{Start\+From\+Previous\+Fit}} (const std\+::string \&Fit\+Name)
+\begin{DoxyCompactList}\small\item\em Allow to start from previous fit/chain. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classFitterBase_a3706f6d722073b447b3de8c3a6516601}{Get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Get name of class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classLikelihoodFit_adb89956955c043bf37cad04983e4facd}{Prepare\+Fit}} ()
+\begin{DoxyCompactList}\small\item\em prepare output and perform sanity checks \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classFitterBase}{Fitter\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classFitterBase_a1dccdac8611e70c759c47a65f2b1aea7}{Process\+MCMC}} ()
+\begin{DoxyCompactList}\small\item\em Process MCMC output. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFitterBase_a53715760edd8c7640432f31793fd28f9}{Prepare\+Output}} ()
+\begin{DoxyCompactList}\small\item\em Prepare the output file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFitterBase_a418f581b688f035211107ddd83168c08}{Save\+Output}} ()
+\begin{DoxyCompactList}\small\item\em Save output and close files. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFitterBase_a48f38bfa8996fe00d51f35b05dd16b46}{Save\+Settings}} ()
+\begin{DoxyCompactList}\small\item\em Save the settings that the MCMC was run with. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classLikelihoodFit_ac779acfe140500d06e42a1d4ace25385}{NPars}}
+\begin{DoxyCompactList}\small\item\em Number of all parameters from all covariances. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classLikelihoodFit_a0b50b7b607751e80b6c85e9db98631af}{NPars\+PCA}}
+\begin{DoxyCompactList}\small\item\em Number of all parameters from all covariances in PCA base. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classLikelihoodFit_ae1e5d13b373bf73e1b1003f7f9d65f00}{f\+Mirroring}}
+\begin{DoxyCompactList}\small\item\em Flag telling if mirroring is used or not. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes inherited from \mbox{\hyperlink{classFitterBase}{Fitter\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmanager}{manager}} $\ast$ \mbox{\hyperlink{classFitterBase_a4fceb68f242feeb04a0ddf42a5a37095}{fit\+Man}}
+\begin{DoxyCompactList}\small\item\em The manager. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMaCh3Modes}{Ma\+Ch3\+Modes}} $\ast$ \mbox{\hyperlink{classFitterBase_a004cb6e6168032d9280ce3db912f1a43}{Modes}}
+\begin{DoxyCompactList}\small\item\em Ma\+Ch3 Modes. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classFitterBase_a50df1bd75b20a953f81ab9c2bab6b42c}{step}}
+\begin{DoxyCompactList}\small\item\em current state \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classFitterBase_abfb6f10720764d8bbbe43754fd5cd976}{log\+LCurr}}
+\begin{DoxyCompactList}\small\item\em current likelihood \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classFitterBase_a187dd22c17f9e96e5a7e2fb2371abace}{log\+LProp}}
+\begin{DoxyCompactList}\small\item\em proposed likelihood \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classFitterBase_a6319d2ea50984860475bbc6c708b0d90}{acc\+Prob}}
+\begin{DoxyCompactList}\small\item\em current acceptance prob \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classFitterBase_a2774f3a0047c4347ee0db05406425f79}{acc\+Count}}
+\begin{DoxyCompactList}\small\item\em counts accepted steps \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classFitterBase_a6f435e161c96eea778aba844115428d4}{sample\+\_\+llh}}
+\begin{DoxyCompactList}\small\item\em store the llh breakdowns \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classFitterBase_ace2eeca9829f63200c3f956c600d09ff}{syst\+\_\+llh}}
+\begin{DoxyCompactList}\small\item\em systematic llh breakdowns \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classsamplePDFBase}{sample\+PDFBase}} $\ast$ $>$ \mbox{\hyperlink{classFitterBase_afac0dcceb1df194159c07945e8dc0069}{samples}}
+\begin{DoxyCompactList}\small\item\em Sample holder. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classFitterBase_abe9814558b8ff1bccdde3b4c894467e6}{Total\+NSamples}}
+\begin{DoxyCompactList}\small\item\em Total number of samples used. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classcovarianceBase}{covariance\+Base}} $\ast$ $>$ \mbox{\hyperlink{classFitterBase_a3a15d2348b7bf0a639aaab52b9294bbf}{systematics}}
+\begin{DoxyCompactList}\small\item\em Systematic holder. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ TStopwatch $>$ \mbox{\hyperlink{classFitterBase_a858edb45544f690e90b60b9e041394a6}{clock}}
+\begin{DoxyCompactList}\small\item\em tells global time how long fit took \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ TStopwatch $>$ \mbox{\hyperlink{classFitterBase_a9fe01b2b6f7f0d6a7b04675a099e1a4f}{step\+Clock}}
+\begin{DoxyCompactList}\small\item\em tells how long single step/fit iteration took \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classFitterBase_a8354e9a7a9cc534277ff76ab37c9a763}{step\+Time}}
+\begin{DoxyCompactList}\small\item\em Time of single step. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ TRandom3 $>$ \mbox{\hyperlink{classFitterBase_a138f250d9204a30204e4ca5b973008b2}{random}}
+\begin{DoxyCompactList}\small\item\em Random number. \end{DoxyCompactList}\item 
+TFile $\ast$ \mbox{\hyperlink{classFitterBase_a4260b312e3f35cf01fc73b02239f8990}{output\+File}}
+\begin{DoxyCompactList}\small\item\em Output. \end{DoxyCompactList}\item 
+TDirectory $\ast$ \mbox{\hyperlink{classFitterBase_aacc46437245ba8a9817f2ed2e86a96e0}{Cov\+Folder}}
+\begin{DoxyCompactList}\small\item\em Output cov folder. \end{DoxyCompactList}\item 
+TTree $\ast$ \mbox{\hyperlink{classFitterBase_aed2032b9c4a4f2248abe548f54f8dcc8}{out\+Tree}}
+\begin{DoxyCompactList}\small\item\em Output tree with posteriors. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classFitterBase_ad955982e63066918cba9c53381608d09}{auto\+\_\+save}}
+\begin{DoxyCompactList}\small\item\em auto save every N steps \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classFitterBase_ada898e35bab22af470f2cd1e28af609b}{f\+Test\+Likelihood}}
+\begin{DoxyCompactList}\small\item\em Necessary for some fitting algorithms like \mbox{\hyperlink{classPSO}{PSO}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classFitterBase_aedd882d8e4d0da0f89cf94e3a008affe}{save\+\_\+nominal}}
+\begin{DoxyCompactList}\small\item\em save nominal matrix info or not \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classFitterBase_a490b8614c4089c6db10ff357e7aaab67}{Save\+Proposal}}
+\begin{DoxyCompactList}\small\item\em Save proposal at each step. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classFitterBase_a699abe6a2c89706b54544212152d613a}{File\+Saved}}
+\begin{DoxyCompactList}\small\item\em Checks if file saved not repeat some operations. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classFitterBase_a588678c71d816f48ba3c140543dbe916}{Settings\+Saved}}
+\begin{DoxyCompactList}\small\item\em Checks if setting saved not repeat some operations. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classFitterBase_a3bfd8f69df891d03bae0587cd1a1e1b7}{Output\+Prepared}}
+\begin{DoxyCompactList}\small\item\em Checks if output prepared not repeat some operations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of base Likelihood Fit class, it is mostly responsible for likelihood calculation while actual use depend on classes which inherits. 
+
+Definition at line \mbox{\hyperlink{LikelihoodFit_8h_source_l00006}{6}} of file \mbox{\hyperlink{LikelihoodFit_8h_source}{Likelihood\+Fit.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classLikelihoodFit_a1d3cb4fbaa7a0e6e1d7f4804a434e1ea}\label{classLikelihoodFit_a1d3cb4fbaa7a0e6e1d7f4804a434e1ea}} 
+\index{LikelihoodFit@{LikelihoodFit}!LikelihoodFit@{LikelihoodFit}}
+\index{LikelihoodFit@{LikelihoodFit}!LikelihoodFit@{LikelihoodFit}}
+\doxysubsubsection{\texorpdfstring{LikelihoodFit()}{LikelihoodFit()}}
+{\footnotesize\ttfamily Likelihood\+Fit\+::\+Likelihood\+Fit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmanager}{manager}} $\ast$const}]{fit\+Man }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+
+Definition at line \mbox{\hyperlink{LikelihoodFit_8cpp_source_l00005}{5}} of file \mbox{\hyperlink{LikelihoodFit_8cpp_source}{Likelihood\+Fit.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00005\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classFitterBase}{FitterBase}}(\mbox{\hyperlink{GetPostfitParamPlots_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}})\ \{}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ *******************}}
+\DoxyCodeLine{00007\ \ \ \ \ \mbox{\hyperlink{classLikelihoodFit_ac779acfe140500d06e42a1d4ace25385}{NPars}}\ =\ 0;}
+\DoxyCodeLine{00008\ \ \ \ \ \mbox{\hyperlink{classLikelihoodFit_a0b50b7b607751e80b6c85e9db98631af}{NParsPCA}}\ =\ 0;}
+\DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{classLikelihoodFit_ae1e5d13b373bf73e1b1003f7f9d65f00}{fMirroring}}\ =\ GetFromManager<bool>(\mbox{\hyperlink{classFitterBase_a4fceb68f242feeb04a0ddf42a5a37095}{fitMan}}-\/>\mbox{\hyperlink{classmanager_ab3999cc856ede72b37f68bdb28bd5520}{raw}}()[\textcolor{stringliteral}{"{}General"{}}][\textcolor{stringliteral}{"{}Fitter"{}}][\textcolor{stringliteral}{"{}Mirroring"{}}],\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00010\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classLikelihoodFit_a29f6b86b13948c58c0dd8b16daf8d757}\label{classLikelihoodFit_a29f6b86b13948c58c0dd8b16daf8d757}} 
+\index{LikelihoodFit@{LikelihoodFit}!````~LikelihoodFit@{$\sim$LikelihoodFit}}
+\index{````~LikelihoodFit@{$\sim$LikelihoodFit}!LikelihoodFit@{LikelihoodFit}}
+\doxysubsubsection{\texorpdfstring{$\sim$LikelihoodFit()}{~LikelihoodFit()}}
+{\footnotesize\ttfamily Likelihood\+Fit\+::$\sim$\+Likelihood\+Fit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+
+
+Definition at line \mbox{\hyperlink{LikelihoodFit_8cpp_source_l00015}{15}} of file \mbox{\hyperlink{LikelihoodFit_8cpp_source}{Likelihood\+Fit.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ *************************}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classLikelihoodFit_af7383703e9f93e5aebcf699d80a6fb9e}\label{classLikelihoodFit_af7383703e9f93e5aebcf699d80a6fb9e}} 
+\index{LikelihoodFit@{LikelihoodFit}!CalcChi2@{CalcChi2}}
+\index{CalcChi2@{CalcChi2}!LikelihoodFit@{LikelihoodFit}}
+\doxysubsubsection{\texorpdfstring{CalcChi2()}{CalcChi2()}}
+{\footnotesize\ttfamily double Likelihood\+Fit\+::\+Calc\+Chi2 (\begin{DoxyParamCaption}\item[{const double $\ast$}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Chi2 calculation over all included samples and syst objects. 
+
+
+
+Reimplemented in \mbox{\hyperlink{classPSO_a42f873a16ad3d3d9809262a01bf68538}{PSO}}.
+
+
+
+Definition at line \mbox{\hyperlink{LikelihoodFit_8cpp_source_l00040}{40}} of file \mbox{\hyperlink{LikelihoodFit_8cpp_source}{Likelihood\+Fit.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00041\ \textcolor{comment}{//\ *******************}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classFitterBase_a50df1bd75b20a953f81ab9c2bab6b42c}{step}}\ \%\ 10000\ ==\ 0)}
+\DoxyCodeLine{00044\ \ \ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Iteration\ \{\}"{}},\ \mbox{\hyperlink{classFitterBase_a50df1bd75b20a953f81ab9c2bab6b42c}{step}});}
+\DoxyCodeLine{00046\ \ \ \}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \mbox{\hyperlink{classFitterBase_a9fe01b2b6f7f0d6a7b04675a099e1a4f}{stepClock}}-\/>Start();}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \textcolor{keywordtype}{int}\ ParCounter\ =\ 0;}
+\DoxyCodeLine{00051\ \ \ \textcolor{keywordtype}{double}\ llh\ =\ 0;}
+\DoxyCodeLine{00052\ \ \ \textcolor{keywordflow}{for}\ (std::vector<covarianceBase*>::iterator\ it\ =\ \mbox{\hyperlink{classFitterBase_a3a15d2348b7bf0a639aaab52b9294bbf}{systematics}}.begin();\ it\ !=\ \mbox{\hyperlink{classFitterBase_a3a15d2348b7bf0a639aaab52b9294bbf}{systematics}}.end();\ ++it)}
+\DoxyCodeLine{00053\ \ \ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordflow}{if}(!(*it)-\/>IsPCA())}
+\DoxyCodeLine{00055\ \ \ \ \ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ std::vector<double>\ pars;}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ NumPar\ =\ (*it)-\/>GetNumParams();}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \textcolor{comment}{//KS:\ Avoid\ push\ back\ as\ they\ are\ slow}}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ pars.resize(NumPar);}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ NumPar;\ ++i,\ ++ParCounter)}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ ParVal\ =\ x[ParCounter];}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{comment}{//KS:\ Basically\ apply\ mirroring\ for\ parameters\ out\ of\ bounds}}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classLikelihoodFit_ae1e5d13b373bf73e1b1003f7f9d65f00}{fMirroring}})}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(ParVal\ <\ (*it)-\/>GetLowerBound(i))}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ ParVal\ =\ (*it)-\/>GetLowerBound(i)\ +\ ((*it)-\/>GetLowerBound(i)\ -\/\ ParVal);}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (ParVal\ >\ (*it)-\/>GetUpperBound(i))}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ ParVal\ =\ (*it)-\/>GetUpperBound(i)\ -\/\ (\ ParVal\ -\/\ (*it)-\/>GetUpperBound(i));}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ pars[i]\ =\ ParVal;}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ (*it)-\/>setParameters(pars);}
+\DoxyCodeLine{00078\ \ \ \ \ \}}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00080\ \ \ \ \ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ std::vector<double>\ pars;}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ NumPar\ =\ (*it)-\/>getNpars();}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \textcolor{comment}{//KS:\ Avoid\ push\ back\ as\ they\ are\ slow}}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ pars.resize(NumPar);}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ NumPar;\ ++i,\ ++ParCounter)}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ ParVal\ =\ x[ParCounter];}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{comment}{//KS:\ Basically\ apply\ mirroring\ for\ parameters\ out\ of\ bounds}}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ pars[i]\ =\ ParVal;}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ (*it)-\/>setParameters\_PCA(pars);}
+\DoxyCodeLine{00092\ \ \ \ \ \}}
+\DoxyCodeLine{00093\ \ \ \ \ (*it)-\/>acceptStep();}
+\DoxyCodeLine{00094\ \ \ \}}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \textcolor{comment}{//\ Loop\ over\ the\ systematics\ and\ propose\ the\ initial\ step}}
+\DoxyCodeLine{00097\ \ \ \textcolor{keywordtype}{int}\ stdIt\ =\ 0;}
+\DoxyCodeLine{00098\ \ \ \textcolor{keywordflow}{for}\ (std::vector<covarianceBase*>::iterator\ it\ =\ \mbox{\hyperlink{classFitterBase_a3a15d2348b7bf0a639aaab52b9294bbf}{systematics}}.begin();\ it\ !=\ \mbox{\hyperlink{classFitterBase_a3a15d2348b7bf0a639aaab52b9294bbf}{systematics}}.end();\ ++it,\ ++stdIt)}
+\DoxyCodeLine{00099\ \ \ \{}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{comment}{//GetLikelihood\ will\ return\ LargeL\ if\ out\ of\ bounds,\ for\ minimizers\ this\ is\ not\ the\ problem,\ while\ calcLikelihood\ will\ return\ actual\ likelihood}}
+\DoxyCodeLine{00101\ \ \ \ \ \mbox{\hyperlink{classFitterBase_ace2eeca9829f63200c3f956c600d09ff}{syst\_llh}}[stdIt]\ =\ (*it)-\/>CalcLikelihood();}
+\DoxyCodeLine{00102\ \ \ \ \ llh\ +=\ \mbox{\hyperlink{classFitterBase_ace2eeca9829f63200c3f956c600d09ff}{syst\_llh}}[stdIt];}
+\DoxyCodeLine{00103\ \textcolor{preprocessor}{\ \ \ \ \#ifdef\ DEBUG}}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordflow}{if}\ (debug)\ debugFile\ <<\ \textcolor{stringliteral}{"{}LLH\ after\ "{}}\ <<\ \mbox{\hyperlink{classFitterBase_a3a15d2348b7bf0a639aaab52b9294bbf}{systematics}}[stdIt]-\/>getName()\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ llh\ <<\ std::endl;}
+\DoxyCodeLine{00105\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{00106\ \ \ \}}
+\DoxyCodeLine{00107\ \ \ \textcolor{comment}{//\ Could\ multi-\/thread\ this}}
+\DoxyCodeLine{00108\ \ \ \textcolor{comment}{//\ But\ since\ sample\ reweight\ is\ multi-\/threaded\ it's\ probably\ better\ to\ do\ that}}
+\DoxyCodeLine{00109\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classFitterBase_afac0dcceb1df194159c07945e8dc0069}{samples}}.size();\ i++)}
+\DoxyCodeLine{00110\ \ \ \{}
+\DoxyCodeLine{00111\ \ \ \ \ \mbox{\hyperlink{classFitterBase_afac0dcceb1df194159c07945e8dc0069}{samples}}[i]-\/>reweight();}
+\DoxyCodeLine{00112\ \ \ \}}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \textcolor{comment}{//DB\ for\ atmospheric\ event\ by\ event\ sample\ migration,\ need\ to\ fully\ reweight\ all\ samples\ to\ allow\ event\ passing\ prior\ to\ likelihood\ evaluation}}
+\DoxyCodeLine{00115\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classFitterBase_afac0dcceb1df194159c07945e8dc0069}{samples}}.size();\ i++)\ \{}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{comment}{//\ Get\ the\ sample\ likelihoods\ and\ add\ them}}
+\DoxyCodeLine{00117\ \ \ \ \ \mbox{\hyperlink{classFitterBase_a6f435e161c96eea778aba844115428d4}{sample\_llh}}[i]\ =\ \mbox{\hyperlink{classFitterBase_afac0dcceb1df194159c07945e8dc0069}{samples}}[i]-\/>GetLikelihood();}
+\DoxyCodeLine{00118\ \ \ \ \ llh\ +=\ \mbox{\hyperlink{classFitterBase_a6f435e161c96eea778aba844115428d4}{sample\_llh}}[i];}
+\DoxyCodeLine{00119\ \textcolor{preprocessor}{\ \ \ \ \#ifdef\ DEBUG}}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordflow}{if}\ (debug)\ debugFile\ <<\ \textcolor{stringliteral}{"{}LLH\ after\ sample\ "{}}\ <<\ i\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ llh\ <<\ std::endl;}
+\DoxyCodeLine{00121\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{00122\ \ \ \}}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \ \ \textcolor{comment}{//\ Save\ the\ proposed\ likelihood\ (class\ member)}}
+\DoxyCodeLine{00125\ \ \ \mbox{\hyperlink{classFitterBase_a187dd22c17f9e96e5a7e2fb2371abace}{logLProp}}\ =\ llh;}
+\DoxyCodeLine{00126\ \ \ \mbox{\hyperlink{classFitterBase_abfb6f10720764d8bbbe43754fd5cd976}{logLCurr}}\ =\ llh;}
+\DoxyCodeLine{00127\ \ \ \mbox{\hyperlink{classFitterBase_a6319d2ea50984860475bbc6c708b0d90}{accProb}}\ =\ 1;}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \ \ \mbox{\hyperlink{classFitterBase_a9fe01b2b6f7f0d6a7b04675a099e1a4f}{stepClock}}-\/>Stop();}
+\DoxyCodeLine{00130\ \ \ \mbox{\hyperlink{classFitterBase_a8354e9a7a9cc534277ff76ab37c9a763}{stepTime}}\ =\ \mbox{\hyperlink{classFitterBase_a9fe01b2b6f7f0d6a7b04675a099e1a4f}{stepClock}}-\/>RealTime();}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \ \ \textcolor{comment}{//\ Write\ step\ to\ output\ tree}}
+\DoxyCodeLine{00133\ \ \ \mbox{\hyperlink{classFitterBase_aed2032b9c4a4f2248abe548f54f8dcc8}{outTree}}-\/>Fill();}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \ \ \textcolor{comment}{//\ Auto\ save\ the\ output}}
+\DoxyCodeLine{00136\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classFitterBase_a50df1bd75b20a953f81ab9c2bab6b42c}{step}}\ \%\ \mbox{\hyperlink{classFitterBase_ad955982e63066918cba9c53381608d09}{auto\_save}}\ ==\ 0)\ \mbox{\hyperlink{classFitterBase_aed2032b9c4a4f2248abe548f54f8dcc8}{outTree}}-\/>AutoSave();}
+\DoxyCodeLine{00137\ \ \ \mbox{\hyperlink{classFitterBase_a50df1bd75b20a953f81ab9c2bab6b42c}{step}}++;}
+\DoxyCodeLine{00138\ \ \ \mbox{\hyperlink{classFitterBase_a2774f3a0047c4347ee0db05406425f79}{accCount}}++;}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ \ \ llh\ =\ 2.0*llh;}
+\DoxyCodeLine{00141\ \ \ \textcolor{keywordflow}{return}\ llh;}
+\DoxyCodeLine{00142\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classLikelihoodFit_aff5ac0361aa016cebb24d4687e0da4ac}\label{classLikelihoodFit_aff5ac0361aa016cebb24d4687e0da4ac}} 
+\index{LikelihoodFit@{LikelihoodFit}!GetName@{GetName}}
+\index{GetName@{GetName}!LikelihoodFit@{LikelihoodFit}}
+\doxysubsubsection{\texorpdfstring{GetName()}{GetName()}}
+{\footnotesize\ttfamily virtual std\+::string Likelihood\+Fit\+::\+Get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get name of class. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classFitterBase_a3706f6d722073b447b3de8c3a6516601}{Fitter\+Base}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classMinuitFit_a21eb79a3aa06baf99b0e5bd86e9d5c7c}{Minuit\+Fit}}, and \mbox{\hyperlink{classPSO_a95d9cbbfdcdc4d453254a3b1477cbbab}{PSO}}.
+
+
+
+Definition at line \mbox{\hyperlink{LikelihoodFit_8h_source_l00022}{22}} of file \mbox{\hyperlink{LikelihoodFit_8h_source}{Likelihood\+Fit.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \{\textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}LikelihoodFit"{}};\};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classLikelihoodFit_a18cec4a653bda51d551a779db1ccb596}\label{classLikelihoodFit_a18cec4a653bda51d551a779db1ccb596}} 
+\index{LikelihoodFit@{LikelihoodFit}!GetNPars@{GetNPars}}
+\index{GetNPars@{GetNPars}!LikelihoodFit@{LikelihoodFit}}
+\doxysubsubsection{\texorpdfstring{GetNPars()}{GetNPars()}}
+{\footnotesize\ttfamily int Likelihood\+Fit\+::\+Get\+NPars (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get total number of params, this sums over all covariance objects. 
+
+
+
+Definition at line \mbox{\hyperlink{LikelihoodFit_8h_source_l00016}{16}} of file \mbox{\hyperlink{LikelihoodFit_8h_source}{Likelihood\+Fit.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016\ \{\textcolor{keywordflow}{return}\ \mbox{\hyperlink{classLikelihoodFit_ac779acfe140500d06e42a1d4ace25385}{NPars}};\};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classLikelihoodFit_adb89956955c043bf37cad04983e4facd}\label{classLikelihoodFit_adb89956955c043bf37cad04983e4facd}} 
+\index{LikelihoodFit@{LikelihoodFit}!PrepareFit@{PrepareFit}}
+\index{PrepareFit@{PrepareFit}!LikelihoodFit@{LikelihoodFit}}
+\doxysubsubsection{\texorpdfstring{PrepareFit()}{PrepareFit()}}
+{\footnotesize\ttfamily void Likelihood\+Fit\+::\+Prepare\+Fit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+prepare output and perform sanity checks 
+
+
+
+Definition at line \mbox{\hyperlink{LikelihoodFit_8cpp_source_l00021}{21}} of file \mbox{\hyperlink{LikelihoodFit_8cpp_source}{Likelihood\+Fit.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ *******************}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \textcolor{comment}{//\ Save\ the\ settings\ into\ the\ output\ file}}
+\DoxyCodeLine{00025\ \ \ \mbox{\hyperlink{classFitterBase_a48f38bfa8996fe00d51f35b05dd16b46}{SaveSettings}}();}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \textcolor{comment}{//\ Prepare\ the\ output\ branches}}
+\DoxyCodeLine{00028\ \ \ \mbox{\hyperlink{classFitterBase_a53715760edd8c7640432f31793fd28f9}{PrepareOutput}}();}
+\DoxyCodeLine{00029\ \ \ }
+\DoxyCodeLine{00030\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ s\ =\ 0;\ s\ <\ \mbox{\hyperlink{classFitterBase_a3a15d2348b7bf0a639aaab52b9294bbf}{systematics}}.size();\ ++s)\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{classLikelihoodFit_ac779acfe140500d06e42a1d4ace25385}{NPars}}\ +=\ \mbox{\hyperlink{classFitterBase_a3a15d2348b7bf0a639aaab52b9294bbf}{systematics}}[s]-\/>GetNumParams();}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{classLikelihoodFit_a0b50b7b607751e80b6c85e9db98631af}{NParsPCA}}\ +=\ \mbox{\hyperlink{classFitterBase_a3a15d2348b7bf0a639aaab52b9294bbf}{systematics}}[s]-\/>getNpars();}
+\DoxyCodeLine{00033\ \ \ \}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \textcolor{comment}{//KS:\ If\ PCA\ is\ note\ enabled\ NParsPCA\ ==\ NPars}}
+\DoxyCodeLine{00036\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Total\ number\ of\ parameters\ \{\}"{}},\ \mbox{\hyperlink{classLikelihoodFit_a0b50b7b607751e80b6c85e9db98631af}{NParsPCA}});}
+\DoxyCodeLine{00037\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classLikelihoodFit_a97f28cf4797fd2f6e3fac267dcdafb27}\label{classLikelihoodFit_a97f28cf4797fd2f6e3fac267dcdafb27}} 
+\index{LikelihoodFit@{LikelihoodFit}!runMCMC@{runMCMC}}
+\index{runMCMC@{runMCMC}!LikelihoodFit@{LikelihoodFit}}
+\doxysubsubsection{\texorpdfstring{runMCMC()}{runMCMC()}}
+{\footnotesize\ttfamily virtual void Likelihood\+Fit\+::run\+MCMC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implementation of fitting algorithm. 
+
+
+
+Implements \mbox{\hyperlink{classFitterBase_a1a9666dc09f91af804954e8968bc7b24}{Fitter\+Base}}.
+
+
+
+Implemented in \mbox{\hyperlink{classMinuitFit_a8e746fb17d4bc75a9d308398a4a0229e}{Minuit\+Fit}}, and \mbox{\hyperlink{classPSO_afcd534dbf737430c8ab1e921e8730b81}{PSO}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classLikelihoodFit_ae1e5d13b373bf73e1b1003f7f9d65f00}\label{classLikelihoodFit_ae1e5d13b373bf73e1b1003f7f9d65f00}} 
+\index{LikelihoodFit@{LikelihoodFit}!fMirroring@{fMirroring}}
+\index{fMirroring@{fMirroring}!LikelihoodFit@{LikelihoodFit}}
+\doxysubsubsection{\texorpdfstring{fMirroring}{fMirroring}}
+{\footnotesize\ttfamily bool Likelihood\+Fit\+::f\+Mirroring\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Flag telling if mirroring is used or not. 
+
+
+
+Definition at line \mbox{\hyperlink{LikelihoodFit_8h_source_l00031}{31}} of file \mbox{\hyperlink{LikelihoodFit_8h_source}{Likelihood\+Fit.\+h}}.
+
+\mbox{\Hypertarget{classLikelihoodFit_ac779acfe140500d06e42a1d4ace25385}\label{classLikelihoodFit_ac779acfe140500d06e42a1d4ace25385}} 
+\index{LikelihoodFit@{LikelihoodFit}!NPars@{NPars}}
+\index{NPars@{NPars}!LikelihoodFit@{LikelihoodFit}}
+\doxysubsubsection{\texorpdfstring{NPars}{NPars}}
+{\footnotesize\ttfamily int Likelihood\+Fit\+::\+NPars\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Number of all parameters from all covariances. 
+
+
+
+Definition at line \mbox{\hyperlink{LikelihoodFit_8h_source_l00027}{27}} of file \mbox{\hyperlink{LikelihoodFit_8h_source}{Likelihood\+Fit.\+h}}.
+
+\mbox{\Hypertarget{classLikelihoodFit_a0b50b7b607751e80b6c85e9db98631af}\label{classLikelihoodFit_a0b50b7b607751e80b6c85e9db98631af}} 
+\index{LikelihoodFit@{LikelihoodFit}!NParsPCA@{NParsPCA}}
+\index{NParsPCA@{NParsPCA}!LikelihoodFit@{LikelihoodFit}}
+\doxysubsubsection{\texorpdfstring{NParsPCA}{NParsPCA}}
+{\footnotesize\ttfamily int Likelihood\+Fit\+::\+NPars\+PCA\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Number of all parameters from all covariances in PCA base. 
+
+
+
+Definition at line \mbox{\hyperlink{LikelihoodFit_8h_source_l00029}{29}} of file \mbox{\hyperlink{LikelihoodFit_8h_source}{Likelihood\+Fit.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/runner/work/\+Ma\+Ch3/\+Ma\+Ch3/mcmc/\mbox{\hyperlink{LikelihoodFit_8h}{Likelihood\+Fit.\+h}}\item 
+/home/runner/work/\+Ma\+Ch3/\+Ma\+Ch3/mcmc/\mbox{\hyperlink{LikelihoodFit_8cpp}{Likelihood\+Fit.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,55 @@
+\hypertarget{styleManager_8h_source}{}\doxysection{style\+Manager.\+h}
+\label{styleManager_8h_source}\index{/home/runner/work/MaCh3/MaCh3/plotting/plottingUtils/styleManager.h@{/home/runner/work/MaCh3/MaCh3/plotting/plottingUtils/styleManager.h}}
+\mbox{\hyperlink{styleManager_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{styleManager_8h_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{styleManager_8h_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{styleManager_8h_source_l00003}00003\ \textcolor{comment}{//\ MaCh3\ Includes}}
+\DoxyCodeLine{\Hypertarget{styleManager_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{MaCh3Logger_8h}{manager/MaCh3Logger.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{styleManager_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{YamlHelper_8h}{manager/YamlHelper.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{styleManager_8h_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{MaCh3Exception_8h}{manager/MaCh3Exception.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{styleManager_8h_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{styleManager_8h_source_l00008}00008\ \textcolor{comment}{//\ ROOT\ Things}}
+\DoxyCodeLine{\Hypertarget{styleManager_8h_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}TColor.h"{}}}
+\DoxyCodeLine{\Hypertarget{styleManager_8h_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}TH1.h"{}}}
+\DoxyCodeLine{\Hypertarget{styleManager_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}TStyle.h"{}}}
+\DoxyCodeLine{\Hypertarget{styleManager_8h_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{styleManager_8h_source_l00013}00013\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceMaCh3Plotting}{MaCh3Plotting}}\ \{}
+\DoxyCodeLine{\Hypertarget{styleManager_8h_source_l00014}\mbox{\hyperlink{classMaCh3Plotting_1_1StyleManager}{00014}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMaCh3Plotting_1_1StyleManager}{StyleManager}}\ \{}
+\DoxyCodeLine{\Hypertarget{styleManager_8h_source_l00015}00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{styleManager_8h_source_l00018}00018\ \ \ \mbox{\hyperlink{classMaCh3Plotting_1_1StyleManager}{StyleManager}}(std::string\ configName);}
+\DoxyCodeLine{\Hypertarget{styleManager_8h_source_l00019}00019\ \ \ }
+\DoxyCodeLine{\Hypertarget{styleManager_8h_source_l00020}00020\ \ \ \textcolor{comment}{//\ NO\ COPYING!}}
+\DoxyCodeLine{\Hypertarget{styleManager_8h_source_l00021}\mbox{\hyperlink{classMaCh3Plotting_1_1StyleManager_a691e626208630301bbdbd052fcef8337}{00021}}\ \ \ \mbox{\hyperlink{classMaCh3Plotting_1_1StyleManager_a691e626208630301bbdbd052fcef8337}{StyleManager}}(\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classMaCh3Plotting_1_1StyleManager}{StyleManager}}\&\ )\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{\Hypertarget{styleManager_8h_source_l00022}\mbox{\hyperlink{classMaCh3Plotting_1_1StyleManager_ac20ebb6a36749e9396c37be18c80ba8f}{00022}}\ \ \ \mbox{\hyperlink{classMaCh3Plotting_1_1StyleManager_ac20ebb6a36749e9396c37be18c80ba8f}{StyleManager}}(\ \mbox{\hyperlink{classMaCh3Plotting_1_1StyleManager}{StyleManager}}\&\&\ )\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{styleManager_8h_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{styleManager_8h_source_l00024}\mbox{\hyperlink{classMaCh3Plotting_1_1StyleManager_af5267abeb152c1c482f00a98ab9c722f}{00024}}\ \ \ \mbox{\hyperlink{classMaCh3Plotting_1_1StyleManager_af5267abeb152c1c482f00a98ab9c722f}{\string~StyleManager}}()\{}
+\DoxyCodeLine{\Hypertarget{styleManager_8h_source_l00025}00025\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}\#\#\#\#\#\ Deleting\ StyleManager\ Instance\ \#\#\#\#\#"{}});}
+\DoxyCodeLine{\Hypertarget{styleManager_8h_source_l00026}00026\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{styleManager_8h_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{styleManager_8h_source_l00033}\mbox{\hyperlink{classMaCh3Plotting_1_1StyleManager_a0677ca5b68a2ecb684189524fb533019}{00033}}\ \ \ \textcolor{keyword}{inline}\ std::string\ \mbox{\hyperlink{classMaCh3Plotting_1_1StyleManager_a0677ca5b68a2ecb684189524fb533019}{prettifyParamName}}(\textcolor{keyword}{const}\ std::string\ \&origName)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{styleManager_8h_source_l00034}00034\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classMaCh3Plotting_1_1StyleManager_a105299a42eec9ef749142f9c1abd612e}{prettifyName}}(origName,\ \textcolor{stringliteral}{"{}parameters"{}});}
+\DoxyCodeLine{\Hypertarget{styleManager_8h_source_l00035}00035\ \ \ \};}
+\DoxyCodeLine{\Hypertarget{styleManager_8h_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{styleManager_8h_source_l00042}\mbox{\hyperlink{classMaCh3Plotting_1_1StyleManager_a52c38dc0bcbab3ba04e974bef291d5ed}{00042}}\ \ \ \textcolor{keyword}{inline}\ std::string\ \mbox{\hyperlink{classMaCh3Plotting_1_1StyleManager_a52c38dc0bcbab3ba04e974bef291d5ed}{prettifySampleName}}(\textcolor{keyword}{const}\ std::string\ \&origName)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{styleManager_8h_source_l00043}00043\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classMaCh3Plotting_1_1StyleManager_a105299a42eec9ef749142f9c1abd612e}{prettifyName}}(origName,\ \textcolor{stringliteral}{"{}samples"{}});}
+\DoxyCodeLine{\Hypertarget{styleManager_8h_source_l00044}00044\ \ \ \};}
+\DoxyCodeLine{\Hypertarget{styleManager_8h_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{styleManager_8h_source_l00046}00046\ \ \ \textcolor{comment}{//\ style\ setting\ options}}
+\DoxyCodeLine{\Hypertarget{styleManager_8h_source_l00050}00050\ \textcolor{comment}{}\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMaCh3Plotting_1_1StyleManager_a4b1dd7b013237cbb4b80d08373186484}{setPalette}}(\textcolor{keywordtype}{int}\ rootPlotStyle)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{styleManager_8h_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{styleManager_8h_source_l00055}00055\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMaCh3Plotting_1_1StyleManager_a4b1dd7b013237cbb4b80d08373186484}{setPalette}}(std::string\ configStyleName)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{styleManager_8h_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{styleManager_8h_source_l00060}00060\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMaCh3Plotting_1_1StyleManager_a0fb156073fed66e627b7e67b2ea2e2d2}{setTH1Style}}(TH1\ *hist,\ std::string\ styleName)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{styleManager_8h_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{styleManager_8h_source_l00062}00062\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{styleManager_8h_source_l00063}\mbox{\hyperlink{classMaCh3Plotting_1_1StyleManager_a904513e793037e503a1595cfe8467561}{00063}}\ \ \ YAML::Node\ \mbox{\hyperlink{classMaCh3Plotting_1_1StyleManager_a904513e793037e503a1595cfe8467561}{\_styleConfig}};}
+\DoxyCodeLine{\Hypertarget{styleManager_8h_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{styleManager_8h_source_l00065}00065\ \ \ \textcolor{comment}{//\ helper\ to\ basically\ just\ read\ fancy\ names\ from\ config\ \ }}
+\DoxyCodeLine{\Hypertarget{styleManager_8h_source_l00066}00066\ \ \ std::string\ \mbox{\hyperlink{classMaCh3Plotting_1_1StyleManager_a105299a42eec9ef749142f9c1abd612e}{prettifyName}}(\textcolor{keyword}{const}\ std::string\ \&origName,\ \textcolor{keyword}{const}\ std::string\ \&nameType)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{styleManager_8h_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{styleManager_8h_source_l00068}00068\ \};}
+\DoxyCodeLine{\Hypertarget{styleManager_8h_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{styleManager_8h_source_l00070}00070\ \}\ \textcolor{comment}{//\ namespace\ MaCh3Plotting}}
+
+\end{DoxyCode}

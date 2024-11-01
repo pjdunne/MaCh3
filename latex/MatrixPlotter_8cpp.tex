@@ -1,0 +1,338 @@
+\hypertarget{MatrixPlotter_8cpp}{}\doxysection{/home/runner/work/\+Ma\+Ch3/\+Ma\+Ch3/plotting/\+Matrix\+Plotter.cpp File Reference}
+\label{MatrixPlotter_8cpp}\index{/home/runner/work/MaCh3/MaCh3/plotting/MatrixPlotter.cpp@{/home/runner/work/MaCh3/MaCh3/plotting/MatrixPlotter.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include \char`\"{}TFile.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}TH2\+D.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}TCanvas.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}TStyle.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}TError.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}TPalette\+Axis.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}TColor.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}plotting\+Utils/plotting\+Utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}plotting\+Utils/plotting\+Manager.\+h\char`\"{}}\newline
+Include dependency graph for Matrix\+Plotter.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{MatrixPlotter_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+TH2D $\ast$ \mbox{\hyperlink{MatrixPlotter_8cpp_a2c43f409ad4e7256a1b2ba9ab34c1a8e}{Get\+Sub\+Matrix}} (TH2D $\ast$Matrix\+Full, const std\+::string \&Title, const std\+::vector$<$ std\+::string $>$ \&Params)
+\item 
+void \mbox{\hyperlink{MatrixPlotter_8cpp_a036ec4a114644b25af09cc1e0dab023a}{Setup\+Info}} (const std\+::string \&Config, std\+::vector$<$ std\+::string $>$ \&Title, std\+::vector$<$ std\+::vector$<$ std\+::string $>$ $>$ \&Params)
+\item 
+void \mbox{\hyperlink{MatrixPlotter_8cpp_a56d1b91d494bea9e60196f362145aa28}{Plot\+Matrix}} (std\+::string Config, std\+::string File)
+\item 
+void \mbox{\hyperlink{MatrixPlotter_8cpp_aa49129ffe218c5ee0f0b0eab17ab436c}{Compare\+Matrices}} (std\+::string Config, std\+::string File1, std\+::string Title1, std\+::string File2, std\+::string Title2)
+\item 
+int \mbox{\hyperlink{MatrixPlotter_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{MatrixPlotter_8cpp_aa49129ffe218c5ee0f0b0eab17ab436c}\label{MatrixPlotter_8cpp_aa49129ffe218c5ee0f0b0eab17ab436c}} 
+\index{MatrixPlotter.cpp@{MatrixPlotter.cpp}!CompareMatrices@{CompareMatrices}}
+\index{CompareMatrices@{CompareMatrices}!MatrixPlotter.cpp@{MatrixPlotter.cpp}}
+\doxysubsubsection{\texorpdfstring{CompareMatrices()}{CompareMatrices()}}
+{\footnotesize\ttfamily void Compare\+Matrices (\begin{DoxyParamCaption}\item[{std\+::string}]{Config,  }\item[{std\+::string}]{File1,  }\item[{std\+::string}]{Title1,  }\item[{std\+::string}]{File2,  }\item[{std\+::string}]{Title2 }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{MatrixPlotter_8cpp_source_l00158}{158}} of file \mbox{\hyperlink{MatrixPlotter_8cpp_source}{Matrix\+Plotter.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00159\ \{}
+\DoxyCodeLine{00160\ \ \ \textcolor{comment}{//\ Open\ the\ ROOT\ file}}
+\DoxyCodeLine{00161\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ NFiles\ =\ 2;}
+\DoxyCodeLine{00162\ \ \ TFile\ *file[NFiles];}
+\DoxyCodeLine{00163\ \ \ file[0]\ =\ TFile::Open(File1.c\_str());}
+\DoxyCodeLine{00164\ \ \ file[1]\ =\ TFile::Open(File2.c\_str());}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ \ \ TH2D\ *MatrixFull[2]\ =\ \{\textcolor{keyword}{nullptr}\};}
+\DoxyCodeLine{00167\ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ NFiles;\ i++)\ \{}
+\DoxyCodeLine{00168\ \ \ \ \ file[i]-\/>GetObject(\textcolor{stringliteral}{"{}Correlation\_plot"{}},\ MatrixFull[i]);}
+\DoxyCodeLine{00169\ \ \ \}}
+\DoxyCodeLine{00170\ \ \ \textcolor{keyword}{auto}\ MatrixPlot\ =\ std::make\_unique<TCanvas>(\textcolor{stringliteral}{"{}MatrixPlot"{}},\ \textcolor{stringliteral}{"{}MatrixPlot"{}},\ 0,\ 0,\ 1024,\ 1024);}
+\DoxyCodeLine{00171\ \ \ MatrixPlot-\/>SetGrid();}
+\DoxyCodeLine{00172\ \ \ gStyle-\/>SetOptStat(0);}
+\DoxyCodeLine{00173\ \ \ gStyle-\/>SetOptTitle(0);}
+\DoxyCodeLine{00174\ \ \ MatrixPlot-\/>SetTickx();}
+\DoxyCodeLine{00175\ \ \ MatrixPlot-\/>SetTicky();}
+\DoxyCodeLine{00176\ \ \ MatrixPlot-\/>SetBottomMargin(0.2);}
+\DoxyCodeLine{00177\ \ \ MatrixPlot-\/>SetTopMargin(0.1);}
+\DoxyCodeLine{00178\ \ \ MatrixPlot-\/>SetRightMargin(0.15);}
+\DoxyCodeLine{00179\ \ \ MatrixPlot-\/>SetLeftMargin(0.15);}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00181\ \ \ gStyle-\/>SetOptTitle(1);}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00183\ \ \ \textcolor{comment}{//KS:\ Fancy\ colots}}
+\DoxyCodeLine{00184\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ NRGBs\ =\ 10;}
+\DoxyCodeLine{00185\ \ \ TColor::InitializeColors();}
+\DoxyCodeLine{00186\ \ \ Double\_t\ stops[NRGBs]\ =\ \{\ 0.00,\ 0.10,\ 0.25,\ 0.35,\ 0.50,\ 0.60,\ 0.65,\ 0.75,\ 0.90,\ 1.00\ \};}
+\DoxyCodeLine{00187\ \ \ Double\_t\ red[NRGBs]\ \ \ =\ \{\ 0.50,\ 1.00,\ 1.00,\ 0.25,\ 0.00,\ 0.10,\ 0.50,\ 1.00,\ 0.75,\ 0.55\ \};}
+\DoxyCodeLine{00188\ \ \ Double\_t\ green[NRGBs]\ =\ \{\ 0.00,\ 0.25,\ 1.00,\ 0.25,\ 0.00,\ 0.60,\ 0.90,\ 1.00,\ 0.75,\ 0.75\ \};}
+\DoxyCodeLine{00189\ \ \ Double\_t\ blue[NRGBs]\ \ =\ \{\ 0.00,\ 0.25,\ 1.00,\ 1.00,\ 0.50,\ 0.60,\ 0.90,\ 1.00,\ 0.05,\ 0.05\ \};}
+\DoxyCodeLine{00190\ \ \ TColor::CreateGradientColorTable(NRGBs,\ stops,\ red,\ green,\ blue,\ 255);}
+\DoxyCodeLine{00191\ \ \ gStyle-\/>SetNumberContours(255);}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00193\ \ \ \textcolor{comment}{//To\ avoid\ TCanvas::Print>\ messages}}
+\DoxyCodeLine{00194\ \ \ gErrorIgnoreLevel\ =\ kWarning;}
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00196\ \ \ MatrixPlot-\/>Print(\textcolor{stringliteral}{"{}MatrixComparePlot.pdf["{}});}
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00198\ \ \ std::vector<std::string>\ Title;}
+\DoxyCodeLine{00199\ \ \ std::vector<std::vector<std::string>>\ Params;}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00201\ \ \ \mbox{\hyperlink{MatrixPlotter_8cpp_a036ec4a114644b25af09cc1e0dab023a}{SetupInfo}}(Config,\ Title,\ Params);}
+\DoxyCodeLine{00202\ }
+\DoxyCodeLine{00203\ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t}\ it\ =\ 0;\ it\ <\ Title.size();\ it++)}
+\DoxyCodeLine{00204\ \ \ \{}
+\DoxyCodeLine{00205\ \ \ \ \ TH2D*\ Hist[2]\ =\ \{\textcolor{keyword}{nullptr}\};}
+\DoxyCodeLine{00206\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ NFiles;\ i++)}
+\DoxyCodeLine{00207\ \ \ \ \ \{}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ Hist[i]\ =\ \mbox{\hyperlink{MatrixPlotter_8cpp_a2c43f409ad4e7256a1b2ba9ab34c1a8e}{GetSubMatrix}}(MatrixFull[i],\ Title[it],\ Params[it]);}
+\DoxyCodeLine{00209\ \ \ \ \ \}}
+\DoxyCodeLine{00210\ \ \ \ \ Hist[0]-\/>GetZaxis()-\/>SetTitle(\ (Title1\ +\ \textcolor{stringliteral}{"{}/"{}}\ +\ \ Title2).c\_str());}
+\DoxyCodeLine{00211\ \ \ \ \ Hist[0]-\/>GetXaxis()-\/>LabelsOption(\textcolor{stringliteral}{"{}v"{}});}
+\DoxyCodeLine{00212\ }
+\DoxyCodeLine{00213\ \ \ \ \ Hist[0]-\/>Draw(\textcolor{stringliteral}{"{}COLZ"{}});}
+\DoxyCodeLine{00214\ \ \ \ \ MatrixPlot-\/>Print(\textcolor{stringliteral}{"{}MatrixComparePlot.pdf"{}});}
+\DoxyCodeLine{00215\ }
+\DoxyCodeLine{00216\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ NFiles;\ i++)}
+\DoxyCodeLine{00217\ \ \ \ \ \{}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \textcolor{keyword}{delete}\ Hist[i];}
+\DoxyCodeLine{00219\ \ \ \ \ \}}
+\DoxyCodeLine{00220\ \ \ \}}
+\DoxyCodeLine{00221\ \ \ MatrixPlot-\/>Print(\textcolor{stringliteral}{"{}MatrixComparePlot.pdf]"{}});}
+\DoxyCodeLine{00222\ }
+\DoxyCodeLine{00223\ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ NFiles;\ i++)}
+\DoxyCodeLine{00224\ \ \ \{}
+\DoxyCodeLine{00225\ \ \ \ \ \textcolor{keyword}{delete}\ MatrixFull[i];}
+\DoxyCodeLine{00226\ \ \ \ \ file[i]-\/>Close();}
+\DoxyCodeLine{00227\ \ \ \ \ \textcolor{keyword}{delete}\ file[i];}
+\DoxyCodeLine{00228\ \ \ \}}
+\DoxyCodeLine{00229\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{MatrixPlotter_8cpp_a2c43f409ad4e7256a1b2ba9ab34c1a8e}\label{MatrixPlotter_8cpp_a2c43f409ad4e7256a1b2ba9ab34c1a8e}} 
+\index{MatrixPlotter.cpp@{MatrixPlotter.cpp}!GetSubMatrix@{GetSubMatrix}}
+\index{GetSubMatrix@{GetSubMatrix}!MatrixPlotter.cpp@{MatrixPlotter.cpp}}
+\doxysubsubsection{\texorpdfstring{GetSubMatrix()}{GetSubMatrix()}}
+{\footnotesize\ttfamily TH2D $\ast$ Get\+Sub\+Matrix (\begin{DoxyParamCaption}\item[{TH2D $\ast$}]{Matrix\+Full,  }\item[{const std\+::string \&}]{Title,  }\item[{const std\+::vector$<$ std\+::string $>$ \&}]{Params }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{MatrixPlotter_8cpp_source_l00015}{15}} of file \mbox{\hyperlink{MatrixPlotter_8cpp_source}{Matrix\+Plotter.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \ \ std::vector<int>\ ParamIndex(Params.size(),\ -\/999);}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ Params.size();\ i++)}
+\DoxyCodeLine{00020\ \ \ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ MatrixFull-\/>GetNbinsX();\ j++)}
+\DoxyCodeLine{00022\ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \textcolor{keywordflow}{if}(MatrixFull-\/>GetXaxis()-\/>GetBinLabel(j+1)\ ==\ Params[i])}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ ParamIndex[i]\ =\ j;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00028\ \ \ \ \ \}}
+\DoxyCodeLine{00029\ \ \ \}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ Params.size();\ i++)}
+\DoxyCodeLine{00032\ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordflow}{if}(ParamIndex[i]\ ==\ -\/999\ )}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Didn't\ find\ param\ \{\}\ in\ matrix\ within\ \{\}\ sub-\/block"{}},\ Params[i],\ Title);}
+\DoxyCodeLine{00035\ \ \ \}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \textcolor{keyword}{auto}\ new\_end\ =\ std::remove(ParamIndex.begin(),\ ParamIndex.end(),\ -\/999);}
+\DoxyCodeLine{00038\ \ \ ParamIndex.erase(new\_end,\ ParamIndex.end());}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ TH2D*\ Hist\ =\ \textcolor{keyword}{new}\ TH2D(Title.c\_str(),\ Title.c\_str(),\ ParamIndex.size(),\ 0,\ ParamIndex.size(),\ ParamIndex.size(),\ 0,\ ParamIndex.size());}
+\DoxyCodeLine{00041\ \ \ Hist-\/>GetZaxis()-\/>SetTitle(\textcolor{stringliteral}{"{}Correlation"{}});}
+\DoxyCodeLine{00042\ \ \ Hist-\/>SetMinimum(-\/1);}
+\DoxyCodeLine{00043\ \ \ Hist-\/>SetMaximum(1);}
+\DoxyCodeLine{00044\ \ \ Hist-\/>GetXaxis()-\/>SetLabelSize(0.015);}
+\DoxyCodeLine{00045\ \ \ Hist-\/>GetYaxis()-\/>SetLabelSize(0.015);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t}\ x\ =\ 0;\ x\ <\ ParamIndex.size();\ x++)}
+\DoxyCodeLine{00048\ \ \ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t}\ y\ =\ 0;\ y\ <\ ParamIndex.size();\ y++)}
+\DoxyCodeLine{00050\ \ \ \ \ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ Hist-\/>SetBinContent(x+1,\ y+1,\ MatrixFull-\/>GetBinContent(ParamIndex[x]+1,\ ParamIndex[y]+1));}
+\DoxyCodeLine{00052\ \ \ \ \ \}}
+\DoxyCodeLine{00053\ \ \ \ \ Hist-\/>GetXaxis()-\/>SetBinLabel(x+1,\ MatrixFull-\/>GetXaxis()-\/>GetBinLabel(ParamIndex[x]+1));}
+\DoxyCodeLine{00054\ \ \ \ \ Hist-\/>GetYaxis()-\/>SetBinLabel(x+1,\ MatrixFull-\/>GetXaxis()-\/>GetBinLabel(ParamIndex[x]+1));}
+\DoxyCodeLine{00055\ \ \ \}}
+\DoxyCodeLine{00056\ \ \ \textcolor{keywordflow}{return}\ Hist;}
+\DoxyCodeLine{00057\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{MatrixPlotter_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{MatrixPlotter_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{MatrixPlotter.cpp@{MatrixPlotter.cpp}!main@{main}}
+\index{main@{main}!MatrixPlotter.cpp@{MatrixPlotter.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{MatrixPlotter_8cpp_source_l00231}{231}} of file \mbox{\hyperlink{MatrixPlotter_8cpp_source}{Matrix\+Plotter.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00232\ \{}
+\DoxyCodeLine{00233\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_aa603c55ea73cd86d1994901227883e1e}{SetMaCh3LoggerFormat}}();}
+\DoxyCodeLine{00234\ }
+\DoxyCodeLine{00235\ \ \ \textcolor{keywordflow}{if}\ (argc\ !=\ 3\ \&\&\ argc\ !=\ 6)}
+\DoxyCodeLine{00236\ \ \ \{}
+\DoxyCodeLine{00237\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}How\ to\ use:\ \{\}\ MCMC\_Processor\_Output.root\ config"{}},\ argv[0]);}
+\DoxyCodeLine{00238\ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_\ ,\ \_\_LINE\_\_\ );}
+\DoxyCodeLine{00239\ \ \ \}}
+\DoxyCodeLine{00240\ }
+\DoxyCodeLine{00241\ \ \ \textcolor{keywordflow}{if}\ (argc\ ==\ 3)}
+\DoxyCodeLine{00242\ \ \ \{}
+\DoxyCodeLine{00243\ \ \ \ \ \mbox{\hyperlink{MatrixPlotter_8cpp_a56d1b91d494bea9e60196f362145aa28}{PlotMatrix}}(std::string(argv[1]),\ std::string(argv[2]));}
+\DoxyCodeLine{00244\ \ \ \}}
+\DoxyCodeLine{00245\ }
+\DoxyCodeLine{00246\ \ \ \textcolor{keywordflow}{if}\ (argc\ ==\ 6)}
+\DoxyCodeLine{00247\ \ \ \{}
+\DoxyCodeLine{00248\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Comparing\ matrices"{}});}
+\DoxyCodeLine{00249\ \ \ \ \ \mbox{\hyperlink{MatrixPlotter_8cpp_aa49129ffe218c5ee0f0b0eab17ab436c}{CompareMatrices}}(std::string(argv[1]),\ std::string(argv[2]),\ std::string(argv[3]),\ std::string(argv[4]),\ std::string(argv[5]));}
+\DoxyCodeLine{00250\ \ \ \}}
+\DoxyCodeLine{00251\ }
+\DoxyCodeLine{00252\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Finished\ plotting\ matrices"{}});}
+\DoxyCodeLine{00253\ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00254\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{MatrixPlotter_8cpp_a56d1b91d494bea9e60196f362145aa28}\label{MatrixPlotter_8cpp_a56d1b91d494bea9e60196f362145aa28}} 
+\index{MatrixPlotter.cpp@{MatrixPlotter.cpp}!PlotMatrix@{PlotMatrix}}
+\index{PlotMatrix@{PlotMatrix}!MatrixPlotter.cpp@{MatrixPlotter.cpp}}
+\doxysubsubsection{\texorpdfstring{PlotMatrix()}{PlotMatrix()}}
+{\footnotesize\ttfamily void Plot\+Matrix (\begin{DoxyParamCaption}\item[{std\+::string}]{Config,  }\item[{std\+::string}]{File }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{MatrixPlotter_8cpp_source_l00090}{90}} of file \mbox{\hyperlink{MatrixPlotter_8cpp_source}{Matrix\+Plotter.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00091\ \{}
+\DoxyCodeLine{00092\ \ \ \textcolor{comment}{//\ Open\ the\ ROOT\ file}}
+\DoxyCodeLine{00093\ \ \ TFile\ *file\ =\ TFile::Open(File.c\_str());}
+\DoxyCodeLine{00094\ \ \ \textcolor{keywordflow}{if}\ (!file\ ||\ file-\/>IsZombie())\ \{}
+\DoxyCodeLine{00095\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Error\ opening\ file"{}});}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_\ ,\ \_\_LINE\_\_\ );}
+\DoxyCodeLine{00097\ \ \ \}}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ TH2D\ *MatrixFull\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00100\ \ \ file-\/>GetObject(\textcolor{stringliteral}{"{}Correlation\_plot"{}},\ MatrixFull);}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \textcolor{keywordflow}{if}\ (!MatrixFull)\ \{}
+\DoxyCodeLine{00103\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Error:\ Could\ not\ retrieve\ histogram"{}});}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_\ ,\ \_\_LINE\_\_\ );}
+\DoxyCodeLine{00105\ \ \ \}}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \textcolor{keyword}{auto}\ MatrixPlot\ =\ std::make\_unique<TCanvas>(\textcolor{stringliteral}{"{}MatrixPlot"{}},\ \textcolor{stringliteral}{"{}MatrixPlot"{}},\ 0,\ 0,\ 1024,\ 1024);}
+\DoxyCodeLine{00108\ \ \ MatrixPlot-\/>SetGrid();}
+\DoxyCodeLine{00109\ \ \ gStyle-\/>SetOptStat(0);}
+\DoxyCodeLine{00110\ \ \ gStyle-\/>SetOptTitle(0);}
+\DoxyCodeLine{00111\ \ \ MatrixPlot-\/>SetTickx();}
+\DoxyCodeLine{00112\ \ \ MatrixPlot-\/>SetTicky();}
+\DoxyCodeLine{00113\ \ \ MatrixPlot-\/>SetBottomMargin(0.2);}
+\DoxyCodeLine{00114\ \ \ MatrixPlot-\/>SetTopMargin(0.1);}
+\DoxyCodeLine{00115\ \ \ MatrixPlot-\/>SetRightMargin(0.15);}
+\DoxyCodeLine{00116\ \ \ MatrixPlot-\/>SetLeftMargin(0.15);}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \ \ gStyle-\/>SetOptTitle(1);}
+\DoxyCodeLine{00119\ \ \ gStyle-\/>SetPaintTextFormat(\textcolor{stringliteral}{"{}4.1f"{}});}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \ \ \textcolor{comment}{//\ Make\ pretty\ Correlation\ colors\ (red\ to\ blue)}}
+\DoxyCodeLine{00122\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ NRGBs\ =\ 5;}
+\DoxyCodeLine{00123\ \ \ TColor::InitializeColors();}
+\DoxyCodeLine{00124\ \ \ Double\_t\ stops[NRGBs]\ =\ \{\ 0.00,\ 0.25,\ 0.50,\ 0.75,\ 1.00\ \};}
+\DoxyCodeLine{00125\ \ \ Double\_t\ red[NRGBs]\ \ \ =\ \{\ 0.00,\ 0.25,\ 1.00,\ 1.00,\ 0.50\ \};}
+\DoxyCodeLine{00126\ \ \ Double\_t\ green[NRGBs]\ =\ \{\ 0.00,\ 0.25,\ 1.00,\ 0.25,\ 0.00\ \};}
+\DoxyCodeLine{00127\ \ \ Double\_t\ blue[NRGBs]\ \ =\ \{\ 0.50,\ 1.00,\ 1.00,\ 0.25,\ 0.00\ \};}
+\DoxyCodeLine{00128\ \ \ TColor::CreateGradientColorTable(5,\ stops,\ red,\ green,\ blue,\ 255);}
+\DoxyCodeLine{00129\ \ \ gStyle-\/>SetNumberContours(255);}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \textcolor{comment}{//To\ avoid\ TCanvas::Print>\ messages}}
+\DoxyCodeLine{00132\ \ \ gErrorIgnoreLevel\ =\ kWarning;}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \ \ MatrixPlot-\/>Print(\textcolor{stringliteral}{"{}MatrixPlot.pdf["{}});}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \ \ MatrixFull-\/>Draw(\textcolor{stringliteral}{"{}COLZ"{}});}
+\DoxyCodeLine{00137\ \ \ MatrixPlot-\/>Print(\textcolor{stringliteral}{"{}MatrixPlot.pdf"{}});}
+\DoxyCodeLine{00138\ \ \ std::vector<std::string>\ Title;}
+\DoxyCodeLine{00139\ \ \ std::vector<std::vector<std::string>>\ Params;}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \ \ \mbox{\hyperlink{MatrixPlotter_8cpp_a036ec4a114644b25af09cc1e0dab023a}{SetupInfo}}(Config,\ Title,\ Params);}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t}\ it\ =\ 0;\ it\ <\ Title.size();\ it++)}
+\DoxyCodeLine{00144\ \ \ \{}
+\DoxyCodeLine{00145\ \ \ \ \ TH2D*\ Hist\ =\ \mbox{\hyperlink{MatrixPlotter_8cpp_a2c43f409ad4e7256a1b2ba9ab34c1a8e}{GetSubMatrix}}(MatrixFull,\ Title[it],\ Params[it]);}
+\DoxyCodeLine{00146\ \ \ \ \ Hist-\/>GetXaxis()-\/>LabelsOption(\textcolor{stringliteral}{"{}v"{}});}
+\DoxyCodeLine{00147\ \ \ \ \ Hist-\/>Draw(\textcolor{stringliteral}{"{}COLZ\ TEXT"{}});}
+\DoxyCodeLine{00148\ \ \ \ \ MatrixPlot-\/>Print(\textcolor{stringliteral}{"{}MatrixPlot.pdf"{}});}
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keyword}{delete}\ Hist;}
+\DoxyCodeLine{00150\ \ \ \}}
+\DoxyCodeLine{00151\ \ \ MatrixPlot-\/>Print(\textcolor{stringliteral}{"{}MatrixPlot.pdf]"{}});}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \ \ \textcolor{keyword}{delete}\ MatrixFull;}
+\DoxyCodeLine{00154\ \ \ file-\/>Close();}
+\DoxyCodeLine{00155\ \ \ \textcolor{keyword}{delete}\ file;}
+\DoxyCodeLine{00156\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{MatrixPlotter_8cpp_a036ec4a114644b25af09cc1e0dab023a}\label{MatrixPlotter_8cpp_a036ec4a114644b25af09cc1e0dab023a}} 
+\index{MatrixPlotter.cpp@{MatrixPlotter.cpp}!SetupInfo@{SetupInfo}}
+\index{SetupInfo@{SetupInfo}!MatrixPlotter.cpp@{MatrixPlotter.cpp}}
+\doxysubsubsection{\texorpdfstring{SetupInfo()}{SetupInfo()}}
+{\footnotesize\ttfamily void Setup\+Info (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{Config,  }\item[{std\+::vector$<$ std\+::string $>$ \&}]{Title,  }\item[{std\+::vector$<$ std\+::vector$<$ std\+::string $>$ $>$ \&}]{Params }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{MatrixPlotter_8cpp_source_l00059}{59}} of file \mbox{\hyperlink{MatrixPlotter_8cpp_source}{Matrix\+Plotter.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00060\ \{}
+\DoxyCodeLine{00061\ \ \ \textcolor{comment}{//\ Load\ the\ YAML\ file}}
+\DoxyCodeLine{00062\ \ \ YAML::Node\ \mbox{\hyperlink{ProcessMCMC_8cpp_a13056efd080ab16304b6f7be0ebf0a61}{config}}\ =\ YAML::LoadFile(Config);}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \textcolor{comment}{//\ Access\ the\ "{}MatrixPlotter"{}\ section}}
+\DoxyCodeLine{00065\ \ \ YAML::Node\ settings\ =\ \mbox{\hyperlink{ProcessMCMC_8cpp_a13056efd080ab16304b6f7be0ebf0a61}{config}}[\textcolor{stringliteral}{"{}MatrixPlotter"{}}];}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \textcolor{comment}{//\ Retrieve\ the\ list\ of\ Titles}}
+\DoxyCodeLine{00068\ \ \ Title\ =\ settings[\textcolor{stringliteral}{"{}Titles"{}}].as<std::vector<std::string>>();}
+\DoxyCodeLine{00069\ \ \ Params.resize(Title.size());}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \textcolor{comment}{//\ Retrieve\ parameters\ for\ each\ title\ (using\ the\ titles\ as\ keys)}}
+\DoxyCodeLine{00072\ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t}\ it\ =\ 0;\ it\ <\ Title.size();\ it++)}
+\DoxyCodeLine{00073\ \ \ \{}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordflow}{if}\ (settings[Title[it]])\ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ Params[it]\ =\ settings[Title[it]].as<std::vector<std::string>>();}
+\DoxyCodeLine{00076\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Missing\ key\ in\ YAML\ for:\ \{\}"{}},\ Title[it]);}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_\ ,\ \_\_LINE\_\_\ );}
+\DoxyCodeLine{00079\ \ \ \ \ \}}
+\DoxyCodeLine{00080\ \ \ \}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \textcolor{comment}{//\ Check\ if\ sizes\ match}}
+\DoxyCodeLine{00083\ \ \ \textcolor{keywordflow}{if}(Title.size()\ !=\ Params.size())}
+\DoxyCodeLine{00084\ \ \ \{}
+\DoxyCodeLine{00085\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Size\ doesn't\ match"{}});}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_\ ,\ \_\_LINE\_\_\ );}
+\DoxyCodeLine{00087\ \ \ \}}
+\DoxyCodeLine{00088\ \}}
+
+\end{DoxyCode}

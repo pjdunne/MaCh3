@@ -1,0 +1,204 @@
+\hypertarget{plottingManager_8cpp_source}{}\doxysection{plotting\+Manager.\+cpp}
+\label{plottingManager_8cpp_source}\index{/home/runner/work/MaCh3/MaCh3/plotting/plottingUtils/plottingManager.cpp@{/home/runner/work/MaCh3/MaCh3/plotting/plottingUtils/plottingManager.cpp}}
+\mbox{\hyperlink{plottingManager_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{plottingManager_8h}{plottingManager.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00003}00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceMaCh3Plotting}{MaCh3Plotting}}\ \{}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00004}00004\ \textcolor{comment}{//\ this\ is\ the\ constructor\ using\ the\ default\ plotting\ config\ file}}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00005}\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_aa94590f322dcf7cd1130d8165378c7f5}{00005}}\ \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_aa94590f322dcf7cd1130d8165378c7f5}{PlottingManager::PlottingManager}}()\ \{}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00006}00006\ \ \ \textcolor{comment}{//\ set\ config\ file\ name}}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00007}00007\ \ \ \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a390f806466cadac1548160c89f2c2e6d}{\_configFileName}}\ =\ \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a1947b4f022707ef6f570787ec62ba90c}{DEFAULT\_PLOTTING\_CONFIG}};}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00008}00008\ \}}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00010}00010\ \textcolor{comment}{//\ this\ is\ the\ constructor\ with\ user\ specified\ config}}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00011}\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a28c0b6e9ba8e0b09b0cffc09801d1e69}{00011}}\ \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_aa94590f322dcf7cd1130d8165378c7f5}{PlottingManager::PlottingManager}}(\textcolor{keyword}{const}\ std::string\ \&PlottingConfigName)\ \{}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00012}00012\ \ \ \textcolor{comment}{//\ parse\ the\ config\ file}}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00013}00013\ \ \ \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a390f806466cadac1548160c89f2c2e6d}{\_configFileName}}\ =\ PlottingConfigName;}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00014}00014\ \}}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00025}\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a20fbe3c9673f14adb46d3cd8919e306d}{00025}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a20fbe3c9673f14adb46d3cd8919e306d}{PlottingManager::initialise}}()\ \{}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00030}00030\ \ \ \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_aadb74532f93bd6f7ccb2a5928b772163}{\_plottingConfig}}\ =\ YAML::LoadFile(\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a390f806466cadac1548160c89f2c2e6d}{\_configFileName}});}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00032}00032\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}Initialising\ PlottingManager\ with\ plotting\ congif\ \{\}"{}},\ \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a390f806466cadac1548160c89f2c2e6d}{\_configFileName}});}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00033}00033\ \ \ \textcolor{comment}{//\ read\ options\ from\ the\ config}}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00034}00034\ \ \ YAML::Node\ managerOptions\ =\ \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_aadb74532f93bd6f7ccb2a5928b772163}{\_plottingConfig}}[\textcolor{stringliteral}{"{}ManagerOptions"{}}];}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00036}00036\ \ \ std::string\ translationConfig\ =\ managerOptions[\textcolor{stringliteral}{"{}translationConfig"{}}].as<std::string>();}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00037}00037\ \ \ \textcolor{keywordflow}{if}\ (translationConfig\ ==\ \textcolor{stringliteral}{"{}"{}})}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00038}00038\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00039}00039\ \ \ \ \ translationConfig\ =\ \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a59d9e05c0590931aa260d81cd97bf3e4}{DEFAULT\_TRANSLATION\_CONFIG}};}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00040}00040\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}PlottingManager:\ Using\ default\ translation\ config\ file\ name"{}});}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00041}00041\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00042}00042\ \ \ }
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00043}00043\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}PlottingManager:\ Using\ translation\ config\ file:\ \{\}"{}},\ translationConfig);}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00045}00045\ \ \ std::string\ styleConfig\ =\ managerOptions[\textcolor{stringliteral}{"{}styleConfig"{}}].as<std::string>();}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00046}00046\ \ \ \textcolor{keywordflow}{if}\ (styleConfig\ ==\ \textcolor{stringliteral}{"{}"{}})}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00047}00047\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00048}00048\ \ \ \ \ styleConfig\ =\ \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a2e234f2546aa3eb2c7d97e2f28024511}{DEFAULT\_STYLE\_CONFIG}};}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00049}00049\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}PlottingManager:\ Using\ default\ style\ config\ file\ name"{}});}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00050}00050\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00052}00052\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}PlottingManager:\ Using\ style\ config\ file:\ \{\}"{}},\ styleConfig);}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00054}00054\ \ \ \textcolor{comment}{//\ create\ the\ StyleManager}}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00055}00055\ \ \ \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_ad1519621bfc57eace55e228f3d7f9515}{\_styleMan}}\ =\ std::make\_unique<StyleManager>(styleConfig);}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00057}00057\ \ \ \textcolor{comment}{//\ create\ the\ InputManager\ and\ add\ all\ the\ files\ to\ it}}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00058}00058\ \ \ \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a6253de91263e8078a41f6bca9bfc31d8}{\_inputMan}}\ =\ std::make\_unique<InputManager>(translationConfig);}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00059}00059\ \ \ \textcolor{keywordflow}{for}\ (std::string\ fileName\ :\ \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a5c04051d76dca0ba9b0500a0e8529d6e}{\_fileNames}})}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00060}00060\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00061}00061\ \ \ \ \ \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a6253de91263e8078a41f6bca9bfc31d8}{\_inputMan}}-\/>addFile(fileName);}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00062}00062\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00063}00063\ \}}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00092}\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a6abd05428a9f8827c67a22bd6f8ffce3}{00092}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a6abd05428a9f8827c67a22bd6f8ffce3}{PlottingManager::parseInputs}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}\ *\ \textcolor{keyword}{const}\ *argv)\ \{}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00093}00093\ \ \ \textcolor{comment}{//\ parse\ the\ inputs}}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00094}00094\ \ \ \textcolor{keywordtype}{int}\ c;}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00095}00095\ \ \ \textcolor{keywordflow}{while}\ ((c\ =\ getopt(argc,\ argv,\ \textcolor{stringliteral}{"{}o:l:d:c:srgh"{}}))\ !=\ -\/1)}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00096}00096\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00097}00097\ \ \ \ \ \textcolor{keywordflow}{if}\ (c\ <\ 0)}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00098}00098\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00099}00099\ \ \ \ \ \textcolor{keywordflow}{switch}\ (c)}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00100}00100\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00101}00101\ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'o'}:\ \{}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00102}00102\ \ \ \ \ \ \ \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_acd4e91fc8920cec0fb43064f067a48ff}{setOutFileName}}(optarg);}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00103}00103\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00104}00104\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00105}00105\ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'s'}:\ \{}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00106}00106\ \ \ \ \ \ \ \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_ac58348de30d8854fe70371ba377d6b2d}{\_splitBySample}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00107}00107\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00108}00108\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00109}00109\ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'r'}:\ \{}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00110}00110\ \ \ \ \ \ \ \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_ae937b126847fd1b42e45dd5705970972}{\_plotRatios}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00111}00111\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00112}00112\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00113}00113\ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'g'}:\ \{}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00114}00114\ \ \ \ \ \ \ \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a329ea5735ec605624867435d512ed16d}{\_drawGrid}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00115}00115\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00116}00116\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00117}00117\ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'h'}:\ \{}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00118}00118\ \ \ \ \ \ \ \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a8910c157ce1ec6698f3bacdf521789ff}{usage}}();}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00119}00119\ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_\ ,\ \_\_LINE\_\_\ );}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00120}00120\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00121}00121\ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'l'}:\ \{}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00122}00122\ \ \ \ \ \ \ \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_aca16d73c24fb74500a49efd77d474b05}{parseFileLabels}}(optarg,\ \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a57361998964918a9834a3c2536dc6692}{\_fileLabels}});}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00123}00123\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Specified\ file\ labels:\ "{}});}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00124}00124\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (std::string\ label\ :\ \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a57361998964918a9834a3c2536dc6692}{\_fileLabels}})}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00125}00125\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}\ \ \{\}"{}},\ label);}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00126}00126\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00127}00127\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00128}00128\ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'c'}:\ \{}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00129}00129\ \ \ \ \ \ \ \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a390f806466cadac1548160c89f2c2e6d}{\_configFileName}}\ =\ optarg;}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00130}00130\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00131}00131\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00132}00132\ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{charliteral}{'d'}:\ \{}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00133}00133\ \ \ \ \ \ \ \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a8fabd7cbc31aa1f9ed15f0b0d3201c81}{\_extraDrawOptions}}\ =\ optarg;}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00134}00134\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00135}00135\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00136}00136\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00137}00137\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00138}00138\ }
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00139}00139\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}\(\backslash\)nInput\ files\ provided"{}});}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00140}00140\ \ \ \textcolor{comment}{//\ optind\ is\ for\ the\ extra\ arguments\ that\ are\ not\ parsed\ by\ the\ program}}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00141}00141\ \ \ \textcolor{keywordflow}{for}\ (;\ optind\ <\ argc;\ optind++)}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00142}00142\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00143}00143\ \ \ \ \ \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a5c04051d76dca0ba9b0500a0e8529d6e}{\_fileNames}}.push\_back(argv[optind]);}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00144}00144\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(argv[optind]);}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00145}00145\ \ \ \ \ \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a3cd2734e72a6247826e566057367e3a6}{\_defaultFileLabels}}.push\_back(argv[optind]);}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00146}00146\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00147}00147\ \ \ }
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00148}00148\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_ac58348de30d8854fe70371ba377d6b2d}{\_splitBySample}})}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00149}00149\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Splitting\ by\ sample"{}});}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00150}00150\ }
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00151}00151\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_ae937b126847fd1b42e45dd5705970972}{\_plotRatios}}\ \&\&\ \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a5c04051d76dca0ba9b0500a0e8529d6e}{\_fileNames}}.size()\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00152}00152\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00153}00153\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}you\ specified\ -\/r\ <\_plotRatios>\ =\ true\ but\ didnt\ specify\ any\ files\ to\ compare\ against,\ was\ this\ a\ mistake?"{}});}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00154}00154\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00155}00155\ }
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00156}00156\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a57361998964918a9834a3c2536dc6692}{\_fileLabels}}.size()\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00157}00157\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00158}00158\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}No\ file\ labels\ specified,\ will\ just\ use\ the\ file\ names"{}});}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00159}00159\ \ \ \ \ \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a57361998964918a9834a3c2536dc6692}{\_fileLabels}}\ =\ \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a3cd2734e72a6247826e566057367e3a6}{\_defaultFileLabels}};}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00160}00160\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00161}00161\ }
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00162}00162\ \ \ \textcolor{keywordflow}{if}\ ((\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a57361998964918a9834a3c2536dc6692}{\_fileLabels}}.size()\ !=\ 0)\ \&\&\ (\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a57361998964918a9834a3c2536dc6692}{\_fileLabels}}.size()\ !=\ \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a5c04051d76dca0ba9b0500a0e8529d6e}{\_fileNames}}.size()))}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00163}00163\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00164}00164\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}hmmm,\ you\ gave\ me\ \{\}\ labels\ but\ \{\}\ files"{}},\ \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a57361998964918a9834a3c2536dc6692}{\_fileLabels}}.size(),\ \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a5c04051d76dca0ba9b0500a0e8529d6e}{\_fileNames}}.size());}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00165}00165\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00166}00166\ }
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00167}00167\ \ \ \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a20fbe3c9673f14adb46d3cd8919e306d}{initialise}}();}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00168}00168\ \}}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00169}00169\ }
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00176}\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_aeb042d09d55644d8b35632f66f1832b6}{00176}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_aeb042d09d55644d8b35632f66f1832b6}{PlottingManager::addUserOption}}()\ \{}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00178}00178\ \}}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00179}00179\ }
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00180}\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_af9f60a6196a9249d7ad7fee6c7bba89a}{00180}}\ std::string\ \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_af9f60a6196a9249d7ad7fee6c7bba89a}{PlottingManager::getUserOption}}(std::string\ option)\ \{}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00182}00182\ \ \ (void)\ option;}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00183}00183\ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00184}00184\ \}}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00185}00185\ }
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00186}\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a8910c157ce1ec6698f3bacdf521789ff}{00186}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a8910c157ce1ec6698f3bacdf521789ff}{PlottingManager::usage}}()\ \{}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00191}00191\ \}}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00192}00192\ }
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00197}\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_acd4e91fc8920cec0fb43064f067a48ff}{00197}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_acd4e91fc8920cec0fb43064f067a48ff}{PlottingManager::setOutFileName}}(std::string\ saveName)\ \{}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00198}00198\ \ \ \textcolor{keywordflow}{if}\ (saveName.find(\textcolor{stringliteral}{"{}."{}})\ ==\ std::string::npos)}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00199}00199\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00200}00200\ \ \ \ \ \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a362e5a4b44a17e5548d0301c2fb43a0a}{\_outputName}}\ =\ saveName\ +\ \textcolor{stringliteral}{"{}.pdf"{}};}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00201}00201\ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00202}00202\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00203}00203\ }
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00204}00204\ \ \ std::string\ ext\ =\ saveName;}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00205}00205\ \ \ \textcolor{comment}{//\ if\ there\ are\ .'s\ then\ remove\ everything\ before\ them\ until\ we\ only\ have\ the\ file\ extension\ left}}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00206}00206\ \ \ \textcolor{keywordflow}{while}\ (ext.find(\textcolor{stringliteral}{"{}."{}})\ !=\ std::string::npos)}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00207}00207\ \ \ \ \ ext.erase(0,\ ext.find(\textcolor{stringliteral}{"{}."{}})\ +\ 1);}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00208}00208\ \ \ \textcolor{keywordflow}{if}\ (ext\ ==\ \textcolor{stringliteral}{"{}pdf"{}}\ ||\ ext\ ==\ \textcolor{stringliteral}{"{}ps"{}}\ ||\ ext\ ==\ \textcolor{stringliteral}{"{}eps"{}})}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00209}00209\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00210}00210\ \ \ \ \ \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a362e5a4b44a17e5548d0301c2fb43a0a}{\_outputName}}\ =\ saveName;}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00211}00211\ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00212}00212\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00213}00213\ }
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00214}00214\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_ad5b2eb6377721e3ac95def22c2386bb1}{MACH3LOG\_WARN}}(\textcolor{stringliteral}{"{}file\ extension\ '\{\}'\ that\ you\ provided\ doesnt\ support\ multiple\ plots\ in\ one\ file"{}},\ ext);}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00215}00215\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_ad5b2eb6377721e3ac95def22c2386bb1}{MACH3LOG\_WARN}}(\textcolor{stringliteral}{"{}should\ be\ one\ of\ .pdf,\ .eps\ .ps,\ will\ use\ pdf"{}});}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00216}00216\ \ \ \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a362e5a4b44a17e5548d0301c2fb43a0a}{\_outputName}}\ =\ saveName\ +\ \textcolor{stringliteral}{"{}.pdf"{}};}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00217}00217\ \}}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00218}00218\ }
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00223}\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a9c1177794e2fecce4e258ee8446d6569}{00223}}\ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a0aead494d2ffb4b2ba2c1e2265dd56be}{PlottingManager::getOutputName}}(\textcolor{keyword}{const}\ std::string\ \&suffix)\ \{}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00224}00224\ \ \ std::string\ ext\ =\ \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a362e5a4b44a17e5548d0301c2fb43a0a}{\_outputName}};}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00225}00225\ \ \ std::string\ name\ =\ \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a362e5a4b44a17e5548d0301c2fb43a0a}{\_outputName}};}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00226}00226\ }
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00227}00227\ \ \ \textcolor{keywordtype}{size\_t}\ dotPos\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00228}00228\ \ \ \textcolor{keywordflow}{while}\ (ext.find(\textcolor{stringliteral}{"{}."{}})\ !=\ std::string::npos)}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00229}00229\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00230}00230\ \ \ \ \ dotPos\ +=\ ext.find(\textcolor{stringliteral}{"{}."{}});}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00231}00231\ \ \ \ \ ext.erase(0,\ ext.find(\textcolor{stringliteral}{"{}."{}})\ +\ 1);}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00232}00232\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00233}00233\ }
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00234}00234\ \ \ name.erase(dotPos,\ ext.size()\ +\ 1);}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00235}00235\ \ \ \textcolor{keywordflow}{return}\ name\ +\ suffix\ +\ \textcolor{stringliteral}{"{}."{}}\ +\ ext;}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00236}00236\ \}}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00237}00237\ }
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00240}\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a46b6bdc0f207ca3243eef5c23966bcd1}{00240}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a46b6bdc0f207ca3243eef5c23966bcd1}{PlottingManager::setExec}}(std::string\ execName)\ \{}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00241}00241\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}Setting\ internal\ exec\ name\ to\ \{\}"{}},\ execName);}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00242}00242\ \ \ \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a9304b66768eea558854d652a9beddbf1}{\_execOptions}}\ =\ \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_aadb74532f93bd6f7ccb2a5928b772163}{\_plottingConfig}}[execName];}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00243}00243\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a362e5a4b44a17e5548d0301c2fb43a0a}{\_outputName}}\ ==\ \textcolor{stringliteral}{"{}Plot.pdf"{}})}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00244}00244\ \ \ \ \ \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_acd4e91fc8920cec0fb43064f067a48ff}{setOutFileName}}(getOption<std::string>(\textcolor{stringliteral}{"{}defaultOutputName"{}}));}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00245}00245\ \}}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00246}00246\ }
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00247}\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_aca16d73c24fb74500a49efd77d474b05}{00247}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_aca16d73c24fb74500a49efd77d474b05}{PlottingManager::parseFileLabels}}(std::string\ labelString,\ std::vector<std::string>\ \&labelVec)\ \{}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00248}00248\ \ \ \textcolor{comment}{//\ take\ in\ a\ string\ defining\ labels\ of\ the\ form\ "{}label1;label2;...;labelN"{}\ and\ parse\ it\ into\ a}}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00249}00249\ \ \ \textcolor{comment}{//\ vector\ containing\ the\ labels}}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00250}00250\ }
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00251}00251\ \ \ \textcolor{keywordtype}{size\_t}\ end\ =\ labelString.find(\textcolor{stringliteral}{"{};"{}});}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00252}00252\ \ \ \textcolor{keywordflow}{while}\ (end\ !=\ std::string::npos)}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00253}00253\ \ \ \{\ \textcolor{comment}{//\ Loop\ until\ no\ delimiter\ is\ left\ in\ the\ string.}}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00254}00254\ \ \ \ \ labelVec.push\_back(labelString.substr(0,\ end));}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00255}00255\ \ \ \ \ labelString.erase(labelString.begin(),\ labelString.begin()\ +\ end\ +\ 1);}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00256}00256\ \ \ \ \ end\ =\ labelString.find(\textcolor{stringliteral}{"{};"{}});}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00257}00257\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00258}00258\ \ \ labelVec.push\_back(labelString.substr(0,\ end));}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00259}00259\ \}}
+\DoxyCodeLine{\Hypertarget{plottingManager_8cpp_source_l00260}00260\ \}\ \textcolor{comment}{//\ namespace\ MaCh3Plotting}}
+
+\end{DoxyCode}

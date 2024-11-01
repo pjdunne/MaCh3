@@ -1,0 +1,57 @@
+\hypertarget{PCAHandler_8h_source}{}\doxysection{PCAHandler.\+h}
+\label{PCAHandler_8h_source}\index{/home/runner/work/MaCh3/MaCh3/covariance/PCAHandler.h@{/home/runner/work/MaCh3/MaCh3/covariance/PCAHandler.h}}
+\mbox{\hyperlink{PCAHandler_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{PCAHandler_8h_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{PCAHandler_8h_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{PCAHandler_8h_source_l00003}00003\ \textcolor{comment}{//\ MaCh3\ Includes}}
+\DoxyCodeLine{\Hypertarget{PCAHandler_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{manager_8h}{manager/manager.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{PCAHandler_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{CovarianceUtils_8h}{covariance/CovarianceUtils.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{PCAHandler_8h_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{PCAHandler_8h_source_l00007}00007\ \textcolor{preprocessor}{\#ifdef\ DEBUG}}
+\DoxyCodeLine{\Hypertarget{PCAHandler_8h_source_l00008}00008\ \textcolor{preprocessor}{\ \ \#define\ DEBUG\_PCA\ 1}}
+\DoxyCodeLine{\Hypertarget{PCAHandler_8h_source_l00009}00009\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{PCAHandler_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{PCAHandler_8h_source_l00011}00011\ \textcolor{preprocessor}{\#ifdef\ DEBUG\_PCA}}
+\DoxyCodeLine{\Hypertarget{PCAHandler_8h_source_l00012}00012\ \textcolor{comment}{//KS:\ When\ debugging\ we\ produce\ some\ fancy\ plots,\ but\ we\ don't\ need\ it\ during\ normal\ work\ flow}}
+\DoxyCodeLine{\Hypertarget{PCAHandler_8h_source_l00013}00013\ \textcolor{preprocessor}{\#include\ "{}TCanvas.h"{}}}
+\DoxyCodeLine{\Hypertarget{PCAHandler_8h_source_l00014}00014\ \textcolor{preprocessor}{\#include\ "{}TROOT.h"{}}}
+\DoxyCodeLine{\Hypertarget{PCAHandler_8h_source_l00015}00015\ \textcolor{preprocessor}{\#include\ "{}TStyle.h"{}}}
+\DoxyCodeLine{\Hypertarget{PCAHandler_8h_source_l00016}00016\ \textcolor{preprocessor}{\#include\ "{}TColor.h"{}}}
+\DoxyCodeLine{\Hypertarget{PCAHandler_8h_source_l00017}00017\ \textcolor{preprocessor}{\#include\ "{}TLine.h"{}}}
+\DoxyCodeLine{\Hypertarget{PCAHandler_8h_source_l00018}00018\ \textcolor{preprocessor}{\#include\ "{}TText.h"{}}}
+\DoxyCodeLine{\Hypertarget{PCAHandler_8h_source_l00019}00019\ \textcolor{preprocessor}{\#include\ "{}TLegend.h"{}}}
+\DoxyCodeLine{\Hypertarget{PCAHandler_8h_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{PCAHandler_8h_source_l00021}00021\ \textcolor{preprocessor}{\#if\ DEBUG\_PCA\ ==\ 2}}
+\DoxyCodeLine{\Hypertarget{PCAHandler_8h_source_l00022}00022\ \textcolor{preprocessor}{\#include\ "{}Eigen/Eigenvalues"{}}}
+\DoxyCodeLine{\Hypertarget{PCAHandler_8h_source_l00023}00023\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{PCAHandler_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{PCAHandler_8h_source_l00025}00025\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{PCAHandler_8h_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{PCAHandler_8h_source_l00029}\mbox{\hyperlink{classPCAHandler}{00029}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classPCAHandler}{PCAHandler}}\{}
+\DoxyCodeLine{\Hypertarget{PCAHandler_8h_source_l00030}00030\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{PCAHandler_8h_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{PCAHandler_8h_source_l00033}00033\ \ \ \mbox{\hyperlink{classPCAHandler_aabaaecfe5909a6cffbcc0e1a385615fa}{PCAHandler}}();}
+\DoxyCodeLine{\Hypertarget{PCAHandler_8h_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{PCAHandler_8h_source_l00036}00036\ \ \ \mbox{\hyperlink{classPCAHandler_a7f9957719671d1c673c74b5cd003dc76}{\string~PCAHandler}}();}
+\DoxyCodeLine{\Hypertarget{PCAHandler_8h_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{PCAHandler_8h_source_l00039}00039\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPCAHandler_a361fd5f81ae3bcd915cd598b69e264ba}{ConstructPCA}}(TMatrixDSym\ *\ covMatrix,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ firstPCAd,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ lastPCAd,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ eigen\_thresh,\ \textcolor{keywordtype}{int}\&\ \_fNumParPCA);}
+\DoxyCodeLine{\Hypertarget{PCAHandler_8h_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{PCAHandler_8h_source_l00041}00041\ \textcolor{preprocessor}{\ \ \#ifdef\ DEBUG\_PCA}}
+\DoxyCodeLine{\Hypertarget{PCAHandler_8h_source_l00043}00043\ \ \ \textcolor{keywordtype}{void}\ DebugPCA(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ sum,\ TMatrixD\ temp,\ TMatrixDSym\ submat,\ \textcolor{keywordtype}{int}\ NumPar);}
+\DoxyCodeLine{\Hypertarget{PCAHandler_8h_source_l00044}00044\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{PCAHandler_8h_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{PCAHandler_8h_source_l00047}\mbox{\hyperlink{classPCAHandler_a1d9302633ed96ec57fbe26d25cbcee61}{00047}}\ \ \ TMatrixD\ \mbox{\hyperlink{classPCAHandler_a1d9302633ed96ec57fbe26d25cbcee61}{TransferMat}};}
+\DoxyCodeLine{\Hypertarget{PCAHandler_8h_source_l00049}\mbox{\hyperlink{classPCAHandler_a6f6443a487bb544e6a6e458d86f35f27}{00049}}\ \ \ TMatrixD\ \mbox{\hyperlink{classPCAHandler_a6f6443a487bb544e6a6e458d86f35f27}{TransferMatT}};}
+\DoxyCodeLine{\Hypertarget{PCAHandler_8h_source_l00051}\mbox{\hyperlink{classPCAHandler_a8d95ecb29e091e9b09c5011691516c28}{00051}}\ \ \ TVectorD\ \mbox{\hyperlink{classPCAHandler_a8d95ecb29e091e9b09c5011691516c28}{eigen\_values}};}
+\DoxyCodeLine{\Hypertarget{PCAHandler_8h_source_l00053}\mbox{\hyperlink{classPCAHandler_a3ba9d34343ce0d0eeb4c020fa70486e2}{00053}}\ \ \ TMatrixD\ \mbox{\hyperlink{classPCAHandler_a3ba9d34343ce0d0eeb4c020fa70486e2}{eigen\_vectors}};}
+\DoxyCodeLine{\Hypertarget{PCAHandler_8h_source_l00055}\mbox{\hyperlink{classPCAHandler_a2924386fef0cf65215c51b4f81cdb0d1}{00055}}\ \ \ std::vector<double>\ \mbox{\hyperlink{classPCAHandler_a2924386fef0cf65215c51b4f81cdb0d1}{eigen\_values\_master}};}
+\DoxyCodeLine{\Hypertarget{PCAHandler_8h_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{PCAHandler_8h_source_l00058}\mbox{\hyperlink{classPCAHandler_aa39db9118399bebcdb784fe9c9fea458}{00058}}\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPCAHandler_aa39db9118399bebcdb784fe9c9fea458}{nKeptPCApars}};}
+\DoxyCodeLine{\Hypertarget{PCAHandler_8h_source_l00060}\mbox{\hyperlink{classPCAHandler_afc00f628b947fd407d05790f4d0eaaec}{00060}}\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPCAHandler_afc00f628b947fd407d05790f4d0eaaec}{FirstPCAdpar}};}
+\DoxyCodeLine{\Hypertarget{PCAHandler_8h_source_l00062}\mbox{\hyperlink{classPCAHandler_a954eeb975f1d7f9528ed7e027a54b21a}{00062}}\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPCAHandler_a954eeb975f1d7f9528ed7e027a54b21a}{LastPCAdpar}};}
+\DoxyCodeLine{\Hypertarget{PCAHandler_8h_source_l00064}\mbox{\hyperlink{classPCAHandler_afdf5f929fe9211a2ce05f6bab2b8633a}{00064}}\ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classPCAHandler_afdf5f929fe9211a2ce05f6bab2b8633a}{eigen\_threshold}};}
+\DoxyCodeLine{\Hypertarget{PCAHandler_8h_source_l00065}00065\ \};}
+\DoxyCodeLine{\Hypertarget{PCAHandler_8h_source_l00066}00066\ }
+
+\end{DoxyCode}

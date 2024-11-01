@@ -1,0 +1,271 @@
+\hypertarget{gpuSplineUtils_8cuh}{}\doxysection{/home/runner/work/\+Ma\+Ch3/\+Ma\+Ch3/splines/gpu\+Spline\+Utils.cuh File Reference}
+\label{gpuSplineUtils_8cuh}\index{/home/runner/work/MaCh3/MaCh3/splines/gpuSplineUtils.cuh@{/home/runner/work/MaCh3/MaCh3/splines/gpuSplineUtils.cuh}}
+
+
+Ma\+Ch3 event-\/by-\/event cross-\/section spline code.  
+
+
+{\ttfamily \#include \char`\"{}manager/gpu\+Utils.\+cuh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}splines/\+Spline\+Common.\+h\char`\"{}}\newline
+Include dependency graph for gpu\+Spline\+Utils.\+cuh\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gpuSplineUtils_8cuh__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=265pt]{gpuSplineUtils_8cuh__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classSMonolithGPU}{SMonolith\+GPU}}
+\begin{DoxyCompactList}\small\item\em Class responsible for calculating spline weight on GPU. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\+\_\+\+\_\+host\+\_\+\+\_\+ void \mbox{\hyperlink{gpuSplineUtils_8cuh_a953e5c5aecebd908f5d8c6ad64de482c}{Synchronise\+Splines}} ()
+\begin{DoxyCompactList}\small\item\em Make sure all Cuda threads finished execution. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+global\+\_\+\+\_\+ void \mbox{\hyperlink{gpuSplineUtils_8cuh_a617ef358c707699dd50af17358cbff69}{Eval\+On\+GPU\+\_\+\+Splines}} (const short int $\ast$\+\_\+\+\_\+restrict\+\_\+\+\_\+ gpu\+\_\+param\+No\+\_\+arr, const unsigned int $\ast$\+\_\+\+\_\+restrict\+\_\+\+\_\+ gpu\+\_\+n\+Knots\+\_\+arr, const float $\ast$\+\_\+\+\_\+restrict\+\_\+\+\_\+ gpu\+\_\+coeff\+\_\+many, float $\ast$\+\_\+\+\_\+restrict\+\_\+\+\_\+ gpu\+\_\+weights, const cuda\+Texture\+Object\+\_\+t \+\_\+\+\_\+restrict\+\_\+\+\_\+ text\+\_\+coeff\+\_\+x)
+\begin{DoxyCompactList}\small\item\em Evaluate the spline on the GPU Using one \{y,b,c,d\} array and one \{x\} array Should be most efficient at cache hitting and memory coalescence But using spline segments rather than the parameter value\+: avoids doing binary search on GPU. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+global\+\_\+\+\_\+ void \mbox{\hyperlink{gpuSplineUtils_8cuh_aa36afe16baf1567c04ce88336ca9ad2e}{Eval\+On\+GPU\+\_\+\+TF1}} (const float $\ast$\+\_\+\+\_\+restrict\+\_\+\+\_\+ gpu\+\_\+coeffs\+\_\+tf1, const short int $\ast$\+\_\+\+\_\+restrict\+\_\+\+\_\+ gpu\+\_\+param\+No\+\_\+arr\+\_\+tf1, float $\ast$\+\_\+\+\_\+restrict\+\_\+\+\_\+ gpu\+\_\+weights\+\_\+tf1)
+\begin{DoxyCompactList}\small\item\em Evaluate the TF1 on the GPU Using 5th order polynomial. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+global\+\_\+\+\_\+ void \mbox{\hyperlink{gpuSplineUtils_8cuh_a43b97a33ca18162ca4813449e4820731}{Eval\+On\+GPU\+\_\+\+Tot\+Weight}} (const float $\ast$\+\_\+\+\_\+restrict\+\_\+\+\_\+ gpu\+\_\+weights, const float $\ast$\+\_\+\+\_\+restrict\+\_\+\+\_\+ gpu\+\_\+weights\+\_\+tf1, float $\ast$\+\_\+\+\_\+restrict\+\_\+\+\_\+ gpu\+\_\+total\+\_\+weights, const cuda\+Texture\+Object\+\_\+t \+\_\+\+\_\+restrict\+\_\+\+\_\+ text\+\_\+n\+Param\+Per\+Event, const cuda\+Texture\+Object\+\_\+t \+\_\+\+\_\+restrict\+\_\+\+\_\+ text\+\_\+n\+Param\+Per\+Event\+\_\+\+TF1)
+\begin{DoxyCompactList}\small\item\em KS\+: Evaluate the total spline event weight on the GPU, as in most cases GPU is faster, even more this significant reduce memory transfer from GPU to CPU. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Ma\+Ch3 event-\/by-\/event cross-\/section spline code. 
+
+\begin{DoxyAuthor}{Author}
+Richard Calland 
+
+Asher Kaboth 
+
+Clarence Wret 
+
+Kamil Skwarczynski
+\end{DoxyAuthor}
+Contains code to run on CUDA GPUs. Essentially we load up stripped TSpline3 objects to the GPU and do the equivalent of TSpline3-\/\texorpdfstring{$>$}{>}Eval(double) for all events Now also supports TF1 evals Called from sample\+PDF/sample\+PDFND.\+cpp -\/\texorpdfstring{$>$}{>} \mbox{\hyperlink{SplineMonolith_8cpp}{splines/\+Spline\+Monolith.\+cpp}} -\/\texorpdfstring{$>$}{>} \mbox{\hyperlink{gpuSplineUtils_8cu}{splines/gpu\+Spline\+Utils.\+cu}} 
+
+Definition in file \mbox{\hyperlink{gpuSplineUtils_8cuh_source}{gpu\+Spline\+Utils.\+cuh}}.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{gpuSplineUtils_8cuh_a617ef358c707699dd50af17358cbff69}\label{gpuSplineUtils_8cuh_a617ef358c707699dd50af17358cbff69}} 
+\index{gpuSplineUtils.cuh@{gpuSplineUtils.cuh}!EvalOnGPU\_Splines@{EvalOnGPU\_Splines}}
+\index{EvalOnGPU\_Splines@{EvalOnGPU\_Splines}!gpuSplineUtils.cuh@{gpuSplineUtils.cuh}}
+\doxysubsubsection{\texorpdfstring{EvalOnGPU\_Splines()}{EvalOnGPU\_Splines()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+global\+\_\+\+\_\+ void Eval\+On\+GPU\+\_\+\+Splines (\begin{DoxyParamCaption}\item[{const short int $\ast$\+\_\+\+\_\+restrict\+\_\+\+\_\+}]{gpu\+\_\+param\+No\+\_\+arr,  }\item[{const unsigned int $\ast$\+\_\+\+\_\+restrict\+\_\+\+\_\+}]{gpu\+\_\+n\+Knots\+\_\+arr,  }\item[{const float $\ast$\+\_\+\+\_\+restrict\+\_\+\+\_\+}]{gpu\+\_\+coeff\+\_\+many,  }\item[{float $\ast$\+\_\+\+\_\+restrict\+\_\+\+\_\+}]{gpu\+\_\+weights,  }\item[{const cuda\+Texture\+Object\+\_\+t \+\_\+\+\_\+restrict\+\_\+\+\_\+}]{text\+\_\+coeff\+\_\+x }\end{DoxyParamCaption})}
+
+
+
+Evaluate the spline on the GPU Using one \{y,b,c,d\} array and one \{x\} array Should be most efficient at cache hitting and memory coalescence But using spline segments rather than the parameter value\+: avoids doing binary search on GPU. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gpu\+\_\+param\+No\+\_\+arr} & has length = spln\+\_\+counter (keeps track of which parameter we\textquotesingle{}re using on this thread) \\
+\hline
+{\em gpu\+\_\+n\+Knots\+\_\+arr} & has length = spln\+\_\+counter (keeps track where current spline starts) \\
+\hline
+{\em gpu\+\_\+coeff\+\_\+many} & has length = n\+Knots $\ast$ 4, stores all coefficients for all splines and knots \\
+\hline
+{\em gpu\+\_\+weights} & has length = spln\+\_\+counter $\ast$ spline\+\_\+size \\
+\hline
+{\em text\+\_\+coeff\+\_\+x} & array storing info about X coeff, uses texture memory. Has length = n\+\_\+params $\ast$ spline\+\_\+size, \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{gpuSplineUtils_8cu_source_l00347}{347}} of file \mbox{\hyperlink{gpuSplineUtils_8cu_source}{gpu\+Spline\+Utils.\+cu}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00352\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00353\ \textcolor{comment}{//*********************************************************}}
+\DoxyCodeLine{00354\ }
+\DoxyCodeLine{00355\ \ \ \textcolor{comment}{//\ points\ per\ spline\ is\ the\ offset\ to\ skip\ in\ the\ index\ to\ move\ between\ splines}}
+\DoxyCodeLine{00356\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ splineNum\ =\ (blockIdx.x\ *\ blockDim.x\ +\ threadIdx.x);}
+\DoxyCodeLine{00357\ }
+\DoxyCodeLine{00358\ \ \ \textcolor{comment}{//\ this\ is\ the\ stopping\ condition!}}
+\DoxyCodeLine{00359\ \ \ \textcolor{keywordflow}{if}\ (splineNum\ <\ \mbox{\hyperlink{gpuSplineUtils_8cu_a8df652f27dcffc6b349298601ed790ea}{d\_n\_splines}})\ \{}
+\DoxyCodeLine{00360\ \ \ \ \ \textcolor{comment}{//\ This\ is\ the\ segment\ we\ want\ for\ this\ parameter\ variation}}
+\DoxyCodeLine{00361\ \ \ \ \ \textcolor{comment}{//\ for\ this\ particular\ splineNum;\ 0\ =\ MACCQE,\ 1\ =\ pFC,\ 2\ =\ EBC,\ etc}}
+\DoxyCodeLine{00362\ }
+\DoxyCodeLine{00363\ \ \ \ \ \textcolor{comment}{//CW:\ Which\ Parameter\ we\ are\ accessing}}
+\DoxyCodeLine{00364\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{short}\ \textcolor{keywordtype}{int}\ Param\ =\ gpu\_paramNo\_arr[splineNum];}
+\DoxyCodeLine{00365\ }
+\DoxyCodeLine{00366\ \ \ \ \ \textcolor{comment}{//CW:\ Avoids\ doing\ costly\ binary\ search\ on\ GPU}}
+\DoxyCodeLine{00367\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{short}\ \textcolor{keywordtype}{int}\ segment\ =\ \mbox{\hyperlink{gpuSplineUtils_8cu_ab99f54969e418c0517309fae3f648588}{segment\_gpu}}[Param];}
+\DoxyCodeLine{00368\ }
+\DoxyCodeLine{00369\ \ \ \ \ \textcolor{comment}{//KS:\ Segment\ for\ coeff\_x\ is\ simply\ parameter*max\ knots\ +\ segment\ as\ each\ parmeters\ has\ the\ same\ spacing}}
+\DoxyCodeLine{00370\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{short}\ \textcolor{keywordtype}{int}\ segment\_X\ =\ Param*\mbox{\hyperlink{gpuSplineUtils_8cu_ae11082fcc44d3cf2e38cb74043fd7835}{d\_spline\_size}}+segment;}
+\DoxyCodeLine{00371\ }
+\DoxyCodeLine{00372\ \ \ \ \ \textcolor{comment}{//KS:\ Find\ knot\ position\ in\ out\ monolitical\ structure}}
+\DoxyCodeLine{00373\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ CurrentKnotPos\ =\ gpu\_nKnots\_arr[splineNum]*\mbox{\hyperlink{SplineCommon_8h_a283177311bade7400c6088e8fad71a1f}{\_nCoeff\_}}+segment*\mbox{\hyperlink{SplineCommon_8h_a283177311bade7400c6088e8fad71a1f}{\_nCoeff\_}};}
+\DoxyCodeLine{00374\ }
+\DoxyCodeLine{00375\ \ \ \ \ \textcolor{comment}{//\ We've\ read\ the\ segment\ straight\ from\ CPU\ and\ is\ saved\ in\ segment\_gpu}}
+\DoxyCodeLine{00376\ \ \ \ \ \textcolor{comment}{//\ polynomial\ parameters\ from\ the\ monolithic\ splineMonolith}}
+\DoxyCodeLine{00377\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ fY\ =\ gpu\_coeff\_many[CurrentKnotPos];}
+\DoxyCodeLine{00378\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ fB\ =\ gpu\_coeff\_many[CurrentKnotPos+1];}
+\DoxyCodeLine{00379\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ fC\ =\ gpu\_coeff\_many[CurrentKnotPos+2];}
+\DoxyCodeLine{00380\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ fD\ =\ gpu\_coeff\_many[CurrentKnotPos+3];}
+\DoxyCodeLine{00381\ \ \ \ \ \textcolor{comment}{//\ The\ is\ the\ variation\ itself\ (needed\ to\ evaluate\ variation\ -\/\ stored\ spline\ point\ =\ dx)}}
+\DoxyCodeLine{00382\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ dx\ =\ \mbox{\hyperlink{gpuSplineUtils_8cu_ac95f6dd3bc9efb4292a4e3f264492f05}{val\_gpu}}[Param]\ -\/\ tex1Dfetch<float>(text\_coeff\_x,\ segment\_X);}
+\DoxyCodeLine{00383\ }
+\DoxyCodeLine{00384\ \ \ \ \ \textcolor{comment}{//CW:\ Wooow,\ let's\ use\ some\ fancy\ intrinsics\ and\ pull\ down\ the\ processing\ time\ by\ <1\%\ from\ normal\ multiplication!\ HURRAY}}
+\DoxyCodeLine{00385\ \ \ \ \ gpu\_weights[splineNum]\ =\ fmaf(dx,\ fmaf(dx,\ fmaf(dx,\ fD,\ fC),\ fB),\ fY);}
+\DoxyCodeLine{00386\ \ \ \ \ \textcolor{comment}{//\ Or\ for\ the\ more\ "{}easy\ to\ read"{}\ version:}}
+\DoxyCodeLine{00387\ \ \ \ \ \textcolor{comment}{//gpu\_weights[splineNum]\ =\ (fY+dx*(fB+dx*(fC+dx*fD)));}}
+\DoxyCodeLine{00388\ }
+\DoxyCodeLine{00389\ \ \ \ \ \textcolor{comment}{//\#ifdef\ DEBUG}}
+\DoxyCodeLine{00390\ \ \ \ \ \textcolor{comment}{//printf("{}splineNum\ =\ \%i/\%i,\ paramNo\ =\ \%i,\ variation\ =\ \%f,\ segment\ =\ \%i,\ fX\ =\ \%f,\ fX+1\ =\ \%f,\ dx\ =\ \%f,\ d\_n\_splines\ =\ \%i,\ d\_spline\_size\ =\ \%i,\ weight\ =\ \%f\ \(\backslash\)n"{},\ splineNum,\ d\_n\_splines,\ gpu\_paramNo\_arr[splineNum],\ val\_gpu[Param],\ segment,\ tex1Dfetch<float>(text\_coeff\_x,\ segment\_X),\ tex1Dfetch<float>(text\_coeff\_x,\ segment\_X+1),\ dx,\ d\_n\_splines,\ d\_spline\_size,\ gpu\_weights[splineNum]);}}
+\DoxyCodeLine{00391\ \ \ \ \ \textcolor{comment}{//\#endif}}
+\DoxyCodeLine{00392\ \ \ \}}
+\DoxyCodeLine{00393\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{gpuSplineUtils_8cuh_aa36afe16baf1567c04ce88336ca9ad2e}\label{gpuSplineUtils_8cuh_aa36afe16baf1567c04ce88336ca9ad2e}} 
+\index{gpuSplineUtils.cuh@{gpuSplineUtils.cuh}!EvalOnGPU\_TF1@{EvalOnGPU\_TF1}}
+\index{EvalOnGPU\_TF1@{EvalOnGPU\_TF1}!gpuSplineUtils.cuh@{gpuSplineUtils.cuh}}
+\doxysubsubsection{\texorpdfstring{EvalOnGPU\_TF1()}{EvalOnGPU\_TF1()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+global\+\_\+\+\_\+ void Eval\+On\+GPU\+\_\+\+TF1 (\begin{DoxyParamCaption}\item[{const float $\ast$\+\_\+\+\_\+restrict\+\_\+\+\_\+}]{gpu\+\_\+coeffs\+\_\+tf1,  }\item[{const short int $\ast$\+\_\+\+\_\+restrict\+\_\+\+\_\+}]{gpu\+\_\+param\+No\+\_\+arr\+\_\+tf1,  }\item[{float $\ast$\+\_\+\+\_\+restrict\+\_\+\+\_\+}]{gpu\+\_\+weights\+\_\+tf1 }\end{DoxyParamCaption})}
+
+
+
+Evaluate the TF1 on the GPU Using 5th order polynomial. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gpu\+\_\+coeffs\+\_\+tf1} & coefficients of TF1, has length = tf1 coeef counter \\
+\hline
+{\em gpu\+\_\+param\+No\+\_\+arr\+\_\+tf1} & has length = spln\+\_\+counter (keeps track of which parameter we\textquotesingle{}re using on this thread) \\
+\hline
+{\em gpu\+\_\+weights\+\_\+tf1} & has length = spln\+\_\+counter $\ast$ spline\+\_\+size \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{gpuSplineUtils_8cu_source_l00397}{397}} of file \mbox{\hyperlink{gpuSplineUtils_8cu_source}{gpu\+Spline\+Utils.\+cu}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00400\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00401\ \textcolor{comment}{//*********************************************************}}
+\DoxyCodeLine{00402\ }
+\DoxyCodeLine{00403\ \ \ \textcolor{comment}{//\ points\ per\ spline\ is\ the\ offset\ to\ skip\ in\ the\ index\ to\ move\ between\ splines}}
+\DoxyCodeLine{00404\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ tf1Num\ =\ (blockIdx.x\ *\ blockDim.x\ +\ threadIdx.x);}
+\DoxyCodeLine{00405\ }
+\DoxyCodeLine{00406\ \ \ \textcolor{keywordflow}{if}\ (tf1Num\ <\ \mbox{\hyperlink{gpuSplineUtils_8cu_a70d02be4848ebb3c6778c1c1250a5288}{d\_n\_TF1}})\ \{}
+\DoxyCodeLine{00407\ \ \ \ \ \textcolor{comment}{//\ The\ is\ the\ variation\ itself\ (needed\ to\ evaluate\ variation\ -\/\ stored\ spline\ point\ =\ dx)}}
+\DoxyCodeLine{00408\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ x\ =\ \mbox{\hyperlink{gpuSplineUtils_8cu_ac95f6dd3bc9efb4292a4e3f264492f05}{val\_gpu}}[gpu\_paramNo\_arr\_tf1[tf1Num]];}
+\DoxyCodeLine{00409\ }
+\DoxyCodeLine{00410\ \ \ \ \ \textcolor{comment}{//\ Read\ the\ coefficients}}
+\DoxyCodeLine{00411\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ a\ =\ gpu\_coeffs\_tf1[tf1Num*\mbox{\hyperlink{SplineCommon_8h_a911160077ffa38727e0494f178ce380a}{\_nTF1Coeff\_}}];}
+\DoxyCodeLine{00412\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ b\ =\ gpu\_coeffs\_tf1[tf1Num*\mbox{\hyperlink{SplineCommon_8h_a911160077ffa38727e0494f178ce380a}{\_nTF1Coeff\_}}+1];}
+\DoxyCodeLine{00413\ }
+\DoxyCodeLine{00414\ \ \ \ \ gpu\_weights\_tf1[tf1Num]\ =\ fmaf(a,\ x,\ b);}
+\DoxyCodeLine{00415\ }
+\DoxyCodeLine{00416\ \ \ \ \ \textcolor{comment}{//\ gpu\_weights\_tf1[tf1Num]\ =\ a*x\ +\ b;}}
+\DoxyCodeLine{00417\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00418\ \ \ \ \ \textcolor{comment}{//gpu\_weights\_tf1[tf1Num]\ =\ 1\ +\ a*x\ +\ b*x*x\ +\ c*x*x*x\ +\ d*x*x*x*x\ +\ e*x*x*x*x*x;}}
+\DoxyCodeLine{00419\ }
+\DoxyCodeLine{00420\ \ \ \ \ \textcolor{comment}{//\#ifdef\ DEBUG}}
+\DoxyCodeLine{00421\ \ \ \ \ \textcolor{comment}{//printf("{}TF1\ =\ \%i/\%i,\ weight\ =\ \%f\ \(\backslash\)n"{},\ tf1Num,\ d\_n\_TF1,\ gpu\_weights\_tf1[tf1Num]);}}
+\DoxyCodeLine{00422\ \ \ \ \ \textcolor{comment}{//\#endif}}
+\DoxyCodeLine{00423\ \ \ \}}
+\DoxyCodeLine{00424\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{gpuSplineUtils_8cuh_a43b97a33ca18162ca4813449e4820731}\label{gpuSplineUtils_8cuh_a43b97a33ca18162ca4813449e4820731}} 
+\index{gpuSplineUtils.cuh@{gpuSplineUtils.cuh}!EvalOnGPU\_TotWeight@{EvalOnGPU\_TotWeight}}
+\index{EvalOnGPU\_TotWeight@{EvalOnGPU\_TotWeight}!gpuSplineUtils.cuh@{gpuSplineUtils.cuh}}
+\doxysubsubsection{\texorpdfstring{EvalOnGPU\_TotWeight()}{EvalOnGPU\_TotWeight()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+global\+\_\+\+\_\+ void Eval\+On\+GPU\+\_\+\+Tot\+Weight (\begin{DoxyParamCaption}\item[{const float $\ast$\+\_\+\+\_\+restrict\+\_\+\+\_\+}]{gpu\+\_\+weights,  }\item[{const float $\ast$\+\_\+\+\_\+restrict\+\_\+\+\_\+}]{gpu\+\_\+weights\+\_\+tf1,  }\item[{float $\ast$\+\_\+\+\_\+restrict\+\_\+\+\_\+}]{gpu\+\_\+total\+\_\+weights,  }\item[{const cuda\+Texture\+Object\+\_\+t \+\_\+\+\_\+restrict\+\_\+\+\_\+}]{text\+\_\+n\+Param\+Per\+Event,  }\item[{const cuda\+Texture\+Object\+\_\+t \+\_\+\+\_\+restrict\+\_\+\+\_\+}]{text\+\_\+n\+Param\+Per\+Event\+\_\+\+TF1 }\end{DoxyParamCaption})}
+
+
+
+KS\+: Evaluate the total spline event weight on the GPU, as in most cases GPU is faster, even more this significant reduce memory transfer from GPU to CPU. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gpu\+\_\+weights} & Weight for each spline object \\
+\hline
+{\em gpu\+\_\+weights\+\_\+tf1} & Weight for each TF1 object \\
+\hline
+{\em gpu\+\_\+total\+\_\+weights} & Total weight for each event \\
+\hline
+{\em text\+\_\+n\+Param\+Per\+Event} & map keeping track how many parameters applies to each event, we keep two numbers here \{number of splines per event, index where splines start for a given event\} \\
+\hline
+{\em text\+\_\+n\+Param\+Per\+Event\+\_\+\+TF1} & map keeping track how many parameters applies to each event, we keep two numbers here \{number of splines per event, index where splines start for a given event\} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{gpuSplineUtils_8cu_source_l00429}{429}} of file \mbox{\hyperlink{gpuSplineUtils_8cu_source}{gpu\+Spline\+Utils.\+cu}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00436\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00437\ \textcolor{comment}{//*********************************************************}}
+\DoxyCodeLine{00438\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ EventNum\ =\ (blockIdx.x\ *\ blockDim.x\ +\ threadIdx.x);}
+\DoxyCodeLine{00439\ }
+\DoxyCodeLine{00440\ \ \ \textcolor{comment}{//KS:\ Accessing\ shared\ memory\ is\ much\ much\ faster\ than\ global\ memory\ hence\ we\ use\ shared\ memory\ for\ calculation\ and\ then\ write\ to\ global\ memory}}
+\DoxyCodeLine{00441\ \ \ \_\_shared\_\_\ \textcolor{keywordtype}{float}\ shared\_total\_weights[\mbox{\hyperlink{gpuUtils_8cuh_a393d21a8f493c2561a0ae703973dccc2}{\_BlockSize\_}}];}
+\DoxyCodeLine{00442\ \ \ \textcolor{keywordflow}{if}(EventNum\ <\ \mbox{\hyperlink{gpuSplineUtils_8cu_ad333bfa4035ada9207fc1df19272c4e2}{d\_n\_events}})\ \textcolor{comment}{//stopping\ condition}}
+\DoxyCodeLine{00443\ \ \ \{}
+\DoxyCodeLine{00444\ \ \ \ \ shared\_total\_weights[threadIdx.x]\ =\ 1.f;}
+\DoxyCodeLine{00445\ }
+\DoxyCodeLine{00446\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ EventOffset\ =\ 2*EventNum;}
+\DoxyCodeLine{00447\ }
+\DoxyCodeLine{00448\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id}\ =\ 0;\ id\ <\ tex1Dfetch<unsigned\ int>(text\_nParamPerEvent,\ EventOffset);\ ++id)}
+\DoxyCodeLine{00449\ \ \ \ \ \{}
+\DoxyCodeLine{00450\ \ \ \ \ \ \ shared\_total\_weights[threadIdx.x]\ *=\ gpu\_weights[tex1Dfetch<unsigned\ int>(text\_nParamPerEvent,\ EventOffset+1)\ +\ id];}
+\DoxyCodeLine{00451\ \ \ \ \ \ \ \textcolor{comment}{//\#ifdef\ DEBUG}}
+\DoxyCodeLine{00452\ \ \ \ \ \ \ \textcolor{comment}{//printf("{}Event\ =\ \%i,\ Spline\_Num\ =\ \%i,\ gpu\_weights\ =\ \%f\ \(\backslash\)n"{},}}
+\DoxyCodeLine{00453\ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ EventNum,\ tex1Dfetch<unsigned\ int>(text\_nParamPerEvent,\ 2*EventNum+1)\ +\ id,\ gpu\_weights[tex1Dfetch<unsigned\ int>(text\_nParamPerEvent,\ 2*EventNum+1)\ +\ id]);}}
+\DoxyCodeLine{00454\ \ \ \ \ \ \ \textcolor{comment}{//\#endif}}
+\DoxyCodeLine{00455\ \ \ \ \ \}}
+\DoxyCodeLine{00456\ }
+\DoxyCodeLine{00457\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id}\ =\ 0;\ id\ <\ tex1Dfetch<unsigned\ int>(text\_nParamPerEvent\_TF1,\ EventOffset);\ ++id)}
+\DoxyCodeLine{00458\ \ \ \ \ \{}
+\DoxyCodeLine{00459\ \ \ \ \ \ \ shared\_total\_weights[threadIdx.x]\ *=\ gpu\_weights\_tf1[tex1Dfetch<unsigned\ int>(text\_nParamPerEvent\_TF1,\ EventOffset+1)\ +\ id];}
+\DoxyCodeLine{00460\ \ \ \ \ \ \ \textcolor{comment}{//\#ifdef\ DEBUG}}
+\DoxyCodeLine{00461\ \ \ \ \ \ \ \textcolor{comment}{//printf("{}Event\ =\ \%i,\ Spline\_Num\ =\ \%i,\ gpu\_weights\_tf1\ =\ \%f\ \(\backslash\)n"{},}}
+\DoxyCodeLine{00462\ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ EventNum,\ tex1Dfetch<unsigned\ int>(text\_nParamPerEvent\_TF1,\ 2*EventNum+1)\ +\ id,\ gpu\_weights\_tf1[tex1Dfetch<unsigned\ int>(text\_nParamPerEvent\_TF1,\ 2*EventNum+1)\ +\ id]);}}
+\DoxyCodeLine{00463\ \ \ \ \ \ \ \textcolor{comment}{//\#endif}}
+\DoxyCodeLine{00464\ \ \ \ \ \}}
+\DoxyCodeLine{00465\ \ \ \ \ gpu\_total\_weights[EventNum]\ =\ shared\_total\_weights[threadIdx.x];}
+\DoxyCodeLine{00466\ \ \ \}}
+\DoxyCodeLine{00467\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{gpuSplineUtils_8cuh_a953e5c5aecebd908f5d8c6ad64de482c}\label{gpuSplineUtils_8cuh_a953e5c5aecebd908f5d8c6ad64de482c}} 
+\index{gpuSplineUtils.cuh@{gpuSplineUtils.cuh}!SynchroniseSplines@{SynchroniseSplines}}
+\index{SynchroniseSplines@{SynchroniseSplines}!gpuSplineUtils.cuh@{gpuSplineUtils.cuh}}
+\doxysubsubsection{\texorpdfstring{SynchroniseSplines()}{SynchroniseSplines()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+host\+\_\+\+\_\+ void Synchronise\+Splines (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Make sure all Cuda threads finished execution. 
+
+
+
+Definition at line \mbox{\hyperlink{gpuSplineUtils_8cu_source_l00073}{73}} of file \mbox{\hyperlink{gpuSplineUtils_8cu_source}{gpu\+Spline\+Utils.\+cu}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00074\ \ \ cudaDeviceSynchronize();}
+\DoxyCodeLine{00075\ \}}
+
+\end{DoxyCode}

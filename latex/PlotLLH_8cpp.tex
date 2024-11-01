@@ -1,0 +1,655 @@
+\hypertarget{PlotLLH_8cpp}{}\doxysection{/home/runner/work/\+Ma\+Ch3/\+Ma\+Ch3/plotting/\+Plot\+LLH.cpp File Reference}
+\label{PlotLLH_8cpp}\index{/home/runner/work/MaCh3/MaCh3/plotting/PlotLLH.cpp@{/home/runner/work/MaCh3/MaCh3/plotting/PlotLLH.cpp}}
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include \char`\"{}plotting\+Utils/plotting\+Manager.\+h\char`\"{}}\newline
+Include dependency graph for Plot\+LLH.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{PlotLLH_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{PlotLLH_8cpp_ac434b1236e675ded43713ded78c5de8f}{get\+Split\+Sample\+Stack}} (int file\+Idx, std\+::string parameter\+Name, TH1D LLH\+\_\+all\+Sams, std\+::vector$<$ float $>$ \&cum\+Sums, std\+::vector$<$ bool $>$ \&draw\+Label, THStack $\ast$sample\+Stack, TLegend $\ast$split\+Samples\+Legend, float baseline\+LLH\+\_\+main=0.\+00001)
+\item 
+void \mbox{\hyperlink{PlotLLH_8cpp_a22a044e77ac75863b8962c3a38b95ef7}{draw\+Ratio\+Stack}} (THStack $\ast$ratio\+Comp\+Stack)
+\item 
+void \mbox{\hyperlink{PlotLLH_8cpp_a6af28572d705a78ad83764fcd64bf9a3}{make\+LLHScan\+Comparisons}} (std\+::string param\+Name, std\+::string LLHType, std\+::string output\+File\+Name, TCanvas $\ast$\mbox{\hyperlink{GetPostfitParamPlots_8cpp_aec2fb4e7af6c83a8ccbdfcfcb7b76a83}{canv}}, TPad $\ast$LLHPad, TPad $\ast$ratio\+Pad)
+\item 
+void \mbox{\hyperlink{PlotLLH_8cpp_aba66b76d718d14f91d609a25345999a4}{make\+Split\+Sample\+LLHScan\+Comparisons}} (std\+::string param\+Name, std\+::string output\+File\+Name, TCanvas $\ast$\mbox{\hyperlink{GetPostfitParamPlots_8cpp_aec2fb4e7af6c83a8ccbdfcfcb7b76a83}{canv}}, TPad $\ast$LLHPad, TPad $\ast$ratio\+Pad)
+\item 
+int \mbox{\hyperlink{PlotLLH_8cpp_a53c3f8ef6b889ff0c9d2f6b18c7b1f38}{Plot\+LLH}} ()
+\item 
+int \mbox{\hyperlink{PlotLLH_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{PlotLLH_8cpp_a45cc23dd922ece737b1306d357671417}{ratio\+Plot\+Split}}
+\item 
+double \mbox{\hyperlink{PlotLLH_8cpp_a90e133c14aaf43c18c855db7a949cb3d}{y\+Title\+Offset}}
+\item 
+double \mbox{\hyperlink{PlotLLH_8cpp_a4a39ce5b09913469be1a966a5d99a88b}{sample\+Label\+Threshold}}
+\item 
+int \mbox{\hyperlink{PlotLLH_8cpp_a7740e2371b2eb3a71ca8660b26a842e4}{line\+Width}}
+\item 
+bool \mbox{\hyperlink{PlotLLH_8cpp_a6446498097144fc5f704c241f009d44d}{total\+On\+Split\+Plots}}
+\item 
+bool \mbox{\hyperlink{PlotLLH_8cpp_a0c4fa08819fe8fd375f7d521dfe2b63a}{same\+Axis}}
+\item 
+double \mbox{\hyperlink{PlotLLH_8cpp_a152bc19a7768c2022e7195771f385521}{ratio\+Label\+Scaling}}
+\item 
+\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager}{Ma\+Ch3\+Plotting\+::\+Plotting\+Manager}} $\ast$ \mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{PlotLLH_8cpp_a22a044e77ac75863b8962c3a38b95ef7}\label{PlotLLH_8cpp_a22a044e77ac75863b8962c3a38b95ef7}} 
+\index{PlotLLH.cpp@{PlotLLH.cpp}!drawRatioStack@{drawRatioStack}}
+\index{drawRatioStack@{drawRatioStack}!PlotLLH.cpp@{PlotLLH.cpp}}
+\doxysubsubsection{\texorpdfstring{drawRatioStack()}{drawRatioStack()}}
+{\footnotesize\ttfamily void draw\+Ratio\+Stack (\begin{DoxyParamCaption}\item[{THStack $\ast$}]{ratio\+Comp\+Stack }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{PlotLLH_8cpp_source_l00094}{94}} of file \mbox{\hyperlink{PlotLLH_8cpp_source}{Plot\+LLH.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00095\ \ \ \textcolor{comment}{//\ do\ this\ so\ 1.0\ is\ in\ the\ middle\ of\ the\ plot\ vertically}}
+\DoxyCodeLine{00096\ \ \ \textcolor{keywordtype}{double}\ stackMax\ =\ ratioCompStack-\/>GetMaximum(\textcolor{stringliteral}{"{}NOSTACK"{}});}
+\DoxyCodeLine{00097\ \ \ \textcolor{keywordtype}{double}\ stackMin\ =\ ratioCompStack-\/>GetMinimum(\textcolor{stringliteral}{"{}NOSTACK"{}});}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \textcolor{keywordtype}{double}\ stackLim\ =\ std::max(std::abs(1.0\ -\/\ stackMax),\ std::abs(1.0\ -\/\ stackMin));}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ ratioCompStack-\/>SetMinimum(1.0\ -\/\ 1.05\ *\ stackLim);}
+\DoxyCodeLine{00102\ \ \ ratioCompStack-\/>SetMaximum(1.0\ +\ 1.05\ *\ stackLim);}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \ \ \textcolor{comment}{//\ draw\ it}}
+\DoxyCodeLine{00105\ \ \ ratioCompStack-\/>Draw(Form(\textcolor{stringliteral}{"{}NOSTACK\%s"{}},\ \mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_aafd288b9479b295a0aa9fa4274e07947}{getDrawOptions}}().c\_str()));}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \textcolor{comment}{//\ make\ it\ look\ a\ bit\ nicer}}
+\DoxyCodeLine{00108\ \ \ ratioCompStack-\/>GetXaxis()-\/>SetLabelSize(\mbox{\hyperlink{PlotLLH_8cpp_a152bc19a7768c2022e7195771f385521}{ratioLabelScaling}}\ *}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ratioCompStack-\/>GetXaxis()-\/>GetLabelSize());}
+\DoxyCodeLine{00110\ \ \ ratioCompStack-\/>GetXaxis()-\/>SetTitleSize(\mbox{\hyperlink{PlotLLH_8cpp_a152bc19a7768c2022e7195771f385521}{ratioLabelScaling}}\ *}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ratioCompStack-\/>GetXaxis()-\/>GetLabelSize());}
+\DoxyCodeLine{00112\ \ \ ratioCompStack-\/>GetXaxis()-\/>SetTitle(\textcolor{stringliteral}{"{}Parameter\ Variation"{}});}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ ratioCompStack-\/>GetYaxis()-\/>SetLabelSize(\mbox{\hyperlink{PlotLLH_8cpp_a152bc19a7768c2022e7195771f385521}{ratioLabelScaling}}\ *}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ratioCompStack-\/>GetYaxis()-\/>GetLabelSize());}
+\DoxyCodeLine{00116\ \ \ ratioCompStack-\/>GetYaxis()-\/>SetTitleSize(\mbox{\hyperlink{PlotLLH_8cpp_a152bc19a7768c2022e7195771f385521}{ratioLabelScaling}}\ *}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ratioCompStack-\/>GetYaxis()-\/>GetLabelSize());}
+\DoxyCodeLine{00118\ \ \ ratioCompStack-\/>GetYaxis()-\/>SetTitleOffset(\mbox{\hyperlink{PlotLLH_8cpp_a90e133c14aaf43c18c855db7a949cb3d}{yTitleOffset}});}
+\DoxyCodeLine{00119\ \ \ ratioCompStack-\/>GetYaxis()-\/>SetNdivisions(5,\ 2,\ 0);}
+\DoxyCodeLine{00120\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{PlotLLH_8cpp_ac434b1236e675ded43713ded78c5de8f}\label{PlotLLH_8cpp_ac434b1236e675ded43713ded78c5de8f}} 
+\index{PlotLLH.cpp@{PlotLLH.cpp}!getSplitSampleStack@{getSplitSampleStack}}
+\index{getSplitSampleStack@{getSplitSampleStack}!PlotLLH.cpp@{PlotLLH.cpp}}
+\doxysubsubsection{\texorpdfstring{getSplitSampleStack()}{getSplitSampleStack()}}
+{\footnotesize\ttfamily void get\+Split\+Sample\+Stack (\begin{DoxyParamCaption}\item[{int}]{file\+Idx,  }\item[{std\+::string}]{parameter\+Name,  }\item[{TH1D}]{LLH\+\_\+all\+Sams,  }\item[{std\+::vector$<$ float $>$ \&}]{cum\+Sums,  }\item[{std\+::vector$<$ bool $>$ \&}]{draw\+Label,  }\item[{THStack $\ast$}]{sample\+Stack,  }\item[{TLegend $\ast$}]{split\+Samples\+Legend,  }\item[{float}]{baseline\+LLH\+\_\+main = {\ttfamily 0.00001} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{PlotLLH_8cpp_source_l00020}{20}} of file \mbox{\hyperlink{PlotLLH_8cpp_source}{Plot\+LLH.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00024\ \ \ \{}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ std::vector<std::string>\ sampNames\ =\ \mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_afcde3593be0894c7c1dbef6fa9055dee}{input}}().\mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_ad9911c236e6afab25d056530ece5d54b}{getTaggedSamples}}(\mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_afcd58efd96096596d4ab3f2a2b7f78af}{getOption}}<std::vector<std::string>>(\textcolor{stringliteral}{"{}sampleTags"{}}));}
+\DoxyCodeLine{00027\ \ \ \textcolor{keywordtype}{size\_t}\ nSamples\ =\ sampNames.size();}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ cumSums.resize(nSamples);}
+\DoxyCodeLine{00030\ \ \ drawLabel.resize(nSamples);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \textcolor{keywordtype}{float}\ LLH\_main\_integ\ =\ LLH\_allSams.Integral();}
+\DoxyCodeLine{00033\ \ \ \textcolor{keywordtype}{float}\ cumSum\ =\ 0.0;}
+\DoxyCodeLine{00034\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{GetPostfitParamPlots_8cpp_ae4842c1619a902b2761696f3849889a1}{nBins}}\ =\ LLH\_allSams.GetNbinsX();}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}getting\ split\ sample\ THStack\ for\ \{\}\ known\ samples"{}},\ nSamples);}
+\DoxyCodeLine{00037\ \ \ \textcolor{keywordflow}{for}\ (uint\ i\ =\ 0;\ i\ <\ nSamples;\ i++)}
+\DoxyCodeLine{00038\ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ std::string\ sampName\ =\ sampNames[i];}
+\DoxyCodeLine{00040\ \ \ \ \ }
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}\ \ on\ sample\ \{\}/\{\}:\ \{\}"{}},\ i,\ nSamples,\ sampName);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ TH1D\ *LLH\_indivSam\ =}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ TH1D(\mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_afcde3593be0894c7c1dbef6fa9055dee}{input}}().\mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a74b058c312200657f046c64347f6a304}{getSampleSpecificLLHScan\_TH1D}}(fileIdx,\ parameterName,\ sampName));}
+\DoxyCodeLine{00045\ \ \ \ \ LLH\_indivSam-\/>SetName(Form(\textcolor{stringliteral}{"{}\%i\_\%s\_\%s"{}},\ fileIdx,\ parameterName.c\_str(),\ sampName.c\_str()));}
+\DoxyCodeLine{00046\ \ \ \ \ LLH\_indivSam-\/>SetBit(kCanDelete);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{comment}{//\ the\ hist\ for\ this\ sample\ didn't\ exist\ so\ move\ on}}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordflow}{if}\ (LLH\_indivSam-\/>GetNbinsX()\ ==\ 1)}
+\DoxyCodeLine{00050\ \ \ \ \ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}\ \ \ \ sample\ hist\ had\ only\ 1\ bin\ -\/\ assuming\ it\ doesn't\ exist"{}});}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \textcolor{keyword}{delete}\ LLH\_indivSam;}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ drawLabel[i]\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ cumSums[i]\ =\ -\/999.9;}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00056\ \ \ \ \ \}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ LLH\_indivSam-\/>SetStats(0);}
+\DoxyCodeLine{00059\ \ \ \ \ LLH\_indivSam-\/>SetLineColor(TColor::GetColorPalette(}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ floor((\textcolor{keywordtype}{float})i\ *\ TColor::GetNumberOfColors()\ /\ (\textcolor{keywordtype}{float})nSamples)));}
+\DoxyCodeLine{00061\ \ \ \ \ LLH\_indivSam-\/>SetFillColor(TColor::GetColorPalette(}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ floor((\textcolor{keywordtype}{float})i\ *\ TColor::GetNumberOfColors()\ /\ (\textcolor{keywordtype}{float})nSamples)));}
+\DoxyCodeLine{00063\ \ \ \ \ sampleStack-\/>Add(LLH\_indivSam);}
+\DoxyCodeLine{00064\ \ \ \ \ splitSamplesLegend-\/>AddEntry(LLH\_indivSam,\ \mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_ad07460f382733b379d0f122d6b0322c7}{style}}().\mbox{\hyperlink{classMaCh3Plotting_1_1StyleManager_a52c38dc0bcbab3ba04e974bef291d5ed}{prettifySampleName}}(sampName).c\_str(),}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}lf"{}});}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{float}\ lastBinLLH\ =\ LLH\_indivSam-\/>GetBinContent(\mbox{\hyperlink{GetPostfitParamPlots_8cpp_ae4842c1619a902b2761696f3849889a1}{nBins}});}
+\DoxyCodeLine{00068\ \ \ \ \ cumSum\ +=\ lastBinLLH;}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}\ \ \ \ Last\ bin\ LLH\ =\ \{\}\ ::\ cumulative\ LLH\ =\ \{\}"{}},\ lastBinLLH,\ cumSum);}
+\DoxyCodeLine{00071\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}\ \ \ \ LLH\ fraction\ =\ \{\}\ /\ \{\}\ =\ \{\}"{}},\ LLH\_indivSam-\/>Integral(),\ LLH\_main\_integ,\ LLH\_indivSam-\/>Integral()\ /\ LLH\_main\_integ);}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ cumSums[i]\ =\ cumSum;}
+\DoxyCodeLine{00074\ \ \ \ \ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{comment}{//\ dont\ draw\ a\ label\ if\ the\ likelihood\ contribution\ is\ less\ than\ threshold\%}}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordflow}{if}\ ((LLH\_indivSam-\/>Integral()\ /\ LLH\_main\_integ\ >\ \mbox{\hyperlink{PlotLLH_8cpp_a4a39ce5b09913469be1a966a5d99a88b}{sampleLabelThreshold}})\ \&\&}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ (LLH\_indivSam-\/>Integral()\ /\ baselineLLH\_main\ >\ \mbox{\hyperlink{PlotLLH_8cpp_a4a39ce5b09913469be1a966a5d99a88b}{sampleLabelThreshold}}))}
+\DoxyCodeLine{00078\ \ \ \ \ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ drawLabel[i]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00080\ \ \ \ \ \}\ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00081\ \ \ \ \ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ drawLabel[i]\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00083\ \ \ \ \ \}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}\ \ \ \ drawLabel\ =\ \{\}"{}},\ drawLabel.back());\ }
+\DoxyCodeLine{00086\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00087\ \ \ }
+\DoxyCodeLine{00088\ \ \ \}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00091\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{PlotLLH_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{PlotLLH_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{PlotLLH.cpp@{PlotLLH.cpp}!main@{main}}
+\index{main@{main}!PlotLLH.cpp@{PlotLLH.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{PlotLLH_8cpp_source_l00450}{450}} of file \mbox{\hyperlink{PlotLLH_8cpp_source}{Plot\+LLH.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00450\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00451\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_aa603c55ea73cd86d1994901227883e1e}{SetMaCh3LoggerFormat}}();}
+\DoxyCodeLine{00452\ }
+\DoxyCodeLine{00453\ \ \ \mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager}{MaCh3Plotting::PlottingManager}}();}
+\DoxyCodeLine{00454\ \ \ \mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a6abd05428a9f8827c67a22bd6f8ffce3}{parseInputs}}(argc,\ argv);}
+\DoxyCodeLine{00455\ }
+\DoxyCodeLine{00456\ \ \ \mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a46b6bdc0f207ca3243eef5c23966bcd1}{setExec}}(\textcolor{stringliteral}{"{}PlotLLH"{}});}
+\DoxyCodeLine{00457\ }
+\DoxyCodeLine{00458\ \ \ \mbox{\hyperlink{PlotLLH_8cpp_a45cc23dd922ece737b1306d357671417}{ratioPlotSplit}}\ =\ \mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_afcd58efd96096596d4ab3f2a2b7f78af}{getOption}}<\textcolor{keywordtype}{double}>(\textcolor{stringliteral}{"{}ratioPlotSplit"{}});}
+\DoxyCodeLine{00459\ \ \ \mbox{\hyperlink{PlotLLH_8cpp_a90e133c14aaf43c18c855db7a949cb3d}{yTitleOffset}}\ =\ \mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_afcd58efd96096596d4ab3f2a2b7f78af}{getOption}}<\textcolor{keywordtype}{double}>(\textcolor{stringliteral}{"{}yTitleOffset"{}});}
+\DoxyCodeLine{00460\ \ \ \mbox{\hyperlink{PlotLLH_8cpp_a4a39ce5b09913469be1a966a5d99a88b}{sampleLabelThreshold}}\ =\ \mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_afcd58efd96096596d4ab3f2a2b7f78af}{getOption}}<\textcolor{keywordtype}{double}>(\textcolor{stringliteral}{"{}sampleLabelThreshold"{}});}
+\DoxyCodeLine{00461\ \ \ \mbox{\hyperlink{PlotLLH_8cpp_a7740e2371b2eb3a71ca8660b26a842e4}{lineWidth}}\ =\ \mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_afcd58efd96096596d4ab3f2a2b7f78af}{getOption}}<\textcolor{keywordtype}{int}>(\textcolor{stringliteral}{"{}lineWidth"{}});}
+\DoxyCodeLine{00462\ \ \ \mbox{\hyperlink{PlotLLH_8cpp_a6446498097144fc5f704c241f009d44d}{totalOnSplitPlots}}\ =\ \mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_afcd58efd96096596d4ab3f2a2b7f78af}{getOption}}<\textcolor{keywordtype}{bool}>(\textcolor{stringliteral}{"{}totalOnSplitPlots"{}});}
+\DoxyCodeLine{00463\ \ \ \mbox{\hyperlink{PlotLLH_8cpp_a0c4fa08819fe8fd375f7d521dfe2b63a}{sameAxis}}\ =\ \mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_afcd58efd96096596d4ab3f2a2b7f78af}{getOption}}<\textcolor{keywordtype}{bool}>(\textcolor{stringliteral}{"{}sameAxis"{}});}
+\DoxyCodeLine{00464\ }
+\DoxyCodeLine{00465\ \ \ \textcolor{comment}{//\ scale\ the\ ratio\ plot\ labels\ by\ this\ much\ to\ make\ them\ same\ size\ as\ the\ normal\ plot}}
+\DoxyCodeLine{00466\ \ \ \mbox{\hyperlink{PlotLLH_8cpp_a152bc19a7768c2022e7195771f385521}{ratioLabelScaling}}\ =\ (1.0\ /\ \mbox{\hyperlink{PlotLLH_8cpp_a45cc23dd922ece737b1306d357671417}{ratioPlotSplit}}\ -\/\ 1.0);}
+\DoxyCodeLine{00467\ }
+\DoxyCodeLine{00468\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{PlotLLH_8cpp_a53c3f8ef6b889ff0c9d2f6b18c7b1f38}{PlotLLH}}();}
+\DoxyCodeLine{00469\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{PlotLLH_8cpp_a6af28572d705a78ad83764fcd64bf9a3}\label{PlotLLH_8cpp_a6af28572d705a78ad83764fcd64bf9a3}} 
+\index{PlotLLH.cpp@{PlotLLH.cpp}!makeLLHScanComparisons@{makeLLHScanComparisons}}
+\index{makeLLHScanComparisons@{makeLLHScanComparisons}!PlotLLH.cpp@{PlotLLH.cpp}}
+\doxysubsubsection{\texorpdfstring{makeLLHScanComparisons()}{makeLLHScanComparisons()}}
+{\footnotesize\ttfamily void make\+LLHScan\+Comparisons (\begin{DoxyParamCaption}\item[{std\+::string}]{param\+Name,  }\item[{std\+::string}]{LLHType,  }\item[{std\+::string}]{output\+File\+Name,  }\item[{TCanvas $\ast$}]{canv,  }\item[{TPad $\ast$}]{LLHPad,  }\item[{TPad $\ast$}]{ratio\+Pad }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{PlotLLH_8cpp_source_l00122}{122}} of file \mbox{\hyperlink{PlotLLH_8cpp_source}{Plot\+LLH.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00124\ \ \ \textcolor{comment}{//\ will\ use\ these\ to\ make\ comparisons\ of\ likelihoods}}
+\DoxyCodeLine{00125\ \ \ THStack\ *compStack\ =\ \textcolor{keyword}{new}\ THStack(\textcolor{stringliteral}{"{}LLH\_Stack"{}},\ \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00126\ \ \ THStack\ *ratioCompStack\ =\ \textcolor{keyword}{new}\ THStack(\textcolor{stringliteral}{"{}LLH\_Ratio\_Stack"{}},\ \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00127\ \ \ TLegend\ *legend\ =\ \textcolor{keyword}{new}\ TLegend(0.3,\ 0.6,\ 0.7,\ 0.8);}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \ \ \textcolor{comment}{//\ get\ the\ sample\ reweight\ hist\ from\ the\ main\ file}}
+\DoxyCodeLine{00130\ \ \ TH1D\ LLH\_main\ =\ \mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_afcde3593be0894c7c1dbef6fa9055dee}{input}}().\mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a1317c9d6da9a840fa56e5d4df3da03cd}{getLLHScan\_TH1D}}(0,\ paramName,\ LLHType);}
+\DoxyCodeLine{00131\ \ \ LLH\_main.SetStats(0);}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \ \ LLH\_main.SetLineColor(kBlack);}
+\DoxyCodeLine{00134\ \ \ compStack-\/>Add(\&LLH\_main);}
+\DoxyCodeLine{00135\ \ \ legend-\/>AddEntry(\&LLH\_main,\ \mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_ac3180484af4d04aa7a0febd1cda99c54}{getFileLabel}}(0).c\_str(),\ \textcolor{stringliteral}{"{}l"{}});}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{GetPostfitParamPlots_8cpp_ae4842c1619a902b2761696f3849889a1}{nBins}}\ =\ LLH\_main.GetNbinsX();}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \ \ \textcolor{comment}{//\ go\ through\ the\ other\ files}}
+\DoxyCodeLine{00140\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ extraFileIdx\ =\ 1;\ extraFileIdx\ <\ \mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_afcde3593be0894c7c1dbef6fa9055dee}{input}}().getNInputFiles();\ extraFileIdx++)}
+\DoxyCodeLine{00141\ \ \ \{}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \ \ \ \ TH1D\ *compHist\ =\ \textcolor{keyword}{new}\ TH1D(\mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_afcde3593be0894c7c1dbef6fa9055dee}{input}}().\mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a1317c9d6da9a840fa56e5d4df3da03cd}{getLLHScan\_TH1D}}(extraFileIdx,\ paramName,\ LLHType));}
+\DoxyCodeLine{00144\ \ \ \ \ compHist-\/>SetBit(kCanDelete);\ \textcolor{comment}{//\ <-\/\ will\ allow\ this\ to\ be\ deleted\ by\ root\ once\ done\ plotting}}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordflow}{if}\ (compHist-\/>GetNbinsX()\ ==\ 0)}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{comment}{//\ make\ them\ look\ different\ to\ each\ other}}
+\DoxyCodeLine{00149\ \ \ \ \ compHist-\/>SetLineColor(}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ TColor::GetColorPalette(floor((\textcolor{keywordtype}{float})extraFileIdx\ *\ TColor::GetNumberOfColors()\ /}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{keywordtype}{float})\mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_afcde3593be0894c7c1dbef6fa9055dee}{input}}().\mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_ae330e86f77b9be82935d6a86fa7c96fa}{getNInputFiles}}())));}
+\DoxyCodeLine{00152\ \ \ \ \ compHist-\/>SetLineStyle(2\ +\ extraFileIdx\ \%\ 9);}
+\DoxyCodeLine{00153\ \ \ \ \ compHist-\/>SetLineWidth(\mbox{\hyperlink{PlotLLH_8cpp_a7740e2371b2eb3a71ca8660b26a842e4}{lineWidth}});}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ \ \ \ \ TH1D\ *divHist\ =\ (TH1D\ *)compHist-\/>Clone(Form(\textcolor{stringliteral}{"{}RatioHist\_\%i"{}},\ extraFileIdx));}
+\DoxyCodeLine{00156\ \ \ \ \ divHist-\/>SetBit(kCanDelete);}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a0510b7710079eb67eeb3167e54e58741}{getPlotRatios}}())}
+\DoxyCodeLine{00159\ \ \ \ \ \{}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \textcolor{comment}{//\ get\ the\ ratio\ hist}}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ divHist-\/>Divide(compHist,\ \&LLH\_main);}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ ratioCompStack-\/>Add(divHist);}
+\DoxyCodeLine{00163\ \ \ \ \ \}}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{comment}{//\ add\ it\ to\ the\ comparisson\ hstack\ and\ legend}}
+\DoxyCodeLine{00166\ \ \ \ \ compStack-\/>Add(compHist);}
+\DoxyCodeLine{00167\ \ \ \ \ legend-\/>AddEntry(compHist,\ \mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_ac3180484af4d04aa7a0febd1cda99c54}{getFileLabel}}(extraFileIdx).c\_str(),\ \textcolor{stringliteral}{"{}l"{}});}
+\DoxyCodeLine{00168\ \ \ \}}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00170\ \ \ \textcolor{comment}{//\ draw\ the\ log\ likelihoods}}
+\DoxyCodeLine{00171\ \ \ \mbox{\hyperlink{GetPostfitParamPlots_8cpp_aec2fb4e7af6c83a8ccbdfcfcb7b76a83}{canv}}-\/>cd();}
+\DoxyCodeLine{00172\ \ \ \mbox{\hyperlink{GetPostfitParamPlots_8cpp_aec2fb4e7af6c83a8ccbdfcfcb7b76a83}{canv}}-\/>Draw();}
+\DoxyCodeLine{00173\ \ \ LLHPad-\/>Draw();}
+\DoxyCodeLine{00174\ \ \ LLHPad-\/>cd();}
+\DoxyCodeLine{00175\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a3f3ad6e6f3385a50c08ad15e96bbf05b}{getDrawGrid}}())}
+\DoxyCodeLine{00176\ \ \ \ \ LLHPad-\/>SetGrid();}
+\DoxyCodeLine{00177\ \ \ compStack-\/>Draw(Form(\textcolor{stringliteral}{"{}NOSTACK\%s"{}},\ \mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_aafd288b9479b295a0aa9fa4274e07947}{getDrawOptions}}().c\_str()));}
+\DoxyCodeLine{00178\ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a0510b7710079eb67eeb3167e54e58741}{getPlotRatios}}())}
+\DoxyCodeLine{00179\ \ \ \ \ compStack-\/>GetXaxis()-\/>SetTitle(\textcolor{stringliteral}{"{}Parameter\ Variation"{}});}
+\DoxyCodeLine{00180\ \ \ compStack-\/>GetYaxis()-\/>SetTitle(Form(\textcolor{stringliteral}{"{}-\/2LLH\_\{\%s\}"{}},\ LLHType.c\_str()));}
+\DoxyCodeLine{00181\ \ \ compStack-\/>SetTitle(\mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_ad07460f382733b379d0f122d6b0322c7}{style}}().\mbox{\hyperlink{classMaCh3Plotting_1_1StyleManager_a0677ca5b68a2ecb684189524fb533019}{prettifyParamName}}(paramName).c\_str());}
+\DoxyCodeLine{00182\ \ \ compStack-\/>GetYaxis()-\/>SetTitleOffset(\mbox{\hyperlink{PlotLLH_8cpp_a90e133c14aaf43c18c855db7a949cb3d}{yTitleOffset}});}
+\DoxyCodeLine{00183\ \ \ legend-\/>Draw();}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00185\ \ \ \textcolor{comment}{//\ add\ the\ ratio\ plot\ if\ specified}}
+\DoxyCodeLine{00186\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a0510b7710079eb67eeb3167e54e58741}{getPlotRatios}}())}
+\DoxyCodeLine{00187\ \ \ \{}
+\DoxyCodeLine{00188\ \ \ \ \ \mbox{\hyperlink{GetPostfitParamPlots_8cpp_aec2fb4e7af6c83a8ccbdfcfcb7b76a83}{canv}}-\/>cd();}
+\DoxyCodeLine{00189\ \ \ \ \ ratioPad-\/>Draw();}
+\DoxyCodeLine{00190\ \ \ \ \ ratioPad-\/>cd();}
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a3f3ad6e6f3385a50c08ad15e96bbf05b}{getDrawGrid}}())}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ ratioPad-\/>SetGrid();}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00194\ \ \ \ \ \mbox{\hyperlink{PlotLLH_8cpp_a22a044e77ac75863b8962c3a38b95ef7}{drawRatioStack}}(ratioCompStack);}
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00196\ \ \ \ \ \textcolor{comment}{//\ add\ horizontal\ line\ at\ 1\ for\ reference}}
+\DoxyCodeLine{00197\ \ \ \ \ TLine\ line\ =\ TLine();}
+\DoxyCodeLine{00198\ \ \ \ \ line.SetLineColor(kBlack);}
+\DoxyCodeLine{00199\ \ \ \ \ line.SetLineWidth(\mbox{\hyperlink{PlotLLH_8cpp_a7740e2371b2eb3a71ca8660b26a842e4}{lineWidth}});}
+\DoxyCodeLine{00200\ \ \ \ \ line.DrawLine(LLH\_main.GetBinLowEdge(1),\ 1.0,\ LLH\_main.GetBinLowEdge(\mbox{\hyperlink{GetPostfitParamPlots_8cpp_ae4842c1619a902b2761696f3849889a1}{nBins}}\ +\ 1),\ 1.0);}
+\DoxyCodeLine{00201\ \ \ \}}
+\DoxyCodeLine{00202\ }
+\DoxyCodeLine{00203\ \ \ \textcolor{comment}{//\ save\ to\ the\ output\ file}}
+\DoxyCodeLine{00204\ \ \ \mbox{\hyperlink{GetPostfitParamPlots_8cpp_aec2fb4e7af6c83a8ccbdfcfcb7b76a83}{canv}}-\/>SaveAs(outputFileName.c\_str());}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00206\ \ \ \textcolor{comment}{//\ will\ use\ these\ to\ make\ comparisons\ of\ likelihoods}}
+\DoxyCodeLine{00207\ \ \ \textcolor{keyword}{delete}\ compStack;}
+\DoxyCodeLine{00208\ \ \ \textcolor{keyword}{delete}\ ratioCompStack;}
+\DoxyCodeLine{00209\ \ \ \textcolor{keyword}{delete}\ legend;}
+\DoxyCodeLine{00210\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{PlotLLH_8cpp_aba66b76d718d14f91d609a25345999a4}\label{PlotLLH_8cpp_aba66b76d718d14f91d609a25345999a4}} 
+\index{PlotLLH.cpp@{PlotLLH.cpp}!makeSplitSampleLLHScanComparisons@{makeSplitSampleLLHScanComparisons}}
+\index{makeSplitSampleLLHScanComparisons@{makeSplitSampleLLHScanComparisons}!PlotLLH.cpp@{PlotLLH.cpp}}
+\doxysubsubsection{\texorpdfstring{makeSplitSampleLLHScanComparisons()}{makeSplitSampleLLHScanComparisons()}}
+{\footnotesize\ttfamily void make\+Split\+Sample\+LLHScan\+Comparisons (\begin{DoxyParamCaption}\item[{std\+::string}]{param\+Name,  }\item[{std\+::string}]{output\+File\+Name,  }\item[{TCanvas $\ast$}]{canv,  }\item[{TPad $\ast$}]{LLHPad,  }\item[{TPad $\ast$}]{ratio\+Pad }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{PlotLLH_8cpp_source_l00212}{212}} of file \mbox{\hyperlink{PlotLLH_8cpp_source}{Plot\+LLH.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00214\ \ \ }
+\DoxyCodeLine{00215\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}\ Making\ split\ sample\ LLH\ comparison"{}});}
+\DoxyCodeLine{00216\ \ \ \mbox{\hyperlink{GetPostfitParamPlots_8cpp_aec2fb4e7af6c83a8ccbdfcfcb7b76a83}{canv}}-\/>Clear();}
+\DoxyCodeLine{00217\ \ \ \mbox{\hyperlink{GetPostfitParamPlots_8cpp_aec2fb4e7af6c83a8ccbdfcfcb7b76a83}{canv}}-\/>Draw();}
+\DoxyCodeLine{00218\ }
+\DoxyCodeLine{00219\ \ \ \mbox{\hyperlink{GetPostfitParamPlots_8cpp_aec2fb4e7af6c83a8ccbdfcfcb7b76a83}{canv}}-\/>Divide(\mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a4710a50cc20ac3ed7ee403d56e1a8eaa}{getNFiles}}());}
+\DoxyCodeLine{00220\ }
+\DoxyCodeLine{00221\ \ \ \textcolor{comment}{//\ get\ the\ sample\ hist\ from\ the\ main\ file}}
+\DoxyCodeLine{00222\ \ \ TH1D\ LLH\_main\ =\ \mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_afcde3593be0894c7c1dbef6fa9055dee}{input}}().\mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a1317c9d6da9a840fa56e5d4df3da03cd}{getLLHScan\_TH1D}}(0,\ paramName,\ \textcolor{stringliteral}{"{}sample"{}});}
+\DoxyCodeLine{00223\ \ \ \textcolor{keywordflow}{if}\ (LLH\_main.GetNbinsX()\ ==\ 1)}
+\DoxyCodeLine{00224\ \ \ \{}
+\DoxyCodeLine{00225\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}\ \ Main\ LLH\ had\ only\ 1\ bin,\ assuming\ it\ doesn't\ exist"{}});}
+\DoxyCodeLine{00226\ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00227\ \ \ \}}
+\DoxyCodeLine{00228\ }
+\DoxyCodeLine{00229\ \ \ THStack\ *baseSplitSamplesStack\ =\ \textcolor{keyword}{new}\ THStack(}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ paramName.c\_str(),\ Form(\textcolor{stringliteral}{"{}\%s\ -\/\ \%s"{}},\ paramName.c\_str(),\ \mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_ac3180484af4d04aa7a0febd1cda99c54}{getFileLabel}}(0).c\_str()));}
+\DoxyCodeLine{00231\ \ \ TLegend\ *baseSplitSamplesLegend\ =\ \textcolor{keyword}{new}\ TLegend(0.37,\ 0.475,\ 0.63,\ 0.9);}
+\DoxyCodeLine{00232\ }
+\DoxyCodeLine{00233\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a3f3ad6e6f3385a50c08ad15e96bbf05b}{getDrawGrid}}())}
+\DoxyCodeLine{00234\ \ \ \ \ \mbox{\hyperlink{GetPostfitParamPlots_8cpp_aec2fb4e7af6c83a8ccbdfcfcb7b76a83}{canv}}-\/>cd(1)-\/>SetGrid();}
+\DoxyCodeLine{00235\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00236\ \ \ \ \ \mbox{\hyperlink{GetPostfitParamPlots_8cpp_aec2fb4e7af6c83a8ccbdfcfcb7b76a83}{canv}}-\/>cd(1);}
+\DoxyCodeLine{00237\ }
+\DoxyCodeLine{00238\ \ \ std::vector<float>\ cumSums;}
+\DoxyCodeLine{00239\ \ \ std::vector<bool>\ drawLabel;}
+\DoxyCodeLine{00240\ }
+\DoxyCodeLine{00241\ \ \ \mbox{\hyperlink{PlotLLH_8cpp_ac434b1236e675ded43713ded78c5de8f}{getSplitSampleStack}}(0,\ paramName,\ LLH\_main,\ cumSums,\ drawLabel,\ baseSplitSamplesStack,}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ baseSplitSamplesLegend);}
+\DoxyCodeLine{00243\ }
+\DoxyCodeLine{00244\ \ \ baseSplitSamplesStack-\/>Draw(\mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_aafd288b9479b295a0aa9fa4274e07947}{getDrawOptions}}().c\_str());}
+\DoxyCodeLine{00245\ }
+\DoxyCodeLine{00246\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{PlotLLH_8cpp_a6446498097144fc5f704c241f009d44d}{totalOnSplitPlots}})}
+\DoxyCodeLine{00247\ \ \ \{}
+\DoxyCodeLine{00248\ \ \ \ \ LLH\_main.SetLineWidth(1);\ \textcolor{comment}{//\ undo\ SetLineWidth\ that\ was\ done\ above}}
+\DoxyCodeLine{00249\ \ \ \ \ LLH\_main.Draw(Form(\textcolor{stringliteral}{"{}same\%s"{}},\ \mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_aafd288b9479b295a0aa9fa4274e07947}{getDrawOptions}}().c\_str()));}
+\DoxyCodeLine{00250\ \ \ \ \ baseSplitSamplesLegend-\/>AddEntry(\&LLH\_main,\ \textcolor{stringliteral}{"{}All\ Samples"{}},\ \textcolor{stringliteral}{"{}l"{}});}
+\DoxyCodeLine{00251\ \ \ \}}
+\DoxyCodeLine{00252\ }
+\DoxyCodeLine{00253\ \ \ baseSplitSamplesLegend-\/>Draw();}
+\DoxyCodeLine{00254\ }
+\DoxyCodeLine{00255\ \ \ TLatex\ *label\ =\ \textcolor{keyword}{new}\ TLatex;}
+\DoxyCodeLine{00256\ \ \ \textcolor{comment}{//\ format\ the\ label}}
+\DoxyCodeLine{00257\ \ \ label-\/>SetTextAlign(11);}
+\DoxyCodeLine{00258\ \ \ label-\/>SetTextAngle(-\/55);}
+\DoxyCodeLine{00259\ \ \ label-\/>SetTextSize(0.012);}
+\DoxyCodeLine{00260\ }
+\DoxyCodeLine{00261\ \ \ \textcolor{comment}{//\ need\ to\ draw\ the\ labels\ after\ other\ stuff\ or\ they\ dont\ show\ up}}
+\DoxyCodeLine{00262\ \ \ \textcolor{keywordflow}{for}\ (uint\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_afcde3593be0894c7c1dbef6fa9055dee}{input}}().getTaggedSamples(\mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_afcd58efd96096596d4ab3f2a2b7f78af}{getOption}}<std::vector<std::string>>(\textcolor{stringliteral}{"{}sampleTags"{}})).size();\ i++)}
+\DoxyCodeLine{00263\ \ \ \{}
+\DoxyCodeLine{00264\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}\ \ Will\ I\ draw\ the\ label\ for\ sample\ \{\}??"{}},\ i);}
+\DoxyCodeLine{00265\ \ \ \ \ std::string\ sampName\ =\ \mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_afcde3593be0894c7c1dbef6fa9055dee}{input}}().\mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_ad9911c236e6afab25d056530ece5d54b}{getTaggedSamples}}(\mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_afcd58efd96096596d4ab3f2a2b7f78af}{getOption}}<std::vector<std::string>>(\textcolor{stringliteral}{"{}sampleTags"{}}))[i];}
+\DoxyCodeLine{00266\ \ \ \ \ \textcolor{keywordflow}{if}\ (!drawLabel[i])}
+\DoxyCodeLine{00267\ \ \ \ \ \{\ }
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}\ \ \ -\/\ Not\ drawing\ label"{}});}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00270\ \ \ \ \ \}}
+\DoxyCodeLine{00271\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}\ \ \ -\/\ Drawing\ label"{}});}
+\DoxyCodeLine{00272\ }
+\DoxyCodeLine{00273\ \ \ \ \ label-\/>DrawLatex(LLH\_main.GetBinLowEdge(LLH\_main.GetNbinsX()\ +\ 1),\ cumSums[i],}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Form(\textcolor{stringliteral}{"{}\#leftarrow\%s"{}},\ \mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_ad07460f382733b379d0f122d6b0322c7}{style}}().\mbox{\hyperlink{classMaCh3Plotting_1_1StyleManager_a52c38dc0bcbab3ba04e974bef291d5ed}{prettifySampleName}}(sampName).c\_str()));}
+\DoxyCodeLine{00275\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}\ \ I\ drew\ the\ label!"{}});}
+\DoxyCodeLine{00276\ \ \ \}}
+\DoxyCodeLine{00277\ }
+\DoxyCodeLine{00278\ \ \ \textcolor{comment}{//\ now\ we\ plot\ the\ comparisson\ file\ plots}}
+\DoxyCodeLine{00279\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ extraFileIdx\ =\ 1;\ extraFileIdx\ <\ \mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a4710a50cc20ac3ed7ee403d56e1a8eaa}{getNFiles}}();\ extraFileIdx++)}
+\DoxyCodeLine{00280\ \ \ \{}
+\DoxyCodeLine{00281\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}\ \ -\/\ Adding\ plot\ for\ additional\ file\ \{\}"{}},\ extraFileIdx);}
+\DoxyCodeLine{00282\ \ \ \ \ \mbox{\hyperlink{GetPostfitParamPlots_8cpp_aec2fb4e7af6c83a8ccbdfcfcb7b76a83}{canv}}-\/>cd(1\ +\ extraFileIdx);}
+\DoxyCodeLine{00283\ }
+\DoxyCodeLine{00284\ \ \ \ \ std::vector<float>\ extraCumSums;}
+\DoxyCodeLine{00285\ \ \ \ \ std::vector<bool>\ extraDrawLabel;}
+\DoxyCodeLine{00286\ }
+\DoxyCodeLine{00287\ \ \ \ \ THStack\ *splitSamplesStack\ =}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ THStack(paramName.c\_str(),}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Form(\textcolor{stringliteral}{"{}\%s\ -\/\ \%s"{}},\ paramName.c\_str(),\ \mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_ac3180484af4d04aa7a0febd1cda99c54}{getFileLabel}}(extraFileIdx).c\_str()));}
+\DoxyCodeLine{00290\ \ \ \ \ TLegend\ *splitSamplesLegend\ =\ \textcolor{keyword}{new}\ TLegend(0.37,\ 0.475,\ 0.63,\ 0.9);}
+\DoxyCodeLine{00291\ }
+\DoxyCodeLine{00292\ \ \ \ \ splitSamplesStack-\/>SetBit(kCanDelete);}
+\DoxyCodeLine{00293\ \ \ \ \ splitSamplesLegend-\/>SetBit(kCanDelete);}
+\DoxyCodeLine{00294\ }
+\DoxyCodeLine{00295\ \ \ \ \ TH1D\ compLLH\_main\ =\ \mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_afcde3593be0894c7c1dbef6fa9055dee}{input}}().\mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a1317c9d6da9a840fa56e5d4df3da03cd}{getLLHScan\_TH1D}}(extraFileIdx,\ paramName,\ \textcolor{stringliteral}{"{}sample"{}});}
+\DoxyCodeLine{00296\ \ \ \ \ \textcolor{keywordflow}{if}\ (compLLH\_main.GetNbinsX()\ ==\ 1)}
+\DoxyCodeLine{00297\ \ \ \ \ \{}
+\DoxyCodeLine{00298\ \ \ \ \ \ \ \textcolor{keyword}{delete}\ splitSamplesStack;}
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \textcolor{keyword}{delete}\ splitSamplesLegend;}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00301\ \ \ \ \ \}}
+\DoxyCodeLine{00302\ }
+\DoxyCodeLine{00303\ \ \ \ \ \textcolor{comment}{//\ if\ on\ the\ same\ y\ axis,\ also\ check\ that\ the\ contribution\ of\ the\ sample\ compared\ to\ the}}
+\DoxyCodeLine{00304\ \ \ \ \ \textcolor{comment}{//\ baseline\ LLH\ integral\ is\ above\ the\ threshold\ otherwise\ the\ labels\ might\ get\ very\ crowded\ if}}
+\DoxyCodeLine{00305\ \ \ \ \ \textcolor{comment}{//\ the\ comparisson\ LLH\ is\ much\ smaller\ than\ the\ baseline\ one}}
+\DoxyCodeLine{00306\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{PlotLLH_8cpp_a0c4fa08819fe8fd375f7d521dfe2b63a}{sameAxis}})}
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \mbox{\hyperlink{PlotLLH_8cpp_ac434b1236e675ded43713ded78c5de8f}{getSplitSampleStack}}(extraFileIdx,\ paramName,\ compLLH\_main,\ extraCumSums,\ extraDrawLabel,}
+\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ splitSamplesStack,\ splitSamplesLegend,\ LLH\_main.Integral());}
+\DoxyCodeLine{00309\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00310\ \ \ \ \ \ \ \mbox{\hyperlink{PlotLLH_8cpp_ac434b1236e675ded43713ded78c5de8f}{getSplitSampleStack}}(extraFileIdx,\ paramName,\ compLLH\_main,\ extraCumSums,\ extraDrawLabel,}
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ splitSamplesStack,\ splitSamplesLegend);}
+\DoxyCodeLine{00312\ }
+\DoxyCodeLine{00313\ \ \ \ \ \textcolor{comment}{//\ go\ to\ the\ pad\ for\ the\ histograms}}
+\DoxyCodeLine{00314\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a3f3ad6e6f3385a50c08ad15e96bbf05b}{getDrawGrid}}())}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ LLHPad-\/>SetGrid();}
+\DoxyCodeLine{00316\ \ \ \ \ LLHPad-\/>Draw();}
+\DoxyCodeLine{00317\ \ \ \ \ LLHPad-\/>cd();}
+\DoxyCodeLine{00318\ }
+\DoxyCodeLine{00319\ \ \ \ \ splitSamplesStack-\/>Draw(\mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_aafd288b9479b295a0aa9fa4274e07947}{getDrawOptions}}().c\_str());}
+\DoxyCodeLine{00320\ \ \ \ \ splitSamplesStack-\/>GetXaxis()-\/>SetTitle(\textcolor{stringliteral}{"{}Parameter\ Variation"{}});}
+\DoxyCodeLine{00321\ \ \ \ \ splitSamplesStack-\/>GetYaxis()-\/>SetTitle(\textcolor{stringliteral}{"{}-\/2LLH\_\{sam\}"{}});}
+\DoxyCodeLine{00322\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{PlotLLH_8cpp_a0c4fa08819fe8fd375f7d521dfe2b63a}{sameAxis}})}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ splitSamplesStack-\/>SetMaximum(baseSplitSamplesStack-\/>GetMaximum());}
+\DoxyCodeLine{00324\ }
+\DoxyCodeLine{00325\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{PlotLLH_8cpp_a6446498097144fc5f704c241f009d44d}{totalOnSplitPlots}})}
+\DoxyCodeLine{00326\ \ \ \ \ \{}
+\DoxyCodeLine{00327\ \ \ \ \ \ \ compLLH\_main.Draw(Form(\textcolor{stringliteral}{"{}same\%s"{}},\ \mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_aafd288b9479b295a0aa9fa4274e07947}{getDrawOptions}}().c\_str()));}
+\DoxyCodeLine{00328\ \ \ \ \ \ \ compLLH\_main.SetLineColor(kBlack);}
+\DoxyCodeLine{00329\ \ \ \ \ \ \ splitSamplesLegend-\/>AddEntry(\&compLLH\_main,\ \textcolor{stringliteral}{"{}All\ Samples"{}},\ \textcolor{stringliteral}{"{}l"{}});}
+\DoxyCodeLine{00330\ \ \ \ \ \}}
+\DoxyCodeLine{00331\ \ \ \ \ splitSamplesLegend-\/>Draw();}
+\DoxyCodeLine{00332\ }
+\DoxyCodeLine{00333\ \ \ \ \ \textcolor{comment}{//\ need\ to\ draw\ the\ labels\ after\ other\ stuff\ or\ they\ dont\ show\ up}}
+\DoxyCodeLine{00334\ \ \ \ \ \textcolor{keywordflow}{for}\ (uint\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_afcde3593be0894c7c1dbef6fa9055dee}{input}}().getTaggedSamples(\mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_afcd58efd96096596d4ab3f2a2b7f78af}{getOption}}<std::vector<std::string>>(\textcolor{stringliteral}{"{}sampleTags"{}})).size();\ i++)}
+\DoxyCodeLine{00335\ \ \ \ \ \{}
+\DoxyCodeLine{00336\ \ \ \ \ \ \ std::string\ sampName\ =\ \mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_afcde3593be0894c7c1dbef6fa9055dee}{input}}().\mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_ad9911c236e6afab25d056530ece5d54b}{getTaggedSamples}}(\mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_afcd58efd96096596d4ab3f2a2b7f78af}{getOption}}<std::vector<std::string>>(\textcolor{stringliteral}{"{}sampleTags"{}}))[i];}
+\DoxyCodeLine{00337\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!drawLabel[i])}
+\DoxyCodeLine{00338\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00339\ \ \ \ \ \ \ label-\/>DrawLatex(compLLH\_main.GetBinLowEdge(compLLH\_main.GetNbinsX()\ +\ 1),\ extraCumSums[i],}
+\DoxyCodeLine{00340\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Form(\textcolor{stringliteral}{"{}\#leftarrow\%s"{}},\ \mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_ad07460f382733b379d0f122d6b0322c7}{style}}().\mbox{\hyperlink{classMaCh3Plotting_1_1StyleManager_a52c38dc0bcbab3ba04e974bef291d5ed}{prettifySampleName}}(sampName).c\_str()));}
+\DoxyCodeLine{00341\ \ \ \ \ \}}
+\DoxyCodeLine{00342\ }
+\DoxyCodeLine{00343\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a0510b7710079eb67eeb3167e54e58741}{getPlotRatios}}())}
+\DoxyCodeLine{00344\ \ \ \ \ \{}
+\DoxyCodeLine{00345\ }
+\DoxyCodeLine{00346\ \ \ \ \ \ \ THStack\ *splitSamplesStackRatios\ =\ \textcolor{keyword}{new}\ THStack(paramName.c\_str(),\ \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00347\ }
+\DoxyCodeLine{00348\ \ \ \ \ \ \ TList\ *baselineHistList\ =\ baseSplitSamplesStack-\/>GetHists();}
+\DoxyCodeLine{00349\ \ \ \ \ \ \ TList\ *compHistList\ =\ splitSamplesStack-\/>GetHists();}
+\DoxyCodeLine{00350\ }
+\DoxyCodeLine{00351\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (uint\ sampleIdx\ =\ 0;\ sampleIdx\ <\ \mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_afcde3593be0894c7c1dbef6fa9055dee}{input}}().getTaggedSamples(\mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_afcd58efd96096596d4ab3f2a2b7f78af}{getOption}}<std::vector<std::string>>(\textcolor{stringliteral}{"{}sampleTags"{}})).size();\ sampleIdx++)}
+\DoxyCodeLine{00352\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00353\ \ \ \ \ \ \ \ \ TH1D\ *divHist\ =\ \textcolor{keyword}{new}\ TH1D(}
+\DoxyCodeLine{00354\ \ \ \ \ \ \ \ \ \ \ \ \ Form(\textcolor{stringliteral}{"{}\%s\_\%s\_splitDiv\_\%i"{}},\ paramName.c\_str(),\ \mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_ac3180484af4d04aa7a0febd1cda99c54}{getFileLabel}}(extraFileIdx).c\_str(),}
+\DoxyCodeLine{00355\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sampleIdx),}
+\DoxyCodeLine{00356\ \ \ \ \ \ \ \ \ \ \ \ \ Form(\textcolor{stringliteral}{"{}\%s\_\%s\_splitDiv"{}},\ paramName.c\_str(),\ \mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_ac3180484af4d04aa7a0febd1cda99c54}{getFileLabel}}(extraFileIdx).c\_str()),}
+\DoxyCodeLine{00357\ \ \ \ \ \ \ \ \ \ \ \ \ compLLH\_main.GetNbinsX(),\ compLLH\_main.GetBinLowEdge(1),}
+\DoxyCodeLine{00358\ \ \ \ \ \ \ \ \ \ \ \ \ compLLH\_main.GetBinLowEdge(compLLH\_main.GetNbinsX()\ +\ 1));}
+\DoxyCodeLine{00359\ \ \ \ \ \ \ \ \ divHist-\/>Divide((TH1D\ *)compHistList-\/>At(sampleIdx),}
+\DoxyCodeLine{00360\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (TH1D\ *)baselineHistList-\/>At(sampleIdx));}
+\DoxyCodeLine{00361\ \ \ \ \ \ \ \ \ splitSamplesStackRatios-\/>Add(divHist);}
+\DoxyCodeLine{00362\ \ \ \ \ \ \ \ \ divHist-\/>SetLineColor(((TH1D\ *)compHistList-\/>At(sampleIdx))-\/>GetLineColor());}
+\DoxyCodeLine{00363\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00364\ }
+\DoxyCodeLine{00365\ \ \ \ \ \ \ \mbox{\hyperlink{GetPostfitParamPlots_8cpp_aec2fb4e7af6c83a8ccbdfcfcb7b76a83}{canv}}-\/>cd(2\ +\ extraFileIdx);}
+\DoxyCodeLine{00366\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a3f3ad6e6f3385a50c08ad15e96bbf05b}{getDrawGrid}}())}
+\DoxyCodeLine{00367\ \ \ \ \ \ \ \ \ ratioPad-\/>SetGrid();}
+\DoxyCodeLine{00368\ \ \ \ \ \ \ ratioPad-\/>Draw();}
+\DoxyCodeLine{00369\ \ \ \ \ \ \ ratioPad-\/>cd();}
+\DoxyCodeLine{00370\ }
+\DoxyCodeLine{00371\ \ \ \ \ \ \ \mbox{\hyperlink{PlotLLH_8cpp_a22a044e77ac75863b8962c3a38b95ef7}{drawRatioStack}}(splitSamplesStackRatios);}
+\DoxyCodeLine{00372\ \ \ \ \ \}}
+\DoxyCodeLine{00373\ \ \ \}}
+\DoxyCodeLine{00374\ }
+\DoxyCodeLine{00375\ \ \ \mbox{\hyperlink{GetPostfitParamPlots_8cpp_aec2fb4e7af6c83a8ccbdfcfcb7b76a83}{canv}}-\/>SaveAs(outputFileName.c\_str());}
+\DoxyCodeLine{00376\ }
+\DoxyCodeLine{00377\ \ \ \textcolor{keyword}{delete}\ baseSplitSamplesStack;}
+\DoxyCodeLine{00378\ \ \ \textcolor{keyword}{delete}\ baseSplitSamplesLegend;}
+\DoxyCodeLine{00379\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{PlotLLH_8cpp_a53c3f8ef6b889ff0c9d2f6b18c7b1f38}\label{PlotLLH_8cpp_a53c3f8ef6b889ff0c9d2f6b18c7b1f38}} 
+\index{PlotLLH.cpp@{PlotLLH.cpp}!PlotLLH@{PlotLLH}}
+\index{PlotLLH@{PlotLLH}!PlotLLH.cpp@{PlotLLH.cpp}}
+\doxysubsubsection{\texorpdfstring{PlotLLH()}{PlotLLH()}}
+{\footnotesize\ttfamily int Plot\+LLH (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{PlotLLH_8cpp_source_l00381}{381}} of file \mbox{\hyperlink{PlotLLH_8cpp_source}{Plot\+LLH.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00381\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00382\ }
+\DoxyCodeLine{00383\ \ \ \mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_ad07460f382733b379d0f122d6b0322c7}{style}}().\mbox{\hyperlink{classMaCh3Plotting_1_1StyleManager_a4b1dd7b013237cbb4b80d08373186484}{setPalette}}(\mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_afcd58efd96096596d4ab3f2a2b7f78af}{getOption}}<std::string>(\textcolor{stringliteral}{"{}colorPalette"{}}));}
+\DoxyCodeLine{00384\ }
+\DoxyCodeLine{00385\ \ \ \textcolor{comment}{//\ make\ the\ canvas\ and\ other\ plotting\ stuff}}
+\DoxyCodeLine{00386\ \ \ TCanvas\ *\mbox{\hyperlink{GetPostfitParamPlots_8cpp_aec2fb4e7af6c83a8ccbdfcfcb7b76a83}{canv}}\ =\ \textcolor{keyword}{new}\ TCanvas(\textcolor{stringliteral}{"{}canv"{}},\ \textcolor{stringliteral}{"{}"{}},\ 1024,\ 1024);}
+\DoxyCodeLine{00387\ }
+\DoxyCodeLine{00388\ \ \ \textcolor{comment}{//\ split\ up\ the\ canvas\ so\ can\ have\ side\ by\ side\ plots,\ one\ for\ each\ file}}
+\DoxyCodeLine{00389\ \ \ TCanvas\ *splitSamplesCanv\ =\ \textcolor{keyword}{new}\ TCanvas(\textcolor{stringliteral}{"{}splitSampCanv"{}},\ \textcolor{stringliteral}{"{}"{}},\ 4096\ *\ \mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a4710a50cc20ac3ed7ee403d56e1a8eaa}{getNFiles}}(),\ 4096);}
+\DoxyCodeLine{00390\ }
+\DoxyCodeLine{00391\ \ \ \textcolor{comment}{//\ split\ the\ canvas\ if\ plotting\ ratios}}
+\DoxyCodeLine{00392\ \ \ TPad\ *LLHPad,\ *ratioPad;}
+\DoxyCodeLine{00393\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a0510b7710079eb67eeb3167e54e58741}{getPlotRatios}}())}
+\DoxyCodeLine{00394\ \ \ \{}
+\DoxyCodeLine{00395\ \ \ \ \ LLHPad\ =\ \textcolor{keyword}{new}\ TPad(\textcolor{stringliteral}{"{}LLHPad"{}},\ \textcolor{stringliteral}{"{}LLHPad"{}},\ 0.0,\ \mbox{\hyperlink{PlotLLH_8cpp_a45cc23dd922ece737b1306d357671417}{ratioPlotSplit}},\ 1.0,\ 1.0);}
+\DoxyCodeLine{00396\ \ \ \ \ LLHPad-\/>SetBottomMargin(0.0);}
+\DoxyCodeLine{00397\ \ \ \ \ ratioPad\ =\ \textcolor{keyword}{new}\ TPad(\textcolor{stringliteral}{"{}ratioPad"{}},\ \textcolor{stringliteral}{"{}ratioPad"{}},\ 0.0,\ 0.0,\ 1.0,\ \mbox{\hyperlink{PlotLLH_8cpp_a45cc23dd922ece737b1306d357671417}{ratioPlotSplit}});}
+\DoxyCodeLine{00398\ \ \ \ \ ratioPad-\/>SetTopMargin(0.0);}
+\DoxyCodeLine{00399\ \ \ \ \ ratioPad-\/>SetBottomMargin(0.3);}
+\DoxyCodeLine{00400\ \ \ \}\ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00401\ \ \ \{}
+\DoxyCodeLine{00402\ \ \ \ \ LLHPad\ =\ \textcolor{keyword}{new}\ TPad(\textcolor{stringliteral}{"{}AllSampPad"{}},\ \textcolor{stringliteral}{"{}AllSampPad"{}},\ 0.0,\ 0.0,\ 1.0,\ 1.0);}
+\DoxyCodeLine{00403\ \ \ \ \ ratioPad\ =\ \textcolor{keyword}{new}\ TPad(\textcolor{stringliteral}{"{}AllSampRatioPad"{}},\ \textcolor{stringliteral}{"{}AllSampRatioPad"{}},\ 0.0,\ 0.0,\ 0.0,\ 0.0);}
+\DoxyCodeLine{00404\ \ \ \}}
+\DoxyCodeLine{00405\ }
+\DoxyCodeLine{00406\ \ \ \mbox{\hyperlink{GetPostfitParamPlots_8cpp_aec2fb4e7af6c83a8ccbdfcfcb7b76a83}{canv}}-\/>SaveAs((\mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a0aead494d2ffb4b2ba2c1e2265dd56be}{getOutputName}}(\textcolor{stringliteral}{"{}\_Sample"{}})\ +\ \textcolor{stringliteral}{"{}["{}}).c\_str());}
+\DoxyCodeLine{00407\ \ \ \mbox{\hyperlink{GetPostfitParamPlots_8cpp_aec2fb4e7af6c83a8ccbdfcfcb7b76a83}{canv}}-\/>SaveAs((\mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a0aead494d2ffb4b2ba2c1e2265dd56be}{getOutputName}}(\textcolor{stringliteral}{"{}\_Penalty"{}})\ +\ \textcolor{stringliteral}{"{}["{}}).c\_str());}
+\DoxyCodeLine{00408\ \ \ \mbox{\hyperlink{GetPostfitParamPlots_8cpp_aec2fb4e7af6c83a8ccbdfcfcb7b76a83}{canv}}-\/>SaveAs((\mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a0aead494d2ffb4b2ba2c1e2265dd56be}{getOutputName}}(\textcolor{stringliteral}{"{}\_Total"{}})\ +\ \textcolor{stringliteral}{"{}["{}}).c\_str());}
+\DoxyCodeLine{00409\ }
+\DoxyCodeLine{00410\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_accbc8139f12323e7b3e2ed2222d1db45}{getSplitBySample}}())}
+\DoxyCodeLine{00411\ \ \ \ \ \mbox{\hyperlink{GetPostfitParamPlots_8cpp_aec2fb4e7af6c83a8ccbdfcfcb7b76a83}{canv}}-\/>SaveAs((\mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a0aead494d2ffb4b2ba2c1e2265dd56be}{getOutputName}}(\textcolor{stringliteral}{"{}\_bySample"{}})\ +\ \textcolor{stringliteral}{"{}["{}}).c\_str());}
+\DoxyCodeLine{00412\ }
+\DoxyCodeLine{00413\ \ \ \textcolor{keywordflow}{for}(\ std::string\ par:\ \mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_afcd58efd96096596d4ab3f2a2b7f78af}{getOption}}<std::vector<std::string>>(\textcolor{stringliteral}{"{}parameterTags"{}}))\ std::cout\ <<\ par\ <<\ \textcolor{stringliteral}{"{},\ "{}};}
+\DoxyCodeLine{00414\ \ \ \textcolor{comment}{//\ loop\ over\ the\ spline\ parameters}}
+\DoxyCodeLine{00415\ \ \ \textcolor{keywordflow}{for}\ (std::string\ paramName\ :\ \mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_afcde3593be0894c7c1dbef6fa9055dee}{input}}().\mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a375aba4aa8fc8b763756f8b45682a715}{getTaggedParameters}}(\mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_afcd58efd96096596d4ab3f2a2b7f78af}{getOption}}<std::vector<std::string>>(\textcolor{stringliteral}{"{}parameterTags"{}})))}
+\DoxyCodeLine{00416\ \ \ \{}
+\DoxyCodeLine{00417\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}working\ on\ parameter\ \{\}"{}},\ paramName);}
+\DoxyCodeLine{00418\ \ \ \ \ \textcolor{comment}{//\ \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#}}
+\DoxyCodeLine{00419\ \ \ \ \ \textcolor{comment}{//\ First\ lets\ do\ just\ the\ straight\ up\ likelihoods\ from\ all\ samples}}
+\DoxyCodeLine{00420\ \ \ \ \ \textcolor{comment}{//\ \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#}}
+\DoxyCodeLine{00421\ }
+\DoxyCodeLine{00422\ \ \ \ \ \mbox{\hyperlink{PlotLLH_8cpp_a6af28572d705a78ad83764fcd64bf9a3}{makeLLHScanComparisons}}(paramName,\ \textcolor{stringliteral}{"{}sample"{}},\ \mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a0aead494d2ffb4b2ba2c1e2265dd56be}{getOutputName}}(\textcolor{stringliteral}{"{}\_Sample"{}}),\ \mbox{\hyperlink{GetPostfitParamPlots_8cpp_aec2fb4e7af6c83a8ccbdfcfcb7b76a83}{canv}},\ LLHPad,}
+\DoxyCodeLine{00423\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ratioPad);}
+\DoxyCodeLine{00424\ \ \ \ \ \mbox{\hyperlink{PlotLLH_8cpp_a6af28572d705a78ad83764fcd64bf9a3}{makeLLHScanComparisons}}(paramName,\ \textcolor{stringliteral}{"{}penalty"{}},\ \mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a0aead494d2ffb4b2ba2c1e2265dd56be}{getOutputName}}(\textcolor{stringliteral}{"{}\_Penalty"{}}),\ \mbox{\hyperlink{GetPostfitParamPlots_8cpp_aec2fb4e7af6c83a8ccbdfcfcb7b76a83}{canv}},\ LLHPad,}
+\DoxyCodeLine{00425\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ratioPad);}
+\DoxyCodeLine{00426\ \ \ \ \ \mbox{\hyperlink{PlotLLH_8cpp_a6af28572d705a78ad83764fcd64bf9a3}{makeLLHScanComparisons}}(paramName,\ \textcolor{stringliteral}{"{}total"{}},\ \mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a0aead494d2ffb4b2ba2c1e2265dd56be}{getOutputName}}(\textcolor{stringliteral}{"{}\_Total"{}}),\ \mbox{\hyperlink{GetPostfitParamPlots_8cpp_aec2fb4e7af6c83a8ccbdfcfcb7b76a83}{canv}},\ LLHPad,}
+\DoxyCodeLine{00427\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ratioPad);}
+\DoxyCodeLine{00428\ }
+\DoxyCodeLine{00429\ \ \ \ \ \textcolor{comment}{//\ \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#}}
+\DoxyCodeLine{00430\ \ \ \ \ \textcolor{comment}{//\ \#\#\ now\ lets\ make\ plots\ split\ by\ sample\ \#\#}}
+\DoxyCodeLine{00431\ \ \ \ \ \textcolor{comment}{//\ \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#}}
+\DoxyCodeLine{00432\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_accbc8139f12323e7b3e2ed2222d1db45}{getSplitBySample}}())}
+\DoxyCodeLine{00433\ \ \ \ \ \{}
+\DoxyCodeLine{00434\ \ \ \ \ \ \ \mbox{\hyperlink{PlotLLH_8cpp_aba66b76d718d14f91d609a25345999a4}{makeSplitSampleLLHScanComparisons}}(paramName,\ \mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a0aead494d2ffb4b2ba2c1e2265dd56be}{getOutputName}}(\textcolor{stringliteral}{"{}\_bySample"{}}),}
+\DoxyCodeLine{00435\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ splitSamplesCanv,\ LLHPad,\ ratioPad);}
+\DoxyCodeLine{00436\ \ \ \ \ \}}
+\DoxyCodeLine{00437\ \ \ \}}
+\DoxyCodeLine{00438\ }
+\DoxyCodeLine{00439\ \ \ \mbox{\hyperlink{GetPostfitParamPlots_8cpp_aec2fb4e7af6c83a8ccbdfcfcb7b76a83}{canv}}-\/>SaveAs((\mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a0aead494d2ffb4b2ba2c1e2265dd56be}{getOutputName}}(\textcolor{stringliteral}{"{}\_Sample"{}})\ +\ \textcolor{stringliteral}{"{}]"{}}).c\_str());}
+\DoxyCodeLine{00440\ \ \ \mbox{\hyperlink{GetPostfitParamPlots_8cpp_aec2fb4e7af6c83a8ccbdfcfcb7b76a83}{canv}}-\/>SaveAs((\mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a0aead494d2ffb4b2ba2c1e2265dd56be}{getOutputName}}(\textcolor{stringliteral}{"{}\_Penalty"{}})\ +\ \textcolor{stringliteral}{"{}]"{}}).c\_str());}
+\DoxyCodeLine{00441\ \ \ \mbox{\hyperlink{GetPostfitParamPlots_8cpp_aec2fb4e7af6c83a8ccbdfcfcb7b76a83}{canv}}-\/>SaveAs((\mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a0aead494d2ffb4b2ba2c1e2265dd56be}{getOutputName}}(\textcolor{stringliteral}{"{}\_Total"{}})\ +\ \textcolor{stringliteral}{"{}]"{}}).c\_str());}
+\DoxyCodeLine{00442\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_accbc8139f12323e7b3e2ed2222d1db45}{getSplitBySample}}())}
+\DoxyCodeLine{00443\ \ \ \ \ \mbox{\hyperlink{GetPostfitParamPlots_8cpp_aec2fb4e7af6c83a8ccbdfcfcb7b76a83}{canv}}-\/>SaveAs((\mbox{\hyperlink{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}-\/>\mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager_a0aead494d2ffb4b2ba2c1e2265dd56be}{getOutputName}}(\textcolor{stringliteral}{"{}\_bySample"{}})\ +\ \textcolor{stringliteral}{"{}]"{}}).c\_str());}
+\DoxyCodeLine{00444\ }
+\DoxyCodeLine{00445\ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{GetPostfitParamPlots_8cpp_aec2fb4e7af6c83a8ccbdfcfcb7b76a83}{canv}};}
+\DoxyCodeLine{00446\ }
+\DoxyCodeLine{00447\ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00448\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{PlotLLH_8cpp_a7740e2371b2eb3a71ca8660b26a842e4}\label{PlotLLH_8cpp_a7740e2371b2eb3a71ca8660b26a842e4}} 
+\index{PlotLLH.cpp@{PlotLLH.cpp}!lineWidth@{lineWidth}}
+\index{lineWidth@{lineWidth}!PlotLLH.cpp@{PlotLLH.cpp}}
+\doxysubsubsection{\texorpdfstring{lineWidth}{lineWidth}}
+{\footnotesize\ttfamily int line\+Width}
+
+
+
+Definition at line \mbox{\hyperlink{PlotLLH_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{PlotLLH_8cpp_source}{Plot\+LLH.\+cpp}}.
+
+\mbox{\Hypertarget{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}\label{PlotLLH_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}} 
+\index{PlotLLH.cpp@{PlotLLH.cpp}!man@{man}}
+\index{man@{man}!PlotLLH.cpp@{PlotLLH.cpp}}
+\doxysubsubsection{\texorpdfstring{man}{man}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager}{Ma\+Ch3\+Plotting\+::\+Plotting\+Manager}}$\ast$ man}
+
+
+
+Definition at line \mbox{\hyperlink{PlotLLH_8cpp_source_l00018}{18}} of file \mbox{\hyperlink{PlotLLH_8cpp_source}{Plot\+LLH.\+cpp}}.
+
+\mbox{\Hypertarget{PlotLLH_8cpp_a152bc19a7768c2022e7195771f385521}\label{PlotLLH_8cpp_a152bc19a7768c2022e7195771f385521}} 
+\index{PlotLLH.cpp@{PlotLLH.cpp}!ratioLabelScaling@{ratioLabelScaling}}
+\index{ratioLabelScaling@{ratioLabelScaling}!PlotLLH.cpp@{PlotLLH.cpp}}
+\doxysubsubsection{\texorpdfstring{ratioLabelScaling}{ratioLabelScaling}}
+{\footnotesize\ttfamily double ratio\+Label\+Scaling}
+
+
+
+Definition at line \mbox{\hyperlink{PlotLLH_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{PlotLLH_8cpp_source}{Plot\+LLH.\+cpp}}.
+
+\mbox{\Hypertarget{PlotLLH_8cpp_a45cc23dd922ece737b1306d357671417}\label{PlotLLH_8cpp_a45cc23dd922ece737b1306d357671417}} 
+\index{PlotLLH.cpp@{PlotLLH.cpp}!ratioPlotSplit@{ratioPlotSplit}}
+\index{ratioPlotSplit@{ratioPlotSplit}!PlotLLH.cpp@{PlotLLH.cpp}}
+\doxysubsubsection{\texorpdfstring{ratioPlotSplit}{ratioPlotSplit}}
+{\footnotesize\ttfamily double ratio\+Plot\+Split}
+
+
+
+Definition at line \mbox{\hyperlink{PlotLLH_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{PlotLLH_8cpp_source}{Plot\+LLH.\+cpp}}.
+
+\mbox{\Hypertarget{PlotLLH_8cpp_a0c4fa08819fe8fd375f7d521dfe2b63a}\label{PlotLLH_8cpp_a0c4fa08819fe8fd375f7d521dfe2b63a}} 
+\index{PlotLLH.cpp@{PlotLLH.cpp}!sameAxis@{sameAxis}}
+\index{sameAxis@{sameAxis}!PlotLLH.cpp@{PlotLLH.cpp}}
+\doxysubsubsection{\texorpdfstring{sameAxis}{sameAxis}}
+{\footnotesize\ttfamily bool same\+Axis}
+
+
+
+Definition at line \mbox{\hyperlink{PlotLLH_8cpp_source_l00014}{14}} of file \mbox{\hyperlink{PlotLLH_8cpp_source}{Plot\+LLH.\+cpp}}.
+
+\mbox{\Hypertarget{PlotLLH_8cpp_a4a39ce5b09913469be1a966a5d99a88b}\label{PlotLLH_8cpp_a4a39ce5b09913469be1a966a5d99a88b}} 
+\index{PlotLLH.cpp@{PlotLLH.cpp}!sampleLabelThreshold@{sampleLabelThreshold}}
+\index{sampleLabelThreshold@{sampleLabelThreshold}!PlotLLH.cpp@{PlotLLH.cpp}}
+\doxysubsubsection{\texorpdfstring{sampleLabelThreshold}{sampleLabelThreshold}}
+{\footnotesize\ttfamily double sample\+Label\+Threshold}
+
+
+
+Definition at line \mbox{\hyperlink{PlotLLH_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{PlotLLH_8cpp_source}{Plot\+LLH.\+cpp}}.
+
+\mbox{\Hypertarget{PlotLLH_8cpp_a6446498097144fc5f704c241f009d44d}\label{PlotLLH_8cpp_a6446498097144fc5f704c241f009d44d}} 
+\index{PlotLLH.cpp@{PlotLLH.cpp}!totalOnSplitPlots@{totalOnSplitPlots}}
+\index{totalOnSplitPlots@{totalOnSplitPlots}!PlotLLH.cpp@{PlotLLH.cpp}}
+\doxysubsubsection{\texorpdfstring{totalOnSplitPlots}{totalOnSplitPlots}}
+{\footnotesize\ttfamily bool total\+On\+Split\+Plots}
+
+
+
+Definition at line \mbox{\hyperlink{PlotLLH_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{PlotLLH_8cpp_source}{Plot\+LLH.\+cpp}}.
+
+\mbox{\Hypertarget{PlotLLH_8cpp_a90e133c14aaf43c18c855db7a949cb3d}\label{PlotLLH_8cpp_a90e133c14aaf43c18c855db7a949cb3d}} 
+\index{PlotLLH.cpp@{PlotLLH.cpp}!yTitleOffset@{yTitleOffset}}
+\index{yTitleOffset@{yTitleOffset}!PlotLLH.cpp@{PlotLLH.cpp}}
+\doxysubsubsection{\texorpdfstring{yTitleOffset}{yTitleOffset}}
+{\footnotesize\ttfamily double y\+Title\+Offset}
+
+
+
+Definition at line \mbox{\hyperlink{PlotLLH_8cpp_source_l00010}{10}} of file \mbox{\hyperlink{PlotLLH_8cpp_source}{Plot\+LLH.\+cpp}}.
+

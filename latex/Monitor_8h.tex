@@ -1,0 +1,80 @@
+\hypertarget{Monitor_8h}{}\doxysection{/home/runner/work/\+Ma\+Ch3/\+Ma\+Ch3/manager/\+Monitor.h File Reference}
+\label{Monitor_8h}\index{/home/runner/work/MaCh3/MaCh3/manager/Monitor.h@{/home/runner/work/MaCh3/MaCh3/manager/Monitor.h}}
+
+
+System and monitoring utilities for printing system information and status updates.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include \char`\"{}TTree.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}TBranch.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}TMacro.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}TChain.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}TStopwatch.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}manager/\+Ma\+Ch3\+Logger.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sample\+PDF/\+Structs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}manager/\+Ma\+Ch3\+Exception.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}manager/\+Yaml\+Helper.\+h\char`\"{}}\newline
+Include dependency graph for Monitor.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Monitor_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Monitor_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceMaCh3Utils}{Ma\+Ch3\+Utils}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespaceMaCh3Utils_ac6f4a3b6a7749967ff9a011469352f6c}{Ma\+Ch3\+Utils\+::\+Ma\+Ch3\+Welcome}} ()
+\begin{DoxyCompactList}\small\item\em KS\+: Prints welcome message with Ma\+Ch3 logo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceMaCh3Utils_a0853ea4f3e45ae466291a44f09b973bd}{Ma\+Ch3\+Utils\+::\+Get\+OSInfo}} ()
+\begin{DoxyCompactList}\small\item\em KS\+: Find out more about operational system. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceMaCh3Utils_a8a55fb4e064bedc9b679c5da048ce2bf}{Ma\+Ch3\+Utils\+::\+Get\+CPUInfo}} ()
+\begin{DoxyCompactList}\small\item\em KS\+: Check what CPU you are using. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceMaCh3Utils_a9b97c309891603fece844f2579f30928}{Ma\+Ch3\+Utils\+::\+Get\+GPUInfo}} ()
+\begin{DoxyCompactList}\small\item\em KS\+: Check what GPU you are using. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespaceMaCh3Utils_a10a037c1bcf48073ae105968128a55c5}{Ma\+Ch3\+Utils\+::\+Terminal\+To\+String}} (std\+::string cmd)
+\begin{DoxyCompactList}\small\item\em KS\+: Convoluted code to grab output from terminal to string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceMaCh3Utils_afb0be593dc0d5e481b78afa4625c858c}{Ma\+Ch3\+Utils\+::\+Estimate\+Data\+Transfer\+Rate}} (TChain $\ast$chain, const Long64\+\_\+t entry)
+\begin{DoxyCompactList}\small\item\em KS\+: Check what CPU you are using. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceMaCh3Utils_a5ce5d768b34dbfc1abe9333fca51fd35}{Ma\+Ch3\+Utils\+::\+Get\+Disk\+Usage}} ()
+\begin{DoxyCompactList}\small\item\em KS\+: Find out about Disk usage. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceMaCh3Utils_a4c8bdeb1d34606aed192e9f1311a72f5}{Ma\+Ch3\+Utils\+::\+Print\+Progress\+Bar}} (const Long64\+\_\+t Done, const Long64\+\_\+t All)
+\begin{DoxyCompactList}\small\item\em KS\+: Simply print progress bar. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespaceMaCh3Utils_a554e8effb3e55b4ba4d10dd06920a27a}{Ma\+Ch3\+Utils\+::\+Get\+Ma\+Ch3\+Version}} ()
+\begin{DoxyCompactList}\small\item\em KS\+: Get version of Ma\+Ch3. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespaceMaCh3Utils_aa406fc13341d99d4ca7a4f43bbb38019}{Ma\+Ch3\+Utils\+::get\+Value}} (const std\+::string \&Type)
+\begin{DoxyCompactList}\small\item\em CW\+: Get info like RAM. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespaceMaCh3Utils_af06aa84306b4d4692f30e63d08180c83}{Ma\+Ch3\+Utils\+::parse\+Line}} (const std\+::string \&line)
+\begin{DoxyCompactList}\small\item\em CW\+: Get memory, which is probably silly. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceMaCh3Utils_aaf39f873ebf93550a417418e583ebcf8}{Ma\+Ch3\+Utils\+::\+Print\+Config}} (const YAML\+::\+Node \&node)
+\begin{DoxyCompactList}\small\item\em KS\+: Print Yaml config using logger. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceMaCh3Utils_abcecb06e3d26685da80dd1f3a08e3d0c}{Ma\+Ch3\+Utils\+::\+Ma\+Ch3\+Usage}} (int argc, char $\ast$$\ast$argv)
+\begin{DoxyCompactList}\small\item\em KS\+: Almost all Ma\+Ch3 executables have the same usage, prepare simple printer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+System and monitoring utilities for printing system information and status updates. 
+
+
+
+Definition in file \mbox{\hyperlink{Monitor_8h_source}{Monitor.\+h}}.
+

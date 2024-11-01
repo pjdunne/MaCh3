@@ -1,0 +1,61 @@
+\hypertarget{MaCh3Modes_8h_source}{}\doxysection{Ma\+Ch3\+Modes.\+h}
+\label{MaCh3Modes_8h_source}\index{/home/runner/work/MaCh3/MaCh3/manager/MaCh3Modes.h@{/home/runner/work/MaCh3/MaCh3/manager/MaCh3Modes.h}}
+\mbox{\hyperlink{MaCh3Modes_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00003}00003\ \textcolor{comment}{//\ C++\ Includes}}
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00008}00008\ \textcolor{comment}{//MaCh3\ includes}}
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{YamlHelper_8h}{manager/YamlHelper.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Monitor_8h}{manager/Monitor.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{MaCh3Exception_8h}{manager/MaCh3Exception.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00014}\mbox{\hyperlink{MaCh3Modes_8h_adf43f6c73c9598abc381855d31ef5682}{00014}}\ \textcolor{keyword}{using\ }\mbox{\hyperlink{MaCh3Modes_8h_adf43f6c73c9598abc381855d31ef5682}{MaCh3Modes\_t}}\ =\ int;}
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00017}\mbox{\hyperlink{structMaCh3ModeInfo}{00017}}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structMaCh3ModeInfo}{MaCh3ModeInfo}}\ \{}
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00019}\mbox{\hyperlink{structMaCh3ModeInfo_a8c957d49742a2ad0faa79fbc07427767}{00019}}\ \ \ std::string\ \mbox{\hyperlink{structMaCh3ModeInfo_a8c957d49742a2ad0faa79fbc07427767}{Name}};}
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00021}\mbox{\hyperlink{structMaCh3ModeInfo_a676486427e885ed2deab5ffa5f40bfd7}{00021}}\ \ \ std::string\ \mbox{\hyperlink{structMaCh3ModeInfo_a676486427e885ed2deab5ffa5f40bfd7}{FancyName}};}
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00023}\mbox{\hyperlink{structMaCh3ModeInfo_a02a4f32a5a65b723a0849539a315cc1a}{00023}}\ \ \ std::vector<int>\ \mbox{\hyperlink{structMaCh3ModeInfo_a02a4f32a5a65b723a0849539a315cc1a}{GeneratorMaping}};}
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00025}\mbox{\hyperlink{structMaCh3ModeInfo_a9a89a0394f9f5eb780008253716836fc}{00025}}\ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structMaCh3ModeInfo_a9a89a0394f9f5eb780008253716836fc}{IsMode}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ GenMode)\ \{}
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00026}00026\ \ \ \ \ \textcolor{keywordtype}{bool}\ exists\ =\ std::find(\mbox{\hyperlink{structMaCh3ModeInfo_a02a4f32a5a65b723a0849539a315cc1a}{GeneratorMaping}}.begin(),\ \mbox{\hyperlink{structMaCh3ModeInfo_a02a4f32a5a65b723a0849539a315cc1a}{GeneratorMaping}}.end(),\ GenMode)\ !=\ \mbox{\hyperlink{structMaCh3ModeInfo_a02a4f32a5a65b723a0849539a315cc1a}{GeneratorMaping}}.end();}
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00027}00027\ \ \ \ \ \textcolor{keywordflow}{return}\ exists;}
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00028}00028\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00029}00029\ \};}
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00033}\mbox{\hyperlink{classMaCh3Modes}{00033}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMaCh3Modes}{MaCh3Modes}}\ \{}
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00034}00034\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00036}00036\ \ \ \mbox{\hyperlink{classMaCh3Modes}{MaCh3Modes}}(std::string\ \textcolor{keyword}{const}\ \&filename);}
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00038}\mbox{\hyperlink{classMaCh3Modes_af5eecffc60b1db5416f098e7563e568d}{00038}}\ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classMaCh3Modes_af5eecffc60b1db5416f098e7563e568d}{\string~MaCh3Modes}}()\{\};}
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00041}00041\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMaCh3Modes_a53a3e7076a1ed535c9d8ce29505a4256}{Print}}();}
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00044}\mbox{\hyperlink{classMaCh3Modes_aaa508822590464a0ce36d2fed94e4d03}{00044}}\ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classMaCh3Modes_aaa508822590464a0ce36d2fed94e4d03}{GetNModes}}()\{\textcolor{keywordflow}{return}\ \mbox{\hyperlink{classMaCh3Modes_a3bde53f0145673d99b9866b3fb5dcbaf}{NModes}};\}}
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00046}00046\ \ \ \mbox{\hyperlink{MaCh3Modes_8h_adf43f6c73c9598abc381855d31ef5682}{MaCh3Modes\_t}}\ \mbox{\hyperlink{classMaCh3Modes_a21af1738d7b145f08d76aa0c163e0486}{GetMode}}(\textcolor{keyword}{const}\ std::string\&\ name);}
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00048}00048\ \ \ std::string\ \mbox{\hyperlink{classMaCh3Modes_abf4ac35511787907bc16ae26aa6c2a15}{GetMaCh3ModeName}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ Index);}
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00050}00050\ \ \ std::string\ \mbox{\hyperlink{classMaCh3Modes_a1b6f9e7a5991d6c70d0a7569c7253608}{GetMaCh3ModeFancyName}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ Index);}
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00052}00052\ \ \ \mbox{\hyperlink{MaCh3Modes_8h_adf43f6c73c9598abc381855d31ef5682}{MaCh3Modes\_t}}\ \mbox{\hyperlink{classMaCh3Modes_af71ed4d7189fade519630fd265712cc7}{GetModeFromGenerator}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ Index);}
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00054}\mbox{\hyperlink{classMaCh3Modes_ae87956407701fcab662f6272163cafc7}{00054}}\ \ \ \textcolor{keyword}{inline}\ std::string\ \mbox{\hyperlink{classMaCh3Modes_ae87956407701fcab662f6272163cafc7}{GetName}}()\textcolor{keyword}{const\ }\{\textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}MaCh3Modes"{}};\};}
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00056}00056\ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00058}00058\ \ \ \textcolor{keyword}{inline}\ \mbox{\hyperlink{MaCh3Modes_8h_adf43f6c73c9598abc381855d31ef5682}{MaCh3Modes\_t}}\ \mbox{\hyperlink{classMaCh3Modes_a989fa0ebe20a1e0113900972e194a543}{EnsureModeNameRegistered}}(std::string\ \textcolor{keyword}{const}\ \&name);}
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00061}00061\ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMaCh3Modes_ad32518cbc4d3c4d45c3737193e637cb8}{DeclareNewMode}}(std::string\ \textcolor{keyword}{const}\ \&name,}
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ \textcolor{keyword}{const}\ \&fancyname,}
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<int>\ \textcolor{keyword}{const}\ \&GenMap);}
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00066}00066\ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMaCh3Modes_aed7bbc836f6b2fe3e8df4c442d65554b}{PrepareMap}}();}
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00069}\mbox{\hyperlink{classMaCh3Modes_a062f961a64e9b6bebf420730f9dad9ff}{00069}}\ \ \ std::map<std::string,\ MaCh3Modes\_t>\ \mbox{\hyperlink{classMaCh3Modes_a062f961a64e9b6bebf420730f9dad9ff}{Mode}};}
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00071}\mbox{\hyperlink{classMaCh3Modes_af945fab5dc02790abc84d47e7c84bed8}{00071}}\ \ \ std::map<MaCh3Modes\_t,\ MaCh3ModeInfo>\ \mbox{\hyperlink{classMaCh3Modes_af945fab5dc02790abc84d47e7c84bed8}{fMode}};}
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00073}\mbox{\hyperlink{classMaCh3Modes_a52a226378736541ece3830f53ac851c3}{00073}}\ \ \ std::vector<int>\ \mbox{\hyperlink{classMaCh3Modes_a52a226378736541ece3830f53ac851c3}{ModeMap}};}
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00076}\mbox{\hyperlink{classMaCh3Modes_a96386b84dc8e9a1a378872b7846e407d}{00076}}\ \ \ std::string\ \mbox{\hyperlink{classMaCh3Modes_a96386b84dc8e9a1a378872b7846e407d}{Title}};}
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00078}\mbox{\hyperlink{classMaCh3Modes_a68ccf4c0fcd926574b33ef1dbcad3110}{00078}}\ \ \ std::string\ \mbox{\hyperlink{classMaCh3Modes_a68ccf4c0fcd926574b33ef1dbcad3110}{Generator}};}
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00080}\mbox{\hyperlink{classMaCh3Modes_a3bde53f0145673d99b9866b3fb5dcbaf}{00080}}\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classMaCh3Modes_a3bde53f0145673d99b9866b3fb5dcbaf}{NModes}};}
+\DoxyCodeLine{\Hypertarget{MaCh3Modes_8h_source_l00081}00081\ \};}
+
+\end{DoxyCode}

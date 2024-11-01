@@ -1,0 +1,551 @@
+\hypertarget{classMaCh3Modes}{}\doxysection{Ma\+Ch3\+Modes Class Reference}
+\label{classMaCh3Modes}\index{MaCh3Modes@{MaCh3Modes}}
+
+
+KS\+: Class describing Ma\+Ch3 modes used in the analysis, it is being initialised from config.  
+
+
+
+
+{\ttfamily \#include $<$/home/runner/work/\+Ma\+Ch3/\+Ma\+Ch3/manager/\+Ma\+Ch3\+Modes.\+h$>$}
+
+
+
+Collaboration diagram for Ma\+Ch3\+Modes\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classMaCh3Modes__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMaCh3Modes_a1ea9394c1498bf6b37724d41c31f2f2d}{Ma\+Ch3\+Modes}} (std\+::string const \&filename)
+\begin{DoxyCompactList}\small\item\em KS\+: Initialise Ma\+Ch3 modes. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classMaCh3Modes_af5eecffc60b1db5416f098e7563e568d}{$\sim$\+Ma\+Ch3\+Modes}} ()
+\begin{DoxyCompactList}\small\item\em KS\+: Empty destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMaCh3Modes_a53a3e7076a1ed535c9d8ce29505a4256}{Print}} ()
+\begin{DoxyCompactList}\small\item\em KS\+: Print info about initialised modes. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classMaCh3Modes_aaa508822590464a0ce36d2fed94e4d03}{Get\+NModes}} ()
+\begin{DoxyCompactList}\small\item\em KS\+: Get number of modes, keep in mind actual number is +1 greater due to unknown category. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{MaCh3Modes_8h_adf43f6c73c9598abc381855d31ef5682}{Ma\+Ch3\+Modes\+\_\+t}} \mbox{\hyperlink{classMaCh3Modes_a21af1738d7b145f08d76aa0c163e0486}{Get\+Mode}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em KS\+: Get mode number based on name, if mode not known you will get UNKNOWN\+\_\+\+BAD. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classMaCh3Modes_abf4ac35511787907bc16ae26aa6c2a15}{Get\+Ma\+Ch3\+Mode\+Name}} (const int Index)
+\begin{DoxyCompactList}\small\item\em KS\+: Get normal name of mode, if mode not known you will get UNKNOWN\+\_\+\+BAD. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classMaCh3Modes_a1b6f9e7a5991d6c70d0a7569c7253608}{Get\+Ma\+Ch3\+Mode\+Fancy\+Name}} (const int Index)
+\begin{DoxyCompactList}\small\item\em KS\+: Get fancy name of mode, if mode not known you will get UNKNOWN\+\_\+\+BAD. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{MaCh3Modes_8h_adf43f6c73c9598abc381855d31ef5682}{Ma\+Ch3\+Modes\+\_\+t}} \mbox{\hyperlink{classMaCh3Modes_af71ed4d7189fade519630fd265712cc7}{Get\+Mode\+From\+Generator}} (const int Index)
+\begin{DoxyCompactList}\small\item\em KS\+: Get Ma\+Ch3 mode from generator mode. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classMaCh3Modes_ae87956407701fcab662f6272163cafc7}{Get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Get class name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{MaCh3Modes_8h_adf43f6c73c9598abc381855d31ef5682}{Ma\+Ch3\+Modes\+\_\+t}} \mbox{\hyperlink{classMaCh3Modes_a989fa0ebe20a1e0113900972e194a543}{Ensure\+Mode\+Name\+Registered}} (std\+::string const \&name)
+\begin{DoxyCompactList}\small\item\em KS\+: Make sure we don\textquotesingle{}t have two modes with the same name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMaCh3Modes_ad32518cbc4d3c4d45c3737193e637cb8}{Declare\+New\+Mode}} (std\+::string const \&name, std\+::string const \&fancyname, std\+::vector$<$ int $>$ const \&Gen\+Map)
+\begin{DoxyCompactList}\small\item\em KS\+: Add new mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMaCh3Modes_aed7bbc836f6b2fe3e8df4c442d65554b}{Prepare\+Map}} ()
+\begin{DoxyCompactList}\small\item\em KS\+: Fill Mode\+Map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ std\+::string, \mbox{\hyperlink{MaCh3Modes_8h_adf43f6c73c9598abc381855d31ef5682}{Ma\+Ch3\+Modes\+\_\+t}} $>$ \mbox{\hyperlink{classMaCh3Modes_a062f961a64e9b6bebf420730f9dad9ff}{Mode}}
+\begin{DoxyCompactList}\small\item\em KS\+: Handy map which helps find mode number based on string. \end{DoxyCompactList}\item 
+std\+::map$<$ \mbox{\hyperlink{MaCh3Modes_8h_adf43f6c73c9598abc381855d31ef5682}{Ma\+Ch3\+Modes\+\_\+t}}, \mbox{\hyperlink{structMaCh3ModeInfo}{Ma\+Ch3\+Mode\+Info}} $>$ \mbox{\hyperlink{classMaCh3Modes_af945fab5dc02790abc84d47e7c84bed8}{f\+Mode}}
+\begin{DoxyCompactList}\small\item\em KS\+: Main map storing info about used modes. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classMaCh3Modes_a52a226378736541ece3830f53ac851c3}{Mode\+Map}}
+\begin{DoxyCompactList}\small\item\em KS\+: Handy map helping us find Ma\+Ch3 mode based on Generator mode value. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classMaCh3Modes_a96386b84dc8e9a1a378872b7846e407d}{Title}}
+\begin{DoxyCompactList}\small\item\em KS\+: Name of loaded modes. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classMaCh3Modes_a68ccf4c0fcd926574b33ef1dbcad3110}{Generator}}
+\begin{DoxyCompactList}\small\item\em KS\+: Name of generator like NEUT, Nu\+Wro etc. this is to make stuff fancy. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classMaCh3Modes_a3bde53f0145673d99b9866b3fb5dcbaf}{NModes}}
+\begin{DoxyCompactList}\small\item\em KS\+: Number of modes, keep in mind actual number is +1 greater due to unknown category. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+KS\+: Class describing Ma\+Ch3 modes used in the analysis, it is being initialised from config. 
+
+\begin{DoxySeeAlso}{See also}
+For more details, visit the \href{https://github.com/mach3-software/MaCh3/wiki/08.-MaCh3-Modes}{\texttt{ Wiki}}. 
+\end{DoxySeeAlso}
+
+
+Definition at line \mbox{\hyperlink{MaCh3Modes_8h_source_l00033}{33}} of file \mbox{\hyperlink{MaCh3Modes_8h_source}{Ma\+Ch3\+Modes.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMaCh3Modes_a1ea9394c1498bf6b37724d41c31f2f2d}\label{classMaCh3Modes_a1ea9394c1498bf6b37724d41c31f2f2d}} 
+\index{MaCh3Modes@{MaCh3Modes}!MaCh3Modes@{MaCh3Modes}}
+\index{MaCh3Modes@{MaCh3Modes}!MaCh3Modes@{MaCh3Modes}}
+\doxysubsubsection{\texorpdfstring{MaCh3Modes()}{MaCh3Modes()}}
+{\footnotesize\ttfamily Ma\+Ch3\+Modes\+::\+Ma\+Ch3\+Modes (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+KS\+: Initialise Ma\+Ch3 modes. 
+
+
+
+Definition at line \mbox{\hyperlink{MaCh3Modes_8cpp_source_l00005}{5}} of file \mbox{\hyperlink{MaCh3Modes_8cpp_source}{Ma\+Ch3\+Modes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00005\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ *******************}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \ \ \textcolor{comment}{//\ Load\ config}}
+\DoxyCodeLine{00009\ \ \ YAML::Node\ \mbox{\hyperlink{ProcessMCMC_8cpp_a13056efd080ab16304b6f7be0ebf0a61}{config}}\ =\ YAML::LoadFile(filename);}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ std::string\ \mbox{\hyperlink{classMaCh3Modes_abf4ac35511787907bc16ae26aa6c2a15}{GetMaCh3ModeName}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ Index);}
+\DoxyCodeLine{00012\ \ \ \mbox{\hyperlink{classMaCh3Modes_a3bde53f0145673d99b9866b3fb5dcbaf}{NModes}}\ =\ 0;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \mbox{\hyperlink{classMaCh3Modes_a96386b84dc8e9a1a378872b7846e407d}{Title}}\ =\ \mbox{\hyperlink{ProcessMCMC_8cpp_a13056efd080ab16304b6f7be0ebf0a61}{config}}[\textcolor{stringliteral}{"{}Title"{}}].as<std::string>();}
+\DoxyCodeLine{00015\ \ \ \mbox{\hyperlink{classMaCh3Modes_a68ccf4c0fcd926574b33ef1dbcad3110}{Generator}}\ =\ \mbox{\hyperlink{ProcessMCMC_8cpp_a13056efd080ab16304b6f7be0ebf0a61}{config}}[\textcolor{stringliteral}{"{}GeneratorName"{}}].as<std::string>();}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ std::vector<std::string>\ names\ =\ \mbox{\hyperlink{ProcessMCMC_8cpp_a13056efd080ab16304b6f7be0ebf0a61}{config}}[\textcolor{stringliteral}{"{}MaCh3Modes"{}}].as<std::vector<std::string>>();}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ names.size();\ i++)}
+\DoxyCodeLine{00020\ \ \ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{classMaCh3Modes_ad32518cbc4d3c4d45c3737193e637cb8}{DeclareNewMode}}(names[i],}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ProcessMCMC_8cpp_a13056efd080ab16304b6f7be0ebf0a61}{config}}[names[i]][\textcolor{stringliteral}{"{}Name"{}}].as<std::string>(),}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{ProcessMCMC_8cpp_a13056efd080ab16304b6f7be0ebf0a61}{config}}[names[i]][\textcolor{stringliteral}{"{}GeneratorMaping"{}}].as<std::vector<int>>());}
+\DoxyCodeLine{00024\ \ \ \}}
+\DoxyCodeLine{00025\ \ \ \textcolor{comment}{//\ Add\ unknown\ category,\ it's\ better\ to\ have\ garbage\ category\ where\ all\ undefined\ modes\ will\ go\ rather\ than\ get\ random\ crashes}}
+\DoxyCodeLine{00026\ \ \ \mbox{\hyperlink{classMaCh3Modes_ad32518cbc4d3c4d45c3737193e637cb8}{DeclareNewMode}}(\textcolor{stringliteral}{"{}UNKNOWN\_BAD"{}},}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}UNKNOWN\_BAD"{}},}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\});}
+\DoxyCodeLine{00029\ \ \ \textcolor{comment}{//\ This\ is\ hack\ to\ not\ have\ bad\ mode}}
+\DoxyCodeLine{00030\ \ \ \mbox{\hyperlink{classMaCh3Modes_a3bde53f0145673d99b9866b3fb5dcbaf}{NModes}}-\/-\/;}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \mbox{\hyperlink{classMaCh3Modes_aed7bbc836f6b2fe3e8df4c442d65554b}{PrepareMap}}();}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \mbox{\hyperlink{classMaCh3Modes_a53a3e7076a1ed535c9d8ce29505a4256}{Print}}();}
+\DoxyCodeLine{00035\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Modes_af5eecffc60b1db5416f098e7563e568d}\label{classMaCh3Modes_af5eecffc60b1db5416f098e7563e568d}} 
+\index{MaCh3Modes@{MaCh3Modes}!````~MaCh3Modes@{$\sim$MaCh3Modes}}
+\index{````~MaCh3Modes@{$\sim$MaCh3Modes}!MaCh3Modes@{MaCh3Modes}}
+\doxysubsubsection{\texorpdfstring{$\sim$MaCh3Modes()}{~MaCh3Modes()}}
+{\footnotesize\ttfamily virtual Ma\+Ch3\+Modes\+::$\sim$\+Ma\+Ch3\+Modes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+KS\+: Empty destructor. 
+
+
+
+Definition at line \mbox{\hyperlink{MaCh3Modes_8h_source_l00038}{38}} of file \mbox{\hyperlink{MaCh3Modes_8h_source}{Ma\+Ch3\+Modes.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00038\ \{\};}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMaCh3Modes_ad32518cbc4d3c4d45c3737193e637cb8}\label{classMaCh3Modes_ad32518cbc4d3c4d45c3737193e637cb8}} 
+\index{MaCh3Modes@{MaCh3Modes}!DeclareNewMode@{DeclareNewMode}}
+\index{DeclareNewMode@{DeclareNewMode}!MaCh3Modes@{MaCh3Modes}}
+\doxysubsubsection{\texorpdfstring{DeclareNewMode()}{DeclareNewMode()}}
+{\footnotesize\ttfamily void Ma\+Ch3\+Modes\+::\+Declare\+New\+Mode (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{name,  }\item[{std\+::string const \&}]{fancyname,  }\item[{std\+::vector$<$ int $>$ const \&}]{Gen\+Map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+KS\+: Add new mode. 
+
+
+
+Definition at line \mbox{\hyperlink{MaCh3Modes_8cpp_source_l00080}{80}} of file \mbox{\hyperlink{MaCh3Modes_8cpp_source}{Ma\+Ch3\+Modes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00083\ \textcolor{comment}{//\ *******************}}
+\DoxyCodeLine{00084\ \ \ \mbox{\hyperlink{structMaCh3ModeInfo}{MaCh3ModeInfo}}\ newinfo;}
+\DoxyCodeLine{00085\ \ \ newinfo.\mbox{\hyperlink{structMaCh3ModeInfo_a02a4f32a5a65b723a0849539a315cc1a}{GeneratorMaping}}\ =\ GenMap;}
+\DoxyCodeLine{00086\ \ \ newinfo.\mbox{\hyperlink{structMaCh3ModeInfo_a676486427e885ed2deab5ffa5f40bfd7}{FancyName}}\ =\ fancyname;}
+\DoxyCodeLine{00087\ \ \ newinfo.\mbox{\hyperlink{structMaCh3ModeInfo_a8c957d49742a2ad0faa79fbc07427767}{Name}}\ =\ name;}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \mbox{\hyperlink{MaCh3Modes_8h_adf43f6c73c9598abc381855d31ef5682}{MaCh3Modes\_t}}\ index\ =\ \mbox{\hyperlink{classMaCh3Modes_a989fa0ebe20a1e0113900972e194a543}{EnsureModeNameRegistered}}(name);}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \mbox{\hyperlink{classMaCh3Modes_af945fab5dc02790abc84d47e7c84bed8}{fMode}}.emplace(index,\ newinfo);}
+\DoxyCodeLine{00092\ \ \ \mbox{\hyperlink{classMaCh3Modes_a3bde53f0145673d99b9866b3fb5dcbaf}{NModes}}++;}
+\DoxyCodeLine{00093\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Modes_a989fa0ebe20a1e0113900972e194a543}\label{classMaCh3Modes_a989fa0ebe20a1e0113900972e194a543}} 
+\index{MaCh3Modes@{MaCh3Modes}!EnsureModeNameRegistered@{EnsureModeNameRegistered}}
+\index{EnsureModeNameRegistered@{EnsureModeNameRegistered}!MaCh3Modes@{MaCh3Modes}}
+\doxysubsubsection{\texorpdfstring{EnsureModeNameRegistered()}{EnsureModeNameRegistered()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{MaCh3Modes_8h_adf43f6c73c9598abc381855d31ef5682}{Ma\+Ch3\+Modes\+\_\+t}} Ma\+Ch3\+Modes\+::\+Ensure\+Mode\+Name\+Registered (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+KS\+: Make sure we don\textquotesingle{}t have two modes with the same name. 
+
+
+
+Definition at line \mbox{\hyperlink{MaCh3Modes_8cpp_source_l00069}{69}} of file \mbox{\hyperlink{MaCh3Modes_8cpp_source}{Ma\+Ch3\+Modes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00070\ \textcolor{comment}{//\ *******************}}
+\DoxyCodeLine{00071\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classMaCh3Modes_a062f961a64e9b6bebf420730f9dad9ff}{Mode}}.count(name))\ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classMaCh3Modes_a062f961a64e9b6bebf420730f9dad9ff}{Mode}}[name];}
+\DoxyCodeLine{00073\ \ \ \}}
+\DoxyCodeLine{00074\ \ \ \mbox{\hyperlink{MaCh3Modes_8h_adf43f6c73c9598abc381855d31ef5682}{MaCh3Modes\_t}}\ index\ =\ \mbox{\hyperlink{MaCh3Modes_8h_adf43f6c73c9598abc381855d31ef5682}{MaCh3Modes\_t}}(\mbox{\hyperlink{classMaCh3Modes_a062f961a64e9b6bebf420730f9dad9ff}{Mode}}.size());}
+\DoxyCodeLine{00075\ \ \ \mbox{\hyperlink{classMaCh3Modes_a062f961a64e9b6bebf420730f9dad9ff}{Mode}}[name]\ =\ index;}
+\DoxyCodeLine{00076\ \ \ \textcolor{keywordflow}{return}\ index;}
+\DoxyCodeLine{00077\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Modes_a1b6f9e7a5991d6c70d0a7569c7253608}\label{classMaCh3Modes_a1b6f9e7a5991d6c70d0a7569c7253608}} 
+\index{MaCh3Modes@{MaCh3Modes}!GetMaCh3ModeFancyName@{GetMaCh3ModeFancyName}}
+\index{GetMaCh3ModeFancyName@{GetMaCh3ModeFancyName}!MaCh3Modes@{MaCh3Modes}}
+\doxysubsubsection{\texorpdfstring{GetMaCh3ModeFancyName()}{GetMaCh3ModeFancyName()}}
+{\footnotesize\ttfamily std\+::string Ma\+Ch3\+Modes\+::\+Get\+Ma\+Ch3\+Mode\+Fancy\+Name (\begin{DoxyParamCaption}\item[{const int}]{Index }\end{DoxyParamCaption})}
+
+
+
+KS\+: Get fancy name of mode, if mode not known you will get UNKNOWN\+\_\+\+BAD. 
+
+
+
+Definition at line \mbox{\hyperlink{MaCh3Modes_8cpp_source_l00139}{139}} of file \mbox{\hyperlink{MaCh3Modes_8cpp_source}{Ma\+Ch3\+Modes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00140\ \textcolor{comment}{//\ *******************}}
+\DoxyCodeLine{00141\ \ \ \textcolor{comment}{//\ return\ UNKNOWN\_BAD\ if\ out\ of\ boundary}}
+\DoxyCodeLine{00142\ \ \ \textcolor{keywordflow}{if}(Index\ <\ 0)}
+\DoxyCodeLine{00143\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a07ff6d6a15b24f94afc88a1b89779beb}{MACH3LOG\_CRITICAL}}(\textcolor{stringliteral}{"{}Mode\ you\ look\ for\ is\ smaller\ than\ 0\ and\ equal\ to\ \{\}"{}},\ Index);}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \ \ \textcolor{keywordflow}{if}(Index\ >\ \mbox{\hyperlink{classMaCh3Modes_a3bde53f0145673d99b9866b3fb5dcbaf}{NModes}})}
+\DoxyCodeLine{00146\ \ \ \{}
+\DoxyCodeLine{00147\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}Asking\ for\ mode\ \{\},\ while\ I\ only\ have\ \{\},\ returning\ \{\}\ mode"{}},\ Index,\ \mbox{\hyperlink{classMaCh3Modes_a3bde53f0145673d99b9866b3fb5dcbaf}{NModes}},\ \mbox{\hyperlink{classMaCh3Modes_af945fab5dc02790abc84d47e7c84bed8}{fMode}}[\mbox{\hyperlink{classMaCh3Modes_a3bde53f0145673d99b9866b3fb5dcbaf}{NModes}}].Name);}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classMaCh3Modes_af945fab5dc02790abc84d47e7c84bed8}{fMode}}[\mbox{\hyperlink{classMaCh3Modes_a3bde53f0145673d99b9866b3fb5dcbaf}{NModes}}].FancyName;}
+\DoxyCodeLine{00149\ \ \ \}}
+\DoxyCodeLine{00150\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classMaCh3Modes_af945fab5dc02790abc84d47e7c84bed8}{fMode}}[Index].FancyName;}
+\DoxyCodeLine{00151\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Modes_abf4ac35511787907bc16ae26aa6c2a15}\label{classMaCh3Modes_abf4ac35511787907bc16ae26aa6c2a15}} 
+\index{MaCh3Modes@{MaCh3Modes}!GetMaCh3ModeName@{GetMaCh3ModeName}}
+\index{GetMaCh3ModeName@{GetMaCh3ModeName}!MaCh3Modes@{MaCh3Modes}}
+\doxysubsubsection{\texorpdfstring{GetMaCh3ModeName()}{GetMaCh3ModeName()}}
+{\footnotesize\ttfamily std\+::string Ma\+Ch3\+Modes\+::\+Get\+Ma\+Ch3\+Mode\+Name (\begin{DoxyParamCaption}\item[{const int}]{Index }\end{DoxyParamCaption})}
+
+
+
+KS\+: Get normal name of mode, if mode not known you will get UNKNOWN\+\_\+\+BAD. 
+
+
+
+Definition at line \mbox{\hyperlink{MaCh3Modes_8cpp_source_l00124}{124}} of file \mbox{\hyperlink{MaCh3Modes_8cpp_source}{Ma\+Ch3\+Modes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00125\ \textcolor{comment}{//\ *******************}}
+\DoxyCodeLine{00126\ \ \ \textcolor{keywordflow}{if}(Index\ <\ 0)}
+\DoxyCodeLine{00127\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a07ff6d6a15b24f94afc88a1b89779beb}{MACH3LOG\_CRITICAL}}(\textcolor{stringliteral}{"{}Mode\ you\ look\ for\ is\ smaller\ than\ 0\ and\ equal\ to\ \{\}"{}},\ Index);}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \ \ \textcolor{comment}{//\ return\ UNKNOWN\_BAD\ if\ out\ of\ boundary}}
+\DoxyCodeLine{00130\ \ \ \textcolor{keywordflow}{if}(Index\ >\ \mbox{\hyperlink{classMaCh3Modes_a3bde53f0145673d99b9866b3fb5dcbaf}{NModes}})}
+\DoxyCodeLine{00131\ \ \ \{}
+\DoxyCodeLine{00132\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}Asking\ for\ mode\ \{\},\ while\ I\ only\ have\ \{\},\ returning\ \{\}\ mode"{}},\ Index,\ \mbox{\hyperlink{classMaCh3Modes_a3bde53f0145673d99b9866b3fb5dcbaf}{NModes}},\ \mbox{\hyperlink{classMaCh3Modes_af945fab5dc02790abc84d47e7c84bed8}{fMode}}[\mbox{\hyperlink{classMaCh3Modes_a3bde53f0145673d99b9866b3fb5dcbaf}{NModes}}].Name);}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classMaCh3Modes_af945fab5dc02790abc84d47e7c84bed8}{fMode}}[\mbox{\hyperlink{classMaCh3Modes_a3bde53f0145673d99b9866b3fb5dcbaf}{NModes}}].Name;}
+\DoxyCodeLine{00134\ \ \ \}}
+\DoxyCodeLine{00135\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classMaCh3Modes_af945fab5dc02790abc84d47e7c84bed8}{fMode}}[Index].Name;}
+\DoxyCodeLine{00136\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Modes_a21af1738d7b145f08d76aa0c163e0486}\label{classMaCh3Modes_a21af1738d7b145f08d76aa0c163e0486}} 
+\index{MaCh3Modes@{MaCh3Modes}!GetMode@{GetMode}}
+\index{GetMode@{GetMode}!MaCh3Modes@{MaCh3Modes}}
+\doxysubsubsection{\texorpdfstring{GetMode()}{GetMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{MaCh3Modes_8h_adf43f6c73c9598abc381855d31ef5682}{Ma\+Ch3\+Modes\+\_\+t}} Ma\+Ch3\+Modes\+::\+Get\+Mode (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+KS\+: Get mode number based on name, if mode not known you will get UNKNOWN\+\_\+\+BAD. 
+
+
+
+Definition at line \mbox{\hyperlink{MaCh3Modes_8cpp_source_l00154}{154}} of file \mbox{\hyperlink{MaCh3Modes_8cpp_source}{Ma\+Ch3\+Modes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00155\ \textcolor{comment}{//\ *******************}}
+\DoxyCodeLine{00156\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classMaCh3Modes_a062f961a64e9b6bebf420730f9dad9ff}{Mode}}.count(name))\ \{}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classMaCh3Modes_a062f961a64e9b6bebf420730f9dad9ff}{Mode}}[name];}
+\DoxyCodeLine{00158\ \ \ \}}
+\DoxyCodeLine{00159\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}Asking\ for\ mode\ \{\},\ while\ I\ only\ have\ \{\},\ returning\ \{\}\ mode"{}},\ name,\ \mbox{\hyperlink{classMaCh3Modes_a3bde53f0145673d99b9866b3fb5dcbaf}{NModes}},\ \mbox{\hyperlink{classMaCh3Modes_af945fab5dc02790abc84d47e7c84bed8}{fMode}}[\mbox{\hyperlink{classMaCh3Modes_a3bde53f0145673d99b9866b3fb5dcbaf}{NModes}}].Name);}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ \ \ \textcolor{comment}{//\ return\ UNKNOWN\_BAD}}
+\DoxyCodeLine{00162\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classMaCh3Modes_a3bde53f0145673d99b9866b3fb5dcbaf}{NModes}};}
+\DoxyCodeLine{00163\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Modes_af71ed4d7189fade519630fd265712cc7}\label{classMaCh3Modes_af71ed4d7189fade519630fd265712cc7}} 
+\index{MaCh3Modes@{MaCh3Modes}!GetModeFromGenerator@{GetModeFromGenerator}}
+\index{GetModeFromGenerator@{GetModeFromGenerator}!MaCh3Modes@{MaCh3Modes}}
+\doxysubsubsection{\texorpdfstring{GetModeFromGenerator()}{GetModeFromGenerator()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{MaCh3Modes_8h_adf43f6c73c9598abc381855d31ef5682}{Ma\+Ch3\+Modes\+\_\+t}} Ma\+Ch3\+Modes\+::\+Get\+Mode\+From\+Generator (\begin{DoxyParamCaption}\item[{const int}]{Index }\end{DoxyParamCaption})}
+
+
+
+KS\+: Get Ma\+Ch3 mode from generator mode. 
+
+
+
+Definition at line \mbox{\hyperlink{MaCh3Modes_8cpp_source_l00166}{166}} of file \mbox{\hyperlink{MaCh3Modes_8cpp_source}{Ma\+Ch3\+Modes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00167\ \textcolor{comment}{//\ *******************}}
+\DoxyCodeLine{00168\ \ \ \textcolor{keywordflow}{if}(Index\ <\ 0)}
+\DoxyCodeLine{00169\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a07ff6d6a15b24f94afc88a1b89779beb}{MACH3LOG\_CRITICAL}}(\textcolor{stringliteral}{"{}Mode\ you\ look\ for\ is\ smaller\ than\ 0\ and\ equal\ to\ \{\}"{}},\ Index);}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00171\ \ \ \textcolor{keywordflow}{if}(Index\ >\ \mbox{\hyperlink{classMaCh3Modes_a3bde53f0145673d99b9866b3fb5dcbaf}{NModes}})}
+\DoxyCodeLine{00172\ \ \ \{}
+\DoxyCodeLine{00173\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}Asking\ for\ mode\ \{\},\ while\ I\ only\ have\ \{\},\ returning\ \{\}\ mode"{}},\ Index,\ \mbox{\hyperlink{classMaCh3Modes_a3bde53f0145673d99b9866b3fb5dcbaf}{NModes}},\ \mbox{\hyperlink{classMaCh3Modes_af945fab5dc02790abc84d47e7c84bed8}{fMode}}[\mbox{\hyperlink{classMaCh3Modes_a3bde53f0145673d99b9866b3fb5dcbaf}{NModes}}].Name);}
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classMaCh3Modes_a3bde53f0145673d99b9866b3fb5dcbaf}{NModes}};}
+\DoxyCodeLine{00175\ \ \ \}}
+\DoxyCodeLine{00176\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classMaCh3Modes_a52a226378736541ece3830f53ac851c3}{ModeMap}}[Index];}
+\DoxyCodeLine{00177\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Modes_ae87956407701fcab662f6272163cafc7}\label{classMaCh3Modes_ae87956407701fcab662f6272163cafc7}} 
+\index{MaCh3Modes@{MaCh3Modes}!GetName@{GetName}}
+\index{GetName@{GetName}!MaCh3Modes@{MaCh3Modes}}
+\doxysubsubsection{\texorpdfstring{GetName()}{GetName()}}
+{\footnotesize\ttfamily std\+::string Ma\+Ch3\+Modes\+::\+Get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get class name. 
+
+
+
+Definition at line \mbox{\hyperlink{MaCh3Modes_8h_source_l00054}{54}} of file \mbox{\hyperlink{MaCh3Modes_8h_source}{Ma\+Ch3\+Modes.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00054\ \{\textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}MaCh3Modes"{}};\};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Modes_aaa508822590464a0ce36d2fed94e4d03}\label{classMaCh3Modes_aaa508822590464a0ce36d2fed94e4d03}} 
+\index{MaCh3Modes@{MaCh3Modes}!GetNModes@{GetNModes}}
+\index{GetNModes@{GetNModes}!MaCh3Modes@{MaCh3Modes}}
+\doxysubsubsection{\texorpdfstring{GetNModes()}{GetNModes()}}
+{\footnotesize\ttfamily int Ma\+Ch3\+Modes\+::\+Get\+NModes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+KS\+: Get number of modes, keep in mind actual number is +1 greater due to unknown category. 
+
+
+
+Definition at line \mbox{\hyperlink{MaCh3Modes_8h_source_l00044}{44}} of file \mbox{\hyperlink{MaCh3Modes_8h_source}{Ma\+Ch3\+Modes.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00044\ \{\textcolor{keywordflow}{return}\ \mbox{\hyperlink{classMaCh3Modes_a3bde53f0145673d99b9866b3fb5dcbaf}{NModes}};\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Modes_aed7bbc836f6b2fe3e8df4c442d65554b}\label{classMaCh3Modes_aed7bbc836f6b2fe3e8df4c442d65554b}} 
+\index{MaCh3Modes@{MaCh3Modes}!PrepareMap@{PrepareMap}}
+\index{PrepareMap@{PrepareMap}!MaCh3Modes@{MaCh3Modes}}
+\doxysubsubsection{\texorpdfstring{PrepareMap()}{PrepareMap()}}
+{\footnotesize\ttfamily void Ma\+Ch3\+Modes\+::\+Prepare\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+KS\+: Fill Mode\+Map. 
+
+
+
+Definition at line \mbox{\hyperlink{MaCh3Modes_8cpp_source_l00096}{96}} of file \mbox{\hyperlink{MaCh3Modes_8cpp_source}{Ma\+Ch3\+Modes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00097\ \textcolor{comment}{//\ *******************}}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \textcolor{keywordtype}{int}\ maxElement\ =\ 0;}
+\DoxyCodeLine{00100\ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classMaCh3Modes_a3bde53f0145673d99b9866b3fb5dcbaf}{NModes}};\ ++i)\ \{}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t}\ j\ =\ 0;\ j\ <\ \mbox{\hyperlink{classMaCh3Modes_af945fab5dc02790abc84d47e7c84bed8}{fMode}}[i].GeneratorMaping.size();\ j++)\ \{}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ maxElement\ =\ std::max(maxElement,\ \mbox{\hyperlink{classMaCh3Modes_af945fab5dc02790abc84d47e7c84bed8}{fMode}}[i].GeneratorMaping[j]);}
+\DoxyCodeLine{00103\ \ \ \ \ \}}
+\DoxyCodeLine{00104\ \ \ \}}
+\DoxyCodeLine{00105\ \ \ \mbox{\hyperlink{classMaCh3Modes_a52a226378736541ece3830f53ac851c3}{ModeMap}}.resize(maxElement+1,\ \mbox{\hyperlink{classMaCh3Modes_a062f961a64e9b6bebf420730f9dad9ff}{Mode}}[\textcolor{stringliteral}{"{}UNKNOWN\_BAD"{}}]);}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ m\ =\ 0;\ m\ <\ \mbox{\hyperlink{classMaCh3Modes_a3bde53f0145673d99b9866b3fb5dcbaf}{NModes}};\ ++m)\ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classMaCh3Modes_af945fab5dc02790abc84d47e7c84bed8}{fMode}}[m].GeneratorMaping.size();\ ++i)\ \{}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classMaCh3Modes_af945fab5dc02790abc84d47e7c84bed8}{fMode}}[m].GeneratorMaping[i]\ <\ 0)\ \{}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Negative\ value\ of\ Mode\ \{\}\ for\ mode\ \{\}"{}},\ \mbox{\hyperlink{classMaCh3Modes_af945fab5dc02790abc84d47e7c84bed8}{fMode}}[m].GeneratorMaping[i],\ \mbox{\hyperlink{classMaCh3Modes_af945fab5dc02790abc84d47e7c84bed8}{fMode}}[m].Name);}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_\ ,\ \_\_LINE\_\_\ );}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classMaCh3Modes_a52a226378736541ece3830f53ac851c3}{ModeMap}}[\mbox{\hyperlink{classMaCh3Modes_af945fab5dc02790abc84d47e7c84bed8}{fMode}}[m].GeneratorMaping[i]]\ !=\ \mbox{\hyperlink{classMaCh3Modes_a062f961a64e9b6bebf420730f9dad9ff}{Mode}}[\textcolor{stringliteral}{"{}UNKNOWN\_BAD"{}}])}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Generator\ mode\ \{\}\ already\ defined\ in\ mode\ \{\}\ can't\ do\ this\ for\ mode\ \{\}"{}},\ \mbox{\hyperlink{classMaCh3Modes_af945fab5dc02790abc84d47e7c84bed8}{fMode}}[m].GeneratorMaping[i],\ \mbox{\hyperlink{classMaCh3Modes_af945fab5dc02790abc84d47e7c84bed8}{fMode}}[\mbox{\hyperlink{classMaCh3Modes_a52a226378736541ece3830f53ac851c3}{ModeMap}}[\mbox{\hyperlink{classMaCh3Modes_af945fab5dc02790abc84d47e7c84bed8}{fMode}}[m].GeneratorMaping[i]]].Name,\ \mbox{\hyperlink{classMaCh3Modes_af945fab5dc02790abc84d47e7c84bed8}{fMode}}[m].Name);}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_\ ,\ \_\_LINE\_\_\ );}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \mbox{\hyperlink{classMaCh3Modes_a52a226378736541ece3830f53ac851c3}{ModeMap}}[\mbox{\hyperlink{classMaCh3Modes_af945fab5dc02790abc84d47e7c84bed8}{fMode}}[m].GeneratorMaping[i]]\ =\ m;}
+\DoxyCodeLine{00119\ \ \ \ \ \}}
+\DoxyCodeLine{00120\ \ \ \}}
+\DoxyCodeLine{00121\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Modes_a53a3e7076a1ed535c9d8ce29505a4256}\label{classMaCh3Modes_a53a3e7076a1ed535c9d8ce29505a4256}} 
+\index{MaCh3Modes@{MaCh3Modes}!Print@{Print}}
+\index{Print@{Print}!MaCh3Modes@{MaCh3Modes}}
+\doxysubsubsection{\texorpdfstring{Print()}{Print()}}
+{\footnotesize\ttfamily void Ma\+Ch3\+Modes\+::\+Print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+KS\+: Print info about initialised modes. 
+
+
+
+Definition at line \mbox{\hyperlink{MaCh3Modes_8cpp_source_l00038}{38}} of file \mbox{\hyperlink{MaCh3Modes_8cpp_source}{Ma\+Ch3\+Modes.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \textcolor{comment}{//\ *******************}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Printing\ MaCh3\ Modes\ Called:\ \{\}"{}},\ \mbox{\hyperlink{classMaCh3Modes_a96386b84dc8e9a1a378872b7846e407d}{Title}});}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}========================================================================"{}});}
+\DoxyCodeLine{00044\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}\{:<5\}\ \{:2\}\ \{:<20\}\ \{:2\}\ \{:<20\}\ \{:2\}\ \{:<30\}"{}},\ \textcolor{stringliteral}{"{}\#"{}},\ \textcolor{stringliteral}{"{}|"{}},\ \textcolor{stringliteral}{"{}Name"{}},\ \textcolor{stringliteral}{"{}|"{}},\ \textcolor{stringliteral}{"{}FancyName"{}},\ \textcolor{stringliteral}{"{}|"{}},\ \mbox{\hyperlink{classMaCh3Modes_a68ccf4c0fcd926574b33ef1dbcad3110}{Generator}}+\textcolor{stringliteral}{"{}\ Modes"{}});}
+\DoxyCodeLine{00045\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{00046\ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classMaCh3Modes_a3bde53f0145673d99b9866b3fb5dcbaf}{NModes}};\ ++i)\ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{auto}\ Name\ =\ \mbox{\hyperlink{classMaCh3Modes_af945fab5dc02790abc84d47e7c84bed8}{fMode}}[i].Name;}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{auto}\ FancyName\ =\ \mbox{\hyperlink{classMaCh3Modes_af945fab5dc02790abc84d47e7c84bed8}{fMode}}[i].FancyName;}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{auto}\ Values\ =\ \mbox{\hyperlink{classMaCh3Modes_af945fab5dc02790abc84d47e7c84bed8}{fMode}}[i].GeneratorMaping;}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ std::string\ generatorModes;}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\&\ element\ :\ Values)\ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ generatorModes\ +=\ std::to\_string(element)\ +\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{00054\ \ \ \ \ \}}
+\DoxyCodeLine{00055\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}\{:<5\}\ \{:2\}\ \{:<20\}\ \{:2\}\ \{:<20\}\ \{:2\}\ \{:<30\}"{}},\ i,\ \textcolor{stringliteral}{"{}|"{}},\ Name,\ \textcolor{stringliteral}{"{}|"{}},\ FancyName,\ \textcolor{stringliteral}{"{}|"{}},\ generatorModes);}
+\DoxyCodeLine{00056\ \ \ \}}
+\DoxyCodeLine{00057\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}========================================================================"{}});}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}=========================="{}});}
+\DoxyCodeLine{00060\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}\{:<10\}\ \{:2\}\ \{:<30\}"{}},\ \mbox{\hyperlink{classMaCh3Modes_a68ccf4c0fcd926574b33ef1dbcad3110}{Generator}}\ +\ \textcolor{stringliteral}{"{}\ Modes"{}},\ \textcolor{stringliteral}{"{}|"{}},\ \textcolor{stringliteral}{"{}Name"{}});}
+\DoxyCodeLine{00061\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{00062\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classMaCh3Modes_a52a226378736541ece3830f53ac851c3}{ModeMap}}.size();\ ++i)\ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}\{:<10\}\ \{:2\}\ \{:<30\}"{}},\ i,\ \textcolor{stringliteral}{"{}|"{}},\ \mbox{\hyperlink{classMaCh3Modes_af945fab5dc02790abc84d47e7c84bed8}{fMode}}[\mbox{\hyperlink{classMaCh3Modes_a52a226378736541ece3830f53ac851c3}{ModeMap}}[i]].Name);}
+\DoxyCodeLine{00064\ \ \ \}}
+\DoxyCodeLine{00065\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}=========================="{}});}
+\DoxyCodeLine{00066\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classMaCh3Modes_af945fab5dc02790abc84d47e7c84bed8}\label{classMaCh3Modes_af945fab5dc02790abc84d47e7c84bed8}} 
+\index{MaCh3Modes@{MaCh3Modes}!fMode@{fMode}}
+\index{fMode@{fMode}!MaCh3Modes@{MaCh3Modes}}
+\doxysubsubsection{\texorpdfstring{fMode}{fMode}}
+{\footnotesize\ttfamily std\+::map$<$\mbox{\hyperlink{MaCh3Modes_8h_adf43f6c73c9598abc381855d31ef5682}{Ma\+Ch3\+Modes\+\_\+t}}, \mbox{\hyperlink{structMaCh3ModeInfo}{Ma\+Ch3\+Mode\+Info}}$>$ Ma\+Ch3\+Modes\+::f\+Mode\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+KS\+: Main map storing info about used modes. 
+
+
+
+Definition at line \mbox{\hyperlink{MaCh3Modes_8h_source_l00071}{71}} of file \mbox{\hyperlink{MaCh3Modes_8h_source}{Ma\+Ch3\+Modes.\+h}}.
+
+\mbox{\Hypertarget{classMaCh3Modes_a68ccf4c0fcd926574b33ef1dbcad3110}\label{classMaCh3Modes_a68ccf4c0fcd926574b33ef1dbcad3110}} 
+\index{MaCh3Modes@{MaCh3Modes}!Generator@{Generator}}
+\index{Generator@{Generator}!MaCh3Modes@{MaCh3Modes}}
+\doxysubsubsection{\texorpdfstring{Generator}{Generator}}
+{\footnotesize\ttfamily std\+::string Ma\+Ch3\+Modes\+::\+Generator\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+KS\+: Name of generator like NEUT, Nu\+Wro etc. this is to make stuff fancy. 
+
+
+
+Definition at line \mbox{\hyperlink{MaCh3Modes_8h_source_l00078}{78}} of file \mbox{\hyperlink{MaCh3Modes_8h_source}{Ma\+Ch3\+Modes.\+h}}.
+
+\mbox{\Hypertarget{classMaCh3Modes_a062f961a64e9b6bebf420730f9dad9ff}\label{classMaCh3Modes_a062f961a64e9b6bebf420730f9dad9ff}} 
+\index{MaCh3Modes@{MaCh3Modes}!Mode@{Mode}}
+\index{Mode@{Mode}!MaCh3Modes@{MaCh3Modes}}
+\doxysubsubsection{\texorpdfstring{Mode}{Mode}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, \mbox{\hyperlink{MaCh3Modes_8h_adf43f6c73c9598abc381855d31ef5682}{Ma\+Ch3\+Modes\+\_\+t}}$>$ Ma\+Ch3\+Modes\+::\+Mode\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+KS\+: Handy map which helps find mode number based on string. 
+
+
+
+Definition at line \mbox{\hyperlink{MaCh3Modes_8h_source_l00069}{69}} of file \mbox{\hyperlink{MaCh3Modes_8h_source}{Ma\+Ch3\+Modes.\+h}}.
+
+\mbox{\Hypertarget{classMaCh3Modes_a52a226378736541ece3830f53ac851c3}\label{classMaCh3Modes_a52a226378736541ece3830f53ac851c3}} 
+\index{MaCh3Modes@{MaCh3Modes}!ModeMap@{ModeMap}}
+\index{ModeMap@{ModeMap}!MaCh3Modes@{MaCh3Modes}}
+\doxysubsubsection{\texorpdfstring{ModeMap}{ModeMap}}
+{\footnotesize\ttfamily std\+::vector$<$int$>$ Ma\+Ch3\+Modes\+::\+Mode\+Map\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+KS\+: Handy map helping us find Ma\+Ch3 mode based on Generator mode value. 
+
+
+
+Definition at line \mbox{\hyperlink{MaCh3Modes_8h_source_l00073}{73}} of file \mbox{\hyperlink{MaCh3Modes_8h_source}{Ma\+Ch3\+Modes.\+h}}.
+
+\mbox{\Hypertarget{classMaCh3Modes_a3bde53f0145673d99b9866b3fb5dcbaf}\label{classMaCh3Modes_a3bde53f0145673d99b9866b3fb5dcbaf}} 
+\index{MaCh3Modes@{MaCh3Modes}!NModes@{NModes}}
+\index{NModes@{NModes}!MaCh3Modes@{MaCh3Modes}}
+\doxysubsubsection{\texorpdfstring{NModes}{NModes}}
+{\footnotesize\ttfamily int Ma\+Ch3\+Modes\+::\+NModes\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+KS\+: Number of modes, keep in mind actual number is +1 greater due to unknown category. 
+
+
+
+Definition at line \mbox{\hyperlink{MaCh3Modes_8h_source_l00080}{80}} of file \mbox{\hyperlink{MaCh3Modes_8h_source}{Ma\+Ch3\+Modes.\+h}}.
+
+\mbox{\Hypertarget{classMaCh3Modes_a96386b84dc8e9a1a378872b7846e407d}\label{classMaCh3Modes_a96386b84dc8e9a1a378872b7846e407d}} 
+\index{MaCh3Modes@{MaCh3Modes}!Title@{Title}}
+\index{Title@{Title}!MaCh3Modes@{MaCh3Modes}}
+\doxysubsubsection{\texorpdfstring{Title}{Title}}
+{\footnotesize\ttfamily std\+::string Ma\+Ch3\+Modes\+::\+Title\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+KS\+: Name of loaded modes. 
+
+
+
+Definition at line \mbox{\hyperlink{MaCh3Modes_8h_source_l00076}{76}} of file \mbox{\hyperlink{MaCh3Modes_8h_source}{Ma\+Ch3\+Modes.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/runner/work/\+Ma\+Ch3/\+Ma\+Ch3/manager/\mbox{\hyperlink{MaCh3Modes_8h}{Ma\+Ch3\+Modes.\+h}}\item 
+/home/runner/work/\+Ma\+Ch3/\+Ma\+Ch3/manager/\mbox{\hyperlink{MaCh3Modes_8cpp}{Ma\+Ch3\+Modes.\+cpp}}\end{DoxyCompactItemize}

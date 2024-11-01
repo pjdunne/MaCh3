@@ -1,0 +1,52 @@
+<map id="/home/runner/work/MaCh3/MaCh3/covariance/covarianceXsec.cpp" name="/home/runner/work/MaCh3/MaCh3/covariance/covarianceXsec.cpp">
+<area shape="rect" id="node1" title=" " alt="" coords="996,5,1218,60"/>
+<area shape="rect" id="node2" href="$covarianceXsec_8h.html" title=" " alt="" coords="1002,108,1212,133"/>
+<area shape="rect" id="node3" href="$covarianceBase_8h.html" title=" " alt="" coords="1128,181,1340,207"/>
+<area shape="rect" id="node11" href="$Structs_8h.html" title=" " alt="" coords="958,548,1115,573"/>
+<area shape="rect" id="node4" href="$manager_8h.html" title=" " alt="" coords="1213,328,1366,353"/>
+<area shape="rect" id="node35" href="$CovarianceUtils_8h.html" title=" " alt="" coords="2309,328,2521,353"/>
+<area shape="rect" id="node49" href="$AdaptiveMCMCHandler_8h.html" title=" " alt="" coords="1444,255,1703,280"/>
+<area shape="rect" id="node50" href="$PCAHandler_8h.html" title=" " alt="" coords="1234,255,1420,280"/>
+<area shape="rect" id="node5" href="$MaCh3Logger_8h.html" title=" " alt="" coords="1215,695,1399,720"/>
+<area shape="rect" id="node25" href="$MaCh3Exception_8h.html" title=" " alt="" coords="1364,621,1570,647"/>
+<area shape="rect" id="node27" href="$YamlHelper_8h.html" title="Utility functions for handling YAML nodes." alt="" coords="1748,548,1917,573"/>
+<area shape="rect" id="node31" href="$Monitor_8h.html" title="System and monitoring utilities for printing system information and status updates." alt="" coords="1637,475,1782,500"/>
+<area shape="rect" id="node34" href="$MaCh3Modes_8h.html" title=" " alt="" coords="1378,401,1562,427"/>
+<area shape="rect" id="node6" title=" " alt="" coords="1302,768,1426,793"/>
+<area shape="rect" id="node7" title=" " alt="" coords="1508,768,1588,793"/>
+<area shape="rect" id="node8" title=" " alt="" coords="502,768,576,793"/>
+<area shape="rect" id="node9" title=" " alt="" coords="1192,768,1278,793"/>
+<area shape="rect" id="node10" title=" " alt="" coords="2100,768,2159,793"/>
+<area shape="rect" id="node12" title=" " alt="" coords="1721,621,1794,647"/>
+<area shape="rect" id="node13" title=" " alt="" coords="1226,621,1289,647"/>
+<area shape="rect" id="node14" title=" " alt="" coords="43,621,118,647"/>
+<area shape="rect" id="node15" title=" " alt="" coords="142,621,184,647"/>
+<area shape="rect" id="node16" title=" " alt="" coords="208,621,251,647"/>
+<area shape="rect" id="node17" title=" " alt="" coords="276,621,400,647"/>
+<area shape="rect" id="node18" title=" " alt="" coords="424,621,507,647"/>
+<area shape="rect" id="node19" title=" " alt="" coords="531,621,590,647"/>
+<area shape="rect" id="node20" title=" " alt="" coords="614,621,744,647"/>
+<area shape="rect" id="node21" title=" " alt="" coords="1594,621,1697,647"/>
+<area shape="rect" id="node22" title=" " alt="" coords="769,621,856,647"/>
+<area shape="rect" id="node23" title=" " alt="" coords="2401,621,2466,647"/>
+<area shape="rect" id="node24" title=" " alt="" coords="880,621,1049,647"/>
+<area shape="rect" id="node26" title=" " alt="" coords="1424,695,1510,720"/>
+<area shape="rect" id="node28" title=" " alt="" coords="2167,621,2250,647"/>
+<area shape="rect" id="node29" title=" " alt="" coords="1870,621,1936,647"/>
+<area shape="rect" id="node30" title=" " alt="" coords="1960,621,2092,647"/>
+<area shape="rect" id="node32" title=" " alt="" coords="2399,548,2468,573"/>
+<area shape="rect" id="node33" title=" " alt="" coords="2566,548,2677,573"/>
+<area shape="rect" id="node36" title=" " alt="" coords="2752,401,2843,427"/>
+<area shape="rect" id="node37" title=" " alt="" coords="2867,401,2990,427"/>
+<area shape="rect" id="node38" title=" " alt="" coords="3014,401,3104,427"/>
+<area shape="rect" id="node39" title=" " alt="" coords="3128,401,3222,427"/>
+<area shape="rect" id="node40" title=" " alt="" coords="3246,401,3317,427"/>
+<area shape="rect" id="node41" title=" " alt="" coords="1586,401,1657,427"/>
+<area shape="rect" id="node42" title=" " alt="" coords="1682,401,1786,427"/>
+<area shape="rect" id="node43" title=" " alt="" coords="1810,401,1884,427"/>
+<area shape="rect" id="node44" title=" " alt="" coords="1908,401,2034,427"/>
+<area shape="rect" id="node45" title=" " alt="" coords="2058,401,2142,427"/>
+<area shape="rect" id="node46" title=" " alt="" coords="2166,401,2325,427"/>
+<area shape="rect" id="node47" title=" " alt="" coords="2350,401,2480,427"/>
+<area shape="rect" id="node48" title=" " alt="" coords="2504,401,2627,427"/>
+</map>

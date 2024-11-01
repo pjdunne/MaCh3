@@ -1,0 +1,105 @@
+\hypertarget{structSplineMonoStruct}{}\doxysection{Spline\+Mono\+Struct Struct Reference}
+\label{structSplineMonoStruct}\index{SplineMonoStruct@{SplineMonoStruct}}
+
+
+KS\+: Struct storing information for spline monolith.  
+
+
+
+
+{\ttfamily \#include $<$/home/runner/work/\+Ma\+Ch3/\+Ma\+Ch3/splines/\+Spline\+Common.\+h$>$}
+
+
+
+Collaboration diagram for Spline\+Mono\+Struct\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structSplineMonoStruct__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ float $>$ \mbox{\hyperlink{structSplineMonoStruct_a47012ee423ea21f99d06eff8257cf0f0}{coeff\+\_\+x}}
+\begin{DoxyCompactList}\small\item\em KS\+: CPU arrays to hold X coefficient. \end{DoxyCompactList}\item 
+std\+::vector$<$ float $>$ \mbox{\hyperlink{structSplineMonoStruct_a67c5585ae47fc8a646dfae3fe9690775}{coeff\+\_\+many}}
+\begin{DoxyCompactList}\small\item\em CPU arrays to hold other coefficients. \end{DoxyCompactList}\item 
+std\+::vector$<$ unsigned int $>$ \mbox{\hyperlink{structSplineMonoStruct_a398e0212915793852137384a3406b37f}{n\+Knots\+\_\+arr}}
+\begin{DoxyCompactList}\small\item\em KS\+: CPU Number of knots per spline. \end{DoxyCompactList}\item 
+std\+::vector$<$ short int $>$ \mbox{\hyperlink{structSplineMonoStruct_af24b409ab3da1a88e855e1a9d172741f}{param\+No\+\_\+arr}}
+\begin{DoxyCompactList}\small\item\em CW\+: CPU array with the number of points per spline (not per spline point!) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+KS\+: Struct storing information for spline monolith. 
+
+This structure holds the X coefficients, other spline coefficients, the number of knots per spline, and the number of points per spline on the CPU. 
+
+Definition at line \mbox{\hyperlink{SplineCommon_8h_source_l00033}{33}} of file \mbox{\hyperlink{SplineCommon_8h_source}{Spline\+Common.\+h}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structSplineMonoStruct_a67c5585ae47fc8a646dfae3fe9690775}\label{structSplineMonoStruct_a67c5585ae47fc8a646dfae3fe9690775}} 
+\index{SplineMonoStruct@{SplineMonoStruct}!coeff\_many@{coeff\_many}}
+\index{coeff\_many@{coeff\_many}!SplineMonoStruct@{SplineMonoStruct}}
+\doxysubsubsection{\texorpdfstring{coeff\_many}{coeff\_many}}
+{\footnotesize\ttfamily std\+::vector$<$float$>$ Spline\+Mono\+Struct\+::coeff\+\_\+many}
+
+
+
+CPU arrays to hold other coefficients. 
+
+
+
+Definition at line \mbox{\hyperlink{SplineCommon_8h_source_l00039}{39}} of file \mbox{\hyperlink{SplineCommon_8h_source}{Spline\+Common.\+h}}.
+
+\mbox{\Hypertarget{structSplineMonoStruct_a47012ee423ea21f99d06eff8257cf0f0}\label{structSplineMonoStruct_a47012ee423ea21f99d06eff8257cf0f0}} 
+\index{SplineMonoStruct@{SplineMonoStruct}!coeff\_x@{coeff\_x}}
+\index{coeff\_x@{coeff\_x}!SplineMonoStruct@{SplineMonoStruct}}
+\doxysubsubsection{\texorpdfstring{coeff\_x}{coeff\_x}}
+{\footnotesize\ttfamily std\+::vector$<$float$>$ Spline\+Mono\+Struct\+::coeff\+\_\+x}
+
+
+
+KS\+: CPU arrays to hold X coefficient. 
+
+
+
+Definition at line \mbox{\hyperlink{SplineCommon_8h_source_l00036}{36}} of file \mbox{\hyperlink{SplineCommon_8h_source}{Spline\+Common.\+h}}.
+
+\mbox{\Hypertarget{structSplineMonoStruct_a398e0212915793852137384a3406b37f}\label{structSplineMonoStruct_a398e0212915793852137384a3406b37f}} 
+\index{SplineMonoStruct@{SplineMonoStruct}!nKnots\_arr@{nKnots\_arr}}
+\index{nKnots\_arr@{nKnots\_arr}!SplineMonoStruct@{SplineMonoStruct}}
+\doxysubsubsection{\texorpdfstring{nKnots\_arr}{nKnots\_arr}}
+{\footnotesize\ttfamily std\+::vector$<$unsigned int$>$ Spline\+Mono\+Struct\+::n\+Knots\+\_\+arr}
+
+
+
+KS\+: CPU Number of knots per spline. 
+
+
+
+Definition at line \mbox{\hyperlink{SplineCommon_8h_source_l00042}{42}} of file \mbox{\hyperlink{SplineCommon_8h_source}{Spline\+Common.\+h}}.
+
+\mbox{\Hypertarget{structSplineMonoStruct_af24b409ab3da1a88e855e1a9d172741f}\label{structSplineMonoStruct_af24b409ab3da1a88e855e1a9d172741f}} 
+\index{SplineMonoStruct@{SplineMonoStruct}!paramNo\_arr@{paramNo\_arr}}
+\index{paramNo\_arr@{paramNo\_arr}!SplineMonoStruct@{SplineMonoStruct}}
+\doxysubsubsection{\texorpdfstring{paramNo\_arr}{paramNo\_arr}}
+{\footnotesize\ttfamily std\+::vector$<$short int$>$ Spline\+Mono\+Struct\+::param\+No\+\_\+arr}
+
+
+
+CW\+: CPU array with the number of points per spline (not per spline point!) 
+
+
+
+Definition at line \mbox{\hyperlink{SplineCommon_8h_source_l00045}{45}} of file \mbox{\hyperlink{SplineCommon_8h_source}{Spline\+Common.\+h}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/runner/work/\+Ma\+Ch3/\+Ma\+Ch3/splines/\mbox{\hyperlink{SplineCommon_8h}{Spline\+Common.\+h}}\end{DoxyCompactItemize}

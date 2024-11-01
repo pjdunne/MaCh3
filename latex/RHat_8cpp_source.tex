@@ -1,0 +1,828 @@
+\hypertarget{RHat_8cpp_source}{}\doxysection{RHat.\+cpp}
+\label{RHat_8cpp_source}\index{/home/runner/work/MaCh3/MaCh3/Diagnostics/RHat.cpp@{/home/runner/work/MaCh3/MaCh3/Diagnostics/RHat.cpp}}
+\mbox{\hyperlink{RHat_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00001}00001\ \textcolor{comment}{//\ ROOT\ includes}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}TObjArray.h"{}}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}TChain.h"{}}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}TFile.h"{}}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}TBranch.h"{}}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}TCanvas.h"{}}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}TLine.h"{}}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}TLegend.h"{}}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}TString.h"{}}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}TH1.h"{}}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}TRandom3.h"{}}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00012}00012\ \textcolor{preprocessor}{\#include\ "{}TStopwatch.h"{}}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00013}00013\ \textcolor{preprocessor}{\#include\ "{}TColor.h"{}}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00014}00014\ \textcolor{preprocessor}{\#include\ "{}TStyle.h"{}}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00015}00015\ \textcolor{preprocessor}{\#include\ "{}TROOT.h"{}}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00017}00017\ \textcolor{preprocessor}{\#ifdef\ MULTITHREAD}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00018}00018\ \textcolor{preprocessor}{\#include\ "{}omp.h"{}}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00019}00019\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00021}00021\ \textcolor{comment}{//\ MaCh3\ includes}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00022}00022\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{manager_8h}{manager/manager.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00033}00033\ \textcolor{comment}{//\ *******************}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00034}\mbox{\hyperlink{RHat_8cpp_afa110f35953074d3cc7ad452d003fd7a}{00034}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{RHat_8cpp_afa110f35953074d3cc7ad452d003fd7a}{Ntoys}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00035}\mbox{\hyperlink{RHat_8cpp_a231bc179b5599c7e29d5ba28ff2b4b70}{00035}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{RHat_8cpp_a231bc179b5599c7e29d5ba28ff2b4b70}{Nchains}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00037}\mbox{\hyperlink{RHat_8cpp_ae2faf756e30936102294777663fae31d}{00037}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{RHat_8cpp_ae2faf756e30936102294777663fae31d}{nDraw}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00039}\mbox{\hyperlink{RHat_8cpp_a871d6466cea2597401bdb203293f4033}{00039}}\ std::vector<TString>\ \mbox{\hyperlink{RHat_8cpp_a871d6466cea2597401bdb203293f4033}{BranchNames}};\ \ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00040}\mbox{\hyperlink{RHat_8cpp_aa19a5e341d34dce5448ee490dedba8ef}{00040}}\ std::vector<std::string>\ \mbox{\hyperlink{RHat_8cpp_aa19a5e341d34dce5448ee490dedba8ef}{MCMCFile}};\ \ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00041}\mbox{\hyperlink{RHat_8cpp_a5217beba3b3cb82269e95bf52c3d62c5}{00041}}\ std::vector<bool>\ \mbox{\hyperlink{RHat_8cpp_a5217beba3b3cb82269e95bf52c3d62c5}{ValidPar}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00043}\mbox{\hyperlink{RHat_8cpp_a9adc829d645affbb93eff1775ab7c0c6}{00043}}\ \textcolor{keywordtype}{double}\ ***\mbox{\hyperlink{RHat_8cpp_a9adc829d645affbb93eff1775ab7c0c6}{Draws}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00045}\mbox{\hyperlink{RHat_8cpp_ab7d224b5fffa9367046f2976bb4972d1}{00045}}\ \textcolor{keywordtype}{double}**\ \mbox{\hyperlink{RHat_8cpp_ab7d224b5fffa9367046f2976bb4972d1}{Mean}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00046}\mbox{\hyperlink{RHat_8cpp_a5bdfaf60cce582e30db6bd3001de9935}{00046}}\ \textcolor{keywordtype}{double}**\ \mbox{\hyperlink{RHat_8cpp_a5bdfaf60cce582e30db6bd3001de9935}{StandardDeviation}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00047}00047\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00048}\mbox{\hyperlink{RHat_8cpp_a4526fa4abfccd1173c87267a0beb6977}{00048}}\ \textcolor{keywordtype}{double}*\ \mbox{\hyperlink{RHat_8cpp_a4526fa4abfccd1173c87267a0beb6977}{MeanGlobal}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00049}\mbox{\hyperlink{RHat_8cpp_a64de0e32daa60ec4f40e0e741d927334}{00049}}\ \textcolor{keywordtype}{double}*\ \mbox{\hyperlink{RHat_8cpp_a64de0e32daa60ec4f40e0e741d927334}{StandardDeviationGlobal}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00050}00050\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00051}\mbox{\hyperlink{RHat_8cpp_a52dcf07f8f740636605516f6c2ab3e40}{00051}}\ \textcolor{keywordtype}{double}*\ \mbox{\hyperlink{RHat_8cpp_a52dcf07f8f740636605516f6c2ab3e40}{BetweenChainVariance}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00052}\mbox{\hyperlink{RHat_8cpp_a68813385f1240d1264e139391b12bf05}{00052}}\ \textcolor{keywordtype}{double}*\ \mbox{\hyperlink{RHat_8cpp_a68813385f1240d1264e139391b12bf05}{MarginalPosteriorVariance}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00053}\mbox{\hyperlink{RHat_8cpp_ab5cfb5e8741283e8d8252aae184004e4}{00053}}\ \textcolor{keywordtype}{double}*\ \mbox{\hyperlink{RHat_8cpp_ab5cfb5e8741283e8d8252aae184004e4}{RHat}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00054}\mbox{\hyperlink{RHat_8cpp_ae673254e98992bd483de55c6c1d1dcaf}{00054}}\ \textcolor{keywordtype}{double}*\ \mbox{\hyperlink{RHat_8cpp_ae673254e98992bd483de55c6c1d1dcaf}{EffectiveSampleSize}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00056}\mbox{\hyperlink{RHat_8cpp_a7e7fe290fda4362be54b8cf5d56fea51}{00056}}\ \textcolor{keywordtype}{double}\ ***\mbox{\hyperlink{RHat_8cpp_a7e7fe290fda4362be54b8cf5d56fea51}{DrawsFolded}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00057}\mbox{\hyperlink{RHat_8cpp_a761fd0b4a970686c00ce3e4daefd7f73}{00057}}\ \textcolor{keywordtype}{double}*\ \mbox{\hyperlink{RHat_8cpp_a761fd0b4a970686c00ce3e4daefd7f73}{MedianArr}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00059}\mbox{\hyperlink{RHat_8cpp_a458eb859b19f20edc7607814bd68d449}{00059}}\ \textcolor{keywordtype}{double}**\ \mbox{\hyperlink{RHat_8cpp_a458eb859b19f20edc7607814bd68d449}{MeanFolded}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00060}\mbox{\hyperlink{RHat_8cpp_a85509f675b977490fa59bdf037d38ba2}{00060}}\ \textcolor{keywordtype}{double}**\ \mbox{\hyperlink{RHat_8cpp_a85509f675b977490fa59bdf037d38ba2}{StandardDeviationFolded}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00061}00061\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00062}\mbox{\hyperlink{RHat_8cpp_a5afb47112913938579beb8b9f385a574}{00062}}\ \textcolor{keywordtype}{double}*\ \mbox{\hyperlink{RHat_8cpp_a5afb47112913938579beb8b9f385a574}{MeanGlobalFolded}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00063}\mbox{\hyperlink{RHat_8cpp_a255f6a2b0ce0d9e0aee2c06645008b0c}{00063}}\ \textcolor{keywordtype}{double}*\ \mbox{\hyperlink{RHat_8cpp_a255f6a2b0ce0d9e0aee2c06645008b0c}{StandardDeviationGlobalFolded}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00064}00064\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00065}\mbox{\hyperlink{RHat_8cpp_a3a65452412d9dd00c1a9e93d0bab1a26}{00065}}\ \textcolor{keywordtype}{double}*\ \mbox{\hyperlink{RHat_8cpp_a3a65452412d9dd00c1a9e93d0bab1a26}{BetweenChainVarianceFolded}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00066}\mbox{\hyperlink{RHat_8cpp_af4fae3d323e2f5220b3506386304f8f4}{00066}}\ \textcolor{keywordtype}{double}*\ \mbox{\hyperlink{RHat_8cpp_af4fae3d323e2f5220b3506386304f8f4}{MarginalPosteriorVarianceFolded}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00067}\mbox{\hyperlink{RHat_8cpp_a754fbe6088f05d880121693722fe6b99}{00067}}\ \textcolor{keywordtype}{double}*\ \mbox{\hyperlink{RHat_8cpp_a754fbe6088f05d880121693722fe6b99}{RHatFolded}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00068}\mbox{\hyperlink{RHat_8cpp_a39a08e7110f564d00239beccded97be8}{00068}}\ \textcolor{keywordtype}{double}*\ \mbox{\hyperlink{RHat_8cpp_a39a08e7110f564d00239beccded97be8}{EffectiveSampleSizeFolded}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00069}00069\ \textcolor{comment}{//\ *******************}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00070}00070\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{RHat_8cpp_af40d823e599ba2565e989e4f43c78628}{PrepareChains}}();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00071}00071\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{RHat_8cpp_a3efe8085dcbead1e66a6cf54fc77ab5e}{InitialiseArrays}}();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00073}00073\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{RHat_8cpp_a4c5629fb030eb27c32cab42a42c6623b}{RunDiagnostic}}();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00074}00074\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{RHat_8cpp_abd5f8455bf73bda17794dc06218e6713}{CalcRhat}}();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00076}00076\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{RHat_8cpp_a194d97ca48b57a07a9df018a65f3166e}{SaveResults}}();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00077}00077\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{RHat_8cpp_abb60917440a91d5a3507fd4059d3e23b}{DestroyArrays}}();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00078}00078\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{RHat_8cpp_ac038d6f2a074799534fc4a986ca36ef3}{CalcMedian}}(\textcolor{keywordtype}{double}\ arr[],\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{GetPenaltyTerm_8cpp_a439227feff9d7f55384e8780cfc2eb82}{size}});}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00080}00080\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{RHat_8cpp_a29838c9a1c93843ffd2eb4dc33f2076d}{CapVariable}}(\textcolor{keywordtype}{double}\ var,\ \textcolor{keywordtype}{double}\ cap);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00082}00082\ \textcolor{comment}{//\ *******************}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00083}\mbox{\hyperlink{RHat_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{00083}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{RHat_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}\ *argv[])\ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00084}00084\ \textcolor{comment}{//\ *******************\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00086}00086\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_aa603c55ea73cd86d1994901227883e1e}{SetMaCh3LoggerFormat}}();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00087}00087\ \ \ \mbox{\hyperlink{namespaceMaCh3Utils_ac6f4a3b6a7749967ff9a011469352f6c}{MaCh3Utils::MaCh3Welcome}}();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00089}00089\ \ \ \mbox{\hyperlink{RHat_8cpp_a9adc829d645affbb93eff1775ab7c0c6}{Draws}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00090}00090\ \ \ \mbox{\hyperlink{RHat_8cpp_ab7d224b5fffa9367046f2976bb4972d1}{Mean}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00091}00091\ \ \ \mbox{\hyperlink{RHat_8cpp_a5bdfaf60cce582e30db6bd3001de9935}{StandardDeviation}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00093}00093\ \ \ \mbox{\hyperlink{RHat_8cpp_a4526fa4abfccd1173c87267a0beb6977}{MeanGlobal}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00094}00094\ \ \ \mbox{\hyperlink{RHat_8cpp_a64de0e32daa60ec4f40e0e741d927334}{StandardDeviationGlobal}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00096}00096\ \ \ \mbox{\hyperlink{RHat_8cpp_a52dcf07f8f740636605516f6c2ab3e40}{BetweenChainVariance}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00097}00097\ \ \ \mbox{\hyperlink{RHat_8cpp_a68813385f1240d1264e139391b12bf05}{MarginalPosteriorVariance}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00098}00098\ \ \ \mbox{\hyperlink{RHat_8cpp_ab5cfb5e8741283e8d8252aae184004e4}{RHat}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00099}00099\ \ \ \mbox{\hyperlink{RHat_8cpp_ae673254e98992bd483de55c6c1d1dcaf}{EffectiveSampleSize}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00100}00100\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00101}00101\ \ \ \mbox{\hyperlink{RHat_8cpp_a7e7fe290fda4362be54b8cf5d56fea51}{DrawsFolded}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00102}00102\ \ \ \mbox{\hyperlink{RHat_8cpp_a761fd0b4a970686c00ce3e4daefd7f73}{MedianArr}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00103}00103\ \ \ \mbox{\hyperlink{RHat_8cpp_a458eb859b19f20edc7607814bd68d449}{MeanFolded}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00104}00104\ \ \ \mbox{\hyperlink{RHat_8cpp_a85509f675b977490fa59bdf037d38ba2}{StandardDeviationFolded}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00106}00106\ \ \ \mbox{\hyperlink{RHat_8cpp_a5afb47112913938579beb8b9f385a574}{MeanGlobalFolded}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00107}00107\ \ \ \mbox{\hyperlink{RHat_8cpp_a255f6a2b0ce0d9e0aee2c06645008b0c}{StandardDeviationGlobalFolded}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00108}00108\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00109}00109\ \ \ \mbox{\hyperlink{RHat_8cpp_a3a65452412d9dd00c1a9e93d0bab1a26}{BetweenChainVarianceFolded}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00110}00110\ \ \ \mbox{\hyperlink{RHat_8cpp_af4fae3d323e2f5220b3506386304f8f4}{MarginalPosteriorVarianceFolded}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00111}00111\ \ \ \mbox{\hyperlink{RHat_8cpp_a754fbe6088f05d880121693722fe6b99}{RHatFolded}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00112}00112\ \ \ \mbox{\hyperlink{RHat_8cpp_a39a08e7110f564d00239beccded97be8}{EffectiveSampleSizeFolded}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00113}00113\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00114}00114\ \ \ \mbox{\hyperlink{RHat_8cpp_a231bc179b5599c7e29d5ba28ff2b4b70}{Nchains}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00115}00115\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00116}00116\ \ \ \textcolor{keywordflow}{if}\ (argc\ ==\ 1\ ||\ argc\ ==\ 2)}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00117}00117\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00118}00118\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Wrong\ arguments"{}});}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00119}00119\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}./RHat\ Ntoys\ MCMCchain\_1.root\ MCMCchain\_2.root\ MCMCchain\_3.root\ ...\ [how\ many\ you\ like]"{}});}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00120}00120\ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_\ ,\ \_\_LINE\_\_\ );}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00121}00121\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00122}00122\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00123}00123\ \ \ \mbox{\hyperlink{RHat_8cpp_afa110f35953074d3cc7ad452d003fd7a}{Ntoys}}\ =\ atoi(argv[1]);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00124}00124\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00125}00125\ \ \ \textcolor{comment}{//KS\ Gelman\ suggests\ to\ diagnose\ on\ more\ than\ one\ chain}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00126}00126\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 2;\ i\ <\ argc;\ i++)}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00127}00127\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00128}00128\ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_aa19a5e341d34dce5448ee490dedba8ef}{MCMCFile}}.push\_back(std::string(argv[i]));}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00129}00129\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Adding\ file:\ \{\}"{}},\ \mbox{\hyperlink{RHat_8cpp_aa19a5e341d34dce5448ee490dedba8ef}{MCMCFile}}.back());}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00130}00130\ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a231bc179b5599c7e29d5ba28ff2b4b70}{Nchains}}++;}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00131}00131\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00132}00132\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00133}00133\ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{RHat_8cpp_afa110f35953074d3cc7ad452d003fd7a}{Ntoys}}\ <\ 1)}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00134}00134\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00135}00135\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}You\ specified\ \{\}\ specify\ larger\ greater\ than\ 0"{}},\ \mbox{\hyperlink{RHat_8cpp_afa110f35953074d3cc7ad452d003fd7a}{Ntoys}});}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00136}00136\ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_\ ,\ \_\_LINE\_\_\ );}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00137}00137\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00138}00138\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00139}00139\ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{RHat_8cpp_a231bc179b5599c7e29d5ba28ff2b4b70}{Nchains}}\ ==\ 1)}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00140}00140\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00141}00141\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_ad5b2eb6377721e3ac95def22c2386bb1}{MACH3LOG\_WARN}}(\textcolor{stringliteral}{"{}Gelman\ is\ going\ to\ be\ sad\ :(.\ He\ suggested\ you\ should\ use\ more\ than\ one\ chain\ (at\ least\ 4).\ Code\ works\ fine\ for\ one\ chain,\ however,\ estimator\ might\ be\ biased."{}});}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00142}00142\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_ad5b2eb6377721e3ac95def22c2386bb1}{MACH3LOG\_WARN}}(\textcolor{stringliteral}{"{}Multiple\ chains\ are\ more\ likely\ to\ reveal\ multimodality\ and\ poor\ adaptation\ or\ mixing:"{}});}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00143}00143\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00144}00144\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Diagnosing\ \{\}\ chains,\ with\ \{\}\ toys"{}},\ \mbox{\hyperlink{RHat_8cpp_a231bc179b5599c7e29d5ba28ff2b4b70}{Nchains}},\ \mbox{\hyperlink{RHat_8cpp_afa110f35953074d3cc7ad452d003fd7a}{Ntoys}});}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00145}00145\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00146}00146\ \ \ \mbox{\hyperlink{RHat_8cpp_af40d823e599ba2565e989e4f43c78628}{PrepareChains}}();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00147}00147\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00148}00148\ \ \ \mbox{\hyperlink{RHat_8cpp_a3efe8085dcbead1e66a6cf54fc77ab5e}{InitialiseArrays}}();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00149}00149\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00150}00150\ \ \ \textcolor{comment}{//KS:\ Main\ function}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00151}00151\ \ \ \mbox{\hyperlink{RHat_8cpp_a4c5629fb030eb27c32cab42a42c6623b}{RunDiagnostic}}();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00152}00152\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00153}00153\ \ \ \mbox{\hyperlink{RHat_8cpp_a194d97ca48b57a07a9df018a65f3166e}{SaveResults}}();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00154}00154\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00155}00155\ \ \ \mbox{\hyperlink{RHat_8cpp_abb60917440a91d5a3507fd4059d3e23b}{DestroyArrays}}();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00156}00156\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00157}00157\ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00158}00158\ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00159}00159\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00160}00160\ \textcolor{comment}{//\ *******************}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00161}00161\ \textcolor{comment}{//\ Load\ chain\ and\ prepare\ toys}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00162}\mbox{\hyperlink{RHat_8cpp_af40d823e599ba2565e989e4f43c78628}{00162}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{RHat_8cpp_af40d823e599ba2565e989e4f43c78628}{PrepareChains}}()\ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00163}00163\ \textcolor{comment}{//\ *******************}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00164}00164\ \ \ \textcolor{keyword}{auto}\ rnd\ =\ std::make\_unique<TRandom3>(0);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00165}00165\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00166}00166\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Generating\ \{\}"{}},\ \mbox{\hyperlink{RHat_8cpp_afa110f35953074d3cc7ad452d003fd7a}{Ntoys}});}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00167}00167\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00168}00168\ \ \ TStopwatch\ clock;}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00169}00169\ \ \ clock.Start();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00170}00170\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00171}00171\ \ \ std::vector<int>\ BurnIn(\mbox{\hyperlink{RHat_8cpp_a231bc179b5599c7e29d5ba28ff2b4b70}{Nchains}});}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00172}00172\ \ \ std::vector<int>\ nEntries(\mbox{\hyperlink{RHat_8cpp_a231bc179b5599c7e29d5ba28ff2b4b70}{Nchains}});}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00173}00173\ \ \ std::vector<int>\ nBranches(\mbox{\hyperlink{RHat_8cpp_a231bc179b5599c7e29d5ba28ff2b4b70}{Nchains}});}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00174}00174\ \ \ std::vector<int>\ step(\mbox{\hyperlink{RHat_8cpp_a231bc179b5599c7e29d5ba28ff2b4b70}{Nchains}});}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00175}00175\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00176}00176\ \ \ \mbox{\hyperlink{RHat_8cpp_a9adc829d645affbb93eff1775ab7c0c6}{Draws}}\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}**[\mbox{\hyperlink{RHat_8cpp_a231bc179b5599c7e29d5ba28ff2b4b70}{Nchains}}]();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00177}00177\ \ \ \mbox{\hyperlink{RHat_8cpp_a7e7fe290fda4362be54b8cf5d56fea51}{DrawsFolded}}\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}**[\mbox{\hyperlink{RHat_8cpp_a231bc179b5599c7e29d5ba28ff2b4b70}{Nchains}}]();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00178}00178\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00179}00179\ \ \ \textcolor{comment}{//\ KS:\ This\ can\ reduce\ time\ necessary\ for\ caching\ even\ by\ half}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00180}00180\ \textcolor{preprocessor}{\ \ \#ifdef\ MULTITHREAD}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00181}00181\ \ \ \textcolor{comment}{//ROOT::EnableImplicitMT();}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00182}00182\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00183}00183\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00184}00184\ \ \ \textcolor{comment}{//\ Open\ the\ Chain}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00185}00185\ \ \ \textcolor{comment}{//It\ is\ tempting\ to\ multithread\ here\ but\ unfortunately,\ ROOT\ files\ are\ not\ thread\ safe\ :(}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00186}00186\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ m\ =\ 0;\ m\ <\ \mbox{\hyperlink{RHat_8cpp_a231bc179b5599c7e29d5ba28ff2b4b70}{Nchains}};\ m++)}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00187}00187\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00188}00188\ \ \ \ \ TChain*\ Chain\ =\ \textcolor{keyword}{new}\ TChain(\textcolor{stringliteral}{"{}posteriors"{}});}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00189}00189\ \ \ \ \ Chain-\/>Add(\mbox{\hyperlink{RHat_8cpp_aa19a5e341d34dce5448ee490dedba8ef}{MCMCFile}}[m].c\_str());}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00190}00190\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}On\ file:\ \{\}"{}},\ \mbox{\hyperlink{RHat_8cpp_aa19a5e341d34dce5448ee490dedba8ef}{MCMCFile}}[m].c\_str());}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00191}00191\ \ \ \ \ nEntries[m]\ =\ int(Chain-\/>GetEntries());}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00192}00192\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00193}00193\ \ \ \ \ \textcolor{comment}{//\ Set\ the\ step\ cut\ to\ be\ 20\%}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00194}00194\ \ \ \ \ BurnIn[m]\ =\ nEntries[m]/5;}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00195}00195\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00196}00196\ \ \ \ \ \textcolor{comment}{//\ Get\ the\ list\ of\ branches}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00197}00197\ \ \ \ \ TObjArray*\ brlis\ =\ Chain-\/>GetListOfBranches();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00198}00198\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00199}00199\ \ \ \ \ \textcolor{comment}{//\ Get\ the\ number\ of\ branches}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00200}00200\ \ \ \ \ nBranches[m]\ =\ brlis-\/>GetEntries();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00201}00201\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00202}00202\ \ \ \ \ \textcolor{keywordflow}{if}(m\ ==\ 0)\ \mbox{\hyperlink{RHat_8cpp_a871d6466cea2597401bdb203293f4033}{BranchNames}}.reserve(nBranches[m]);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00203}00203\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00204}00204\ \ \ \ \ \textcolor{comment}{//\ Set\ all\ the\ branches\ to\ off}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00205}00205\ \ \ \ \ Chain-\/>SetBranchStatus(\textcolor{stringliteral}{"{}*"{}},\ \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00206}00206\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00207}00207\ \ \ \ \ \textcolor{comment}{//\ Loop\ over\ the\ number\ of\ branches}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00208}00208\ \ \ \ \ \textcolor{comment}{//\ Find\ the\ name\ and\ how\ many\ of\ each\ systematic\ we\ have}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00209}00209\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ nBranches[m];\ i++)}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00210}00210\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00211}00211\ \ \ \ \ \ \ \textcolor{comment}{//\ Get\ the\ TBranch\ and\ its\ name}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00212}00212\ \ \ \ \ \ \ TBranch*\ br\ =\ \textcolor{keyword}{static\_cast<}TBranch\ *\textcolor{keyword}{>}(brlis-\/>At(i));}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00213}00213\ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!br)\{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00214}00214\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Invalid\ branch\ at\ position\ \{\}"{}},\ i);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00215}00215\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_,\_\_LINE\_\_);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00216}00216\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00217}00217\ \ \ \ \ \ \ TString\ bname\ =\ br-\/>GetName();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00218}00218\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00219}00219\ \ \ \ \ \ \ \textcolor{comment}{//\ Read\ in\ the\ step}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00220}00220\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (bname\ ==\ \textcolor{stringliteral}{"{}step"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00221}00221\ \ \ \ \ \ \ \ \ Chain-\/>SetBranchStatus(bname,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00222}00222\ \ \ \ \ \ \ \ \ Chain-\/>SetBranchAddress(bname,\ \&step[m]);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00223}00223\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00224}00224\ \ \ \ \ \ \ \textcolor{comment}{//Count\ all\ branches}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00225}00225\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (bname.BeginsWith(\textcolor{stringliteral}{"{}PCA\_"{}})\ ||\ bname.BeginsWith(\textcolor{stringliteral}{"{}accProb"{}})\ ||\ bname.BeginsWith(\textcolor{stringliteral}{"{}stepTime"{}})\ )}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00226}00226\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00227}00227\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00228}00228\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00229}00229\ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00230}00230\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00231}00231\ \ \ \ \ \ \ \ \ \textcolor{comment}{//KS:\ Save\ branch\ name\ only\ for\ one\ chain,\ we\ assume\ all\ chains\ have\ the\ same\ branches,\ otherwise\ this\ doesn't\ make\ sense\ either\ way}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00232}00232\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(m\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00233}00233\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00234}00234\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a871d6466cea2597401bdb203293f4033}{BranchNames}}.push\_back(bname);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00235}00235\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//KS:\ We\ calculate\ R\ Hat\ also\ for\ LogL,\ just\ in\ case,\ however\ we\ plot\ them\ separately}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00236}00236\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(bname.BeginsWith(\textcolor{stringliteral}{"{}LogL"{}}))}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00237}00237\ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00238}00238\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a5217beba3b3cb82269e95bf52c3d62c5}{ValidPar}}.push\_back(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00239}00239\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00240}00240\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00241}00241\ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00242}00242\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a5217beba3b3cb82269e95bf52c3d62c5}{ValidPar}}.push\_back(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00243}00243\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00244}00244\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00245}00245\ \ \ \ \ \ \ \ \ Chain-\/>SetBranchStatus(bname,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00246}00246\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}\{\}"{}},\ bname);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00247}00247\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00248}00248\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00249}00249\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00250}00250\ \ \ \ \ \textcolor{keywordflow}{if}(m\ ==\ 0)\ \mbox{\hyperlink{RHat_8cpp_ae2faf756e30936102294777663fae31d}{nDraw}}\ =\ int(\mbox{\hyperlink{RHat_8cpp_a871d6466cea2597401bdb203293f4033}{BranchNames}}.size());}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00251}00251\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00252}00252\ \ \ \ \ \textcolor{comment}{//TN:\ Qualitatively\ faster\ sanity\ check,\ with\ the\ very\ same\ outcome\ (all\ chains\ have\ the\ same\ \#branches)}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00253}00253\ \ \ \ \ \textcolor{keywordflow}{if}(m\ >\ 0)}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00254}00254\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00255}00255\ \ \ \ \ \ \ \textcolor{keywordflow}{if}(nBranches[m]\ !=\ nBranches[0])}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00256}00256\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00257}00257\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Ups,\ something\ went\ wrong,\ chain\ \{\}\ called\ \{\}\ has\ \{\}\ branches,\ while\ 0\ called\ \{\}\ has\ \{\}\ branches"{}},\ m,\ \mbox{\hyperlink{RHat_8cpp_aa19a5e341d34dce5448ee490dedba8ef}{MCMCFile}}[m],\ nBranches[m],\ \mbox{\hyperlink{RHat_8cpp_aa19a5e341d34dce5448ee490dedba8ef}{MCMCFile}}[0],\ nBranches[0]);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00258}00258\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}All\ chains\ should\ have\ the\ same\ number\ of\ branches"{}});}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00259}00259\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_\ ,\ \_\_LINE\_\_\ );}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00260}00260\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00261}00261\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00262}00262\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00263}00263\ \ \ \ \ \textcolor{comment}{//TN:\ move\ the\ Draws\ here,\ so\ we\ need\ to\ iterate\ over\ every\ chain\ only\ once}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00264}00264\ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a9adc829d645affbb93eff1775ab7c0c6}{Draws}}[m]\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}*[\mbox{\hyperlink{RHat_8cpp_afa110f35953074d3cc7ad452d003fd7a}{Ntoys}}]();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00265}00265\ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a7e7fe290fda4362be54b8cf5d56fea51}{DrawsFolded}}[m]\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}*[\mbox{\hyperlink{RHat_8cpp_afa110f35953074d3cc7ad452d003fd7a}{Ntoys}}]();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00266}00266\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{RHat_8cpp_afa110f35953074d3cc7ad452d003fd7a}{Ntoys}};\ i++)}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00267}00267\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00268}00268\ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a9adc829d645affbb93eff1775ab7c0c6}{Draws}}[m][i]\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}[\mbox{\hyperlink{RHat_8cpp_ae2faf756e30936102294777663fae31d}{nDraw}}]();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00269}00269\ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a7e7fe290fda4362be54b8cf5d56fea51}{DrawsFolded}}[m][i]\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}[\mbox{\hyperlink{RHat_8cpp_ae2faf756e30936102294777663fae31d}{nDraw}}]();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00270}00270\ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ \mbox{\hyperlink{RHat_8cpp_ae2faf756e30936102294777663fae31d}{nDraw}};\ j++)}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00271}00271\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00272}00272\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a9adc829d645affbb93eff1775ab7c0c6}{Draws}}[m][i][j]\ =\ 0.;}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00273}00273\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a7e7fe290fda4362be54b8cf5d56fea51}{DrawsFolded}}[m][i][j]\ =\ 0.;}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00274}00274\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00275}00275\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00276}00276\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00277}00277\ \ \ \ \ \textcolor{comment}{//TN:\ move\ looping\ over\ toys\ here,\ so\ we\ don't\ need\ to\ loop\ over\ chains\ more\ than\ once}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00278}00278\ \ \ \ \ \textcolor{keywordflow}{if}(BurnIn[m]\ >=\ nEntries[m])}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00279}00279\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00280}00280\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}You\ are\ running\ on\ a\ chain\ shorter\ than\ BurnIn\ cut"{}});}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00281}00281\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Number\ of\ entries\ \{\}\ BurnIn\ cut\ \{\}"{}},\ nEntries[m],\ BurnIn[m]);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00282}00282\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}You\ will\ run\ into\ the\ infinite\ loop"{}});}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00283}00283\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}You\ can\ make\ a\ new\ chain\ or\ modify\ BurnIn\ cut"{}});}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00284}00284\ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_\ ,\ \_\_LINE\_\_\ );}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00285}00285\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00286}00286\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00287}00287\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{RHat_8cpp_afa110f35953074d3cc7ad452d003fd7a}{Ntoys}};\ i++)}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00288}00288\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00289}00289\ \ \ \ \ \ \ \textcolor{comment}{//\ Get\ a\ random\ entry\ after\ burn\ in}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00290}00290\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ entry\ =\ int(nEntries[m]*rnd-\/>Rndm());}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00291}00291\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00292}00292\ \ \ \ \ \ \ Chain-\/>GetEntry(entry);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00293}00293\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00294}00294\ \ \ \ \ \ \ \textcolor{comment}{//\ If\ we\ have\ combined\ chains\ by\ hadd\ need\ to\ check\ the\ step\ in\ the\ chain}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00295}00295\ \ \ \ \ \ \ \textcolor{comment}{//\ Note,\ entry\ is\ not\ necessarily\ the\ same\ as\ the\ step\ due\ to\ merged\ ROOT\ files,\ so\ can't\ choose\ an\ entry\ in\ the\ range\ BurnIn\ -\/\ nEntries\ :(}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00296}00296\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (step[m]\ <\ BurnIn[m])}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00297}00297\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00298}00298\ \ \ \ \ \ \ \ \ i-\/-\/;}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00299}00299\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00300}00300\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00301}00301\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00302}00302\ \ \ \ \ \ \ \textcolor{comment}{//\ Output\ some\ info\ for\ the\ user}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00303}00303\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{RHat_8cpp_afa110f35953074d3cc7ad452d003fd7a}{Ntoys}}\ >\ 10\ \&\&\ i\ \%\ (\mbox{\hyperlink{RHat_8cpp_afa110f35953074d3cc7ad452d003fd7a}{Ntoys}}/10)\ ==\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00304}00304\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceMaCh3Utils_a4c8bdeb1d34606aed192e9f1311a72f5}{MaCh3Utils::PrintProgressBar}}(i+m*\mbox{\hyperlink{RHat_8cpp_afa110f35953074d3cc7ad452d003fd7a}{Ntoys}},\ \mbox{\hyperlink{RHat_8cpp_afa110f35953074d3cc7ad452d003fd7a}{Ntoys}}*\mbox{\hyperlink{RHat_8cpp_a231bc179b5599c7e29d5ba28ff2b4b70}{Nchains}});}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00305}00305\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}Getting\ random\ entry\ \{\}"{}},\ entry);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00306}00306\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00307}00307\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00308}00308\ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ the\ branch\ addresses\ for\ params}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00309}00309\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ \mbox{\hyperlink{RHat_8cpp_ae2faf756e30936102294777663fae31d}{nDraw}};\ ++j)}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00310}00310\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00311}00311\ \ \ \ \ \ \ \ \ Chain-\/>SetBranchAddress(\mbox{\hyperlink{RHat_8cpp_a871d6466cea2597401bdb203293f4033}{BranchNames}}[j].Data(),\ \&\mbox{\hyperlink{RHat_8cpp_a9adc829d645affbb93eff1775ab7c0c6}{Draws}}[m][i][j]);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00312}00312\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00313}00313\ \ \ \ \ \ \ Chain-\/>GetEntry(entry);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00314}00314\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00315}00315\ \ \ \ \ \}\textcolor{comment}{//end\ loop\ over\ toys}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00316}00316\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00317}00317\ \ \ \ \ \textcolor{comment}{//TN:\ There,\ we\ now\ don't\ need\ to\ keep\ the\ chain\ in\ memory\ anymore}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00318}00318\ \ \ \ \ \textcolor{keyword}{delete}\ Chain;}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00319}00319\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00320}00320\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00321}00321\ \ \ \textcolor{comment}{//KS:\ Now\ prepare\ folded\ draws,\ quoting\ Gelman}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00322}00322\ \ \ \textcolor{comment}{//"{}We\ propose\ to\ report\ the\ maximum\ of\ rank\ normalized\ split-\/Rb\ and\ rank\ normalized\ folded-\/split-\/Rb\ for\ each\ parameter"{}}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00323}00323\ \ \ \mbox{\hyperlink{RHat_8cpp_a761fd0b4a970686c00ce3e4daefd7f73}{MedianArr}}\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}[\mbox{\hyperlink{RHat_8cpp_ae2faf756e30936102294777663fae31d}{nDraw}}]();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00324}00324\ \textcolor{preprocessor}{\ \ \#ifdef\ MULTITHREAD}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00325}00325\ \textcolor{preprocessor}{\ \ \#pragma\ omp\ parallel\ for}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00326}00326\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00327}00327\ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ \mbox{\hyperlink{RHat_8cpp_ae2faf756e30936102294777663fae31d}{nDraw}};\ j++)}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00328}00328\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00329}00329\ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a761fd0b4a970686c00ce3e4daefd7f73}{MedianArr}}[j]\ =\ 0.;}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00330}00330\ \ \ \ \ std::vector<double>\ TempDraws(\mbox{\hyperlink{RHat_8cpp_afa110f35953074d3cc7ad452d003fd7a}{Ntoys}}\ *\ \mbox{\hyperlink{RHat_8cpp_a231bc179b5599c7e29d5ba28ff2b4b70}{Nchains}});}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00331}00331\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ m\ =\ 0;\ m\ <\ \mbox{\hyperlink{RHat_8cpp_a231bc179b5599c7e29d5ba28ff2b4b70}{Nchains}};\ m++)}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00332}00332\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00333}00333\ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{RHat_8cpp_afa110f35953074d3cc7ad452d003fd7a}{Ntoys}};\ i++)}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00334}00334\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00335}00335\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ im\ =\ i+m;}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00336}00336\ \ \ \ \ \ \ \ \ TempDraws[im]\ =\ \mbox{\hyperlink{RHat_8cpp_a9adc829d645affbb93eff1775ab7c0c6}{Draws}}[m][i][j];}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00337}00337\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00338}00338\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00339}00339\ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a761fd0b4a970686c00ce3e4daefd7f73}{MedianArr}}[j]\ =\ \mbox{\hyperlink{RHat_8cpp_ac038d6f2a074799534fc4a986ca36ef3}{CalcMedian}}(TempDraws.data(),\ \mbox{\hyperlink{RHat_8cpp_afa110f35953074d3cc7ad452d003fd7a}{Ntoys}}*\mbox{\hyperlink{RHat_8cpp_a231bc179b5599c7e29d5ba28ff2b4b70}{Nchains}});}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00340}00340\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00341}00341\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00342}00342\ \textcolor{preprocessor}{\ \ \#ifdef\ MULTITHREAD}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00343}00343\ \textcolor{preprocessor}{\ \ \#pragma\ omp\ parallel\ for\ collapse(3)}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00344}00344\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00345}00345\ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ m\ =\ 0;\ m\ <\ \mbox{\hyperlink{RHat_8cpp_a231bc179b5599c7e29d5ba28ff2b4b70}{Nchains}};\ m++)}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00346}00346\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00347}00347\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{RHat_8cpp_afa110f35953074d3cc7ad452d003fd7a}{Ntoys}};\ i++)}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00348}00348\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00349}00349\ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ \mbox{\hyperlink{RHat_8cpp_ae2faf756e30936102294777663fae31d}{nDraw}};\ j++)}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00350}00350\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00351}00351\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a7e7fe290fda4362be54b8cf5d56fea51}{DrawsFolded}}[m][i][j]\ =\ std::fabs(\mbox{\hyperlink{RHat_8cpp_a9adc829d645affbb93eff1775ab7c0c6}{Draws}}[m][i][j]\ -\/\ \mbox{\hyperlink{RHat_8cpp_a761fd0b4a970686c00ce3e4daefd7f73}{MedianArr}}[j]);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00352}00352\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00353}00353\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00354}00354\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00355}00355\ \ \ clock.Stop();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00356}00356\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Finished\ calculating\ Toys,\ it\ took\ \{:.2f\}s\ to\ finish"{}},\ clock.RealTime());}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00357}00357\ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00358}00358\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00359}00359\ \textcolor{comment}{//\ *******************}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00360}00360\ \textcolor{comment}{//\ Create\ all\ arrays\ we\ are\ going\ to\ use\ later}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00361}\mbox{\hyperlink{RHat_8cpp_a3efe8085dcbead1e66a6cf54fc77ab5e}{00361}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{RHat_8cpp_a3efe8085dcbead1e66a6cf54fc77ab5e}{InitialiseArrays}}()\ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00362}00362\ \textcolor{comment}{//\ *******************}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00363}00363\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00364}00364\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Initialising\ arrays"{}});}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00365}00365\ \ \ \mbox{\hyperlink{RHat_8cpp_ab7d224b5fffa9367046f2976bb4972d1}{Mean}}\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}*[\mbox{\hyperlink{RHat_8cpp_a231bc179b5599c7e29d5ba28ff2b4b70}{Nchains}}]();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00366}00366\ \ \ \mbox{\hyperlink{RHat_8cpp_a5bdfaf60cce582e30db6bd3001de9935}{StandardDeviation}}\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}*[\mbox{\hyperlink{RHat_8cpp_a231bc179b5599c7e29d5ba28ff2b4b70}{Nchains}}]();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00367}00367\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00368}00368\ \ \ \mbox{\hyperlink{RHat_8cpp_a4526fa4abfccd1173c87267a0beb6977}{MeanGlobal}}\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}[\mbox{\hyperlink{RHat_8cpp_ae2faf756e30936102294777663fae31d}{nDraw}}]();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00369}00369\ \ \ \mbox{\hyperlink{RHat_8cpp_a64de0e32daa60ec4f40e0e741d927334}{StandardDeviationGlobal}}\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}[\mbox{\hyperlink{RHat_8cpp_ae2faf756e30936102294777663fae31d}{nDraw}}]();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00370}00370\ \ \ \mbox{\hyperlink{RHat_8cpp_a52dcf07f8f740636605516f6c2ab3e40}{BetweenChainVariance}}\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}[\mbox{\hyperlink{RHat_8cpp_ae2faf756e30936102294777663fae31d}{nDraw}}]();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00371}00371\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00372}00372\ \ \ \mbox{\hyperlink{RHat_8cpp_a68813385f1240d1264e139391b12bf05}{MarginalPosteriorVariance}}\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}[\mbox{\hyperlink{RHat_8cpp_ae2faf756e30936102294777663fae31d}{nDraw}}]();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00373}00373\ \ \ \mbox{\hyperlink{RHat_8cpp_ab5cfb5e8741283e8d8252aae184004e4}{RHat}}\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}[\mbox{\hyperlink{RHat_8cpp_ae2faf756e30936102294777663fae31d}{nDraw}}]();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00374}00374\ \ \ \mbox{\hyperlink{RHat_8cpp_ae673254e98992bd483de55c6c1d1dcaf}{EffectiveSampleSize}}\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}[\mbox{\hyperlink{RHat_8cpp_ae2faf756e30936102294777663fae31d}{nDraw}}]();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00375}00375\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00376}00376\ \ \ \mbox{\hyperlink{RHat_8cpp_a458eb859b19f20edc7607814bd68d449}{MeanFolded}}\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}*[\mbox{\hyperlink{RHat_8cpp_a231bc179b5599c7e29d5ba28ff2b4b70}{Nchains}}]();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00377}00377\ \ \ \mbox{\hyperlink{RHat_8cpp_a85509f675b977490fa59bdf037d38ba2}{StandardDeviationFolded}}\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}*[\mbox{\hyperlink{RHat_8cpp_a231bc179b5599c7e29d5ba28ff2b4b70}{Nchains}}]();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00378}00378\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00379}00379\ \ \ \mbox{\hyperlink{RHat_8cpp_a5afb47112913938579beb8b9f385a574}{MeanGlobalFolded}}\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}[\mbox{\hyperlink{RHat_8cpp_ae2faf756e30936102294777663fae31d}{nDraw}}]();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00380}00380\ \ \ \mbox{\hyperlink{RHat_8cpp_a255f6a2b0ce0d9e0aee2c06645008b0c}{StandardDeviationGlobalFolded}}\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}[\mbox{\hyperlink{RHat_8cpp_ae2faf756e30936102294777663fae31d}{nDraw}}]();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00381}00381\ \ \ \mbox{\hyperlink{RHat_8cpp_a3a65452412d9dd00c1a9e93d0bab1a26}{BetweenChainVarianceFolded}}\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}[\mbox{\hyperlink{RHat_8cpp_ae2faf756e30936102294777663fae31d}{nDraw}}]();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00382}00382\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00383}00383\ \ \ \mbox{\hyperlink{RHat_8cpp_af4fae3d323e2f5220b3506386304f8f4}{MarginalPosteriorVarianceFolded}}\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}[\mbox{\hyperlink{RHat_8cpp_ae2faf756e30936102294777663fae31d}{nDraw}}]();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00384}00384\ \ \ \mbox{\hyperlink{RHat_8cpp_a754fbe6088f05d880121693722fe6b99}{RHatFolded}}\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}[\mbox{\hyperlink{RHat_8cpp_ae2faf756e30936102294777663fae31d}{nDraw}}]();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00385}00385\ \ \ \mbox{\hyperlink{RHat_8cpp_a39a08e7110f564d00239beccded97be8}{EffectiveSampleSizeFolded}}\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}[\mbox{\hyperlink{RHat_8cpp_ae2faf756e30936102294777663fae31d}{nDraw}}]();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00386}00386\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00387}00387\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ m\ =\ 0;\ m\ <\ \mbox{\hyperlink{RHat_8cpp_a231bc179b5599c7e29d5ba28ff2b4b70}{Nchains}};\ ++m)}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00388}00388\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00389}00389\ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_ab7d224b5fffa9367046f2976bb4972d1}{Mean}}[m]\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}[\mbox{\hyperlink{RHat_8cpp_ae2faf756e30936102294777663fae31d}{nDraw}}]();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00390}00390\ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a5bdfaf60cce582e30db6bd3001de9935}{StandardDeviation}}[m]\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}[\mbox{\hyperlink{RHat_8cpp_ae2faf756e30936102294777663fae31d}{nDraw}}]();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00391}00391\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00392}00392\ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a458eb859b19f20edc7607814bd68d449}{MeanFolded}}[m]\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}[\mbox{\hyperlink{RHat_8cpp_ae2faf756e30936102294777663fae31d}{nDraw}}]();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00393}00393\ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a85509f675b977490fa59bdf037d38ba2}{StandardDeviationFolded}}[m]\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}[\mbox{\hyperlink{RHat_8cpp_ae2faf756e30936102294777663fae31d}{nDraw}}]();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00394}00394\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ \mbox{\hyperlink{RHat_8cpp_ae2faf756e30936102294777663fae31d}{nDraw}};\ ++j)}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00395}00395\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00396}00396\ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_ab7d224b5fffa9367046f2976bb4972d1}{Mean}}[m][j]\ =\ 0.;}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00397}00397\ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a5bdfaf60cce582e30db6bd3001de9935}{StandardDeviation}}[m][j]\ =\ 0.;}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00398}00398\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00399}00399\ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a458eb859b19f20edc7607814bd68d449}{MeanFolded}}[m][j]\ =\ 0.;}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00400}00400\ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a85509f675b977490fa59bdf037d38ba2}{StandardDeviationFolded}}[m][j]\ =\ 0.;}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00401}00401\ \ \ \ \ \ \ \textcolor{keywordflow}{if}(m\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00402}00402\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00403}00403\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a4526fa4abfccd1173c87267a0beb6977}{MeanGlobal}}[j]\ =\ 0.;}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00404}00404\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a64de0e32daa60ec4f40e0e741d927334}{StandardDeviationGlobal}}[j]\ =\ 0.;}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00405}00405\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a52dcf07f8f740636605516f6c2ab3e40}{BetweenChainVariance}}[j]\ =\ 0.;}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00406}00406\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a68813385f1240d1264e139391b12bf05}{MarginalPosteriorVariance}}[j]\ =\ 0.;}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00407}00407\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_ab5cfb5e8741283e8d8252aae184004e4}{RHat}}[j]\ =\ 0.;}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00408}00408\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_ae673254e98992bd483de55c6c1d1dcaf}{EffectiveSampleSize}}[j]\ =\ 0.;}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00409}00409\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00410}00410\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a5afb47112913938579beb8b9f385a574}{MeanGlobalFolded}}[j]\ =\ 0.;}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00411}00411\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a255f6a2b0ce0d9e0aee2c06645008b0c}{StandardDeviationGlobalFolded}}[j]\ =\ 0.;}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00412}00412\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a3a65452412d9dd00c1a9e93d0bab1a26}{BetweenChainVarianceFolded}}[j]\ =\ 0.;}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00413}00413\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_af4fae3d323e2f5220b3506386304f8f4}{MarginalPosteriorVarianceFolded}}[j]\ =\ 0.;}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00414}00414\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a754fbe6088f05d880121693722fe6b99}{RHatFolded}}[j]\ =\ 0.;}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00415}00415\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a39a08e7110f564d00239beccded97be8}{EffectiveSampleSizeFolded}}[j]\ =\ 0.;}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00416}00416\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00417}00417\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00418}00418\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00419}00419\ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00420}00420\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00421}00421\ \textcolor{comment}{//\ *******************}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00422}\mbox{\hyperlink{RHat_8cpp_a4c5629fb030eb27c32cab42a42c6623b}{00422}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{RHat_8cpp_a4c5629fb030eb27c32cab42a42c6623b}{RunDiagnostic}}()\ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00423}00423\ \textcolor{comment}{//\ *******************\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00424}00424\ \ \ \mbox{\hyperlink{RHat_8cpp_abd5f8455bf73bda17794dc06218e6713}{CalcRhat}}();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00425}00425\ \ \ \textcolor{comment}{//In\ case\ in\ future\ we\ expand\ this}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00426}00426\ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00427}00427\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00428}00428\ \textcolor{comment}{//\ *******************}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00429}00429\ \textcolor{comment}{//KS:\ Based\ on\ Gelman\ et.\ al.\ arXiv:1903.08008v5}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00430}00430\ \textcolor{comment}{//\ Probably\ most\ of\ it\ could\ be\ moved\ cleverly\ to\ MCMC\ Processor,\ keep\ it\ separate\ for\ now}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00431}\mbox{\hyperlink{RHat_8cpp_abd5f8455bf73bda17794dc06218e6713}{00431}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{RHat_8cpp_abd5f8455bf73bda17794dc06218e6713}{CalcRhat}}()\ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00432}00432\ \textcolor{comment}{//\ *******************}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00433}00433\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00434}00434\ \ \ TStopwatch\ clock;}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00435}00435\ \ \ clock.Start();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00436}00436\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00437}00437\ \textcolor{comment}{//KS:\ Start\ parallel\ region}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00438}00438\ \textcolor{comment}{//\ If\ we\ would\ like\ to\ do\ this\ for\ thousands\ of\ chains\ we\ might\ consider\ using\ GPU\ for\ this}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00439}00439\ \textcolor{preprocessor}{\ \ \#ifdef\ MULTITHREAD}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00440}00440\ \textcolor{preprocessor}{\ \ \#pragma\ omp\ parallel}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00441}00441\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00442}00442\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00443}00443\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00444}00444\ \textcolor{preprocessor}{\ \ \ \ \#ifdef\ MULTITHREAD}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00445}00445\ \textcolor{preprocessor}{\ \ \ \ \#pragma\ omp\ for\ collapse(2)}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00446}00446\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00447}00447\ \ \ \ \ \textcolor{comment}{//KS:\ loop\ over\ chains\ and\ draws\ are\ independent\ so\ might\ as\ well\ collapse\ for\ sweet\ cache\ hits}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00448}00448\ \ \ \ \ \textcolor{comment}{//Calculate\ the\ mean\ for\ each\ parameter\ within\ each\ considered\ chain}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00449}00449\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ m\ =\ 0;\ m\ <\ \mbox{\hyperlink{RHat_8cpp_a231bc179b5599c7e29d5ba28ff2b4b70}{Nchains}};\ ++m)}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00450}00450\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00451}00451\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ \mbox{\hyperlink{RHat_8cpp_ae2faf756e30936102294777663fae31d}{nDraw}};\ ++j)}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00452}00452\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00453}00453\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{RHat_8cpp_afa110f35953074d3cc7ad452d003fd7a}{Ntoys}};\ i++)}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00454}00454\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00455}00455\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_ab7d224b5fffa9367046f2976bb4972d1}{Mean}}[m][j]\ +=\ \mbox{\hyperlink{RHat_8cpp_a9adc829d645affbb93eff1775ab7c0c6}{Draws}}[m][i][j];}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00456}00456\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a458eb859b19f20edc7607814bd68d449}{MeanFolded}}[m][j]\ +=\ \mbox{\hyperlink{RHat_8cpp_a7e7fe290fda4362be54b8cf5d56fea51}{DrawsFolded}}[m][i][j];}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00457}00457\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00458}00458\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_ab7d224b5fffa9367046f2976bb4972d1}{Mean}}[m][j]\ =\ \mbox{\hyperlink{RHat_8cpp_ab7d224b5fffa9367046f2976bb4972d1}{Mean}}[m][j]/\mbox{\hyperlink{RHat_8cpp_afa110f35953074d3cc7ad452d003fd7a}{Ntoys}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00459}00459\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a458eb859b19f20edc7607814bd68d449}{MeanFolded}}[m][j]\ =\ \mbox{\hyperlink{RHat_8cpp_a458eb859b19f20edc7607814bd68d449}{MeanFolded}}[m][j]/\mbox{\hyperlink{RHat_8cpp_afa110f35953074d3cc7ad452d003fd7a}{Ntoys}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00460}00460\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00461}00461\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00462}00462\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00463}00463\ \textcolor{preprocessor}{\ \ \ \ \#ifdef\ MULTITHREAD}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00464}00464\ \textcolor{preprocessor}{\ \ \ \ \#pragma\ omp\ for}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00465}00465\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00466}00466\ \ \ \ \ \textcolor{comment}{//Calculate\ the\ mean\ for\ each\ parameter\ global\ means\ we\ include\ information\ from\ several\ chains}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00467}00467\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ \mbox{\hyperlink{RHat_8cpp_ae2faf756e30936102294777663fae31d}{nDraw}};\ ++j)}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00468}00468\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00469}00469\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ m\ =\ 0;\ m\ <\ \mbox{\hyperlink{RHat_8cpp_a231bc179b5599c7e29d5ba28ff2b4b70}{Nchains}};\ ++m)}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00470}00470\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00471}00471\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a4526fa4abfccd1173c87267a0beb6977}{MeanGlobal}}[j]\ +=\ \mbox{\hyperlink{RHat_8cpp_ab7d224b5fffa9367046f2976bb4972d1}{Mean}}[m][j];}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00472}00472\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a5afb47112913938579beb8b9f385a574}{MeanGlobalFolded}}[j]\ +=\ \mbox{\hyperlink{RHat_8cpp_a458eb859b19f20edc7607814bd68d449}{MeanFolded}}[m][j];}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00473}00473\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00474}00474\ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a4526fa4abfccd1173c87267a0beb6977}{MeanGlobal}}[j]\ =\ \mbox{\hyperlink{RHat_8cpp_a4526fa4abfccd1173c87267a0beb6977}{MeanGlobal}}[j]/\mbox{\hyperlink{RHat_8cpp_a231bc179b5599c7e29d5ba28ff2b4b70}{Nchains}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00475}00475\ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a5afb47112913938579beb8b9f385a574}{MeanGlobalFolded}}[j]\ =\ \mbox{\hyperlink{RHat_8cpp_a5afb47112913938579beb8b9f385a574}{MeanGlobalFolded}}[j]/\mbox{\hyperlink{RHat_8cpp_a231bc179b5599c7e29d5ba28ff2b4b70}{Nchains}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00476}00476\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00477}00477\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00478}00478\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00479}00479\ \textcolor{preprocessor}{\ \ \ \ \#ifdef\ MULTITHREAD}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00480}00480\ \textcolor{preprocessor}{\ \ \ \ \#pragma\ omp\ for\ collapse(2)}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00481}00481\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00482}00482\ \ \ \ \ \ \ \textcolor{comment}{//Calculate\ the\ standard\ deviation\ for\ each\ parameter\ within\ each\ considered\ chain}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00483}00483\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ m\ =\ 0;\ m\ <\ \mbox{\hyperlink{RHat_8cpp_a231bc179b5599c7e29d5ba28ff2b4b70}{Nchains}};\ ++m)}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00484}00484\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00485}00485\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ \mbox{\hyperlink{RHat_8cpp_ae2faf756e30936102294777663fae31d}{nDraw}};\ ++j)}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00486}00486\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00487}00487\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{RHat_8cpp_afa110f35953074d3cc7ad452d003fd7a}{Ntoys}};\ i++)}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00488}00488\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00489}00489\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a5bdfaf60cce582e30db6bd3001de9935}{StandardDeviation}}[m][j]\ +=\ (\mbox{\hyperlink{RHat_8cpp_a9adc829d645affbb93eff1775ab7c0c6}{Draws}}[m][i][j]\ -\/\ \mbox{\hyperlink{RHat_8cpp_ab7d224b5fffa9367046f2976bb4972d1}{Mean}}[m][j])*(\mbox{\hyperlink{RHat_8cpp_a9adc829d645affbb93eff1775ab7c0c6}{Draws}}[m][i][j]\ -\/\ \mbox{\hyperlink{RHat_8cpp_ab7d224b5fffa9367046f2976bb4972d1}{Mean}}[m][j]);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00490}00490\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a85509f675b977490fa59bdf037d38ba2}{StandardDeviationFolded}}[m][j]\ +=\ (\mbox{\hyperlink{RHat_8cpp_a7e7fe290fda4362be54b8cf5d56fea51}{DrawsFolded}}[m][i][j]\ -\/\ \mbox{\hyperlink{RHat_8cpp_a458eb859b19f20edc7607814bd68d449}{MeanFolded}}[m][j])*(\mbox{\hyperlink{RHat_8cpp_a7e7fe290fda4362be54b8cf5d56fea51}{DrawsFolded}}[m][i][j]\ -\/\ \mbox{\hyperlink{RHat_8cpp_a458eb859b19f20edc7607814bd68d449}{MeanFolded}}[m][j]);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00491}00491\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00492}00492\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a5bdfaf60cce582e30db6bd3001de9935}{StandardDeviation}}[m][j]\ =\ \mbox{\hyperlink{RHat_8cpp_a5bdfaf60cce582e30db6bd3001de9935}{StandardDeviation}}[m][j]/(\mbox{\hyperlink{RHat_8cpp_afa110f35953074d3cc7ad452d003fd7a}{Ntoys}}-\/1);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00493}00493\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a85509f675b977490fa59bdf037d38ba2}{StandardDeviationFolded}}[m][j]\ =\ \mbox{\hyperlink{RHat_8cpp_a85509f675b977490fa59bdf037d38ba2}{StandardDeviationFolded}}[m][j]/(\mbox{\hyperlink{RHat_8cpp_afa110f35953074d3cc7ad452d003fd7a}{Ntoys}}-\/1);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00494}00494\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00495}00495\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00496}00496\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00497}00497\ \textcolor{preprocessor}{\ \ \ \ \#ifdef\ MULTITHREAD}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00498}00498\ \textcolor{preprocessor}{\ \ \ \ \#pragma\ omp\ for}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00499}00499\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00500}00500\ \ \ \ \ \textcolor{comment}{//Calculate\ the\ standard\ deviation\ for\ each\ parameter\ combining\ information\ from\ all\ chains}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00501}00501\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ \mbox{\hyperlink{RHat_8cpp_ae2faf756e30936102294777663fae31d}{nDraw}};\ ++j)}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00502}00502\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00503}00503\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ m\ =\ 0;\ m\ <\ \mbox{\hyperlink{RHat_8cpp_a231bc179b5599c7e29d5ba28ff2b4b70}{Nchains}};\ ++m)}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00504}00504\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00505}00505\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a64de0e32daa60ec4f40e0e741d927334}{StandardDeviationGlobal}}[j]\ +=\ \mbox{\hyperlink{RHat_8cpp_a5bdfaf60cce582e30db6bd3001de9935}{StandardDeviation}}[m][j];}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00506}00506\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a255f6a2b0ce0d9e0aee2c06645008b0c}{StandardDeviationGlobalFolded}}[j]\ +=\ \mbox{\hyperlink{RHat_8cpp_a85509f675b977490fa59bdf037d38ba2}{StandardDeviationFolded}}[m][j];}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00507}00507\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00508}00508\ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a64de0e32daa60ec4f40e0e741d927334}{StandardDeviationGlobal}}[j]\ =\ \mbox{\hyperlink{RHat_8cpp_a64de0e32daa60ec4f40e0e741d927334}{StandardDeviationGlobal}}[j]/\mbox{\hyperlink{RHat_8cpp_a231bc179b5599c7e29d5ba28ff2b4b70}{Nchains}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00509}00509\ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a255f6a2b0ce0d9e0aee2c06645008b0c}{StandardDeviationGlobalFolded}}[j]\ =\ \mbox{\hyperlink{RHat_8cpp_a255f6a2b0ce0d9e0aee2c06645008b0c}{StandardDeviationGlobalFolded}}[j]/\mbox{\hyperlink{RHat_8cpp_a231bc179b5599c7e29d5ba28ff2b4b70}{Nchains}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00510}00510\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00511}00511\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00512}00512\ \textcolor{preprocessor}{\ \ \ \ \#ifdef\ MULTITHREAD}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00513}00513\ \textcolor{preprocessor}{\ \ \ \ \#pragma\ omp\ for}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00514}00514\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00515}00515\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ \mbox{\hyperlink{RHat_8cpp_ae2faf756e30936102294777663fae31d}{nDraw}};\ ++j)}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00516}00516\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00517}00517\ \ \ \ \ \ \ \textcolor{comment}{//KS:\ This\ term\ only\ makes\ sense\ if\ we\ have\ at\ least\ 2\ chains}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00518}00518\ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{RHat_8cpp_a231bc179b5599c7e29d5ba28ff2b4b70}{Nchains}}\ ==\ 1)}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00519}00519\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00520}00520\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a52dcf07f8f740636605516f6c2ab3e40}{BetweenChainVariance}}[j]\ =\ 0.;}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00521}00521\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a3a65452412d9dd00c1a9e93d0bab1a26}{BetweenChainVarianceFolded}}[j]\ =\ 0.;}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00522}00522\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00523}00523\ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00524}00524\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00525}00525\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ m\ =\ 0;\ m\ <\ \mbox{\hyperlink{RHat_8cpp_a231bc179b5599c7e29d5ba28ff2b4b70}{Nchains}};\ ++m)}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00526}00526\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00527}00527\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a52dcf07f8f740636605516f6c2ab3e40}{BetweenChainVariance}}[j]\ +=\ (\ \mbox{\hyperlink{RHat_8cpp_ab7d224b5fffa9367046f2976bb4972d1}{Mean}}[m][j]\ -\/\ \mbox{\hyperlink{RHat_8cpp_a4526fa4abfccd1173c87267a0beb6977}{MeanGlobal}}[j])*(\ \mbox{\hyperlink{RHat_8cpp_ab7d224b5fffa9367046f2976bb4972d1}{Mean}}[m][j]\ -\/\ \mbox{\hyperlink{RHat_8cpp_a4526fa4abfccd1173c87267a0beb6977}{MeanGlobal}}[j]);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00528}00528\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a3a65452412d9dd00c1a9e93d0bab1a26}{BetweenChainVarianceFolded}}[j]\ +=\ (\ \mbox{\hyperlink{RHat_8cpp_a458eb859b19f20edc7607814bd68d449}{MeanFolded}}[m][j]\ -\/\ \mbox{\hyperlink{RHat_8cpp_a5afb47112913938579beb8b9f385a574}{MeanGlobalFolded}}[j])*(\ \mbox{\hyperlink{RHat_8cpp_a458eb859b19f20edc7607814bd68d449}{MeanFolded}}[m][j]\ -\/\ \mbox{\hyperlink{RHat_8cpp_a5afb47112913938579beb8b9f385a574}{MeanGlobalFolded}}[j]);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00529}00529\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00530}00530\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a52dcf07f8f740636605516f6c2ab3e40}{BetweenChainVariance}}[j]\ =\ \mbox{\hyperlink{RHat_8cpp_a52dcf07f8f740636605516f6c2ab3e40}{BetweenChainVariance}}[j]*\mbox{\hyperlink{RHat_8cpp_afa110f35953074d3cc7ad452d003fd7a}{Ntoys}}/(\mbox{\hyperlink{RHat_8cpp_a231bc179b5599c7e29d5ba28ff2b4b70}{Nchains}}-\/1);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00531}00531\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a3a65452412d9dd00c1a9e93d0bab1a26}{BetweenChainVarianceFolded}}[j]\ =\ \mbox{\hyperlink{RHat_8cpp_a3a65452412d9dd00c1a9e93d0bab1a26}{BetweenChainVarianceFolded}}[j]*\mbox{\hyperlink{RHat_8cpp_afa110f35953074d3cc7ad452d003fd7a}{Ntoys}}/(\mbox{\hyperlink{RHat_8cpp_a231bc179b5599c7e29d5ba28ff2b4b70}{Nchains}}-\/1);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00532}00532\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00533}00533\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00534}00534\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00535}00535\ \textcolor{preprocessor}{\ \ \ \ \#ifdef\ MULTITHREAD}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00536}00536\ \textcolor{preprocessor}{\ \ \ \ \#pragma\ omp\ for}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00537}00537\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00538}00538\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ \mbox{\hyperlink{RHat_8cpp_ae2faf756e30936102294777663fae31d}{nDraw}};\ ++j)}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00539}00539\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00540}00540\ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a68813385f1240d1264e139391b12bf05}{MarginalPosteriorVariance}}[j]\ =\ (\mbox{\hyperlink{RHat_8cpp_afa110f35953074d3cc7ad452d003fd7a}{Ntoys}}-\/1)\ *\ \mbox{\hyperlink{RHat_8cpp_a64de0e32daa60ec4f40e0e741d927334}{StandardDeviationGlobal}}[j]\ /(\mbox{\hyperlink{RHat_8cpp_afa110f35953074d3cc7ad452d003fd7a}{Ntoys}})\ +\ \mbox{\hyperlink{RHat_8cpp_a52dcf07f8f740636605516f6c2ab3e40}{BetweenChainVariance}}[j]/\mbox{\hyperlink{RHat_8cpp_afa110f35953074d3cc7ad452d003fd7a}{Ntoys}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00541}00541\ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_af4fae3d323e2f5220b3506386304f8f4}{MarginalPosteriorVarianceFolded}}[j]\ =\ (\mbox{\hyperlink{RHat_8cpp_afa110f35953074d3cc7ad452d003fd7a}{Ntoys}}-\/1)\ *\ \mbox{\hyperlink{RHat_8cpp_a255f6a2b0ce0d9e0aee2c06645008b0c}{StandardDeviationGlobalFolded}}[j]\ /(\mbox{\hyperlink{RHat_8cpp_afa110f35953074d3cc7ad452d003fd7a}{Ntoys}})\ +\ \mbox{\hyperlink{RHat_8cpp_a3a65452412d9dd00c1a9e93d0bab1a26}{BetweenChainVarianceFolded}}[j]/\mbox{\hyperlink{RHat_8cpp_afa110f35953074d3cc7ad452d003fd7a}{Ntoys}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00542}00542\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00543}00543\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00544}00544\ \textcolor{preprocessor}{\ \ \ \ \#ifdef\ MULTITHREAD}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00545}00545\ \textcolor{preprocessor}{\ \ \ \ \#pragma\ omp\ for}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00546}00546\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00547}00547\ \ \ \ \ \textcolor{comment}{//Finally\ calculate\ our\ estimator}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00548}00548\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ \mbox{\hyperlink{RHat_8cpp_ae2faf756e30936102294777663fae31d}{nDraw}};\ ++j)}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00549}00549\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00550}00550\ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_ab5cfb5e8741283e8d8252aae184004e4}{RHat}}[j]\ =\ sqrt(\mbox{\hyperlink{RHat_8cpp_a68813385f1240d1264e139391b12bf05}{MarginalPosteriorVariance}}[j]/\mbox{\hyperlink{RHat_8cpp_a64de0e32daa60ec4f40e0e741d927334}{StandardDeviationGlobal}}[j]);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00551}00551\ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a754fbe6088f05d880121693722fe6b99}{RHatFolded}}[j]\ =\ sqrt(\mbox{\hyperlink{RHat_8cpp_af4fae3d323e2f5220b3506386304f8f4}{MarginalPosteriorVarianceFolded}}[j]/\mbox{\hyperlink{RHat_8cpp_a255f6a2b0ce0d9e0aee2c06645008b0c}{StandardDeviationGlobalFolded}}[j]);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00552}00552\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00553}00553\ \ \ \ \ \ \ \textcolor{comment}{//KS:\ For\ flat\ params\ values\ can\ be\ crazy\ so\ cap\ at\ 0}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00554}00554\ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a29838c9a1c93843ffd2eb4dc33f2076d}{CapVariable}}(\mbox{\hyperlink{RHat_8cpp_ab5cfb5e8741283e8d8252aae184004e4}{RHat}}[j],\ 0);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00555}00555\ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a29838c9a1c93843ffd2eb4dc33f2076d}{CapVariable}}(\mbox{\hyperlink{RHat_8cpp_a754fbe6088f05d880121693722fe6b99}{RHatFolded}}[j],\ 0);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00556}00556\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00557}00557\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00558}00558\ \textcolor{preprocessor}{\ \ \ \ \#ifdef\ MULTITHREAD}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00559}00559\ \textcolor{preprocessor}{\ \ \ \ \#pragma\ omp\ for}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00560}00560\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00561}00561\ \ \ \ \ \textcolor{comment}{//KS:\ Additionally\ calculates\ effective\ step\ size\ which\ is\ an\ estimate\ of\ the\ sample\ size\ required\ to\ achieve\ the\ same\ level\ of\ precision\ if\ that\ sample\ was\ a\ simple\ random\ sample.}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00562}00562\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ \mbox{\hyperlink{RHat_8cpp_ae2faf756e30936102294777663fae31d}{nDraw}};\ ++j)}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00563}00563\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00564}00564\ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{RHat_8cpp_a231bc179b5599c7e29d5ba28ff2b4b70}{Nchains}}\ >\ 1)\ \mbox{\hyperlink{RHat_8cpp_ae673254e98992bd483de55c6c1d1dcaf}{EffectiveSampleSize}}[j]\ =\ \mbox{\hyperlink{RHat_8cpp_a231bc179b5599c7e29d5ba28ff2b4b70}{Nchains}}\ *\ \mbox{\hyperlink{RHat_8cpp_afa110f35953074d3cc7ad452d003fd7a}{Ntoys}}\ *\ \mbox{\hyperlink{RHat_8cpp_a68813385f1240d1264e139391b12bf05}{MarginalPosteriorVariance}}[j]\ /\ \mbox{\hyperlink{RHat_8cpp_a52dcf07f8f740636605516f6c2ab3e40}{BetweenChainVariance}}[j];}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00565}00565\ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{RHat_8cpp_a231bc179b5599c7e29d5ba28ff2b4b70}{Nchains}}\ >\ 1)\ \mbox{\hyperlink{RHat_8cpp_a39a08e7110f564d00239beccded97be8}{EffectiveSampleSizeFolded}}[j]\ =\ \mbox{\hyperlink{RHat_8cpp_a231bc179b5599c7e29d5ba28ff2b4b70}{Nchains}}\ *\ \mbox{\hyperlink{RHat_8cpp_afa110f35953074d3cc7ad452d003fd7a}{Ntoys}}\ *\ \mbox{\hyperlink{RHat_8cpp_af4fae3d323e2f5220b3506386304f8f4}{MarginalPosteriorVarianceFolded}}[j]\ /\ \mbox{\hyperlink{RHat_8cpp_a3a65452412d9dd00c1a9e93d0bab1a26}{BetweenChainVarianceFolded}}[j];}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00566}00566\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00567}00567\ \ \ \ \ \ \ \textcolor{comment}{//KS:\ For\ flat\ params\ values\ can\ be\ crazy\ so\ cap\ at\ 0}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00568}00568\ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a29838c9a1c93843ffd2eb4dc33f2076d}{CapVariable}}(\mbox{\hyperlink{RHat_8cpp_ae673254e98992bd483de55c6c1d1dcaf}{EffectiveSampleSize}}[j],\ 0);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00569}00569\ \ \ \ \ \ \ \mbox{\hyperlink{RHat_8cpp_a29838c9a1c93843ffd2eb4dc33f2076d}{CapVariable}}(\mbox{\hyperlink{RHat_8cpp_a39a08e7110f564d00239beccded97be8}{EffectiveSampleSizeFolded}}[j],\ 0);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00570}00570\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00571}00571\ \textcolor{preprocessor}{\ \ \#ifdef\ MULTITHREAD}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00572}00572\ \ \ \}\ \textcolor{comment}{//End\ parallel\ region}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00573}00573\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00574}00574\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00575}00575\ \ \ clock.Stop();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00576}00576\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Finished\ calculating\ RHat,\ it\ took\ \{:.2f\}s\ to\ finish"{}},\ clock.RealTime());}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00577}00577\ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00578}00578\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00579}00579\ \textcolor{comment}{//\ *******************}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00580}\mbox{\hyperlink{RHat_8cpp_a194d97ca48b57a07a9df018a65f3166e}{00580}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{RHat_8cpp_a194d97ca48b57a07a9df018a65f3166e}{SaveResults}}()\ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00581}00581\ \textcolor{comment}{//\ *******************\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00582}00582\ \textcolor{preprocessor}{\#pragma\ GCC\ diagnostic\ ignored\ "{}-\/Wfloat-\/conversion"{}}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00583}00583\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00584}00584\ \ \ std::string\ NameTemp\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00585}00585\ \ \ \textcolor{comment}{//KS:\ If\ we\ run\ over\ many\ many\ chains\ there\ is\ danger\ that\ name\ will\ be\ so\ absurdly\ long\ we\ run\ over\ system\ limit\ and\ job\ will\ be\ killed\ :(}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00586}00586\ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{RHat_8cpp_a231bc179b5599c7e29d5ba28ff2b4b70}{Nchains}}\ <\ 5)}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00587}00587\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00588}00588\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{RHat_8cpp_a231bc179b5599c7e29d5ba28ff2b4b70}{Nchains}};\ i++)}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00589}00589\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00590}00590\ \ \ \ \ \ \ std::string\ temp\ =\ \mbox{\hyperlink{RHat_8cpp_aa19a5e341d34dce5448ee490dedba8ef}{MCMCFile}}[i];}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00591}00591\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00592}00592\ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (temp.find(\textcolor{stringliteral}{"{}.root"{}})\ !=\ std::string::npos)\ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00593}00593\ \ \ \ \ \ \ \ \ \ \ temp\ =\ temp.substr(0,\ temp.find(\textcolor{stringliteral}{"{}.root"{}}));}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00594}00594\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00595}00595\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00596}00596\ \ \ \ \ \ \ NameTemp\ =\ NameTemp\ +\ temp\ +\ \textcolor{stringliteral}{"{}\_"{}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00597}00597\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00598}00598\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00599}00599\ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00600}00600\ \ \ \ \ NameTemp\ =\ std::to\_string(\mbox{\hyperlink{RHat_8cpp_a231bc179b5599c7e29d5ba28ff2b4b70}{Nchains}})\ +\ \textcolor{stringliteral}{"{}Chains"{}}\ +\ \textcolor{stringliteral}{"{}\_"{}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00601}00601\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00602}00602\ \ \ NameTemp\ +=\ \textcolor{stringliteral}{"{}diag.root"{}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00603}00603\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00604}00604\ \ \ TFile*\ DiagFile\ =\ \textcolor{keyword}{new}\ TFile(NameTemp.c\_str(),\ \textcolor{stringliteral}{"{}recreate"{}});}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00605}00605\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00606}00606\ \ \ DiagFile-\/>cd();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00607}00607\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00608}00608\ \ \ \textcolor{keyword}{auto}\ StandardDeviationGlobalPlot\ =\ std::make\_unique<TH1D>(\textcolor{stringliteral}{"{}StandardDeviationGlobalPlot"{}},\ \textcolor{stringliteral}{"{}StandardDeviationGlobalPlot"{}},\ 200,\ 0,\ 2);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00609}00609\ \ \ \textcolor{keyword}{auto}\ BetweenChainVariancePlot\ =\ std::make\_unique<TH1D>(\textcolor{stringliteral}{"{}BetweenChainVariancePlot"{}},\ \textcolor{stringliteral}{"{}BetweenChainVariancePlot"{}},\ 200,\ 0,\ 2);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00610}00610\ \ \ \textcolor{keyword}{auto}\ MarginalPosteriorVariancePlot\ =\ std::make\_unique<TH1D>(\textcolor{stringliteral}{"{}MarginalPosteriorVariancePlot"{}},\ \textcolor{stringliteral}{"{}MarginalPosteriorVariancePlot"{}},\ 200,\ 0,\ 2);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00611}00611\ \ \ \textcolor{keyword}{auto}\ RhatPlot\ =\ std::make\_unique<TH1D>(\textcolor{stringliteral}{"{}RhatPlot"{}},\ \textcolor{stringliteral}{"{}RhatPlot"{}},\ 200,\ 0,\ 2);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00612}00612\ \ \ \textcolor{keyword}{auto}\ EffectiveSampleSizePlot\ =\ std::make\_unique<TH1D>(\textcolor{stringliteral}{"{}EffectiveSampleSizePlot"{}},\ \textcolor{stringliteral}{"{}EffectiveSampleSizePlot"{}},\ 400,\ 0,\ 10000);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00613}00613\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00614}00614\ \ \ \textcolor{keyword}{auto}\ StandardDeviationGlobalFoldedPlot\ =\ std::make\_unique<TH1D>(\textcolor{stringliteral}{"{}StandardDeviationGlobalFoldedPlot"{}},\ \textcolor{stringliteral}{"{}StandardDeviationGlobalFoldedPlot"{}},\ 200,\ 0,\ 2);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00615}00615\ \ \ \textcolor{keyword}{auto}\ BetweenChainVarianceFoldedPlot\ =\ std::make\_unique<TH1D>(\textcolor{stringliteral}{"{}BetweenChainVarianceFoldedPlot"{}},\ \textcolor{stringliteral}{"{}BetweenChainVarianceFoldedPlot"{}},\ 200,\ 0,\ 2);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00616}00616\ \ \ \textcolor{keyword}{auto}\ MarginalPosteriorVarianceFoldedPlot\ =\ std::make\_unique<TH1D>(\textcolor{stringliteral}{"{}MarginalPosteriorVarianceFoldedPlot"{}},\ \textcolor{stringliteral}{"{}MarginalPosteriorVarianceFoldedPlot"{}},\ 200,\ 0,\ 2);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00617}00617\ \ \ \textcolor{keyword}{auto}\ RhatFoldedPlot\ =\ std::make\_unique<TH1D>(\textcolor{stringliteral}{"{}RhatFoldedPlot"{}},\ \textcolor{stringliteral}{"{}RhatFoldedPlot"{}},\ 200,\ 0,\ 2);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00618}00618\ \ \ \textcolor{keyword}{auto}\ EffectiveSampleSizeFoldedPlot\ =\ std::make\_unique<TH1D>(\textcolor{stringliteral}{"{}EffectiveSampleSizeFoldedPlot"{}},\ \textcolor{stringliteral}{"{}EffectiveSampleSizeFoldedPlot"{}},\ 400,\ 0,\ 10000);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00619}00619\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00620}00620\ \ \ \textcolor{keyword}{auto}\ RhatLogPlot\ =\ std::make\_unique<TH1D>(\textcolor{stringliteral}{"{}RhatLogPlot"{}},\ \textcolor{stringliteral}{"{}RhatLogPlot"{}},\ 200,\ 0,\ 2);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00621}00621\ \ \ \textcolor{keyword}{auto}\ RhatFoldedLogPlot\ =\ std::make\_unique<TH1D>(\textcolor{stringliteral}{"{}RhatFoldedLogPlot"{}},\ \textcolor{stringliteral}{"{}RhatFoldedLogPlot"{}},\ 200,\ 0,\ 2);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00622}00622\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00623}00623\ \ \ \textcolor{keywordtype}{int}\ Criterium\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00624}00624\ \ \ \textcolor{keywordtype}{int}\ CiteriumFolded\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00625}00625\ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ \mbox{\hyperlink{RHat_8cpp_ae2faf756e30936102294777663fae31d}{nDraw}};\ j++)}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00626}00626\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00627}00627\ \ \ \ \ \textcolor{comment}{//KS:\ Fill\ only\ valid\ parameters}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00628}00628\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{RHat_8cpp_a5217beba3b3cb82269e95bf52c3d62c5}{ValidPar}}[j])}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00629}00629\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00630}00630\ \ \ \ \ \ \ StandardDeviationGlobalPlot-\/>Fill(\mbox{\hyperlink{RHat_8cpp_a64de0e32daa60ec4f40e0e741d927334}{StandardDeviationGlobal}}[j]);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00631}00631\ \ \ \ \ \ \ BetweenChainVariancePlot-\/>Fill(\mbox{\hyperlink{RHat_8cpp_a52dcf07f8f740636605516f6c2ab3e40}{BetweenChainVariance}}[j]);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00632}00632\ \ \ \ \ \ \ MarginalPosteriorVariancePlot-\/>Fill(\mbox{\hyperlink{RHat_8cpp_a68813385f1240d1264e139391b12bf05}{MarginalPosteriorVariance}}[j]);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00633}00633\ \ \ \ \ \ \ RhatPlot-\/>Fill(\mbox{\hyperlink{RHat_8cpp_ab5cfb5e8741283e8d8252aae184004e4}{RHat}}[j]);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00634}00634\ \ \ \ \ \ \ EffectiveSampleSizePlot-\/>Fill(\mbox{\hyperlink{RHat_8cpp_ae673254e98992bd483de55c6c1d1dcaf}{EffectiveSampleSize}}[j]);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00635}00635\ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{RHat_8cpp_ab5cfb5e8741283e8d8252aae184004e4}{RHat}}[j]\ >\ 1.1)\ Criterium++;}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00636}00636\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00637}00637\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00638}00638\ \ \ \ \ \ \ StandardDeviationGlobalFoldedPlot-\/>Fill(\mbox{\hyperlink{RHat_8cpp_a255f6a2b0ce0d9e0aee2c06645008b0c}{StandardDeviationGlobalFolded}}[j]);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00639}00639\ \ \ \ \ \ \ BetweenChainVarianceFoldedPlot-\/>Fill(\mbox{\hyperlink{RHat_8cpp_a3a65452412d9dd00c1a9e93d0bab1a26}{BetweenChainVarianceFolded}}[j]);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00640}00640\ \ \ \ \ \ \ MarginalPosteriorVarianceFoldedPlot-\/>Fill(\mbox{\hyperlink{RHat_8cpp_af4fae3d323e2f5220b3506386304f8f4}{MarginalPosteriorVarianceFolded}}[j]);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00641}00641\ \ \ \ \ \ \ RhatFoldedPlot-\/>Fill(\mbox{\hyperlink{RHat_8cpp_a754fbe6088f05d880121693722fe6b99}{RHatFolded}}[j]);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00642}00642\ \ \ \ \ \ \ EffectiveSampleSizeFoldedPlot-\/>Fill(\mbox{\hyperlink{RHat_8cpp_a39a08e7110f564d00239beccded97be8}{EffectiveSampleSizeFolded}}[j]);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00643}00643\ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{RHat_8cpp_a754fbe6088f05d880121693722fe6b99}{RHatFolded}}[j]\ >\ 1.1)\ CiteriumFolded++;}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00644}00644\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00645}00645\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00646}00646\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00647}00647\ \ \ \ \ \ \ RhatLogPlot-\/>Fill(\mbox{\hyperlink{RHat_8cpp_ab5cfb5e8741283e8d8252aae184004e4}{RHat}}[j]);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00648}00648\ \ \ \ \ \ \ RhatFoldedLogPlot-\/>Fill(\mbox{\hyperlink{RHat_8cpp_a754fbe6088f05d880121693722fe6b99}{RHatFolded}}[j]);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00649}00649\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00650}00650\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00651}00651\ \ \ \textcolor{comment}{//KS:\ We\ set\ criterium\ of\ 1.1\ based\ on\ Gelman\ et\ al.\ (2003)\ Bayesian\ Data\ Analysis}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00652}00652\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_ad5b2eb6377721e3ac95def22c2386bb1}{MACH3LOG\_WARN}}(\textcolor{stringliteral}{"{}Number\ of\ parameters\ which\ has\ R\ hat\ greater\ than\ 1.1\ is\ \{\}(\{:.2f\}\%)\ while\ for\ R\ hat\ folded\ \{\}(\{:.2f\}\%)"{}},\ Criterium,\ 100*\textcolor{keywordtype}{double}(Criterium)/\textcolor{keywordtype}{double}(\mbox{\hyperlink{RHat_8cpp_ae2faf756e30936102294777663fae31d}{nDraw}}),\ CiteriumFolded,\ 100*\textcolor{keywordtype}{double}(CiteriumFolded)/\textcolor{keywordtype}{double}(\mbox{\hyperlink{RHat_8cpp_ae2faf756e30936102294777663fae31d}{nDraw}}));}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00653}00653\ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ \mbox{\hyperlink{RHat_8cpp_ae2faf756e30936102294777663fae31d}{nDraw}};\ j++)}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00654}00654\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00655}00655\ \ \ \ \ \textcolor{keywordflow}{if}(\ (\mbox{\hyperlink{RHat_8cpp_ab5cfb5e8741283e8d8252aae184004e4}{RHat}}[j]\ >\ 1.1\ ||\ \mbox{\hyperlink{RHat_8cpp_a754fbe6088f05d880121693722fe6b99}{RHatFolded}}[j]\ >\ 1.1)\ \&\&\ \mbox{\hyperlink{RHat_8cpp_a5217beba3b3cb82269e95bf52c3d62c5}{ValidPar}}[j])}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00656}00656\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00657}00657\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a07ff6d6a15b24f94afc88a1b89779beb}{MACH3LOG\_CRITICAL}}(\textcolor{stringliteral}{"{}Parameter\ \{\}\ has\ R\ hat\ higher\ than\ 1.1"{}},\ \mbox{\hyperlink{RHat_8cpp_a871d6466cea2597401bdb203293f4033}{BranchNames}}[j]);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00658}00658\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00659}00659\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00660}00660\ \ \ StandardDeviationGlobalPlot-\/>Write();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00661}00661\ \ \ BetweenChainVariancePlot-\/>Write();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00662}00662\ \ \ MarginalPosteriorVariancePlot-\/>Write();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00663}00663\ \ \ RhatPlot-\/>Write();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00664}00664\ \ \ EffectiveSampleSizePlot-\/>Write();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00665}00665\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00666}00666\ \ \ StandardDeviationGlobalFoldedPlot-\/>Write();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00667}00667\ \ \ BetweenChainVarianceFoldedPlot-\/>Write();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00668}00668\ \ \ MarginalPosteriorVarianceFoldedPlot-\/>Write();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00669}00669\ \ \ RhatFoldedPlot-\/>Write();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00670}00670\ \ \ EffectiveSampleSizeFoldedPlot-\/>Write();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00671}00671\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00672}00672\ \ \ RhatLogPlot-\/>Write();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00673}00673\ \ \ RhatFoldedLogPlot-\/>Write();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00674}00674\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00675}00675\ \ \ \textcolor{comment}{//KS:\ Now\ we\ make\ fancy\ canvases,\ consider\ some\ function\ to\ have\ less\ copy\ pasting}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00676}00676\ \ \ \textcolor{keyword}{auto}\ TempCanvas\ =\ std::make\_unique<TCanvas>(\textcolor{stringliteral}{"{}Canvas"{}},\ \textcolor{stringliteral}{"{}Canvas"{}},\ 1024,\ 1024);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00677}00677\ \ \ gStyle-\/>SetOptStat(0);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00678}00678\ \ \ TempCanvas-\/>SetGridx();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00679}00679\ \ \ TempCanvas-\/>SetGridy();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00680}00680\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00681}00681\ \ \ \textcolor{comment}{//\ Random\ line\ to\ write\ useful\ information\ to\ TLegend}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00682}00682\ \ \ \textcolor{keyword}{auto}\ TempLine\ =\ std::make\_unique<TLine>(0,\ 0,\ 0,\ 0);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00683}00683\ \ \ TempLine-\/>SetLineColor(kBlack);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00684}00684\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00685}00685\ \ \ RhatPlot-\/>GetXaxis()-\/>SetTitle(\textcolor{stringliteral}{"{}R\ hat"{}});}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00686}00686\ \ \ RhatPlot-\/>SetLineColor(kRed);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00687}00687\ \ \ RhatPlot-\/>SetFillColor(kRed);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00688}00688\ \ \ RhatFoldedPlot-\/>SetLineColor(kBlue);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00689}00689\ \ \ RhatFoldedPlot-\/>SetFillColor(kBlue);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00690}00690\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00691}00691\ \ \ TLegend\ *Legend\ =\ \textcolor{keyword}{new}\ TLegend(0.55,\ 0.6,\ 0.9,\ 0.9);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00692}00692\ \ \ Legend-\/>SetTextSize(0.04);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00693}00693\ \ \ Legend-\/>SetFillColor(0);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00694}00694\ \ \ Legend-\/>SetFillStyle(0);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00695}00695\ \ \ Legend-\/>SetLineWidth(0);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00696}00696\ \ \ Legend-\/>SetLineColor(0);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00697}00697\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00698}00698\ \ \ Legend-\/>AddEntry(TempLine.get(),\ Form(\textcolor{stringliteral}{"{}Number\ of\ throws=\%.0i,\ Number\ of\ chains=\%.1i"{}},\ \mbox{\hyperlink{RHat_8cpp_afa110f35953074d3cc7ad452d003fd7a}{Ntoys}},\ \mbox{\hyperlink{RHat_8cpp_a231bc179b5599c7e29d5ba28ff2b4b70}{Nchains}}),\ \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00699}00699\ \ \ Legend-\/>AddEntry(RhatPlot.get(),\ \textcolor{stringliteral}{"{}Rhat\ Gelman\ 2013"{}},\ \textcolor{stringliteral}{"{}l"{}});}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00700}00700\ \ \ Legend-\/>AddEntry(RhatFoldedPlot.get(),\ \textcolor{stringliteral}{"{}Rhat-\/Folded\ Gelman\ 2021"{}},\ \textcolor{stringliteral}{"{}l"{}});}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00701}00701\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00702}00702\ \ \ RhatPlot-\/>Draw();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00703}00703\ \ \ RhatFoldedPlot-\/>Draw(\textcolor{stringliteral}{"{}same"{}});}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00704}00704\ \ \ Legend-\/>Draw(\textcolor{stringliteral}{"{}same"{}});}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00705}00705\ \ \ TempCanvas-\/>Write(\textcolor{stringliteral}{"{}Rhat"{}});}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00706}00706\ \ \ \textcolor{keyword}{delete}\ Legend;}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00707}00707\ \ \ Legend\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00708}00708\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00709}00709\ \ \ \textcolor{comment}{//Now\ R\ hat\ for\ log\ L}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00710}00710\ \ \ RhatLogPlot-\/>GetXaxis()-\/>SetTitle(\textcolor{stringliteral}{"{}R\ hat\ for\ LogL"{}});}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00711}00711\ \ \ RhatLogPlot-\/>SetLineColor(kRed);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00712}00712\ \ \ RhatLogPlot-\/>SetFillColor(kRed);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00713}00713\ \ \ RhatFoldedLogPlot-\/>SetLineColor(kBlue);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00714}00714\ \ \ RhatFoldedLogPlot-\/>SetFillColor(kBlue);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00715}00715\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00716}00716\ \ \ Legend\ =\ \textcolor{keyword}{new}\ TLegend(0.55,\ 0.6,\ 0.9,\ 0.9);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00717}00717\ \ \ Legend-\/>SetTextSize(0.04);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00718}00718\ \ \ Legend-\/>SetFillColor(0);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00719}00719\ \ \ Legend-\/>SetFillStyle(0);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00720}00720\ \ \ Legend-\/>SetLineWidth(0);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00721}00721\ \ \ Legend-\/>SetLineColor(0);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00722}00722\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00723}00723\ \ \ Legend-\/>AddEntry(TempLine.get(),\ Form(\textcolor{stringliteral}{"{}Number\ of\ throws=\%.0i,\ Number\ of\ chains=\%.1i"{}},\ \mbox{\hyperlink{RHat_8cpp_afa110f35953074d3cc7ad452d003fd7a}{Ntoys}},\ \mbox{\hyperlink{RHat_8cpp_a231bc179b5599c7e29d5ba28ff2b4b70}{Nchains}}),\ \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00724}00724\ \ \ Legend-\/>AddEntry(RhatLogPlot.get(),\ \textcolor{stringliteral}{"{}Rhat\ Gelman\ 2013"{}},\ \textcolor{stringliteral}{"{}l"{}});}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00725}00725\ \ \ Legend-\/>AddEntry(RhatFoldedLogPlot.get(),\ \textcolor{stringliteral}{"{}Rhat-\/Folded\ Gelman\ 2021"{}},\ \textcolor{stringliteral}{"{}l"{}});}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00726}00726\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00727}00727\ \ \ RhatLogPlot-\/>Draw();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00728}00728\ \ \ RhatFoldedLogPlot-\/>Draw(\textcolor{stringliteral}{"{}same"{}});}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00729}00729\ \ \ Legend-\/>Draw(\textcolor{stringliteral}{"{}same"{}});}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00730}00730\ \ \ TempCanvas-\/>Write(\textcolor{stringliteral}{"{}RhatLog"{}});}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00731}00731\ \ \ \textcolor{keyword}{delete}\ Legend;}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00732}00732\ \ \ Legend\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00733}00733\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00734}00734\ \ \ \textcolor{comment}{//Now\ canvas\ for\ effective\ sample\ size}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00735}00735\ \ \ EffectiveSampleSizePlot-\/>GetXaxis()-\/>SetTitle(\textcolor{stringliteral}{"{}S\_\{eff,\ BDA2\}"{}});}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00736}00736\ \ \ EffectiveSampleSizePlot-\/>SetLineColor(kRed);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00737}00737\ \ \ EffectiveSampleSizeFoldedPlot-\/>SetLineColor(kBlue);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00738}00738\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00739}00739\ \ \ Legend\ =\ \textcolor{keyword}{new}\ TLegend(0.45,\ 0.6,\ 0.9,\ 0.9);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00740}00740\ \ \ Legend-\/>SetTextSize(0.03);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00741}00741\ \ \ Legend-\/>SetFillColor(0);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00742}00742\ \ \ Legend-\/>SetFillStyle(0);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00743}00743\ \ \ Legend-\/>SetLineWidth(0);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00744}00744\ \ \ Legend-\/>SetLineColor(0);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00745}00745\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00746}00746\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ Mean1\ =\ EffectiveSampleSizePlot-\/>GetMean();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00747}00747\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ RMS1\ =\ EffectiveSampleSizePlot-\/>GetRMS();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00748}00748\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ Mean2\ =\ EffectiveSampleSizeFoldedPlot-\/>GetMean();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00749}00749\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ RMS2\ =\ EffectiveSampleSizeFoldedPlot-\/>GetRMS();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00750}00750\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00751}00751\ \ \ Legend-\/>AddEntry(TempLine.get(),\ Form(\textcolor{stringliteral}{"{}Number\ of\ throws=\%.0i,\ Number\ of\ chains=\%.1i"{}},\ \mbox{\hyperlink{RHat_8cpp_afa110f35953074d3cc7ad452d003fd7a}{Ntoys}},\ \mbox{\hyperlink{RHat_8cpp_a231bc179b5599c7e29d5ba28ff2b4b70}{Nchains}}),\ \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00752}00752\ \ \ Legend-\/>AddEntry(EffectiveSampleSizePlot.get(),\ Form(\textcolor{stringliteral}{"{}S\_\{eff,\ BDA2\}\ \#mu\ =\ \%.2f,\ \#sigma\ =\ \%.2f"{}},Mean1\ ,RMS1),\ \textcolor{stringliteral}{"{}l"{}});}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00753}00753\ \ \ Legend-\/>AddEntry(EffectiveSampleSizeFoldedPlot.get(),\ Form(\textcolor{stringliteral}{"{}S\_\{eff,\ BDA2\}\ Folded,\ \#mu\ =\ \%.2f,\ \#sigma\ =\ \%.2f"{}},Mean2\ ,RMS2),\ \textcolor{stringliteral}{"{}l"{}});}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00754}00754\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00755}00755\ \ \ EffectiveSampleSizePlot-\/>Draw();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00756}00756\ \ \ EffectiveSampleSizeFoldedPlot-\/>Draw(\textcolor{stringliteral}{"{}same"{}});}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00757}00757\ \ \ Legend-\/>Draw(\textcolor{stringliteral}{"{}same"{}});}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00758}00758\ \ \ TempCanvas-\/>Write(\textcolor{stringliteral}{"{}EffectiveSampleSize"{}});}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00759}00759\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00760}00760\ \ \ \textcolor{keyword}{delete}\ Legend;}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00761}00761\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00762}00762\ \ \ DiagFile-\/>Close();}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00763}00763\ \ \ \textcolor{keyword}{delete}\ DiagFile;}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00764}00764\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00765}00765\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Finished\ and\ wrote\ results\ to\ \{\}"{}},\ NameTemp);}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00766}00766\ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00767}00767\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00768}00768\ \textcolor{comment}{//\ *******************}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00769}00769\ \textcolor{comment}{//KS:\ Pseudo\ destructor}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00770}\mbox{\hyperlink{RHat_8cpp_abb60917440a91d5a3507fd4059d3e23b}{00770}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{RHat_8cpp_abb60917440a91d5a3507fd4059d3e23b}{DestroyArrays}}()\ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00771}00771\ \textcolor{comment}{//\ *******************}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00772}00772\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00773}00773\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Killing\ all\ arrays"{}});}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00774}00774\ \ \ \textcolor{keyword}{delete}[]\ \mbox{\hyperlink{RHat_8cpp_a4526fa4abfccd1173c87267a0beb6977}{MeanGlobal}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00775}00775\ \ \ \textcolor{keyword}{delete}[]\ \mbox{\hyperlink{RHat_8cpp_a64de0e32daa60ec4f40e0e741d927334}{StandardDeviationGlobal}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00776}00776\ \ \ \textcolor{keyword}{delete}[]\ \mbox{\hyperlink{RHat_8cpp_a52dcf07f8f740636605516f6c2ab3e40}{BetweenChainVariance}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00777}00777\ \ \ \textcolor{keyword}{delete}[]\ \mbox{\hyperlink{RHat_8cpp_a68813385f1240d1264e139391b12bf05}{MarginalPosteriorVariance}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00778}00778\ \ \ \textcolor{keyword}{delete}[]\ \mbox{\hyperlink{RHat_8cpp_ab5cfb5e8741283e8d8252aae184004e4}{RHat}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00779}00779\ \ \ \textcolor{keyword}{delete}[]\ \mbox{\hyperlink{RHat_8cpp_ae673254e98992bd483de55c6c1d1dcaf}{EffectiveSampleSize}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00780}00780\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00781}00781\ \ \ \textcolor{keyword}{delete}[]\ \mbox{\hyperlink{RHat_8cpp_a5afb47112913938579beb8b9f385a574}{MeanGlobalFolded}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00782}00782\ \ \ \textcolor{keyword}{delete}[]\ \mbox{\hyperlink{RHat_8cpp_a255f6a2b0ce0d9e0aee2c06645008b0c}{StandardDeviationGlobalFolded}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00783}00783\ \ \ \textcolor{keyword}{delete}[]\ \mbox{\hyperlink{RHat_8cpp_a3a65452412d9dd00c1a9e93d0bab1a26}{BetweenChainVarianceFolded}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00784}00784\ \ \ \textcolor{keyword}{delete}[]\ \mbox{\hyperlink{RHat_8cpp_af4fae3d323e2f5220b3506386304f8f4}{MarginalPosteriorVarianceFolded}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00785}00785\ \ \ \textcolor{keyword}{delete}[]\ \mbox{\hyperlink{RHat_8cpp_a754fbe6088f05d880121693722fe6b99}{RHatFolded}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00786}00786\ \ \ \textcolor{keyword}{delete}[]\ \mbox{\hyperlink{RHat_8cpp_a39a08e7110f564d00239beccded97be8}{EffectiveSampleSizeFolded}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00787}00787\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00788}00788\ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ m\ =\ 0;\ m\ <\ \mbox{\hyperlink{RHat_8cpp_a231bc179b5599c7e29d5ba28ff2b4b70}{Nchains}};\ m++)}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00789}00789\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00790}00790\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{RHat_8cpp_afa110f35953074d3cc7ad452d003fd7a}{Ntoys}};\ i++)}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00791}00791\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00792}00792\ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ \mbox{\hyperlink{RHat_8cpp_a9adc829d645affbb93eff1775ab7c0c6}{Draws}}[m][i];}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00793}00793\ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ \mbox{\hyperlink{RHat_8cpp_a7e7fe290fda4362be54b8cf5d56fea51}{DrawsFolded}}[m][i];}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00794}00794\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00795}00795\ \ \ \ \ \textcolor{keyword}{delete}[]\ \mbox{\hyperlink{RHat_8cpp_a9adc829d645affbb93eff1775ab7c0c6}{Draws}}[m];}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00796}00796\ \ \ \ \ \textcolor{keyword}{delete}[]\ \mbox{\hyperlink{RHat_8cpp_ab7d224b5fffa9367046f2976bb4972d1}{Mean}}[m];}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00797}00797\ \ \ \ \ \textcolor{keyword}{delete}[]\ \mbox{\hyperlink{RHat_8cpp_a5bdfaf60cce582e30db6bd3001de9935}{StandardDeviation}}[m];}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00798}00798\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00799}00799\ \ \ \ \ \textcolor{keyword}{delete}[]\ \mbox{\hyperlink{RHat_8cpp_a7e7fe290fda4362be54b8cf5d56fea51}{DrawsFolded}}[m];}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00800}00800\ \ \ \ \ \textcolor{keyword}{delete}[]\ \mbox{\hyperlink{RHat_8cpp_a458eb859b19f20edc7607814bd68d449}{MeanFolded}}[m];}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00801}00801\ \ \ \ \ \textcolor{keyword}{delete}[]\ \mbox{\hyperlink{RHat_8cpp_a85509f675b977490fa59bdf037d38ba2}{StandardDeviationFolded}}[m];}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00802}00802\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00803}00803\ \ \ \textcolor{keyword}{delete}[]\ \mbox{\hyperlink{RHat_8cpp_a9adc829d645affbb93eff1775ab7c0c6}{Draws}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00804}00804\ \ \ \textcolor{keyword}{delete}[]\ \mbox{\hyperlink{RHat_8cpp_ab7d224b5fffa9367046f2976bb4972d1}{Mean}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00805}00805\ \ \ \textcolor{keyword}{delete}[]\ \mbox{\hyperlink{RHat_8cpp_a5bdfaf60cce582e30db6bd3001de9935}{StandardDeviation}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00806}00806\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00807}00807\ \ \ \textcolor{keyword}{delete}[]\ \mbox{\hyperlink{RHat_8cpp_a7e7fe290fda4362be54b8cf5d56fea51}{DrawsFolded}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00808}00808\ \ \ \textcolor{keyword}{delete}[]\ \mbox{\hyperlink{RHat_8cpp_a761fd0b4a970686c00ce3e4daefd7f73}{MedianArr}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00809}00809\ \ \ \textcolor{keyword}{delete}[]\ \mbox{\hyperlink{RHat_8cpp_a458eb859b19f20edc7607814bd68d449}{MeanFolded}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00810}00810\ \ \ \textcolor{keyword}{delete}[]\ \mbox{\hyperlink{RHat_8cpp_a85509f675b977490fa59bdf037d38ba2}{StandardDeviationFolded}};}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00811}00811\ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00812}00812\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00813}00813\ \textcolor{comment}{//\ *******************}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00814}00814\ \textcolor{comment}{//calculate\ median}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00815}\mbox{\hyperlink{RHat_8cpp_ac038d6f2a074799534fc4a986ca36ef3}{00815}}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{RHat_8cpp_ac038d6f2a074799534fc4a986ca36ef3}{CalcMedian}}(\textcolor{keywordtype}{double}\ arr[],\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{GetPenaltyTerm_8cpp_a439227feff9d7f55384e8780cfc2eb82}{size}})\ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00816}00816\ \textcolor{comment}{//\ *******************\ \ \ }}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00817}00817\ \ \ std::sort(arr,\ arr+\mbox{\hyperlink{GetPenaltyTerm_8cpp_a439227feff9d7f55384e8780cfc2eb82}{size}});}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00818}00818\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{GetPenaltyTerm_8cpp_a439227feff9d7f55384e8780cfc2eb82}{size}}\ \%\ 2\ !=\ 0)}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00819}00819\ \ \ \ \ \textcolor{keywordflow}{return}\ arr[\mbox{\hyperlink{GetPenaltyTerm_8cpp_a439227feff9d7f55384e8780cfc2eb82}{size}}/2];}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00820}00820\ \ \ \textcolor{keywordflow}{return}\ (arr[(\mbox{\hyperlink{GetPenaltyTerm_8cpp_a439227feff9d7f55384e8780cfc2eb82}{size}}-\/1)/2]\ +\ arr[\mbox{\hyperlink{GetPenaltyTerm_8cpp_a439227feff9d7f55384e8780cfc2eb82}{size}}/2])/2.0;}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00821}00821\ \}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00822}00822\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00823}00823\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00824}00824\ \textcolor{comment}{//\ *******************}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00825}00825\ \textcolor{comment}{//calculate\ median}}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00826}\mbox{\hyperlink{RHat_8cpp_a29838c9a1c93843ffd2eb4dc33f2076d}{00826}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{RHat_8cpp_a29838c9a1c93843ffd2eb4dc33f2076d}{CapVariable}}(\textcolor{keywordtype}{double}\ var,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ cap)\ \{}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00827}00827\ \textcolor{comment}{//\ *******************\ \ \ }}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00828}00828\ }
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00829}00829\ \ \ \textcolor{keywordflow}{if}(std::isnan(var)\ ||\ !std::isfinite(var))\ var\ =\ cap;}
+\DoxyCodeLine{\Hypertarget{RHat_8cpp_source_l00830}00830\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,29 @@
+\hypertarget{MinuitFit_8h_source}{}\doxysection{Minuit\+Fit.\+h}
+\label{MinuitFit_8h_source}\index{/home/runner/work/MaCh3/MaCh3/mcmc/MinuitFit.h@{/home/runner/work/MaCh3/MaCh3/mcmc/MinuitFit.h}}
+\mbox{\hyperlink{MinuitFit_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{MinuitFit_8h_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{MinuitFit_8h_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{MinuitFit_8h_source_l00003}00003\ \textcolor{comment}{//MaCh3\ includes}}
+\DoxyCodeLine{\Hypertarget{MinuitFit_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{LikelihoodFit_8h}{mcmc/LikelihoodFit.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{MinuitFit_8h_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{MinuitFit_8h_source_l00006}00006\ \textcolor{comment}{//\ ROOT\ includes}}
+\DoxyCodeLine{\Hypertarget{MinuitFit_8h_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}Math/Minimizer.h"{}}}
+\DoxyCodeLine{\Hypertarget{MinuitFit_8h_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}Math/Factory.h"{}}}
+\DoxyCodeLine{\Hypertarget{MinuitFit_8h_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}Math/Functor.h"{}}}
+\DoxyCodeLine{\Hypertarget{MinuitFit_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{MinuitFit_8h_source_l00013}\mbox{\hyperlink{classMinuitFit}{00013}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMinuitFit}{MinuitFit}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classLikelihoodFit}{LikelihoodFit}}\ \{}
+\DoxyCodeLine{\Hypertarget{MinuitFit_8h_source_l00014}00014\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{MinuitFit_8h_source_l00016}00016\ \ \ \mbox{\hyperlink{classMinuitFit}{MinuitFit}}(\mbox{\hyperlink{classmanager}{manager}}\ *\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classFitterBase_a4fceb68f242feeb04a0ddf42a5a37095}{fitMan}});}
+\DoxyCodeLine{\Hypertarget{MinuitFit_8h_source_l00018}00018\ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classMinuitFit_ac79d8c4ef26a715b6f4edce0b20af9aa}{\string~MinuitFit}}();}
+\DoxyCodeLine{\Hypertarget{MinuitFit_8h_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{MinuitFit_8h_source_l00021}00021\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMinuitFit_a8e746fb17d4bc75a9d308398a4a0229e}{runMCMC}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{MinuitFit_8h_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{MinuitFit_8h_source_l00024}\mbox{\hyperlink{classMinuitFit_a21eb79a3aa06baf99b0e5bd86e9d5c7c}{00024}}\ \ \ \textcolor{keyword}{inline}\ std::string\ \mbox{\hyperlink{classMinuitFit_a21eb79a3aa06baf99b0e5bd86e9d5c7c}{GetName}}()\textcolor{keyword}{const\ }\{\textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}MinuitFit"{}};\};}
+\DoxyCodeLine{\Hypertarget{MinuitFit_8h_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{MinuitFit_8h_source_l00026}00026\ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{MinuitFit_8h_source_l00028}\mbox{\hyperlink{classMinuitFit_a3f5a1b7de36ce6c55821e262b016cb19}{00028}}\ \ \ ROOT::Math::Minimizer*\ \mbox{\hyperlink{classMinuitFit_a3f5a1b7de36ce6c55821e262b016cb19}{minuit}};}
+\DoxyCodeLine{\Hypertarget{MinuitFit_8h_source_l00029}00029\ \};}
+\DoxyCodeLine{\Hypertarget{MinuitFit_8h_source_l00030}00030\ }
+
+\end{DoxyCode}

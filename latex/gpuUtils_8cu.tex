@@ -1,0 +1,286 @@
+\hypertarget{gpuUtils_8cu}{}\doxysection{/home/runner/work/\+Ma\+Ch3/\+Ma\+Ch3/manager/gpu\+Utils.cu File Reference}
+\label{gpuUtils_8cu}\index{/home/runner/work/MaCh3/MaCh3/manager/gpuUtils.cu@{/home/runner/work/MaCh3/MaCh3/manager/gpuUtils.cu}}
+{\ttfamily \#include \char`\"{}manager/gpu\+Utils.\+cuh\char`\"{}}\newline
+Include dependency graph for gpu\+Utils.\+cu\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{gpuUtils_8cu__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{gpuUtils_8cu_ace64b352b82023c1dc75e981ef999197}{\+\_\+\+\_\+cuda\+Safe\+Call}} (cuda\+Error err, const char $\ast$file, const int line)
+\begin{DoxyCompactList}\small\item\em Check for a safe call on GPU. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{gpuUtils_8cu_a283c175d0c0f12a8f1b2dfb61d16421f}{\+\_\+\+\_\+cuda\+Check\+Error}} (const char $\ast$file, const int line)
+\begin{DoxyCompactList}\small\item\em Check if there\textquotesingle{}s been an error. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{gpuUtils_8cu_a5cfcf006bd817b3cff5da08c7f0ecb5e}{check\+Gpu\+Mem}} ()
+\begin{DoxyCompactList}\small\item\em KS\+: Get some fancy info about VRAM usage. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{gpuUtils_8cu_acbef44018c81d3830eb03d342bd55dd0}{Print\+Ndevices}} ()
+\begin{DoxyCompactList}\small\item\em KS\+: Get some fancy info about GPU. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{gpuUtils_8cu_a56172de98a5b7370d34478ff4aa164d4}{Reset\+Device}} ()
+\begin{DoxyCompactList}\small\item\em KS\+: Completely clean GPU, this is time consuming and may lead to unexpected behaviour. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{gpuUtils_8cu_a2ab5781fc7e4ead7951a9a953500e6b5}{Set\+Device}} (const int device\+Id)
+\begin{DoxyCompactList}\small\item\em Only useful if using multiple GPU. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{gpuUtils_8cu_a6ce692705fff8744f83272e70421fbf4}{Get\+Num\+GPUThreads}} (const int Device)
+\begin{DoxyCompactList}\small\item\em KS\+: Get number of GPU threads for currently used GPU. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{gpuUtils_8cu_a283c175d0c0f12a8f1b2dfb61d16421f}\label{gpuUtils_8cu_a283c175d0c0f12a8f1b2dfb61d16421f}} 
+\index{gpuUtils.cu@{gpuUtils.cu}!\_\_cudaCheckError@{\_\_cudaCheckError}}
+\index{\_\_cudaCheckError@{\_\_cudaCheckError}!gpuUtils.cu@{gpuUtils.cu}}
+\doxysubsubsection{\texorpdfstring{\_\_cudaCheckError()}{\_\_cudaCheckError()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+cuda\+Check\+Error (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file,  }\item[{const int}]{line }\end{DoxyParamCaption})}
+
+
+
+Check if there\textquotesingle{}s been an error. 
+
+This function checks if there has been any CUDA runtime API error and reports it. 
+\begin{DoxyParams}{Parameters}
+{\em file} & The file name where the error occurred. \\
+\hline
+{\em line} & The line number where the error occurred. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{gpuUtils_8cu_source_l00019}{19}} of file \mbox{\hyperlink{gpuUtils_8cu_source}{gpu\+Utils.\+cu}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ **************************************************}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#ifdef\ CUDA\_ERROR\_CHECK}}
+\DoxyCodeLine{00022\ \ \ cudaError\ err\ =\ cudaGetLastError();}
+\DoxyCodeLine{00023\ \ \ \textcolor{keywordflow}{if}\ (cudaSuccess\ !=\ err)\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ fprintf(stderr,\ \textcolor{stringliteral}{"{}cudaCheckError()\ failed\ at\ \%s:\%i\ :\ \%s\(\backslash\)n"{}},\ file,\ line,\ cudaGetErrorString(err));}
+\DoxyCodeLine{00025\ \ \ \ \ exit(-\/1);}
+\DoxyCodeLine{00026\ \ \ \}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \textcolor{comment}{//\ More\ careful\ checking.\ However,\ this\ will\ affect\ performance.}}
+\DoxyCodeLine{00029\ \ \ \textcolor{comment}{//\ Comment\ away\ if\ needed.}}
+\DoxyCodeLine{00030\ \ \ err\ =\ cudaDeviceSynchronize();}
+\DoxyCodeLine{00031\ \ \ \textcolor{keywordflow}{if}\ (cudaSuccess\ !=\ err)\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ fprintf(stderr,\ \textcolor{stringliteral}{"{}cudaCheckError()\ with\ sync\ failed\ at\ \%s:\%i\ :\ \%s\(\backslash\)n"{}},\ file,\ line,\ cudaGetErrorString(err));}
+\DoxyCodeLine{00033\ \ \ \ \ exit(-\/1);}
+\DoxyCodeLine{00034\ \ \ \}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00036\ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00037\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{gpuUtils_8cu_ace64b352b82023c1dc75e981ef999197}\label{gpuUtils_8cu_ace64b352b82023c1dc75e981ef999197}} 
+\index{gpuUtils.cu@{gpuUtils.cu}!\_\_cudaSafeCall@{\_\_cudaSafeCall}}
+\index{\_\_cudaSafeCall@{\_\_cudaSafeCall}!gpuUtils.cu@{gpuUtils.cu}}
+\doxysubsubsection{\texorpdfstring{\_\_cudaSafeCall()}{\_\_cudaSafeCall()}}
+{\footnotesize\ttfamily void \+\_\+\+\_\+cuda\+Safe\+Call (\begin{DoxyParamCaption}\item[{cuda\+Error}]{err,  }\item[{const char $\ast$}]{file,  }\item[{const int}]{line }\end{DoxyParamCaption})}
+
+
+
+Check for a safe call on GPU. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000001}{Todo}}]KS\+: There is plenty of useful stuff here \href{https://github.com/NVIDIA/cuda-samples/blob/master/Samples/1_Utilities/deviceQuery/deviceQuery.cpp}{\texttt{ https\+://github.\+com/\+NVIDIA/cuda-\/samples/blob/master/\+Samples/1\+\_\+\+Utilities/device\+Query/device\+Query.\+cpp}} 
+
+KS\+: We might want to port some of these utilities, for example having bool if there is unified memory etc. \end{DoxyRefDesc}
+
+
+This function checks the error status returned by CUDA runtime API functions and reports any errors. 
+\begin{DoxyParams}{Parameters}
+{\em err} & The CUDA error code. \\
+\hline
+{\em file} & The file name where the error occurred. \\
+\hline
+{\em line} & The line number where the error occurred. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{gpuUtils_8cu_source_l00006}{6}} of file \mbox{\hyperlink{gpuUtils_8cu_source}{gpu\+Utils.\+cu}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00006\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ **************************************************}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifdef\ CUDA\_ERROR\_CHECK}}
+\DoxyCodeLine{00009\ \ \ \textcolor{keywordflow}{if}\ (cudaSuccess\ !=\ err)\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ fprintf(stderr,\ \textcolor{stringliteral}{"{}cudaSafeCall()\ failed\ at\ \%s:\%i\ :\ \%s\(\backslash\)n"{}},\ file,\ line,\ cudaGetErrorString(err));}
+\DoxyCodeLine{00011\ \ \ \ \ exit(-\/1);}
+\DoxyCodeLine{00012\ \ \ \}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00014\ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00015\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{gpuUtils_8cu_a5cfcf006bd817b3cff5da08c7f0ecb5e}\label{gpuUtils_8cu_a5cfcf006bd817b3cff5da08c7f0ecb5e}} 
+\index{gpuUtils.cu@{gpuUtils.cu}!checkGpuMem@{checkGpuMem}}
+\index{checkGpuMem@{checkGpuMem}!gpuUtils.cu@{gpuUtils.cu}}
+\doxysubsubsection{\texorpdfstring{checkGpuMem()}{checkGpuMem()}}
+{\footnotesize\ttfamily void check\+Gpu\+Mem (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+KS\+: Get some fancy info about VRAM usage. 
+
+
+
+Definition at line \mbox{\hyperlink{gpuUtils_8cu_source_l00045}{45}} of file \mbox{\hyperlink{gpuUtils_8cu_source}{gpu\+Utils.\+cu}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00046\ \textcolor{comment}{//\ *******************************************}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \textcolor{keywordtype}{float}\ free\_m,\ total\_m,used\_m;}
+\DoxyCodeLine{00049\ \ \ \textcolor{keywordtype}{size\_t}\ free\_t,\ total\_t;}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ cudaMemGetInfo(\&free\_t,\ \&total\_t);}
+\DoxyCodeLine{00052\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ free\_m\ =\ (uint)free\_t/1048576.0;}
+\DoxyCodeLine{00055\ \ \ total\_m\ =\ (uint)total\_t/1048576.0;}
+\DoxyCodeLine{00056\ \ \ used\_m\ =\ total\_m\ -\/\ free\_m;}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ printf(\textcolor{stringliteral}{"{}\ \ Memory\ free\ \%f\ MB,\ total\ memory\ \%f\ MB,\ memory\ used\ \%f\ MB\(\backslash\)n"{}},\ free\_m,\ total\_m,\ used\_m);}
+\DoxyCodeLine{00059\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{gpuUtils_8cu_a6ce692705fff8744f83272e70421fbf4}\label{gpuUtils_8cu_a6ce692705fff8744f83272e70421fbf4}} 
+\index{gpuUtils.cu@{gpuUtils.cu}!GetNumGPUThreads@{GetNumGPUThreads}}
+\index{GetNumGPUThreads@{GetNumGPUThreads}!gpuUtils.cu@{gpuUtils.cu}}
+\doxysubsubsection{\texorpdfstring{GetNumGPUThreads()}{GetNumGPUThreads()}}
+{\footnotesize\ttfamily int Get\+Num\+GPUThreads (\begin{DoxyParamCaption}\item[{const int}]{Device = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+KS\+: Get number of GPU threads for currently used GPU. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device} & The ID of the device. Defaults to 0. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of GPU threads. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{gpuUtils_8cu_source_l00110}{110}} of file \mbox{\hyperlink{gpuUtils_8cu_source}{gpu\+Utils.\+cu}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00111\ \textcolor{comment}{//\ *******************************************}}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \ \ \textcolor{keywordtype}{int}\ deviceCount;}
+\DoxyCodeLine{00114\ \ \ cudaGetDeviceCount(\&deviceCount);}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \ \ \textcolor{keywordflow}{if}\ (deviceCount\ ==\ 0)\ \{}
+\DoxyCodeLine{00117\ \ \ \ \ printf(\textcolor{stringliteral}{"{}No\ CUDA\ devices\ found"{}});}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordflow}{throw};}
+\DoxyCodeLine{00119\ \ \ \}}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \ \ cudaDeviceProp\ deviceProp;}
+\DoxyCodeLine{00122\ \ \ cudaGetDeviceProperties(\&deviceProp,\ Device);}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \ \ \textcolor{comment}{//\ Define\ the\ number\ of\ threads\ per\ block}}
+\DoxyCodeLine{00125\ \ \ \textcolor{keywordtype}{int}\ nThreadsBlocks\ =\ (deviceProp.multiProcessorCount\ *\ deviceProp.maxThreadsPerMultiProcessor);}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \ \ \textcolor{keywordflow}{return}\ nThreadsBlocks;}
+\DoxyCodeLine{00128\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{gpuUtils_8cu_acbef44018c81d3830eb03d342bd55dd0}\label{gpuUtils_8cu_acbef44018c81d3830eb03d342bd55dd0}} 
+\index{gpuUtils.cu@{gpuUtils.cu}!PrintNdevices@{PrintNdevices}}
+\index{PrintNdevices@{PrintNdevices}!gpuUtils.cu@{gpuUtils.cu}}
+\doxysubsubsection{\texorpdfstring{PrintNdevices()}{PrintNdevices()}}
+{\footnotesize\ttfamily void Print\+Ndevices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+KS\+: Get some fancy info about GPU. 
+
+
+
+Definition at line \mbox{\hyperlink{gpuUtils_8cu_source_l00063}{63}} of file \mbox{\hyperlink{gpuUtils_8cu_source}{gpu\+Utils.\+cu}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00064\ \textcolor{comment}{//\ *******************************************}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \textcolor{keywordtype}{int}\ nDevices;}
+\DoxyCodeLine{00067\ \ \ cudaGetDeviceCount(\&nDevices);}
+\DoxyCodeLine{00068\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \textcolor{keywordflow}{if}\ (nDevices\ ==\ 0)\ \{}
+\DoxyCodeLine{00071\ \ \ \ \ printf(\textcolor{stringliteral}{"{}No\ CUDA\ devices\ found"{}});}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordflow}{throw};}
+\DoxyCodeLine{00073\ \ \ \}}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ printf(\textcolor{stringliteral}{"{}\ \ Found\ \%i\ GPUs,\ currently\ I\ only\ support\ one\ GPU\(\backslash\)n"{}},\ nDevices);}
+\DoxyCodeLine{00076\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{gpuUtils_8cu_a56172de98a5b7370d34478ff4aa164d4}\label{gpuUtils_8cu_a56172de98a5b7370d34478ff4aa164d4}} 
+\index{gpuUtils.cu@{gpuUtils.cu}!ResetDevice@{ResetDevice}}
+\index{ResetDevice@{ResetDevice}!gpuUtils.cu@{gpuUtils.cu}}
+\doxysubsubsection{\texorpdfstring{ResetDevice()}{ResetDevice()}}
+{\footnotesize\ttfamily void Reset\+Device (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+KS\+: Completely clean GPU, this is time consuming and may lead to unexpected behaviour. 
+
+
+
+Definition at line \mbox{\hyperlink{gpuUtils_8cu_source_l00081}{81}} of file \mbox{\hyperlink{gpuUtils_8cu_source}{gpu\+Utils.\+cu}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00082\ \textcolor{comment}{//\ *******************************************}}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ cudaDeviceReset();}
+\DoxyCodeLine{00085\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{00086\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{gpuUtils_8cu_a2ab5781fc7e4ead7951a9a953500e6b5}\label{gpuUtils_8cu_a2ab5781fc7e4ead7951a9a953500e6b5}} 
+\index{gpuUtils.cu@{gpuUtils.cu}!SetDevice@{SetDevice}}
+\index{SetDevice@{SetDevice}!gpuUtils.cu@{gpuUtils.cu}}
+\doxysubsubsection{\texorpdfstring{SetDevice()}{SetDevice()}}
+{\footnotesize\ttfamily void Set\+Device (\begin{DoxyParamCaption}\item[{const int}]{device\+Id }\end{DoxyParamCaption})}
+
+
+
+Only useful if using multiple GPU. 
+
+KS\+: Only useful if using multiple GPU. 
+
+Definition at line \mbox{\hyperlink{gpuUtils_8cu_source_l00091}{91}} of file \mbox{\hyperlink{gpuUtils_8cu_source}{gpu\+Utils.\+cu}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00092\ \textcolor{comment}{//\ *******************************************}}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \textcolor{comment}{//\ Check\ if\ the\ device\ ID\ is\ valid}}
+\DoxyCodeLine{00095\ \ \ \textcolor{keywordtype}{int}\ deviceCount;}
+\DoxyCodeLine{00096\ \ \ cudaGetDeviceCount(\&deviceCount);}
+\DoxyCodeLine{00097\ \ \ \textcolor{keywordflow}{if}\ (deviceId\ <\ 0\ ||\ deviceId\ >=\ deviceCount)\ \{}
+\DoxyCodeLine{00098\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Invalid\ device\ ID:\ \%i\ \(\backslash\)n"{}},\ deviceId);}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordflow}{throw};}
+\DoxyCodeLine{00100\ \ \ \}}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ cudaSetDevice(deviceId);}
+\DoxyCodeLine{00103\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{00104\ \ \ printf(\textcolor{stringliteral}{"{}GPU\ device\ set\ to\ ID:\ \%i\ \(\backslash\)n"{}},\ deviceId);}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \}}
+
+\end{DoxyCode}

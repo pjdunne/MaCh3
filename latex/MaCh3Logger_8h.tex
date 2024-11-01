@@ -1,0 +1,233 @@
+\hypertarget{MaCh3Logger_8h}{}\doxysection{/home/runner/work/\+Ma\+Ch3/\+Ma\+Ch3/manager/\+Ma\+Ch3\+Logger.h File Reference}
+\label{MaCh3Logger_8h}\index{/home/runner/work/MaCh3/MaCh3/manager/MaCh3Logger.h@{/home/runner/work/MaCh3/MaCh3/manager/MaCh3Logger.h}}
+{\ttfamily \#include \char`\"{}spdlog/spdlog.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+Include dependency graph for Ma\+Ch3\+Logger.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{MaCh3Logger_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{MaCh3Logger_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{MaCh3Logger_8h_afc88f0aa23c7127b2ff6e5c7ca3fa892}{MACH3\+LOG\+\_\+\+TRACE}}~SPDLOG\+\_\+\+TRACE
+\item 
+\#define \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3\+LOG\+\_\+\+DEBUG}}~SPDLOG\+\_\+\+DEBUG
+\item 
+\#define \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3\+LOG\+\_\+\+INFO}}~SPDLOG\+\_\+\+INFO
+\item 
+\#define \mbox{\hyperlink{MaCh3Logger_8h_ad5b2eb6377721e3ac95def22c2386bb1}{MACH3\+LOG\+\_\+\+WARN}}~SPDLOG\+\_\+\+WARN
+\item 
+\#define \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3\+LOG\+\_\+\+ERROR}}~SPDLOG\+\_\+\+ERROR
+\item 
+\#define \mbox{\hyperlink{MaCh3Logger_8h_a07ff6d6a15b24f94afc88a1b89779beb}{MACH3\+LOG\+\_\+\+CRITICAL}}~SPDLOG\+\_\+\+CRITICAL
+\item 
+\#define \mbox{\hyperlink{MaCh3Logger_8h_afa930300ae979052e16935bee1397a95}{MACH3\+LOG\+\_\+\+OFF}}~SPDLOG\+\_\+\+OFF
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{MaCh3Logger_8h_aa603c55ea73cd86d1994901227883e1e}{Set\+Ma\+Ch3\+Logger\+Format}} ()
+\begin{DoxyCompactList}\small\item\em Set messaging format of the logger. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Func , typename Log\+Func , typename... Args$>$ }\\void \mbox{\hyperlink{MaCh3Logger_8h_ada930684d7c1ed8916f1fbe6d266ca77}{Logger\+Print}} (const std\+::string \&Lib\+Name, Log\+Func log\+Function, Func \&\&func, Args \&\&... args)
+\begin{DoxyCompactList}\small\item\em KS\+: This is bit convoluted but this is to allow redirecting cout and errors from external library into Ma\+Ch3 logger format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{MaCh3Logger_8h_a07ff6d6a15b24f94afc88a1b89779beb}\label{MaCh3Logger_8h_a07ff6d6a15b24f94afc88a1b89779beb}} 
+\index{MaCh3Logger.h@{MaCh3Logger.h}!MACH3LOG\_CRITICAL@{MACH3LOG\_CRITICAL}}
+\index{MACH3LOG\_CRITICAL@{MACH3LOG\_CRITICAL}!MaCh3Logger.h@{MaCh3Logger.h}}
+\doxysubsubsection{\texorpdfstring{MACH3LOG\_CRITICAL}{MACH3LOG\_CRITICAL}}
+{\footnotesize\ttfamily \#define MACH3\+LOG\+\_\+\+CRITICAL~SPDLOG\+\_\+\+CRITICAL}
+
+
+
+Definition at line \mbox{\hyperlink{MaCh3Logger_8h_source_l00019}{19}} of file \mbox{\hyperlink{MaCh3Logger_8h_source}{Ma\+Ch3\+Logger.\+h}}.
+
+\mbox{\Hypertarget{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}\label{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}} 
+\index{MaCh3Logger.h@{MaCh3Logger.h}!MACH3LOG\_DEBUG@{MACH3LOG\_DEBUG}}
+\index{MACH3LOG\_DEBUG@{MACH3LOG\_DEBUG}!MaCh3Logger.h@{MaCh3Logger.h}}
+\doxysubsubsection{\texorpdfstring{MACH3LOG\_DEBUG}{MACH3LOG\_DEBUG}}
+{\footnotesize\ttfamily \#define MACH3\+LOG\+\_\+\+DEBUG~SPDLOG\+\_\+\+DEBUG}
+
+
+
+Definition at line \mbox{\hyperlink{MaCh3Logger_8h_source_l00015}{15}} of file \mbox{\hyperlink{MaCh3Logger_8h_source}{Ma\+Ch3\+Logger.\+h}}.
+
+\mbox{\Hypertarget{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}\label{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}} 
+\index{MaCh3Logger.h@{MaCh3Logger.h}!MACH3LOG\_ERROR@{MACH3LOG\_ERROR}}
+\index{MACH3LOG\_ERROR@{MACH3LOG\_ERROR}!MaCh3Logger.h@{MaCh3Logger.h}}
+\doxysubsubsection{\texorpdfstring{MACH3LOG\_ERROR}{MACH3LOG\_ERROR}}
+{\footnotesize\ttfamily \#define MACH3\+LOG\+\_\+\+ERROR~SPDLOG\+\_\+\+ERROR}
+
+
+
+Definition at line \mbox{\hyperlink{MaCh3Logger_8h_source_l00018}{18}} of file \mbox{\hyperlink{MaCh3Logger_8h_source}{Ma\+Ch3\+Logger.\+h}}.
+
+\mbox{\Hypertarget{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}\label{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}} 
+\index{MaCh3Logger.h@{MaCh3Logger.h}!MACH3LOG\_INFO@{MACH3LOG\_INFO}}
+\index{MACH3LOG\_INFO@{MACH3LOG\_INFO}!MaCh3Logger.h@{MaCh3Logger.h}}
+\doxysubsubsection{\texorpdfstring{MACH3LOG\_INFO}{MACH3LOG\_INFO}}
+{\footnotesize\ttfamily \#define MACH3\+LOG\+\_\+\+INFO~SPDLOG\+\_\+\+INFO}
+
+
+
+Definition at line \mbox{\hyperlink{MaCh3Logger_8h_source_l00016}{16}} of file \mbox{\hyperlink{MaCh3Logger_8h_source}{Ma\+Ch3\+Logger.\+h}}.
+
+\mbox{\Hypertarget{MaCh3Logger_8h_afa930300ae979052e16935bee1397a95}\label{MaCh3Logger_8h_afa930300ae979052e16935bee1397a95}} 
+\index{MaCh3Logger.h@{MaCh3Logger.h}!MACH3LOG\_OFF@{MACH3LOG\_OFF}}
+\index{MACH3LOG\_OFF@{MACH3LOG\_OFF}!MaCh3Logger.h@{MaCh3Logger.h}}
+\doxysubsubsection{\texorpdfstring{MACH3LOG\_OFF}{MACH3LOG\_OFF}}
+{\footnotesize\ttfamily \#define MACH3\+LOG\+\_\+\+OFF~SPDLOG\+\_\+\+OFF}
+
+
+
+Definition at line \mbox{\hyperlink{MaCh3Logger_8h_source_l00020}{20}} of file \mbox{\hyperlink{MaCh3Logger_8h_source}{Ma\+Ch3\+Logger.\+h}}.
+
+\mbox{\Hypertarget{MaCh3Logger_8h_afc88f0aa23c7127b2ff6e5c7ca3fa892}\label{MaCh3Logger_8h_afc88f0aa23c7127b2ff6e5c7ca3fa892}} 
+\index{MaCh3Logger.h@{MaCh3Logger.h}!MACH3LOG\_TRACE@{MACH3LOG\_TRACE}}
+\index{MACH3LOG\_TRACE@{MACH3LOG\_TRACE}!MaCh3Logger.h@{MaCh3Logger.h}}
+\doxysubsubsection{\texorpdfstring{MACH3LOG\_TRACE}{MACH3LOG\_TRACE}}
+{\footnotesize\ttfamily \#define MACH3\+LOG\+\_\+\+TRACE~SPDLOG\+\_\+\+TRACE}
+
+
+
+Definition at line \mbox{\hyperlink{MaCh3Logger_8h_source_l00014}{14}} of file \mbox{\hyperlink{MaCh3Logger_8h_source}{Ma\+Ch3\+Logger.\+h}}.
+
+\mbox{\Hypertarget{MaCh3Logger_8h_ad5b2eb6377721e3ac95def22c2386bb1}\label{MaCh3Logger_8h_ad5b2eb6377721e3ac95def22c2386bb1}} 
+\index{MaCh3Logger.h@{MaCh3Logger.h}!MACH3LOG\_WARN@{MACH3LOG\_WARN}}
+\index{MACH3LOG\_WARN@{MACH3LOG\_WARN}!MaCh3Logger.h@{MaCh3Logger.h}}
+\doxysubsubsection{\texorpdfstring{MACH3LOG\_WARN}{MACH3LOG\_WARN}}
+{\footnotesize\ttfamily \#define MACH3\+LOG\+\_\+\+WARN~SPDLOG\+\_\+\+WARN}
+
+
+
+Definition at line \mbox{\hyperlink{MaCh3Logger_8h_source_l00017}{17}} of file \mbox{\hyperlink{MaCh3Logger_8h_source}{Ma\+Ch3\+Logger.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{MaCh3Logger_8h_ada930684d7c1ed8916f1fbe6d266ca77}\label{MaCh3Logger_8h_ada930684d7c1ed8916f1fbe6d266ca77}} 
+\index{MaCh3Logger.h@{MaCh3Logger.h}!LoggerPrint@{LoggerPrint}}
+\index{LoggerPrint@{LoggerPrint}!MaCh3Logger.h@{MaCh3Logger.h}}
+\doxysubsubsection{\texorpdfstring{LoggerPrint()}{LoggerPrint()}}
+{\footnotesize\ttfamily template$<$typename Func , typename Log\+Func , typename... Args$>$ \\
+void Logger\+Print (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{Lib\+Name,  }\item[{Log\+Func}]{log\+Function,  }\item[{Func \&\&}]{func,  }\item[{Args \&\&...}]{args }\end{DoxyParamCaption})}
+
+
+
+KS\+: This is bit convoluted but this is to allow redirecting cout and errors from external library into Ma\+Ch3 logger format. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Func} & The type of the function to be called, which outputs to stdout and stderr. \\
+\hline
+{\em Log\+Func} & The type of the logging function, typically a lambda that formats and logs messages. \\
+\hline
+{\em Args} & The types of the arguments to be passed to {\ttfamily func}. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em Lib\+Name} & The name of the library or component from which the log message originates. \\
+\hline
+{\em log\+Function} & The lambda function responsible for formatting and logging messages. It should accept a single const std\+::string\& parameter. \\
+\hline
+{\em func} & The function to be called, whose output needs to be captured and logged. \\
+\hline
+{\em args} & The arguments to be passed to {\ttfamily func}. 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ ExampleFunc(\textcolor{keywordtype}{int}\ x,\ \textcolor{keyword}{const}\ std::string\&\ str)\ \{}
+\DoxyCodeLine{\ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Output\ from\ exampleFunc:\ "{}}\ <<\ x\ <<\ \textcolor{stringliteral}{"{},\ "{}}\ <<\ str\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}Error\ from\ exampleFunc:\ "{}}\ <<\ x\ <<\ \textcolor{stringliteral}{"{},\ "{}}\ <<\ str\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ \mbox{\hyperlink{CombineMaCh3Chains_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}}()\ \{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_ada930684d7c1ed8916f1fbe6d266ca77}{LoggerPrint}}(\textcolor{stringliteral}{"{}ExampleLib"{}},\ [](\textcolor{keyword}{const}\ std::string\&\ message)\ \{\ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}\{\}"{}},\ message);\ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{void}(*)(\textcolor{keywordtype}{int},\ \textcolor{keyword}{const\ }std::string\&)\textcolor{keyword}{>}(ExampleFunc),\ 666,\ \textcolor{stringliteral}{"{}Number\ of\ the\ BEAST"{}});}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+second argument is lambda fucniton whih convers mach3 so template works, it is bit faff... This approach allows seamless integration of {\ttfamily func} into an existing logging mechanism without modifying {\ttfamily func} itself 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{MaCh3Logger_8h_source_l00060}{60}} of file \mbox{\hyperlink{MaCh3Logger_8h_source}{Ma\+Ch3\+Logger.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00061\ \{}
+\DoxyCodeLine{00062\ \ \ \textcolor{comment}{//\ Create\ a\ stringstream\ to\ capture\ the\ output}}
+\DoxyCodeLine{00063\ \ \ std::stringstream\ sss;}
+\DoxyCodeLine{00064\ \ \ \textcolor{comment}{//\ Save\ the\ original\ stream\ buffers}}
+\DoxyCodeLine{00065\ \ \ std::streambuf*\ coutBuf\ =\ std::cout.rdbuf();}
+\DoxyCodeLine{00066\ \ \ std::streambuf*\ cerrBuf\ =\ std::cerr.rdbuf();}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \textcolor{comment}{//\ Redirect\ std::cout\ and\ std::cerr\ to\ the\ stringstream\ buffer}}
+\DoxyCodeLine{00069\ \ \ std::cout.rdbuf(sss.rdbuf());}
+\DoxyCodeLine{00070\ \ \ std::cerr.rdbuf(sss.rdbuf());}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \textcolor{comment}{//\ Call\ the\ provided\ function}}
+\DoxyCodeLine{00073\ \ \ func(std::forward<Args>(args)...);}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \textcolor{comment}{//\ Restore\ the\ original\ stream\ buffers}}
+\DoxyCodeLine{00076\ \ \ std::cout.rdbuf(coutBuf);}
+\DoxyCodeLine{00077\ \ \ std::cerr.rdbuf(cerrBuf);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ std::string\ line;}
+\DoxyCodeLine{00080\ \ \ \textcolor{keywordflow}{while}\ (std::getline(sss,\ line))}
+\DoxyCodeLine{00081\ \ \ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keyword}{auto}\ formatted\_message\ =\ fmt::format(\textcolor{stringliteral}{"{}[\{\}]\ \{\}"{}},\ LibName,\ line);}
+\DoxyCodeLine{00083\ \ \ \ \ logFunction(formatted\_message);}
+\DoxyCodeLine{00084\ \ \ \}}
+\DoxyCodeLine{00085\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{MaCh3Logger_8h_aa603c55ea73cd86d1994901227883e1e}\label{MaCh3Logger_8h_aa603c55ea73cd86d1994901227883e1e}} 
+\index{MaCh3Logger.h@{MaCh3Logger.h}!SetMaCh3LoggerFormat@{SetMaCh3LoggerFormat}}
+\index{SetMaCh3LoggerFormat@{SetMaCh3LoggerFormat}!MaCh3Logger.h@{MaCh3Logger.h}}
+\doxysubsubsection{\texorpdfstring{SetMaCh3LoggerFormat()}{SetMaCh3LoggerFormat()}}
+{\footnotesize\ttfamily void Set\+Ma\+Ch3\+Logger\+Format (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set messaging format of the logger. 
+
+
+
+Definition at line \mbox{\hyperlink{MaCh3Logger_8h_source_l00023}{23}} of file \mbox{\hyperlink{MaCh3Logger_8h_source}{Ma\+Ch3\+Logger.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00024\ \{}
+\DoxyCodeLine{00025\ \ \ \textcolor{comment}{//KS:\ \%H\ for\ hour,\ \%M\ for\ minute,\ \%S\ for\ second,\ [\%s:\%\#]\ for\ class\ and\ line}}
+\DoxyCodeLine{00026\ \ \ \textcolor{comment}{//For\ documentation\ see\ https://github.com/gabime/spdlog/wiki/3.-\/Custom-\/formatting}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\ \ \#ifdef\ DEBUG}}
+\DoxyCodeLine{00028\ \ \ \textcolor{comment}{//spdlog::set\_pattern("{}[\%H:\%M:\%S][\%s:\%\#][\%\string^\%l\%\$]\ \%v"{});}}
+\DoxyCodeLine{00029\ \ \ spdlog::set\_pattern(\textcolor{stringliteral}{"{}[\%s:\%\#][\%\string^\%l\%\$]\ \%v"{}});}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\ \ \#else}}
+\DoxyCodeLine{00031\ \ \ \textcolor{comment}{//spdlog::set\_pattern("{}[\%H:\%M:\%S][\%s][\%\string^\%l\%\$]\ \%v"{});}}
+\DoxyCodeLine{00032\ \ \ spdlog::set\_pattern(\textcolor{stringliteral}{"{}[\%s][\%\string^\%l\%\$]\ \%v"{}});}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{00034\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,134 @@
+\hypertarget{gpuSplineUtils_8cuh_source}{}\doxysection{gpu\+Spline\+Utils.\+cuh}
+\label{gpuSplineUtils_8cuh_source}\index{/home/runner/work/MaCh3/MaCh3/splines/gpuSplineUtils.cuh@{/home/runner/work/MaCh3/MaCh3/splines/gpuSplineUtils.cuh}}
+\mbox{\hyperlink{gpuSplineUtils_8cuh}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00012}00012\ \textcolor{comment}{//MaCh3\ included}}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00013}00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{gpuUtils_8cuh}{manager/gpuUtils.cuh}}"{}}}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00014}00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{SplineCommon_8h}{splines/SplineCommon.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00017}00017\ \_\_host\_\_\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{gpuSplineUtils_8cuh_a953e5c5aecebd908f5d8c6ad64de482c}{SynchroniseSplines}}();}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00027}00027\ \_\_global\_\_\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{gpuSplineUtils_8cuh_a617ef358c707699dd50af17358cbff69}{EvalOnGPU\_Splines}}(}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00028}00028\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{short}\ \textcolor{keywordtype}{int}*\ \_\_restrict\_\_\ gpu\_paramNo\_arr,}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00029}00029\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}*\ \_\_restrict\_\_\ gpu\_nKnots\_arr,}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00030}00030\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}*\ \_\_restrict\_\_\ gpu\_coeff\_many,}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00031}00031\ \ \ \ \ \textcolor{keywordtype}{float}*\ \_\_restrict\_\_\ gpu\_weights,}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00032}00032\ \ \ \ \ \textcolor{keyword}{const}\ cudaTextureObject\_t\ \_\_restrict\_\_\ text\_coeff\_x);}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00038}00038\ \_\_global\_\_\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{gpuSplineUtils_8cuh_aa36afe16baf1567c04ce88336ca9ad2e}{EvalOnGPU\_TF1}}(}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00039}00039\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}*\ \_\_restrict\_\_\ gpu\_coeffs\_tf1,}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00040}00040\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{short}\ \textcolor{keywordtype}{int}*\ \_\_restrict\_\_\ gpu\_paramNo\_arr\_tf1,}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00041}00041\ \ \ \textcolor{keywordtype}{float}*\ \_\_restrict\_\_\ gpu\_weights\_tf1);}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00043}00043\ \textcolor{preprocessor}{\#ifndef\ Weight\_On\_SplineBySpline\_Basis}}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00050}00050\ \_\_global\_\_\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{gpuSplineUtils_8cuh_a43b97a33ca18162ca4813449e4820731}{EvalOnGPU\_TotWeight}}(}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00051}00051\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}*\ \_\_restrict\_\_\ gpu\_weights,}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00052}00052\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}*\ \_\_restrict\_\_\ gpu\_weights\_tf1,}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00054}00054\ \ \ \textcolor{keywordtype}{float}*\ \_\_restrict\_\_\ gpu\_total\_weights,}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00056}00056\ \ \ \textcolor{keyword}{const}\ cudaTextureObject\_t\ \_\_restrict\_\_\ text\_nParamPerEvent,}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00057}00057\ \ \ \textcolor{keyword}{const}\ cudaTextureObject\_t\ \_\_restrict\_\_\ text\_nParamPerEvent\_TF1);}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00058}00058\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00061}\mbox{\hyperlink{classSMonolithGPU}{00061}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSMonolithGPU}{SMonolithGPU}}}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00062}00062\ \{}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00063}00063\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00065}00065\ \ \ \ \ \mbox{\hyperlink{classSMonolithGPU_aa19e498d0e762566ee62c7b93de18598}{SMonolithGPU}}();}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00067}00067\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classSMonolithGPU_a780471949538f9b359fe9f604491e620}{\string~SMonolithGPU}}();}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00075}00075\ \ \ \ \ \_\_host\_\_\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSMonolithGPU_a713a47fd41a93d2b6d40c4b392158aae}{InitGPU\_SplineMonolith}}(}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00076}00076\ \ \ \ \ \ \ \#ifndef\ Weight\_On\_SplineBySpline\_Basis}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00077}00077\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ **cpu\_total\_weights,}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00078}00078\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ n\_events,}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00079}00079\ \ \ \ \ \ \ \#endif}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00080}00080\ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ total\_nknots,}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00081}00081\ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ n\_splines,}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00082}00082\ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ n\_tf1,}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00083}00083\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ Eve\_size);}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00102}00102\ \ \ \ \ \_\_host\_\_\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSMonolithGPU_aef41d94cf5e44ebf4fe427c3ce84f20b}{CopyToGPU\_SplineMonolith}}(}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00103}00103\ \ \ \ \ \ \ \mbox{\hyperlink{structSplineMonoStruct}{SplineMonoStruct}}*\ cpu\_spline\_handler,}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00104}00104\ }
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00105}00105\ \ \ \ \ \ \ \textcolor{comment}{//\ TFI\ related\ now}}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00106}00106\ \ \ \ \ \ \ std::vector<float>\ cpu\_many\_array\_TF1,}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00107}00107\ \ \ \ \ \ \ std::vector<short\ int>\ cpu\_paramNo\_arr\_TF1,}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00108}00108\ \ \ \ \ \ \ \#ifndef\ Weight\_On\_SplineBySpline\_Basis}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00109}00109\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ n\_events,}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00110}00110\ \ \ \ \ \ \ std::vector<unsigned\ int>\ cpu\_nParamPerEvent,}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00111}00111\ \ \ \ \ \ \ \textcolor{comment}{//\ TFI\ related\ now}}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00112}00112\ \ \ \ \ \ \ std::vector<unsigned\ int>\ cpu\_nParamPerEvent\_TF1,}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00113}00113\ \ \ \ \ \ \ \#endif}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00114}00114\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ n\_params,}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00115}00115\ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ n\_splines,}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00116}00116\ \ \ \ \ \ \ \textcolor{keywordtype}{short}\ \textcolor{keywordtype}{int}\ spline\_size,}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00117}00117\ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ total\_nknots,}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00118}00118\ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ n\_tf1);}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00119}00119\ }
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00122}00122\ \ \ \ \ \_\_host\_\_\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSMonolithGPU_ab674ec40c136d89b56b7c25d9337c48a}{InitGPU\_Segments}}(\textcolor{keywordtype}{short}\ \textcolor{keywordtype}{int}\ **segment);}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00123}00123\ }
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00126}00126\ \ \ \ \ \_\_host\_\_\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSMonolithGPU_a3fbbb94f6db65b73a394ab541f94fba6}{InitGPU\_Vals}}(\textcolor{keywordtype}{float}\ **vals);}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00127}00127\ }
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00131}00131\ }
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00132}00132\ }
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00133}00133\ }
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00151}00151\ \ \ \ \ \_\_host\_\_\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSMonolithGPU_a8419e01082c64b291c3b38d8e69ceb4d}{RunGPU\_SplineMonolith}}(}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00152}00152\ \ \ \ \ \ \ \#ifdef\ Weight\_On\_SplineBySpline\_Basis}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00153}00153\ \ \ \ \ \ \ \textcolor{keywordtype}{float}*\ cpu\_weights,}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00154}00154\ \ \ \ \ \ \ \textcolor{keywordtype}{float}*\ cpu\_weights\_tf1,}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00155}00155\ \ \ \ \ \ \ \#\textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00156}00156\ \ \ \ \ \ \ \textcolor{keywordtype}{float}*\ cpu\_total\_weights,}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00157}00157\ \ \ \ \ \ \ \#endif}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00158}00158\ \ \ \ \ \ \ \textcolor{comment}{//\ Holds\ the\ changes\ in\ parameters}}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00159}00159\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ *vals,}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00160}00160\ \ \ \ \ \ \ \textcolor{comment}{//\ Holds\ the\ segments\ for\ parameters}}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00161}00161\ \ \ \ \ \ \ \textcolor{keywordtype}{short}\ \textcolor{keywordtype}{int}\ *segment,}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00162}00162\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ h\_n\_splines,}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00163}00163\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ h\_n\_tf1);}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00164}00164\ }
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00171}00171\ \ \ \ \ \_\_host\_\_\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSMonolithGPU_a1ca23401d8d99412288952a1d44390ea}{CleanupGPU\_SplineMonolith}}(}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00172}00172\ \ \ \ \ \ \ \#ifndef\ Weight\_On\_SplineBySpline\_Basis}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00173}00173\ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ *cpu\_total\_weights}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00174}00174\ \ \ \ \ \ \ \#endif}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00175}00175\ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00176}00176\ }
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00180}00180\ \ \ \ \ \_\_host\_\_\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSMonolithGPU_af5ca949ba6d79666b541350d24e3daaf}{CleanupGPU\_Segments}}(\textcolor{keywordtype}{short}\ \textcolor{keywordtype}{int}\ *segment,\ \textcolor{keywordtype}{float}\ *vals);}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00181}00181\ }
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00182}00182\ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00184}\mbox{\hyperlink{classSMonolithGPU_a13324d2fe2a29f7bbff19c55ddd6968c}{00184}}\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ *\mbox{\hyperlink{classSMonolithGPU_a13324d2fe2a29f7bbff19c55ddd6968c}{gpu\_nParamPerEvent}};}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00186}\mbox{\hyperlink{classSMonolithGPU_a60191ebfcba5bedf7e01c923887d5ceb}{00186}}\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ *\mbox{\hyperlink{classSMonolithGPU_a60191ebfcba5bedf7e01c923887d5ceb}{gpu\_nParamPerEvent\_TF1}};}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00187}00187\ }
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00189}\mbox{\hyperlink{classSMonolithGPU_a871589b8a52dea4ed9a4963a7b05e1af}{00189}}\ \ \ \ \ \textcolor{keywordtype}{float}\ *\mbox{\hyperlink{classSMonolithGPU_a871589b8a52dea4ed9a4963a7b05e1af}{gpu\_coeff\_x}};}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00190}00190\ }
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00192}\mbox{\hyperlink{classSMonolithGPU_a5a51e7b819a0c8cf786aa8f13dfdc0cc}{00192}}\ \ \ \ \ \textcolor{keywordtype}{float}\ *\mbox{\hyperlink{classSMonolithGPU_a5a51e7b819a0c8cf786aa8f13dfdc0cc}{gpu\_coeff\_many}};}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00193}00193\ }
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00195}\mbox{\hyperlink{classSMonolithGPU_ac291adc527ef593bb62a8440a131798f}{00195}}\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ *\mbox{\hyperlink{classSMonolithGPU_ac291adc527ef593bb62a8440a131798f}{gpu\_nKnots\_arr}};}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00196}00196\ }
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00198}\mbox{\hyperlink{classSMonolithGPU_ae8f091bec85671c4f96a2d0d9dbe4243}{00198}}\ \ \ \ \ \textcolor{keywordtype}{short}\ \textcolor{keywordtype}{int}\ *\mbox{\hyperlink{classSMonolithGPU_ae8f091bec85671c4f96a2d0d9dbe4243}{gpu\_paramNo\_arr}};}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00199}00199\ }
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00201}\mbox{\hyperlink{classSMonolithGPU_ae58804bb65745dbd8835876bf0debdc7}{00201}}\ \ \ \ \ \textcolor{keywordtype}{float}\ *\mbox{\hyperlink{classSMonolithGPU_ae58804bb65745dbd8835876bf0debdc7}{gpu\_coeff\_TF1\_many}};}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00203}\mbox{\hyperlink{classSMonolithGPU_aa84c07d3cda1c29b039a0fd3778c0c0f}{00203}}\ \ \ \ \ \textcolor{keywordtype}{short}\ \textcolor{keywordtype}{int}\ *\mbox{\hyperlink{classSMonolithGPU_aa84c07d3cda1c29b039a0fd3778c0c0f}{gpu\_nPoints\_arr}};}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00205}\mbox{\hyperlink{classSMonolithGPU_a2f8de24623a787f9f728bdd0b735c89c}{00205}}\ \ \ \ \ \textcolor{keywordtype}{short}\ \textcolor{keywordtype}{int}\ *\mbox{\hyperlink{classSMonolithGPU_a2f8de24623a787f9f728bdd0b735c89c}{gpu\_paramNo\_TF1\_arr}};}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00206}00206\ }
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00208}\mbox{\hyperlink{classSMonolithGPU_af5007136ab5e2fdbf3b9387e14a1c64a}{00208}}\ \ \ \ \ \textcolor{keywordtype}{float}\ *\mbox{\hyperlink{classSMonolithGPU_af5007136ab5e2fdbf3b9387e14a1c64a}{gpu\_total\_weights}};}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00210}\mbox{\hyperlink{classSMonolithGPU_a4f29d521544dd4bb64e6f2bfd68c21af}{00210}}\ \ \ \ \ \textcolor{keywordtype}{float}\ *\mbox{\hyperlink{classSMonolithGPU_a4f29d521544dd4bb64e6f2bfd68c21af}{gpu\_weights}};}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00212}\mbox{\hyperlink{classSMonolithGPU_ab5d038b66802271bbaf8f0c06704e5da}{00212}}\ \ \ \ \ \textcolor{keywordtype}{float}\ *\mbox{\hyperlink{classSMonolithGPU_ab5d038b66802271bbaf8f0c06704e5da}{gpu\_weights\_tf1}};}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00213}00213\ }
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00214}00214\ \ \ \ \ \textcolor{comment}{//\ h\_NAME\ declares\ HOST\ constants\ (live\ on\ CPU)}}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00216}\mbox{\hyperlink{classSMonolithGPU_ad36c112081992f2887fe24675f4bba06}{00216}}\ \textcolor{comment}{}\ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classSMonolithGPU_ad36c112081992f2887fe24675f4bba06}{h\_n\_params}};}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00218}\mbox{\hyperlink{classSMonolithGPU_a4628e4d9bb58650086cf51098c996059}{00218}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classSMonolithGPU_a4628e4d9bb58650086cf51098c996059}{h\_n\_events}};}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00219}00219\ }
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00220}00220\ \ \ \ \ \textcolor{comment}{//\ ******************************************}}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00221}00221\ \ \ \ \ \textcolor{comment}{//\ TEXTURES}}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00222}00222\ \ \ \ \ \textcolor{comment}{//\ ******************************************}}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00224}\mbox{\hyperlink{classSMonolithGPU_a1fb766b50293e6b611c45aa21c5c1b9c}{00224}}\ \textcolor{comment}{}\ \ \ \ cudaTextureObject\_t\ \mbox{\hyperlink{classSMonolithGPU_a1fb766b50293e6b611c45aa21c5c1b9c}{text\_coeff\_x}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00225}00225\ \textcolor{preprocessor}{\ \ \ \ \#ifndef\ Weight\_On\_SplineBySpline\_Basis}}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00227}\mbox{\hyperlink{classSMonolithGPU_a663a150b3464b28d6161df1924cd534f}{00227}}\ \ \ \ \ cudaTextureObject\_t\ \mbox{\hyperlink{classSMonolithGPU_a663a150b3464b28d6161df1924cd534f}{text\_nParamPerEvent}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00229}\mbox{\hyperlink{classSMonolithGPU_a089fd1b491667e60d06c3713cd45552e}{00229}}\ \ \ \ \ cudaTextureObject\_t\ \mbox{\hyperlink{classSMonolithGPU_a089fd1b491667e60d06c3713cd45552e}{text\_nParamPerEvent\_TF1}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00230}00230\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00231}00231\ \};}
+\DoxyCodeLine{\Hypertarget{gpuSplineUtils_8cuh_source_l00232}00232\ }
+
+\end{DoxyCode}

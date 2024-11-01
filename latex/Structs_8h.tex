@@ -1,0 +1,1678 @@
+\hypertarget{Structs_8h}{}\doxysection{/home/runner/work/\+Ma\+Ch3/\+Ma\+Ch3/sample\+PDF/\+Structs.h File Reference}
+\label{Structs_8h}\index{/home/runner/work/MaCh3/MaCh3/samplePDF/Structs.h@{/home/runner/work/MaCh3/MaCh3/samplePDF/Structs.h}}
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$set$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+{\ttfamily \#include \char`\"{}TSpline.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}TF1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}TLorentz\+Vector.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}TObj\+String.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}TH2\+Poly.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}TFile.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}TGraph\+Asymm\+Errors.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}manager/\+Ma\+Ch3\+Exception.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}manager/\+Ma\+Ch3\+Logger.\+h\char`\"{}}\newline
+Include dependency graph for Structs.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Structs_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Structs_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structXsecNorms4}{Xsec\+Norms4}}
+\begin{DoxyCompactList}\small\item\em ETA -\/ Normalisations for cross-\/section parameters Carrier for whether you want to apply a systematic to an event or not. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structXsecSplines1}{Xsec\+Splines1}}
+\begin{DoxyCompactList}\small\item\em KS\+: Struct holding info about Spline Systematics. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceM3}{M3}}
+\item 
+namespace \mbox{\hyperlink{namespaceMaCh3Utils}{Ma\+Ch3\+Utils}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{Structs_8h_a2abc3d82639661d84964bed9e2df0e68}{\+\_\+noexcept\+\_\+}}~noexcept
+\begin{DoxyCompactList}\small\item\em KS\+: noexcept can help with performance but is terrible for debugging, this is meant to help easy way of of turning it on or off. In near future move this to struct or other central class. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{Structs_8h_ab6a7e23420f0bcfb04f42f45f8283101}{\+\_\+restrict\+\_\+}}~\+\_\+\+\_\+restrict\+\_\+\+\_\+
+\begin{DoxyCompactList}\small\item\em KS\+: Using restrict limits the effects of pointer aliasing, aiding optimizations. While reading I found that there might be some compilers which don\textquotesingle{}t have {\bfseries{restrict}}. As always we use {\itshape restrict} to more easily turn off restrict in the code. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{Structs_8h_aad677c4443c651001dc4c1f781aef6dc}{\+\_\+\+TH2\+Poly\+Overflow\+Bins\+\_\+}}~9
+\begin{DoxyCompactList}\small\item\em Number of overflow bins in TH2\+Poly,. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespaceM3_a1f95274549f25fc19fe7db343c8a7a68}{M3\+::float\+\_\+t}} = double
+\item 
+using \mbox{\hyperlink{namespaceM3_adb59b8ecdc4e1b2d5d4c826a13aa7463}{M3\+::int\+\_\+t}} = int
+\item 
+using \mbox{\hyperlink{namespaceM3_a08723e82326f079864a8672505dd5741}{M3\+::uint\+\_\+t}} = unsigned
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{Structs_8h_a6a73aa1ad819973a9c421c17c2a7f36d}{Resp\+Func\+Type}} \{ \mbox{\hyperlink{Structs_8h_a6a73aa1ad819973a9c421c17c2a7f36da8bea6994e011cc85a5a88b50c97ce7b2}{k\+TSpline3\+\_\+red}}
+, \mbox{\hyperlink{Structs_8h_a6a73aa1ad819973a9c421c17c2a7f36da847a18b0a859ce2b3b87a98f455855b1}{k\+TF1\+\_\+red}}
+, \mbox{\hyperlink{Structs_8h_a6a73aa1ad819973a9c421c17c2a7f36dadaea03c5220761db703fcada6f3c94ea}{k\+Resp\+Func\+Types}}
+ \}
+\begin{DoxyCompactList}\small\item\em Make an enum of the spline interpolation type. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{Structs_8h_a6720d732608767153550aebebcf8fbf4}{Spline\+Interpolation}} \{ \newline
+\mbox{\hyperlink{Structs_8h_a6720d732608767153550aebebcf8fbf4a56c886e7b34c938027a7140748999c8a}{k\+TSpline3}}
+, \mbox{\hyperlink{Structs_8h_a6720d732608767153550aebebcf8fbf4ac188c019178783e5be55110601309d7d}{k\+Linear}}
+, \mbox{\hyperlink{Structs_8h_a6720d732608767153550aebebcf8fbf4a68f4b10c9689389fd8fea39dc6c097d3}{k\+Monotonic}}
+, \mbox{\hyperlink{Structs_8h_a6720d732608767153550aebebcf8fbf4afe5701215b64da0194c6fead25edd976}{k\+Akima}}
+, \newline
+\mbox{\hyperlink{Structs_8h_a6720d732608767153550aebebcf8fbf4ade75212a78a5cf860f84473a80355f42}{k\+Linear\+Func}}
+, \mbox{\hyperlink{Structs_8h_a6720d732608767153550aebebcf8fbf4a9e1a345912f2baebd863ab7d40c9ab7b}{k\+Spline\+Interpolations}}
+ \}
+\begin{DoxyCompactList}\small\item\em Make an enum of the spline interpolation type. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{Structs_8h_affc27d8b7b82d3713f45af17873fde2f}{Syst\+Type}} \{ \mbox{\hyperlink{Structs_8h_affc27d8b7b82d3713f45af17873fde2fa085cb29127b1cf7b1ddd429ff4440b17}{k\+Norm}}
+, \mbox{\hyperlink{Structs_8h_affc27d8b7b82d3713f45af17873fde2fa29d6ccf6cf507f6e66c72b1d3c2aed00}{k\+Spline}}
+, \mbox{\hyperlink{Structs_8h_affc27d8b7b82d3713f45af17873fde2fad9b1ac76e80f59684cfb7dc996fc870d}{k\+Func}}
+, \mbox{\hyperlink{Structs_8h_affc27d8b7b82d3713f45af17873fde2fa32e7da18117f9defb24042a71776e5cb}{k\+Syst\+Types}}
+ \}
+\item 
+enum \mbox{\hyperlink{Structs_8h_a706416000041de040e97d5dbe0bdb580}{Target\+Mat}} \{ \newline
+\mbox{\hyperlink{Structs_8h_a706416000041de040e97d5dbe0bdb580a93b6b80f9eb311ce2ed33ee3ab3d628f}{k\+Target\+\_\+H}} = 1
+, \mbox{\hyperlink{Structs_8h_a706416000041de040e97d5dbe0bdb580a4ef60de1c65e797b83a21dc41c9d24c1}{k\+Target\+\_\+C}} = 12
+, \mbox{\hyperlink{Structs_8h_a706416000041de040e97d5dbe0bdb580ac62ee782c726abaef5be73fa37051f1a}{k\+Target\+\_\+N}} = 14
+, \mbox{\hyperlink{Structs_8h_a706416000041de040e97d5dbe0bdb580aed102c56020984a88e9d68c44f7cc59e}{k\+Target\+\_\+O}} = 16
+, \newline
+\mbox{\hyperlink{Structs_8h_a706416000041de040e97d5dbe0bdb580a66f3bd62228437490c204146fc3c9650}{k\+Target\+\_\+\+Al}} = 27
+, \mbox{\hyperlink{Structs_8h_a706416000041de040e97d5dbe0bdb580aaf8c52b9d0543ba495ac4810ae574ab6}{k\+Target\+\_\+\+Ar}} = 40
+, \mbox{\hyperlink{Structs_8h_a706416000041de040e97d5dbe0bdb580aaf03f51fe85225e1b0a61f50e6593dc4}{k\+Target\+\_\+\+Ti}} = 48
+, \mbox{\hyperlink{Structs_8h_a706416000041de040e97d5dbe0bdb580a40b8c7791706f48abf66e8fa8f943282}{k\+Target\+\_\+\+Fe}} = 56
+, \newline
+\mbox{\hyperlink{Structs_8h_a706416000041de040e97d5dbe0bdb580ad5d1996f0e943feb8183b9b07ab701c0}{k\+Target\+\_\+\+Pb}} = 207
+ \}
+\begin{DoxyCompactList}\small\item\em Enum to track the target material. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{Structs_8h_a0dfdd8cf84b8fa3495e9e5e520fe6cd2}{Nu\+PDG}} \{ \newline
+\mbox{\hyperlink{Structs_8h_a0dfdd8cf84b8fa3495e9e5e520fe6cd2aab024bd4737ec207f00dcd86a5d05908}{k\+Nue}} = 12
+, \mbox{\hyperlink{Structs_8h_a0dfdd8cf84b8fa3495e9e5e520fe6cd2ab0c6aa36beb10b27d1595708db570b20}{k\+Numu}} = 14
+, \mbox{\hyperlink{Structs_8h_a0dfdd8cf84b8fa3495e9e5e520fe6cd2a3845eaeb2a574c79e40ccb2e7b0c0a21}{k\+Nutau}} = 16
+, \mbox{\hyperlink{Structs_8h_a0dfdd8cf84b8fa3495e9e5e520fe6cd2a74373d078c38b05c7ce7af9fe89e9f60}{k\+Nue\+Bar}} = -\/12
+, \newline
+\mbox{\hyperlink{Structs_8h_a0dfdd8cf84b8fa3495e9e5e520fe6cd2a4002f8369785cc180fd411cacc50ad6a}{k\+Numu\+Bar}} = -\/14
+, \mbox{\hyperlink{Structs_8h_a0dfdd8cf84b8fa3495e9e5e520fe6cd2a17308656c7ae2206d971d1a8682c5feb}{k\+Nutau\+Bar}} = -\/16
+ \}
+\begin{DoxyCompactList}\small\item\em Enum to track the incoming neutrino species. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{Structs_8h_a5a4651943de972b89fd091d11fa7b3d7}{Prob\+Nu}} \{ \newline
+\mbox{\hyperlink{Structs_8h_a5a4651943de972b89fd091d11fa7b3d7a5cd6d0de7e8784e41d9b25b568e4a910}{k\+Prob\+Nue}} = 1
+, \mbox{\hyperlink{Structs_8h_a5a4651943de972b89fd091d11fa7b3d7a06c430fb843a21e2716d7a4ac4b02b8f}{k\+Prob\+Numu}} = 2
+, \mbox{\hyperlink{Structs_8h_a5a4651943de972b89fd091d11fa7b3d7a01745b4e2b8e4c6e585d5256336ec0fc}{k\+Prob\+Nutau}} = 3
+, \mbox{\hyperlink{Structs_8h_a5a4651943de972b89fd091d11fa7b3d7a8d16d56aca132d6c241c7bfa76a678ce}{k\+Prob\+Nue\+Bar}} = -\/1
+, \newline
+\mbox{\hyperlink{Structs_8h_a5a4651943de972b89fd091d11fa7b3d7a72f2254b7daf89baabd39b7b42998ad7}{k\+Prob\+Numu\+Bar}} = -\/2
+, \mbox{\hyperlink{Structs_8h_a5a4651943de972b89fd091d11fa7b3d7a02ac372b77ed65a76630c2bf8435e888}{k\+Prob\+Nutau\+Bar}} = -\/3
+ \}
+\begin{DoxyCompactList}\small\item\em Enum to track neutrino species for Prob3. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{Structs_8h_a960da89e33ac45a56f7bbfac3068dc67}{Test\+Statistic}} \{ \newline
+\mbox{\hyperlink{Structs_8h_a960da89e33ac45a56f7bbfac3068dc67a82f43d91f1eda213c4b5c486672a32a5}{k\+Poisson}}
+, \mbox{\hyperlink{Structs_8h_a960da89e33ac45a56f7bbfac3068dc67a3c9b50397bd37ce679bbdda14f6108c4}{k\+Barlow\+Beeston}}
+, \mbox{\hyperlink{Structs_8h_a960da89e33ac45a56f7bbfac3068dc67a5a1aedce85942661f297f503d606c472}{k\+Ice\+Cube}}
+, \mbox{\hyperlink{Structs_8h_a960da89e33ac45a56f7bbfac3068dc67a1ac0c03f07bf2bb9ad083e449d69ffd7}{k\+Pearson}}
+, \newline
+\mbox{\hyperlink{Structs_8h_a960da89e33ac45a56f7bbfac3068dc67a6589bdeaef8de84e7ef545fd709772bb}{k\+Dembinski\+Abdelmottele}}
+, \mbox{\hyperlink{Structs_8h_a960da89e33ac45a56f7bbfac3068dc67a1459dbcc0f1b68b266cf0ddc37c34aee}{k\+NTest\+Statistics}}
+ \}
+\begin{DoxyCompactList}\small\item\em Make an enum of the test statistic that we\textquotesingle{}re using. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , size\+\_\+t N$>$ }\\std\+::vector$<$ T $>$ \mbox{\hyperlink{Structs_8h_a6a7efa31950e85001a060205c7d07c97}{Make\+Vector}} (const T(\&data)\mbox{[}N\mbox{]})
+\begin{DoxyCompactList}\small\item\em Template to make vector out of an array of any length. \end{DoxyCompactList}\item 
+constexpr unsigned int \mbox{\hyperlink{Structs_8h_ab29c200876205c3add1d71f053195658}{str2int}} (const char $\ast$str, int h=0)
+\begin{DoxyCompactList}\small\item\em KS\+: This is mad way of converting string to int. Why? To be able to use string with switch. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{Structs_8h_a89a221272ded97bbcea052755f4dc43f}{Get\+TF1}} (const \mbox{\hyperlink{Structs_8h_a6720d732608767153550aebebcf8fbf4}{Spline\+Interpolation}} i)
+\begin{DoxyCompactList}\small\item\em Get function for \mbox{\hyperlink{classTF1__red}{TF1\+\_\+red}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{Structs_8h_a6a73aa1ad819973a9c421c17c2a7f36d}{Resp\+Func\+Type}} \mbox{\hyperlink{Structs_8h_af1b80b5456f9b1cb847fb56ddcc3c1ab}{Spline\+Interpolation\+\_\+\+To\+Resp\+Func\+Type}} (const \mbox{\hyperlink{Structs_8h_a6720d732608767153550aebebcf8fbf4}{Spline\+Interpolation}} i)
+\begin{DoxyCompactList}\small\item\em Convert a Resp\+Func\+Type type to a Spline\+Interpolation. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{Structs_8h_a2d969ce667e41bd2492cff1775456837}{Spline\+Interpolation\+\_\+\+To\+String}} (const \mbox{\hyperlink{Structs_8h_a6720d732608767153550aebebcf8fbf4}{Spline\+Interpolation}} i)
+\begin{DoxyCompactList}\small\item\em Convert a LLH type to a string. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{Structs_8h_ad39c312dc44177340e2ebccd3d3f2d4c}{Syst\+Type\+\_\+\+To\+String}} (const \mbox{\hyperlink{Structs_8h_affc27d8b7b82d3713f45af17873fde2f}{Syst\+Type}} i)
+\begin{DoxyCompactList}\small\item\em Convert a Syst type type to a string. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{namespaceMaCh3Utils_a86d34372bb55524024fbdadd65834967}{Ma\+Ch3\+Utils\+::\+Get\+Mass\+From\+PDG}} (int PDG)
+\begin{DoxyCompactList}\small\item\em Return mass for given PDG. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{Structs_8h_a36b7eae1e9918d93ac6912d88c498a24}{Target\+Mat\+\_\+\+To\+String}} (const \mbox{\hyperlink{Structs_8h_a706416000041de040e97d5dbe0bdb580}{Target\+Mat}} i)
+\begin{DoxyCompactList}\small\item\em Converted the Target Mat to a string. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{Structs_8h_a7bff6c239eb0213052f3193d84a7bee0}{PDGTo\+Probs}} (\mbox{\hyperlink{Structs_8h_a0dfdd8cf84b8fa3495e9e5e520fe6cd2}{Nu\+PDG}} pdg)
+\begin{DoxyCompactList}\small\item\em ETA -\/ Probs3++ doesn\textquotesingle{}t use the PDG codes for the neutrino type so add in a small converter. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{Structs_8h_a602ad839195b7087a4897e8f6b603ee6}{Probs\+To\+PDG}} (\mbox{\hyperlink{Structs_8h_a5a4651943de972b89fd091d11fa7b3d7}{Prob\+Nu}} Nu\+Type)
+\item 
+std\+::string \mbox{\hyperlink{Structs_8h_afe33f23691e6b5e3e0f5ab97aaeb7726}{Test\+Statistic\+\_\+\+To\+String}} (\mbox{\hyperlink{Structs_8h_a960da89e33ac45a56f7bbfac3068dc67}{Test\+Statistic}} i)
+\begin{DoxyCompactList}\small\item\em Convert a LLH type to a string. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{Structs_8h_a34345b88bcd0e45db5612d58a972a154}{Overflow\+Integral}} (TH2\+Poly $\ast$poly)
+\begin{DoxyCompactList}\small\item\em WP\+: Helper function for calculating unbinned Integral of TH2\+Poly i.\+e including overflow. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{Structs_8h_ab18c6b2408d7b9021bad06d47a06ee8d}{No\+Overflow\+Integral}} (TH2\+Poly $\ast$poly)
+\begin{DoxyCompactList}\small\item\em WP\+: Helper function for calculating binned Integral of TH2\+Poly i.\+e not including overflow. \end{DoxyCompactList}\item 
+TH1D $\ast$ \mbox{\hyperlink{Structs_8h_a1aefd04e7350674108487c67f280ab94}{Poly\+ProjectionX}} (TObject $\ast$poly, std\+::string Temp\+Name, const std\+::vector$<$ double $>$ \&xbins, const bool compute\+Errors=false)
+\begin{DoxyCompactList}\small\item\em WP\+: Poly Projectors. \end{DoxyCompactList}\item 
+TH1D $\ast$ \mbox{\hyperlink{Structs_8h_afea74892d152ec37962af4bedf4488cc}{Poly\+ProjectionY}} (TObject $\ast$poly, std\+::string Temp\+Name, const std\+::vector$<$ double $>$ \&ybins, const bool compute\+Errors=false)
+\begin{DoxyCompactList}\small\item\em WP\+: Poly Projectors. \end{DoxyCompactList}\item 
+TH2D $\ast$ \mbox{\hyperlink{Structs_8h_af532e371f45a26f2b180d96b82b7d496}{Convert\+TH2\+Poly\+To\+TH2D}} (TH2\+Poly $\ast$poly, TH2D $\ast$TH2\+Dhist)
+\begin{DoxyCompactList}\small\item\em KS\+: Convert TH2D to TH2\+Poly. \end{DoxyCompactList}\item 
+TH2\+Poly $\ast$ \mbox{\hyperlink{Structs_8h_aa9cbcbd12e52cadbc498db3b78784104}{Convert\+TH2\+Dto\+TH2\+Poly}} (TH2D $\ast$TH2\+Dhist)
+\begin{DoxyCompactList}\small\item\em KS\+: Convert TH2\+Poly to TH2D. \end{DoxyCompactList}\item 
+TH2\+Poly $\ast$ \mbox{\hyperlink{Structs_8h_ae28c217f8e8591248bfa54e95fdd7741}{Normalise\+Poly}} (TH2\+Poly $\ast$Histogram)
+\begin{DoxyCompactList}\small\item\em WP\+: Helper to Normalise histograms. \end{DoxyCompactList}\item 
+TH2\+Poly $\ast$ \mbox{\hyperlink{Structs_8h_a61d8f295d13a5fe82a552c08d42c8bfa}{Poly\+Scale\+Width}} (TH2\+Poly $\ast$Histogram, double scale)
+\begin{DoxyCompactList}\small\item\em WP\+: Helper to scale th2poly analogous to th2d scale with option \char`\"{}width\char`\"{}. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{Structs_8h_a8bab8af5f0339c6ec0310ff5ea87f26d}{Poly\+Integral\+Width}} (TH2\+Poly $\ast$Histogram)
+\begin{DoxyCompactList}\small\item\em WP\+: Helper to calc integral of th2poly analogous to th2d integra; with option \char`\"{}width\char`\"{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{Structs_8h_a1aa25e8399ca7a229b8aa77c25407832}{Check\+TH2\+Poly\+File\+Version}} (TFile $\ast$file)
+\begin{DoxyCompactList}\small\item\em KS\+: ROOT changes something with binning when moving from ROOT 5 to ROOT 6. If you open ROOT5 produced file with ROOT6 you will be missing 9 last bins. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{Structs_8h_a85463c0c6943e3d544d5fcb3f96bf18a}{Remove\+Fitter}} (TH1D $\ast$hist, const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em KS\+: Remove fitted TF1 from hist to make comparison easier. \end{DoxyCompactList}\item 
+TGraph\+Asymm\+Errors $\ast$ \mbox{\hyperlink{Structs_8h_a3b61160c5ff362348884cb311e827221}{Make\+Asym\+Graph}} (TH1D $\ast$sigma\+Array\+Left, TH1D $\ast$sigma\+Array\+Centr, TH1D $\ast$sigma\+Array\+Right, const std\+::string \&title)
+\begin{DoxyCompactList}\small\item\em Used by sigma variation, check how 1 sigma changes spectra. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{Structs_8h_afbf5ccf44bc187caa268d4d158f4e5f6}{file\+\_\+exists}} (std\+::string filename)
+\begin{DoxyCompactList}\small\item\em Helper to check if files exist or not. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{Structs_8h_a6c6f918bcc5cfc261888be8d8ce2e444}{return\+Cherenkov\+Threshold\+Momentum}} (int PDG)
+\begin{DoxyCompactList}\small\item\em DB Get the Cherenkov momentum threshold in MeV. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{Structs_8h_a060e41fa0e5f91ce4fcbb6a4cafeaf13}{Calculate\+Q2}} (double PLep, double PUpd, double Enu\+True, double Initial\+Q2=0.\+0)
+\item 
+double \mbox{\hyperlink{Structs_8h_a2dce7c8dec7d4d7f9c61346893973421}{Calculate\+Enu}} (double PLep, double cos\+Theta, double EB, bool neutrino)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr const double \mbox{\hyperlink{Structs_8h_aa2920b946077e971486eaf1b49101f01}{\+\_\+\+BAD\+\_\+\+DOUBLE\+\_\+}} = -\/999.\+99
+\item 
+static constexpr const int \mbox{\hyperlink{Structs_8h_a27974ef7059f8fc3305881e97ede4325}{\+\_\+\+BAD\+\_\+\+INT\+\_\+}} = -\/999
+\item 
+static constexpr const double \mbox{\hyperlink{Structs_8h_aa3be778b9a2141963769bb334457b805}{\+\_\+\+DEFAULT\+\_\+\+RETURN\+\_\+\+VAL\+\_\+}} = -\/999999.\+123456
+\item 
+std\+::unordered\+\_\+map$<$ int, int $>$ \mbox{\hyperlink{namespaceMaCh3Utils_ab58c07d7176a31b58fe4c1fb0c81fd10}{Ma\+Ch3\+Utils\+::\+Known\+Det\+IDs\+Map}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{Structs_8h_a2abc3d82639661d84964bed9e2df0e68}\label{Structs_8h_a2abc3d82639661d84964bed9e2df0e68}} 
+\index{Structs.h@{Structs.h}!\_noexcept\_@{\_noexcept\_}}
+\index{\_noexcept\_@{\_noexcept\_}!Structs.h@{Structs.h}}
+\doxysubsubsection{\texorpdfstring{\_noexcept\_}{\_noexcept\_}}
+{\footnotesize\ttfamily \#define \+\_\+noexcept\+\_\+~noexcept}
+
+
+
+KS\+: noexcept can help with performance but is terrible for debugging, this is meant to help easy way of of turning it on or off. In near future move this to struct or other central class. 
+
+
+
+Definition at line \mbox{\hyperlink{Structs_8h_source_l00024}{24}} of file \mbox{\hyperlink{Structs_8h_source}{Structs.\+h}}.
+
+\mbox{\Hypertarget{Structs_8h_ab6a7e23420f0bcfb04f42f45f8283101}\label{Structs_8h_ab6a7e23420f0bcfb04f42f45f8283101}} 
+\index{Structs.h@{Structs.h}!\_restrict\_@{\_restrict\_}}
+\index{\_restrict\_@{\_restrict\_}!Structs.h@{Structs.h}}
+\doxysubsubsection{\texorpdfstring{\_restrict\_}{\_restrict\_}}
+{\footnotesize\ttfamily \#define \+\_\+restrict\+\_\+~\+\_\+\+\_\+restrict\+\_\+\+\_\+}
+
+
+
+KS\+: Using restrict limits the effects of pointer aliasing, aiding optimizations. While reading I found that there might be some compilers which don\textquotesingle{}t have {\bfseries{restrict}}. As always we use {\itshape restrict} to more easily turn off restrict in the code. 
+
+
+
+Definition at line \mbox{\hyperlink{Structs_8h_source_l00031}{31}} of file \mbox{\hyperlink{Structs_8h_source}{Structs.\+h}}.
+
+\mbox{\Hypertarget{Structs_8h_aad677c4443c651001dc4c1f781aef6dc}\label{Structs_8h_aad677c4443c651001dc4c1f781aef6dc}} 
+\index{Structs.h@{Structs.h}!\_TH2PolyOverflowBins\_@{\_TH2PolyOverflowBins\_}}
+\index{\_TH2PolyOverflowBins\_@{\_TH2PolyOverflowBins\_}!Structs.h@{Structs.h}}
+\doxysubsubsection{\texorpdfstring{\_TH2PolyOverflowBins\_}{\_TH2PolyOverflowBins\_}}
+{\footnotesize\ttfamily \#define \+\_\+\+TH2\+Poly\+Overflow\+Bins\+\_\+~9}
+
+
+
+Number of overflow bins in TH2\+Poly,. 
+
+
+
+Definition at line \mbox{\hyperlink{Structs_8h_source_l00037}{37}} of file \mbox{\hyperlink{Structs_8h_source}{Structs.\+h}}.
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{Structs_8h_a0dfdd8cf84b8fa3495e9e5e520fe6cd2}\label{Structs_8h_a0dfdd8cf84b8fa3495e9e5e520fe6cd2}} 
+\index{Structs.h@{Structs.h}!NuPDG@{NuPDG}}
+\index{NuPDG@{NuPDG}!Structs.h@{Structs.h}}
+\doxysubsubsection{\texorpdfstring{NuPDG}{NuPDG}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{Structs_8h_a0dfdd8cf84b8fa3495e9e5e520fe6cd2}{Nu\+PDG}}}
+
+
+
+Enum to track the incoming neutrino species. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kNue@{kNue}!Structs.h@{Structs.h}}\index{Structs.h@{Structs.h}!kNue@{kNue}}}\mbox{\Hypertarget{Structs_8h_a0dfdd8cf84b8fa3495e9e5e520fe6cd2aab024bd4737ec207f00dcd86a5d05908}\label{Structs_8h_a0dfdd8cf84b8fa3495e9e5e520fe6cd2aab024bd4737ec207f00dcd86a5d05908}} 
+k\+Nue&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kNumu@{kNumu}!Structs.h@{Structs.h}}\index{Structs.h@{Structs.h}!kNumu@{kNumu}}}\mbox{\Hypertarget{Structs_8h_a0dfdd8cf84b8fa3495e9e5e520fe6cd2ab0c6aa36beb10b27d1595708db570b20}\label{Structs_8h_a0dfdd8cf84b8fa3495e9e5e520fe6cd2ab0c6aa36beb10b27d1595708db570b20}} 
+k\+Numu&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kNutau@{kNutau}!Structs.h@{Structs.h}}\index{Structs.h@{Structs.h}!kNutau@{kNutau}}}\mbox{\Hypertarget{Structs_8h_a0dfdd8cf84b8fa3495e9e5e520fe6cd2a3845eaeb2a574c79e40ccb2e7b0c0a21}\label{Structs_8h_a0dfdd8cf84b8fa3495e9e5e520fe6cd2a3845eaeb2a574c79e40ccb2e7b0c0a21}} 
+k\+Nutau&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kNueBar@{kNueBar}!Structs.h@{Structs.h}}\index{Structs.h@{Structs.h}!kNueBar@{kNueBar}}}\mbox{\Hypertarget{Structs_8h_a0dfdd8cf84b8fa3495e9e5e520fe6cd2a74373d078c38b05c7ce7af9fe89e9f60}\label{Structs_8h_a0dfdd8cf84b8fa3495e9e5e520fe6cd2a74373d078c38b05c7ce7af9fe89e9f60}} 
+k\+Nue\+Bar&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kNumuBar@{kNumuBar}!Structs.h@{Structs.h}}\index{Structs.h@{Structs.h}!kNumuBar@{kNumuBar}}}\mbox{\Hypertarget{Structs_8h_a0dfdd8cf84b8fa3495e9e5e520fe6cd2a4002f8369785cc180fd411cacc50ad6a}\label{Structs_8h_a0dfdd8cf84b8fa3495e9e5e520fe6cd2a4002f8369785cc180fd411cacc50ad6a}} 
+k\+Numu\+Bar&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kNutauBar@{kNutauBar}!Structs.h@{Structs.h}}\index{Structs.h@{Structs.h}!kNutauBar@{kNutauBar}}}\mbox{\Hypertarget{Structs_8h_a0dfdd8cf84b8fa3495e9e5e520fe6cd2a17308656c7ae2206d971d1a8682c5feb}\label{Structs_8h_a0dfdd8cf84b8fa3495e9e5e520fe6cd2a17308656c7ae2206d971d1a8682c5feb}} 
+k\+Nutau\+Bar&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{Structs_8h_source_l00335}{335}} of file \mbox{\hyperlink{Structs_8h_source}{Structs.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00336\ \textcolor{comment}{//\ *****************}}
+\DoxyCodeLine{00337\ \ \ \mbox{\hyperlink{Structs_8h_a0dfdd8cf84b8fa3495e9e5e520fe6cd2aab024bd4737ec207f00dcd86a5d05908}{kNue}}\ =\ 12,}
+\DoxyCodeLine{00338\ \ \ \mbox{\hyperlink{Structs_8h_a0dfdd8cf84b8fa3495e9e5e520fe6cd2ab0c6aa36beb10b27d1595708db570b20}{kNumu}}\ =\ 14,}
+\DoxyCodeLine{00339\ \ \ \mbox{\hyperlink{Structs_8h_a0dfdd8cf84b8fa3495e9e5e520fe6cd2a3845eaeb2a574c79e40ccb2e7b0c0a21}{kNutau}}\ =\ 16,}
+\DoxyCodeLine{00340\ \ \ \mbox{\hyperlink{Structs_8h_a0dfdd8cf84b8fa3495e9e5e520fe6cd2a74373d078c38b05c7ce7af9fe89e9f60}{kNueBar}}\ =\ -\/12,}
+\DoxyCodeLine{00341\ \ \ \mbox{\hyperlink{Structs_8h_a0dfdd8cf84b8fa3495e9e5e520fe6cd2a4002f8369785cc180fd411cacc50ad6a}{kNumuBar}}\ =\ -\/14,}
+\DoxyCodeLine{00342\ \ \ \mbox{\hyperlink{Structs_8h_a0dfdd8cf84b8fa3495e9e5e520fe6cd2a17308656c7ae2206d971d1a8682c5feb}{kNutauBar}}\ =\ -\/16}
+\DoxyCodeLine{00343\ \};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Structs_8h_a5a4651943de972b89fd091d11fa7b3d7}\label{Structs_8h_a5a4651943de972b89fd091d11fa7b3d7}} 
+\index{Structs.h@{Structs.h}!ProbNu@{ProbNu}}
+\index{ProbNu@{ProbNu}!Structs.h@{Structs.h}}
+\doxysubsubsection{\texorpdfstring{ProbNu}{ProbNu}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{Structs_8h_a5a4651943de972b89fd091d11fa7b3d7}{Prob\+Nu}}}
+
+
+
+Enum to track neutrino species for Prob3. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kProbNue@{kProbNue}!Structs.h@{Structs.h}}\index{Structs.h@{Structs.h}!kProbNue@{kProbNue}}}\mbox{\Hypertarget{Structs_8h_a5a4651943de972b89fd091d11fa7b3d7a5cd6d0de7e8784e41d9b25b568e4a910}\label{Structs_8h_a5a4651943de972b89fd091d11fa7b3d7a5cd6d0de7e8784e41d9b25b568e4a910}} 
+k\+Prob\+Nue&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kProbNumu@{kProbNumu}!Structs.h@{Structs.h}}\index{Structs.h@{Structs.h}!kProbNumu@{kProbNumu}}}\mbox{\Hypertarget{Structs_8h_a5a4651943de972b89fd091d11fa7b3d7a06c430fb843a21e2716d7a4ac4b02b8f}\label{Structs_8h_a5a4651943de972b89fd091d11fa7b3d7a06c430fb843a21e2716d7a4ac4b02b8f}} 
+k\+Prob\+Numu&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kProbNutau@{kProbNutau}!Structs.h@{Structs.h}}\index{Structs.h@{Structs.h}!kProbNutau@{kProbNutau}}}\mbox{\Hypertarget{Structs_8h_a5a4651943de972b89fd091d11fa7b3d7a01745b4e2b8e4c6e585d5256336ec0fc}\label{Structs_8h_a5a4651943de972b89fd091d11fa7b3d7a01745b4e2b8e4c6e585d5256336ec0fc}} 
+k\+Prob\+Nutau&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kProbNueBar@{kProbNueBar}!Structs.h@{Structs.h}}\index{Structs.h@{Structs.h}!kProbNueBar@{kProbNueBar}}}\mbox{\Hypertarget{Structs_8h_a5a4651943de972b89fd091d11fa7b3d7a8d16d56aca132d6c241c7bfa76a678ce}\label{Structs_8h_a5a4651943de972b89fd091d11fa7b3d7a8d16d56aca132d6c241c7bfa76a678ce}} 
+k\+Prob\+Nue\+Bar&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kProbNumuBar@{kProbNumuBar}!Structs.h@{Structs.h}}\index{Structs.h@{Structs.h}!kProbNumuBar@{kProbNumuBar}}}\mbox{\Hypertarget{Structs_8h_a5a4651943de972b89fd091d11fa7b3d7a72f2254b7daf89baabd39b7b42998ad7}\label{Structs_8h_a5a4651943de972b89fd091d11fa7b3d7a72f2254b7daf89baabd39b7b42998ad7}} 
+k\+Prob\+Numu\+Bar&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kProbNutauBar@{kProbNutauBar}!Structs.h@{Structs.h}}\index{Structs.h@{Structs.h}!kProbNutauBar@{kProbNutauBar}}}\mbox{\Hypertarget{Structs_8h_a5a4651943de972b89fd091d11fa7b3d7a02ac372b77ed65a76630c2bf8435e888}\label{Structs_8h_a5a4651943de972b89fd091d11fa7b3d7a02ac372b77ed65a76630c2bf8435e888}} 
+k\+Prob\+Nutau\+Bar&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{Structs_8h_source_l00347}{347}} of file \mbox{\hyperlink{Structs_8h_source}{Structs.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00347\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00348\ \textcolor{comment}{//\ *****************}}
+\DoxyCodeLine{00349\ \ \ \mbox{\hyperlink{Structs_8h_a5a4651943de972b89fd091d11fa7b3d7a5cd6d0de7e8784e41d9b25b568e4a910}{kProbNue}}\ =\ 1,}
+\DoxyCodeLine{00350\ \ \ \mbox{\hyperlink{Structs_8h_a5a4651943de972b89fd091d11fa7b3d7a06c430fb843a21e2716d7a4ac4b02b8f}{kProbNumu}}\ =\ 2,}
+\DoxyCodeLine{00351\ \ \ \mbox{\hyperlink{Structs_8h_a5a4651943de972b89fd091d11fa7b3d7a01745b4e2b8e4c6e585d5256336ec0fc}{kProbNutau}}\ =\ 3,}
+\DoxyCodeLine{00352\ \ \ \mbox{\hyperlink{Structs_8h_a5a4651943de972b89fd091d11fa7b3d7a8d16d56aca132d6c241c7bfa76a678ce}{kProbNueBar}}\ =\ -\/1,}
+\DoxyCodeLine{00353\ \ \ \mbox{\hyperlink{Structs_8h_a5a4651943de972b89fd091d11fa7b3d7a72f2254b7daf89baabd39b7b42998ad7}{kProbNumuBar}}\ =\ -\/2,}
+\DoxyCodeLine{00354\ \ \ \mbox{\hyperlink{Structs_8h_a5a4651943de972b89fd091d11fa7b3d7a02ac372b77ed65a76630c2bf8435e888}{kProbNutauBar}}\ =\ -\/3}
+\DoxyCodeLine{00355\ \};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Structs_8h_a6a73aa1ad819973a9c421c17c2a7f36d}\label{Structs_8h_a6a73aa1ad819973a9c421c17c2a7f36d}} 
+\index{Structs.h@{Structs.h}!RespFuncType@{RespFuncType}}
+\index{RespFuncType@{RespFuncType}!Structs.h@{Structs.h}}
+\doxysubsubsection{\texorpdfstring{RespFuncType}{RespFuncType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{Structs_8h_a6a73aa1ad819973a9c421c17c2a7f36d}{Resp\+Func\+Type}}}
+
+
+
+Make an enum of the spline interpolation type. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kTSpline3\_red@{kTSpline3\_red}!Structs.h@{Structs.h}}\index{Structs.h@{Structs.h}!kTSpline3\_red@{kTSpline3\_red}}}\mbox{\Hypertarget{Structs_8h_a6a73aa1ad819973a9c421c17c2a7f36da8bea6994e011cc85a5a88b50c97ce7b2}\label{Structs_8h_a6a73aa1ad819973a9c421c17c2a7f36da8bea6994e011cc85a5a88b50c97ce7b2}} 
+k\+TSpline3\+\_\+red&Uses \mbox{\hyperlink{classTSpline3__red}{TSpline3\+\_\+red}} for interpolation. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kTF1\_red@{kTF1\_red}!Structs.h@{Structs.h}}\index{Structs.h@{Structs.h}!kTF1\_red@{kTF1\_red}}}\mbox{\Hypertarget{Structs_8h_a6a73aa1ad819973a9c421c17c2a7f36da847a18b0a859ce2b3b87a98f455855b1}\label{Structs_8h_a6a73aa1ad819973a9c421c17c2a7f36da847a18b0a859ce2b3b87a98f455855b1}} 
+k\+TF1\+\_\+red&Uses \mbox{\hyperlink{classTF1__red}{TF1\+\_\+red}} for interpolation. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kRespFuncTypes@{kRespFuncTypes}!Structs.h@{Structs.h}}\index{Structs.h@{Structs.h}!kRespFuncTypes@{kRespFuncTypes}}}\mbox{\Hypertarget{Structs_8h_a6a73aa1ad819973a9c421c17c2a7f36dadaea03c5220761db703fcada6f3c94ea}\label{Structs_8h_a6a73aa1ad819973a9c421c17c2a7f36dadaea03c5220761db703fcada6f3c94ea}} 
+k\+Resp\+Func\+Types&This only enumerates. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{Structs_8h_source_l00119}{119}} of file \mbox{\hyperlink{Structs_8h_source}{Structs.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00120\ \ \ \mbox{\hyperlink{Structs_8h_a6a73aa1ad819973a9c421c17c2a7f36da8bea6994e011cc85a5a88b50c97ce7b2}{kTSpline3\_red}},\ \ }
+\DoxyCodeLine{00121\ \ \ \mbox{\hyperlink{Structs_8h_a6a73aa1ad819973a9c421c17c2a7f36da847a18b0a859ce2b3b87a98f455855b1}{kTF1\_red}},\ \ \ \ \ \ \ }
+\DoxyCodeLine{00122\ \ \ \mbox{\hyperlink{Structs_8h_a6a73aa1ad819973a9c421c17c2a7f36dadaea03c5220761db703fcada6f3c94ea}{kRespFuncTypes}}\ \ }
+\DoxyCodeLine{00123\ \};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Structs_8h_a6720d732608767153550aebebcf8fbf4}\label{Structs_8h_a6720d732608767153550aebebcf8fbf4}} 
+\index{Structs.h@{Structs.h}!SplineInterpolation@{SplineInterpolation}}
+\index{SplineInterpolation@{SplineInterpolation}!Structs.h@{Structs.h}}
+\doxysubsubsection{\texorpdfstring{SplineInterpolation}{SplineInterpolation}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{Structs_8h_a6720d732608767153550aebebcf8fbf4}{Spline\+Interpolation}}}
+
+
+
+Make an enum of the spline interpolation type. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kTSpline3@{kTSpline3}!Structs.h@{Structs.h}}\index{Structs.h@{Structs.h}!kTSpline3@{kTSpline3}}}\mbox{\Hypertarget{Structs_8h_a6720d732608767153550aebebcf8fbf4a56c886e7b34c938027a7140748999c8a}\label{Structs_8h_a6720d732608767153550aebebcf8fbf4a56c886e7b34c938027a7140748999c8a}} 
+k\+TSpline3&Default TSpline3 interpolation. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kLinear@{kLinear}!Structs.h@{Structs.h}}\index{Structs.h@{Structs.h}!kLinear@{kLinear}}}\mbox{\Hypertarget{Structs_8h_a6720d732608767153550aebebcf8fbf4ac188c019178783e5be55110601309d7d}\label{Structs_8h_a6720d732608767153550aebebcf8fbf4ac188c019178783e5be55110601309d7d}} 
+k\+Linear&Linear interpolation between knots. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kMonotonic@{kMonotonic}!Structs.h@{Structs.h}}\index{Structs.h@{Structs.h}!kMonotonic@{kMonotonic}}}\mbox{\Hypertarget{Structs_8h_a6720d732608767153550aebebcf8fbf4a68f4b10c9689389fd8fea39dc6c097d3}\label{Structs_8h_a6720d732608767153550aebebcf8fbf4a68f4b10c9689389fd8fea39dc6c097d3}} 
+k\+Monotonic&EM\+: DOES NOT make the entire spline monotonic, only the segments. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kAkima@{kAkima}!Structs.h@{Structs.h}}\index{Structs.h@{Structs.h}!kAkima@{kAkima}}}\mbox{\Hypertarget{Structs_8h_a6720d732608767153550aebebcf8fbf4afe5701215b64da0194c6fead25edd976}\label{Structs_8h_a6720d732608767153550aebebcf8fbf4afe5701215b64da0194c6fead25edd976}} 
+k\+Akima&EM\+: Akima spline iis allowed to be discontinuous in 2nd derivative and coefficients in any segment. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kLinearFunc@{kLinearFunc}!Structs.h@{Structs.h}}\index{Structs.h@{Structs.h}!kLinearFunc@{kLinearFunc}}}\mbox{\Hypertarget{Structs_8h_a6720d732608767153550aebebcf8fbf4ade75212a78a5cf860f84473a80355f42}\label{Structs_8h_a6720d732608767153550aebebcf8fbf4ade75212a78a5cf860f84473a80355f42}} 
+k\+Linear\+Func&Liner interpolation using TF1 not spline. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kSplineInterpolations@{kSplineInterpolations}!Structs.h@{Structs.h}}\index{Structs.h@{Structs.h}!kSplineInterpolations@{kSplineInterpolations}}}\mbox{\Hypertarget{Structs_8h_a6720d732608767153550aebebcf8fbf4a9e1a345912f2baebd863ab7d40c9ab7b}\label{Structs_8h_a6720d732608767153550aebebcf8fbf4a9e1a345912f2baebd863ab7d40c9ab7b}} 
+k\+Spline\+Interpolations&This only enumerates. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{Structs_8h_source_l00126}{126}} of file \mbox{\hyperlink{Structs_8h_source}{Structs.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00127\ \ \ \mbox{\hyperlink{Structs_8h_a6720d732608767153550aebebcf8fbf4a56c886e7b34c938027a7140748999c8a}{kTSpline3}},\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00128\ \ \ \mbox{\hyperlink{Structs_8h_a6720d732608767153550aebebcf8fbf4ac188c019178783e5be55110601309d7d}{kLinear}},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00129\ \ \ \mbox{\hyperlink{Structs_8h_a6720d732608767153550aebebcf8fbf4a68f4b10c9689389fd8fea39dc6c097d3}{kMonotonic}},\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00130\ \ \ \mbox{\hyperlink{Structs_8h_a6720d732608767153550aebebcf8fbf4afe5701215b64da0194c6fead25edd976}{kAkima}},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00131\ \ \ \mbox{\hyperlink{Structs_8h_a6720d732608767153550aebebcf8fbf4ade75212a78a5cf860f84473a80355f42}{kLinearFunc}},\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00132\ \ \ \mbox{\hyperlink{Structs_8h_a6720d732608767153550aebebcf8fbf4a9e1a345912f2baebd863ab7d40c9ab7b}{kSplineInterpolations}}\ \ }
+\DoxyCodeLine{00133\ \};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Structs_8h_affc27d8b7b82d3713f45af17873fde2f}\label{Structs_8h_affc27d8b7b82d3713f45af17873fde2f}} 
+\index{Structs.h@{Structs.h}!SystType@{SystType}}
+\index{SystType@{SystType}!Structs.h@{Structs.h}}
+\doxysubsubsection{\texorpdfstring{SystType}{SystType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{Structs_8h_affc27d8b7b82d3713f45af17873fde2f}{Syst\+Type}}}
+
+Make an enum of systematic type recognised by covariance class \begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000005}{Todo}}]KS\+: Consider using enum class, it is generally recommended as safer. It will require many static\+\_\+cast \end{DoxyRefDesc}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kNorm@{kNorm}!Structs.h@{Structs.h}}\index{Structs.h@{Structs.h}!kNorm@{kNorm}}}\mbox{\Hypertarget{Structs_8h_affc27d8b7b82d3713f45af17873fde2fa085cb29127b1cf7b1ddd429ff4440b17}\label{Structs_8h_affc27d8b7b82d3713f45af17873fde2fa085cb29127b1cf7b1ddd429ff4440b17}} 
+k\+Norm&For normalisation parameters. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kSpline@{kSpline}!Structs.h@{Structs.h}}\index{Structs.h@{Structs.h}!kSpline@{kSpline}}}\mbox{\Hypertarget{Structs_8h_affc27d8b7b82d3713f45af17873fde2fa29d6ccf6cf507f6e66c72b1d3c2aed00}\label{Structs_8h_affc27d8b7b82d3713f45af17873fde2fa29d6ccf6cf507f6e66c72b1d3c2aed00}} 
+k\+Spline&For splined parameters (1D) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kFunc@{kFunc}!Structs.h@{Structs.h}}\index{Structs.h@{Structs.h}!kFunc@{kFunc}}}\mbox{\Hypertarget{Structs_8h_affc27d8b7b82d3713f45af17873fde2fad9b1ac76e80f59684cfb7dc996fc870d}\label{Structs_8h_affc27d8b7b82d3713f45af17873fde2fad9b1ac76e80f59684cfb7dc996fc870d}} 
+k\+Func&For functional parameters. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kSystTypes@{kSystTypes}!Structs.h@{Structs.h}}\index{Structs.h@{Structs.h}!kSystTypes@{kSystTypes}}}\mbox{\Hypertarget{Structs_8h_affc27d8b7b82d3713f45af17873fde2fa32e7da18117f9defb24042a71776e5cb}\label{Structs_8h_affc27d8b7b82d3713f45af17873fde2fa32e7da18117f9defb24042a71776e5cb}} 
+k\+Syst\+Types&This only enumerates. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{Structs_8h_source_l00218}{218}} of file \mbox{\hyperlink{Structs_8h_source}{Structs.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00219\ \ \ \mbox{\hyperlink{Structs_8h_affc27d8b7b82d3713f45af17873fde2fa085cb29127b1cf7b1ddd429ff4440b17}{kNorm}},\ \ \ \ \ \ }
+\DoxyCodeLine{00220\ \ \ \mbox{\hyperlink{Structs_8h_affc27d8b7b82d3713f45af17873fde2fa29d6ccf6cf507f6e66c72b1d3c2aed00}{kSpline}},\ \ \ \ }
+\DoxyCodeLine{00221\ \ \ \mbox{\hyperlink{Structs_8h_affc27d8b7b82d3713f45af17873fde2fad9b1ac76e80f59684cfb7dc996fc870d}{kFunc}},\ \ \ \ \ \ }
+\DoxyCodeLine{00222\ \ \ \mbox{\hyperlink{Structs_8h_affc27d8b7b82d3713f45af17873fde2fa32e7da18117f9defb24042a71776e5cb}{kSystTypes}}\ \ }
+\DoxyCodeLine{00223\ \};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Structs_8h_a706416000041de040e97d5dbe0bdb580}\label{Structs_8h_a706416000041de040e97d5dbe0bdb580}} 
+\index{Structs.h@{Structs.h}!TargetMat@{TargetMat}}
+\index{TargetMat@{TargetMat}!Structs.h@{Structs.h}}
+\doxysubsubsection{\texorpdfstring{TargetMat}{TargetMat}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{Structs_8h_a706416000041de040e97d5dbe0bdb580}{Target\+Mat}}}
+
+
+
+Enum to track the target material. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kTarget\_H@{kTarget\_H}!Structs.h@{Structs.h}}\index{Structs.h@{Structs.h}!kTarget\_H@{kTarget\_H}}}\mbox{\Hypertarget{Structs_8h_a706416000041de040e97d5dbe0bdb580a93b6b80f9eb311ce2ed33ee3ab3d628f}\label{Structs_8h_a706416000041de040e97d5dbe0bdb580a93b6b80f9eb311ce2ed33ee3ab3d628f}} 
+k\+Target\+\_\+H&Hydrogen. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kTarget\_C@{kTarget\_C}!Structs.h@{Structs.h}}\index{Structs.h@{Structs.h}!kTarget\_C@{kTarget\_C}}}\mbox{\Hypertarget{Structs_8h_a706416000041de040e97d5dbe0bdb580a4ef60de1c65e797b83a21dc41c9d24c1}\label{Structs_8h_a706416000041de040e97d5dbe0bdb580a4ef60de1c65e797b83a21dc41c9d24c1}} 
+k\+Target\+\_\+C&Carbon 12. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kTarget\_N@{kTarget\_N}!Structs.h@{Structs.h}}\index{Structs.h@{Structs.h}!kTarget\_N@{kTarget\_N}}}\mbox{\Hypertarget{Structs_8h_a706416000041de040e97d5dbe0bdb580ac62ee782c726abaef5be73fa37051f1a}\label{Structs_8h_a706416000041de040e97d5dbe0bdb580ac62ee782c726abaef5be73fa37051f1a}} 
+k\+Target\+\_\+N&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kTarget\_O@{kTarget\_O}!Structs.h@{Structs.h}}\index{Structs.h@{Structs.h}!kTarget\_O@{kTarget\_O}}}\mbox{\Hypertarget{Structs_8h_a706416000041de040e97d5dbe0bdb580aed102c56020984a88e9d68c44f7cc59e}\label{Structs_8h_a706416000041de040e97d5dbe0bdb580aed102c56020984a88e9d68c44f7cc59e}} 
+k\+Target\+\_\+O&Oxygen 16. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kTarget\_Al@{kTarget\_Al}!Structs.h@{Structs.h}}\index{Structs.h@{Structs.h}!kTarget\_Al@{kTarget\_Al}}}\mbox{\Hypertarget{Structs_8h_a706416000041de040e97d5dbe0bdb580a66f3bd62228437490c204146fc3c9650}\label{Structs_8h_a706416000041de040e97d5dbe0bdb580a66f3bd62228437490c204146fc3c9650}} 
+k\+Target\+\_\+\+Al&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kTarget\_Ar@{kTarget\_Ar}!Structs.h@{Structs.h}}\index{Structs.h@{Structs.h}!kTarget\_Ar@{kTarget\_Ar}}}\mbox{\Hypertarget{Structs_8h_a706416000041de040e97d5dbe0bdb580aaf8c52b9d0543ba495ac4810ae574ab6}\label{Structs_8h_a706416000041de040e97d5dbe0bdb580aaf8c52b9d0543ba495ac4810ae574ab6}} 
+k\+Target\+\_\+\+Ar&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kTarget\_Ti@{kTarget\_Ti}!Structs.h@{Structs.h}}\index{Structs.h@{Structs.h}!kTarget\_Ti@{kTarget\_Ti}}}\mbox{\Hypertarget{Structs_8h_a706416000041de040e97d5dbe0bdb580aaf03f51fe85225e1b0a61f50e6593dc4}\label{Structs_8h_a706416000041de040e97d5dbe0bdb580aaf03f51fe85225e1b0a61f50e6593dc4}} 
+k\+Target\+\_\+\+Ti&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kTarget\_Fe@{kTarget\_Fe}!Structs.h@{Structs.h}}\index{Structs.h@{Structs.h}!kTarget\_Fe@{kTarget\_Fe}}}\mbox{\Hypertarget{Structs_8h_a706416000041de040e97d5dbe0bdb580a40b8c7791706f48abf66e8fa8f943282}\label{Structs_8h_a706416000041de040e97d5dbe0bdb580a40b8c7791706f48abf66e8fa8f943282}} 
+k\+Target\+\_\+\+Fe&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kTarget\_Pb@{kTarget\_Pb}!Structs.h@{Structs.h}}\index{Structs.h@{Structs.h}!kTarget\_Pb@{kTarget\_Pb}}}\mbox{\Hypertarget{Structs_8h_a706416000041de040e97d5dbe0bdb580ad5d1996f0e943feb8183b9b07ab701c0}\label{Structs_8h_a706416000041de040e97d5dbe0bdb580ad5d1996f0e943feb8183b9b07ab701c0}} 
+k\+Target\+\_\+\+Pb&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{Structs_8h_source_l00281}{281}} of file \mbox{\hyperlink{Structs_8h_source}{Structs.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00282\ \textcolor{comment}{//\ *****************}}
+\DoxyCodeLine{00283\ \ \ \mbox{\hyperlink{Structs_8h_a706416000041de040e97d5dbe0bdb580a93b6b80f9eb311ce2ed33ee3ab3d628f}{kTarget\_H}}\ \ =\ 1,\ \ \ }
+\DoxyCodeLine{00284\ \ \ \mbox{\hyperlink{Structs_8h_a706416000041de040e97d5dbe0bdb580a4ef60de1c65e797b83a21dc41c9d24c1}{kTarget\_C}}\ \ =\ 12,\ \ }
+\DoxyCodeLine{00285\ \ \ \mbox{\hyperlink{Structs_8h_a706416000041de040e97d5dbe0bdb580ac62ee782c726abaef5be73fa37051f1a}{kTarget\_N}}\ \ =\ 14,}
+\DoxyCodeLine{00286\ \ \ \mbox{\hyperlink{Structs_8h_a706416000041de040e97d5dbe0bdb580aed102c56020984a88e9d68c44f7cc59e}{kTarget\_O}}\ \ =\ 16,\ \ }
+\DoxyCodeLine{00287\ \ \ \mbox{\hyperlink{Structs_8h_a706416000041de040e97d5dbe0bdb580a66f3bd62228437490c204146fc3c9650}{kTarget\_Al}}\ =\ 27,}
+\DoxyCodeLine{00288\ \ \ \mbox{\hyperlink{Structs_8h_a706416000041de040e97d5dbe0bdb580aaf8c52b9d0543ba495ac4810ae574ab6}{kTarget\_Ar}}\ =\ 40,}
+\DoxyCodeLine{00289\ \ \ \mbox{\hyperlink{Structs_8h_a706416000041de040e97d5dbe0bdb580aaf03f51fe85225e1b0a61f50e6593dc4}{kTarget\_Ti}}\ =\ 48,}
+\DoxyCodeLine{00290\ \ \ \mbox{\hyperlink{Structs_8h_a706416000041de040e97d5dbe0bdb580a40b8c7791706f48abf66e8fa8f943282}{kTarget\_Fe}}\ =\ 56,}
+\DoxyCodeLine{00291\ \ \ \mbox{\hyperlink{Structs_8h_a706416000041de040e97d5dbe0bdb580ad5d1996f0e943feb8183b9b07ab701c0}{kTarget\_Pb}}\ =\ 207}
+\DoxyCodeLine{00292\ \};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Structs_8h_a960da89e33ac45a56f7bbfac3068dc67}\label{Structs_8h_a960da89e33ac45a56f7bbfac3068dc67}} 
+\index{Structs.h@{Structs.h}!TestStatistic@{TestStatistic}}
+\index{TestStatistic@{TestStatistic}!Structs.h@{Structs.h}}
+\doxysubsubsection{\texorpdfstring{TestStatistic}{TestStatistic}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{Structs_8h_a960da89e33ac45a56f7bbfac3068dc67}{Test\+Statistic}}}
+
+
+
+Make an enum of the test statistic that we\textquotesingle{}re using. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kPoisson@{kPoisson}!Structs.h@{Structs.h}}\index{Structs.h@{Structs.h}!kPoisson@{kPoisson}}}\mbox{\Hypertarget{Structs_8h_a960da89e33ac45a56f7bbfac3068dc67a82f43d91f1eda213c4b5c486672a32a5}\label{Structs_8h_a960da89e33ac45a56f7bbfac3068dc67a82f43d91f1eda213c4b5c486672a32a5}} 
+k\+Poisson&Standard Poisson likelihood. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kBarlowBeeston@{kBarlowBeeston}!Structs.h@{Structs.h}}\index{Structs.h@{Structs.h}!kBarlowBeeston@{kBarlowBeeston}}}\mbox{\Hypertarget{Structs_8h_a960da89e33ac45a56f7bbfac3068dc67a3c9b50397bd37ce679bbdda14f6108c4}\label{Structs_8h_a960da89e33ac45a56f7bbfac3068dc67a3c9b50397bd37ce679bbdda14f6108c4}} 
+k\+Barlow\+Beeston&Barlow-\/\+Beeston following Conway \cite{Conway:2011in}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kIceCube@{kIceCube}!Structs.h@{Structs.h}}\index{Structs.h@{Structs.h}!kIceCube@{kIceCube}}}\mbox{\Hypertarget{Structs_8h_a960da89e33ac45a56f7bbfac3068dc67a5a1aedce85942661f297f503d606c472}\label{Structs_8h_a960da89e33ac45a56f7bbfac3068dc67a5a1aedce85942661f297f503d606c472}} 
+k\+Ice\+Cube&Based on \cite{Arguelles:2019izp}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kPearson@{kPearson}!Structs.h@{Structs.h}}\index{Structs.h@{Structs.h}!kPearson@{kPearson}}}\mbox{\Hypertarget{Structs_8h_a960da89e33ac45a56f7bbfac3068dc67a1ac0c03f07bf2bb9ad083e449d69ffd7}\label{Structs_8h_a960da89e33ac45a56f7bbfac3068dc67a1ac0c03f07bf2bb9ad083e449d69ffd7}} 
+k\+Pearson&Standard Pearson likelihood. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kDembinskiAbdelmottele@{kDembinskiAbdelmottele}!Structs.h@{Structs.h}}\index{Structs.h@{Structs.h}!kDembinskiAbdelmottele@{kDembinskiAbdelmottele}}}\mbox{\Hypertarget{Structs_8h_a960da89e33ac45a56f7bbfac3068dc67a6589bdeaef8de84e7ef545fd709772bb}\label{Structs_8h_a960da89e33ac45a56f7bbfac3068dc67a6589bdeaef8de84e7ef545fd709772bb}} 
+k\+Dembinski\+Abdelmottele&Based on \cite{Dembinski:2022ios}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kNTestStatistics@{kNTestStatistics}!Structs.h@{Structs.h}}\index{Structs.h@{Structs.h}!kNTestStatistics@{kNTestStatistics}}}\mbox{\Hypertarget{Structs_8h_a960da89e33ac45a56f7bbfac3068dc67a1459dbcc0f1b68b266cf0ddc37c34aee}\label{Structs_8h_a960da89e33ac45a56f7bbfac3068dc67a1459dbcc0f1b68b266cf0ddc37c34aee}} 
+k\+NTest\+Statistics&Number of test statistics. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{Structs_8h_source_l00419}{419}} of file \mbox{\hyperlink{Structs_8h_source}{Structs.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00419\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00420\ \ \ \mbox{\hyperlink{Structs_8h_a960da89e33ac45a56f7bbfac3068dc67a82f43d91f1eda213c4b5c486672a32a5}{kPoisson}},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00421\ \ \ \mbox{\hyperlink{Structs_8h_a960da89e33ac45a56f7bbfac3068dc67a3c9b50397bd37ce679bbdda14f6108c4}{kBarlowBeeston}},\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00422\ \ \ \mbox{\hyperlink{Structs_8h_a960da89e33ac45a56f7bbfac3068dc67a5a1aedce85942661f297f503d606c472}{kIceCube}},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00423\ \ \ \mbox{\hyperlink{Structs_8h_a960da89e33ac45a56f7bbfac3068dc67a1ac0c03f07bf2bb9ad083e449d69ffd7}{kPearson}},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00424\ \ \ \mbox{\hyperlink{Structs_8h_a960da89e33ac45a56f7bbfac3068dc67a6589bdeaef8de84e7ef545fd709772bb}{kDembinskiAbdelmottele}},\ \ }
+\DoxyCodeLine{00425\ \ \ \mbox{\hyperlink{Structs_8h_a960da89e33ac45a56f7bbfac3068dc67a1459dbcc0f1b68b266cf0ddc37c34aee}{kNTestStatistics}}\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00426\ \};}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{Structs_8h_a2dce7c8dec7d4d7f9c61346893973421}\label{Structs_8h_a2dce7c8dec7d4d7f9c61346893973421}} 
+\index{Structs.h@{Structs.h}!CalculateEnu@{CalculateEnu}}
+\index{CalculateEnu@{CalculateEnu}!Structs.h@{Structs.h}}
+\doxysubsubsection{\texorpdfstring{CalculateEnu()}{CalculateEnu()}}
+{\footnotesize\ttfamily double Calculate\+Enu (\begin{DoxyParamCaption}\item[{double}]{PLep,  }\item[{double}]{cos\+Theta,  }\item[{double}]{EB,  }\item[{bool}]{neutrino }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Structs_8cpp_source_l00491}{491}} of file \mbox{\hyperlink{Structs_8cpp_source}{Structs.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00491\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00492\ \textcolor{comment}{//\ ***************************************************************************}}
+\DoxyCodeLine{00493\ \ \ \textcolor{keywordtype}{double}\ mNeff\ =\ 0.93956536\ -\/\ Eb\ /\ 1000.;}
+\DoxyCodeLine{00494\ \ \ \textcolor{keywordtype}{double}\ mNoth\ =\ 0.93827203;}
+\DoxyCodeLine{00495\ }
+\DoxyCodeLine{00496\ \ \ \textcolor{keywordflow}{if}\ (!neutrino)\ \{}
+\DoxyCodeLine{00497\ \ \ \ \ mNeff\ =\ 0.93827203\ -\/\ Eb\ /\ 1000.;}
+\DoxyCodeLine{00498\ \ \ \ \ mNoth\ =\ 0.93956536;}
+\DoxyCodeLine{00499\ \ \ \}}
+\DoxyCodeLine{00500\ }
+\DoxyCodeLine{00501\ \ \ \textcolor{keywordtype}{double}\ mLep\ =\ 0.10565837;}
+\DoxyCodeLine{00502\ \ \ \textcolor{keywordtype}{double}\ eLep\ =\ sqrt(PLep\ *\ PLep\ +\ mLep\ *\ mLep);}
+\DoxyCodeLine{00503\ }
+\DoxyCodeLine{00504\ \ \ \textcolor{keywordtype}{double}\ Enu\ =\ (2\ *\ mNeff\ *\ eLep\ -\/\ mLep\ *\ mLep\ +\ mNoth\ *\ mNoth\ -\/\ mNeff\ *\ mNeff)\ /(2\ *\ (mNeff\ -\/\ eLep\ +\ PLep\ *\ costh));}
+\DoxyCodeLine{00505\ }
+\DoxyCodeLine{00506\ \ \ \textcolor{keywordflow}{return}\ Enu;}
+\DoxyCodeLine{00507\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Structs_8h_a060e41fa0e5f91ce4fcbb6a4cafeaf13}\label{Structs_8h_a060e41fa0e5f91ce4fcbb6a4cafeaf13}} 
+\index{Structs.h@{Structs.h}!CalculateQ2@{CalculateQ2}}
+\index{CalculateQ2@{CalculateQ2}!Structs.h@{Structs.h}}
+\doxysubsubsection{\texorpdfstring{CalculateQ2()}{CalculateQ2()}}
+{\footnotesize\ttfamily double Calculate\+Q2 (\begin{DoxyParamCaption}\item[{double}]{PLep,  }\item[{double}]{PUpd,  }\item[{double}]{Enu\+True,  }\item[{double}]{Initial\+Q2 = {\ttfamily 0.0} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Structs_8cpp_source_l00472}{472}} of file \mbox{\hyperlink{Structs_8cpp_source}{Structs.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00472\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00473\ \textcolor{comment}{//\ ***************************************************************************}}
+\DoxyCodeLine{00474\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ MLep\ =\ 0.10565837;}
+\DoxyCodeLine{00475\ }
+\DoxyCodeLine{00476\ \ \ \textcolor{comment}{//\ Caluclate\ muon\ energy}}
+\DoxyCodeLine{00477\ \ \ \textcolor{keywordtype}{double}\ ELep\ =\ sqrt((MLep*MLep)+(PLep*PLep));}
+\DoxyCodeLine{00478\ }
+\DoxyCodeLine{00479\ \ \ \textcolor{keywordtype}{double}\ CosTh\ =\ (2*EnuTrue*ELep\ -\/\ MLep*MLep\ -\/\ InitialQ2)/(2*EnuTrue*PLep);}
+\DoxyCodeLine{00480\ }
+\DoxyCodeLine{00481\ \ \ ELep\ =\ sqrt((MLep*MLep)+(PUpd*PUpd));}
+\DoxyCodeLine{00482\ }
+\DoxyCodeLine{00483\ \ \ \textcolor{comment}{//\ Calculate\ the\ new\ Q2}}
+\DoxyCodeLine{00484\ \ \ \textcolor{keywordtype}{double}\ Q2Upd\ =\ -\/(MLep*MLep)\ +\ 2.0*EnuTrue*(ELep\ -\/\ PUpd*CosTh);}
+\DoxyCodeLine{00485\ }
+\DoxyCodeLine{00486\ \ \ \textcolor{keywordflow}{return}\ Q2Upd\ -\/\ InitialQ2;}
+\DoxyCodeLine{00487\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Structs_8h_a1aa25e8399ca7a229b8aa77c25407832}\label{Structs_8h_a1aa25e8399ca7a229b8aa77c25407832}} 
+\index{Structs.h@{Structs.h}!CheckTH2PolyFileVersion@{CheckTH2PolyFileVersion}}
+\index{CheckTH2PolyFileVersion@{CheckTH2PolyFileVersion}!Structs.h@{Structs.h}}
+\doxysubsubsection{\texorpdfstring{CheckTH2PolyFileVersion()}{CheckTH2PolyFileVersion()}}
+{\footnotesize\ttfamily void Check\+TH2\+Poly\+File\+Version (\begin{DoxyParamCaption}\item[{TFile $\ast$}]{file }\end{DoxyParamCaption})}
+
+
+
+KS\+: ROOT changes something with binning when moving from ROOT 5 to ROOT 6. If you open ROOT5 produced file with ROOT6 you will be missing 9 last bins. 
+
+However if you use ROOT6 and have ROOT6 file exactly the same code will work. Something have changed with how TH2\+Poly bins are stored in TFile 
+\begin{DoxyParams}{Parameters}
+{\em file} & ROOT file that we will make version checks \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Structs_8cpp_source_l00096}{96}} of file \mbox{\hyperlink{Structs_8cpp_source}{Structs.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00097\ \textcolor{comment}{//\ **************************************************}}
+\DoxyCodeLine{00098\ \ \ \textcolor{keywordtype}{int}\ FileROOTVersion\ =\ file-\/>GetVersion();}
+\DoxyCodeLine{00099\ \ \ \textcolor{keywordtype}{int}\ MainFileROOTVersion\ =\ FileROOTVersion;}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \textcolor{comment}{//\ Remove\ last\ digit\ from\ number}}
+\DoxyCodeLine{00102\ \ \ \textcolor{comment}{//\ till\ only\ one\ digit\ is\ left}}
+\DoxyCodeLine{00103\ \ \ \textcolor{keywordflow}{while}\ (MainFileROOTVersion\ >=\ 10)}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ MainFileROOTVersion\ /=\ 10;}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \ \ std::string\ SystemROOTVersion\ =\ std::string(ROOT\_RELEASE);}
+\DoxyCodeLine{00107\ \ \ \textcolor{keywordtype}{int}\ MainSystemROOTVersion\ =\ SystemROOTVersion.at(0)\ \ -\/\ \textcolor{charliteral}{'0'};}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \textcolor{keywordflow}{if}(MainFileROOTVersion\ !=\ MainSystemROOTVersion)}
+\DoxyCodeLine{00110\ \ \ \{}
+\DoxyCodeLine{00111\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}File\ was\ produced\ with:\ \{\}\ ROOT\ version"{}},\ FileROOTVersion);}
+\DoxyCodeLine{00112\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Found:\ \{\}\ ROOT\ version\ in\ the\ system"{}},\ SystemROOTVersion);}
+\DoxyCodeLine{00113\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}For\ some\ documentation\ please\ visit\ me"{}});}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_,\ \_\_LINE\_\_);}
+\DoxyCodeLine{00115\ \ \ \}}
+\DoxyCodeLine{00116\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Structs_8h_aa9cbcbd12e52cadbc498db3b78784104}\label{Structs_8h_aa9cbcbd12e52cadbc498db3b78784104}} 
+\index{Structs.h@{Structs.h}!ConvertTH2DtoTH2Poly@{ConvertTH2DtoTH2Poly}}
+\index{ConvertTH2DtoTH2Poly@{ConvertTH2DtoTH2Poly}!Structs.h@{Structs.h}}
+\doxysubsubsection{\texorpdfstring{ConvertTH2DtoTH2Poly()}{ConvertTH2DtoTH2Poly()}}
+{\footnotesize\ttfamily TH2\+Poly $\ast$ Convert\+TH2\+Dto\+TH2\+Poly (\begin{DoxyParamCaption}\item[{TH2D $\ast$}]{TH2\+Dhist }\end{DoxyParamCaption})}
+
+
+
+KS\+: Convert TH2\+Poly to TH2D. 
+
+\mbox{\Hypertarget{Structs_8h_af532e371f45a26f2b180d96b82b7d496}\label{Structs_8h_af532e371f45a26f2b180d96b82b7d496}} 
+\index{Structs.h@{Structs.h}!ConvertTH2PolyToTH2D@{ConvertTH2PolyToTH2D}}
+\index{ConvertTH2PolyToTH2D@{ConvertTH2PolyToTH2D}!Structs.h@{Structs.h}}
+\doxysubsubsection{\texorpdfstring{ConvertTH2PolyToTH2D()}{ConvertTH2PolyToTH2D()}}
+{\footnotesize\ttfamily TH2D $\ast$ Convert\+TH2\+Poly\+To\+TH2D (\begin{DoxyParamCaption}\item[{TH2\+Poly $\ast$}]{poly,  }\item[{TH2D $\ast$}]{TH2\+Dhist }\end{DoxyParamCaption})}
+
+
+
+KS\+: Convert TH2D to TH2\+Poly. 
+
+
+
+Definition at line \mbox{\hyperlink{Structs_8cpp_source_l00296}{296}} of file \mbox{\hyperlink{Structs_8cpp_source}{Structs.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00297\ \textcolor{comment}{//\ ****************}}
+\DoxyCodeLine{00298\ \ \ \textcolor{keywordtype}{double}\ xlow,\ xup,\ ylow,\ yup;}
+\DoxyCodeLine{00299\ \ \ std::string\ HistTempName\ =\ poly-\/>GetName();}
+\DoxyCodeLine{00300\ }
+\DoxyCodeLine{00301\ \ \ HistTempName\ +=\ \textcolor{stringliteral}{"{}\_"{}};}
+\DoxyCodeLine{00302\ \ \ \textcolor{comment}{//make\ the\ th2d}}
+\DoxyCodeLine{00303\ \ \ TH2D\ *hist\ =\ \textcolor{keyword}{static\_cast<}TH2D*\textcolor{keyword}{>}(h2dhist-\/>Clone());}
+\DoxyCodeLine{00304\ \ \ hist-\/>SetNameTitle(HistTempName.c\_str(),\ HistTempName.c\_str());}
+\DoxyCodeLine{00305\ }
+\DoxyCodeLine{00306\ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ ix\ =\ 0;\ ix\ <\ hist-\/>GetNbinsX()\ +\ 2;\ ix++)\ \{}
+\DoxyCodeLine{00307\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ iy\ =\ 0;\ iy\ <\ hist-\/>GetNbinsY()\ +\ 2;\ iy++)\ \{}
+\DoxyCodeLine{00308\ \ \ \ \ \ \ hist-\/>SetBinContent(ix,\ iy,\ 0);}
+\DoxyCodeLine{00309\ \ \ \ \ \}}
+\DoxyCodeLine{00310\ \ \ \}}
+\DoxyCodeLine{00311\ \ \ \textcolor{comment}{//Loop\ over\ poly\ bins,\ find\ the\ corresponding\ th2d\ and\ setbincontent!}}
+\DoxyCodeLine{00312\ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i<\ poly-\/>GetNumberOfBins();\ i++)\{}
+\DoxyCodeLine{00313\ \ \ \ \ TH2PolyBin\ \&\ polybin\ =\ \textcolor{keyword}{static\_cast<}TH2PolyBin\ \&\textcolor{keyword}{>}(*poly-\/>GetBins()-\/>At(i));}
+\DoxyCodeLine{00314\ \ \ \ \ xlow\ =\ polybin.GetXMin();}
+\DoxyCodeLine{00315\ \ \ \ \ xup\ =\ polybin.GetXMax();}
+\DoxyCodeLine{00316\ \ \ \ \ ylow\ =\ polybin.GetYMin();}
+\DoxyCodeLine{00317\ \ \ \ \ yup\ =\ polybin.GetYMax();}
+\DoxyCodeLine{00318\ \ \ \ \ \textcolor{keywordtype}{int}\ xbin,\ ybin;}
+\DoxyCodeLine{00319\ }
+\DoxyCodeLine{00320\ \ \ \ \ xbin\ =\ hist-\/>GetXaxis()-\/>FindBin(xlow+(xup-\/xlow)/2);}
+\DoxyCodeLine{00321\ \ \ \ \ ybin\ =\ hist-\/>GetYaxis()-\/>FindBin(ylow+(yup-\/ylow)/2);}
+\DoxyCodeLine{00322\ }
+\DoxyCodeLine{00323\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_afc88f0aa23c7127b2ff6e5c7ca3fa892}{MACH3LOG\_TRACE}}(\textcolor{stringliteral}{"{}Poly\ bin\ \{\},\ xlow:\ \{\},\ xup:\ \{\},\ ylow:\ \{\},\ yup:\ \{\}.\ Finding\ bin\ for\ (\{\},\ \{\}).\ Found\ Bin\ (\{\},\ \{\})\ with\ content\ \{\}.\ But\ Poly\ content:\ \{\}"{}},}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ i,\ xlow,\ xup,\ ylow,\ yup,\ (xlow\ +\ (xup\ -\/\ xlow)\ /\ 2),\ (ylow\ +\ (yup\ -\/\ ylow)\ /\ 2),\ xbin,\ ybin,\ polybin.GetContent(),\ poly-\/>GetBinContent(i));}
+\DoxyCodeLine{00325\ \ \ \ \ hist-\/>SetBinContent(xbin,\ ybin,\ polybin.GetContent());}
+\DoxyCodeLine{00326\ \ \ \}}
+\DoxyCodeLine{00327\ \ \ \textcolor{keywordflow}{return}\ hist;}
+\DoxyCodeLine{00328\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Structs_8h_afbf5ccf44bc187caa268d4d158f4e5f6}\label{Structs_8h_afbf5ccf44bc187caa268d4d158f4e5f6}} 
+\index{Structs.h@{Structs.h}!file\_exists@{file\_exists}}
+\index{file\_exists@{file\_exists}!Structs.h@{Structs.h}}
+\doxysubsubsection{\texorpdfstring{file\_exists()}{file\_exists()}}
+{\footnotesize\ttfamily std\+::string file\+\_\+exists (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Helper to check if files exist or not. 
+
+
+
+Definition at line \mbox{\hyperlink{Structs_8h_source_l00499}{499}} of file \mbox{\hyperlink{Structs_8h_source}{Structs.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00499\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00500\ \ \ std::ifstream\ infile(filename.c\_str());}
+\DoxyCodeLine{00501\ \ \ \textcolor{keywordflow}{if}\ (!infile.good())\ \{}
+\DoxyCodeLine{00502\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}***\ ERROR\ ***"{}});}
+\DoxyCodeLine{00503\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}File\ \{\}\ does\ not\ exist"{}},\ filename);}
+\DoxyCodeLine{00504\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Please\ try\ again"{}});}
+\DoxyCodeLine{00505\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}*************"{}});}
+\DoxyCodeLine{00506\ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_\ ,\ \_\_LINE\_\_\ );}
+\DoxyCodeLine{00507\ \ \ \}}
+\DoxyCodeLine{00508\ \ \ \textcolor{keywordflow}{return}\ filename;}
+\DoxyCodeLine{00509\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Structs_8h_a89a221272ded97bbcea052755f4dc43f}\label{Structs_8h_a89a221272ded97bbcea052755f4dc43f}} 
+\index{Structs.h@{Structs.h}!GetTF1@{GetTF1}}
+\index{GetTF1@{GetTF1}!Structs.h@{Structs.h}}
+\doxysubsubsection{\texorpdfstring{GetTF1()}{GetTF1()}}
+{\footnotesize\ttfamily std\+::string Get\+TF1 (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{Structs_8h_a6720d732608767153550aebebcf8fbf4}{Spline\+Interpolation}}}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get function for \mbox{\hyperlink{classTF1__red}{TF1\+\_\+red}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & Interpolation type \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Structs_8h_source_l00138}{138}} of file \mbox{\hyperlink{Structs_8h_source}{Structs.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00139\ \ \ \textcolor{comment}{//\ **************************************************}}
+\DoxyCodeLine{00140\ \ \ std::string\ Func\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00141\ \ \ \textcolor{keywordflow}{switch}(i)\ \{}
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{Structs_8h_a6720d732608767153550aebebcf8fbf4ade75212a78a5cf860f84473a80355f42}{SplineInterpolation::kLinearFunc}}:}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ Func\ =\ \textcolor{stringliteral}{"{}([1]+[0]*x)"{}};}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}UNKNOWN\ SPLINE\ INTERPOLATION\ SPECIFIED!"{}});}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}You\ gave\ \{\}"{}},\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(i));}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_\ ,\ \_\_LINE\_\_\ );}
+\DoxyCodeLine{00149\ \ \ \}}
+\DoxyCodeLine{00150\ \ \ \textcolor{keywordflow}{return}\ Func;}
+\DoxyCodeLine{00151\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Structs_8h_a3b61160c5ff362348884cb311e827221}\label{Structs_8h_a3b61160c5ff362348884cb311e827221}} 
+\index{Structs.h@{Structs.h}!MakeAsymGraph@{MakeAsymGraph}}
+\index{MakeAsymGraph@{MakeAsymGraph}!Structs.h@{Structs.h}}
+\doxysubsubsection{\texorpdfstring{MakeAsymGraph()}{MakeAsymGraph()}}
+{\footnotesize\ttfamily TGraph\+Asymm\+Errors $\ast$ Make\+Asym\+Graph (\begin{DoxyParamCaption}\item[{TH1D $\ast$}]{sigma\+Array\+Left,  }\item[{TH1D $\ast$}]{sigma\+Array\+Centr,  }\item[{TH1D $\ast$}]{sigma\+Array\+Right,  }\item[{const std\+::string \&}]{title }\end{DoxyParamCaption})}
+
+
+
+Used by sigma variation, check how 1 sigma changes spectra. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sigma\+Array\+Left} & sigma var hist at -\/1 or -\/3 sigma shift \\
+\hline
+{\em sigma\+Array\+Centr} & sigma var hist at prior values \\
+\hline
+{\em sigma\+Array\+Right} & sigma var hist at +1 or +3 sigma shift \\
+\hline
+{\em title} & A tittle for returned object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A {\ttfamily TGraph\+Asymm\+Errors} object that visualizes the sigma variation of spectra, showing confidence intervals between different sigma shifts. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Structs_8cpp_source_l00430}{430}} of file \mbox{\hyperlink{Structs_8cpp_source}{Structs.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00430\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00431\ \textcolor{comment}{//\ *************************}}
+\DoxyCodeLine{00432\ \ \ TGraphAsymmErrors\ *var\ =\ \textcolor{keyword}{new}\ TGraphAsymmErrors(sigmaArrayCentr);}
+\DoxyCodeLine{00433\ \ \ var-\/>SetNameTitle((title).c\_str(),\ (title).c\_str());}
+\DoxyCodeLine{00434\ }
+\DoxyCodeLine{00435\ \ \ \textcolor{comment}{//\ Need\ to\ draw\ TGraphs\ to\ set\ axes\ labels}}
+\DoxyCodeLine{00436\ \ \ var-\/>Draw(\textcolor{stringliteral}{"{}AP"{}});}
+\DoxyCodeLine{00437\ \ \ var-\/>GetXaxis()-\/>SetTitle(sigmaArrayCentr-\/>GetXaxis()-\/>GetTitle());}
+\DoxyCodeLine{00438\ \ \ var-\/>GetYaxis()-\/>SetTitle(\textcolor{stringliteral}{"{}Number\ of\ events/bin"{}});}
+\DoxyCodeLine{00439\ }
+\DoxyCodeLine{00440\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ m\ =\ 0;\ m\ <\ var-\/>GetN();\ ++m)}
+\DoxyCodeLine{00441\ \ \ \{}
+\DoxyCodeLine{00442\ \ \ \ \ \textcolor{keywordtype}{double}\ xlow\ =\ sigmaArrayLeft-\/>GetBinContent(m+1);}
+\DoxyCodeLine{00443\ \ \ \ \ \textcolor{keywordtype}{double}\ xhigh\ =\ sigmaArrayRight-\/>GetBinContent(m+1);}
+\DoxyCodeLine{00444\ \ \ \ \ \textcolor{keywordtype}{double}\ xtemp;}
+\DoxyCodeLine{00445\ }
+\DoxyCodeLine{00446\ \ \ \ \ \textcolor{comment}{//\ Figure\ out\ which\ variation\ is\ larger\ so\ we\ set\ the\ error\ correctly}}
+\DoxyCodeLine{00447\ \ \ \ \ \textcolor{keywordflow}{if}\ (xlow\ >\ xhigh)}
+\DoxyCodeLine{00448\ \ \ \ \ \{}
+\DoxyCodeLine{00449\ \ \ \ \ \ \ xtemp\ =\ xlow;}
+\DoxyCodeLine{00450\ \ \ \ \ \ \ xlow\ =\ xhigh;}
+\DoxyCodeLine{00451\ \ \ \ \ \ \ xhigh\ =\ xtemp;}
+\DoxyCodeLine{00452\ \ \ \ \ \}}
+\DoxyCodeLine{00453\ }
+\DoxyCodeLine{00454\ \ \ \ \ var-\/>SetPointEYhigh(m,\ xhigh\ -\/\ var-\/>GetY()[m]);}
+\DoxyCodeLine{00455\ \ \ \ \ var-\/>SetPointEYlow(m,\ var-\/>GetY()[m]\ -\/\ xlow);}
+\DoxyCodeLine{00456\ \ \ \}}
+\DoxyCodeLine{00457\ \ \ \textcolor{keywordflow}{return}\ var;}
+\DoxyCodeLine{00458\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Structs_8h_a6a7efa31950e85001a060205c7d07c97}\label{Structs_8h_a6a7efa31950e85001a060205c7d07c97}} 
+\index{Structs.h@{Structs.h}!MakeVector@{MakeVector}}
+\index{MakeVector@{MakeVector}!Structs.h@{Structs.h}}
+\doxysubsubsection{\texorpdfstring{MakeVector()}{MakeVector()}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t N$>$ \\
+std\+::vector$<$ T $>$ Make\+Vector (\begin{DoxyParamCaption}\item[{const T(\&)}]{data\mbox{[}\+N\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Template to make vector out of an array of any length. 
+
+
+
+Definition at line \mbox{\hyperlink{Structs_8h_source_l00073}{73}} of file \mbox{\hyperlink{Structs_8h_source}{Structs.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00074\ \textcolor{comment}{//\ *******************}}
+\DoxyCodeLine{00075\ \ \ \textcolor{keywordflow}{return}\ std::vector<T>(data,\ data+N);}
+\DoxyCodeLine{00076\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Structs_8h_ab18c6b2408d7b9021bad06d47a06ee8d}\label{Structs_8h_ab18c6b2408d7b9021bad06d47a06ee8d}} 
+\index{Structs.h@{Structs.h}!NoOverflowIntegral@{NoOverflowIntegral}}
+\index{NoOverflowIntegral@{NoOverflowIntegral}!Structs.h@{Structs.h}}
+\doxysubsubsection{\texorpdfstring{NoOverflowIntegral()}{NoOverflowIntegral()}}
+{\footnotesize\ttfamily double No\+Overflow\+Integral (\begin{DoxyParamCaption}\item[{TH2\+Poly $\ast$}]{poly }\end{DoxyParamCaption})}
+
+
+
+WP\+: Helper function for calculating binned Integral of TH2\+Poly i.\+e not including overflow. 
+
+
+
+Definition at line \mbox{\hyperlink{Structs_8cpp_source_l00135}{135}} of file \mbox{\hyperlink{Structs_8cpp_source}{Structs.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00136\ \textcolor{comment}{//\ **************************************************}}
+\DoxyCodeLine{00137\ \ \ \textcolor{keywordtype}{double}\ integral\ =\ 0.;}
+\DoxyCodeLine{00138\ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <\ poly-\/>GetNumberOfBins()+1;\ i++)}
+\DoxyCodeLine{00139\ \ \ \{}
+\DoxyCodeLine{00140\ \ \ \ \ integral\ +=\ poly-\/>GetBinContent(i);}
+\DoxyCodeLine{00141\ \ \ \}}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \ \ \textcolor{keywordflow}{return}\ integral;}
+\DoxyCodeLine{00144\ \}\ \textcolor{comment}{//\ end\ function}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Structs_8h_ae28c217f8e8591248bfa54e95fdd7741}\label{Structs_8h_ae28c217f8e8591248bfa54e95fdd7741}} 
+\index{Structs.h@{Structs.h}!NormalisePoly@{NormalisePoly}}
+\index{NormalisePoly@{NormalisePoly}!Structs.h@{Structs.h}}
+\doxysubsubsection{\texorpdfstring{NormalisePoly()}{NormalisePoly()}}
+{\footnotesize\ttfamily TH2\+Poly $\ast$ Normalise\+Poly (\begin{DoxyParamCaption}\item[{TH2\+Poly $\ast$}]{Histogram }\end{DoxyParamCaption})}
+
+
+
+WP\+: Helper to Normalise histograms. 
+
+
+
+Definition at line \mbox{\hyperlink{Structs_8cpp_source_l00284}{284}} of file \mbox{\hyperlink{Structs_8cpp_source}{Structs.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00285\ \textcolor{comment}{//\ ****************}}
+\DoxyCodeLine{00286\ \ \ TH2Poly*\ HistCopy\ =\ \textcolor{keyword}{static\_cast<}TH2Poly*\textcolor{keyword}{>}(Histogram-\/>Clone());}
+\DoxyCodeLine{00287\ \ \ \textcolor{keywordtype}{double}\ IntegralWidth\ =\ \mbox{\hyperlink{Structs_8cpp_a8bab8af5f0339c6ec0310ff5ea87f26d}{PolyIntegralWidth}}(HistCopy);}
+\DoxyCodeLine{00288\ \ \ HistCopy\ =\ \mbox{\hyperlink{Structs_8cpp_a61d8f295d13a5fe82a552c08d42c8bfa}{PolyScaleWidth}}(HistCopy,\ IntegralWidth);}
+\DoxyCodeLine{00289\ \ \ std::string\ title\ =\ std::string(HistCopy-\/>GetName())+\textcolor{stringliteral}{"{}\_norm"{}};}
+\DoxyCodeLine{00290\ \ \ HistCopy-\/>SetNameTitle(title.c\_str(),\ title.c\_str());}
+\DoxyCodeLine{00291\ }
+\DoxyCodeLine{00292\ \ \ \textcolor{keywordflow}{return}\ HistCopy;}
+\DoxyCodeLine{00293\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Structs_8h_a34345b88bcd0e45db5612d58a972a154}\label{Structs_8h_a34345b88bcd0e45db5612d58a972a154}} 
+\index{Structs.h@{Structs.h}!OverflowIntegral@{OverflowIntegral}}
+\index{OverflowIntegral@{OverflowIntegral}!Structs.h@{Structs.h}}
+\doxysubsubsection{\texorpdfstring{OverflowIntegral()}{OverflowIntegral()}}
+{\footnotesize\ttfamily double Overflow\+Integral (\begin{DoxyParamCaption}\item[{TH2\+Poly $\ast$}]{poly }\end{DoxyParamCaption})}
+
+
+
+WP\+: Helper function for calculating unbinned Integral of TH2\+Poly i.\+e including overflow. 
+
+
+
+Definition at line \mbox{\hyperlink{Structs_8cpp_source_l00120}{120}} of file \mbox{\hyperlink{Structs_8cpp_source}{Structs.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00121\ \textcolor{comment}{//\ **************************************************}}
+\DoxyCodeLine{00122\ \ \ \textcolor{keywordtype}{double}\ overflow\ =\ 0.;}
+\DoxyCodeLine{00123\ \ \ \textcolor{comment}{//TH2Polys\ have\ 9\ overflow\ bins}}
+\DoxyCodeLine{00124\ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ iOverflow\ =\ -\/1;\ iOverflow\ >\ -\/10;\ iOverflow-\/-\/)}
+\DoxyCodeLine{00125\ \ \ \{}
+\DoxyCodeLine{00126\ \ \ \ \ overflow\ +=\ poly-\/>GetBinContent(iOverflow);}
+\DoxyCodeLine{00127\ \ \ \}}
+\DoxyCodeLine{00128\ \ \ \textcolor{keywordtype}{double}\ IntegralUn\ =\ \mbox{\hyperlink{Structs_8cpp_ab18c6b2408d7b9021bad06d47a06ee8d}{NoOverflowIntegral}}(poly)\ +\ overflow;}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \ \ \textcolor{keywordflow}{return}\ IntegralUn;}
+\DoxyCodeLine{00131\ \}\ \textcolor{comment}{//\ end\ function}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Structs_8h_a7bff6c239eb0213052f3193d84a7bee0}\label{Structs_8h_a7bff6c239eb0213052f3193d84a7bee0}} 
+\index{Structs.h@{Structs.h}!PDGToProbs@{PDGToProbs}}
+\index{PDGToProbs@{PDGToProbs}!Structs.h@{Structs.h}}
+\doxysubsubsection{\texorpdfstring{PDGToProbs()}{PDGToProbs()}}
+{\footnotesize\ttfamily int PDGTo\+Probs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Structs_8h_a0dfdd8cf84b8fa3495e9e5e520fe6cd2}{Nu\+PDG}}}]{pdg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ETA -\/ Probs3++ doesn\textquotesingle{}t use the PDG codes for the neutrino type so add in a small converter. 
+
+
+
+Definition at line \mbox{\hyperlink{Structs_8h_source_l00358}{358}} of file \mbox{\hyperlink{Structs_8h_source}{Structs.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00358\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00359\ }
+\DoxyCodeLine{00360\ \ \ \textcolor{keywordtype}{int}\ ReturnProbNu\ =\ -\/999;}
+\DoxyCodeLine{00361\ }
+\DoxyCodeLine{00362\ \ \ \textcolor{keywordflow}{switch}\ (pdg)\{}
+\DoxyCodeLine{00363\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{Structs_8h_a0dfdd8cf84b8fa3495e9e5e520fe6cd2aab024bd4737ec207f00dcd86a5d05908}{kNue}}:}
+\DoxyCodeLine{00364\ \ \ \ \ \ \ ReturnProbNu\ =\ \mbox{\hyperlink{Structs_8h_a5a4651943de972b89fd091d11fa7b3d7a5cd6d0de7e8784e41d9b25b568e4a910}{kProbNue}};}
+\DoxyCodeLine{00365\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00366\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{Structs_8h_a0dfdd8cf84b8fa3495e9e5e520fe6cd2ab0c6aa36beb10b27d1595708db570b20}{kNumu}}:}
+\DoxyCodeLine{00367\ \ \ \ \ \ \ ReturnProbNu\ =\ \mbox{\hyperlink{Structs_8h_a5a4651943de972b89fd091d11fa7b3d7a06c430fb843a21e2716d7a4ac4b02b8f}{kProbNumu}};}
+\DoxyCodeLine{00368\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00369\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{Structs_8h_a0dfdd8cf84b8fa3495e9e5e520fe6cd2a3845eaeb2a574c79e40ccb2e7b0c0a21}{kNutau}}:}
+\DoxyCodeLine{00370\ \ \ \ \ \ \ ReturnProbNu\ =\ \mbox{\hyperlink{Structs_8h_a5a4651943de972b89fd091d11fa7b3d7a01745b4e2b8e4c6e585d5256336ec0fc}{kProbNutau}};}
+\DoxyCodeLine{00371\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00372\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{Structs_8h_a0dfdd8cf84b8fa3495e9e5e520fe6cd2a74373d078c38b05c7ce7af9fe89e9f60}{kNueBar}}:}
+\DoxyCodeLine{00373\ \ \ \ \ \ \ ReturnProbNu\ =\ \mbox{\hyperlink{Structs_8h_a5a4651943de972b89fd091d11fa7b3d7a8d16d56aca132d6c241c7bfa76a678ce}{kProbNueBar}};}
+\DoxyCodeLine{00374\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00375\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{Structs_8h_a0dfdd8cf84b8fa3495e9e5e520fe6cd2a4002f8369785cc180fd411cacc50ad6a}{kNumuBar}}:}
+\DoxyCodeLine{00376\ \ \ \ \ \ \ ReturnProbNu\ =\ \mbox{\hyperlink{Structs_8h_a5a4651943de972b89fd091d11fa7b3d7a72f2254b7daf89baabd39b7b42998ad7}{kProbNumuBar}};}
+\DoxyCodeLine{00377\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00378\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{Structs_8h_a0dfdd8cf84b8fa3495e9e5e520fe6cd2a17308656c7ae2206d971d1a8682c5feb}{kNutauBar}}:}
+\DoxyCodeLine{00379\ \ \ \ \ \ \ ReturnProbNu\ =\ \mbox{\hyperlink{Structs_8h_a5a4651943de972b89fd091d11fa7b3d7a02ac372b77ed65a76630c2bf8435e888}{kProbNutauBar}};}
+\DoxyCodeLine{00380\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00381\ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00382\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_ad5b2eb6377721e3ac95def22c2386bb1}{MACH3LOG\_WARN}}(\textcolor{stringliteral}{"{}Unrecognised\ pdg\ for\ the\ neutrino\ so\ can't\ map\ this\ to\ an\ int\ for\ Prob3++"{}});}
+\DoxyCodeLine{00383\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00384\ \ \ \}}
+\DoxyCodeLine{00385\ }
+\DoxyCodeLine{00386\ \ \ \textcolor{keywordflow}{return}\ ReturnProbNu;}
+\DoxyCodeLine{00387\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Structs_8h_a8bab8af5f0339c6ec0310ff5ea87f26d}\label{Structs_8h_a8bab8af5f0339c6ec0310ff5ea87f26d}} 
+\index{Structs.h@{Structs.h}!PolyIntegralWidth@{PolyIntegralWidth}}
+\index{PolyIntegralWidth@{PolyIntegralWidth}!Structs.h@{Structs.h}}
+\doxysubsubsection{\texorpdfstring{PolyIntegralWidth()}{PolyIntegralWidth()}}
+{\footnotesize\ttfamily double Poly\+Integral\+Width (\begin{DoxyParamCaption}\item[{TH2\+Poly $\ast$}]{Histogram }\end{DoxyParamCaption})}
+
+
+
+WP\+: Helper to calc integral of th2poly analogous to th2d integra; with option \char`\"{}width\char`\"{}. 
+
+
+
+Definition at line \mbox{\hyperlink{Structs_8cpp_source_l00399}{399}} of file \mbox{\hyperlink{Structs_8cpp_source}{Structs.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00399\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00400\ \textcolor{comment}{//\ ****************}}
+\DoxyCodeLine{00401\ \ \ \textcolor{keywordtype}{double}\ integral\ =\ 0;}
+\DoxyCodeLine{00402\ \ \ \textcolor{keywordtype}{double}\ xlow,\ xup,\ ylow,\ yup,\ area;}
+\DoxyCodeLine{00403\ }
+\DoxyCodeLine{00404\ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <\ Histogram-\/>GetNumberOfBins()+1;\ i++)}
+\DoxyCodeLine{00405\ \ \ \{}
+\DoxyCodeLine{00406\ \ \ \ \ TH2PolyBin*\ bin\ =\ \textcolor{keyword}{static\_cast<}TH2PolyBin*\textcolor{keyword}{>}(Histogram-\/>GetBins()-\/>At(i\ -\/\ 1));}
+\DoxyCodeLine{00407\ \ \ \ \ xlow\ =\ bin-\/>GetXMin();}
+\DoxyCodeLine{00408\ \ \ \ \ xup\ =\ bin-\/>GetXMax();}
+\DoxyCodeLine{00409\ \ \ \ \ ylow\ =\ bin-\/>GetYMin();}
+\DoxyCodeLine{00410\ \ \ \ \ yup\ =\ bin-\/>GetYMax();}
+\DoxyCodeLine{00411\ \ \ \ \ area\ =\ (xup-\/xlow)*(yup-\/ylow);}
+\DoxyCodeLine{00412\ \ \ \ \ integral\ +=\ Histogram-\/>GetBinContent(i)*area;}
+\DoxyCodeLine{00413\ \ \ \}}
+\DoxyCodeLine{00414\ \ \ \textcolor{keywordflow}{return}\ integral;}
+\DoxyCodeLine{00415\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Structs_8h_a1aefd04e7350674108487c67f280ab94}\label{Structs_8h_a1aefd04e7350674108487c67f280ab94}} 
+\index{Structs.h@{Structs.h}!PolyProjectionX@{PolyProjectionX}}
+\index{PolyProjectionX@{PolyProjectionX}!Structs.h@{Structs.h}}
+\doxysubsubsection{\texorpdfstring{PolyProjectionX()}{PolyProjectionX()}}
+{\footnotesize\ttfamily TH1D $\ast$ Poly\+ProjectionX (\begin{DoxyParamCaption}\item[{TObject $\ast$}]{poly,  }\item[{std\+::string}]{Temp\+Name,  }\item[{const std\+::vector$<$ double $>$ \&}]{xbins,  }\item[{const bool}]{compute\+Errors = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+WP\+: Poly Projectors. 
+
+
+
+Definition at line \mbox{\hyperlink{Structs_8cpp_source_l00148}{148}} of file \mbox{\hyperlink{Structs_8cpp_source}{Structs.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00149\ \textcolor{comment}{//\ **************************************************}}
+\DoxyCodeLine{00150\ \ \ TH1D*\ hProjX\ =\ \textcolor{keyword}{new}\ TH1D((TempName+\textcolor{stringliteral}{"{}\_x"{}}).c\_str(),(TempName+\textcolor{stringliteral}{"{}\_x"{}}).c\_str(),\ \textcolor{keywordtype}{int}(xbins.size()-\/1),\ \&xbins[0]);}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ \ \ \textcolor{comment}{//KS:\ Temp\ Histogram\ to\ store\ error,\ use\ double\ as\ this\ is\ thread\ safe}}
+\DoxyCodeLine{00153\ \ \ std::vector<double>\ hProjX\_Error(hProjX-\/>GetXaxis()-\/>GetNbins()\ +\ 1,\ 0.0);}
+\DoxyCodeLine{00154\ \ \ \textcolor{keywordtype}{double}\ xlow,\ xup,\ frac\ =\ 0.;}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \ \ \textcolor{comment}{//loop\ over\ bins\ in\ the\ poly}}
+\DoxyCodeLine{00157\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ static\_cast<TH2Poly*>(poly)-\/>GetNumberOfBins();\ i++)}
+\DoxyCodeLine{00158\ \ \ \{}
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{comment}{//get\ bin\ and\ its\ edges}}
+\DoxyCodeLine{00160\ \ \ \ \ TH2PolyBin*\ bin\ =\ \textcolor{keyword}{static\_cast<}TH2PolyBin*\textcolor{keyword}{>}(\textcolor{keyword}{static\_cast<}TH2Poly*\textcolor{keyword}{>}(poly)-\/>GetBins()-\/>At(i));}
+\DoxyCodeLine{00161\ \ \ \ \ xlow\ =\ bin-\/>GetXMin();}
+\DoxyCodeLine{00162\ \ \ \ \ xup\ =\ bin-\/>GetXMax();}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{comment}{//Loop\ over\ projected\ bins,\ find\ fraction\ of\ poly\ bin\ in\ each}}
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ dx\ =\ 0;\ dx\ <\ int(xbins.size());\ dx++)}
+\DoxyCodeLine{00166\ \ \ \ \ \{}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \textcolor{keywordflow}{if}(xbins[dx+1]\ <=\ xlow\ ||\ xbins[dx]\ >=\ xup)}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ frac\ =\ 0;}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(xbins[dx]\ <=\ xlow\ \&\&\ xbins[dx+1]\ >=\ xup)}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ frac\ =\ 1;}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(xbins[dx]\ <=\ xlow\ \&\&\ xbins[dx+1]\ <=\ xup)}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ frac\ =\ (xbins[dx+1]-\/xlow)/(xup-\/xlow);}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(xbins[dx]\ >=\ xlow\ \&\&\ xbins[dx+1]\ >=\ xup)}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ frac\ =\ (xup-\/xbins[dx])/(xup-\/xlow);}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(xbins[dx]\ >=\ xlow\ \&\&\ xbins[dx+1]\ <=\ xup)}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ frac\ =\ (xbins[dx+1]-\/xbins[dx])/(xup-\/xlow);}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ frac\ =\ 0;}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ hProjX-\/>SetBinContent(dx+1,hProjX-\/>GetBinContent(dx+1)+frac*bin-\/>GetContent());}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \textcolor{comment}{//KS:\ Follow\ ROOT\ implementation\ and\ sum\ up\ the\ variance}}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \textcolor{keywordflow}{if}(computeErrors)}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \textcolor{comment}{//KS:\ TH2PolyBin\ doesn't\ have\ GetError\ so\ we\ have\ to\ use\ TH2Poly,}}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \textcolor{comment}{//but\ numbering\ of\ GetBinError\ is\ different\ than\ GetBins...}}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ Temp\_Err\ =\ frac*\textcolor{keyword}{static\_cast<}TH2Poly*\textcolor{keyword}{>}(poly)-\/>GetBinError(i+1)*frac*\textcolor{keyword}{static\_cast<}TH2Poly*\textcolor{keyword}{>}(poly)-\/>GetBinError(i+1);}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ hProjX\_Error[dx+1]\ +=\ Temp\_Err;}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00200\ \ \ \ \ \}}
+\DoxyCodeLine{00201\ \ \ \}}
+\DoxyCodeLine{00202\ \ \ \textcolor{comment}{//KS:\ The\ error\ is\ sqrt(summed\ variance))\ https://root.cern.ch/doc/master/TH2\_8cxx\_source.html\#l02266}}
+\DoxyCodeLine{00203\ \ \ \textcolor{keywordflow}{if}(computeErrors)}
+\DoxyCodeLine{00204\ \ \ \{}
+\DoxyCodeLine{00205\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <=\ hProjX-\/>GetXaxis()-\/>GetNbins();\ ++i)}
+\DoxyCodeLine{00206\ \ \ \ \ \{}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ Error\ =\ std::sqrt(hProjX\_Error[i]);}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ hProjX-\/>SetBinError(i,\ Error);}
+\DoxyCodeLine{00209\ \ \ \ \ \}}
+\DoxyCodeLine{00210\ \ \ \}}
+\DoxyCodeLine{00211\ \ \ \textcolor{keywordflow}{return}\ hProjX;}
+\DoxyCodeLine{00212\ \}\ \textcolor{comment}{//\ end\ project\ poly\ X\ function}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Structs_8h_afea74892d152ec37962af4bedf4488cc}\label{Structs_8h_afea74892d152ec37962af4bedf4488cc}} 
+\index{Structs.h@{Structs.h}!PolyProjectionY@{PolyProjectionY}}
+\index{PolyProjectionY@{PolyProjectionY}!Structs.h@{Structs.h}}
+\doxysubsubsection{\texorpdfstring{PolyProjectionY()}{PolyProjectionY()}}
+{\footnotesize\ttfamily TH1D $\ast$ Poly\+ProjectionY (\begin{DoxyParamCaption}\item[{TObject $\ast$}]{poly,  }\item[{std\+::string}]{Temp\+Name,  }\item[{const std\+::vector$<$ double $>$ \&}]{ybins,  }\item[{const bool}]{compute\+Errors = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+WP\+: Poly Projectors. 
+
+
+
+Definition at line \mbox{\hyperlink{Structs_8cpp_source_l00216}{216}} of file \mbox{\hyperlink{Structs_8cpp_source}{Structs.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00217\ \textcolor{comment}{//\ **************************************************}}
+\DoxyCodeLine{00218\ }
+\DoxyCodeLine{00219\ \ \ TH1D*\ hProjY\ =\ \textcolor{keyword}{new}\ TH1D((TempName+\textcolor{stringliteral}{"{}\_y"{}}).c\_str(),(TempName+\textcolor{stringliteral}{"{}\_y"{}}).c\_str(),\textcolor{keywordtype}{int}(ybins.size()-\/1),\&ybins[0]);}
+\DoxyCodeLine{00220\ \ \ \textcolor{comment}{//KS:\ Temp\ Histogram\ to\ store\ error,\ use\ double\ as\ this\ is\ thread\ safe}}
+\DoxyCodeLine{00221\ \ \ std::vector<double>\ hProjY\_Error(hProjY-\/>GetXaxis()-\/>GetNbins()\ +\ 1,\ 0.0);}
+\DoxyCodeLine{00222\ \ \ \textcolor{keywordtype}{double}\ ylow,\ yup,\ frac\ =\ 0.;}
+\DoxyCodeLine{00223\ }
+\DoxyCodeLine{00224\ \ \ \textcolor{comment}{//loop\ over\ bins\ in\ the\ poly}}
+\DoxyCodeLine{00225\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ static\_cast<TH2Poly*>(poly)-\/>GetNumberOfBins();\ i++)}
+\DoxyCodeLine{00226\ \ \ \{}
+\DoxyCodeLine{00227\ \ \ \ \ \textcolor{comment}{//get\ bin\ and\ its\ edges}}
+\DoxyCodeLine{00228\ \ \ \ \ TH2PolyBin*\ bin\ =\ \textcolor{keyword}{static\_cast<}TH2PolyBin*\textcolor{keyword}{>}(\textcolor{keyword}{static\_cast<}TH2Poly*\textcolor{keyword}{>}(poly)-\/>GetBins()-\/>At(i));}
+\DoxyCodeLine{00229\ \ \ \ \ ylow\ =\ bin-\/>GetYMin();}
+\DoxyCodeLine{00230\ \ \ \ \ yup\ =\ bin-\/>GetYMax();}
+\DoxyCodeLine{00231\ }
+\DoxyCodeLine{00232\ \ \ \ \ \textcolor{comment}{//Loop\ over\ projected\ bins,\ find\ fraction\ of\ poly\ bin\ in\ each}}
+\DoxyCodeLine{00233\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ dy\ =\ 0;\ dy\ <\ int(ybins.size());\ dy++)}
+\DoxyCodeLine{00234\ \ \ \ \ \{}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \textcolor{keywordflow}{if}(ybins[dy+1]<=ylow\ ||\ ybins[dy]\ >=\ yup)}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ frac\ =\ 0;}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(ybins[dy]\ <=\ ylow\ \&\&\ ybins[dy+1]\ >=\ yup)}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ frac\ =\ 1;}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(ybins[dy]\ <=\ ylow\ \&\&\ ybins[dy+1]\ <=\ yup)}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ frac\ =\ (ybins[dy+1]-\/ylow)/(yup-\/ylow);}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(ybins[dy]\ >=\ ylow\ \&\&\ ybins[dy+1]\ >=\ yup)}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ frac\ =\ (yup-\/ybins[dy])/(yup-\/ylow);}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(ybins[dy]\ >=\ ylow\ \&\&\ ybins[dy+1]\ <=\ yup)}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ frac\ =\ (ybins[dy+1]-\/ybins[dy])/(yup-\/ylow);}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ frac\ =\ 0;}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ hProjY-\/>SetBinContent(dy+1,hProjY-\/>GetBinContent(dy+1)+frac*bin-\/>GetContent());}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \textcolor{comment}{//KS:\ Follow\ ROOT\ implementation\ and\ sum\ up\ the\ variance}}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \textcolor{keywordflow}{if}(computeErrors)}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \textcolor{comment}{//KS:\ TH2PolyBin\ doesn't\ have\ GetError\ so\ we\ have\ to\ use\ TH2Poly,}}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \textcolor{comment}{//but\ numbering\ of\ GetBinError\ is\ different\ than\ GetBins...}}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ Temp\_Err\ =\ frac*\textcolor{keyword}{static\_cast<}TH2Poly*\textcolor{keyword}{>}(poly)-\/>GetBinError(i+1)*frac*\textcolor{keyword}{static\_cast<}TH2Poly*\textcolor{keyword}{>}(poly)-\/>GetBinError(i+1);}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ hProjY\_Error[dy+1]\ +=\ Temp\_Err;}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00268\ \ \ \ \ \}}
+\DoxyCodeLine{00269\ \ \ \}}
+\DoxyCodeLine{00270\ \ \ \textcolor{comment}{//KS:\ The\ error\ is\ sqrt(summed\ variance))\ https://root.cern.ch/doc/master/TH2\_8cxx\_source.html\#l02266}}
+\DoxyCodeLine{00271\ \ \ \textcolor{keywordflow}{if}(computeErrors)}
+\DoxyCodeLine{00272\ \ \ \{}
+\DoxyCodeLine{00273\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <=\ hProjY-\/>GetXaxis()-\/>GetNbins();\ ++i)}
+\DoxyCodeLine{00274\ \ \ \ \ \{}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ Error\ =\ std::sqrt(hProjY\_Error[i]);}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ hProjY-\/>SetBinError(i,\ Error);}
+\DoxyCodeLine{00277\ \ \ \ \ \}}
+\DoxyCodeLine{00278\ \ \ \}}
+\DoxyCodeLine{00279\ \ \ \textcolor{keywordflow}{return}\ hProjY;}
+\DoxyCodeLine{00280\ \}\ \textcolor{comment}{//\ end\ project\ poly\ Y\ function}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Structs_8h_a61d8f295d13a5fe82a552c08d42c8bfa}\label{Structs_8h_a61d8f295d13a5fe82a552c08d42c8bfa}} 
+\index{Structs.h@{Structs.h}!PolyScaleWidth@{PolyScaleWidth}}
+\index{PolyScaleWidth@{PolyScaleWidth}!Structs.h@{Structs.h}}
+\doxysubsubsection{\texorpdfstring{PolyScaleWidth()}{PolyScaleWidth()}}
+{\footnotesize\ttfamily TH2\+Poly $\ast$ Poly\+Scale\+Width (\begin{DoxyParamCaption}\item[{TH2\+Poly $\ast$}]{Histogram,  }\item[{double}]{scale }\end{DoxyParamCaption})}
+
+
+
+WP\+: Helper to scale th2poly analogous to th2d scale with option \char`\"{}width\char`\"{}. 
+
+
+
+Definition at line \mbox{\hyperlink{Structs_8cpp_source_l00379}{379}} of file \mbox{\hyperlink{Structs_8cpp_source}{Structs.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00379\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00380\ \textcolor{comment}{//\ ****************}}
+\DoxyCodeLine{00381\ \ \ TH2Poly*\ HistCopy\ =\ \textcolor{keyword}{static\_cast<}TH2Poly*\textcolor{keyword}{>}(Histogram-\/>Clone());}
+\DoxyCodeLine{00382\ \ \ \textcolor{keywordtype}{double}\ xlow,\ xup,\ ylow,\ yup,\ area;}
+\DoxyCodeLine{00383\ }
+\DoxyCodeLine{00384\ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <\ HistCopy-\/>GetNumberOfBins()+1;\ i++)}
+\DoxyCodeLine{00385\ \ \ \{}
+\DoxyCodeLine{00386\ \ \ \ \ TH2PolyBin*\ bin\ =\ \textcolor{keyword}{static\_cast<}TH2PolyBin*\textcolor{keyword}{>}(Histogram-\/>GetBins()-\/>At(i\ -\/\ 1));}
+\DoxyCodeLine{00387\ \ \ \ \ xlow\ =\ bin-\/>GetXMin();}
+\DoxyCodeLine{00388\ \ \ \ \ xup\ =\ bin-\/>GetXMax();}
+\DoxyCodeLine{00389\ \ \ \ \ ylow\ =\ bin-\/>GetYMin();}
+\DoxyCodeLine{00390\ \ \ \ \ yup\ =\ bin-\/>GetYMax();}
+\DoxyCodeLine{00391\ \ \ \ \ area\ =\ (xup-\/xlow)*(yup-\/ylow);}
+\DoxyCodeLine{00392\ \ \ \ \ HistCopy-\/>SetBinContent(i,\ Histogram-\/>GetBinContent(i)/(area*scale));}
+\DoxyCodeLine{00393\ \ \ \}}
+\DoxyCodeLine{00394\ \ \ \textcolor{keywordflow}{return}\ HistCopy;}
+\DoxyCodeLine{00395\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Structs_8h_a602ad839195b7087a4897e8f6b603ee6}\label{Structs_8h_a602ad839195b7087a4897e8f6b603ee6}} 
+\index{Structs.h@{Structs.h}!ProbsToPDG@{ProbsToPDG}}
+\index{ProbsToPDG@{ProbsToPDG}!Structs.h@{Structs.h}}
+\doxysubsubsection{\texorpdfstring{ProbsToPDG()}{ProbsToPDG()}}
+{\footnotesize\ttfamily int Probs\+To\+PDG (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Structs_8h_a5a4651943de972b89fd091d11fa7b3d7}{Prob\+Nu}}}]{Nu\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{Structs_8h_source_l00389}{389}} of file \mbox{\hyperlink{Structs_8h_source}{Structs.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00389\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00390\ \ \ \textcolor{keywordtype}{int}\ ReturnNuPDG\ =\ -\/999;}
+\DoxyCodeLine{00391\ }
+\DoxyCodeLine{00392\ \ \ \textcolor{keywordflow}{switch}\ (NuType)\{}
+\DoxyCodeLine{00393\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{Structs_8h_a5a4651943de972b89fd091d11fa7b3d7a5cd6d0de7e8784e41d9b25b568e4a910}{kProbNue}}:}
+\DoxyCodeLine{00394\ \ \ \ \ \ \ ReturnNuPDG\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(\mbox{\hyperlink{Structs_8h_a0dfdd8cf84b8fa3495e9e5e520fe6cd2aab024bd4737ec207f00dcd86a5d05908}{kNue}});}
+\DoxyCodeLine{00395\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00396\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{Structs_8h_a5a4651943de972b89fd091d11fa7b3d7a06c430fb843a21e2716d7a4ac4b02b8f}{kProbNumu}}:}
+\DoxyCodeLine{00397\ \ \ \ \ \ \ ReturnNuPDG\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(\mbox{\hyperlink{Structs_8h_a0dfdd8cf84b8fa3495e9e5e520fe6cd2ab0c6aa36beb10b27d1595708db570b20}{kNumu}});}
+\DoxyCodeLine{00398\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00399\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{Structs_8h_a5a4651943de972b89fd091d11fa7b3d7a01745b4e2b8e4c6e585d5256336ec0fc}{kProbNutau}}:}
+\DoxyCodeLine{00400\ \ \ \ \ \ \ ReturnNuPDG\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(\mbox{\hyperlink{Structs_8h_a0dfdd8cf84b8fa3495e9e5e520fe6cd2a3845eaeb2a574c79e40ccb2e7b0c0a21}{kNutau}});}
+\DoxyCodeLine{00401\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00402\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{Structs_8h_a5a4651943de972b89fd091d11fa7b3d7a8d16d56aca132d6c241c7bfa76a678ce}{kProbNueBar}}:}
+\DoxyCodeLine{00403\ \ \ \ \ \ \ ReturnNuPDG\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(\mbox{\hyperlink{Structs_8h_a0dfdd8cf84b8fa3495e9e5e520fe6cd2a74373d078c38b05c7ce7af9fe89e9f60}{kNueBar}});}
+\DoxyCodeLine{00404\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00405\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{Structs_8h_a5a4651943de972b89fd091d11fa7b3d7a72f2254b7daf89baabd39b7b42998ad7}{kProbNumuBar}}:}
+\DoxyCodeLine{00406\ \ \ \ \ \ \ ReturnNuPDG\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(\mbox{\hyperlink{Structs_8h_a0dfdd8cf84b8fa3495e9e5e520fe6cd2a4002f8369785cc180fd411cacc50ad6a}{kNumuBar}});}
+\DoxyCodeLine{00407\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00408\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{Structs_8h_a5a4651943de972b89fd091d11fa7b3d7a02ac372b77ed65a76630c2bf8435e888}{kProbNutauBar}}:}
+\DoxyCodeLine{00409\ \ \ \ \ \ \ ReturnNuPDG\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(\mbox{\hyperlink{Structs_8h_a0dfdd8cf84b8fa3495e9e5e520fe6cd2a17308656c7ae2206d971d1a8682c5feb}{kNutauBar}});}
+\DoxyCodeLine{00410\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00411\ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00412\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_ad5b2eb6377721e3ac95def22c2386bb1}{MACH3LOG\_WARN}}(\textcolor{stringliteral}{"{}Unrecognised\ NuType\ for\ the\ neutrino\ so\ can't\ map\ this\ to\ a\ PDG\ code"{}});}
+\DoxyCodeLine{00413\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00414\ \ \ \}}
+\DoxyCodeLine{00415\ \ \ \textcolor{keywordflow}{return}\ ReturnNuPDG;}
+\DoxyCodeLine{00416\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Structs_8h_a85463c0c6943e3d544d5fcb3f96bf18a}\label{Structs_8h_a85463c0c6943e3d544d5fcb3f96bf18a}} 
+\index{Structs.h@{Structs.h}!RemoveFitter@{RemoveFitter}}
+\index{RemoveFitter@{RemoveFitter}!Structs.h@{Structs.h}}
+\doxysubsubsection{\texorpdfstring{RemoveFitter()}{RemoveFitter()}}
+{\footnotesize\ttfamily void Remove\+Fitter (\begin{DoxyParamCaption}\item[{TH1D $\ast$}]{hist,  }\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+KS\+: Remove fitted TF1 from hist to make comparison easier. 
+
+
+
+Definition at line \mbox{\hyperlink{Structs_8cpp_source_l00419}{419}} of file \mbox{\hyperlink{Structs_8cpp_source}{Structs.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00419\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00420\ \textcolor{comment}{//\ *********************}}
+\DoxyCodeLine{00421\ }
+\DoxyCodeLine{00422\ \ \ TList\ *listOfFunctions\ =\ hist-\/>GetListOfFunctions();}
+\DoxyCodeLine{00423\ \ \ TF1\ *fitter\ =\ \textcolor{keyword}{dynamic\_cast<}TF1*\textcolor{keyword}{>}(listOfFunctions-\/>FindObject(name.c\_str()));}
+\DoxyCodeLine{00424\ }
+\DoxyCodeLine{00425\ \ \ listOfFunctions-\/>Remove(fitter);}
+\DoxyCodeLine{00426\ \ \ \textcolor{keyword}{delete}\ fitter;}
+\DoxyCodeLine{00427\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Structs_8h_a6c6f918bcc5cfc261888be8d8ce2e444}\label{Structs_8h_a6c6f918bcc5cfc261888be8d8ce2e444}} 
+\index{Structs.h@{Structs.h}!returnCherenkovThresholdMomentum@{returnCherenkovThresholdMomentum}}
+\index{returnCherenkovThresholdMomentum@{returnCherenkovThresholdMomentum}!Structs.h@{Structs.h}}
+\doxysubsubsection{\texorpdfstring{returnCherenkovThresholdMomentum()}{returnCherenkovThresholdMomentum()}}
+{\footnotesize\ttfamily double return\+Cherenkov\+Threshold\+Momentum (\begin{DoxyParamCaption}\item[{int}]{PDG }\end{DoxyParamCaption})}
+
+
+
+DB Get the Cherenkov momentum threshold in MeV. 
+
+
+
+Definition at line \mbox{\hyperlink{Structs_8cpp_source_l00462}{462}} of file \mbox{\hyperlink{Structs_8cpp_source}{Structs.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00462\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00463\ \textcolor{comment}{//\ ****************}}
+\DoxyCodeLine{00464\ \ \ \textcolor{keywordtype}{double}\ refractiveIndex\ =\ 1.334;\ \textcolor{comment}{//DB\ From\ https://github.com/fiTQun/fiTQun/blob/646cf9c8ba3d4f7400bcbbde029d5ca15513a3bf/fiTQun\_shared.cc\#L757}}
+\DoxyCodeLine{00465\ \ \ \textcolor{keywordtype}{double}\ mass\ =\ \ \mbox{\hyperlink{namespaceMaCh3Utils_a86d34372bb55524024fbdadd65834967}{MaCh3Utils::GetMassFromPDG}}(PDG)*1e3;}
+\DoxyCodeLine{00466\ \ \ \textcolor{keywordtype}{double}\ momentumThreshold\ =\ mass/sqrt(refractiveIndex*refractiveIndex-\/1.);}
+\DoxyCodeLine{00467\ \ \ \textcolor{keywordflow}{return}\ momentumThreshold;}
+\DoxyCodeLine{00468\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Structs_8h_af1b80b5456f9b1cb847fb56ddcc3c1ab}\label{Structs_8h_af1b80b5456f9b1cb847fb56ddcc3c1ab}} 
+\index{Structs.h@{Structs.h}!SplineInterpolation\_ToRespFuncType@{SplineInterpolation\_ToRespFuncType}}
+\index{SplineInterpolation\_ToRespFuncType@{SplineInterpolation\_ToRespFuncType}!Structs.h@{Structs.h}}
+\doxysubsubsection{\texorpdfstring{SplineInterpolation\_ToRespFuncType()}{SplineInterpolation\_ToRespFuncType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Structs_8h_a6a73aa1ad819973a9c421c17c2a7f36d}{Resp\+Func\+Type}} Spline\+Interpolation\+\_\+\+To\+Resp\+Func\+Type (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{Structs_8h_a6720d732608767153550aebebcf8fbf4}{Spline\+Interpolation}}}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert a Resp\+Func\+Type type to a Spline\+Interpolation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & Interpolation type \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Structs_8h_source_l00156}{156}} of file \mbox{\hyperlink{Structs_8h_source}{Structs.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00157\ \textcolor{comment}{//\ **************************************************}}
+\DoxyCodeLine{00158\ \ \ \mbox{\hyperlink{Structs_8h_a6a73aa1ad819973a9c421c17c2a7f36d}{RespFuncType}}\ Type\ =\ \mbox{\hyperlink{Structs_8h_a6a73aa1ad819973a9c421c17c2a7f36dadaea03c5220761db703fcada6f3c94ea}{kRespFuncTypes}};}
+\DoxyCodeLine{00159\ \ \ \textcolor{keywordflow}{switch}(i)\ \{}
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{comment}{//\ \ TSpline3\ (third\ order\ spline\ in\ ROOT)}}
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{Structs_8h_a6720d732608767153550aebebcf8fbf4a56c886e7b34c938027a7140748999c8a}{SplineInterpolation::kTSpline3}}:}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ Type\ =\ \mbox{\hyperlink{Structs_8h_a6a73aa1ad819973a9c421c17c2a7f36da8bea6994e011cc85a5a88b50c97ce7b2}{RespFuncType::kTSpline3\_red}};}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{Structs_8h_a6720d732608767153550aebebcf8fbf4ac188c019178783e5be55110601309d7d}{SplineInterpolation::kLinear}}:}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ Type\ =\ \mbox{\hyperlink{Structs_8h_a6a73aa1ad819973a9c421c17c2a7f36da8bea6994e011cc85a5a88b50c97ce7b2}{RespFuncType::kTSpline3\_red}};}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{Structs_8h_a6720d732608767153550aebebcf8fbf4a68f4b10c9689389fd8fea39dc6c097d3}{SplineInterpolation::kMonotonic}}:}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ Type\ =\ \mbox{\hyperlink{Structs_8h_a6a73aa1ad819973a9c421c17c2a7f36da8bea6994e011cc85a5a88b50c97ce7b2}{RespFuncType::kTSpline3\_red}};}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{comment}{//\ \ (Experimental)\ Akima\_Spline\ (crd\ order\ spline\ which\ is\ allowed\ to\ be\ discontinuous\ in\ 2nd\ deriv)}}
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{Structs_8h_a6720d732608767153550aebebcf8fbf4afe5701215b64da0194c6fead25edd976}{SplineInterpolation::kAkima}}:}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ Type\ =\ \mbox{\hyperlink{Structs_8h_a6a73aa1ad819973a9c421c17c2a7f36da8bea6994e011cc85a5a88b50c97ce7b2}{RespFuncType::kTSpline3\_red}};}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{Structs_8h_a6720d732608767153550aebebcf8fbf4ade75212a78a5cf860f84473a80355f42}{SplineInterpolation::kLinearFunc}}:}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ Type\ =\ \mbox{\hyperlink{Structs_8h_a6a73aa1ad819973a9c421c17c2a7f36da847a18b0a859ce2b3b87a98f455855b1}{RespFuncType::kTF1\_red}};}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}UNKNOWN\ SPLINE\ INTERPOLATION\ SPECIFIED!"{}});}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}You\ gave\ \{\}"{}},\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(i));}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_\ ,\ \_\_LINE\_\_\ );}
+\DoxyCodeLine{00181\ \ \ \}}
+\DoxyCodeLine{00182\ \ \ \textcolor{keywordflow}{return}\ Type;}
+\DoxyCodeLine{00183\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Structs_8h_a2d969ce667e41bd2492cff1775456837}\label{Structs_8h_a2d969ce667e41bd2492cff1775456837}} 
+\index{Structs.h@{Structs.h}!SplineInterpolation\_ToString@{SplineInterpolation\_ToString}}
+\index{SplineInterpolation\_ToString@{SplineInterpolation\_ToString}!Structs.h@{Structs.h}}
+\doxysubsubsection{\texorpdfstring{SplineInterpolation\_ToString()}{SplineInterpolation\_ToString()}}
+{\footnotesize\ttfamily std\+::string Spline\+Interpolation\+\_\+\+To\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{Structs_8h_a6720d732608767153550aebebcf8fbf4}{Spline\+Interpolation}}}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert a LLH type to a string. 
+
+
+
+Definition at line \mbox{\hyperlink{Structs_8h_source_l00187}{187}} of file \mbox{\hyperlink{Structs_8h_source}{Structs.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00188\ \textcolor{comment}{//\ **************************************************}}
+\DoxyCodeLine{00189\ \ \ std::string\ name\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00190\ \ \ \textcolor{keywordflow}{switch}(i)\ \{}
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{comment}{//\ \ TSpline3\ (third\ order\ spline\ in\ ROOT)}}
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{Structs_8h_a6720d732608767153550aebebcf8fbf4a56c886e7b34c938027a7140748999c8a}{SplineInterpolation::kTSpline3}}:}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ name\ =\ \textcolor{stringliteral}{"{}TSpline3"{}};}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00195\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{Structs_8h_a6720d732608767153550aebebcf8fbf4ac188c019178783e5be55110601309d7d}{SplineInterpolation::kLinear}}:}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ name\ =\ \textcolor{stringliteral}{"{}Linear"{}};}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00198\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{Structs_8h_a6720d732608767153550aebebcf8fbf4a68f4b10c9689389fd8fea39dc6c097d3}{SplineInterpolation::kMonotonic}}:}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ name\ =\ \textcolor{stringliteral}{"{}Monotonic"{}};}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00201\ \ \ \ \ \textcolor{comment}{//\ \ (Experimental)\ Akima\_Spline\ (crd\ order\ spline\ which\ is\ allowed\ to\ be\ discontinuous\ in\ 2nd\ deriv)}}
+\DoxyCodeLine{00202\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{Structs_8h_a6720d732608767153550aebebcf8fbf4afe5701215b64da0194c6fead25edd976}{SplineInterpolation::kAkima}}:}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ name\ =\ \textcolor{stringliteral}{"{}Akima"{}};}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00205\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{Structs_8h_a6720d732608767153550aebebcf8fbf4ade75212a78a5cf860f84473a80355f42}{SplineInterpolation::kLinearFunc}}:}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ name\ =\ \textcolor{stringliteral}{"{}LinearFunc"{}};}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00208\ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}UNKNOWN\ SPLINE\ INTERPOLATION\ SPECIFIED!"{}});}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}You\ gave\ \{\}"{}},\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(i));}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_\ ,\ \_\_LINE\_\_\ );}
+\DoxyCodeLine{00212\ \ \ \}}
+\DoxyCodeLine{00213\ \ \ \textcolor{keywordflow}{return}\ name;}
+\DoxyCodeLine{00214\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Structs_8h_ab29c200876205c3add1d71f053195658}\label{Structs_8h_ab29c200876205c3add1d71f053195658}} 
+\index{Structs.h@{Structs.h}!str2int@{str2int}}
+\index{str2int@{str2int}!Structs.h@{Structs.h}}
+\doxysubsubsection{\texorpdfstring{str2int()}{str2int()}}
+{\footnotesize\ttfamily constexpr unsigned int str2int (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str,  }\item[{int}]{h = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+KS\+: This is mad way of converting string to int. Why? To be able to use string with switch. 
+
+
+
+Definition at line \mbox{\hyperlink{Structs_8h_source_l00080}{80}} of file \mbox{\hyperlink{Structs_8h_source}{Structs.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00081\ \textcolor{comment}{//\ *******************}}
+\DoxyCodeLine{00082\ \ \ \textcolor{keywordflow}{return}\ !str[h]\ ?\ 5381\ :\ (\mbox{\hyperlink{Structs_8h_ab29c200876205c3add1d71f053195658}{str2int}}(str,\ h+1)\ *\ 33)\ \string^\ str[h];}
+\DoxyCodeLine{00083\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Structs_8h_ad39c312dc44177340e2ebccd3d3f2d4c}\label{Structs_8h_ad39c312dc44177340e2ebccd3d3f2d4c}} 
+\index{Structs.h@{Structs.h}!SystType\_ToString@{SystType\_ToString}}
+\index{SystType\_ToString@{SystType\_ToString}!Structs.h@{Structs.h}}
+\doxysubsubsection{\texorpdfstring{SystType\_ToString()}{SystType\_ToString()}}
+{\footnotesize\ttfamily std\+::string Syst\+Type\+\_\+\+To\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{Structs_8h_affc27d8b7b82d3713f45af17873fde2f}{Syst\+Type}}}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert a Syst type type to a string. 
+
+
+
+Definition at line \mbox{\hyperlink{Structs_8h_source_l00243}{243}} of file \mbox{\hyperlink{Structs_8h_source}{Structs.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00244\ \textcolor{comment}{//\ **************************************************}}
+\DoxyCodeLine{00245\ \ \ std::string\ name\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00246\ \ \ \textcolor{keywordflow}{switch}(i)\ \{}
+\DoxyCodeLine{00247\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{Structs_8h_affc27d8b7b82d3713f45af17873fde2fa085cb29127b1cf7b1ddd429ff4440b17}{SystType::kNorm}}:}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ name\ =\ \textcolor{stringliteral}{"{}Norm"{}};}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00250\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{Structs_8h_affc27d8b7b82d3713f45af17873fde2fa29d6ccf6cf507f6e66c72b1d3c2aed00}{SystType::kSpline}}:}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ name\ =\ \textcolor{stringliteral}{"{}Spline"{}};}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00253\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{Structs_8h_affc27d8b7b82d3713f45af17873fde2fad9b1ac76e80f59684cfb7dc996fc870d}{SystType::kFunc}}:}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ name\ =\ \textcolor{stringliteral}{"{}Functional"{}};}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00256\ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}UNKNOWN\ SYST\ TYPE\ SPECIFIED!"{}});}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}You\ gave\ \{\}"{}},\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(i));}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_\ ,\ \_\_LINE\_\_\ );}
+\DoxyCodeLine{00260\ \ \ \}}
+\DoxyCodeLine{00261\ \ \ \textcolor{keywordflow}{return}\ name;}
+\DoxyCodeLine{00262\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Structs_8h_a36b7eae1e9918d93ac6912d88c498a24}\label{Structs_8h_a36b7eae1e9918d93ac6912d88c498a24}} 
+\index{Structs.h@{Structs.h}!TargetMat\_ToString@{TargetMat\_ToString}}
+\index{TargetMat\_ToString@{TargetMat\_ToString}!Structs.h@{Structs.h}}
+\doxysubsubsection{\texorpdfstring{TargetMat\_ToString()}{TargetMat\_ToString()}}
+{\footnotesize\ttfamily std\+::string Target\+Mat\+\_\+\+To\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{Structs_8h_a706416000041de040e97d5dbe0bdb580}{Target\+Mat}}}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Converted the Target Mat to a string. 
+
+
+
+Definition at line \mbox{\hyperlink{Structs_8h_source_l00296}{296}} of file \mbox{\hyperlink{Structs_8h_source}{Structs.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00297\ \textcolor{comment}{//\ *****************}}
+\DoxyCodeLine{00298\ \ \ std::string\ name;}
+\DoxyCodeLine{00299\ }
+\DoxyCodeLine{00300\ \ \ \textcolor{keywordflow}{switch}(i)\ \{}
+\DoxyCodeLine{00301\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{Structs_8h_a706416000041de040e97d5dbe0bdb580a93b6b80f9eb311ce2ed33ee3ab3d628f}{kTarget\_H}}:}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ name\ =\ \textcolor{stringliteral}{"{}Hydrogen"{}};}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00304\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{Structs_8h_a706416000041de040e97d5dbe0bdb580a4ef60de1c65e797b83a21dc41c9d24c1}{kTarget\_C}}:}
+\DoxyCodeLine{00305\ \ \ \ \ \ \ name\ =\ \textcolor{stringliteral}{"{}Carbon"{}};}
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00307\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{Structs_8h_a706416000041de040e97d5dbe0bdb580ac62ee782c726abaef5be73fa37051f1a}{kTarget\_N}}:}
+\DoxyCodeLine{00308\ \ \ \ \ \ \ name\ =\ \textcolor{stringliteral}{"{}Nitrogen"{}};}
+\DoxyCodeLine{00309\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00310\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{Structs_8h_a706416000041de040e97d5dbe0bdb580aed102c56020984a88e9d68c44f7cc59e}{kTarget\_O}}:}
+\DoxyCodeLine{00311\ \ \ \ \ \ \ name\ =\ \textcolor{stringliteral}{"{}Oxygen"{}};}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00313\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{Structs_8h_a706416000041de040e97d5dbe0bdb580a66f3bd62228437490c204146fc3c9650}{kTarget\_Al}}:}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ name\ =\ \textcolor{stringliteral}{"{}Aluminium"{}};}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00316\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{Structs_8h_a706416000041de040e97d5dbe0bdb580aaf03f51fe85225e1b0a61f50e6593dc4}{kTarget\_Ti}}:}
+\DoxyCodeLine{00317\ \ \ \ \ \ \ name\ =\ \textcolor{stringliteral}{"{}Titanium"{}};}
+\DoxyCodeLine{00318\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00319\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{Structs_8h_a706416000041de040e97d5dbe0bdb580a40b8c7791706f48abf66e8fa8f943282}{kTarget\_Fe}}:}
+\DoxyCodeLine{00320\ \ \ \ \ \ \ name\ =\ \textcolor{stringliteral}{"{}Iron"{}};}
+\DoxyCodeLine{00321\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00322\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{Structs_8h_a706416000041de040e97d5dbe0bdb580ad5d1996f0e943feb8183b9b07ab701c0}{kTarget\_Pb}}:}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ name\ =\ \textcolor{stringliteral}{"{}Lead"{}};}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00325\ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00326\ \ \ \ \ \ \ name\ =\ \textcolor{stringliteral}{"{}TargetMat\_Undefined"{}};}
+\DoxyCodeLine{00327\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00328\ \ \ \}}
+\DoxyCodeLine{00329\ }
+\DoxyCodeLine{00330\ \ \ \textcolor{keywordflow}{return}\ name;}
+\DoxyCodeLine{00331\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Structs_8h_afe33f23691e6b5e3e0f5ab97aaeb7726}\label{Structs_8h_afe33f23691e6b5e3e0f5ab97aaeb7726}} 
+\index{Structs.h@{Structs.h}!TestStatistic\_ToString@{TestStatistic\_ToString}}
+\index{TestStatistic\_ToString@{TestStatistic\_ToString}!Structs.h@{Structs.h}}
+\doxysubsubsection{\texorpdfstring{TestStatistic\_ToString()}{TestStatistic\_ToString()}}
+{\footnotesize\ttfamily std\+::string Test\+Statistic\+\_\+\+To\+String (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Structs_8h_a960da89e33ac45a56f7bbfac3068dc67}{Test\+Statistic}}}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert a LLH type to a string. 
+
+
+
+Definition at line \mbox{\hyperlink{Structs_8h_source_l00430}{430}} of file \mbox{\hyperlink{Structs_8h_source}{Structs.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00430\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00431\ \textcolor{comment}{//\ **************************************************}}
+\DoxyCodeLine{00432\ \ \ std::string\ name\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00433\ }
+\DoxyCodeLine{00434\ \ \ \textcolor{keywordflow}{switch}(i)\ \{}
+\DoxyCodeLine{00435\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{Structs_8h_a960da89e33ac45a56f7bbfac3068dc67a82f43d91f1eda213c4b5c486672a32a5}{kPoisson}}:}
+\DoxyCodeLine{00436\ \ \ \ \ name\ =\ \textcolor{stringliteral}{"{}Poisson"{}};}
+\DoxyCodeLine{00437\ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00438\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{Structs_8h_a960da89e33ac45a56f7bbfac3068dc67a3c9b50397bd37ce679bbdda14f6108c4}{kBarlowBeeston}}:}
+\DoxyCodeLine{00439\ \ \ \ \ name\ =\ \textcolor{stringliteral}{"{}BarlowBeeston"{}};}
+\DoxyCodeLine{00440\ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00441\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{Structs_8h_a960da89e33ac45a56f7bbfac3068dc67a5a1aedce85942661f297f503d606c472}{kIceCube}}:}
+\DoxyCodeLine{00442\ \ \ \ \ name\ =\ \textcolor{stringliteral}{"{}IceCube"{}};}
+\DoxyCodeLine{00443\ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00444\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{Structs_8h_a960da89e33ac45a56f7bbfac3068dc67a1ac0c03f07bf2bb9ad083e449d69ffd7}{kPearson}}:}
+\DoxyCodeLine{00445\ \ \ \ \ name\ =\ \textcolor{stringliteral}{"{}Pearson"{}};}
+\DoxyCodeLine{00446\ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00447\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{Structs_8h_a960da89e33ac45a56f7bbfac3068dc67a6589bdeaef8de84e7ef545fd709772bb}{kDembinskiAbdelmottele}}:}
+\DoxyCodeLine{00448\ \ \ \ \ name\ =\ \textcolor{stringliteral}{"{}DembinskiAbdelmottele"{}};}
+\DoxyCodeLine{00449\ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00450\ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00451\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}UNKNOWN\ LIKELIHOOD\ SPECIFIED!"{}});}
+\DoxyCodeLine{00452\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}You\ gave\ test-\/statistic\ \{\}"{}},\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(i));}
+\DoxyCodeLine{00453\ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_\ ,\ \_\_LINE\_\_\ );}
+\DoxyCodeLine{00454\ \ \ \}}
+\DoxyCodeLine{00455\ \ \ \textcolor{keywordflow}{return}\ name;}
+\DoxyCodeLine{00456\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{Structs_8h_aa2920b946077e971486eaf1b49101f01}\label{Structs_8h_aa2920b946077e971486eaf1b49101f01}} 
+\index{Structs.h@{Structs.h}!\_BAD\_DOUBLE\_@{\_BAD\_DOUBLE\_}}
+\index{\_BAD\_DOUBLE\_@{\_BAD\_DOUBLE\_}!Structs.h@{Structs.h}}
+\doxysubsubsection{\texorpdfstring{\_BAD\_DOUBLE\_}{\_BAD\_DOUBLE\_}}
+{\footnotesize\ttfamily constexpr const double \+\_\+\+BAD\+\_\+\+DOUBLE\+\_\+ = -\/999.\+99\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line \mbox{\hyperlink{Structs_8h_source_l00039}{39}} of file \mbox{\hyperlink{Structs_8h_source}{Structs.\+h}}.
+
+\mbox{\Hypertarget{Structs_8h_a27974ef7059f8fc3305881e97ede4325}\label{Structs_8h_a27974ef7059f8fc3305881e97ede4325}} 
+\index{Structs.h@{Structs.h}!\_BAD\_INT\_@{\_BAD\_INT\_}}
+\index{\_BAD\_INT\_@{\_BAD\_INT\_}!Structs.h@{Structs.h}}
+\doxysubsubsection{\texorpdfstring{\_BAD\_INT\_}{\_BAD\_INT\_}}
+{\footnotesize\ttfamily constexpr const int \+\_\+\+BAD\+\_\+\+INT\+\_\+ = -\/999\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line \mbox{\hyperlink{Structs_8h_source_l00040}{40}} of file \mbox{\hyperlink{Structs_8h_source}{Structs.\+h}}.
+
+\mbox{\Hypertarget{Structs_8h_aa3be778b9a2141963769bb334457b805}\label{Structs_8h_aa3be778b9a2141963769bb334457b805}} 
+\index{Structs.h@{Structs.h}!\_DEFAULT\_RETURN\_VAL\_@{\_DEFAULT\_RETURN\_VAL\_}}
+\index{\_DEFAULT\_RETURN\_VAL\_@{\_DEFAULT\_RETURN\_VAL\_}!Structs.h@{Structs.h}}
+\doxysubsubsection{\texorpdfstring{\_DEFAULT\_RETURN\_VAL\_}{\_DEFAULT\_RETURN\_VAL\_}}
+{\footnotesize\ttfamily constexpr const double \+\_\+\+DEFAULT\+\_\+\+RETURN\+\_\+\+VAL\+\_\+ = -\/999999.\+123456\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line \mbox{\hyperlink{Structs_8h_source_l00042}{42}} of file \mbox{\hyperlink{Structs_8h_source}{Structs.\+h}}.
+

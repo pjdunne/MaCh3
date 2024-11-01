@@ -1,0 +1,118 @@
+\hypertarget{CovarianceUtils_8h_source}{}\doxysection{Covariance\+Utils.\+h}
+\label{CovarianceUtils_8h_source}\index{/home/runner/work/MaCh3/MaCh3/covariance/CovarianceUtils.h@{/home/runner/work/MaCh3/MaCh3/covariance/CovarianceUtils.h}}
+\mbox{\hyperlink{CovarianceUtils_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00003}00003\ \textcolor{comment}{//\ ROOT\ includes}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}TMatrixT.h"{}}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}TMatrixDSym.h"{}}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}TVectorT.h"{}}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}TVectorD.h"{}}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}TH1D.h"{}}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}TH2D.h"{}}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}TTree.h"{}}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}TFile.h"{}}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00012}00012\ \textcolor{preprocessor}{\#include\ "{}TRandom3.h"{}}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00013}00013\ \textcolor{preprocessor}{\#include\ "{}TMath.h"{}}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00014}00014\ \textcolor{preprocessor}{\#include\ "{}TDecompChol.h"{}}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00015}00015\ \textcolor{preprocessor}{\#include\ "{}TStopwatch.h"{}}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00016}00016\ \textcolor{preprocessor}{\#include\ "{}TMatrix.h"{}}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00017}00017\ \textcolor{preprocessor}{\#include\ "{}TMatrixDSymEigen.h"{}}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00018}00018\ \textcolor{preprocessor}{\#include\ "{}TMatrixDEigen.h"{}}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00019}00019\ \textcolor{preprocessor}{\#include\ "{}TDecompSVD.h"{}}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00021}00021\ \textcolor{preprocessor}{\#ifdef\ MULTITHREAD}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00022}00022\ \textcolor{preprocessor}{\#include\ "{}omp.h"{}}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00023}00023\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00025}00025\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceMaCh3Utils}{MaCh3Utils}}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00026}00026\ \{}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00028}\mbox{\hyperlink{namespaceMaCh3Utils_a5aff908b9241c673e8d05403996e2229}{00028}}\ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{namespaceMaCh3Utils_a5aff908b9241c673e8d05403996e2229}{GetNThreads}}()}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00029}00029\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00030}00030\ \textcolor{preprocessor}{\ \ \ \ \#ifdef\ MULTITHREAD}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00031}00031\ \ \ \ \ \textcolor{keywordtype}{int}\ nThreads\ =\ omp\_get\_max\_threads();}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00032}00032\ \textcolor{preprocessor}{\ \ \ \ \#else}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00033}00033\ \ \ \ \ \textcolor{keywordtype}{int}\ nThreads\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00034}00034\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00036}00036\ \ \ \ \ \textcolor{keywordflow}{return}\ nThreads;}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00037}00037\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00040}\mbox{\hyperlink{namespaceMaCh3Utils_a0cd7bf76aca73a1e36519b04e19dd6c0}{00040}}\ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{double}*\ \mbox{\hyperlink{namespaceMaCh3Utils_a0cd7bf76aca73a1e36519b04e19dd6c0}{MatrixMult}}(\textcolor{keywordtype}{double}\ *A,\ \textcolor{keywordtype}{double}\ *B,\ \textcolor{keywordtype}{int}\ n)\ \{}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00041}00041\ \ \ \ \ \textcolor{comment}{//CW:\ First\ transpose\ to\ increse\ cache\ hits}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00042}00042\ \ \ \ \ \textcolor{keywordtype}{double}\ *BT\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}[n*n];}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00043}00043\ \textcolor{preprocessor}{\ \ \ \ \#ifdef\ MULTITHREAD}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00044}00044\ \textcolor{preprocessor}{\ \ \ \ \#pragma\ omp\ parallel\ for}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00045}00045\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00046}00046\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ n;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00047}00047\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ n;\ j++)\ \{}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00048}00048\ \ \ \ \ \ \ \ \ BT[j*n+i]\ =\ B[i*n+j];}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00049}00049\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00050}00050\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00052}00052\ \ \ \ \ \textcolor{comment}{//\ Now\ multiply}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00053}00053\ \ \ \ \ \textcolor{keywordtype}{double}\ *C\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}[n*n];}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00054}00054\ \textcolor{preprocessor}{\ \ \ \ \#ifdef\ MULTITHREAD}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00055}00055\ \textcolor{preprocessor}{\ \ \ \ \#pragma\ omp\ parallel\ for}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00056}00056\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00057}00057\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ n;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00058}00058\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ n;\ j++)\ \{}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00059}00059\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ sum\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ k\ =\ 0;\ k\ <\ n;\ k++)\ \{}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ sum\ +=\ A[i*n+k]*BT[j*n+k];}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00062}00062\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00063}00063\ \ \ \ \ \ \ \ \ C[i*n+j]\ =\ sum;}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00064}00064\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00065}00065\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00066}00066\ \ \ \ \ \textcolor{keyword}{delete}\ BT;}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00068}00068\ \ \ \ \ \textcolor{keywordflow}{return}\ C;}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00069}00069\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00072}\mbox{\hyperlink{namespaceMaCh3Utils_af03aca63ae363cb51c7033e8e91ade6d}{00072}}\ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{double}**\ \mbox{\hyperlink{namespaceMaCh3Utils_a0cd7bf76aca73a1e36519b04e19dd6c0}{MatrixMult}}(\textcolor{keywordtype}{double}\ **A,\ \textcolor{keywordtype}{double}\ **B,\ \textcolor{keywordtype}{int}\ n)\ \{}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00073}00073\ \ \ \ \ \textcolor{comment}{//\ First\ make\ into\ monolithic\ array}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00074}00074\ \ \ \ \ \textcolor{keywordtype}{double}\ *A\_mon\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}[n*n];}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00075}00075\ \ \ \ \ \textcolor{keywordtype}{double}\ *B\_mon\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}[n*n];}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00077}00077\ \textcolor{preprocessor}{\ \ \ \ \#ifdef\ MULTITHREAD}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00078}00078\ \textcolor{preprocessor}{\ \ \ \ \#pragma\ omp\ parallel\ for}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00079}00079\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00080}00080\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ n;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00081}00081\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ n;\ ++j)\ \{}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00082}00082\ \ \ \ \ \ \ \ \ A\_mon[i*n+j]\ =\ A[i][j];}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00083}00083\ \ \ \ \ \ \ \ \ B\_mon[i*n+j]\ =\ B[i][j];}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00084}00084\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00085}00085\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00086}00086\ \ \ \ \ \textcolor{comment}{//CW:\ Now\ call\ the\ monolithic\ calculator}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00087}00087\ \ \ \ \ \textcolor{keywordtype}{double}\ *C\_mon\ =\ \mbox{\hyperlink{namespaceMaCh3Utils_a0cd7bf76aca73a1e36519b04e19dd6c0}{MatrixMult}}(A\_mon,\ B\_mon,\ n);}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00088}00088\ \ \ \ \ \textcolor{keyword}{delete}\ A\_mon;}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00089}00089\ \ \ \ \ \textcolor{keyword}{delete}\ B\_mon;}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00091}00091\ \ \ \ \ \textcolor{comment}{//\ Return\ the\ double\ pointer}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00092}00092\ \ \ \ \ \textcolor{keywordtype}{double}\ **C\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}*[n];}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00093}00093\ \textcolor{preprocessor}{\ \ \ \ \#ifdef\ MULTITHREAD}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00094}00094\ \textcolor{preprocessor}{\ \ \ \ \#pragma\ omp\ parallel\ for}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00095}00095\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00096}00096\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ n;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00097}00097\ \ \ \ \ \ \ C[i]\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}[n];}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00098}00098\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ n;\ ++j)\ \{}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00099}00099\ \ \ \ \ \ \ \ \ C[i][j]\ =\ C\_mon[i*n+j];}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00100}00100\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00101}00101\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00102}00102\ \ \ \ \ \textcolor{keyword}{delete}\ C\_mon;}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00104}00104\ \ \ \ \ \textcolor{keywordflow}{return}\ C;}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00105}00105\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00108}\mbox{\hyperlink{namespaceMaCh3Utils_ac4d63087b4dc0c0a0e49d375ece4cb00}{00108}}\ \ \ \textcolor{keyword}{inline}\ TMatrixD\ \mbox{\hyperlink{namespaceMaCh3Utils_a0cd7bf76aca73a1e36519b04e19dd6c0}{MatrixMult}}(TMatrixD\ A,\ TMatrixD\ B)}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00109}00109\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00110}00110\ \ \ \ \ \textcolor{keywordtype}{double}\ *C\_mon\ =\ \mbox{\hyperlink{namespaceMaCh3Utils_a0cd7bf76aca73a1e36519b04e19dd6c0}{MatrixMult}}(A.GetMatrixArray(),\ B.GetMatrixArray(),\ A.GetNcols());}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00111}00111\ \ \ \ \ TMatrixD\ C;}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00112}00112\ \ \ \ \ C.Use(A.GetNcols(),\ A.GetNrows(),\ C\_mon);}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00113}00113\ \ \ \ \ \textcolor{keywordflow}{return}\ C;}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00114}00114\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00115}00115\ }
+\DoxyCodeLine{\Hypertarget{CovarianceUtils_8h_source_l00116}00116\ \}}
+
+\end{DoxyCode}

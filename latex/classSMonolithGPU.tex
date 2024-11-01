@@ -1,0 +1,893 @@
+\hypertarget{classSMonolithGPU}{}\doxysection{SMonolith\+GPU Class Reference}
+\label{classSMonolithGPU}\index{SMonolithGPU@{SMonolithGPU}}
+
+
+Class responsible for calculating spline weight on GPU.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSMonolithGPU_aa19e498d0e762566ee62c7b93de18598}{SMonolith\+GPU}} ()
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classSMonolithGPU_a780471949538f9b359fe9f604491e620}{$\sim$\+SMonolith\+GPU}} ()
+\begin{DoxyCompactList}\small\item\em destructor \end{DoxyCompactList}\item 
+\+\_\+\+\_\+host\+\_\+\+\_\+ void \mbox{\hyperlink{classSMonolithGPU_a713a47fd41a93d2b6d40c4b392158aae}{Init\+GPU\+\_\+\+Spline\+Monolith}} (float $\ast$$\ast$cpu\+\_\+total\+\_\+weights, int n\+\_\+events, unsigned int total\+\_\+nknots, unsigned int n\+\_\+splines, unsigned int n\+\_\+tf1, int Eve\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Allocate memory on gpu for spline monolith. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+host\+\_\+\+\_\+ void \mbox{\hyperlink{classSMonolithGPU_aef41d94cf5e44ebf4fe427c3ce84f20b}{Copy\+To\+GPU\+\_\+\+Spline\+Monolith}} (\mbox{\hyperlink{structSplineMonoStruct}{Spline\+Mono\+Struct}} $\ast$cpu\+\_\+spline\+\_\+handler, std\+::vector$<$ float $>$ cpu\+\_\+many\+\_\+array\+\_\+\+TF1, std\+::vector$<$ short int $>$ cpu\+\_\+param\+No\+\_\+arr\+\_\+\+TF1, int n\+\_\+events, std\+::vector$<$ unsigned int $>$ cpu\+\_\+n\+Param\+Per\+Event, std\+::vector$<$ unsigned int $>$ cpu\+\_\+n\+Param\+Per\+Event\+\_\+\+TF1, int n\+\_\+params, unsigned int n\+\_\+splines, short int spline\+\_\+size, unsigned int total\+\_\+nknots, unsigned int n\+\_\+tf1)
+\begin{DoxyCompactList}\small\item\em Copies data from CPU to GPU for the spline monolith. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+host\+\_\+\+\_\+ void \mbox{\hyperlink{classSMonolithGPU_ab674ec40c136d89b56b7c25d9337c48a}{Init\+GPU\+\_\+\+Segments}} (short int $\ast$$\ast$segment)
+\begin{DoxyCompactList}\small\item\em Allocate memory for spline segments. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+host\+\_\+\+\_\+ void \mbox{\hyperlink{classSMonolithGPU_a3fbbb94f6db65b73a394ab541f94fba6}{Init\+GPU\+\_\+\+Vals}} (float $\ast$$\ast$vals)
+\begin{DoxyCompactList}\small\item\em Allocate memory for spline segments. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+host\+\_\+\+\_\+ void \mbox{\hyperlink{classSMonolithGPU_a8419e01082c64b291c3b38d8e69ceb4d}{Run\+GPU\+\_\+\+Spline\+Monolith}} (float $\ast$cpu\+\_\+total\+\_\+weights, float $\ast$vals, short int $\ast$segment, const unsigned int h\+\_\+n\+\_\+splines, const unsigned int h\+\_\+n\+\_\+tf1)
+\begin{DoxyCompactList}\small\item\em Run the GPU code for the separate many arrays. As in separate \{x\}, \{y,b,c,d\} arrays Pass the segment and the parameter values (binary search already performed in Spline\+Monolith\+::\+Find\+Spline\+Segment() \end{DoxyCompactList}\item 
+\+\_\+\+\_\+host\+\_\+\+\_\+ void \mbox{\hyperlink{classSMonolithGPU_a1ca23401d8d99412288952a1d44390ea}{Cleanup\+GPU\+\_\+\+Spline\+Monolith}} (float $\ast$cpu\+\_\+total\+\_\+weights)
+\begin{DoxyCompactList}\small\item\em This function deallocates the resources allocated for the separate \{x\} and \{ybcd\} arrays in the and TF1 stuff at GPU. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+host\+\_\+\+\_\+ void \mbox{\hyperlink{classSMonolithGPU_af5ca949ba6d79666b541350d24e3daaf}{Cleanup\+GPU\+\_\+\+Segments}} (short int $\ast$segment, float $\ast$vals)
+\begin{DoxyCompactList}\small\item\em Clean up pinned variables at CPU. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int $\ast$ \mbox{\hyperlink{classSMonolithGPU_a13324d2fe2a29f7bbff19c55ddd6968c}{gpu\+\_\+n\+Param\+Per\+Event}}
+\begin{DoxyCompactList}\small\item\em KS\+: GPU map keeping track how many parameters applies to each event, we keep two numbers here \{number of splines per event, index where splines start for a given event\}. \end{DoxyCompactList}\item 
+unsigned int $\ast$ \mbox{\hyperlink{classSMonolithGPU_a60191ebfcba5bedf7e01c923887d5ceb}{gpu\+\_\+n\+Param\+Per\+Event\+\_\+\+TF1}}
+\begin{DoxyCompactList}\small\item\em KS\+: GPU map keeping track how many parameters applies to each event, we keep two numbers here \{number of TF1 per event, index where TF1 start for a given event\}. \end{DoxyCompactList}\item 
+float $\ast$ \mbox{\hyperlink{classSMonolithGPU_a871589b8a52dea4ed9a4963a7b05e1af}{gpu\+\_\+coeff\+\_\+x}}
+\begin{DoxyCompactList}\small\item\em KS\+: GPU arrays to hold X coefficient. \end{DoxyCompactList}\item 
+float $\ast$ \mbox{\hyperlink{classSMonolithGPU_a5a51e7b819a0c8cf786aa8f13dfdc0cc}{gpu\+\_\+coeff\+\_\+many}}
+\begin{DoxyCompactList}\small\item\em GPU arrays to hold other coefficients. \end{DoxyCompactList}\item 
+unsigned int $\ast$ \mbox{\hyperlink{classSMonolithGPU_ac291adc527ef593bb62a8440a131798f}{gpu\+\_\+n\+Knots\+\_\+arr}}
+\begin{DoxyCompactList}\small\item\em KS\+: GPU Number of knots per spline. \end{DoxyCompactList}\item 
+short int $\ast$ \mbox{\hyperlink{classSMonolithGPU_ae8f091bec85671c4f96a2d0d9dbe4243}{gpu\+\_\+param\+No\+\_\+arr}}
+\begin{DoxyCompactList}\small\item\em CW\+: GPU array with the number of points per spline (not per spline point!) \end{DoxyCompactList}\item 
+float $\ast$ \mbox{\hyperlink{classSMonolithGPU_ae58804bb65745dbd8835876bf0debdc7}{gpu\+\_\+coeff\+\_\+\+TF1\+\_\+many}}
+\begin{DoxyCompactList}\small\item\em GPU arrays to hold TF1 coefficients. \end{DoxyCompactList}\item 
+short int $\ast$ \mbox{\hyperlink{classSMonolithGPU_aa84c07d3cda1c29b039a0fd3778c0c0f}{gpu\+\_\+n\+Points\+\_\+arr}}
+\begin{DoxyCompactList}\small\item\em GPU arrays to hold number of points. \end{DoxyCompactList}\item 
+short int $\ast$ \mbox{\hyperlink{classSMonolithGPU_a2f8de24623a787f9f728bdd0b735c89c}{gpu\+\_\+param\+No\+\_\+\+TF1\+\_\+arr}}
+\begin{DoxyCompactList}\small\item\em CW\+: GPU array with the number of points per TF1 object. \end{DoxyCompactList}\item 
+float $\ast$ \mbox{\hyperlink{classSMonolithGPU_af5007136ab5e2fdbf3b9387e14a1c64a}{gpu\+\_\+total\+\_\+weights}}
+\begin{DoxyCompactList}\small\item\em GPU arrays to hold weight for event. \end{DoxyCompactList}\item 
+float $\ast$ \mbox{\hyperlink{classSMonolithGPU_a4f29d521544dd4bb64e6f2bfd68c21af}{gpu\+\_\+weights}}
+\begin{DoxyCompactList}\small\item\em GPU arrays to hold weight for each spline. \end{DoxyCompactList}\item 
+float $\ast$ \mbox{\hyperlink{classSMonolithGPU_ab5d038b66802271bbaf8f0c06704e5da}{gpu\+\_\+weights\+\_\+tf1}}
+\begin{DoxyCompactList}\small\item\em GPU arrays to hold weight for each TF1. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classSMonolithGPU_ad36c112081992f2887fe24675f4bba06}{h\+\_\+n\+\_\+params}}
+\begin{DoxyCompactList}\small\item\em Number of params living on CPU. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classSMonolithGPU_a4628e4d9bb58650086cf51098c996059}{h\+\_\+n\+\_\+events}}
+\begin{DoxyCompactList}\small\item\em Number of events living on CPU. \end{DoxyCompactList}\item 
+cuda\+Texture\+Object\+\_\+t \mbox{\hyperlink{classSMonolithGPU_a1fb766b50293e6b611c45aa21c5c1b9c}{text\+\_\+coeff\+\_\+x}} = 0
+\begin{DoxyCompactList}\small\item\em KS\+: Textures are L1 cache variables which are well optimised for fetching. Make texture only for variables you often access but rarely overwrite. There are limits on texture memory so don\textquotesingle{}t use huge arrays. \end{DoxyCompactList}\item 
+cuda\+Texture\+Object\+\_\+t \mbox{\hyperlink{classSMonolithGPU_a663a150b3464b28d6161df1924cd534f}{text\+\_\+n\+Param\+Per\+Event}} = 0
+\begin{DoxyCompactList}\small\item\em KS\+: Map keeping track how many parameters applies to each event, we keep two numbers here \{number of splines per event, index where splines start for a given event\}. \end{DoxyCompactList}\item 
+cuda\+Texture\+Object\+\_\+t \mbox{\hyperlink{classSMonolithGPU_a089fd1b491667e60d06c3713cd45552e}{text\+\_\+n\+Param\+Per\+Event\+\_\+\+TF1}} = 0
+\begin{DoxyCompactList}\small\item\em KS\+: Map keeping track how many parameters applies to each event, we keep two numbers here \{number of TF1 per event, index where TF1 start for a given event\}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class responsible for calculating spline weight on GPU. 
+
+Definition at line \mbox{\hyperlink{gpuSplineUtils_8cuh_source_l00061}{61}} of file \mbox{\hyperlink{gpuSplineUtils_8cuh_source}{gpu\+Spline\+Utils.\+cuh}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSMonolithGPU_aa19e498d0e762566ee62c7b93de18598}\label{classSMonolithGPU_aa19e498d0e762566ee62c7b93de18598}} 
+\index{SMonolithGPU@{SMonolithGPU}!SMonolithGPU@{SMonolithGPU}}
+\index{SMonolithGPU@{SMonolithGPU}!SMonolithGPU@{SMonolithGPU}}
+\doxysubsubsection{\texorpdfstring{SMonolithGPU()}{SMonolithGPU()}}
+{\footnotesize\ttfamily SMonolith\+GPU\+::\+SMonolith\+GPU (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+constructor 
+
+Number of events living on CPU
+
+Definition at line \mbox{\hyperlink{gpuSplineUtils_8cu_source_l00081}{81}} of file \mbox{\hyperlink{gpuSplineUtils_8cu_source}{gpu\+Spline\+Utils.\+cu}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00082\ \ \ \mbox{\hyperlink{classSMonolithGPU_ad36c112081992f2887fe24675f4bba06}{h\_n\_params}}\ \ \ \ \ =\ -\/1;}
+\DoxyCodeLine{00084\ \ \ \mbox{\hyperlink{classSMonolithGPU_a4628e4d9bb58650086cf51098c996059}{h\_n\_events}}\ =\ -\/1;}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \mbox{\hyperlink{classSMonolithGPU_a4f29d521544dd4bb64e6f2bfd68c21af}{gpu\_weights}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00087\ \ \ \mbox{\hyperlink{classSMonolithGPU_af5007136ab5e2fdbf3b9387e14a1c64a}{gpu\_total\_weights}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00088\ \ \ \mbox{\hyperlink{classSMonolithGPU_a13324d2fe2a29f7bbff19c55ddd6968c}{gpu\_nParamPerEvent}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00089\ \ \ \mbox{\hyperlink{classSMonolithGPU_aa84c07d3cda1c29b039a0fd3778c0c0f}{gpu\_nPoints\_arr}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00090\ \ \ \mbox{\hyperlink{classSMonolithGPU_ae8f091bec85671c4f96a2d0d9dbe4243}{gpu\_paramNo\_arr}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00091\ \ \ \mbox{\hyperlink{classSMonolithGPU_ac291adc527ef593bb62a8440a131798f}{gpu\_nKnots\_arr}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00092\ \ \ \mbox{\hyperlink{classSMonolithGPU_a871589b8a52dea4ed9a4963a7b05e1af}{gpu\_coeff\_x}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00093\ \ \ \mbox{\hyperlink{classSMonolithGPU_a5a51e7b819a0c8cf786aa8f13dfdc0cc}{gpu\_coeff\_many}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00094\ \ \ \mbox{\hyperlink{classSMonolithGPU_ae58804bb65745dbd8835876bf0debdc7}{gpu\_coeff\_TF1\_many}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00095\ \ \ \mbox{\hyperlink{classSMonolithGPU_a2f8de24623a787f9f728bdd0b735c89c}{gpu\_paramNo\_TF1\_arr}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00096\ \ \ \mbox{\hyperlink{classSMonolithGPU_a60191ebfcba5bedf7e01c923887d5ceb}{gpu\_nParamPerEvent\_TF1}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00097\ \ \ \mbox{\hyperlink{classSMonolithGPU_ab5d038b66802271bbaf8f0c06704e5da}{gpu\_weights\_tf1}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00098\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classSMonolithGPU_a780471949538f9b359fe9f604491e620}\label{classSMonolithGPU_a780471949538f9b359fe9f604491e620}} 
+\index{SMonolithGPU@{SMonolithGPU}!````~SMonolithGPU@{$\sim$SMonolithGPU}}
+\index{````~SMonolithGPU@{$\sim$SMonolithGPU}!SMonolithGPU@{SMonolithGPU}}
+\doxysubsubsection{\texorpdfstring{$\sim$SMonolithGPU()}{~SMonolithGPU()}}
+{\footnotesize\ttfamily SMonolith\+GPU\+::$\sim$\+SMonolith\+GPU (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+destructor 
+
+
+
+Definition at line \mbox{\hyperlink{gpuSplineUtils_8cu_source_l00100}{100}} of file \mbox{\hyperlink{gpuSplineUtils_8cu_source}{gpu\+Spline\+Utils.\+cu}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSMonolithGPU_af5ca949ba6d79666b541350d24e3daaf}\label{classSMonolithGPU_af5ca949ba6d79666b541350d24e3daaf}} 
+\index{SMonolithGPU@{SMonolithGPU}!CleanupGPU\_Segments@{CleanupGPU\_Segments}}
+\index{CleanupGPU\_Segments@{CleanupGPU\_Segments}!SMonolithGPU@{SMonolithGPU}}
+\doxysubsubsection{\texorpdfstring{CleanupGPU\_Segments()}{CleanupGPU\_Segments()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+host\+\_\+\+\_\+ void SMonolith\+GPU\+::\+Cleanup\+GPU\+\_\+\+Segments (\begin{DoxyParamCaption}\item[{short int $\ast$}]{segment,  }\item[{float $\ast$}]{vals }\end{DoxyParamCaption})}
+
+
+
+Clean up pinned variables at CPU. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em segment} & Found spline segment for each parameter \\
+\hline
+{\em vals} & Value to which we want reweight for each parameter \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{gpuSplineUtils_8cu_source_l00604}{604}} of file \mbox{\hyperlink{gpuSplineUtils_8cu_source}{gpu\+Spline\+Utils.\+cu}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00604\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00605\ \textcolor{comment}{//\ *******************************************}}
+\DoxyCodeLine{00606\ \ \ cudaFreeHost(segment);}
+\DoxyCodeLine{00607\ \ \ cudaFreeHost(vals);}
+\DoxyCodeLine{00608\ }
+\DoxyCodeLine{00609\ \ \ segment\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00610\ \ \ vals\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00611\ }
+\DoxyCodeLine{00612\ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00613\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classSMonolithGPU_a1ca23401d8d99412288952a1d44390ea}\label{classSMonolithGPU_a1ca23401d8d99412288952a1d44390ea}} 
+\index{SMonolithGPU@{SMonolithGPU}!CleanupGPU\_SplineMonolith@{CleanupGPU\_SplineMonolith}}
+\index{CleanupGPU\_SplineMonolith@{CleanupGPU\_SplineMonolith}!SMonolithGPU@{SMonolithGPU}}
+\doxysubsubsection{\texorpdfstring{CleanupGPU\_SplineMonolith()}{CleanupGPU\_SplineMonolith()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+host\+\_\+\+\_\+ void SMonolith\+GPU\+::\+Cleanup\+GPU\+\_\+\+Spline\+Monolith (\begin{DoxyParamCaption}\item[{float $\ast$}]{cpu\+\_\+total\+\_\+weights }\end{DoxyParamCaption})}
+
+
+
+This function deallocates the resources allocated for the separate \{x\} and \{ybcd\} arrays in the and TF1 stuff at GPU. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cpu\+\_\+total\+\_\+weights} & Pointer to the total weights array on the CPU (used if {\ttfamily Weight\+\_\+\+On\+\_\+\+Spline\+By\+Spline\+\_\+\+Basis} is not defined). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{gpuSplineUtils_8cu_source_l00568}{568}} of file \mbox{\hyperlink{gpuSplineUtils_8cu_source}{gpu\+Spline\+Utils.\+cu}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00572\ \ \{}
+\DoxyCodeLine{00573\ \textcolor{comment}{//\ *********************************}}
+\DoxyCodeLine{00574\ \ \ cudaFree(\mbox{\hyperlink{classSMonolithGPU_ae8f091bec85671c4f96a2d0d9dbe4243}{gpu\_paramNo\_arr}});}
+\DoxyCodeLine{00575\ \ \ cudaFree(\mbox{\hyperlink{classSMonolithGPU_ac291adc527ef593bb62a8440a131798f}{gpu\_nKnots\_arr}});}
+\DoxyCodeLine{00576\ }
+\DoxyCodeLine{00577\ \ \ \textcolor{comment}{//\ free\ the\ coefficient\ arrays}}
+\DoxyCodeLine{00578\ \ \ cudaDestroyTextureObject(\mbox{\hyperlink{classSMonolithGPU_a1fb766b50293e6b611c45aa21c5c1b9c}{text\_coeff\_x}});}
+\DoxyCodeLine{00579\ }
+\DoxyCodeLine{00580\ \ \ cudaFree(\mbox{\hyperlink{classSMonolithGPU_a871589b8a52dea4ed9a4963a7b05e1af}{gpu\_coeff\_x}});}
+\DoxyCodeLine{00581\ \ \ cudaFree(\mbox{\hyperlink{classSMonolithGPU_a5a51e7b819a0c8cf786aa8f13dfdc0cc}{gpu\_coeff\_many}});}
+\DoxyCodeLine{00582\ }
+\DoxyCodeLine{00583\ \ \ cudaFree(\mbox{\hyperlink{classSMonolithGPU_ae58804bb65745dbd8835876bf0debdc7}{gpu\_coeff\_TF1\_many}});}
+\DoxyCodeLine{00584\ \ \ cudaFree(\mbox{\hyperlink{classSMonolithGPU_a2f8de24623a787f9f728bdd0b735c89c}{gpu\_paramNo\_TF1\_arr}});}
+\DoxyCodeLine{00585\ \ \ \textcolor{comment}{//\ free\ weights\ on\ the\ gpu}}
+\DoxyCodeLine{00586\ \ \ cudaFree(\mbox{\hyperlink{classSMonolithGPU_a4f29d521544dd4bb64e6f2bfd68c21af}{gpu\_weights}});}
+\DoxyCodeLine{00587\ \ \ cudaFree(\mbox{\hyperlink{classSMonolithGPU_ab5d038b66802271bbaf8f0c06704e5da}{gpu\_weights\_tf1}});}
+\DoxyCodeLine{00588\ \textcolor{preprocessor}{\#ifndef\ Weight\_On\_SplineBySpline\_Basis}}
+\DoxyCodeLine{00589\ \ \ cudaFree(\mbox{\hyperlink{classSMonolithGPU_af5007136ab5e2fdbf3b9387e14a1c64a}{gpu\_total\_weights}});}
+\DoxyCodeLine{00590\ \ \ \textcolor{comment}{//KS:\ Before\ removing\ variable\ let's\ destroy\ texture}}
+\DoxyCodeLine{00591\ \ \ cudaDestroyTextureObject(\mbox{\hyperlink{classSMonolithGPU_a663a150b3464b28d6161df1924cd534f}{text\_nParamPerEvent}});}
+\DoxyCodeLine{00592\ \ \ cudaDestroyTextureObject(\mbox{\hyperlink{classSMonolithGPU_a089fd1b491667e60d06c3713cd45552e}{text\_nParamPerEvent\_TF1}});}
+\DoxyCodeLine{00593\ }
+\DoxyCodeLine{00594\ \ \ cudaFree(\mbox{\hyperlink{classSMonolithGPU_a13324d2fe2a29f7bbff19c55ddd6968c}{gpu\_nParamPerEvent}});}
+\DoxyCodeLine{00595\ \ \ cudaFree(\mbox{\hyperlink{classSMonolithGPU_a60191ebfcba5bedf7e01c923887d5ceb}{gpu\_nParamPerEvent\_TF1}});}
+\DoxyCodeLine{00596\ \ \ cudaFreeHost(cpu\_total\_weights);}
+\DoxyCodeLine{00597\ \ \ cpu\_total\_weights\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00598\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00599\ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00600\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classSMonolithGPU_aef41d94cf5e44ebf4fe427c3ce84f20b}\label{classSMonolithGPU_aef41d94cf5e44ebf4fe427c3ce84f20b}} 
+\index{SMonolithGPU@{SMonolithGPU}!CopyToGPU\_SplineMonolith@{CopyToGPU\_SplineMonolith}}
+\index{CopyToGPU\_SplineMonolith@{CopyToGPU\_SplineMonolith}!SMonolithGPU@{SMonolithGPU}}
+\doxysubsubsection{\texorpdfstring{CopyToGPU\_SplineMonolith()}{CopyToGPU\_SplineMonolith()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+host\+\_\+\+\_\+ void SMonolith\+GPU\+::\+Copy\+To\+GPU\+\_\+\+Spline\+Monolith (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structSplineMonoStruct}{Spline\+Mono\+Struct}} $\ast$}]{cpu\+\_\+spline\+\_\+handler,  }\item[{std\+::vector$<$ float $>$}]{cpu\+\_\+many\+\_\+array\+\_\+\+TF1,  }\item[{std\+::vector$<$ short int $>$}]{cpu\+\_\+param\+No\+\_\+arr\+\_\+\+TF1,  }\item[{int}]{n\+\_\+events,  }\item[{std\+::vector$<$ unsigned int $>$}]{cpu\+\_\+n\+Param\+Per\+Event,  }\item[{std\+::vector$<$ unsigned int $>$}]{cpu\+\_\+n\+Param\+Per\+Event\+\_\+\+TF1,  }\item[{int}]{n\+\_\+params,  }\item[{unsigned int}]{n\+\_\+splines,  }\item[{short int}]{spline\+\_\+size,  }\item[{unsigned int}]{total\+\_\+nknots,  }\item[{unsigned int}]{n\+\_\+tf1 }\end{DoxyParamCaption})}
+
+
+
+Copies data from CPU to GPU for the spline monolith. 
+
+This function transfers the necessary spline data and parameters from the CPU to the GPU, including TF1-\/related arrays and parameters. This setup is crucial for spline evaluations on the GPU.
+
+
+\begin{DoxyParams}{Parameters}
+{\em cpu\+\_\+spline\+\_\+handler} & Pointer to the structure managing spline data on the CPU. \\
+\hline
+{\em cpu\+\_\+many\+\_\+array\+\_\+\+TF1} & Array of TF1 parameters on the CPU. \\
+\hline
+{\em cpu\+\_\+param\+No\+\_\+arr\+\_\+\+TF1} & Array containing parameter numbers for TF1 objects. \\
+\hline
+{\em n\+\_\+events} & Number of events, necessary for correct data handling. \\
+\hline
+{\em cpu\+\_\+n\+Param\+Per\+Event} & Array indicating the number of parameters per event. \\
+\hline
+{\em cpu\+\_\+n\+Param\+Per\+Event\+\_\+\+TF1} & Array indicating the number of parameters per TF1 object. \\
+\hline
+{\em n\+\_\+params} & Total number of parameters across all splines. \\
+\hline
+{\em n\+\_\+splines} & Total number of spline objects. \\
+\hline
+{\em spline\+\_\+size} & Size of each spline object. \\
+\hline
+{\em total\+\_\+nknots} & Total number of knots across all splines. \\
+\hline
+{\em n\+\_\+tf1} & Total number of TF1 objects. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{gpuSplineUtils_8cu_source_l00199}{199}} of file \mbox{\hyperlink{gpuSplineUtils_8cu_source}{gpu\+Spline\+Utils.\+cu}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00217\ \ \ \textcolor{keywordflow}{if}\ (n\_params\ !=\ \mbox{\hyperlink{gpuSplineUtils_8cu_a466f32a4912da866d5014fd8cdbd06a4}{\_N\_SPLINES\_}})\ \{}
+\DoxyCodeLine{00218\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Number\ of\ splines\ not\ equal\ to\ \%i,\ GPU\ code\ for\ event-\/by-\/event\ splines\ will\ fail\(\backslash\)n"{}},\ \mbox{\hyperlink{gpuSplineUtils_8cu_a466f32a4912da866d5014fd8cdbd06a4}{\_N\_SPLINES\_}});}
+\DoxyCodeLine{00219\ \ \ \ \ printf(\textcolor{stringliteral}{"{}n\_params\ =\ \%i\(\backslash\)n"{}},\ n\_params);}
+\DoxyCodeLine{00220\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%s\ :\ \%i\(\backslash\)n"{}},\ \_\_FILE\_\_,\ \_\_LINE\_\_);}
+\DoxyCodeLine{00221\ \ \ \ \ exit(-\/1);}
+\DoxyCodeLine{00222\ \ \ \}}
+\DoxyCodeLine{00223\ }
+\DoxyCodeLine{00224\ \ \ \textcolor{comment}{//\ Write\ to\ the\ global\ statics\ (h\_*\ denotes\ host\ stored\ variable)}}
+\DoxyCodeLine{00225\ \ \ \mbox{\hyperlink{classSMonolithGPU_ad36c112081992f2887fe24675f4bba06}{h\_n\_params}}\ =\ n\_params;}
+\DoxyCodeLine{00226\ \textcolor{preprocessor}{\#ifndef\ Weight\_On\_SplineBySpline\_Basis}}
+\DoxyCodeLine{00227\ \ \ \mbox{\hyperlink{classSMonolithGPU_a4628e4d9bb58650086cf51098c996059}{h\_n\_events}}\ \ \ \ =\ n\_events;}
+\DoxyCodeLine{00228\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00229\ \ \ \textcolor{comment}{//\ Copy\ the\ constants}}
+\DoxyCodeLine{00230\ \ \ \textcolor{comment}{//\ Total\ number\ of\ valid\ splines\ for\ all\ loaded\ events}}
+\DoxyCodeLine{00231\ \ \ cudaMemcpyToSymbol(\mbox{\hyperlink{gpuSplineUtils_8cu_a8df652f27dcffc6b349298601ed790ea}{d\_n\_splines}},\ \&n\_splines,\ \textcolor{keyword}{sizeof}(n\_splines));}
+\DoxyCodeLine{00232\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{00233\ }
+\DoxyCodeLine{00234\ \ \ \textcolor{comment}{//\ Total\ number\ of\ valid\ TF1\ for\ all\ loaded\ events}}
+\DoxyCodeLine{00235\ \ \ cudaMemcpyToSymbol(\mbox{\hyperlink{gpuSplineUtils_8cu_a70d02be4848ebb3c6778c1c1250a5288}{d\_n\_TF1}},\ \ \ \&n\_tf1,\ \textcolor{keyword}{sizeof}(n\_tf1));}
+\DoxyCodeLine{00236\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{00237\ }
+\DoxyCodeLine{00238\ \ \ \textcolor{comment}{//\ Total\ spline\ size\ per\ spline;\ i.e.\ just\ the\ number\ of\ points\ or\ knots\ in\ the\ spline}}
+\DoxyCodeLine{00239\ \ \ cudaMemcpyToSymbol(\mbox{\hyperlink{gpuSplineUtils_8cu_ae11082fcc44d3cf2e38cb74043fd7835}{d\_spline\_size}},\ \&spline\_size,\ \textcolor{keyword}{sizeof}(spline\_size));}
+\DoxyCodeLine{00240\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{00241\ \textcolor{preprocessor}{\#ifndef\ Weight\_On\_SplineBySpline\_Basis}}
+\DoxyCodeLine{00242\ \ \ \textcolor{comment}{//\ Number\ of\ events}}
+\DoxyCodeLine{00243\ \ \ cudaMemcpyToSymbol(\mbox{\hyperlink{gpuSplineUtils_8cu_ad333bfa4035ada9207fc1df19272c4e2}{d\_n\_events}},\ \&\mbox{\hyperlink{classSMonolithGPU_a4628e4d9bb58650086cf51098c996059}{h\_n\_events}},\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{classSMonolithGPU_a4628e4d9bb58650086cf51098c996059}{h\_n\_events}}));}
+\DoxyCodeLine{00244\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{00245\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00246\ \ \ \textcolor{comment}{//\ Copy\ the\ coefficient\ arrays\ to\ the\ GPU;\ this\ only\ happens\ once\ per\ entire\ Markov\ Chain\ so\ is\ OK\ to\ do\ multiple\ extensive\ memory\ copies}}
+\DoxyCodeLine{00247\ \ \ cudaMemcpy(\mbox{\hyperlink{classSMonolithGPU_a5a51e7b819a0c8cf786aa8f13dfdc0cc}{gpu\_coeff\_many}},\ cpu\_spline\_handler-\/>\mbox{\hyperlink{structSplineMonoStruct_a67c5585ae47fc8a646dfae3fe9690775}{coeff\_many}}.data(),\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float})*total\_nknots*\mbox{\hyperlink{SplineCommon_8h_a283177311bade7400c6088e8fad71a1f}{\_nCoeff\_}},\ cudaMemcpyHostToDevice);}
+\DoxyCodeLine{00248\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{00249\ }
+\DoxyCodeLine{00250\ \ \ cudaMemcpy(\mbox{\hyperlink{classSMonolithGPU_a871589b8a52dea4ed9a4963a7b05e1af}{gpu\_coeff\_x}},\ cpu\_spline\_handler-\/>\mbox{\hyperlink{structSplineMonoStruct_a47012ee423ea21f99d06eff8257cf0f0}{coeff\_x}}.data(),\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float})*spline\_size*n\_params,\ cudaMemcpyHostToDevice);}
+\DoxyCodeLine{00251\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{00252\ }
+\DoxyCodeLine{00253\ \ \ \textcolor{comment}{//KS:\ Bind\ our\ texture\ with\ the\ GPU\ variable}}
+\DoxyCodeLine{00254\ \ \ \textcolor{comment}{//KS:\ Tried\ also\ moving\ gpu\_many\_array\ to\ texture\ memory\ it\ only\ worked\ with\ restricted\ number\ of\ MC\ runs,\ most\ likely\ hit\ texture\ memory\ limit\ :(}}
+\DoxyCodeLine{00255\ \ \ \textcolor{keyword}{struct\ }cudaResourceDesc\ resDesc\_coeff\_x;}
+\DoxyCodeLine{00256\ \ \ memset(\&resDesc\_coeff\_x,\ 0,\ \textcolor{keyword}{sizeof}(resDesc\_coeff\_x));}
+\DoxyCodeLine{00257\ \ \ resDesc\_coeff\_x.resType\ =\ cudaResourceTypeLinear;}
+\DoxyCodeLine{00258\ \ \ resDesc\_coeff\_x.res.linear.devPtr\ =\ \mbox{\hyperlink{classSMonolithGPU_a871589b8a52dea4ed9a4963a7b05e1af}{gpu\_coeff\_x}};}
+\DoxyCodeLine{00259\ \ \ resDesc\_coeff\_x.res.linear.desc\ =\ cudaCreateChannelDesc<float>();}
+\DoxyCodeLine{00260\ \ \ resDesc\_coeff\_x.res.linear.sizeInBytes\ =\ \textcolor{keyword}{sizeof}(float)*spline\_size*n\_params;}
+\DoxyCodeLine{00261\ }
+\DoxyCodeLine{00262\ \ \ \textcolor{comment}{//\ Specify\ texture\ object\ parameters}}
+\DoxyCodeLine{00263\ \ \ \textcolor{keyword}{struct\ }cudaTextureDesc\ texDesc\_coeff\_x;}
+\DoxyCodeLine{00264\ \ \ memset(\&texDesc\_coeff\_x,\ 0,\ \textcolor{keyword}{sizeof}(texDesc\_coeff\_x));}
+\DoxyCodeLine{00265\ \ \ texDesc\_coeff\_x.readMode\ =\ cudaReadModeElementType;}
+\DoxyCodeLine{00266\ }
+\DoxyCodeLine{00267\ \ \ \textcolor{comment}{//\ Create\ texture\ object}}
+\DoxyCodeLine{00268\ \ \ cudaCreateTextureObject(\&\mbox{\hyperlink{classSMonolithGPU_a1fb766b50293e6b611c45aa21c5c1b9c}{text\_coeff\_x}},\ \&resDesc\_coeff\_x,\ \&texDesc\_coeff\_x,\ NULL);}
+\DoxyCodeLine{00269\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{00270\ }
+\DoxyCodeLine{00271\ \ \ \textcolor{comment}{//\ Also\ copy\ the\ parameter\ number\ for\ each\ spline\ onto\ the\ GPU;\ i.e.\ what\ spline\ parameter\ are\ we\ calculating\ right\ now}}
+\DoxyCodeLine{00272\ \ \ cudaMemcpy(\mbox{\hyperlink{classSMonolithGPU_ae8f091bec85671c4f96a2d0d9dbe4243}{gpu\_paramNo\_arr}},\ cpu\_spline\_handler-\/>\mbox{\hyperlink{structSplineMonoStruct_af24b409ab3da1a88e855e1a9d172741f}{paramNo\_arr}}.data(),\ n\_splines*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{short}\ \textcolor{keywordtype}{int}),\ cudaMemcpyHostToDevice);}
+\DoxyCodeLine{00273\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{00274\ }
+\DoxyCodeLine{00275\ \ \ \textcolor{comment}{//\ Also\ copy\ the\ knot\ map\ for\ each\ spline\ onto\ the\ GPU;}}
+\DoxyCodeLine{00276\ \ \ cudaMemcpy(\mbox{\hyperlink{classSMonolithGPU_ac291adc527ef593bb62a8440a131798f}{gpu\_nKnots\_arr}},\ cpu\_spline\_handler-\/>\mbox{\hyperlink{structSplineMonoStruct_a398e0212915793852137384a3406b37f}{nKnots\_arr}}.data(),\ n\_splines*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}),\ cudaMemcpyHostToDevice);}
+\DoxyCodeLine{00277\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{00278\ }
+\DoxyCodeLine{00279\ \ \ \textcolor{comment}{//Now\ TF1}}
+\DoxyCodeLine{00280\ \ \ \textcolor{comment}{//\ Copy\ the\ coefficient\ arrays\ to\ the\ GPU;\ this\ only\ happens\ once\ per\ entire\ Markov\ Chain\ so\ is\ OK\ to\ do\ multiple\ extensive\ memory\ copies}}
+\DoxyCodeLine{00281\ \ \ cudaMemcpy(\mbox{\hyperlink{classSMonolithGPU_ae58804bb65745dbd8835876bf0debdc7}{gpu\_coeff\_TF1\_many}},\ cpu\_many\_array\_TF1.data(),\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float})*n\_tf1*\mbox{\hyperlink{SplineCommon_8h_a911160077ffa38727e0494f178ce380a}{\_nTF1Coeff\_}},\ cudaMemcpyHostToDevice);}
+\DoxyCodeLine{00282\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{00283\ }
+\DoxyCodeLine{00284\ \ \ \textcolor{comment}{//\ Also\ copy\ the\ parameter\ number\ for\ each\ TF1\ onto\ the\ GPU;\ i.e.\ what\ TF1\ parameter\ are\ we\ calculating\ right\ now}}
+\DoxyCodeLine{00285\ \ \ cudaMemcpy(\mbox{\hyperlink{classSMonolithGPU_a2f8de24623a787f9f728bdd0b735c89c}{gpu\_paramNo\_TF1\_arr}},\ cpu\_paramNo\_arr\_TF1.data(),\ n\_tf1*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{short}\ \textcolor{keywordtype}{int}),\ cudaMemcpyHostToDevice);}
+\DoxyCodeLine{00286\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{00287\ }
+\DoxyCodeLine{00288\ \textcolor{preprocessor}{\ \ \#ifndef\ Weight\_On\_SplineBySpline\_Basis}}
+\DoxyCodeLine{00289\ \ \ \textcolor{comment}{//KS:\ Keep\ track\ how\ much\ splines\ each\ event\ has}}
+\DoxyCodeLine{00290\ \ \ cudaMemcpy(\mbox{\hyperlink{classSMonolithGPU_a13324d2fe2a29f7bbff19c55ddd6968c}{gpu\_nParamPerEvent}},\ cpu\_nParamPerEvent.data(),\ 2*n\_events*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}),\ cudaMemcpyHostToDevice);}
+\DoxyCodeLine{00291\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{00292\ }
+\DoxyCodeLine{00293\ \ \ \textcolor{comment}{//KS:\ Bind\ our\ texture\ with\ the\ GPU\ variable}}
+\DoxyCodeLine{00294\ \ \ \textcolor{comment}{//\ create\ a\ resource\ descriptor\ based\ on\ device\ pointers}}
+\DoxyCodeLine{00295\ \ \ \textcolor{keyword}{struct\ }cudaResourceDesc\ resDesc\_nParamPerEvent;}
+\DoxyCodeLine{00296\ \ \ memset(\&resDesc\_nParamPerEvent,\ 0,\ \textcolor{keyword}{sizeof}(resDesc\_nParamPerEvent));}
+\DoxyCodeLine{00297\ \ \ resDesc\_nParamPerEvent.resType\ =\ cudaResourceTypeLinear;}
+\DoxyCodeLine{00298\ \ \ resDesc\_nParamPerEvent.res.linear.devPtr\ =\ \mbox{\hyperlink{classSMonolithGPU_a13324d2fe2a29f7bbff19c55ddd6968c}{gpu\_nParamPerEvent}};}
+\DoxyCodeLine{00299\ \ \ resDesc\_nParamPerEvent.res.linear.desc\ =\ cudaCreateChannelDesc<unsigned\ int>();}
+\DoxyCodeLine{00300\ \ \ resDesc\_nParamPerEvent.res.linear.sizeInBytes\ =\ 2*n\_events*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned}\ int);}
+\DoxyCodeLine{00301\ }
+\DoxyCodeLine{00302\ \ \ \textcolor{comment}{//\ Specify\ texture\ object\ parameters}}
+\DoxyCodeLine{00303\ \ \ \textcolor{keyword}{struct\ }cudaTextureDesc\ texDesc\_nParamPerEvent;}
+\DoxyCodeLine{00304\ \ \ memset(\&texDesc\_nParamPerEvent,\ 0,\ \textcolor{keyword}{sizeof}(texDesc\_nParamPerEvent));}
+\DoxyCodeLine{00305\ \ \ texDesc\_nParamPerEvent.readMode\ =\ cudaReadModeElementType;}
+\DoxyCodeLine{00306\ }
+\DoxyCodeLine{00307\ \ \ \textcolor{comment}{//Finally\ create\ texture\ object}}
+\DoxyCodeLine{00308\ \ \ cudaCreateTextureObject(\&\mbox{\hyperlink{classSMonolithGPU_a663a150b3464b28d6161df1924cd534f}{text\_nParamPerEvent}},\ \&resDesc\_nParamPerEvent,\ \&texDesc\_nParamPerEvent,\ NULL);}
+\DoxyCodeLine{00309\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{00310\ }
+\DoxyCodeLine{00311\ \ \ \textcolor{comment}{//\ Now\ TF1}}
+\DoxyCodeLine{00312\ \ \ cudaMemcpy(\mbox{\hyperlink{classSMonolithGPU_a60191ebfcba5bedf7e01c923887d5ceb}{gpu\_nParamPerEvent\_TF1}},\ cpu\_nParamPerEvent\_TF1.data(),\ 2*n\_events*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}),\ cudaMemcpyHostToDevice);}
+\DoxyCodeLine{00313\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{00314\ }
+\DoxyCodeLine{00315\ \ \ \textcolor{comment}{//KS:\ Bind\ our\ texture\ with\ the\ GPU\ variable}}
+\DoxyCodeLine{00316\ \ \ \textcolor{comment}{//\ create\ a\ resource\ descriptor\ based\ on\ device\ pointers}}
+\DoxyCodeLine{00317\ \ \ \textcolor{keyword}{struct\ }cudaResourceDesc\ resDesc\_nParamPerEvent\_tf1;}
+\DoxyCodeLine{00318\ \ \ memset(\&resDesc\_nParamPerEvent\_tf1,\ 0,\ \textcolor{keyword}{sizeof}(resDesc\_nParamPerEvent\_tf1));}
+\DoxyCodeLine{00319\ \ \ resDesc\_nParamPerEvent\_tf1.resType\ =\ cudaResourceTypeLinear;}
+\DoxyCodeLine{00320\ \ \ resDesc\_nParamPerEvent\_tf1.res.linear.devPtr\ =\ \mbox{\hyperlink{classSMonolithGPU_a60191ebfcba5bedf7e01c923887d5ceb}{gpu\_nParamPerEvent\_TF1}};}
+\DoxyCodeLine{00321\ \ \ resDesc\_nParamPerEvent\_tf1.res.linear.desc\ =\ cudaCreateChannelDesc<unsigned\ int>();}
+\DoxyCodeLine{00322\ \ \ resDesc\_nParamPerEvent\_tf1.res.linear.sizeInBytes\ =\ 2*n\_events*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned}\ int);}
+\DoxyCodeLine{00323\ }
+\DoxyCodeLine{00324\ \ \ \textcolor{comment}{//\ Specify\ texture\ object\ parameters}}
+\DoxyCodeLine{00325\ \ \ \textcolor{keyword}{struct\ }cudaTextureDesc\ texDesc\_nParamPerEvent\_tf1;}
+\DoxyCodeLine{00326\ \ \ memset(\&texDesc\_nParamPerEvent\_tf1,\ 0,\ \textcolor{keyword}{sizeof}(texDesc\_nParamPerEvent\_tf1));}
+\DoxyCodeLine{00327\ \ \ texDesc\_nParamPerEvent\_tf1.readMode\ =\ cudaReadModeElementType;}
+\DoxyCodeLine{00328\ }
+\DoxyCodeLine{00329\ \ \ \textcolor{comment}{//Finally\ create\ texture\ object}}
+\DoxyCodeLine{00330\ \ \ cudaCreateTextureObject(\&\mbox{\hyperlink{classSMonolithGPU_a089fd1b491667e60d06c3713cd45552e}{text\_nParamPerEvent\_TF1}},\ \&resDesc\_nParamPerEvent\_tf1,\ \&texDesc\_nParamPerEvent\_tf1,\ NULL);}
+\DoxyCodeLine{00331\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{00332\ }
+\DoxyCodeLine{00333\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{00334\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classSMonolithGPU_ab674ec40c136d89b56b7c25d9337c48a}\label{classSMonolithGPU_ab674ec40c136d89b56b7c25d9337c48a}} 
+\index{SMonolithGPU@{SMonolithGPU}!InitGPU\_Segments@{InitGPU\_Segments}}
+\index{InitGPU\_Segments@{InitGPU\_Segments}!SMonolithGPU@{SMonolithGPU}}
+\doxysubsubsection{\texorpdfstring{InitGPU\_Segments()}{InitGPU\_Segments()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+host\+\_\+\+\_\+ void SMonolith\+GPU\+::\+Init\+GPU\+\_\+\+Segments (\begin{DoxyParamCaption}\item[{short int $\ast$$\ast$}]{segment }\end{DoxyParamCaption})}
+
+
+
+Allocate memory for spline segments. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em segment} & Found spline segment for each parameter \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{gpuSplineUtils_8cu_source_l00175}{175}} of file \mbox{\hyperlink{gpuSplineUtils_8cu_source}{gpu\+Spline\+Utils.\+cu}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00176\ \textcolor{comment}{//\ *******************************************}}
+\DoxyCodeLine{00177\ \ \ \textcolor{comment}{//KS:\ Rather\ than\ allocate\ memory\ in\ standard\ way\ this\ fancy\ cuda\ tool\ allows\ to\ pin\ host\ memory\ which\ make\ memory\ transfer\ faster}}
+\DoxyCodeLine{00178\ \ \ cudaMallocHost((\textcolor{keywordtype}{void}\ **)\ segment,\ \mbox{\hyperlink{gpuSplineUtils_8cu_a466f32a4912da866d5014fd8cdbd06a4}{\_N\_SPLINES\_}}*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{short}\ \textcolor{keywordtype}{int}));}
+\DoxyCodeLine{00179\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{00180\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classSMonolithGPU_a713a47fd41a93d2b6d40c4b392158aae}\label{classSMonolithGPU_a713a47fd41a93d2b6d40c4b392158aae}} 
+\index{SMonolithGPU@{SMonolithGPU}!InitGPU\_SplineMonolith@{InitGPU\_SplineMonolith}}
+\index{InitGPU\_SplineMonolith@{InitGPU\_SplineMonolith}!SMonolithGPU@{SMonolithGPU}}
+\doxysubsubsection{\texorpdfstring{InitGPU\_SplineMonolith()}{InitGPU\_SplineMonolith()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+host\+\_\+\+\_\+ void SMonolith\+GPU\+::\+Init\+GPU\+\_\+\+Spline\+Monolith (\begin{DoxyParamCaption}\item[{float $\ast$$\ast$}]{cpu\+\_\+total\+\_\+weights,  }\item[{int}]{n\+\_\+events,  }\item[{unsigned int}]{total\+\_\+nknots,  }\item[{unsigned int}]{n\+\_\+splines,  }\item[{unsigned int}]{n\+\_\+tf1,  }\item[{int}]{Eve\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Allocate memory on gpu for spline monolith. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cpu\+\_\+total\+\_\+weights} & KS\+: Rather than allocate memory in standard way this fancy cuda tool allows to pin host memory which make memory transfer faster \\
+\hline
+{\em n\+\_\+events} & Number of events, this is necessary to allocate correctly memory \\
+\hline
+{\em total\+\_\+nknots} & Total number of knots in all splines summed \\
+\hline
+{\em n\+\_\+splines} & Total number of spline objects, not knots \\
+\hline
+{\em n\+\_\+tf1} & Total number of TF1 objects, not coefficients \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{gpuSplineUtils_8cu_source_l00106}{106}} of file \mbox{\hyperlink{gpuSplineUtils_8cu_source}{gpu\+Spline\+Utils.\+cu}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \ \ \textcolor{comment}{//\ Allocate\ chunks\ of\ memory\ to\ GPU}}
+\DoxyCodeLine{00118\ \ \ cudaMalloc((\textcolor{keywordtype}{void}\ **)\ \&\mbox{\hyperlink{classSMonolithGPU_ae8f091bec85671c4f96a2d0d9dbe4243}{gpu\_paramNo\_arr}},\ n\_splines*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{short}\ \textcolor{keywordtype}{int}));}
+\DoxyCodeLine{00119\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \ \ cudaMalloc((\textcolor{keywordtype}{void}\ **)\ \&\mbox{\hyperlink{classSMonolithGPU_ac291adc527ef593bb62a8440a131798f}{gpu\_nKnots\_arr}},\ n\_splines*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}));}
+\DoxyCodeLine{00122\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \ \ cudaMalloc((\textcolor{keywordtype}{void}\ **)\ \&\mbox{\hyperlink{classSMonolithGPU_a871589b8a52dea4ed9a4963a7b05e1af}{gpu\_coeff\_x}},\ Eve\_size*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}));}
+\DoxyCodeLine{00125\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \ \ cudaMalloc((\textcolor{keywordtype}{void}\ **)\ \&\mbox{\hyperlink{classSMonolithGPU_a5a51e7b819a0c8cf786aa8f13dfdc0cc}{gpu\_coeff\_many}},\ \mbox{\hyperlink{SplineCommon_8h_a283177311bade7400c6088e8fad71a1f}{\_nCoeff\_}}*total\_nknots*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}));}
+\DoxyCodeLine{00128\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \ \ \textcolor{comment}{//\ Allocate\ memory\ for\ the\ array\ of\ weights\ to\ be\ returned\ to\ CPU}}
+\DoxyCodeLine{00131\ \ \ cudaMalloc((\textcolor{keywordtype}{void}\ **)\ \&\mbox{\hyperlink{classSMonolithGPU_a4f29d521544dd4bb64e6f2bfd68c21af}{gpu\_weights}},\ n\_splines*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}));}
+\DoxyCodeLine{00132\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \ \ \textcolor{comment}{//\ Now\ TF1\ specific}}
+\DoxyCodeLine{00135\ \ \ cudaMalloc((\textcolor{keywordtype}{void}\ **)\ \&\mbox{\hyperlink{classSMonolithGPU_ae58804bb65745dbd8835876bf0debdc7}{gpu\_coeff\_TF1\_many}},\ \mbox{\hyperlink{SplineCommon_8h_a911160077ffa38727e0494f178ce380a}{\_nTF1Coeff\_}}*n\_tf1*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}));}
+\DoxyCodeLine{00136\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \ \ cudaMalloc((\textcolor{keywordtype}{void}\ **)\ \&\mbox{\hyperlink{classSMonolithGPU_ab5d038b66802271bbaf8f0c06704e5da}{gpu\_weights\_tf1}},\ n\_tf1*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}));}
+\DoxyCodeLine{00139\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \ \ cudaMalloc((\textcolor{keywordtype}{void}\ **)\ \&\mbox{\hyperlink{classSMonolithGPU_a2f8de24623a787f9f728bdd0b735c89c}{gpu\_paramNo\_TF1\_arr}},\ n\_tf1*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{short}\ \textcolor{keywordtype}{int}));}
+\DoxyCodeLine{00142\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00144\ \textcolor{preprocessor}{\#ifndef\ Weight\_On\_SplineBySpline\_Basis}}
+\DoxyCodeLine{00145\ \ \ \textcolor{comment}{//KS:\ Rather\ than\ allocate\ memory\ in\ standard\ way\ this\ fancy\ cuda\ tool\ allows\ to\ pin\ host\ memory\ which\ make\ memory\ transfer\ faster}}
+\DoxyCodeLine{00146\ \ \ cudaMallocHost((\textcolor{keywordtype}{void}\ **)\ cpu\_total\_weights,\ n\_events*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}));}
+\DoxyCodeLine{00147\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ \ \ \textcolor{comment}{//KS:\ Allocate\ memory\ for\ the\ array\ of\ total\ weights\ to\ be\ returned\ to\ CPU}}
+\DoxyCodeLine{00150\ \ \ cudaMalloc((\textcolor{keywordtype}{void}\ **)\ \&\mbox{\hyperlink{classSMonolithGPU_af5007136ab5e2fdbf3b9387e14a1c64a}{gpu\_total\_weights}},\ n\_events*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}));}
+\DoxyCodeLine{00151\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{00152\ \ \ }
+\DoxyCodeLine{00153\ \ \ \textcolor{comment}{//KS:\ Allocate\ memory\ for\ the\ map\ keeping\ track\ how\ many\ splines\ each\ parameter\ has}}
+\DoxyCodeLine{00154\ \ \ cudaMalloc((\textcolor{keywordtype}{void}\ **)\ \&\mbox{\hyperlink{classSMonolithGPU_a13324d2fe2a29f7bbff19c55ddd6968c}{gpu\_nParamPerEvent}},\ 2*n\_events*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}));}
+\DoxyCodeLine{00155\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{00156\ \ \ }
+\DoxyCodeLine{00157\ \ \ \textcolor{comment}{//KS:\ Allocate\ memory\ for\ the\ map\ keeping\ track\ how\ many\ TF1\ each\ parameter\ has}}
+\DoxyCodeLine{00158\ \ \ cudaMalloc((\textcolor{keywordtype}{void}\ **)\ \&\mbox{\hyperlink{classSMonolithGPU_a60191ebfcba5bedf7e01c923887d5ceb}{gpu\_nParamPerEvent\_TF1}},\ 2*n\_events*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}));}
+\DoxyCodeLine{00159\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{00160\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00161\ \ \ }
+\DoxyCodeLine{00162\ \ \ \textcolor{comment}{//\ Print\ allocation\ info\ to\ user}}
+\DoxyCodeLine{00163\ \ \ printf(\textcolor{stringliteral}{"{}Allocated\ \%i\ entries\ for\ paramNo\ and\ nKnots\ arrays,\ size\ =\ \%f\ MB\(\backslash\)n"{}},\ n\_splines,\ \textcolor{keywordtype}{double}(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{short}\ \textcolor{keywordtype}{int})*n\_splines+\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int})*n\_splines)/1.E6);}
+\DoxyCodeLine{00164\ \ \ printf(\textcolor{stringliteral}{"{}Allocated\ \%i\ entries\ for\ x\ coeff\ arrays,\ size\ =\ \%f\ MB\(\backslash\)n"{}},\ Eve\_size,\ \textcolor{keywordtype}{double}(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float})*Eve\_size)/1.E6);}
+\DoxyCodeLine{00165\ \ \ printf(\textcolor{stringliteral}{"{}Allocated\ \%i\ entries\ for\ \{ybcd\}\ coeff\ arrays,\ size\ =\ \%f\ MB\(\backslash\)n"{}},\ \mbox{\hyperlink{SplineCommon_8h_a283177311bade7400c6088e8fad71a1f}{\_nCoeff\_}}*total\_nknots,\ \textcolor{keywordtype}{double}(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float})*\mbox{\hyperlink{SplineCommon_8h_a283177311bade7400c6088e8fad71a1f}{\_nCoeff\_}}*total\_nknots)/1.E6);}
+\DoxyCodeLine{00166\ \ \ printf(\textcolor{stringliteral}{"{}Allocated\ \%i\ entries\ for\ TF1\ coefficient\ arrays,\ size\ =\ \%f\ MB\(\backslash\)n"{}},\ \mbox{\hyperlink{SplineCommon_8h_a911160077ffa38727e0494f178ce380a}{\_nTF1Coeff\_}}*n\_tf1,\ \textcolor{keywordtype}{double}(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float})*\mbox{\hyperlink{SplineCommon_8h_a911160077ffa38727e0494f178ce380a}{\_nTF1Coeff\_}}*n\_tf1)/1.E6);}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00168\ \ \ \textcolor{comment}{//KS:\ Ask\ CUDA\ about\ memory\ usage}}
+\DoxyCodeLine{00169\ \ \ \mbox{\hyperlink{gpuUtils_8cu_a5cfcf006bd817b3cff5da08c7f0ecb5e}{checkGpuMem}}();}
+\DoxyCodeLine{00170\ \ \ \mbox{\hyperlink{gpuUtils_8cu_acbef44018c81d3830eb03d342bd55dd0}{PrintNdevices}}();}
+\DoxyCodeLine{00171\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classSMonolithGPU_a3fbbb94f6db65b73a394ab541f94fba6}\label{classSMonolithGPU_a3fbbb94f6db65b73a394ab541f94fba6}} 
+\index{SMonolithGPU@{SMonolithGPU}!InitGPU\_Vals@{InitGPU\_Vals}}
+\index{InitGPU\_Vals@{InitGPU\_Vals}!SMonolithGPU@{SMonolithGPU}}
+\doxysubsubsection{\texorpdfstring{InitGPU\_Vals()}{InitGPU\_Vals()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+host\+\_\+\+\_\+ void SMonolith\+GPU\+::\+Init\+GPU\+\_\+\+Vals (\begin{DoxyParamCaption}\item[{float $\ast$$\ast$}]{vals }\end{DoxyParamCaption})}
+
+
+
+Allocate memory for spline segments. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vals} & Value to which we want reweight for each parameter \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{gpuSplineUtils_8cu_source_l00184}{184}} of file \mbox{\hyperlink{gpuSplineUtils_8cu_source}{gpu\+Spline\+Utils.\+cu}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00185\ \textcolor{comment}{//\ *******************************************}}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00187\ \ \ \textcolor{comment}{//KS:\ Rather\ than\ allocate\ memory\ in\ standard\ way\ this\ fancy\ cuda\ tool\ allows\ to\ pin\ host\ memory\ which\ make\ memory\ transfer\ faster}}
+\DoxyCodeLine{00188\ \ \ cudaMallocHost((\textcolor{keywordtype}{void}\ **)\ vals,\ \mbox{\hyperlink{gpuSplineUtils_8cu_a466f32a4912da866d5014fd8cdbd06a4}{\_N\_SPLINES\_}}*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}));}
+\DoxyCodeLine{00189\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{00190\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classSMonolithGPU_a8419e01082c64b291c3b38d8e69ceb4d}\label{classSMonolithGPU_a8419e01082c64b291c3b38d8e69ceb4d}} 
+\index{SMonolithGPU@{SMonolithGPU}!RunGPU\_SplineMonolith@{RunGPU\_SplineMonolith}}
+\index{RunGPU\_SplineMonolith@{RunGPU\_SplineMonolith}!SMonolithGPU@{SMonolithGPU}}
+\doxysubsubsection{\texorpdfstring{RunGPU\_SplineMonolith()}{RunGPU\_SplineMonolith()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+host\+\_\+\+\_\+ void SMonolith\+GPU\+::\+Run\+GPU\+\_\+\+Spline\+Monolith (\begin{DoxyParamCaption}\item[{float $\ast$}]{cpu\+\_\+total\+\_\+weights,  }\item[{float $\ast$}]{vals,  }\item[{short int $\ast$}]{segment,  }\item[{const unsigned int}]{h\+\_\+n\+\_\+splines,  }\item[{const unsigned int}]{h\+\_\+n\+\_\+tf1 }\end{DoxyParamCaption})}
+
+
+
+Run the GPU code for the separate many arrays. As in separate \{x\}, \{y,b,c,d\} arrays Pass the segment and the parameter values (binary search already performed in Spline\+Monolith\+::\+Find\+Spline\+Segment() 
+
+Executes the GPU code for calculating spline weights.
+
+This function runs the GPU computation for the spline monolith. It assumes that the appropriate segment has already been identified through binary search in the {\ttfamily Spline\+Monolith\+::\+Find\+Spline\+Segment()} function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em cpu\+\_\+weights} & Pointer to the array of weights on the CPU (used if {\ttfamily Weight\+\_\+\+On\+\_\+\+Spline\+By\+Spline\+\_\+\+Basis} is defined). \\
+\hline
+{\em cpu\+\_\+weights\+\_\+tf1} & Pointer to the array of TF1 weights (used if {\ttfamily Weight\+\_\+\+On\+\_\+\+Spline\+By\+Spline\+\_\+\+Basis} is defined). \\
+\hline
+{\em cpu\+\_\+total\+\_\+weights} & Pointer to the total weights array (used if {\ttfamily Weight\+\_\+\+On\+\_\+\+Spline\+By\+Spline\+\_\+\+Basis} is not defined). \\
+\hline
+{\em vals} & Pointer to an array holding the parameter values to be processed. \\
+\hline
+{\em segment} & Pointer to an array containing segment indices for parameters. \\
+\hline
+{\em h\+\_\+n\+\_\+splines} & Total number of spline objects in the GPU context. \\
+\hline
+{\em h\+\_\+n\+\_\+tf1} & Total number of TF1 objects in the GPU context. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{gpuSplineUtils_8cu_source_l00474}{474}} of file \mbox{\hyperlink{gpuSplineUtils_8cu_source}{gpu\+Spline\+Utils.\+cu}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00486\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00487\ \textcolor{comment}{//\ *****************************************}}
+\DoxyCodeLine{00488\ }
+\DoxyCodeLine{00489\ \ \ dim3\ block\_size;}
+\DoxyCodeLine{00490\ \ \ dim3\ grid\_size;}
+\DoxyCodeLine{00491\ }
+\DoxyCodeLine{00492\ \ \ block\_size.x\ =\ \mbox{\hyperlink{gpuUtils_8cuh_a393d21a8f493c2561a0ae703973dccc2}{\_BlockSize\_}};}
+\DoxyCodeLine{00493\ \ \ grid\_size.x\ =\ (h\_n\_splines\ /\ block\_size.x)\ +\ 1;}
+\DoxyCodeLine{00494\ }
+\DoxyCodeLine{00495\ \ \ \textcolor{comment}{//\ Copy\ the\ segment\ values\ to\ the\ GPU\ (segment\_gpu),\ which\ is\ h\_n\_params\ long}}
+\DoxyCodeLine{00496\ \ \ cudaMemcpyToSymbol(\mbox{\hyperlink{gpuSplineUtils_8cu_ab99f54969e418c0517309fae3f648588}{segment\_gpu}},\ segment,\ \mbox{\hyperlink{classSMonolithGPU_ad36c112081992f2887fe24675f4bba06}{h\_n\_params}}*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{short}\ \textcolor{keywordtype}{int}));}
+\DoxyCodeLine{00497\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{00498\ }
+\DoxyCodeLine{00499\ \ \ \textcolor{comment}{//\ Copy\ the\ parameter\ values\ values\ to\ the\ GPU\ (vals\_gpu),\ which\ is\ h\_n\_params\ long}}
+\DoxyCodeLine{00500\ \ \ cudaMemcpyToSymbol(\mbox{\hyperlink{gpuSplineUtils_8cu_ac95f6dd3bc9efb4292a4e3f264492f05}{val\_gpu}},\ vals,\ \mbox{\hyperlink{classSMonolithGPU_ad36c112081992f2887fe24675f4bba06}{h\_n\_params}}*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}));}
+\DoxyCodeLine{00501\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{00502\ }
+\DoxyCodeLine{00503\ \ \ \textcolor{comment}{//\ KS:\ Consider\ asynchronous\ kernel\ call,\ this\ might\ help\ EvalOnGPU\_Splines\ and\ EvalOnGPU\_TF1\ are\ independent}}
+\DoxyCodeLine{00504\ \ \ \textcolor{comment}{//\ Set\ the\ cache\ config\ to\ prefer\ L1\ for\ the\ kernel}}
+\DoxyCodeLine{00505\ \ \ \textcolor{comment}{//cudaFuncSetCacheConfig(EvalOnGPU\_Splines,\ cudaFuncCachePreferL1);}}
+\DoxyCodeLine{00506\ \ \ EvalOnGPU\_Splines<<<grid\_size,\ block\_size>>>(}
+\DoxyCodeLine{00507\ \ \ \ \ \mbox{\hyperlink{classSMonolithGPU_ae8f091bec85671c4f96a2d0d9dbe4243}{gpu\_paramNo\_arr}},}
+\DoxyCodeLine{00508\ \ \ \ \ \mbox{\hyperlink{classSMonolithGPU_ac291adc527ef593bb62a8440a131798f}{gpu\_nKnots\_arr}},}
+\DoxyCodeLine{00509\ }
+\DoxyCodeLine{00510\ \ \ \ \ \mbox{\hyperlink{classSMonolithGPU_a5a51e7b819a0c8cf786aa8f13dfdc0cc}{gpu\_coeff\_many}},}
+\DoxyCodeLine{00511\ }
+\DoxyCodeLine{00512\ \ \ \ \ \mbox{\hyperlink{classSMonolithGPU_a4f29d521544dd4bb64e6f2bfd68c21af}{gpu\_weights}},}
+\DoxyCodeLine{00513\ \ \ \ \ \mbox{\hyperlink{classSMonolithGPU_a1fb766b50293e6b611c45aa21c5c1b9c}{text\_coeff\_x}}}
+\DoxyCodeLine{00514\ \ \ );}
+\DoxyCodeLine{00515\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{00516\ }
+\DoxyCodeLine{00517\ \ \ grid\_size.x\ =\ (h\_n\_tf1\ /\ block\_size.x)\ +\ 1;}
+\DoxyCodeLine{00518\ \ \ EvalOnGPU\_TF1<<<grid\_size,\ block\_size>>>(}
+\DoxyCodeLine{00519\ \ \ \ \ \mbox{\hyperlink{classSMonolithGPU_ae58804bb65745dbd8835876bf0debdc7}{gpu\_coeff\_TF1\_many}},}
+\DoxyCodeLine{00520\ \ \ \ \ \mbox{\hyperlink{classSMonolithGPU_a2f8de24623a787f9f728bdd0b735c89c}{gpu\_paramNo\_TF1\_arr}},}
+\DoxyCodeLine{00521\ }
+\DoxyCodeLine{00522\ \ \ \ \ \mbox{\hyperlink{classSMonolithGPU_ab5d038b66802271bbaf8f0c06704e5da}{gpu\_weights\_tf1}}}
+\DoxyCodeLine{00523\ \ \ );}
+\DoxyCodeLine{00524\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{00525\ }
+\DoxyCodeLine{00526\ \textcolor{comment}{//KS:\ We\ can\ either\ copy\ gpu\_weight\ and\ calculate\ total\ weight\ in\ reweighting\ loop,\ or\ not\ copy\ and\ calculate\ total\ weight\ stall\ at\ GPU,\ which\ means\ less\ memory\ transfer}}
+\DoxyCodeLine{00527\ \textcolor{preprocessor}{\#ifdef\ Weight\_On\_SplineBySpline\_Basis}}
+\DoxyCodeLine{00528\ \ \ \textcolor{comment}{//\ Here\ we\ have\ to\ make\ a\ somewhat\ large\ GPU-\/>CPU\ transfer\ because\ it's\ all\ the\ splines'\ response}}
+\DoxyCodeLine{00529\ \ \ cudaMemcpy(cpu\_weights,\ \mbox{\hyperlink{classSMonolithGPU_a4f29d521544dd4bb64e6f2bfd68c21af}{gpu\_weights}},\ h\_n\_splines*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}),\ cudaMemcpyDeviceToHost);}
+\DoxyCodeLine{00530\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{00531\ }
+\DoxyCodeLine{00532\ \ \ cudaMemcpy(cpu\_weights\_tf1,\ \mbox{\hyperlink{classSMonolithGPU_ab5d038b66802271bbaf8f0c06704e5da}{gpu\_weights\_tf1}},\ h\_n\_tf1*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}),\ cudaMemcpyDeviceToHost);}
+\DoxyCodeLine{00533\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{00534\ }
+\DoxyCodeLine{00535\ \textcolor{comment}{//KS:\ Else\ calculate\ Total\ Weight}}
+\DoxyCodeLine{00536\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00537\ \ \ grid\_size.x\ =\ (\mbox{\hyperlink{classSMonolithGPU_a4628e4d9bb58650086cf51098c996059}{h\_n\_events}}\ /\ block\_size.x)\ +\ 1;}
+\DoxyCodeLine{00538\ }
+\DoxyCodeLine{00539\ \ \ EvalOnGPU\_TotWeight<<<grid\_size,\ block\_size>>>(}
+\DoxyCodeLine{00540\ \ \ \ \ \ \ \mbox{\hyperlink{classSMonolithGPU_a4f29d521544dd4bb64e6f2bfd68c21af}{gpu\_weights}},}
+\DoxyCodeLine{00541\ \ \ \ \ \ \ \mbox{\hyperlink{classSMonolithGPU_ab5d038b66802271bbaf8f0c06704e5da}{gpu\_weights\_tf1}},}
+\DoxyCodeLine{00542\ }
+\DoxyCodeLine{00543\ \ \ \ \ \ \ \mbox{\hyperlink{classSMonolithGPU_af5007136ab5e2fdbf3b9387e14a1c64a}{gpu\_total\_weights}},}
+\DoxyCodeLine{00544\ }
+\DoxyCodeLine{00545\ \ \ \ \ \ \ \mbox{\hyperlink{classSMonolithGPU_a663a150b3464b28d6161df1924cd534f}{text\_nParamPerEvent}},}
+\DoxyCodeLine{00546\ \ \ \ \ \ \ \mbox{\hyperlink{classSMonolithGPU_a089fd1b491667e60d06c3713cd45552e}{text\_nParamPerEvent\_TF1}}}
+\DoxyCodeLine{00547\ \ \ \ \ \ \ );}
+\DoxyCodeLine{00548\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{00549\ }
+\DoxyCodeLine{00550\ \ \ \textcolor{comment}{//KS:\ Here\ we\ have\ to\ make\ a\ somewhat\ large\ GPU-\/>CPU\ transfer\ because\ it\ is\ proportional\ to\ number\ of\ events}}
+\DoxyCodeLine{00551\ \ \ \textcolor{comment}{//KS:\ Normally\ code\ wait\ for\ memory\ transfer\ to\ finish\ before\ moving\ further\ cudaMemcpyAsync\ means\ we\ will\ continue\ to\ execute\ code\ and\ in\ a\ meantime\ keep\ copying\ stuff.}}
+\DoxyCodeLine{00552\ \ \ cudaMemcpyAsync(cpu\_total\_weights,\ \mbox{\hyperlink{classSMonolithGPU_af5007136ab5e2fdbf3b9387e14a1c64a}{gpu\_total\_weights}},\ \mbox{\hyperlink{classSMonolithGPU_a4628e4d9bb58650086cf51098c996059}{h\_n\_events}}\ *\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}),\ cudaMemcpyDeviceToHost,\ 0);}
+\DoxyCodeLine{00553\ \ \ \mbox{\hyperlink{gpuUtils_8cuh_a0345e89c96b417069f1e64674cc77318}{CudaCheckError}}();}
+\DoxyCodeLine{00554\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00555\ }
+\DoxyCodeLine{00556\ \textcolor{preprocessor}{\ \ \#ifdef\ DEBUG}}
+\DoxyCodeLine{00557\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Copied\ GPU\ total\ weights\ to\ CPU\ with\ SUCCESS\ (drink\ more\ tea)\(\backslash\)n"{}});}
+\DoxyCodeLine{00558\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Released\ calculated\ response\ from\ GPU\ with\ SUCCESS\ (drink\ most\ tea)\(\backslash\)n"{}});}
+\DoxyCodeLine{00559\ \textcolor{preprocessor}{\ \ \#endif}}
+\DoxyCodeLine{00560\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classSMonolithGPU_a5a51e7b819a0c8cf786aa8f13dfdc0cc}\label{classSMonolithGPU_a5a51e7b819a0c8cf786aa8f13dfdc0cc}} 
+\index{SMonolithGPU@{SMonolithGPU}!gpu\_coeff\_many@{gpu\_coeff\_many}}
+\index{gpu\_coeff\_many@{gpu\_coeff\_many}!SMonolithGPU@{SMonolithGPU}}
+\doxysubsubsection{\texorpdfstring{gpu\_coeff\_many}{gpu\_coeff\_many}}
+{\footnotesize\ttfamily float$\ast$ SMonolith\+GPU\+::gpu\+\_\+coeff\+\_\+many\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+GPU arrays to hold other coefficients. 
+
+
+
+Definition at line \mbox{\hyperlink{gpuSplineUtils_8cuh_source_l00192}{192}} of file \mbox{\hyperlink{gpuSplineUtils_8cuh_source}{gpu\+Spline\+Utils.\+cuh}}.
+
+\mbox{\Hypertarget{classSMonolithGPU_ae58804bb65745dbd8835876bf0debdc7}\label{classSMonolithGPU_ae58804bb65745dbd8835876bf0debdc7}} 
+\index{SMonolithGPU@{SMonolithGPU}!gpu\_coeff\_TF1\_many@{gpu\_coeff\_TF1\_many}}
+\index{gpu\_coeff\_TF1\_many@{gpu\_coeff\_TF1\_many}!SMonolithGPU@{SMonolithGPU}}
+\doxysubsubsection{\texorpdfstring{gpu\_coeff\_TF1\_many}{gpu\_coeff\_TF1\_many}}
+{\footnotesize\ttfamily float$\ast$ SMonolith\+GPU\+::gpu\+\_\+coeff\+\_\+\+TF1\+\_\+many\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+GPU arrays to hold TF1 coefficients. 
+
+
+
+Definition at line \mbox{\hyperlink{gpuSplineUtils_8cuh_source_l00201}{201}} of file \mbox{\hyperlink{gpuSplineUtils_8cuh_source}{gpu\+Spline\+Utils.\+cuh}}.
+
+\mbox{\Hypertarget{classSMonolithGPU_a871589b8a52dea4ed9a4963a7b05e1af}\label{classSMonolithGPU_a871589b8a52dea4ed9a4963a7b05e1af}} 
+\index{SMonolithGPU@{SMonolithGPU}!gpu\_coeff\_x@{gpu\_coeff\_x}}
+\index{gpu\_coeff\_x@{gpu\_coeff\_x}!SMonolithGPU@{SMonolithGPU}}
+\doxysubsubsection{\texorpdfstring{gpu\_coeff\_x}{gpu\_coeff\_x}}
+{\footnotesize\ttfamily float$\ast$ SMonolith\+GPU\+::gpu\+\_\+coeff\+\_\+x\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+KS\+: GPU arrays to hold X coefficient. 
+
+
+
+Definition at line \mbox{\hyperlink{gpuSplineUtils_8cuh_source_l00189}{189}} of file \mbox{\hyperlink{gpuSplineUtils_8cuh_source}{gpu\+Spline\+Utils.\+cuh}}.
+
+\mbox{\Hypertarget{classSMonolithGPU_ac291adc527ef593bb62a8440a131798f}\label{classSMonolithGPU_ac291adc527ef593bb62a8440a131798f}} 
+\index{SMonolithGPU@{SMonolithGPU}!gpu\_nKnots\_arr@{gpu\_nKnots\_arr}}
+\index{gpu\_nKnots\_arr@{gpu\_nKnots\_arr}!SMonolithGPU@{SMonolithGPU}}
+\doxysubsubsection{\texorpdfstring{gpu\_nKnots\_arr}{gpu\_nKnots\_arr}}
+{\footnotesize\ttfamily unsigned int$\ast$ SMonolith\+GPU\+::gpu\+\_\+n\+Knots\+\_\+arr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+KS\+: GPU Number of knots per spline. 
+
+
+
+Definition at line \mbox{\hyperlink{gpuSplineUtils_8cuh_source_l00195}{195}} of file \mbox{\hyperlink{gpuSplineUtils_8cuh_source}{gpu\+Spline\+Utils.\+cuh}}.
+
+\mbox{\Hypertarget{classSMonolithGPU_a13324d2fe2a29f7bbff19c55ddd6968c}\label{classSMonolithGPU_a13324d2fe2a29f7bbff19c55ddd6968c}} 
+\index{SMonolithGPU@{SMonolithGPU}!gpu\_nParamPerEvent@{gpu\_nParamPerEvent}}
+\index{gpu\_nParamPerEvent@{gpu\_nParamPerEvent}!SMonolithGPU@{SMonolithGPU}}
+\doxysubsubsection{\texorpdfstring{gpu\_nParamPerEvent}{gpu\_nParamPerEvent}}
+{\footnotesize\ttfamily unsigned int$\ast$ SMonolith\+GPU\+::gpu\+\_\+n\+Param\+Per\+Event\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+KS\+: GPU map keeping track how many parameters applies to each event, we keep two numbers here \{number of splines per event, index where splines start for a given event\}. 
+
+
+
+Definition at line \mbox{\hyperlink{gpuSplineUtils_8cuh_source_l00184}{184}} of file \mbox{\hyperlink{gpuSplineUtils_8cuh_source}{gpu\+Spline\+Utils.\+cuh}}.
+
+\mbox{\Hypertarget{classSMonolithGPU_a60191ebfcba5bedf7e01c923887d5ceb}\label{classSMonolithGPU_a60191ebfcba5bedf7e01c923887d5ceb}} 
+\index{SMonolithGPU@{SMonolithGPU}!gpu\_nParamPerEvent\_TF1@{gpu\_nParamPerEvent\_TF1}}
+\index{gpu\_nParamPerEvent\_TF1@{gpu\_nParamPerEvent\_TF1}!SMonolithGPU@{SMonolithGPU}}
+\doxysubsubsection{\texorpdfstring{gpu\_nParamPerEvent\_TF1}{gpu\_nParamPerEvent\_TF1}}
+{\footnotesize\ttfamily unsigned int$\ast$ SMonolith\+GPU\+::gpu\+\_\+n\+Param\+Per\+Event\+\_\+\+TF1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+KS\+: GPU map keeping track how many parameters applies to each event, we keep two numbers here \{number of TF1 per event, index where TF1 start for a given event\}. 
+
+
+
+Definition at line \mbox{\hyperlink{gpuSplineUtils_8cuh_source_l00186}{186}} of file \mbox{\hyperlink{gpuSplineUtils_8cuh_source}{gpu\+Spline\+Utils.\+cuh}}.
+
+\mbox{\Hypertarget{classSMonolithGPU_aa84c07d3cda1c29b039a0fd3778c0c0f}\label{classSMonolithGPU_aa84c07d3cda1c29b039a0fd3778c0c0f}} 
+\index{SMonolithGPU@{SMonolithGPU}!gpu\_nPoints\_arr@{gpu\_nPoints\_arr}}
+\index{gpu\_nPoints\_arr@{gpu\_nPoints\_arr}!SMonolithGPU@{SMonolithGPU}}
+\doxysubsubsection{\texorpdfstring{gpu\_nPoints\_arr}{gpu\_nPoints\_arr}}
+{\footnotesize\ttfamily short int$\ast$ SMonolith\+GPU\+::gpu\+\_\+n\+Points\+\_\+arr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+GPU arrays to hold number of points. 
+
+
+
+Definition at line \mbox{\hyperlink{gpuSplineUtils_8cuh_source_l00203}{203}} of file \mbox{\hyperlink{gpuSplineUtils_8cuh_source}{gpu\+Spline\+Utils.\+cuh}}.
+
+\mbox{\Hypertarget{classSMonolithGPU_ae8f091bec85671c4f96a2d0d9dbe4243}\label{classSMonolithGPU_ae8f091bec85671c4f96a2d0d9dbe4243}} 
+\index{SMonolithGPU@{SMonolithGPU}!gpu\_paramNo\_arr@{gpu\_paramNo\_arr}}
+\index{gpu\_paramNo\_arr@{gpu\_paramNo\_arr}!SMonolithGPU@{SMonolithGPU}}
+\doxysubsubsection{\texorpdfstring{gpu\_paramNo\_arr}{gpu\_paramNo\_arr}}
+{\footnotesize\ttfamily short int$\ast$ SMonolith\+GPU\+::gpu\+\_\+param\+No\+\_\+arr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+CW\+: GPU array with the number of points per spline (not per spline point!) 
+
+
+
+Definition at line \mbox{\hyperlink{gpuSplineUtils_8cuh_source_l00198}{198}} of file \mbox{\hyperlink{gpuSplineUtils_8cuh_source}{gpu\+Spline\+Utils.\+cuh}}.
+
+\mbox{\Hypertarget{classSMonolithGPU_a2f8de24623a787f9f728bdd0b735c89c}\label{classSMonolithGPU_a2f8de24623a787f9f728bdd0b735c89c}} 
+\index{SMonolithGPU@{SMonolithGPU}!gpu\_paramNo\_TF1\_arr@{gpu\_paramNo\_TF1\_arr}}
+\index{gpu\_paramNo\_TF1\_arr@{gpu\_paramNo\_TF1\_arr}!SMonolithGPU@{SMonolithGPU}}
+\doxysubsubsection{\texorpdfstring{gpu\_paramNo\_TF1\_arr}{gpu\_paramNo\_TF1\_arr}}
+{\footnotesize\ttfamily short int$\ast$ SMonolith\+GPU\+::gpu\+\_\+param\+No\+\_\+\+TF1\+\_\+arr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+CW\+: GPU array with the number of points per TF1 object. 
+
+
+
+Definition at line \mbox{\hyperlink{gpuSplineUtils_8cuh_source_l00205}{205}} of file \mbox{\hyperlink{gpuSplineUtils_8cuh_source}{gpu\+Spline\+Utils.\+cuh}}.
+
+\mbox{\Hypertarget{classSMonolithGPU_af5007136ab5e2fdbf3b9387e14a1c64a}\label{classSMonolithGPU_af5007136ab5e2fdbf3b9387e14a1c64a}} 
+\index{SMonolithGPU@{SMonolithGPU}!gpu\_total\_weights@{gpu\_total\_weights}}
+\index{gpu\_total\_weights@{gpu\_total\_weights}!SMonolithGPU@{SMonolithGPU}}
+\doxysubsubsection{\texorpdfstring{gpu\_total\_weights}{gpu\_total\_weights}}
+{\footnotesize\ttfamily float$\ast$ SMonolith\+GPU\+::gpu\+\_\+total\+\_\+weights\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+GPU arrays to hold weight for event. 
+
+
+
+Definition at line \mbox{\hyperlink{gpuSplineUtils_8cuh_source_l00208}{208}} of file \mbox{\hyperlink{gpuSplineUtils_8cuh_source}{gpu\+Spline\+Utils.\+cuh}}.
+
+\mbox{\Hypertarget{classSMonolithGPU_a4f29d521544dd4bb64e6f2bfd68c21af}\label{classSMonolithGPU_a4f29d521544dd4bb64e6f2bfd68c21af}} 
+\index{SMonolithGPU@{SMonolithGPU}!gpu\_weights@{gpu\_weights}}
+\index{gpu\_weights@{gpu\_weights}!SMonolithGPU@{SMonolithGPU}}
+\doxysubsubsection{\texorpdfstring{gpu\_weights}{gpu\_weights}}
+{\footnotesize\ttfamily float$\ast$ SMonolith\+GPU\+::gpu\+\_\+weights\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+GPU arrays to hold weight for each spline. 
+
+
+
+Definition at line \mbox{\hyperlink{gpuSplineUtils_8cuh_source_l00210}{210}} of file \mbox{\hyperlink{gpuSplineUtils_8cuh_source}{gpu\+Spline\+Utils.\+cuh}}.
+
+\mbox{\Hypertarget{classSMonolithGPU_ab5d038b66802271bbaf8f0c06704e5da}\label{classSMonolithGPU_ab5d038b66802271bbaf8f0c06704e5da}} 
+\index{SMonolithGPU@{SMonolithGPU}!gpu\_weights\_tf1@{gpu\_weights\_tf1}}
+\index{gpu\_weights\_tf1@{gpu\_weights\_tf1}!SMonolithGPU@{SMonolithGPU}}
+\doxysubsubsection{\texorpdfstring{gpu\_weights\_tf1}{gpu\_weights\_tf1}}
+{\footnotesize\ttfamily float$\ast$ SMonolith\+GPU\+::gpu\+\_\+weights\+\_\+tf1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+GPU arrays to hold weight for each TF1. 
+
+
+
+Definition at line \mbox{\hyperlink{gpuSplineUtils_8cuh_source_l00212}{212}} of file \mbox{\hyperlink{gpuSplineUtils_8cuh_source}{gpu\+Spline\+Utils.\+cuh}}.
+
+\mbox{\Hypertarget{classSMonolithGPU_a4628e4d9bb58650086cf51098c996059}\label{classSMonolithGPU_a4628e4d9bb58650086cf51098c996059}} 
+\index{SMonolithGPU@{SMonolithGPU}!h\_n\_events@{h\_n\_events}}
+\index{h\_n\_events@{h\_n\_events}!SMonolithGPU@{SMonolithGPU}}
+\doxysubsubsection{\texorpdfstring{h\_n\_events}{h\_n\_events}}
+{\footnotesize\ttfamily int SMonolith\+GPU\+::h\+\_\+n\+\_\+events\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Number of events living on CPU. 
+
+
+
+Definition at line \mbox{\hyperlink{gpuSplineUtils_8cuh_source_l00218}{218}} of file \mbox{\hyperlink{gpuSplineUtils_8cuh_source}{gpu\+Spline\+Utils.\+cuh}}.
+
+\mbox{\Hypertarget{classSMonolithGPU_ad36c112081992f2887fe24675f4bba06}\label{classSMonolithGPU_ad36c112081992f2887fe24675f4bba06}} 
+\index{SMonolithGPU@{SMonolithGPU}!h\_n\_params@{h\_n\_params}}
+\index{h\_n\_params@{h\_n\_params}!SMonolithGPU@{SMonolithGPU}}
+\doxysubsubsection{\texorpdfstring{h\_n\_params}{h\_n\_params}}
+{\footnotesize\ttfamily int SMonolith\+GPU\+::h\+\_\+n\+\_\+params\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Number of params living on CPU. 
+
+
+
+Definition at line \mbox{\hyperlink{gpuSplineUtils_8cuh_source_l00216}{216}} of file \mbox{\hyperlink{gpuSplineUtils_8cuh_source}{gpu\+Spline\+Utils.\+cuh}}.
+
+\mbox{\Hypertarget{classSMonolithGPU_a1fb766b50293e6b611c45aa21c5c1b9c}\label{classSMonolithGPU_a1fb766b50293e6b611c45aa21c5c1b9c}} 
+\index{SMonolithGPU@{SMonolithGPU}!text\_coeff\_x@{text\_coeff\_x}}
+\index{text\_coeff\_x@{text\_coeff\_x}!SMonolithGPU@{SMonolithGPU}}
+\doxysubsubsection{\texorpdfstring{text\_coeff\_x}{text\_coeff\_x}}
+{\footnotesize\ttfamily cuda\+Texture\+Object\+\_\+t SMonolith\+GPU\+::text\+\_\+coeff\+\_\+x = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+KS\+: Textures are L1 cache variables which are well optimised for fetching. Make texture only for variables you often access but rarely overwrite. There are limits on texture memory so don\textquotesingle{}t use huge arrays. 
+
+
+
+Definition at line \mbox{\hyperlink{gpuSplineUtils_8cuh_source_l00224}{224}} of file \mbox{\hyperlink{gpuSplineUtils_8cuh_source}{gpu\+Spline\+Utils.\+cuh}}.
+
+\mbox{\Hypertarget{classSMonolithGPU_a663a150b3464b28d6161df1924cd534f}\label{classSMonolithGPU_a663a150b3464b28d6161df1924cd534f}} 
+\index{SMonolithGPU@{SMonolithGPU}!text\_nParamPerEvent@{text\_nParamPerEvent}}
+\index{text\_nParamPerEvent@{text\_nParamPerEvent}!SMonolithGPU@{SMonolithGPU}}
+\doxysubsubsection{\texorpdfstring{text\_nParamPerEvent}{text\_nParamPerEvent}}
+{\footnotesize\ttfamily cuda\+Texture\+Object\+\_\+t SMonolith\+GPU\+::text\+\_\+n\+Param\+Per\+Event = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+KS\+: Map keeping track how many parameters applies to each event, we keep two numbers here \{number of splines per event, index where splines start for a given event\}. 
+
+
+
+Definition at line \mbox{\hyperlink{gpuSplineUtils_8cuh_source_l00227}{227}} of file \mbox{\hyperlink{gpuSplineUtils_8cuh_source}{gpu\+Spline\+Utils.\+cuh}}.
+
+\mbox{\Hypertarget{classSMonolithGPU_a089fd1b491667e60d06c3713cd45552e}\label{classSMonolithGPU_a089fd1b491667e60d06c3713cd45552e}} 
+\index{SMonolithGPU@{SMonolithGPU}!text\_nParamPerEvent\_TF1@{text\_nParamPerEvent\_TF1}}
+\index{text\_nParamPerEvent\_TF1@{text\_nParamPerEvent\_TF1}!SMonolithGPU@{SMonolithGPU}}
+\doxysubsubsection{\texorpdfstring{text\_nParamPerEvent\_TF1}{text\_nParamPerEvent\_TF1}}
+{\footnotesize\ttfamily cuda\+Texture\+Object\+\_\+t SMonolith\+GPU\+::text\+\_\+n\+Param\+Per\+Event\+\_\+\+TF1 = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+KS\+: Map keeping track how many parameters applies to each event, we keep two numbers here \{number of TF1 per event, index where TF1 start for a given event\}. 
+
+
+
+Definition at line \mbox{\hyperlink{gpuSplineUtils_8cuh_source_l00229}{229}} of file \mbox{\hyperlink{gpuSplineUtils_8cuh_source}{gpu\+Spline\+Utils.\+cuh}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/runner/work/\+Ma\+Ch3/\+Ma\+Ch3/splines/\mbox{\hyperlink{gpuSplineUtils_8cuh}{gpu\+Spline\+Utils.\+cuh}}\item 
+/home/runner/work/\+Ma\+Ch3/\+Ma\+Ch3/splines/\mbox{\hyperlink{gpuSplineUtils_8cu}{gpu\+Spline\+Utils.\+cu}}\end{DoxyCompactItemize}

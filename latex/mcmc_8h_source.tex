@@ -1,0 +1,40 @@
+\hypertarget{mcmc_8h_source}{}\doxysection{mcmc.\+h}
+\label{mcmc_8h_source}\index{/home/runner/work/MaCh3/MaCh3/mcmc/mcmc.h@{/home/runner/work/MaCh3/MaCh3/mcmc/mcmc.h}}
+\mbox{\hyperlink{mcmc_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{mcmc_8h_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{mcmc_8h_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{mcmc_8h_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{FitterBase_8h}{mcmc/FitterBase.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{mcmc_8h_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{mcmc_8h_source_l00006}\mbox{\hyperlink{classmcmc}{00006}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmcmc}{mcmc}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classFitterBase}{FitterBase}}\ \{}
+\DoxyCodeLine{\Hypertarget{mcmc_8h_source_l00007}00007\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{mcmc_8h_source_l00010}00010\ \ \ \mbox{\hyperlink{classmcmc}{mcmc}}(\mbox{\hyperlink{classmanager}{manager}}\ *\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classFitterBase_a4fceb68f242feeb04a0ddf42a5a37095}{fitMan}});}
+\DoxyCodeLine{\Hypertarget{mcmc_8h_source_l00012}00012\ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classmcmc_a6685a5d7fdac30e3676d5076ea26ec92}{\string~mcmc}}();}
+\DoxyCodeLine{\Hypertarget{mcmc_8h_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{mcmc_8h_source_l00015}00015\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmcmc_a8a9cc0e0aa65c8573fca703a42b2ee31}{runMCMC}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{mcmc_8h_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{mcmc_8h_source_l00018}\mbox{\hyperlink{classmcmc_af549f9b0ab4276710bc0d2987ad825a9}{00018}}\ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmcmc_af549f9b0ab4276710bc0d2987ad825a9}{setChainLength}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ L)\ \{\ \mbox{\hyperlink{classmcmc_a2b9a5344ea8074fcecdc1ae2f3cfc62a}{chainLength}}\ =\ L;\ \};}
+\DoxyCodeLine{\Hypertarget{mcmc_8h_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{mcmc_8h_source_l00021}\mbox{\hyperlink{classmcmc_a7129ef21a4b2abab4bf142653d558535}{00021}}\ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmcmc_a7129ef21a4b2abab4bf142653d558535}{setInitialStepNumber}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ stepNum\ =\ 0)\{\mbox{\hyperlink{classmcmc_a41ce4f96a562ea3f8e750feaae4d24c4}{stepStart}}\ =\ stepNum;\};}
+\DoxyCodeLine{\Hypertarget{mcmc_8h_source_l00022}00022\ \ \ }
+\DoxyCodeLine{\Hypertarget{mcmc_8h_source_l00026}00026\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmcmc_adf4c80255288c5396da3b95d609ce4b2}{StartFromPreviousFit}}(\textcolor{keyword}{const}\ std::string\&\ FitName)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{mcmc_8h_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{mcmc_8h_source_l00029}\mbox{\hyperlink{classmcmc_a0446e3c1f2af2173ffd6f017fdf6f1ba}{00029}}\ \ \ \textcolor{keyword}{inline}\ std::string\ \mbox{\hyperlink{classmcmc_a0446e3c1f2af2173ffd6f017fdf6f1ba}{GetName}}()\textcolor{keyword}{const\ }\{\textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}MCMC"{}};\};}
+\DoxyCodeLine{\Hypertarget{mcmc_8h_source_l00030}00030\ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{mcmc_8h_source_l00032}00032\ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmcmc_aaf921343861cec8bb96beb2503b3fe2c}{ProposeStep}}();}
+\DoxyCodeLine{\Hypertarget{mcmc_8h_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{mcmc_8h_source_l00035}00035\ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmcmc_aa2f1c8aa3d951b935bbb3ec637b6b651}{CheckStep}}();}
+\DoxyCodeLine{\Hypertarget{mcmc_8h_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{mcmc_8h_source_l00038}00038\ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmcmc_ae0eabbfc70f9bae615332caa48b3f4f4}{PrintProgress}}();}
+\DoxyCodeLine{\Hypertarget{mcmc_8h_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{mcmc_8h_source_l00041}\mbox{\hyperlink{classmcmc_a537f7c2411a6a8e65fdf57b81ce6fe4a}{00041}}\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classmcmc_a537f7c2411a6a8e65fdf57b81ce6fe4a}{reject}};}
+\DoxyCodeLine{\Hypertarget{mcmc_8h_source_l00043}\mbox{\hyperlink{classmcmc_a2b9a5344ea8074fcecdc1ae2f3cfc62a}{00043}}\ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classmcmc_a2b9a5344ea8074fcecdc1ae2f3cfc62a}{chainLength}};}
+\DoxyCodeLine{\Hypertarget{mcmc_8h_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{mcmc_8h_source_l00046}\mbox{\hyperlink{classmcmc_a4da3776296d4f06268f240df5eb0bbcc}{00046}}\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classmcmc_a4da3776296d4f06268f240df5eb0bbcc}{anneal}};}
+\DoxyCodeLine{\Hypertarget{mcmc_8h_source_l00048}\mbox{\hyperlink{classmcmc_a3052c9e38107c0070c885a5a3bbbc302}{00048}}\ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classmcmc_a3052c9e38107c0070c885a5a3bbbc302}{AnnealTemp}};}
+\DoxyCodeLine{\Hypertarget{mcmc_8h_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{mcmc_8h_source_l00051}\mbox{\hyperlink{classmcmc_a41ce4f96a562ea3f8e750feaae4d24c4}{00051}}\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classmcmc_a41ce4f96a562ea3f8e750feaae4d24c4}{stepStart}};}
+\DoxyCodeLine{\Hypertarget{mcmc_8h_source_l00052}00052\ \};}
+\DoxyCodeLine{\Hypertarget{mcmc_8h_source_l00053}00053\ }
+
+\end{DoxyCode}

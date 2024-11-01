@@ -1,0 +1,133 @@
+\hypertarget{SplineCommon_8h}{}\doxysection{/home/runner/work/\+Ma\+Ch3/\+Ma\+Ch3/splines/\+Spline\+Common.h File Reference}
+\label{SplineCommon_8h}\index{/home/runner/work/MaCh3/MaCh3/splines/SplineCommon.h@{/home/runner/work/MaCh3/MaCh3/splines/SplineCommon.h}}
+
+
+Contains definitions for spline coefficients and structure used in both CPU and GPU code.  
+
+
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{SplineCommon_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structSplineMonoStruct}{Spline\+Mono\+Struct}}
+\begin{DoxyCompactList}\small\item\em KS\+: Struct storing information for spline monolith. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{SplineCommon_8h_a2dd18768fbcf2e971fc1e9367ad41705}{\+\_\+\+BAD\+\_\+\+SPLINE\+\_\+}}~123456789
+\item 
+\#define \mbox{\hyperlink{SplineCommon_8h_a283177311bade7400c6088e8fad71a1f}{\+\_\+n\+Coeff\+\_\+}}~4
+\begin{DoxyCompactList}\small\item\em KS\+: We store coefficients \{y,b,c,d\} in one array one by one, this is only to define it once rather then insert \char`\"{}4\char`\"{} all over the code. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{SplineCommon_8h_a911160077ffa38727e0494f178ce380a}{\+\_\+n\+TF1\+Coeff\+\_\+}}~2
+\begin{DoxyCompactList}\small\item\em KS\+: For TF1 we store at most 5 coefficients, we could make it more flexible but for now define it here to make future changes easier to track. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{SplineCommon_8h_aac6312c7a4c683e6d016d9fccdc7d7c0}{Spline\+Segment\+Coeffs}} \{ \mbox{\hyperlink{SplineCommon_8h_aac6312c7a4c683e6d016d9fccdc7d7c0a9e87d802f64d8929291c58eeb0eb16e6}{k\+CoeffY}} = 0
+, \mbox{\hyperlink{SplineCommon_8h_aac6312c7a4c683e6d016d9fccdc7d7c0a546352c58e328d9b57692a033eee8a42}{k\+CoeffB}} = 1
+, \mbox{\hyperlink{SplineCommon_8h_aac6312c7a4c683e6d016d9fccdc7d7c0af73b429597449e82d2920f69d03cef36}{k\+CoeffC}} = 2
+, \mbox{\hyperlink{SplineCommon_8h_aac6312c7a4c683e6d016d9fccdc7d7c0a82b4ea363cc5a4b0429efcc46582769d}{k\+CoeffD}} = 3
+ \}
+\begin{DoxyCompactList}\small\item\em HW\+: Coefficients for grabbing items from manycoeff\+\_\+arr (rather than having y=manycoeffarray\mbox{[}index+0\mbox{]}) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains definitions for spline coefficients and structure used in both CPU and GPU code. 
+
+This file includes macros and enums for defining spline coefficients. It is designed to be compatible with older CUDA versions, so be cautious when adding new features or including other headers. 
+
+Definition in file \mbox{\hyperlink{SplineCommon_8h_source}{Spline\+Common.\+h}}.
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{SplineCommon_8h_a2dd18768fbcf2e971fc1e9367ad41705}\label{SplineCommon_8h_a2dd18768fbcf2e971fc1e9367ad41705}} 
+\index{SplineCommon.h@{SplineCommon.h}!\_BAD\_SPLINE\_@{\_BAD\_SPLINE\_}}
+\index{\_BAD\_SPLINE\_@{\_BAD\_SPLINE\_}!SplineCommon.h@{SplineCommon.h}}
+\doxysubsubsection{\texorpdfstring{\_BAD\_SPLINE\_}{\_BAD\_SPLINE\_}}
+{\footnotesize\ttfamily \#define \+\_\+\+BAD\+\_\+\+SPLINE\+\_\+~123456789}
+
+
+
+Definition at line \mbox{\hyperlink{SplineCommon_8h_source_l00011}{11}} of file \mbox{\hyperlink{SplineCommon_8h_source}{Spline\+Common.\+h}}.
+
+\mbox{\Hypertarget{SplineCommon_8h_a283177311bade7400c6088e8fad71a1f}\label{SplineCommon_8h_a283177311bade7400c6088e8fad71a1f}} 
+\index{SplineCommon.h@{SplineCommon.h}!\_nCoeff\_@{\_nCoeff\_}}
+\index{\_nCoeff\_@{\_nCoeff\_}!SplineCommon.h@{SplineCommon.h}}
+\doxysubsubsection{\texorpdfstring{\_nCoeff\_}{\_nCoeff\_}}
+{\footnotesize\ttfamily \#define \+\_\+n\+Coeff\+\_\+~4}
+
+
+
+KS\+: We store coefficients \{y,b,c,d\} in one array one by one, this is only to define it once rather then insert \char`\"{}4\char`\"{} all over the code. 
+
+
+
+Definition at line \mbox{\hyperlink{SplineCommon_8h_source_l00015}{15}} of file \mbox{\hyperlink{SplineCommon_8h_source}{Spline\+Common.\+h}}.
+
+\mbox{\Hypertarget{SplineCommon_8h_a911160077ffa38727e0494f178ce380a}\label{SplineCommon_8h_a911160077ffa38727e0494f178ce380a}} 
+\index{SplineCommon.h@{SplineCommon.h}!\_nTF1Coeff\_@{\_nTF1Coeff\_}}
+\index{\_nTF1Coeff\_@{\_nTF1Coeff\_}!SplineCommon.h@{SplineCommon.h}}
+\doxysubsubsection{\texorpdfstring{\_nTF1Coeff\_}{\_nTF1Coeff\_}}
+{\footnotesize\ttfamily \#define \+\_\+n\+TF1\+Coeff\+\_\+~2}
+
+
+
+KS\+: For TF1 we store at most 5 coefficients, we could make it more flexible but for now define it here to make future changes easier to track. 
+
+
+
+Definition at line \mbox{\hyperlink{SplineCommon_8h_source_l00017}{17}} of file \mbox{\hyperlink{SplineCommon_8h_source}{Spline\+Common.\+h}}.
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{SplineCommon_8h_aac6312c7a4c683e6d016d9fccdc7d7c0}\label{SplineCommon_8h_aac6312c7a4c683e6d016d9fccdc7d7c0}} 
+\index{SplineCommon.h@{SplineCommon.h}!SplineSegmentCoeffs@{SplineSegmentCoeffs}}
+\index{SplineSegmentCoeffs@{SplineSegmentCoeffs}!SplineCommon.h@{SplineCommon.h}}
+\doxysubsubsection{\texorpdfstring{SplineSegmentCoeffs}{SplineSegmentCoeffs}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{SplineCommon_8h_aac6312c7a4c683e6d016d9fccdc7d7c0}{Spline\+Segment\+Coeffs}}}
+
+
+
+HW\+: Coefficients for grabbing items from manycoeff\+\_\+arr (rather than having y=manycoeffarray\mbox{[}index+0\mbox{]}) 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kCoeffY@{kCoeffY}!SplineCommon.h@{SplineCommon.h}}\index{SplineCommon.h@{SplineCommon.h}!kCoeffY@{kCoeffY}}}\mbox{\Hypertarget{SplineCommon_8h_aac6312c7a4c683e6d016d9fccdc7d7c0a9e87d802f64d8929291c58eeb0eb16e6}\label{SplineCommon_8h_aac6312c7a4c683e6d016d9fccdc7d7c0a9e87d802f64d8929291c58eeb0eb16e6}} 
+k\+CoeffY&Coefficient Y. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kCoeffB@{kCoeffB}!SplineCommon.h@{SplineCommon.h}}\index{SplineCommon.h@{SplineCommon.h}!kCoeffB@{kCoeffB}}}\mbox{\Hypertarget{SplineCommon_8h_aac6312c7a4c683e6d016d9fccdc7d7c0a546352c58e328d9b57692a033eee8a42}\label{SplineCommon_8h_aac6312c7a4c683e6d016d9fccdc7d7c0a546352c58e328d9b57692a033eee8a42}} 
+k\+CoeffB&Coefficient B. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kCoeffC@{kCoeffC}!SplineCommon.h@{SplineCommon.h}}\index{SplineCommon.h@{SplineCommon.h}!kCoeffC@{kCoeffC}}}\mbox{\Hypertarget{SplineCommon_8h_aac6312c7a4c683e6d016d9fccdc7d7c0af73b429597449e82d2920f69d03cef36}\label{SplineCommon_8h_aac6312c7a4c683e6d016d9fccdc7d7c0af73b429597449e82d2920f69d03cef36}} 
+k\+CoeffC&Coefficient C. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{kCoeffD@{kCoeffD}!SplineCommon.h@{SplineCommon.h}}\index{SplineCommon.h@{SplineCommon.h}!kCoeffD@{kCoeffD}}}\mbox{\Hypertarget{SplineCommon_8h_aac6312c7a4c683e6d016d9fccdc7d7c0a82b4ea363cc5a4b0429efcc46582769d}\label{SplineCommon_8h_aac6312c7a4c683e6d016d9fccdc7d7c0a82b4ea363cc5a4b0429efcc46582769d}} 
+k\+CoeffD&Coefficient D. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{SplineCommon_8h_source_l00020}{20}} of file \mbox{\hyperlink{SplineCommon_8h_source}{Spline\+Common.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021\ \{}
+\DoxyCodeLine{00022\ \ \ \mbox{\hyperlink{SplineCommon_8h_aac6312c7a4c683e6d016d9fccdc7d7c0a9e87d802f64d8929291c58eeb0eb16e6}{kCoeffY}}\ =\ 0,\ }
+\DoxyCodeLine{00023\ \ \ \mbox{\hyperlink{SplineCommon_8h_aac6312c7a4c683e6d016d9fccdc7d7c0a546352c58e328d9b57692a033eee8a42}{kCoeffB}}\ =\ 1,\ }
+\DoxyCodeLine{00024\ \ \ \mbox{\hyperlink{SplineCommon_8h_aac6312c7a4c683e6d016d9fccdc7d7c0af73b429597449e82d2920f69d03cef36}{kCoeffC}}\ =\ 2,\ }
+\DoxyCodeLine{00025\ \ \ \mbox{\hyperlink{SplineCommon_8h_aac6312c7a4c683e6d016d9fccdc7d7c0a82b4ea363cc5a4b0429efcc46582769d}{kCoeffD}}\ =\ 3\ \ }
+\DoxyCodeLine{00026\ \};}
+
+\end{DoxyCode}

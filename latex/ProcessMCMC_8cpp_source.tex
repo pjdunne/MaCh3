@@ -1,0 +1,768 @@
+\hypertarget{ProcessMCMC_8cpp_source}{}\doxysection{Process\+MCMC.\+cpp}
+\label{ProcessMCMC_8cpp_source}\index{/home/runner/work/MaCh3/MaCh3/Diagnostics/ProcessMCMC.cpp@{/home/runner/work/MaCh3/MaCh3/Diagnostics/ProcessMCMC.cpp}}
+\mbox{\hyperlink{ProcessMCMC_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00001}00001\ \textcolor{comment}{//MaCh3\ includes}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{MCMCProcessor_8h}{mcmc/MCMCProcessor.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{manager_8h}{manager/manager.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00006}00006\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ProcessMCMC_8cpp_a52c48199a4bcad577b88768020a91041}{ProcessMCMC}}(\textcolor{keyword}{const}\ std::string\&\ inputFile);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00008}00008\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ProcessMCMC_8cpp_a83be70750a728e4deae518ea3ffaf388}{MultipleProcessMCMC}}();}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00009}00009\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ProcessMCMC_8cpp_ac5381031738b5fa6481d7ac33d2ad854}{CalcBayesFactor}}(\mbox{\hyperlink{classMCMCProcessor}{MCMCProcessor}}*\ Processor);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00010}00010\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ProcessMCMC_8cpp_af772f7bdfdba080075141597e9c99f79}{CalcSavageDickey}}(\mbox{\hyperlink{classMCMCProcessor}{MCMCProcessor}}*\ Processor);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00011}00011\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ProcessMCMC_8cpp_a2d9c3cc52d1f5c3cc3e0775ae596e9c7}{CalcBipolarPlot}}(\mbox{\hyperlink{classMCMCProcessor}{MCMCProcessor}}*\ Processor);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00012}00012\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ProcessMCMC_8cpp_a32bb8e776bea9a8b778cfece3200932c}{CalcParameterEvolution}}(\mbox{\hyperlink{classMCMCProcessor}{MCMCProcessor}}*\ Processor);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00013}00013\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ProcessMCMC_8cpp_a02c2311b736096adc8525876c0ec1487}{GetTrianglePlot}}(\mbox{\hyperlink{classMCMCProcessor}{MCMCProcessor}}*\ Processor);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00014}00014\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ProcessMCMC_8cpp_a08adc262bf03d1cb8df996b39404572c}{DiagnoseCovarianceMatrix}}(\mbox{\hyperlink{classMCMCProcessor}{MCMCProcessor}}*\ Processor,\ \textcolor{keyword}{const}\ std::string\&\ inputFile);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00015}00015\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ProcessMCMC_8cpp_abbd13994de9f24524b06b19aa901d73f}{ReweightPrior}}(\mbox{\hyperlink{classMCMCProcessor}{MCMCProcessor}}*\ Processor);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00017}00017\ \textcolor{keyword}{inline}\ TH2D*\ \mbox{\hyperlink{ProcessMCMC_8cpp_a2052da75bc58457dc290c8cbd06efe30}{TMatrixIntoTH2D}}(TMatrixDSym*\ Matrix,\ \textcolor{keyword}{const}\ std::string\&\ title);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00019}00019\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ProcessMCMC_8cpp_aece705f01f7c21ad0d0f5f9f64af6d0d}{KolmogorovSmirnovTest}}(\mbox{\hyperlink{classMCMCProcessor}{MCMCProcessor}}**\ Processor,\ TCanvas*\ Posterior,\ TString\ canvasname);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00021}\mbox{\hyperlink{ProcessMCMC_8cpp_a6b25bcddaae9b868109dc98a54476e46}{00021}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{ProcessMCMC_8cpp_a6b25bcddaae9b868109dc98a54476e46}{nFiles}};}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00022}\mbox{\hyperlink{ProcessMCMC_8cpp_a8e90c1478f4be185364988cac765a163}{00022}}\ std::vector\ <std::string>\ \mbox{\hyperlink{ProcessMCMC_8cpp_a8e90c1478f4be185364988cac765a163}{FileNames}};}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00023}\mbox{\hyperlink{ProcessMCMC_8cpp_a2bff863f66d44b865ce21762802730c8}{00023}}\ std::vector\ <std::string>\ \mbox{\hyperlink{ProcessMCMC_8cpp_a2bff863f66d44b865ce21762802730c8}{TitleNames}};}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00024}\mbox{\hyperlink{ProcessMCMC_8cpp_a13056efd080ab16304b6f7be0ebf0a61}{00024}}\ std::string\ \mbox{\hyperlink{ProcessMCMC_8cpp_a13056efd080ab16304b6f7be0ebf0a61}{config}};}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00026}\mbox{\hyperlink{ProcessMCMC_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{00026}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{ProcessMCMC_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}\ *argv[])\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00027}00027\ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00028}00028\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_aa603c55ea73cd86d1994901227883e1e}{SetMaCh3LoggerFormat}}();}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00029}00029\ \ \ \mbox{\hyperlink{ProcessMCMC_8cpp_a6b25bcddaae9b868109dc98a54476e46}{nFiles}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00030}00030\ \ \ \textcolor{keywordflow}{if}\ (argc\ !=\ 3\ \&\&\ argc\ !=6\ \&\&\ argc\ !=\ 8)}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00031}00031\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00032}00032\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}How\ to\ use:\ \{\}<Config>\ <MCMM\_ND\_Output.root>"{}},\ argv[0]);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00033}00033\ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_\ ,\ \_\_LINE\_\_\ );}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00034}00034\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00036}00036\ \ \ \textcolor{keywordflow}{if}\ (argc\ ==\ 3)}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00037}00037\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00038}00038\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Producing\ single\ fit\ output"{}});}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00039}00039\ \ \ \ \ \mbox{\hyperlink{ProcessMCMC_8cpp_a13056efd080ab16304b6f7be0ebf0a61}{config}}\ =\ argv[1];}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00040}00040\ \ \ \ \ std::string\ filename\ =\ argv[2];}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00041}00041\ \ \ \ \ \mbox{\hyperlink{ProcessMCMC_8cpp_a52c48199a4bcad577b88768020a91041}{ProcessMCMC}}(filename);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00042}00042\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00043}00043\ \ \ \textcolor{comment}{//\ If\ we\ want\ to\ compare\ two\ or\ more\ fits\ (e.g.\ binning\ changes\ or\ introducing\ new\ params/priors)}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00044}00044\ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (argc\ ==\ 6\ ||\ argc\ ==\ 8)}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00045}00045\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00046}00046\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Producing\ two\ fit\ comparison"{}});}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00047}00047\ \ \ \ \ \mbox{\hyperlink{ProcessMCMC_8cpp_a13056efd080ab16304b6f7be0ebf0a61}{config}}\ =\ argv[1];}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00049}00049\ \ \ \ \ \mbox{\hyperlink{ProcessMCMC_8cpp_a8e90c1478f4be185364988cac765a163}{FileNames}}.push\_back(argv[2]);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00050}00050\ \ \ \ \ \mbox{\hyperlink{ProcessMCMC_8cpp_a2bff863f66d44b865ce21762802730c8}{TitleNames}}.push\_back(argv[3]);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00052}00052\ \ \ \ \ \mbox{\hyperlink{ProcessMCMC_8cpp_a8e90c1478f4be185364988cac765a163}{FileNames}}.push\_back(argv[4]);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00053}00053\ \ \ \ \ \mbox{\hyperlink{ProcessMCMC_8cpp_a2bff863f66d44b865ce21762802730c8}{TitleNames}}.push\_back(argv[5]);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00054}00054\ \ \ \ \ \textcolor{comment}{//KS:\ If\ there\ is\ third\ file\ add\ it}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00055}00055\ \ \ \ \ \textcolor{keywordflow}{if}(argc\ ==\ 8)}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00056}00056\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00057}00057\ \ \ \ \ \ \ \mbox{\hyperlink{ProcessMCMC_8cpp_a8e90c1478f4be185364988cac765a163}{FileNames}}.push\_back(argv[6]);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00058}00058\ \ \ \ \ \ \ \mbox{\hyperlink{ProcessMCMC_8cpp_a2bff863f66d44b865ce21762802730c8}{TitleNames}}.push\_back(argv[7]);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00059}00059\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00061}00061\ \ \ \ \ \mbox{\hyperlink{ProcessMCMC_8cpp_a83be70750a728e4deae518ea3ffaf388}{MultipleProcessMCMC}}();}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00062}00062\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00064}00064\ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00065}00065\ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00067}\mbox{\hyperlink{ProcessMCMC_8cpp_a52c48199a4bcad577b88768020a91041}{00067}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ProcessMCMC_8cpp_a52c48199a4bcad577b88768020a91041}{ProcessMCMC}}(\textcolor{keyword}{const}\ std::string\&\ inputFile)}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00068}00068\ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00069}00069\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}File\ for\ study:\ \{\}\ with\ config\ \ \{\}"{}},\ inputFile,\ \mbox{\hyperlink{ProcessMCMC_8cpp_a13056efd080ab16304b6f7be0ebf0a61}{config}});}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00070}00070\ \ \ \textcolor{comment}{//\ Make\ the\ processor)}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00071}00071\ \ \ \mbox{\hyperlink{classMCMCProcessor}{MCMCProcessor}}*\ Processor\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classMCMCProcessor}{MCMCProcessor}}(inputFile);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00073}00073\ \ \ YAML::Node\ card\_yaml\ =\ YAML::LoadFile(\mbox{\hyperlink{ProcessMCMC_8cpp_a13056efd080ab16304b6f7be0ebf0a61}{config}}.c\_str());}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00074}00074\ \ \ YAML::Node\ Settings\ =\ card\_yaml[\textcolor{stringliteral}{"{}ProcessMCMC"{}}];}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00076}00076\ \ \ \textcolor{keywordtype}{bool}\ PlotCorr\ =\ GetFromManager<bool>(Settings[\textcolor{stringliteral}{"{}PlotCorr"{}}],\ \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00078}00078\ \ \ Processor-\/>\mbox{\hyperlink{classMCMCProcessor_a4364a8ab084906c8925c9db9dc110485}{SetExcludedTypes}}(\mbox{\hyperlink{YamlHelper_8h_a1a6adcb8b24bfbdcb936ced6812e1b0c}{GetFromManager}}<std::vector<std::string>>(Settings[\textcolor{stringliteral}{"{}ExcludedTypes"{}}],\ \{\textcolor{stringliteral}{"{}"{}}\}));}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00079}00079\ \ \ Processor-\/>\mbox{\hyperlink{classMCMCProcessor_a09a6fa6cefcb20c00bee22c1dc5718c5}{SetExcludedNames}}(\mbox{\hyperlink{YamlHelper_8h_a1a6adcb8b24bfbdcb936ced6812e1b0c}{GetFromManager}}<std::vector<std::string>>(Settings[\textcolor{stringliteral}{"{}ExcludedNames"{}}],\ \{\textcolor{stringliteral}{"{}"{}}\}));}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00080}00080\ \ \ \textcolor{comment}{//Apply\ additional\ cuts\ to\ 1D\ posterior}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00081}00081\ \ \ Processor-\/>\mbox{\hyperlink{classMCMCProcessor_a641da7f5e018d48d480638fbad6406a4}{SetPosterior1DCut}}(GetFromManager<std::string>(Settings[\textcolor{stringliteral}{"{}Posterior1DCut"{}}],\ \textcolor{stringliteral}{"{}"{}}));}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00083}00083\ \ \ \textcolor{keywordflow}{if}(PlotCorr)\ Processor-\/>\mbox{\hyperlink{classMCMCProcessor_a2f4bf14c95b830c457a73be5399403ad}{SetOutputSuffix}}(\textcolor{stringliteral}{"{}\_drawCorr"{}});}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00084}00084\ \ \ \textcolor{comment}{//KS:Turn\ off\ plotting\ detector\ and\ some\ other\ setting,\ should\ be\ via\ some\ config}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00085}00085\ \ \ Processor-\/>\mbox{\hyperlink{classMCMCProcessor_a6ea549289949ac19d2fc768d82c8f1c9}{SetPlotRelativeToPrior}}(GetFromManager<bool>(Settings[\textcolor{stringliteral}{"{}PlotRelativeToPrior"{}}],\ \textcolor{keyword}{false}));}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00086}00086\ \ \ Processor-\/>\mbox{\hyperlink{classMCMCProcessor_a9db87211d9f066011daed18af7f4631e}{SetPrintToPDF}}(GetFromManager<bool>(Settings[\textcolor{stringliteral}{"{}PrintToPDF"{}}],\ \textcolor{keyword}{true}));}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00088}00088\ \ \ \textcolor{comment}{//KS:\ Whether\ you\ want\ prior\ error\ bands\ for\ parameters\ with\ flat\ prior\ or\ not}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00089}00089\ \ \ Processor-\/>\mbox{\hyperlink{classMCMCProcessor_adbe0ec06ce30447cb1c03a961364b929}{SetPlotErrorForFlatPrior}}(GetFromManager<bool>(Settings[\textcolor{stringliteral}{"{}PlotErrorForFlatPrior"{}}],\ \textcolor{keyword}{true}));}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00090}00090\ \ \ Processor-\/>\mbox{\hyperlink{classMCMCProcessor_a7f61cf0a51670f24f16dd7d77b7f5ae4}{SetFancyNames}}(GetFromManager<bool>(Settings[\textcolor{stringliteral}{"{}FancyNames"{}}],\ \textcolor{keyword}{true}));}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00091}00091\ \ \ Processor-\/>\mbox{\hyperlink{classMCMCProcessor_aed120fafdfe97615f4c2a30aedde03dd}{SetPlotBinValue}}(GetFromManager<bool>(Settings[\textcolor{stringliteral}{"{}PlotBinValue"{}}],\ \textcolor{keyword}{false}));}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00092}00092\ \ \ \textcolor{comment}{//KS:\ Plot\ only\ 2D\ posteriors\ with\ correlations\ greater\ than\ 0.2}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00093}00093\ \ \ Processor-\/>\mbox{\hyperlink{classMCMCProcessor_ab605f4d7bf4e2b24b4c0b1c5853b479f}{SetPost2DPlotThreshold}}(GetFromManager<double>(Settings[\textcolor{stringliteral}{"{}Post2DPlotThreshold"{}}],\ 0.2));}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00095}00095\ \ \ Processor-\/>\mbox{\hyperlink{classMCMCProcessor_a224995a0b47bd9cbd04e099cc3ca634c}{Initialise}}();}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00096}00096\ \ \ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00097}00097\ \ \ \textcolor{comment}{//\ Make\ the\ postfit}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00098}00098\ \ \ Processor-\/>\mbox{\hyperlink{classMCMCProcessor_a8667510132aa01395520f028287f511b}{MakePostfit}}();}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00099}00099\ \ \ Processor-\/>\mbox{\hyperlink{classMCMCProcessor_ab420de77e598da4b02ba74cdc20f2ea9}{DrawPostfit}}();}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00100}00100\ \ \ \textcolor{comment}{//KS:\ Should\ set\ via\ config\ whether\ you\ want\ below\ or\ not}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00101}00101\ \ \ \textcolor{keywordflow}{if}(GetFromManager<bool>(Settings[\textcolor{stringliteral}{"{}MakeCredibleIntervals"{}}],\ \textcolor{keyword}{true}))\ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00102}00102\ \ \ \ \ Processor-\/>\mbox{\hyperlink{classMCMCProcessor_a17c0f09bfce82d1701a83645f748988a}{MakeCredibleIntervals}}(\mbox{\hyperlink{YamlHelper_8h_a1a6adcb8b24bfbdcb936ced6812e1b0c}{GetFromManager}}<std::vector<double>>(Settings[\textcolor{stringliteral}{"{}CredibleIntervals"{}}],\ \{0.99,\ 0.90,\ 0.68\}),}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{YamlHelper_8h_a1a6adcb8b24bfbdcb936ced6812e1b0c}{GetFromManager}}<std::vector<short\ int>>(Settings[\textcolor{stringliteral}{"{}CredibleIntervalsColours"{}}],\ \{436,\ 430,\ 422\}),}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GetFromManager<bool>(Settings[\textcolor{stringliteral}{"{}CredibleInSigmas"{}}],\ \textcolor{keyword}{false}));}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00105}00105\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00106}00106\ \ \ \textcolor{keywordflow}{if}(GetFromManager<bool>(Settings[\textcolor{stringliteral}{"{}CalcBayesFactor"{}}],\ \textcolor{keyword}{true}))\ \ \mbox{\hyperlink{ProcessMCMC_8cpp_ac5381031738b5fa6481d7ac33d2ad854}{CalcBayesFactor}}(Processor);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00107}00107\ \ \ \textcolor{keywordflow}{if}(GetFromManager<bool>(Settings[\textcolor{stringliteral}{"{}CalcSavageDickey"{}}],\ \textcolor{keyword}{true}))\ \mbox{\hyperlink{ProcessMCMC_8cpp_af772f7bdfdba080075141597e9c99f79}{CalcSavageDickey}}(Processor);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00108}00108\ \ \ \textcolor{keywordflow}{if}(GetFromManager<bool>(Settings[\textcolor{stringliteral}{"{}CalcBipolarPlot"{}}],\ \textcolor{keyword}{false}))\ \mbox{\hyperlink{ProcessMCMC_8cpp_a2d9c3cc52d1f5c3cc3e0775ae596e9c7}{CalcBipolarPlot}}(Processor);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00109}00109\ \ \ \textcolor{keywordflow}{if}(GetFromManager<bool>(Settings[\textcolor{stringliteral}{"{}CalcParameterEvolution"{}}],\ \textcolor{keyword}{false}))\ \mbox{\hyperlink{ProcessMCMC_8cpp_a32bb8e776bea9a8b778cfece3200932c}{CalcParameterEvolution}}(Processor);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00110}00110\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00111}00111\ \ \ \textcolor{keywordflow}{if}(PlotCorr)}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00112}00112\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00113}00113\ \ \ \ \ Processor-\/>\mbox{\hyperlink{classMCMCProcessor_a4bec41cdc9af977a51b269e2a07fe961}{SetSmoothing}}(GetFromManager<bool>(Settings[\textcolor{stringliteral}{"{}Smoothing"{}}],\ \textcolor{keyword}{true}));}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00114}00114\ \ \ \ \ \textcolor{comment}{//\ Make\ the\ covariance\ matrix}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00115}00115\ \ \ \ \ \textcolor{comment}{//We\ have\ different\ treatment\ for\ multithread}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00116}00116\ \textcolor{comment}{//\#ifdef\ MULTITHREAD}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00117}00117\ \ \ \ \ Processor-\/>\mbox{\hyperlink{classMCMCProcessor_ace48a54fb08e2a3943d4e2ed1f8c4a4b}{CacheSteps}}();}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00118}00118\ \ \ \ \ \textcolor{comment}{//KS:\ Since\ we\ cached\ let's\ make\ fancy\ violins\ :)}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00119}00119\ \ \ \ \ \textcolor{keywordflow}{if}(GetFromManager<bool>(Settings[\textcolor{stringliteral}{"{}MakeViolin"{}}],\ \textcolor{keyword}{true}))\ Processor-\/>\mbox{\hyperlink{classMCMCProcessor_a04976c69f0ef0b3f39edcf5f25f90981}{MakeViolin}}();}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00120}00120\ \ \ \ \ Processor-\/>\mbox{\hyperlink{classMCMCProcessor_ab367cb5f56606338bb1fce780f2414e8}{MakeCovariance\_MP}}();}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00121}00121\ \textcolor{comment}{//\#else}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00122}00122\ \ \ \ \ \textcolor{comment}{//Processor-\/>MakeCovariance();}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00123}00123\ \textcolor{comment}{//\#endif}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00124}00124\ \ \ \ \ Processor-\/>\mbox{\hyperlink{classMCMCProcessor_a8d9b9c1c780a51b130fe528583dc5019}{DrawCovariance}}();}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00125}00125\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00126}00126\ \ \ \ \ \textcolor{keyword}{auto}\ \textcolor{keyword}{const}\ \&MakeSubOptimality\ =\ Settings[\textcolor{stringliteral}{"{}MakeSubOptimality"{}}];}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00127}00127\ \ \ \ \ \textcolor{keywordflow}{if}(MakeSubOptimality[0].as<bool>())\ Processor-\/>\mbox{\hyperlink{classMCMCProcessor_afac304b884238cc3624f5471b43f1a7e}{MakeSubOptimality}}(MakeSubOptimality[1].as<int>());}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00128}00128\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00129}00129\ \ \ \ \ \textcolor{keywordflow}{if}(GetFromManager<bool>(Settings[\textcolor{stringliteral}{"{}MakeCredibleRegions"{}}],\ \textcolor{keyword}{false}))\ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00130}00130\ \ \ \ \ \ \ Processor-\/>\mbox{\hyperlink{classMCMCProcessor_a304adbe4407166ec42d76329c4bd17ff}{MakeCredibleRegions}}(\mbox{\hyperlink{YamlHelper_8h_a1a6adcb8b24bfbdcb936ced6812e1b0c}{GetFromManager}}<std::vector<double>>(Settings[\textcolor{stringliteral}{"{}CredibleRegions"{}}],\ \{0.99,\ 0.90,\ 0.68\}),}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{YamlHelper_8h_a1a6adcb8b24bfbdcb936ced6812e1b0c}{GetFromManager}}<std::vector<short\ int>>(Settings[\textcolor{stringliteral}{"{}CredibleRegionStyle"{}}],\ \{2,\ 1,\ 3\}),}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{YamlHelper_8h_a1a6adcb8b24bfbdcb936ced6812e1b0c}{GetFromManager}}<std::vector<short\ int>>(Settings[\textcolor{stringliteral}{"{}CredibleRegionColor"{}}],\ \{413,\ 406,\ 416\}),}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GetFromManager<bool>(Settings[\textcolor{stringliteral}{"{}CredibleInSigmas"{}}],\ \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00135}00135\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00136}00136\ \ \ \ \ \textcolor{keywordflow}{if}(GetFromManager<bool>(Settings[\textcolor{stringliteral}{"{}GetTrianglePlot"{}}],\ \textcolor{keyword}{true}))\ \mbox{\hyperlink{ProcessMCMC_8cpp_a02c2311b736096adc8525876c0ec1487}{GetTrianglePlot}}(Processor);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00137}00137\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00138}00138\ \ \ \ \ \textcolor{comment}{//KS:\ When\ creating\ covariance\ matrix\ longest\ time\ is\ spend\ on\ caching\ every\ step,\ since\ we\ already\ cached\ we\ can\ run\ some\ fancy\ covariance\ stability\ diagnostic}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00139}00139\ \ \ \ \ \textcolor{keywordflow}{if}(GetFromManager<bool>(Settings[\textcolor{stringliteral}{"{}DiagnoseCovarianceMatrix"{}}],\ \textcolor{keyword}{false}))\ \mbox{\hyperlink{ProcessMCMC_8cpp_a08adc262bf03d1cb8df996b39404572c}{DiagnoseCovarianceMatrix}}(Processor,\ inputFile);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00140}00140\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00141}00141\ \ \ \textcolor{keywordflow}{if}(GetFromManager<bool>(Settings[\textcolor{stringliteral}{"{}ReweightPrior"{}}],\ \textcolor{keyword}{false}))\ \mbox{\hyperlink{ProcessMCMC_8cpp_abbd13994de9f24524b06b19aa901d73f}{ReweightPrior}}(Processor);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00142}00142\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00143}00143\ \ \ \textcolor{keyword}{delete}\ Processor;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00144}00144\ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00145}00145\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00146}\mbox{\hyperlink{ProcessMCMC_8cpp_a83be70750a728e4deae518ea3ffaf388}{00146}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ProcessMCMC_8cpp_a83be70750a728e4deae518ea3ffaf388}{MultipleProcessMCMC}}()}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00147}00147\ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00148}00148\ \ \ YAML::Node\ card\_yaml\ =\ YAML::LoadFile(\mbox{\hyperlink{ProcessMCMC_8cpp_a13056efd080ab16304b6f7be0ebf0a61}{config}}.c\_str());}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00149}00149\ \ \ YAML::Node\ Settings\ =\ card\_yaml[\textcolor{stringliteral}{"{}ProcessMCMC"{}}];}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00150}00150\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00151}00151\ \ \ \textcolor{keyword}{const}\ Color\_t\ PosteriorColor[]\ =\ \{kBlue-\/1,\ kRed,\ kGreen+2\};}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00152}00152\ \ \ \textcolor{comment}{//const\ Style\_t\ PosteriorStyle[]\ =\ \{kSolid,\ kDashed,\ kDotted\};}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00153}00153\ \ \ \mbox{\hyperlink{ProcessMCMC_8cpp_a6b25bcddaae9b868109dc98a54476e46}{nFiles}}\ =\ int(\mbox{\hyperlink{ProcessMCMC_8cpp_a8e90c1478f4be185364988cac765a163}{FileNames}}.size());}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00154}00154\ \ \ \mbox{\hyperlink{classMCMCProcessor}{MCMCProcessor}}**\ Processor;\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00155}00155\ \ \ Processor\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classMCMCProcessor}{MCMCProcessor}}*[\mbox{\hyperlink{ProcessMCMC_8cpp_a6b25bcddaae9b868109dc98a54476e46}{nFiles}}];}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00156}00156\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ ik\ =\ 0;\ ik\ <\ \mbox{\hyperlink{ProcessMCMC_8cpp_a6b25bcddaae9b868109dc98a54476e46}{nFiles}};\ \ ik++)}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00157}00157\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00158}00158\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}File\ for\ study:\ \{\}"{}},\ \mbox{\hyperlink{ProcessMCMC_8cpp_a8e90c1478f4be185364988cac765a163}{FileNames}}[ik]);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00159}00159\ \ \ \ \ \textcolor{comment}{//\ Make\ the\ processor}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00160}00160\ \ \ \ \ Processor[ik]\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classMCMCProcessor}{MCMCProcessor}}(\mbox{\hyperlink{ProcessMCMC_8cpp_a8e90c1478f4be185364988cac765a163}{FileNames}}[ik]);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00161}00161\ \ \ \ \ Processor[ik]-\/>\mbox{\hyperlink{classMCMCProcessor_a2f4bf14c95b830c457a73be5399403ad}{SetOutputSuffix}}((\textcolor{stringliteral}{"{}\_"{}}\ +\ std::to\_string(ik)).c\_str());}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00162}00162\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00163}00163\ \ \ \ \ Processor[ik]-\/>\mbox{\hyperlink{classMCMCProcessor_a4364a8ab084906c8925c9db9dc110485}{SetExcludedTypes}}(\mbox{\hyperlink{YamlHelper_8h_a1a6adcb8b24bfbdcb936ced6812e1b0c}{GetFromManager}}<std::vector<std::string>>(Settings[\textcolor{stringliteral}{"{}ExcludedTypes"{}}],\ \{\textcolor{stringliteral}{"{}"{}}\}));}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00164}00164\ \ \ \ \ Processor[ik]-\/>\mbox{\hyperlink{classMCMCProcessor_a09a6fa6cefcb20c00bee22c1dc5718c5}{SetExcludedNames}}(\mbox{\hyperlink{YamlHelper_8h_a1a6adcb8b24bfbdcb936ced6812e1b0c}{GetFromManager}}<std::vector<std::string>>(Settings[\textcolor{stringliteral}{"{}ExcludedNames"{}}],\ \{\textcolor{stringliteral}{"{}"{}}\}));}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00165}00165\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00166}00166\ \ \ \ \ \textcolor{comment}{//Apply\ additional\ cuts\ to\ 1D\ posterior}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00167}00167\ \ \ \ \ Processor[ik]-\/>\mbox{\hyperlink{classMCMCProcessor_a641da7f5e018d48d480638fbad6406a4}{SetPosterior1DCut}}(GetFromManager<std::string>(Settings[\textcolor{stringliteral}{"{}Posterior1DCut"{}}],\ \textcolor{stringliteral}{"{}"{}}));}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00168}00168\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00169}00169\ \ \ \ \ Processor[ik]-\/>\mbox{\hyperlink{classMCMCProcessor_a6ea549289949ac19d2fc768d82c8f1c9}{SetPlotRelativeToPrior}}(GetFromManager<bool>(Settings[\textcolor{stringliteral}{"{}PlotRelativeToPrior"{}}],\ \textcolor{keyword}{false}));}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00170}00170\ \ \ \ \ Processor[ik]-\/>\mbox{\hyperlink{classMCMCProcessor_a7f61cf0a51670f24f16dd7d77b7f5ae4}{SetFancyNames}}(GetFromManager<bool>(Settings[\textcolor{stringliteral}{"{}FancyNames"{}}],\ \textcolor{keyword}{true}));}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00171}00171\ \ \ \ \ Processor[ik]-\/>\mbox{\hyperlink{classMCMCProcessor_a224995a0b47bd9cbd04e099cc3ca634c}{Initialise}}();}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00172}00172\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00173}00173\ \ \ \textcolor{comment}{//KS:\ Multithreading\ here\ is\ very\ tempting\ but\ there\ are\ some\ issues\ with\ root\ that\ need\ to\ be\ resovled\ :(}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00174}00174\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ ik\ =\ 0;\ ik\ <\ \mbox{\hyperlink{ProcessMCMC_8cpp_a6b25bcddaae9b868109dc98a54476e46}{nFiles}};\ \ ik++)}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00175}00175\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00176}00176\ \ \ \ \ \textcolor{comment}{//\ Make\ the\ postfit}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00177}00177\ \ \ \ \ Processor[ik]-\/>\mbox{\hyperlink{classMCMCProcessor_a8667510132aa01395520f028287f511b}{MakePostfit}}();}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00178}00178\ \ \ \ \ Processor[ik]-\/>\mbox{\hyperlink{classMCMCProcessor_ab420de77e598da4b02ba74cdc20f2ea9}{DrawPostfit}}();}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00179}00179\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00180}00180\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00181}00181\ \ \ \textcolor{comment}{//\ Open\ a\ TCanvas\ to\ write\ the\ posterior\ onto}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00182}00182\ \ \ TCanvas*\ Posterior\ =\ \textcolor{keyword}{new}\ TCanvas(\textcolor{stringliteral}{"{}PosteriorMulti"{}},\ \textcolor{stringliteral}{"{}PosteriorMulti"{}},\ 0,\ 0,\ 1024,\ 1024);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00183}00183\ \ \ gStyle-\/>SetOptStat(0);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00184}00184\ \ \ gStyle-\/>SetOptTitle(0);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00185}00185\ \ \ Posterior-\/>SetGrid();}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00186}00186\ \ \ Posterior-\/>SetBottomMargin(0.1f);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00187}00187\ \ \ Posterior-\/>SetTopMargin(0.05f);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00188}00188\ \ \ Posterior-\/>SetRightMargin(0.03f);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00189}00189\ \ \ Posterior-\/>SetLeftMargin(0.10f);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00190}00190\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00191}00191\ \ \ \mbox{\hyperlink{ProcessMCMC_8cpp_a8e90c1478f4be185364988cac765a163}{FileNames}}[0]\ =\ \mbox{\hyperlink{ProcessMCMC_8cpp_a8e90c1478f4be185364988cac765a163}{FileNames}}[0].substr(0,\ \mbox{\hyperlink{ProcessMCMC_8cpp_a8e90c1478f4be185364988cac765a163}{FileNames}}[0].find(\textcolor{stringliteral}{"{}.root"{}})-\/1);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00192}00192\ \ \ TString\ canvasname\ =\ \mbox{\hyperlink{ProcessMCMC_8cpp_a8e90c1478f4be185364988cac765a163}{FileNames}}[0];}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00193}00193\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ ik\ =\ 1;\ ik\ <\ \mbox{\hyperlink{ProcessMCMC_8cpp_a6b25bcddaae9b868109dc98a54476e46}{nFiles}};\ \ ik++)}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00194}00194\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00195}00195\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{ProcessMCMC_8cpp_a8e90c1478f4be185364988cac765a163}{FileNames}}[ik].find(\textcolor{stringliteral}{"{}/"{}})\ !=\ std::string::npos)}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00196}00196\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00197}00197\ \ \ \ \ \ \ \mbox{\hyperlink{ProcessMCMC_8cpp_a8e90c1478f4be185364988cac765a163}{FileNames}}[ik]\ =\ \mbox{\hyperlink{ProcessMCMC_8cpp_a8e90c1478f4be185364988cac765a163}{FileNames}}[ik].substr(\mbox{\hyperlink{ProcessMCMC_8cpp_a8e90c1478f4be185364988cac765a163}{FileNames}}[ik].find(\textcolor{stringliteral}{"{}/"{}})+1,\ \mbox{\hyperlink{ProcessMCMC_8cpp_a8e90c1478f4be185364988cac765a163}{FileNames}}[ik].find(\textcolor{stringliteral}{"{}.root"{}})-\/1);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00198}00198\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00199}00199\ \ \ \ \ canvasname\ =\ canvasname\ +\ \textcolor{stringliteral}{"{}\_"{}}+\mbox{\hyperlink{ProcessMCMC_8cpp_a8e90c1478f4be185364988cac765a163}{FileNames}}[ik];}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00200}00200\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00201}00201\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00202}00202\ \ \ canvasname\ =\ canvasname\ +\textcolor{stringliteral}{"{}.pdf["{}};}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00203}00203\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00204}00204\ \ \ Posterior-\/>Print(canvasname);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00205}00205\ \ \ \textcolor{comment}{//\ Once\ the\ pdf\ file\ is\ open\ no\ longer\ need\ to\ bracket}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00206}00206\ \ \ canvasname.ReplaceAll(\textcolor{stringliteral}{"{}["{}},\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00207}00207\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00208}00208\ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ Processor[0]-\/>\mbox{\hyperlink{classMCMCProcessor_adbde2f115d983b233d0a9ea896187586}{GetNParams}}();\ ++i)\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00209}00209\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00210}00210\ \ \ \ \ \textcolor{comment}{//\ This\ holds\ the\ posterior\ density}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00211}00211\ \ \ \ \ TH1D\ **hpost\ =\ \textcolor{keyword}{new}\ TH1D*[\mbox{\hyperlink{ProcessMCMC_8cpp_a6b25bcddaae9b868109dc98a54476e46}{nFiles}}];}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00212}00212\ \ \ \ \ TLine\ **hpd\ =\ \textcolor{keyword}{new}\ TLine*[\mbox{\hyperlink{ProcessMCMC_8cpp_a6b25bcddaae9b868109dc98a54476e46}{nFiles}}];}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00213}00213\ \ \ \ \ hpost[0]\ =\ \textcolor{keyword}{static\_cast<}TH1D\ *\textcolor{keyword}{>}(Processor[0]-\/>\mbox{\hyperlink{classMCMCProcessor_a70f5590946414af43c3b6c3a5cd315de}{GetHpost}}(i)-\/>Clone());}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00214}00214\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00215}00215\ \ \ \ \ \textcolor{keywordtype}{bool}\ Skip\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00216}00216\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ ik\ =\ 1\ ;\ ik\ <\ \mbox{\hyperlink{ProcessMCMC_8cpp_a6b25bcddaae9b868109dc98a54476e46}{nFiles}};\ \ ik++)}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00217}00217\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00218}00218\ \ \ \ \ \ \ \textcolor{comment}{//\ KS:\ If\ somehow\ this\ chain\ doesn't\ given\ params\ we\ skip\ it}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00219}00219\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ Index\ =\ Processor[ik]-\/>\mbox{\hyperlink{classMCMCProcessor_a5ab91183fbbf23fff759fefc9954a1a5}{GetParamIndexFromName}}(hpost[0]-\/>GetTitle());}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00220}00220\ \ \ \ \ \ \ \textcolor{keywordflow}{if}(Index\ ==\ \mbox{\hyperlink{MCMCProcessor_8h_a82a6d79039474bc403b627437a7b97ec}{\_UNDEF\_}})}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00221}00221\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00222}00222\ \ \ \ \ \ \ \ \ Skip\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00223}00223\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00224}00224\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00225}00225\ \ \ \ \ \ \ hpost[ik]\ =\ \textcolor{keyword}{static\_cast<}TH1D\ *\textcolor{keyword}{>}(Processor[ik]-\/>\mbox{\hyperlink{classMCMCProcessor_a70f5590946414af43c3b6c3a5cd315de}{GetHpost}}(Index)-\/>Clone());}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00226}00226\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00227}00227\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00228}00228\ \ \ \ \ \textcolor{comment}{//\ Don't\ plot\ if\ this\ is\ a\ fixed\ histogram\ (i.e.\ the\ peak\ is\ the\ whole\ integral)}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00229}00229\ \ \ \ \ \textcolor{keywordflow}{if}(hpost[0]-\/>GetMaximum()\ ==\ hpost[0]-\/>Integral()*1.5\ ||\ Skip)}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00230}00230\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00231}00231\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ ik\ =\ 0;\ ik\ <\ \mbox{\hyperlink{ProcessMCMC_8cpp_a6b25bcddaae9b868109dc98a54476e46}{nFiles}};\ \ ik++)}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00232}00232\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ hpost[ik];}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00233}00233\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00234}00234\ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ hpost;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00235}00235\ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ hpd;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00236}00236\ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00237}00237\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00238}00238\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ ik\ =\ 0;\ ik\ <\ \mbox{\hyperlink{ProcessMCMC_8cpp_a6b25bcddaae9b868109dc98a54476e46}{nFiles}};\ \ ik++)}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00239}00239\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00240}00240\ \ \ \ \ \ \ \mbox{\hyperlink{Structs_8cpp_a85463c0c6943e3d544d5fcb3f96bf18a}{RemoveFitter}}(hpost[ik],\ \textcolor{stringliteral}{"{}Gauss"{}});}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00241}00241\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00242}00242\ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ some\ nice\ colours}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00243}00243\ \ \ \ \ \ \ hpost[ik]-\/>SetLineColor(PosteriorColor[ik]);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00244}00244\ \ \ \ \ \ \ \textcolor{comment}{//hpost[ik]-\/>SetLineStyle(PosteriorStyle[ik]);}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00245}00245\ \ \ \ \ \ \ hpost[ik]-\/>SetLineWidth(2);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00246}00246\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00247}00247\ \ \ \ \ \ \ \textcolor{comment}{//\ Area\ normalise\ the\ distributions}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00248}00248\ \ \ \ \ \ \ hpost[ik]-\/>Scale(1./hpost[ik]-\/>Integral(),\ \textcolor{stringliteral}{"{}width"{}});}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00249}00249\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00250}00250\ \ \ \ \ TString\ Title;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00251}00251\ \ \ \ \ \textcolor{keywordtype}{double}\ Prior\ =\ 1.0;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00252}00252\ \ \ \ \ \textcolor{keywordtype}{double}\ PriorError\ =\ 1.0;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00253}00253\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00254}00254\ \ \ \ \ Processor[0]-\/>\mbox{\hyperlink{classMCMCProcessor_a28dfe42f1bf6fd3a145287be1e63fb0b}{GetNthParameter}}(i,\ Prior,\ PriorError,\ Title);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00255}00255\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00256}00256\ \ \ \ \ \textcolor{comment}{//\ Now\ make\ the\ TLine\ for\ the\ Asimov}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00257}00257\ \ \ \ \ TLine\ *Asimov\ =\ \textcolor{keyword}{new}\ TLine(Prior,\ \ hpost[0]-\/>GetMinimum(),\ Prior,\ \ hpost[0]-\/>GetMaximum());}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00258}00258\ \ \ \ \ Asimov-\/>SetLineColor(kRed-\/3);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00259}00259\ \ \ \ \ Asimov-\/>SetLineWidth(2);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00260}00260\ \ \ \ \ Asimov-\/>SetLineStyle(kDashed);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00261}00261\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00262}00262\ \ \ \ \ \textcolor{comment}{//\ Make\ a\ nice\ little\ TLegend}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00263}00263\ \ \ \ \ TLegend\ *leg\ =\ \textcolor{keyword}{new}\ TLegend(0.12,\ 0.7,\ 0.6,\ 0.97);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00264}00264\ \ \ \ \ leg-\/>SetTextSize(0.03f);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00265}00265\ \ \ \ \ leg-\/>SetFillColor(0);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00266}00266\ \ \ \ \ leg-\/>SetFillStyle(0);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00267}00267\ \ \ \ \ leg-\/>SetLineColor(0);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00268}00268\ \ \ \ \ leg-\/>SetLineStyle(0);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00269}00269\ \ \ \ \ TString\ asimovLeg\ =\ Form(\textcolor{stringliteral}{"{}\#splitline\{Prior\}\{x\ =\ \%.2f\ ,\ \#sigma\ =\ \%.2f\}"{}},\ Prior,\ PriorError);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00270}00270\ \ \ \ \ leg-\/>AddEntry(Asimov,\ asimovLeg,\ \textcolor{stringliteral}{"{}l"{}});}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00271}00271\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00272}00272\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ ik\ =\ 0;\ ik\ <\ \mbox{\hyperlink{ProcessMCMC_8cpp_a6b25bcddaae9b868109dc98a54476e46}{nFiles}};\ \ ik++)}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00273}00273\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00274}00274\ \ \ \ \ \ \ TString\ rebinLeg\ =\ Form(\textcolor{stringliteral}{"{}\#splitline\{\%s\}\{\#mu\ =\ \%.2f,\ \#sigma\ =\ \%.2f\}"{}},\ \mbox{\hyperlink{ProcessMCMC_8cpp_a2bff863f66d44b865ce21762802730c8}{TitleNames}}[ik].c\_str(),\ hpost[ik]-\/>GetMean(),\ hpost[ik]-\/>GetRMS());}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00275}00275\ \ \ \ \ \ \ leg-\/>AddEntry(hpost[ik],\ \ rebinLeg,\ \textcolor{stringliteral}{"{}l"{}});}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00276}00276\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00277}00277\ \ \ \ \ \ \ hpd[ik]\ =\ \textcolor{keyword}{new}\ TLine(hpost[ik]-\/>GetBinCenter(hpost[ik]-\/>GetMaximumBin()),\ hpost[ik]-\/>GetMinimum(),\ hpost[ik]-\/>GetBinCenter(hpost[ik]-\/>GetMaximumBin()),\ hpost[ik]-\/>GetMaximum());}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00278}00278\ \ \ \ \ \ \ hpd[ik]-\/>SetLineColor(hpost[ik]-\/>GetLineColor());}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00279}00279\ \ \ \ \ \ \ hpd[ik]-\/>SetLineWidth(2);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00280}00280\ \ \ \ \ \ \ hpd[ik]-\/>SetLineStyle(kSolid);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00281}00281\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00282}00282\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00283}00283\ \ \ \ \ \textcolor{comment}{//\ Find\ the\ maximum\ value\ to\ nicely\ resize\ hist}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00284}00284\ \ \ \ \ \textcolor{keywordtype}{double}\ maximum\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00285}00285\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ ik\ =\ 0;\ ik\ <\ \mbox{\hyperlink{ProcessMCMC_8cpp_a6b25bcddaae9b868109dc98a54476e46}{nFiles}};\ \ ik++)\ maximum\ =\ std::max(maximum,\ hpost[ik]-\/>GetMaximum());}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00286}00286\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ ik\ =\ 0;\ ik\ <\ \mbox{\hyperlink{ProcessMCMC_8cpp_a6b25bcddaae9b868109dc98a54476e46}{nFiles}};\ \ ik++)\ hpost[ik]-\/>SetMaximum(1.3*maximum);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00287}00287\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00288}00288\ \ \ \ \ hpost[0]-\/>Draw(\textcolor{stringliteral}{"{}hist"{}});}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00289}00289\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ ik\ =\ 1;\ ik\ <\ \mbox{\hyperlink{ProcessMCMC_8cpp_a6b25bcddaae9b868109dc98a54476e46}{nFiles}};\ \ ik++)\ hpost[ik]-\/>Draw(\textcolor{stringliteral}{"{}hist\ same"{}});}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00290}00290\ \ \ \ \ Asimov-\/>Draw(\textcolor{stringliteral}{"{}same"{}});}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00291}00291\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ ik\ =\ 0;\ ik\ <\ \mbox{\hyperlink{ProcessMCMC_8cpp_a6b25bcddaae9b868109dc98a54476e46}{nFiles}};\ \ ik++)\ hpd[ik]-\/>Draw(\textcolor{stringliteral}{"{}same"{}});}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00292}00292\ \ \ \ \ leg-\/>Draw(\textcolor{stringliteral}{"{}same"{}});}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00293}00293\ \ \ \ \ Posterior-\/>cd();}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00294}00294\ \ \ \ \ Posterior-\/>Print(canvasname);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00295}00295\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00296}00296\ \ \ \ \ \textcolor{keyword}{delete}\ Asimov;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00297}00297\ \ \ \ \ \textcolor{keyword}{delete}\ leg;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00298}00298\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ ik\ =\ 0;\ ik\ <\ \mbox{\hyperlink{ProcessMCMC_8cpp_a6b25bcddaae9b868109dc98a54476e46}{nFiles}};\ \ ik++)}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00299}00299\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00300}00300\ \ \ \ \ \ \ \textcolor{keyword}{delete}\ hpost[ik];}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00301}00301\ \ \ \ \ \ \ \textcolor{keyword}{delete}\ hpd[ik];}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00302}00302\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00303}00303\ \ \ \ \ \textcolor{keyword}{delete}[]\ hpost;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00304}00304\ \ \ \ \ \textcolor{keyword}{delete}[]\ hpd;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00305}00305\ \ \ \}\textcolor{comment}{//End\ loop\ over\ parameters}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00306}00306\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00307}00307\ \ \ \textcolor{comment}{//\ Finally\ draw\ the\ parameter\ plot\ onto\ the\ PDF}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00308}00308\ \ \ \textcolor{comment}{//\ Close\ the\ .pdf\ file\ with\ all\ the\ posteriors}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00309}00309\ \ \ Posterior-\/>cd();}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00310}00310\ \ \ Posterior-\/>Clear();}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00311}00311\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00312}00312\ \ \ \textcolor{keywordflow}{if}(GetFromManager<bool>(Settings[\textcolor{stringliteral}{"{}PerformKStest"{}}],\ \textcolor{keyword}{true}))\ \mbox{\hyperlink{ProcessMCMC_8cpp_aece705f01f7c21ad0d0f5f9f64af6d0d}{KolmogorovSmirnovTest}}(Processor,\ Posterior,\ canvasname);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00313}00313\ \ \ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00314}00314\ \ \ \textcolor{comment}{//\ Close\ the\ pdf\ file}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00315}00315\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Closing\ pdf\ \{\}"{}},\ canvasname);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00316}00316\ \ \ canvasname+=\textcolor{stringliteral}{"{}]"{}};}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00317}00317\ \ \ Posterior-\/>Print(canvasname);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00318}00318\ \ \ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00319}00319\ \ \ \textcolor{keyword}{delete}\ Posterior;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00320}00320\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ ik\ =\ 0;\ ik\ <\ \mbox{\hyperlink{ProcessMCMC_8cpp_a6b25bcddaae9b868109dc98a54476e46}{nFiles}};\ \ ik++)\ \textcolor{keyword}{delete}\ Processor[ik];}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00321}00321\ \ \ \textcolor{keyword}{delete}[]\ Processor;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00322}00322\ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00323}00323\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00324}00324\ \textcolor{comment}{//\ KS:\ Calculate\ Bayes\ factor\ for\ a\ given\ hypothesis,\ most\ informative\ are\ those\ related\ to\ osc\ params.\ However,\ it\ make\ relative\ easy\ interpretation\ for\ switch\ dials}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00325}\mbox{\hyperlink{ProcessMCMC_8cpp_ac5381031738b5fa6481d7ac33d2ad854}{00325}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ProcessMCMC_8cpp_ac5381031738b5fa6481d7ac33d2ad854}{CalcBayesFactor}}(\mbox{\hyperlink{classMCMCProcessor}{MCMCProcessor}}*\ Processor)}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00326}00326\ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00327}00327\ \ \ YAML::Node\ card\_yaml\ =\ YAML::LoadFile(\mbox{\hyperlink{ProcessMCMC_8cpp_a13056efd080ab16304b6f7be0ebf0a61}{config}}.c\_str());}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00328}00328\ \ \ YAML::Node\ Settings\ =\ card\_yaml[\textcolor{stringliteral}{"{}ProcessMCMC"{}}];}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00329}00329\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00330}00330\ \ \ std::vector<std::string>\ ParNames;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00331}00331\ \ \ std::vector<std::vector<double>>\ Model1Bounds;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00332}00332\ \ \ std::vector<std::vector<double>>\ Model2Bounds;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00333}00333\ \ \ std::vector<std::vector<std::string>>\ ModelNames;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00334}00334\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ dg\ :\ Settings[\textcolor{stringliteral}{"{}BayesFactor"{}}])}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00335}00335\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00336}00336\ \ \ \ \ ParNames.push\_back(dg[0].as<std::string>());}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00337}00337\ \ \ \ \ ModelNames.push\_back(dg[1].as<std::vector<std::string>>());}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00338}00338\ \ \ \ \ Model1Bounds.push\_back(dg[2].as<std::vector<double>>());}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00339}00339\ \ \ \ \ Model2Bounds.push\_back(dg[3].as<std::vector<double>>());}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00340}00340\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00341}00341\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00342}00342\ \ \ Processor-\/>\mbox{\hyperlink{classMCMCProcessor_a1fc5adc3c109227e6ead71eb0746ec4d}{GetBayesFactor}}(ParNames,\ Model1Bounds,\ Model2Bounds,\ ModelNames);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00343}00343\ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00344}00344\ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00345}00345\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00346}\mbox{\hyperlink{ProcessMCMC_8cpp_af772f7bdfdba080075141597e9c99f79}{00346}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ProcessMCMC_8cpp_af772f7bdfdba080075141597e9c99f79}{CalcSavageDickey}}(\mbox{\hyperlink{classMCMCProcessor}{MCMCProcessor}}*\ Processor)}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00347}00347\ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00348}00348\ \ \ YAML::Node\ card\_yaml\ =\ YAML::LoadFile(\mbox{\hyperlink{ProcessMCMC_8cpp_a13056efd080ab16304b6f7be0ebf0a61}{config}}.c\_str());}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00349}00349\ \ \ YAML::Node\ Settings\ =\ card\_yaml[\textcolor{stringliteral}{"{}ProcessMCMC"{}}];}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00350}00350\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00351}00351\ \ \ std::vector<std::string>\ ParNames;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00352}00352\ \ \ std::vector<double>\ EvaluationPoint;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00353}00353\ \ \ std::vector<std::vector<double>>\ Bounds;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00354}00354\ \ \ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00355}00355\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ d\ :\ Settings[\textcolor{stringliteral}{"{}SavageDickey"{}}])}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00356}00356\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00357}00357\ \ \ \ \ ParNames.push\_back(d[0].as<std::string>());}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00358}00358\ \ \ \ \ EvaluationPoint.push\_back(d[1].as<double>());}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00359}00359\ \ \ \ \ Bounds.push\_back(d[2].as<std::vector<double>>());}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00360}00360\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00361}00361\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00362}00362\ \ \ Processor-\/>\mbox{\hyperlink{classMCMCProcessor_ad09b1ad60fa52fdd87450ab8834e9cd9}{GetSavageDickey}}(ParNames,\ EvaluationPoint,\ Bounds);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00363}00363\ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00364}00364\ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00365}00365\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00366}\mbox{\hyperlink{ProcessMCMC_8cpp_a32bb8e776bea9a8b778cfece3200932c}{00366}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ProcessMCMC_8cpp_a32bb8e776bea9a8b778cfece3200932c}{CalcParameterEvolution}}(\mbox{\hyperlink{classMCMCProcessor}{MCMCProcessor}}*\ Processor)}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00367}00367\ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00368}00368\ \ \ YAML::Node\ card\_yaml\ =\ YAML::LoadFile(\mbox{\hyperlink{ProcessMCMC_8cpp_a13056efd080ab16304b6f7be0ebf0a61}{config}}.c\_str());}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00369}00369\ \ \ YAML::Node\ Settings\ =\ card\_yaml[\textcolor{stringliteral}{"{}ProcessMCMC"{}}];}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00370}00370\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00371}00371\ \ \ std::vector<std::string>\ ParNames;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00372}00372\ \ \ std::vector<int>\ Intervals;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00373}00373\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00374}00374\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ d\ :\ Settings[\textcolor{stringliteral}{"{}ParameterEvolution"{}}])}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00375}00375\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00376}00376\ \ \ \ \ ParNames.push\_back(d[0].as<std::string>());}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00377}00377\ \ \ \ \ Intervals.push\_back(d[1].as<int>());}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00378}00378\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00379}00379\ \ \ Processor-\/>\mbox{\hyperlink{classMCMCProcessor_ac9a5fc93b5ac3f6ef7850d21f47fd5dd}{ParameterEvolution}}(ParNames,\ Intervals);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00380}00380\ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00381}00381\ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00382}00382\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00383}\mbox{\hyperlink{ProcessMCMC_8cpp_a2d9c3cc52d1f5c3cc3e0775ae596e9c7}{00383}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ProcessMCMC_8cpp_a2d9c3cc52d1f5c3cc3e0775ae596e9c7}{CalcBipolarPlot}}(\mbox{\hyperlink{classMCMCProcessor}{MCMCProcessor}}*\ Processor)}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00384}00384\ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00385}00385\ \ \ YAML::Node\ card\_yaml\ =\ YAML::LoadFile(\mbox{\hyperlink{ProcessMCMC_8cpp_a13056efd080ab16304b6f7be0ebf0a61}{config}}.c\_str());}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00386}00386\ \ \ YAML::Node\ Settings\ =\ card\_yaml[\textcolor{stringliteral}{"{}ProcessMCMC"{}}];}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00387}00387\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00388}00388\ \ \ std::vector<std::string>\ ParNames;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00389}00389\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00390}00390\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ d\ :\ Settings[\textcolor{stringliteral}{"{}BipolarPlot"{}}])}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00391}00391\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00392}00392\ \ \ \ \ ParNames.push\_back(d[0].as<std::string>());}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00393}00393\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00394}00394\ \ \ Processor-\/>\mbox{\hyperlink{classMCMCProcessor_ac358c3ffe7c060e8872c762259973c6b}{GetPolarPlot}}(ParNames);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00395}00395\ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00396}00396\ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00397}00397\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00398}00398\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00399}\mbox{\hyperlink{ProcessMCMC_8cpp_a02c2311b736096adc8525876c0ec1487}{00399}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ProcessMCMC_8cpp_a02c2311b736096adc8525876c0ec1487}{GetTrianglePlot}}(\mbox{\hyperlink{classMCMCProcessor}{MCMCProcessor}}*\ Processor)\ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00400}00400\ \ \ YAML::Node\ card\_yaml\ =\ YAML::LoadFile(\mbox{\hyperlink{ProcessMCMC_8cpp_a13056efd080ab16304b6f7be0ebf0a61}{config}}.c\_str());}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00401}00401\ \ \ YAML::Node\ Settings\ =\ card\_yaml[\textcolor{stringliteral}{"{}ProcessMCMC"{}}];}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00402}00402\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00403}00403\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ dg\ :\ Settings[\textcolor{stringliteral}{"{}TrianglePlot"{}}])}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00404}00404\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00405}00405\ \ \ \ \ std::string\ ParName\ =\ dg[0].as<std::string>();}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00406}00406\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00407}00407\ \ \ \ \ std::vector<std::string>\ NameVec\ =\ dg[1].as<std::vector<std::string>>();}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00408}00408\ \ \ \ \ Processor-\/>\mbox{\hyperlink{classMCMCProcessor_a3ae80722efa0c94eec066ee91f3cf997}{MakeTrianglePlot}}(NameVec,}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00409}00409\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{YamlHelper_8h_a1a6adcb8b24bfbdcb936ced6812e1b0c}{GetFromManager}}<std::vector<double>>(Settings[\textcolor{stringliteral}{"{}CredibleIntervals"{}}],\ \{0.99,\ 0.90,\ 0.68\}),}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00410}00410\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{YamlHelper_8h_a1a6adcb8b24bfbdcb936ced6812e1b0c}{GetFromManager}}<std::vector<short\ int>>(Settings[\textcolor{stringliteral}{"{}CredibleIntervalsColours"{}}],\ \{436,\ 430,\ 422\}),}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00411}00411\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{YamlHelper_8h_a1a6adcb8b24bfbdcb936ced6812e1b0c}{GetFromManager}}<std::vector<double>>(Settings[\textcolor{stringliteral}{"{}CredibleRegions"{}}],\ \{0.99,\ 0.90,\ 0.68\}),}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00412}00412\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{YamlHelper_8h_a1a6adcb8b24bfbdcb936ced6812e1b0c}{GetFromManager}}<std::vector<short\ int>>(Settings[\textcolor{stringliteral}{"{}CredibleRegionStyle"{}}],\ \{2,\ 1,\ 3\}),}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00413}00413\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{YamlHelper_8h_a1a6adcb8b24bfbdcb936ced6812e1b0c}{GetFromManager}}<std::vector<short\ int>>(Settings[\textcolor{stringliteral}{"{}CredibleRegionColor"{}}],\ \{413,\ 406,\ 416\}),}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00414}00414\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GetFromManager<bool>(Settings[\textcolor{stringliteral}{"{}CredibleInSigmas"{}}],\ \textcolor{keyword}{false}));}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00415}00415\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00416}00416\ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00417}00417\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00419}\mbox{\hyperlink{ProcessMCMC_8cpp_a08adc262bf03d1cb8df996b39404572c}{00419}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ProcessMCMC_8cpp_a08adc262bf03d1cb8df996b39404572c}{DiagnoseCovarianceMatrix}}(\mbox{\hyperlink{classMCMCProcessor}{MCMCProcessor}}*\ Processor,\ \textcolor{keyword}{const}\ std::string\&\ inputFile)}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00420}00420\ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00421}00421\ \ \ \textcolor{comment}{//Turn\ of\ plots\ from\ Processor}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00422}00422\ \ \ Processor-\/>\mbox{\hyperlink{classMCMCProcessor_a9db87211d9f066011daed18af7f4631e}{SetPrintToPDF}}(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00423}00423\ \ \ \textcolor{comment}{//\ Open\ a\ TCanvas\ to\ write\ the\ posterior\ onto}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00424}00424\ \ \ TCanvas*\ Canvas\ =\ \textcolor{keyword}{new}\ TCanvas(\textcolor{stringliteral}{"{}Canvas"{}},\ \textcolor{stringliteral}{"{}Canvas"{}},\ 0,\ 0,\ 1024,\ 1024);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00425}00425\ \ \ Canvas-\/>SetGrid();}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00426}00426\ \ \ gStyle-\/>SetOptStat(0);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00427}00427\ \ \ gStyle-\/>SetOptTitle(0);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00428}00428\ \ \ Canvas-\/>SetTickx();}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00429}00429\ \ \ Canvas-\/>SetTicky();}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00430}00430\ \ \ Canvas-\/>SetBottomMargin(0.1f);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00431}00431\ \ \ Canvas-\/>SetTopMargin(0.05f);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00432}00432\ \ \ Canvas-\/>SetRightMargin(0.15f);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00433}00433\ \ \ Canvas-\/>SetLeftMargin(0.10f);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00434}00434\ \ \ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00435}00435\ \ \ \textcolor{comment}{//KS:\ Fancy\ colours}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00436}00436\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ NRGBs\ =\ 10;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00437}00437\ \ \ TColor::InitializeColors();}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00438}00438\ \ \ Double\_t\ stops[NRGBs]\ =\ \{\ 0.00,\ 0.10,\ 0.25,\ 0.35,\ 0.50,\ 0.60,\ 0.65,\ 0.75,\ 0.90,\ 1.00\ \};}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00439}00439\ \ \ Double\_t\ red[NRGBs]\ \ \ =\ \{\ 0.50,\ 1.00,\ 1.00,\ 0.25,\ 0.00,\ 0.10,\ 0.50,\ 1.00,\ 0.75,\ 0.55\ \};}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00440}00440\ \ \ Double\_t\ green[NRGBs]\ =\ \{\ 0.00,\ 0.25,\ 1.00,\ 0.25,\ 0.00,\ 0.60,\ 0.90,\ 1.00,\ 0.75,\ 0.75\ \};}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00441}00441\ \ \ Double\_t\ blue[NRGBs]\ \ =\ \{\ 0.00,\ 0.25,\ 1.00,\ 1.00,\ 0.50,\ 0.60,\ 0.90,\ 1.00,\ 0.05,\ 0.05\ \};}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00442}00442\ \ \ TColor::CreateGradientColorTable(NRGBs,\ stops,\ red,\ green,\ blue,\ 255);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00443}00443\ \ \ gStyle-\/>SetNumberContours(255);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00444}00444\ \ \ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00445}00445\ \ \ std::string\ OutName\ =\ inputFile;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00446}00446\ \ \ OutName\ =\ OutName.substr(0,\ OutName.find(\textcolor{stringliteral}{"{}.root"{}}));}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00447}00447\ \ \ Canvas-\/>Print(Form(\textcolor{stringliteral}{"{}Correlation\_\%s.pdf["{}},\ OutName.c\_str()),\ \textcolor{stringliteral}{"{}pdf"{}});}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00448}00448\ \ \ Canvas-\/>Print(Form(\textcolor{stringliteral}{"{}Covariance\_\%s.pdf["{}},\ OutName.c\_str()),\ \textcolor{stringliteral}{"{}pdf"{}});}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00449}00449\ \ \ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00450}00450\ \ \ YAML::Node\ card\_yaml\ =\ YAML::LoadFile(\mbox{\hyperlink{ProcessMCMC_8cpp_a13056efd080ab16304b6f7be0ebf0a61}{config}}.c\_str());}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00451}00451\ \ \ YAML::Node\ Settings\ =\ card\_yaml[\textcolor{stringliteral}{"{}ProcessMCMC"{}}];}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00452}00452\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00453}00453\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ entries\ =\ int(Processor-\/>\mbox{\hyperlink{classMCMCProcessor_aa2ebe9262f7f28778d92148164a54d4b}{GetnSteps}}());}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00454}00454\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ NIntervals\ =\ GetFromManager<int>(Settings[\textcolor{stringliteral}{"{}NIntervals"{}}],\ 5);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00455}00455\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ IntervalsSize\ =\ entries/NIntervals;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00456}00456\ \ \ \textcolor{comment}{//We\ start\ with\ burn\ from\ 0\ (no\ burn\ in\ at\ all)}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00457}00457\ \ \ \textcolor{keywordtype}{int}\ BurnIn\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00458}00458\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Diagnosing\ matrices\ with\ entries=\{\},\ NIntervals=\{\}\ and\ IntervalsSize=\{\}"{}},\ entries,\ NIntervals,\ IntervalsSize);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00459}00459\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00460}00460\ \ \ TMatrixDSym\ *Covariance\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00461}00461\ \ \ TMatrixDSym\ *Correlation\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00462}00462\ \ \ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00463}00463\ \ \ TH2D\ *CovariancePreviousHist\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00464}00464\ \ \ TH2D\ *CorrelationPreviousHist\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00465}00465\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00466}00466\ \ \ TH2D\ *CovarianceHist\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00467}00467\ \ \ TH2D\ *CorrelationHist\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00468}00468\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00469}00469\ \ \ \textcolor{comment}{//KS:\ Get\ first\ covariances,\ we\ need\ two\ for\ comparison...}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00470}00470\ \ \ Processor-\/>\mbox{\hyperlink{classMCMCProcessor_ad610d8e835031872b428e759ef4045f1}{SetStepCut}}(BurnIn);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00471}00471\ \ \ Processor-\/>\mbox{\hyperlink{classMCMCProcessor_ac9e4fdea5d2de92a1abad5b79b7daf88}{GetCovariance}}(Covariance,\ Correlation);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00472}00472\ \ \ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00473}00473\ \ \ CovariancePreviousHist\ =\ \mbox{\hyperlink{ProcessMCMC_8cpp_a2052da75bc58457dc290c8cbd06efe30}{TMatrixIntoTH2D}}(Covariance,\ \textcolor{stringliteral}{"{}Covariance"{}});\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00474}00474\ \ \ CorrelationPreviousHist\ =\ \mbox{\hyperlink{ProcessMCMC_8cpp_a2052da75bc58457dc290c8cbd06efe30}{TMatrixIntoTH2D}}(Correlation,\ \textcolor{stringliteral}{"{}Correlation"{}});}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00475}00475\ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00476}00476\ \ \ \textcolor{keyword}{delete}\ Covariance;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00477}00477\ \ \ Covariance\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00478}00478\ \ \ \textcolor{keyword}{delete}\ Correlation;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00479}00479\ \ \ Correlation\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00480}00480\ \ \ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00481}00481\ \ \ \textcolor{comment}{//KS:\ Loop\ over\ all\ desired\ cuts}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00482}00482\ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ k\ =\ 1;\ k\ <\ NIntervals;\ ++k)}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00483}00483\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00484}00484\ \ \ \ \ BurnIn\ =\ k*IntervalsSize;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00485}00485\ \ \ \ \ Processor-\/>\mbox{\hyperlink{classMCMCProcessor_ad610d8e835031872b428e759ef4045f1}{SetStepCut}}(BurnIn);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00486}00486\ \ \ \ \ Processor-\/>\mbox{\hyperlink{classMCMCProcessor_ac9e4fdea5d2de92a1abad5b79b7daf88}{GetCovariance}}(Covariance,\ Correlation);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00487}00487\ \ \ \ \ Processor-\/>\mbox{\hyperlink{classMCMCProcessor_a36441ec3d5b0e24e48040282ffcda3eb}{ResetHistograms}}();}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00488}00488\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00489}00489\ \ \ \ \ CovarianceHist\ =\ \mbox{\hyperlink{ProcessMCMC_8cpp_a2052da75bc58457dc290c8cbd06efe30}{TMatrixIntoTH2D}}(Covariance,\ \textcolor{stringliteral}{"{}Covariance"{}});\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00490}00490\ \ \ \ \ CorrelationHist\ =\ \mbox{\hyperlink{ProcessMCMC_8cpp_a2052da75bc58457dc290c8cbd06efe30}{TMatrixIntoTH2D}}(Correlation,\ \textcolor{stringliteral}{"{}Correlation"{}});}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00491}00491\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00492}00492\ \ \ \ \ TH2D\ *CovarianceDiff\ =\ \textcolor{keyword}{static\_cast<}TH2D*\textcolor{keyword}{>}(CovarianceHist-\/>Clone(\textcolor{stringliteral}{"{}Covariance\_Ratio"{}}));}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00493}00493\ \ \ \ \ TH2D\ *CorrelationDiff\ =\ \textcolor{keyword}{static\_cast<}TH2D*\textcolor{keyword}{>}(CorrelationHist-\/>Clone(\textcolor{stringliteral}{"{}Correlation\_Ratio"{}}));}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00494}00494\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00495}00495\ \ \ \ \ \textcolor{comment}{//KS:\ Bit\ messy\ but\ quite\ often\ covariance\ is\ 0\ is\ divided\ by\ 0\ is\ problematic\ so}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00496}00496\ \textcolor{preprocessor}{\ \ \ \ \#ifdef\ MULTITHREAD}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00497}00497\ \textcolor{preprocessor}{\ \ \ \ \#pragma\ omp\ parallel\ for}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00498}00498\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00499}00499\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 1;\ j\ <\ CovarianceDiff-\/>GetXaxis()-\/>GetNbins()+1;\ ++j)}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00500}00500\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00501}00501\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <\ CovarianceDiff-\/>GetYaxis()-\/>GetNbins()+1;\ ++i)}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00502}00502\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00503}00503\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\ std::fabs\ (CovarianceDiff-\/>GetBinContent(j,\ i))\ <\ 1.e-\/5\ \&\&\ std::fabs\ (CovariancePreviousHist-\/>GetBinContent(j,\ i))\ <\ 1.e-\/5)}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00504}00504\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00505}00505\ \ \ \ \ \ \ \ \ \ \ CovarianceDiff-\/>SetBinContent(j,\ i,\ \mbox{\hyperlink{MCMCProcessor_8h_a82a6d79039474bc403b627437a7b97ec}{\_UNDEF\_}});}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00506}00506\ \ \ \ \ \ \ \ \ \ \ CovariancePreviousHist-\/>SetBinContent(j,\ i,\ \mbox{\hyperlink{MCMCProcessor_8h_a82a6d79039474bc403b627437a7b97ec}{\_UNDEF\_}});}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00507}00507\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00508}00508\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\ std::fabs\ (CorrelationDiff-\/>GetBinContent(j,\ i))\ <\ 1.e-\/5\ \&\&\ std::fabs\ (CorrelationPreviousHist-\/>GetBinContent(j,\ i))\ <\ 1.e-\/5)}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00509}00509\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00510}00510\ \ \ \ \ \ \ \ \ \ \ CorrelationDiff-\/>SetBinContent(j,\ i,\ \mbox{\hyperlink{MCMCProcessor_8h_a82a6d79039474bc403b627437a7b97ec}{\_UNDEF\_}});}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00511}00511\ \ \ \ \ \ \ \ \ \ \ CorrelationPreviousHist-\/>SetBinContent(j,\ i,\ \mbox{\hyperlink{MCMCProcessor_8h_a82a6d79039474bc403b627437a7b97ec}{\_UNDEF\_}});}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00512}00512\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00513}00513\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00514}00514\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00515}00515\ \ \ \ \ \textcolor{comment}{//Divide\ matrices}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00516}00516\ \ \ \ \ CovarianceDiff-\/>Divide(CovariancePreviousHist);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00517}00517\ \ \ \ \ CorrelationDiff-\/>Divide(CorrelationPreviousHist);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00518}00518\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00519}00519\ \ \ \ \ \textcolor{comment}{//Now\ it\ is\ time\ for\ fancy\ names\ etc.}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00520}00520\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ CovarianceDiff-\/>GetXaxis()-\/>GetNbins();\ ++j)}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00521}00521\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00522}00522\ \ \ \ \ \ \ TString\ Title\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00523}00523\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ Prior\ =\ 1.0;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00524}00524\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ PriorError\ =\ 1.0;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00525}00525\ \ \ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00526}00526\ \ \ \ \ \ \ Processor-\/>\mbox{\hyperlink{classMCMCProcessor_a28dfe42f1bf6fd3a145287be1e63fb0b}{GetNthParameter}}(j,\ Prior,\ PriorError,\ Title);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00527}00527\ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00528}00528\ \ \ \ \ \ \ CovarianceDiff-\/>GetXaxis()-\/>SetBinLabel(j+1,\ Title);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00529}00529\ \ \ \ \ \ \ CovarianceDiff-\/>GetYaxis()-\/>SetBinLabel(j+1,\ Title);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00530}00530\ \ \ \ \ \ \ CorrelationDiff-\/>GetXaxis()-\/>SetBinLabel(j+1,\ Title);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00531}00531\ \ \ \ \ \ \ CorrelationDiff-\/>GetYaxis()-\/>SetBinLabel(j+1,\ Title);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00532}00532\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00533}00533\ \ \ \ \ CovarianceDiff-\/>GetXaxis()-\/>SetLabelSize(0.015f);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00534}00534\ \ \ \ \ CovarianceDiff-\/>GetYaxis()-\/>SetLabelSize(0.015f);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00535}00535\ \ \ \ \ CorrelationDiff-\/>GetXaxis()-\/>SetLabelSize(0.015f);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00536}00536\ \ \ \ \ CorrelationDiff-\/>GetYaxis()-\/>SetLabelSize(0.015f);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00537}00537\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00538}00538\ \ \ \ \ std::stringstream\ ss;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00539}00539\ \ \ \ \ ss\ <<\ \textcolor{stringliteral}{"{}BCut\_"{}};}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00540}00540\ \ \ \ \ ss\ <<\ BurnIn;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00541}00541\ \ \ \ \ ss\ <<\ \textcolor{stringliteral}{"{}/"{}};}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00542}00542\ \ \ \ \ ss\ <<\ \textcolor{stringliteral}{"{}BCut\_"{}};}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00543}00543\ \ \ \ \ ss\ <<\ (k-\/1)*IntervalsSize;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00544}00544\ \ \ \ \ std::string\ str\ =\ ss.str();}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00545}00545\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00546}00546\ \ \ \ \ TString\ Title\ =\ \textcolor{stringliteral}{"{}Cov\ "{}}\ +\ str;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00547}00547\ \ \ \ \ CovarianceDiff-\/>GetZaxis()-\/>SetTitle(\ Title\ );}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00548}00548\ \ \ \ \ Title\ =\ \textcolor{stringliteral}{"{}Corr\ "{}}\ +\ str;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00549}00549\ \ \ \ \ CorrelationDiff-\/>GetZaxis()-\/>SetTitle(Title);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00550}00550\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00551}00551\ \ \ \ \ CovarianceDiff-\/>SetMinimum(-\/2);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00552}00552\ \ \ \ \ CovarianceDiff-\/>SetMaximum(2);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00553}00553\ \ \ \ \ CorrelationDiff-\/>SetMinimum(-\/2);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00554}00554\ \ \ \ \ CorrelationDiff-\/>SetMaximum(2);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00555}00555\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00556}00556\ \ \ \ \ Canvas-\/>cd();}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00557}00557\ \ \ \ \ CovarianceDiff-\/>Draw(\textcolor{stringliteral}{"{}colz"{}});}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00558}00558\ \ \ \ \ Canvas-\/>Print(Form(\textcolor{stringliteral}{"{}Covariance\_\%s.pdf"{}},\ OutName.c\_str()),\ \textcolor{stringliteral}{"{}pdf"{}});}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00559}00559\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00560}00560\ \ \ \ \ CorrelationDiff-\/>Draw(\textcolor{stringliteral}{"{}colz"{}});}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00561}00561\ \ \ \ \ Canvas-\/>Print(Form(\textcolor{stringliteral}{"{}Correlation\_\%s.pdf"{}},\ OutName.c\_str()),\ \textcolor{stringliteral}{"{}pdf"{}});}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00562}00562\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00563}00563\ \ \ \ \ \textcolor{comment}{//KS:\ Current\ hist\ become\ previous\ as\ we\ need\ it\ for\ further\ comparison}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00564}00564\ \ \ \ \ \textcolor{keyword}{delete}\ CovariancePreviousHist;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00565}00565\ \ \ \ \ CovariancePreviousHist\ =\ \textcolor{keyword}{static\_cast<}TH2D*\textcolor{keyword}{>}(CovarianceHist-\/>Clone());}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00566}00566\ \ \ \ \ \textcolor{keyword}{delete}\ CorrelationPreviousHist;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00567}00567\ \ \ \ \ CorrelationPreviousHist\ =\ \textcolor{keyword}{static\_cast<}TH2D*\textcolor{keyword}{>}(CorrelationHist-\/>Clone());}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00568}00568\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00569}00569\ \ \ \ \ \textcolor{keyword}{delete}\ CovarianceHist;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00570}00570\ \ \ \ \ CovarianceHist\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00571}00571\ \ \ \ \ \textcolor{keyword}{delete}\ CorrelationHist;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00572}00572\ \ \ \ \ CorrelationHist\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00573}00573\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00574}00574\ \ \ \ \ \textcolor{keyword}{delete}\ CovarianceDiff;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00575}00575\ \ \ \ \ \textcolor{keyword}{delete}\ CorrelationDiff;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00576}00576\ \ \ \ \ \textcolor{keyword}{delete}\ Covariance;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00577}00577\ \ \ \ \ Covariance\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00578}00578\ \ \ \ \ \textcolor{keyword}{delete}\ Correlation;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00579}00579\ \ \ \ \ Correlation\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00580}00580\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00581}00581\ \ \ Canvas-\/>cd();}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00582}00582\ \ \ Canvas-\/>Print(Form(\textcolor{stringliteral}{"{}Covariance\_\%s.pdf]"{}},\ OutName.c\_str()),\ \textcolor{stringliteral}{"{}pdf"{}});}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00583}00583\ \ \ Canvas-\/>Print(Form(\textcolor{stringliteral}{"{}Correlation\_\%s.pdf]"{}},\ OutName.c\_str()),\ \textcolor{stringliteral}{"{}pdf"{}});}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00584}00584\ \ \ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00585}00585\ \ \ Processor-\/>\mbox{\hyperlink{classMCMCProcessor_a9db87211d9f066011daed18af7f4631e}{SetPrintToPDF}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00586}00586\ \ \ \textcolor{keywordflow}{if}(Covariance\ !=\ \textcolor{keyword}{nullptr})\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ Covariance;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00587}00587\ \ \ \textcolor{keywordflow}{if}(Correlation\ !=\ \textcolor{keyword}{nullptr})\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ Correlation;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00588}00588\ \ \ \textcolor{keywordflow}{if}(CovariancePreviousHist\ !=\ \textcolor{keyword}{nullptr})\ \ \textcolor{keyword}{delete}\ CovariancePreviousHist;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00589}00589\ \ \ \textcolor{keywordflow}{if}(CorrelationPreviousHist\ !=\ \textcolor{keyword}{nullptr})\ \textcolor{keyword}{delete}\ CorrelationPreviousHist;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00590}00590\ \ \ \textcolor{keywordflow}{if}(CovarianceHist\ !=\ \textcolor{keyword}{nullptr})\ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ CovarianceHist;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00591}00591\ \ \ \textcolor{keywordflow}{if}(CorrelationHist\ !=\ \textcolor{keyword}{nullptr})\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ CorrelationHist;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00592}00592\ \ \ \textcolor{keyword}{delete}\ Canvas;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00593}00593\ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00594}00594\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00595}\mbox{\hyperlink{ProcessMCMC_8cpp_abbd13994de9f24524b06b19aa901d73f}{00595}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ProcessMCMC_8cpp_abbd13994de9f24524b06b19aa901d73f}{ReweightPrior}}(\mbox{\hyperlink{classMCMCProcessor}{MCMCProcessor}}*\ Processor)}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00596}00596\ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00597}00597\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00598}00598\ \ \ YAML::Node\ card\_yaml\ =\ YAML::LoadFile(\mbox{\hyperlink{ProcessMCMC_8cpp_a13056efd080ab16304b6f7be0ebf0a61}{config}}.c\_str());}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00599}00599\ \ \ YAML::Node\ Settings\ =\ card\_yaml[\textcolor{stringliteral}{"{}ProcessMCMC"{}}];}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00600}00600\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00601}00601\ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ Prior\ =\ Settings[\textcolor{stringliteral}{"{}PriorReweighting"{}}];}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00602}00602\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00603}00603\ \ \ std::vector<std::string>\ Names\ =\ Prior[0].as<std::vector<std::string>>();}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00604}00604\ \ \ std::vector<double>\ NewCentral\ =\ Prior[1].as<std::vector<double>>();}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00605}00605\ \ \ std::vector<double>\ NewError\ =\ Prior[2].as<std::vector<double>>();}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00606}00606\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00607}00607\ \ \ Processor-\/>\mbox{\hyperlink{classMCMCProcessor_ad3b1cfab21c7063bc29d1cf5dcca888c}{ReweightPrior}}(Names,\ NewCentral,\ NewError);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00608}00608\ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00609}00609\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00610}00610\ \textcolor{comment}{//KS:\ Convert\ TMatrix\ to\ TH2D,\ mostly\ useful\ for\ making\ fancy\ plots}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00611}\mbox{\hyperlink{ProcessMCMC_8cpp_a2052da75bc58457dc290c8cbd06efe30}{00611}}\ TH2D*\ \mbox{\hyperlink{ProcessMCMC_8cpp_a2052da75bc58457dc290c8cbd06efe30}{TMatrixIntoTH2D}}(TMatrixDSym*\ Matrix,\ \textcolor{keyword}{const}\ std::string\&\ title)}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00612}00612\ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00613}00613\ \ \ TH2D*\ hMatrix\ =\ \textcolor{keyword}{new}\ TH2D(title.c\_str(),\ title.c\_str(),\ Matrix-\/>GetNrows(),\ 0.0,\ Matrix-\/>GetNrows(),\ Matrix-\/>GetNcols(),\ 0.0,\ Matrix-\/>GetNcols());}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00614}00614\ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ Matrix-\/>GetNrows();\ i++)}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00615}00615\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00616}00616\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ Matrix-\/>GetNcols();\ j++)}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00617}00617\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00618}00618\ \ \ \ \ \ \ \textcolor{comment}{//KS:\ +1\ because\ there\ is\ offset\ in\ histogram\ relative\ to\ TMatrix}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00619}00619\ \ \ \ \ \ \ hMatrix-\/>SetBinContent(i+1,j+1,\ (*Matrix)(i,j));}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00620}00620\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00621}00621\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00622}00622\ \ \ \textcolor{keywordflow}{return}\ hMatrix;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00623}00623\ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00624}00624\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00625}00625\ \textcolor{comment}{//KS:\ Perform\ KS\ test\ to\ check\ if\ two\ posteriors\ for\ the\ same\ parameter\ came\ from\ the\ same\ distribution}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00626}\mbox{\hyperlink{ProcessMCMC_8cpp_aece705f01f7c21ad0d0f5f9f64af6d0d}{00626}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ProcessMCMC_8cpp_aece705f01f7c21ad0d0f5f9f64af6d0d}{KolmogorovSmirnovTest}}(\mbox{\hyperlink{classMCMCProcessor}{MCMCProcessor}}**\ Processor,\ TCanvas*\ Posterior,\ TString\ canvasname)}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00627}00627\ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00628}00628\ \ \ \textcolor{keyword}{const}\ Color\_t\ CumulativeColor[]\ =\ \{kBlue-\/1,\ kRed,\ kGreen+2\};}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00629}00629\ \ \ \textcolor{keyword}{const}\ Style\_t\ CumulativeStyle[]\ =\ \{kSolid,\ kDashed,\ kDotted\};}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00630}00630\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00631}00631\ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ Processor[0]-\/>\mbox{\hyperlink{classMCMCProcessor_adbde2f115d983b233d0a9ea896187586}{GetNParams}}();\ ++i)\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00632}00632\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00633}00633\ \ \ \ \ \textcolor{comment}{//\ This\ holds\ the\ posterior\ density}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00634}00634\ \ \ \ \ TH1D\ **hpost\ =\ \textcolor{keyword}{new}\ TH1D*[\mbox{\hyperlink{ProcessMCMC_8cpp_a6b25bcddaae9b868109dc98a54476e46}{nFiles}}];}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00635}00635\ \ \ \ \ TH1D\ **CumulativeDistribution\ =\ \textcolor{keyword}{new}\ TH1D*[\mbox{\hyperlink{ProcessMCMC_8cpp_a6b25bcddaae9b868109dc98a54476e46}{nFiles}}];}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00636}00636\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00637}00637\ \ \ \ \ TString\ Title;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00638}00638\ \ \ \ \ \textcolor{keywordtype}{double}\ Prior\ =\ 1.0;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00639}00639\ \ \ \ \ \textcolor{keywordtype}{double}\ PriorError\ =\ 1.0;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00640}00640\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00641}00641\ \ \ \ \ Processor[0]-\/>\mbox{\hyperlink{classMCMCProcessor_a28dfe42f1bf6fd3a145287be1e63fb0b}{GetNthParameter}}(i,\ Prior,\ PriorError,\ Title);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00642}00642\ \ \ \ \ \textcolor{keywordtype}{bool}\ Skip\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00643}00643\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ ik\ =\ 0\ ;\ ik\ <\ \mbox{\hyperlink{ProcessMCMC_8cpp_a6b25bcddaae9b868109dc98a54476e46}{nFiles}};\ \ ik++)}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00644}00644\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00645}00645\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ Index\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00646}00646\ \ \ \ \ \ \ \textcolor{keywordflow}{if}(ik\ ==\ 0\ )\ Index\ =\ i;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00647}00647\ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00648}00648\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00649}00649\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ KS:\ If\ somehow\ this\ chain\ doesn't\ given\ params\ we\ skip\ it}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00650}00650\ \ \ \ \ \ \ \ \ Index\ =\ Processor[ik]-\/>\mbox{\hyperlink{classMCMCProcessor_a5ab91183fbbf23fff759fefc9954a1a5}{GetParamIndexFromName}}(hpost[0]-\/>GetTitle());}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00651}00651\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(Index\ ==\ \mbox{\hyperlink{MCMCProcessor_8h_a82a6d79039474bc403b627437a7b97ec}{\_UNDEF\_}})}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00652}00652\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00653}00653\ \ \ \ \ \ \ \ \ \ \ Skip\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00654}00654\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00655}00655\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00656}00656\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00657}00657\ \ \ \ \ \ \ hpost[ik]\ =\ \textcolor{keyword}{static\_cast<}TH1D*\textcolor{keyword}{>}(Processor[ik]-\/>\mbox{\hyperlink{classMCMCProcessor_a70f5590946414af43c3b6c3a5cd315de}{GetHpost}}(Index)-\/>Clone());}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00658}00658\ \ \ \ \ \ \ CumulativeDistribution[ik]\ =\ \textcolor{keyword}{static\_cast<}TH1D*\textcolor{keyword}{>}(Processor[ik]-\/>\mbox{\hyperlink{classMCMCProcessor_a70f5590946414af43c3b6c3a5cd315de}{GetHpost}}(Index)-\/>Clone());}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00659}00659\ \ \ \ \ \ \ CumulativeDistribution[ik]-\/>Fill(0.,\ 0.);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00660}00660\ \ \ \ \ \ \ CumulativeDistribution[ik]-\/>Reset();}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00661}00661\ \ \ \ \ \ \ CumulativeDistribution[ik]-\/>SetMaximum(1.);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00662}00662\ \ \ \ \ \ \ TString\ TempTittle\ =\ Title+\textcolor{stringliteral}{"{}\ Kolmogorov\ Smirnov"{}};}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00663}00663\ \ \ \ \ \ \ CumulativeDistribution[ik]-\/>SetTitle(TempTittle);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00664}00664\ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00665}00665\ \ \ \ \ \ \ TempTittle\ =\ Title+\textcolor{stringliteral}{"{}\ Value"{}};}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00666}00666\ \ \ \ \ \ \ CumulativeDistribution[ik]-\/>GetXaxis()-\/>SetTitle(TempTittle);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00667}00667\ \ \ \ \ \ \ CumulativeDistribution[ik]-\/>GetYaxis()-\/>SetTitle(\textcolor{stringliteral}{"{}Cumulative\ Probability"{}});}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00668}00668\ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00669}00669\ \ \ \ \ \ \ CumulativeDistribution[ik]-\/>SetLineWidth(2);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00670}00670\ \ \ \ \ \ \ CumulativeDistribution[ik]-\/>SetLineColor(CumulativeColor[ik]);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00671}00671\ \ \ \ \ \ \ CumulativeDistribution[ik]-\/>SetLineStyle(CumulativeStyle[ik]);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00672}00672\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00673}00673\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00674}00674\ \ \ \ \ \textcolor{comment}{//\ Don't\ plot\ if\ this\ is\ a\ fixed\ histogram\ (i.e.\ the\ peak\ is\ the\ whole\ integral)}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00675}00675\ \ \ \ \ \textcolor{keywordflow}{if}(hpost[0]-\/>GetMaximum()\ ==\ hpost[0]-\/>Integral()*1.5\ ||\ Skip)}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00676}00676\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00677}00677\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ ik\ =\ 0;\ ik\ <\ \mbox{\hyperlink{ProcessMCMC_8cpp_a6b25bcddaae9b868109dc98a54476e46}{nFiles}};\ \ ik++)}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00678}00678\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00679}00679\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ hpost[ik];}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00680}00680\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ CumulativeDistribution[ik];}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00681}00681\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00682}00682\ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ hpost;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00683}00683\ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ CumulativeDistribution;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00684}00684\ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00685}00685\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00686}00686\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00687}00687\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ ik\ =\ 0\ ;\ ik\ <\ \mbox{\hyperlink{ProcessMCMC_8cpp_a6b25bcddaae9b868109dc98a54476e46}{nFiles}};\ \ ik++)}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00688}00688\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00689}00689\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ NumberOfBins\ =\ hpost[ik]-\/>GetXaxis()-\/>GetNbins();}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00690}00690\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ Cumulative\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00691}00691\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ Integral\ =\ hpost[ik]-\/>Integral();}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00692}00692\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 1;\ j\ <\ NumberOfBins+1;\ ++j)}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00693}00693\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00694}00694\ \ \ \ \ \ \ \ \ Cumulative\ +=\ hpost[ik]-\/>GetBinContent(j)/Integral;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00695}00695\ \ \ \ \ \ \ \ \ CumulativeDistribution[ik]-\/>SetBinContent(j,\ Cumulative);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00696}00696\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00697}00697\ \ \ \ \ \ \ \textcolor{comment}{//KS:\ Set\ overflow\ to\ 1\ just\ in\ case}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00698}00698\ \ \ \ \ \ \ CumulativeDistribution[ik]-\/>SetBinContent(NumberOfBins+1,\ 1.);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00699}00699\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00700}00700\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00701}00701\ \ \ \ \ \textcolor{keywordtype}{int}*\ TestStatBin\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[\mbox{\hyperlink{ProcessMCMC_8cpp_a6b25bcddaae9b868109dc98a54476e46}{nFiles}}];}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00702}00702\ \ \ \ \ \textcolor{keywordtype}{double}*\ TestStatD\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}[\mbox{\hyperlink{ProcessMCMC_8cpp_a6b25bcddaae9b868109dc98a54476e46}{nFiles}}];}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00703}00703\ \ \ \ \ TLine\ **LineD\ =\ \textcolor{keyword}{new}\ TLine*[\mbox{\hyperlink{ProcessMCMC_8cpp_a6b25bcddaae9b868109dc98a54476e46}{nFiles}}];}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00704}00704\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00705}00705\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ ik\ =\ 0\ ;\ ik\ <\ \mbox{\hyperlink{ProcessMCMC_8cpp_a6b25bcddaae9b868109dc98a54476e46}{nFiles}};\ \ ik++)\ \{\ TestStatBin[ik]\ =\ 0;\ TestStatD[ik]\ =\ -\/999;\}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00706}00706\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00707}00707\ \ \ \ \ \textcolor{comment}{//Find\ KS\ statistic}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00708}00708\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ ik\ =\ 1\ ;\ ik\ <\ \mbox{\hyperlink{ProcessMCMC_8cpp_a6b25bcddaae9b868109dc98a54476e46}{nFiles}};\ \ ik++)}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00709}00709\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00710}00710\ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ NumberOfBins\ =\ CumulativeDistribution[0]-\/>GetXaxis()-\/>GetNbins();}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00711}00711\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 1;\ j\ <\ NumberOfBins+1;\ ++j)}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00712}00712\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00713}00713\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ BinValue\ =\ CumulativeDistribution[0]-\/>GetBinCenter(j);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00714}00714\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ BinNumber\ =\ CumulativeDistribution[ik]-\/>FindBin(BinValue);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00715}00715\ \ \ \ \ \ \ \ \ \textcolor{comment}{//KS:\ Calculate\ D\ statistic\ for\ this\ bin,\ only\ save\ it\ if\ it's\ bigger\ than\ previously\ found\ value}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00716}00716\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ TempDstat\ =\ std::fabs(CumulativeDistribution[0]-\/>GetBinContent(j)\ -\/\ CumulativeDistribution[ik]-\/>GetBinContent(BinNumber));}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00717}00717\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(TempDstat\ >\ TestStatD[ik])}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00718}00718\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00719}00719\ \ \ \ \ \ \ \ \ \ \ TestStatD[ik]\ =\ TempDstat;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00720}00720\ \ \ \ \ \ \ \ \ \ \ TestStatBin[ik]\ =\ j;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00721}00721\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00722}00722\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00723}00723\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00724}00724\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00725}00725\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ ik\ =\ 0\ ;\ ik\ <\ \mbox{\hyperlink{ProcessMCMC_8cpp_a6b25bcddaae9b868109dc98a54476e46}{nFiles}};\ \ ik++)}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00726}00726\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00727}00727\ \ \ \ \ \ \ LineD[ik]\ =\ \ \textcolor{keyword}{new}\ TLine(CumulativeDistribution[0]-\/>GetBinCenter(TestStatBin[ik]),\ 0,\ CumulativeDistribution[0]-\/>GetBinCenter(TestStatBin[ik]),\ CumulativeDistribution[0]-\/>GetBinContent(TestStatBin[ik]));}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00728}00728\ \ \ \ \ \ \ LineD[ik]-\/>SetLineColor(CumulativeColor[ik]);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00729}00729\ \ \ \ \ \ \ LineD[ik]-\/>SetLineWidth(2.0);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00730}00730\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00731}00731\ \ \ \ \ CumulativeDistribution[0]-\/>Draw();}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00732}00732\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ ik\ =\ 0\ ;\ ik\ <\ \mbox{\hyperlink{ProcessMCMC_8cpp_a6b25bcddaae9b868109dc98a54476e46}{nFiles}};\ \ ik++)}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00733}00733\ \ \ \ \ \ \ CumulativeDistribution[ik]-\/>Draw(\textcolor{stringliteral}{"{}SAME"{}});}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00734}00734\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00735}00735\ \ \ \ \ TLegend\ *leg\ =\ \textcolor{keyword}{new}\ TLegend(0.15,\ 0.7,\ 0.5,\ 0.90);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00736}00736\ \ \ \ \ leg-\/>SetTextSize(0.04f);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00737}00737\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ ik\ =\ 0;\ ik\ <\ \mbox{\hyperlink{ProcessMCMC_8cpp_a6b25bcddaae9b868109dc98a54476e46}{nFiles}};\ \ ik++)}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00738}00738\ \ \ \ \ \ \ leg-\/>AddEntry(CumulativeDistribution[ik],\ \mbox{\hyperlink{ProcessMCMC_8cpp_a2bff863f66d44b865ce21762802730c8}{TitleNames}}[ik].c\_str(),\ \textcolor{stringliteral}{"{}l"{}});}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00739}00739\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ ik\ =\ 1;\ ik\ <\ \mbox{\hyperlink{ProcessMCMC_8cpp_a6b25bcddaae9b868109dc98a54476e46}{nFiles}};\ \ ik++)}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00740}00740\ \ \ \ \ \ \ leg-\/>AddEntry(LineD[ik],\ Form(\textcolor{stringliteral}{"{}\#Delta\ D\ =\ \%.4f"{}},\ TestStatD[ik]),\ \textcolor{stringliteral}{"{}l"{}});}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00741}00741\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00742}00742\ \ \ \ \ leg-\/>SetLineColor(0);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00743}00743\ \ \ \ \ leg-\/>SetLineStyle(0);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00744}00744\ \ \ \ \ leg-\/>SetFillColor(0);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00745}00745\ \ \ \ \ leg-\/>SetFillStyle(0);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00746}00746\ \ \ \ \ leg-\/>Draw(\textcolor{stringliteral}{"{}SAME"{}});}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00747}00747\ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00748}00748\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ ik\ =\ 1;\ ik\ <\ \mbox{\hyperlink{ProcessMCMC_8cpp_a6b25bcddaae9b868109dc98a54476e46}{nFiles}};\ \ ik++)}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00749}00749\ \ \ \ \ \ \ LineD[ik]-\/>Draw(\textcolor{stringliteral}{"{}sam"{}});}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00750}00750\ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00751}00751\ \ \ \ \ Posterior-\/>cd();}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00752}00752\ \ \ \ \ Posterior-\/>Print(canvasname);}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00753}00753\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00754}00754\ \ \ \ \ \textcolor{keyword}{delete}\ leg;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00755}00755\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ ik\ =\ 0;\ ik\ <\ \mbox{\hyperlink{ProcessMCMC_8cpp_a6b25bcddaae9b868109dc98a54476e46}{nFiles}};\ \ ik++)}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00756}00756\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00757}00757\ \ \ \ \ \ \ \textcolor{keyword}{delete}\ hpost[ik];}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00758}00758\ \ \ \ \ \ \ \textcolor{keyword}{delete}\ CumulativeDistribution[ik];}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00759}00759\ \ \ \ \ \ \ \textcolor{keyword}{delete}\ LineD[ik];}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00760}00760\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00761}00761\ \ \ \ \ \textcolor{keyword}{delete}[]\ hpost;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00762}00762\ \ \ \ \ \textcolor{keyword}{delete}[]\ CumulativeDistribution;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00763}00763\ \ \ \ \ \textcolor{keyword}{delete}[]\ LineD;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00764}00764\ \ \ \ \ \textcolor{keyword}{delete}[]\ TestStatBin;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00765}00765\ \ \ \ \ \textcolor{keyword}{delete}[]\ TestStatD;}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00766}00766\ \ \ \}\ \textcolor{comment}{//End\ loop\ over\ parameter}}
+\DoxyCodeLine{\Hypertarget{ProcessMCMC_8cpp_source_l00767}00767\ \}}
+
+\end{DoxyCode}

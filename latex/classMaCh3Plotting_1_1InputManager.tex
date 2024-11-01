@@ -1,0 +1,2360 @@
+\hypertarget{classMaCh3Plotting_1_1InputManager}{}\doxysection{Ma\+Ch3\+Plotting\+::Input\+Manager Class Reference}
+\label{classMaCh3Plotting_1_1InputManager}\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+
+
+This guy talks to the input files and is intended to smooth over the fact that our OA fitters use such a beautiful and diverse range of output file structures.  
+
+
+
+
+{\ttfamily \#include $<$/home/runner/work/\+Ma\+Ch3/\+Ma\+Ch3/plotting/plotting\+Utils/input\+Manager.\+h$>$}
+
+
+
+Collaboration diagram for Ma\+Ch3\+Plotting\+::Input\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classMaCh3Plotting_1_1InputManager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a3eb97a2004b798ff48b6e05f485c8a50}{Input\+Manager}} (const std\+::string \&translation\+Config\+Name)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager}{Input\+Manager}} using specified fitter translation config file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a8f78dd7607191728f0a52bc27ade9af3}{add\+File}} (const std\+::string \&file\+Name)
+\begin{DoxyCompactList}\small\item\em Add a new \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile}{Input\+File}} object to this input manager. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a911e73c70393339552e7b389f9f28a2f}{$\sim$\+Input\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a5ed13159682966a2dc95af0b62df01b1}{Input\+Manager}} (const \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager}{Input\+Manager}} \&)=delete
+\item 
+\mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_aadc2bb2799312b7799be07fee633d3df}{Input\+Manager}} (\mbox{\hyperlink{classMaCh3Plotting_1_1InputManager}{Input\+Manager}} \&\&)=default
+\item 
+void \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_af497dbf8556c361191c4f3c287ef12c7}{print}} (const std\+::string \&print\+Level=\char`\"{}summary\char`\"{}) const
+\begin{DoxyCompactList}\small\item\em Print out what this Inputmanager instance knows about. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a51314d45eb8b9eb288a520f17661b3a1}{get\+LLHScan}} (int file\+Num, std\+::string param\+Name, std\+::string LLHType) const
+\begin{DoxyCompactList}\small\item\em Get the log likelihood scan data for a particular parameter from a particular input file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a2d43d7f24dc43efec668d9118e0267e7}{get\+MCMCentry}} (int file\+Num, int entry) const
+\begin{DoxyCompactList}\small\item\em Get the MCMC chain entry in an \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile}{Input\+File}}. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_ac8e8538fd3ae525cb707f2ed1e869e8e}{get\+MCMCvalue}} (int file\+Num, std\+::string param\+Name) const
+\begin{DoxyCompactList}\small\item\em Get the parameter value for the current step for a particular parameter from a particular input file. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a8d057975eff09472e51740e57cbb148d}{get1d\+Posterior}} (int file\+Num, std\+::string param\+Name) const
+\begin{DoxyCompactList}\small\item\em Get the 1d posterior particular parameter from a particular input file. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a5e43751a549e93c5ff352ad9f189ba24}{getn\+MCMCentries}} (int file\+Num) const
+\begin{DoxyCompactList}\small\item\em Get the number of entries in the MCMC chain in a particular file. \end{DoxyCompactList}\item 
+TGraph \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_ae6702997870974753d89cccb9c2fb9d0}{get\+LLHScan\+\_\+\+TGraph}} (int file\+Num, std\+::string param\+Name, std\+::string LLHType) const
+\begin{DoxyCompactList}\small\item\em Get the log likelihood scan for a particular parameter from a particular input file. \end{DoxyCompactList}\item 
+TH1D \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a1317c9d6da9a840fa56e5d4df3da03cd}{get\+LLHScan\+\_\+\+TH1D}} (int file\+Num, std\+::string param\+Name, std\+::string LLHType) const
+\item 
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a28eb1f73f00a6bebfca0faca0fb2080c}{get\+Sample\+Specific\+LLHScan}} (int file\+Num, std\+::string param\+Name, std\+::string sample) const
+\begin{DoxyCompactList}\small\item\em Get the log likelihood scan for a particular parameter, for a specific sample, from a particular input file. \end{DoxyCompactList}\item 
+TGraph \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_aa7d0decfcf5eaa4ecd6bf389255e8682}{get\+Sample\+Specific\+LLHScan\+\_\+\+TGraph}} (int file\+Num, std\+::string param\+Name, std\+::string sample) const
+\item 
+TH1D \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a74b058c312200657f046c64347f6a304}{get\+Sample\+Specific\+LLHScan\+\_\+\+TH1D}} (int file\+Num, std\+::string param\+Name, std\+::string sample) const
+\item 
+bool \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a049bc81681a3f72487a3606d88cd23a8}{get\+Enabled\+LLH}} (int file\+Num, std\+::string param\+Name, std\+::string LLHType=\char`\"{}total\char`\"{}) const
+\begin{DoxyCompactList}\small\item\em Get whether or not a particular parameter has an LLH scan in a particular input file. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_ae2d12152db0ed06d1d862dad2cb4cc9e}{get\+Enabled\+LLHBy\+Sample}} (int file\+Num, std\+::string param\+Name, std\+::string sample) const
+\begin{DoxyCompactList}\small\item\em Get whether or not a particular parameter has an LLH scan in a particular input file for a particular sample. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_aeac58645b18dbc0784adc4b44ee0b33b}{get\+Enabled\+MCMCchain}} (int file\+Num, std\+::string param\+Name) const
+\begin{DoxyCompactList}\small\item\em Get whether or not a particular parameter has MCMC chain entries in a particular input file. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a7707e97f306066bd39660088d2d08c93}{get\+Enabled1d\+Posteriors}} (int file\+Num, std\+::string param\+Name) const
+\begin{DoxyCompactList}\small\item\em Get whether or not a particular parameter has 1d posteriors in a particular input file. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a034d2d777197242c95d92cd2b286249b}{get\+Post\+Fit\+Error}} (int file\+Num, const std\+::string \&param\+Name, std\+::string error\+Type=\char`\"{}\char`\"{}) const
+\begin{DoxyCompactList}\small\item\em Get the post fit error for a particular parameter from a particular input file. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_ac2ea3f272dc8492be331f1cd1ae21b2a}{get\+Post\+Fit\+Value}} (int file\+Num, const std\+::string \&param\+Name, std\+::string error\+Type=\char`\"{}\char`\"{}) const
+\begin{DoxyCompactList}\small\item\em Get the post fit value for a particular parameter from a particular input file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ General Getters}\par
+\begin{DoxyCompactItemize}
+\item 
+const std\+::vector$<$ std\+::string $>$ \& \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_aa7dff0cd24826afdb02ef8e8d9e6fe87}{get\+Known\+Parameters}} () const
+\item 
+const std\+::vector$<$ std\+::string $>$ \& \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a694c12c1ee25a4e9343769e7f74942bd}{get\+Known\+Samples}} () const
+\item 
+size\+\_\+t \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_ae330e86f77b9be82935d6a86fa7c96fa}{get\+NInput\+Files}} () const
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a375aba4aa8fc8b763756f8b45682a715}{get\+Tagged\+Parameters}} (const std\+::vector$<$ std\+::string $>$ \&tags, std\+::string check\+Type=\char`\"{}all\char`\"{}) const
+\begin{DoxyCompactList}\small\item\em Get all parameters which have some set of tags. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_ad9911c236e6afab25d056530ece5d54b}{get\+Tagged\+Samples}} (const std\+::vector$<$ std\+::string $>$ \&tags, std\+::string check\+Type=\char`\"{}all\char`\"{}) const
+\begin{DoxyCompactList}\small\item\em Get all samples which have some set of tags. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ File Specific Getters}\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structMaCh3Plotting_1_1InputFile}{Input\+File}} const \& \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a2f8f94ca3b6e0d2b34c75dee24b81e49}{get\+File}} (int file\+Id) const
+\item 
+std\+::string \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_ab4ecb1daf7b700137a15c3cad48cdaa4}{translate\+Name}} (int file\+Id, \mbox{\hyperlink{namespaceMaCh3Plotting_a4152b51a260d6a18f41b3a22aa2a6b75}{file\+Type\+Enum}} file\+Type, std\+::string param\+Name) const
+\item 
+const std\+::vector$<$ std\+::string $>$ \& \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a9de33b0ef3ed1bcc870c8ef1060a8f93}{get\+Known\+LLHParameters}} (int file\+Id) const
+\item 
+const std\+::vector$<$ std\+::string $>$ \& \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a05b45bf6d3504b3756f0717e3cbd9c9b}{get\+Known\+LLHSamples}} (int file\+Id) const
+\item 
+const std\+::vector$<$ std\+::string $>$ \& \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a2819e5a25838db9f90a46a4b4d6cfc7c}{get\+Known\+Post\+Fit\+Parameters}} (int file\+Id) const
+\item 
+const std\+::vector$<$ std\+::string $>$ \& \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a0b5b8db8805681ad02c7e87ee7e246aa}{get\+Known\+MCMCParameters}} (int file\+Id) const
+\item 
+const std\+::vector$<$ std\+::string $>$ \& \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a04e3077f2dbad6dd10a9e175275fecef}{get\+Known1d\+Posterior\+Parameters}} (int file\+Id) const
+\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::string \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a487b62643d1a5c63415685d662b7118d}{convert\+File\+Type\+Names}} (\mbox{\hyperlink{namespaceMaCh3Plotting_a4152b51a260d6a18f41b3a22aa2a6b75}{file\+Type\+Enum}} file\+Type)
+\begin{DoxyCompactList}\small\item\em Convert from file\+Type\+Enum to the name of the file type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::string \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a5f0ecb6c4e1aa097af43830b1c0ff56e}{NOT\+\_\+\+FOUND\+\_\+\+STR}}
+\begin{DoxyCompactList}\small\item\em the default string to return if something can\textquotesingle{}t be found \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a7d2679e29c99220b8e99bdaa0b642441}{get\+Tagged\+Values}} (const std\+::vector$<$ std\+::string $>$ \&values, const std\+::unordered\+\_\+map$<$ std\+::string, std\+::vector$<$ std\+::string $>$ $>$ \&tag\+Map, const std\+::vector$<$ std\+::string $>$ \&tags, std\+::string check\+Type) const
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a041b9611ce812326995c54f8c73c4867}{parse\+Location}} (const std\+::string \&location\+String, std\+::string \&fitter, \mbox{\hyperlink{namespaceMaCh3Plotting_a4152b51a260d6a18f41b3a22aa2a6b75}{file\+Type\+Enum}} file\+Type, const std\+::string \&parameter=\char`\"{}\char`\"{}, const std\+::string \&sample=\char`\"{}\char`\"{}, const std\+::string \&parameter2=\char`\"{}\char`\"{}) const
+\item 
+std\+::shared\+\_\+ptr$<$ TObject $>$ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a7e9f932d7591cbdd6c99c56c2da75f85}{find\+Root\+Object}} (const \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile}{Input\+File}} \&file\+Def, const std\+::vector$<$ std\+::string $>$ \&location\+Vec) const
+\item 
+bool \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_ab379210534dceaf26a6b3506fd47da27}{find\+Post\+Fit\+Param\+Error}} (\mbox{\hyperlink{structMaCh3Plotting_1_1InputFile}{Input\+File}} \&input\+File\+Def, const std\+::string \&parameter, std\+::string \&fitter, const std\+::string \&error\+Type, bool set\+Input\+File\+Error=false)
+\item 
+bool \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_ae0689fdfe514534e094f0e87fe69539f}{find\+By\+Sample\+LLH}} (\mbox{\hyperlink{structMaCh3Plotting_1_1InputFile}{Input\+File}} \&input\+File\+Def, const std\+::string \&parameter, std\+::string \&fitter, const std\+::string \&sample, bool set\+Input\+File\+Scan=false)
+\item 
+bool \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_ab547af49427a637364a6d58f484c6826}{find\+Raw\+Chain\+Steps}} (\mbox{\hyperlink{structMaCh3Plotting_1_1InputFile}{Input\+File}} \&input\+File\+Def, const std\+::string \&parameter, std\+::string \&fitter, bool set\+Input\+Branch=false) const
+\item 
+bool \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a479520c576d5f58f6db5c28133ad1714}{find1d\+Posterior}} (\mbox{\hyperlink{structMaCh3Plotting_1_1InputFile}{Input\+File}} \&input\+File\+Def, const std\+::string \&parameter, std\+::string \&fitter, bool set\+File\+Data=false) const
+\item 
+void \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_aad778d8694f9b581d09279584733f6ea}{fill\+File\+Info}} (\mbox{\hyperlink{structMaCh3Plotting_1_1InputFile}{Input\+File}} \&input\+File\+Def, bool print\+Thoughts=true)
+\item 
+void \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a33e56b65a7351722fb7790d77e14452f}{fill\+File\+Data}} (\mbox{\hyperlink{structMaCh3Plotting_1_1InputFile}{Input\+File}} \&input\+File\+Def, bool print\+Thoughts=true)
+\item 
+{\footnotesize template$<$typename T $>$ }\\bool \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a24fb21a5f30a5b397feec23d2e04c3d3}{get\+Fitter\+Specific\+Option}} (const std\+::string \&fitter, const std\+::string \&option, T \&ret, const std\+::string \&parameter, YAML\+::\+Node sub\+Config) const
+\item 
+{\footnotesize template$<$typename T $>$ }\\bool \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a942677ee3a65b1d4b48ce474dddaf3b1}{get\+Fitter\+Specific\+Param\+Option}} (const std\+::string \&fitter, const std\+::string \&option, T \&ret, const std\+::string \&parameter) const
+\item 
+{\footnotesize template$<$typename T $>$ }\\bool \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_aab2d9af2a6a61706074d0588a0d335e6}{get\+Fitter\+Specific\+Sample\+Option}} (const std\+::string \&fitter, std\+::string option, T \&ret, std\+::string parameter) const
+\item 
+std\+::string \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_aa3a91c2525f5aea76ba182b3be4b2b2a}{get\+Fitter\+Specific\+Param\+Name}} (const std\+::string \&fitter, \mbox{\hyperlink{namespaceMaCh3Plotting_a4152b51a260d6a18f41b3a22aa2a6b75}{file\+Type\+Enum}} file\+Type, const std\+::string \&parameter) const
+\item 
+std\+::string \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_abd7bd6137530d4ba7f8a64c2b6e5dfa6}{get\+Fitter\+Specific\+Sample\+Name}} (const std\+::string \&fitter, \mbox{\hyperlink{namespaceMaCh3Plotting_a4152b51a260d6a18f41b3a22aa2a6b75}{file\+Type\+Enum}} file\+Type, const std\+::string \&sample) const
+\item 
+bool \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a008c0e9535ebe6b0fa6f8e62737add3c}{str\+Ends\+With}} (std\+::string str, std\+::string ending) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a3915837631cc08351a34cb135b0bb351}{\+\_\+known\+Parameters}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_abafd844353d8fc69cf31ccf85b2bdcbe}{\+\_\+known\+Samples}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a836a1772cb3fdf2d6e38ee1b113bc4e8}{\+\_\+known\+Fitters}}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a0d66afafbba133fc3c1b4867957eb3db}{\+\_\+param\+To\+Tags\+Map}}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_ada0eddda54a072bdfc2464a9902cfe01}{\+\_\+sample\+To\+Tags\+Map}}
+\item 
+YAML\+::\+Node \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_ad2cec8b2758ffcb661db59f930e8010e}{\+\_\+translator\+Config}}
+\item 
+YAML\+::\+Node \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_ad2e204406fd336e7fcf00fafdff87703}{\+\_\+fitter\+Spec\+Config}}
+\item 
+YAML\+::\+Node \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_ad243d0438a33356e6bca0677c8b588e6}{\+\_\+parameters\+Config}}
+\item 
+YAML\+::\+Node \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a1eed58ec2fc42d44474c80b8f4e91e15}{\+\_\+samples\+Config}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile}{Input\+File}} $>$ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a29202faed03b0e9a22f2d34bce604793}{\+\_\+file\+Vec}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This guy talks to the input files and is intended to smooth over the fact that our OA fitters use such a beautiful and diverse range of output file structures. 
+
+Intended use for this class is to be called from inside of a \mbox{\hyperlink{classMaCh3Plotting_1_1PlottingManager}{Plotting\+Manager}} object which is what the user is intended to interact with, though in principle it should be strong and independent enough to be used all by itself. The interface to this object is intentionally pretty small as it is intended to deal with the complexities of the different input files pretty automatically. Usage should follow something like this\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a3eb97a2004b798ff48b6e05f485c8a50}{InputManager}}\ \mbox{\hyperlink{GetPostfitParamPlots_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}(translationConfig.yaml)\ \mbox{\hyperlink{GetPostfitParamPlots_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}.\mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a8f78dd7607191728f0a52bc27ade9af3}{addFile}}(filename1)}
+\DoxyCodeLine{\mbox{\hyperlink{GetPostfitParamPlots_8cpp_aa6f3c9a8cee8f72f6f8ce65b720a2d40}{man}}.\mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a8f78dd7607191728f0a52bc27ade9af3}{addFile}}(filename2)}
+\DoxyCodeLine{...}
+\DoxyCodeLine{}
+\DoxyCodeLine{then\ use\ various\ getter\ functions\ like\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a51314d45eb8b9eb288a520f17661b3a1}{getLLHScan}}()\ to\ access\ the\ data\ in\ the\ files\ to\ make}
+\DoxyCodeLine{plots.}
+
+\end{DoxyCode}
+ \begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000016}{Todo}}]A lot of string comparisons going on in the code for the post fit errors, would maybe be good to implement some kind of indexing for parameters and just have a map between the parameter names and this index to be used internally by the class. 
+
+Add code to read MCMC from input file 
+
+Add code to read Sigma variations. There are usually so many of these that we might not want to read them all into memory at once when adding the file but maybe just check to see what ones are in the file, then be able to read them on the fly later. 
+
+Add code to read in Violin plots from the postfit error output files. \end{DoxyRefDesc}
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00215}{215}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_a3eb97a2004b798ff48b6e05f485c8a50}\label{classMaCh3Plotting_1_1InputManager_a3eb97a2004b798ff48b6e05f485c8a50}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!InputManager@{InputManager}}
+\index{InputManager@{InputManager}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{InputManager()}{InputManager()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::\+Input\+Manager (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{translation\+Config\+Name }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager}{Input\+Manager}} using specified fitter translation config file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em translation\+Config\+Name} & The config file defining the fitter file structures, fit parameter, and what the parameters are called in each fitter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Constructed \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager}{Input\+Manager}} instance. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{inputManager_8cpp_source_l00006}{6}} of file \mbox{\hyperlink{inputManager_8cpp_source}{input\+Manager.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00006\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00007\ \ \ \textcolor{comment}{//\ read\ the\ config\ file}}
+\DoxyCodeLine{00008\ \ \ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_ad2cec8b2758ffcb661db59f930e8010e}{\_translatorConfig}}\ =\ YAML::LoadFile(translationConfigName);}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}InputManager:\ have\ loaded\ translation\ config\ file"{}});}
+\DoxyCodeLine{00011\ \ \ }
+\DoxyCodeLine{00012\ \ \ \textcolor{comment}{//\ split\ up\ the\ parts\ of\ the\ config\ for\ easier\ access\ later}}
+\DoxyCodeLine{00013\ \ \ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_ad2e204406fd336e7fcf00fafdff87703}{\_fitterSpecConfig}}\ =\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_ad2cec8b2758ffcb661db59f930e8010e}{\_translatorConfig}}[\textcolor{stringliteral}{"{}FitterSpec"{}}];}
+\DoxyCodeLine{00014\ \ \ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_ad243d0438a33356e6bca0677c8b588e6}{\_parametersConfig}}\ =\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_ad2cec8b2758ffcb661db59f930e8010e}{\_translatorConfig}}[\textcolor{stringliteral}{"{}Parameters"{}}];}
+\DoxyCodeLine{00015\ \ \ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a1eed58ec2fc42d44474c80b8f4e91e15}{\_samplesConfig}}\ =\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_ad2cec8b2758ffcb661db59f930e8010e}{\_translatorConfig}}[\textcolor{stringliteral}{"{}Samples"{}}];}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \textcolor{comment}{//\ check\ the\ config\ file\ and\ get\ which\ parameters,\ samples,\ and\ fitters\ we've\ been\ told\ about}}
+\DoxyCodeLine{00018\ \ \ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a836a1772cb3fdf2d6e38ee1b113bc4e8}{\_knownFitters}}\ =\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_ad2e204406fd336e7fcf00fafdff87703}{\_fitterSpecConfig}}[\textcolor{stringliteral}{"{}fitters"{}}].as<std::vector<std::string>>();}
+\DoxyCodeLine{00019\ \ \ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a3915837631cc08351a34cb135b0bb351}{\_knownParameters}}\ =\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_ad243d0438a33356e6bca0677c8b588e6}{\_parametersConfig}}[\textcolor{stringliteral}{"{}Parameters"{}}].as<std::vector<std::string>>();}
+\DoxyCodeLine{00020\ \ \ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_abafd844353d8fc69cf31ccf85b2bdcbe}{\_knownSamples}}\ =\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a1eed58ec2fc42d44474c80b8f4e91e15}{\_samplesConfig}}[\textcolor{stringliteral}{"{}Samples"{}}].as<std::vector<std::string>>();}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}Will\ now\ check\ the\ specified\ parameters\ for\ tags"{}});}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \textcolor{comment}{//\ loop\ through\ all\ parameters\ and\ get\ their\ tags}}
+\DoxyCodeLine{00025\ \ \ \textcolor{keywordflow}{for}\ (\ \textcolor{keyword}{const}\ std::string\ \&param:\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a3915837631cc08351a34cb135b0bb351}{\_knownParameters}}\ )}
+\DoxyCodeLine{00026\ \ \ \{}
+\DoxyCodeLine{00027\ \ \ \ \ std::vector<std::string>\ tags;}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}Looking\ for\ tags\ for\ parameter\ \{\}"{}},\ param);}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordflow}{if}\ (\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_ad243d0438a33356e6bca0677c8b588e6}{\_parametersConfig}}[param]\ )}
+\DoxyCodeLine{00031\ \ \ \ \ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_ad243d0438a33356e6bca0677c8b588e6}{\_parametersConfig}}[param][\textcolor{stringliteral}{"{}tags"{}}]\ )}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ tags\ =\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_ad243d0438a33356e6bca0677c8b588e6}{\_parametersConfig}}[param][\textcolor{stringliteral}{"{}tags"{}}].as<std::vector<std::string>>();}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}\ \ -\/\ Found\ \{\}!"{}},\ tags.size());}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00037\ \ \ \ \ \}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a0d66afafbba133fc3c1b4867957eb3db}{\_paramToTagsMap}}[param]\ =\ tags;}
+\DoxyCodeLine{00040\ \ \ \}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}Will\ now\ check\ the\ specified\ samples\ for\ tags"{}});}
+\DoxyCodeLine{00043\ \ \ }
+\DoxyCodeLine{00044\ \ \ \textcolor{comment}{//\ same\ again\ for\ samples}}
+\DoxyCodeLine{00045\ \ \ \textcolor{keywordflow}{for}\ (\ \textcolor{keyword}{const}\ std::string\ \&samp:\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_abafd844353d8fc69cf31ccf85b2bdcbe}{\_knownSamples}}\ )}
+\DoxyCodeLine{00046\ \ \ \{}
+\DoxyCodeLine{00047\ \ \ \ \ std::vector<std::string>\ tags;}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}Looking\ for\ tags\ for\ sample\ \{\}"{}},\ samp);}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordflow}{if}\ (\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a1eed58ec2fc42d44474c80b8f4e91e15}{\_samplesConfig}}[samp])}
+\DoxyCodeLine{00051\ \ \ \ \ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a1eed58ec2fc42d44474c80b8f4e91e15}{\_samplesConfig}}[samp][\textcolor{stringliteral}{"{}tags"{}}]\ )}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ tags\ =\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a1eed58ec2fc42d44474c80b8f4e91e15}{\_samplesConfig}}[samp][\textcolor{stringliteral}{"{}tags"{}}].as<std::vector<std::string>>();}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}\ \ -\/\ Found\ \{\}!"{}},\ tags.size());}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00057\ \ \ \ \ \}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_ada0eddda54a072bdfc2464a9902cfe01}{\_sampleToTagsMap}}[samp]\ =\ tags;}
+\DoxyCodeLine{00060\ \ \ \}}
+\DoxyCodeLine{00061\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_a911e73c70393339552e7b389f9f28a2f}\label{classMaCh3Plotting_1_1InputManager_a911e73c70393339552e7b389f9f28a2f}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!````~InputManager@{$\sim$InputManager}}
+\index{````~InputManager@{$\sim$InputManager}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$InputManager()}{~InputManager()}}
+{\footnotesize\ttfamily Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::$\sim$\+Input\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destructor. 
+
+Close out all the files that the manager is responsible for 
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00232}{232}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00233\ \ \ \{}
+\DoxyCodeLine{00234\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}\#\#\#\#\#\ Deleting\ InputManager\ Instance\ \#\#\#\#\#"{}});}
+\DoxyCodeLine{00235\ \ \ \ \ \textcolor{keywordflow}{for}\ (InputFile\ \&file:\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a29202faed03b0e9a22f2d34bce604793}{\_fileVec}})}
+\DoxyCodeLine{00236\ \ \ \ \ \{}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ file.Close();}
+\DoxyCodeLine{00238\ \ \ \ \ \}}
+\DoxyCodeLine{00239\ }
+\DoxyCodeLine{00240\ \ \ \ \ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a29202faed03b0e9a22f2d34bce604793}{\_fileVec}}.clear();}
+\DoxyCodeLine{00241\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_a5ed13159682966a2dc95af0b62df01b1}\label{classMaCh3Plotting_1_1InputManager_a5ed13159682966a2dc95af0b62df01b1}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!InputManager@{InputManager}}
+\index{InputManager@{InputManager}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{InputManager()}{InputManager()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::\+Input\+Manager (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager}{Input\+Manager}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_aadc2bb2799312b7799be07fee633d3df}\label{classMaCh3Plotting_1_1InputManager_aadc2bb2799312b7799be07fee633d3df}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!InputManager@{InputManager}}
+\index{InputManager@{InputManager}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{InputManager()}{InputManager()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::\+Input\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMaCh3Plotting_1_1InputManager}{Input\+Manager}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_a8f78dd7607191728f0a52bc27ade9af3}\label{classMaCh3Plotting_1_1InputManager_a8f78dd7607191728f0a52bc27ade9af3}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!addFile@{addFile}}
+\index{addFile@{addFile}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{addFile()}{addFile()}}
+{\footnotesize\ttfamily void Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::add\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Name }\end{DoxyParamCaption})}
+
+
+
+Add a new \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile}{Input\+File}} object to this input manager. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & The name of the file to read.\\
+\hline
+\end{DoxyParams}
+Open an input file and add to the manager, consists of\+:
+\begin{DoxyItemize}
+\item a new \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile}{Input\+File}} using the specified file
+\item Get info about the file, like what fitter it came from, what it contains e.\+g. LLH scans, processed post fit parameters etc.
+\item Load up the data from the file (LLH scans etc.) and put them in a common format to be used by plotting scripts
+\item Push back a pointer to the \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile}{Input\+File}} objcet to the vector of files known to this \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager}{Input\+Manager}}. 
+\end{DoxyItemize}
+
+Definition at line \mbox{\hyperlink{inputManager_8cpp_source_l00071}{71}} of file \mbox{\hyperlink{inputManager_8cpp_source}{input\+Manager.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00072\ \ \ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a29202faed03b0e9a22f2d34bce604793}{\_fileVec}}.emplace\_back(fileName);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \textcolor{comment}{//\ EM:\ need\ to\ be\ done\ in\ this\ order\ since\ fillFileData\ needs\ to\ know\ info\ about\ the\ file,\ e.g.}}
+\DoxyCodeLine{00075\ \ \ \textcolor{comment}{//\ fitter\ and\ what\ things\ are\ in\ it}}
+\DoxyCodeLine{00076\ \ \ InputFile\ \&fileInfo\ =\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a29202faed03b0e9a22f2d34bce604793}{\_fileVec}}.back();}
+\DoxyCodeLine{00077\ \ \ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_aad778d8694f9b581d09279584733f6ea}{fillFileInfo}}(fileInfo);}
+\DoxyCodeLine{00078\ \ \ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a33e56b65a7351722fb7790d77e14452f}{fillFileData}}(fileInfo);}
+\DoxyCodeLine{00079\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_a487b62643d1a5c63415685d662b7118d}\label{classMaCh3Plotting_1_1InputManager_a487b62643d1a5c63415685d662b7118d}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!convertFileTypeNames@{convertFileTypeNames}}
+\index{convertFileTypeNames@{convertFileTypeNames}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{convertFileTypeNames()}{convertFileTypeNames()}}
+{\footnotesize\ttfamily static const std\+::string Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::convert\+File\+Type\+Names (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceMaCh3Plotting_a4152b51a260d6a18f41b3a22aa2a6b75}{file\+Type\+Enum}}}]{file\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Convert from file\+Type\+Enum to the name of the file type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Type} & The file type ID to convert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The name of the file type, or \char`\"{}\+UNKNOWN\+\_\+\+FILE\+\_\+\+TYPE\char`\"{} if the file\+Type does not match any known file type. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00256}{256}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00257\ \ \ \ \ \textcolor{keywordflow}{switch}\ (fileType)}
+\DoxyCodeLine{00258\ \ \ \ \ \{}
+\DoxyCodeLine{00259\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceMaCh3Plotting_a4152b51a260d6a18f41b3a22aa2a6b75a439e10ed490e0eae34588a3e8005c619}{kLLH}}:}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}LLH"{}};}
+\DoxyCodeLine{00261\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceMaCh3Plotting_a4152b51a260d6a18f41b3a22aa2a6b75a0dd2e9b7a6fcbfa5724ac5e17ea0eeaf}{kPostFit}}:}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}PostFit"{}};}
+\DoxyCodeLine{00263\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceMaCh3Plotting_a4152b51a260d6a18f41b3a22aa2a6b75a9b27490997d0011b93a1bb7d063edb0a}{kMCMC}}:}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}MCMC"{}};}
+\DoxyCodeLine{00265\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespaceMaCh3Plotting_a4152b51a260d6a18f41b3a22aa2a6b75a8c0ed9a67c98996a334179217d152200}{kSigmaVar}}:}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}SigmaVar"{}};}
+\DoxyCodeLine{00267\ }
+\DoxyCodeLine{00268\ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}UNKNOWN\_FILE\_TYPE"{}};}
+\DoxyCodeLine{00270\ \ \ \ \ \}}
+\DoxyCodeLine{00271\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_a33e56b65a7351722fb7790d77e14452f}\label{classMaCh3Plotting_1_1InputManager_a33e56b65a7351722fb7790d77e14452f}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!fillFileData@{fillFileData}}
+\index{fillFileData@{fillFileData}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{fillFileData()}{fillFileData()}}
+{\footnotesize\ttfamily void Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::fill\+File\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMaCh3Plotting_1_1InputFile}{Input\+File}} \&}]{input\+File\+Def,  }\item[{bool}]{print\+Thoughts = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8cpp_source_l00807}{807}} of file \mbox{\hyperlink{inputManager_8cpp_source}{input\+Manager.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00807\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00808\ \ \ \textcolor{comment}{//\ load\ in\ the\ data\ in\ the\ file\ using\ the\ info\ gotten\ above}}
+\DoxyCodeLine{00809\ \ \ \textcolor{comment}{//\ EM:\ a\ lot\ of\ this\ is\ copy\ paste\ from\ above,\ could\ be\ better\ organised}}
+\DoxyCodeLine{00810\ \ \ \textcolor{keywordflow}{if}\ (printThoughts)}
+\DoxyCodeLine{00811\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}....getting\ data\ from\ file\ \{\}"{}},\ inputFileDef.fileName);}
+\DoxyCodeLine{00812\ }
+\DoxyCodeLine{00813\ \ \ YAML::Node\ thisFitterSpec\_config\ =\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_ad2e204406fd336e7fcf00fafdff87703}{\_fitterSpecConfig}}[inputFileDef.fitter];}
+\DoxyCodeLine{00814\ }
+\DoxyCodeLine{00815\ \ \ \textcolor{comment}{//\ set\ the\ default\ post\ fit\ error\ type\ so\ we\ can\ read\ it\ as\ default\ later}}
+\DoxyCodeLine{00816\ \ \ inputFileDef.defaultErrorType\ =}
+\DoxyCodeLine{00817\ \ \ \ \ \ \ thisFitterSpec\_config[\textcolor{stringliteral}{"{}defaultPostFitErrorType"{}}].as<std::string>();}
+\DoxyCodeLine{00818\ }
+\DoxyCodeLine{00819\ \ \ \textcolor{comment}{//\ \#\#\#\#\#\#\#\#\#\#\#\ First\ fill\ up\ the\ LLH\ vectors\ \#\#\#\#\#\#\#\#\#\#\#\#}}
+\DoxyCodeLine{00820\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ std::string\ LLHType\ :\ \{\textcolor{stringliteral}{"{}sample"{}},\ \textcolor{stringliteral}{"{}penalty"{}},\ \textcolor{stringliteral}{"{}total"{}}\})}
+\DoxyCodeLine{00821\ \ \ \{}
+\DoxyCodeLine{00822\ \ \ \ \ \textcolor{keywordflow}{if}\ (!inputFileDef.hasLLHScans\_map.at(LLHType))}
+\DoxyCodeLine{00823\ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00824\ }
+\DoxyCodeLine{00825\ \ \ \ \ \textcolor{comment}{//\ vector\ of\ all\ the\ possible\ locations\ that\ we\ might\ find\ LLH\ scans\ for\ this\ type\ of\ LLH}}
+\DoxyCodeLine{00826\ \ \ \ \ YAML::Node\ testLLHConfig\ =\ thisFitterSpec\_config[LLHType\ +\ \textcolor{stringliteral}{"{}\_LLH"{}}];}
+\DoxyCodeLine{00827\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::string>\ testLLHRawLocations\ =}
+\DoxyCodeLine{00828\ \ \ \ \ \ \ \ \ testLLHConfig[\textcolor{stringliteral}{"{}location"{}}].as<std::vector<std::string>>();}
+\DoxyCodeLine{00829\ }
+\DoxyCodeLine{00830\ \ \ \ \ \textcolor{comment}{//\ get\ the\ expected\ root\ object\ type\ of\ the\ llh\ scans}}
+\DoxyCodeLine{00831\ \ \ \ \ std::string\ LLHObjType\ =\ thisFitterSpec\_config[\textcolor{stringliteral}{"{}LLHObjectType"{}}].as<std::string>();}
+\DoxyCodeLine{00832\ }
+\DoxyCodeLine{00833\ \ \ \ \ \textcolor{comment}{//\ EM:\ now\ get\ the\ objects\ from\ the\ file}}
+\DoxyCodeLine{00834\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ std::string\ \&parameter\ :\ inputFileDef.availableParams\_LLH)}
+\DoxyCodeLine{00835\ \ \ \ \ \{}
+\DoxyCodeLine{00836\ }
+\DoxyCodeLine{00837\ \ \ \ \ \ \ std::shared\_ptr<TObject>\ LLHObj\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00838\ }
+\DoxyCodeLine{00839\ \ \ \ \ \ \ \textcolor{comment}{//\ check\ the\ locations\ for\ the\ object}}
+\DoxyCodeLine{00840\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ std::string\ \&rawLocation\ :\ testLLHRawLocations)}
+\DoxyCodeLine{00841\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00842\ \ \ \ \ \ \ \ \ LLHObj\ =\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a7e9f932d7591cbdd6c99c56c2da75f85}{findRootObject}}(inputFileDef,}
+\DoxyCodeLine{00843\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a041b9611ce812326995c54f8c73c4867}{parseLocation}}(rawLocation,\ inputFileDef.fitter,\ \mbox{\hyperlink{namespaceMaCh3Plotting_a4152b51a260d6a18f41b3a22aa2a6b75a439e10ed490e0eae34588a3e8005c619}{kLLH}},\ parameter));}
+\DoxyCodeLine{00844\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ we\ found\ it\ then\ break\ out\ of\ the\ loop}}
+\DoxyCodeLine{00845\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (LLHObj\ !=\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00846\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00847\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00848\ }
+\DoxyCodeLine{00849\ \ \ \ \ \ \ \textcolor{comment}{//\ double\ check\ that\ we\ actually\ found\ it..\ just\ in\ case}}
+\DoxyCodeLine{00850\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (LLHObj\ ==\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00851\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00852\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Hmmm,\ something\ seems\ to\ have\ gone\ wrong\ and\ I\ couldnt\ find\ the\ \{\}\ LLH\ scan\ for\ \{\}\ when\ attempting\ to\ read\ the\ data\ for\ it"{}},\ LLHType,\ parameter);}
+\DoxyCodeLine{00853\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}This\ will\ very\ likely\ cause\ segfaults\ and\ sadness"{}});}
+\DoxyCodeLine{00854\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00855\ }
+\DoxyCodeLine{00856\ \ \ \ \ \ \ \textcolor{comment}{//\ now\ convert\ it\ to\ a\ TGraph}}
+\DoxyCodeLine{00857\ \ \ \ \ \ \ std::shared\_ptr<TGraph>\ LLHGraph\ =\ std::make\_shared<TGraph>();}
+\DoxyCodeLine{00858\ }
+\DoxyCodeLine{00859\ \ \ \ \ \ \ \textcolor{comment}{//\ EM:\ maybe\ have\ the\ type\ of\ the\ LLH\ object\ specified\ in\ the\ config\ to\ know\ what\ to\ downcast}}
+\DoxyCodeLine{00860\ \ \ \ \ \ \ \textcolor{comment}{//\ it\ to??}}
+\DoxyCodeLine{00861\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (LLHObjType\ ==\ \textcolor{stringliteral}{"{}TH1D"{}})}
+\DoxyCodeLine{00862\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00863\ \ \ \ \ \ \ \ \ LLHGraph\ =\ std::make\_shared<TGraph>(\textcolor{keyword}{static\_cast<}TH1D*\textcolor{keyword}{>}(LLHObj.get()));}
+\DoxyCodeLine{00864\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00865\ }
+\DoxyCodeLine{00866\ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (LLHObjType\ ==\ \textcolor{stringliteral}{"{}TGraph"{}})}
+\DoxyCodeLine{00867\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00868\ \ \ \ \ \ \ \ \ LLHGraph\ =\ std::shared\_ptr<TGraph>(\textcolor{keyword}{static\_cast<}TGraph*\textcolor{keyword}{>}(LLHObj-\/>Clone()));}
+\DoxyCodeLine{00869\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00870\ }
+\DoxyCodeLine{00871\ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00872\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00873\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a07ff6d6a15b24f94afc88a1b89779beb}{MACH3LOG\_CRITICAL}}(\textcolor{stringliteral}{"{}ERROR:\ uknown\ type\ of\ LLH\ object\ specified:\ \{\}"{}},\ LLHObjType);}
+\DoxyCodeLine{00874\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_\ ,\ \_\_LINE\_\_\ );}
+\DoxyCodeLine{00875\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00876\ }
+\DoxyCodeLine{00877\ \ \ \ \ \ \ inputFileDef.LLHScans\_map[LLHType][parameter]\ =\ LLHGraph;}
+\DoxyCodeLine{00878\ \ \ \ \ \}}
+\DoxyCodeLine{00879\ \ \ \}}
+\DoxyCodeLine{00880\ }
+\DoxyCodeLine{00881\ \ \ \textcolor{comment}{//\ \#\#\#\#\#\#\#\ Get\ the\ by\ sample\ LLH\ scans\ \#\#\#\#\#\#\#}}
+\DoxyCodeLine{00882\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ std::string\ \&parameter\ :\ inputFileDef.availableParams\_LLH)}
+\DoxyCodeLine{00883\ \ \ \{}
+\DoxyCodeLine{00884\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ std::string\ \&sample\ :\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_abafd844353d8fc69cf31ccf85b2bdcbe}{\_knownSamples}})}
+\DoxyCodeLine{00885\ \ \ \ \ \{}
+\DoxyCodeLine{00886\ \ \ \ \ \ \ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_ae0689fdfe514534e094f0e87fe69539f}{findBySampleLLH}}(inputFileDef,\ parameter,\ inputFileDef.fitter,\ sample,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00887\ \ \ \ \ \}}
+\DoxyCodeLine{00888\ \ \ \}}
+\DoxyCodeLine{00889\ }
+\DoxyCodeLine{00890\ \ \ \textcolor{comment}{//\ \#\#\#\#\#\#\#\ Get\ the\ processed\ post\ fit\ errors\ \#\#\#\#\#\#\#}}
+\DoxyCodeLine{00891\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ std::string\ \&parameter\ :\ inputFileDef.availableParams\_postFitErrors)}
+\DoxyCodeLine{00892\ \ \ \{}
+\DoxyCodeLine{00893\ \ \ \ \ std::vector<std::string>\ availableErrorTypes\ =}
+\DoxyCodeLine{00894\ \ \ \ \ \ \ \ \ thisFitterSpec\_config[\textcolor{stringliteral}{"{}AvailablePostFitErrorTypes"{}}].as<std::vector<std::string>>();}
+\DoxyCodeLine{00895\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ std::string\ \&errorType\ :\ availableErrorTypes)}
+\DoxyCodeLine{00896\ \ \ \ \ \{}
+\DoxyCodeLine{00897\ \ \ \ \ \ \ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_ab379210534dceaf26a6b3506fd47da27}{findPostFitParamError}}(inputFileDef,\ parameter,\ inputFileDef.fitter,\ errorType,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00898\ \ \ \ \ \}}
+\DoxyCodeLine{00899\ \ \ \}}
+\DoxyCodeLine{00900\ }
+\DoxyCodeLine{00901\ \ \ \textcolor{comment}{//\ \#\#\#\#\#\#\#\#\#\#\ Get\ the\ MCMC\ related\ posteriors\ \#\#\#\#\#\#\#\#\#\#\#}}
+\DoxyCodeLine{00902\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ std::string\ \&parameter\ :\ inputFileDef.availableParams\_MCMCchain)}
+\DoxyCodeLine{00903\ \ \ \{}
+\DoxyCodeLine{00904\ \ \ \ \ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_ab547af49427a637364a6d58f484c6826}{findRawChainSteps}}(inputFileDef,\ parameter,\ inputFileDef.fitter,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00905\ \ \ \}}
+\DoxyCodeLine{00906\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ std::string\ \&parameter\ :\ inputFileDef.availableParams\_1dPosteriors)}
+\DoxyCodeLine{00907\ \ \ \{}
+\DoxyCodeLine{00908\ \ \ \ \ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a479520c576d5f58f6db5c28133ad1714}{find1dPosterior}}(inputFileDef,\ parameter,\ inputFileDef.fitter,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00909\ \ \ \}}
+\DoxyCodeLine{00910\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_aad778d8694f9b581d09279584733f6ea}\label{classMaCh3Plotting_1_1InputManager_aad778d8694f9b581d09279584733f6ea}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!fillFileInfo@{fillFileInfo}}
+\index{fillFileInfo@{fillFileInfo}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{fillFileInfo()}{fillFileInfo()}}
+{\footnotesize\ttfamily void Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::fill\+File\+Info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMaCh3Plotting_1_1InputFile}{Input\+File}} \&}]{input\+File\+Def,  }\item[{bool}]{print\+Thoughts = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000014}{Todo}}]Would like to be able to specify what kind of file and what fitter an input is from on the command like\+: e.\+g. like \`{}plot\+App \mbox{[}options\mbox{]} $<$file\+Name1$>$;$<$file\+Type$>$;$<$fitter\+Name$>$... and only try to auto-\/detect it if its not specified, this would save some time and would also be very helpful in situations where we can\textquotesingle{}t auto-\/detect e.\+g. if there is some kind of overlap in the file structure between two fitters \end{DoxyRefDesc}
+
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000015}{Todo}}]add a check here to make sure all the scans that are in the file are being picked up by the reader, and warn if any are not being used \end{DoxyRefDesc}
+
+
+Definition at line \mbox{\hyperlink{inputManager_8cpp_source_l00531}{531}} of file \mbox{\hyperlink{inputManager_8cpp_source}{input\+Manager.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00531\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00536\ \ \ }
+\DoxyCodeLine{00537\ \ \ \textcolor{comment}{//\ use\ the\ contents\ of\ the\ file\ to\ decide\ which\ fitter\ it\ came\ from\ and\ what\ type\ of\ file\ it\ is}}
+\DoxyCodeLine{00538\ \ \ \textcolor{keywordflow}{if}\ (printThoughts)}
+\DoxyCodeLine{00539\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Checking\ contents\ of\ file\ \{\}"{}},\ inputFileDef.fileName);}
+\DoxyCodeLine{00540\ }
+\DoxyCodeLine{00541\ \ \ \textcolor{keywordflow}{for}\ (std::string\ fitter:\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a836a1772cb3fdf2d6e38ee1b113bc4e8}{\_knownFitters}})}
+\DoxyCodeLine{00542\ \ \ \{}
+\DoxyCodeLine{00543\ }
+\DoxyCodeLine{00544\ \ \ \ \ \textcolor{comment}{//\ flag\ for\ whether\ or\ not\ the\ current\ fitter\ is\ the\ correct\ one}}
+\DoxyCodeLine{00545\ \ \ \ \ \textcolor{keywordtype}{bool}\ foundFitter\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00546\ \ \ \ \ \textcolor{keywordflow}{if}\ (printThoughts)}
+\DoxyCodeLine{00547\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Checking\ if\ this\ is\ a\ \{\}\ file"{}},\ fitter);}
+\DoxyCodeLine{00548\ }
+\DoxyCodeLine{00549\ \ \ \ \ \textcolor{comment}{//\ EM:\ get\ the\ configuration\ specifying\ what\ the\ output\ of\ this\ fitter\ looks\ like}}
+\DoxyCodeLine{00550\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_ad2e204406fd336e7fcf00fafdff87703}{\_fitterSpecConfig}}[fitter])}
+\DoxyCodeLine{00551\ \ \ \ \ \{}
+\DoxyCodeLine{00552\ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_\ ,\ \_\_LINE\_\_,\ \textcolor{stringliteral}{"{}translation\ config\ doesnt\ contain\ a\ definition\ for\ fitter\ "{}}\ +\ fitter);}
+\DoxyCodeLine{00553\ \ \ \ \ \}}
+\DoxyCodeLine{00554\ }
+\DoxyCodeLine{00555\ \ \ \ \ YAML::Node\ thisFitterSpec\_config\ =\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_ad2e204406fd336e7fcf00fafdff87703}{\_fitterSpecConfig}}[fitter];}
+\DoxyCodeLine{00556\ }
+\DoxyCodeLine{00557\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ numLLHParams;}
+\DoxyCodeLine{00558\ }
+\DoxyCodeLine{00559\ \ \ \ \ \textcolor{comment}{//\ \#\#\#\#\#\ Look\ for\ LLH\ scans\ in\ the\ input\ \#\#\#\#\#}}
+\DoxyCodeLine{00560\ \ \ \ \ \textcolor{comment}{//\ check\ for\ all\ 3\ LLH\ directory\ types}}
+\DoxyCodeLine{00561\ \ \ \ \ \textcolor{keywordflow}{for}\ (std::string\ LLHType\ :\ \{\textcolor{stringliteral}{"{}sample"{}},\ \textcolor{stringliteral}{"{}penalty"{}},\ \textcolor{stringliteral}{"{}total"{}}\})}
+\DoxyCodeLine{00562\ \ \ \ \ \{}
+\DoxyCodeLine{00563\ }
+\DoxyCodeLine{00564\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (printThoughts)}
+\DoxyCodeLine{00565\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}....\ searching\ for\ \{\}\ LLH\ scans...\ "{}},\ LLHType);}
+\DoxyCodeLine{00566\ }
+\DoxyCodeLine{00567\ \ \ \ \ \ \ \textcolor{comment}{//\ vector\ of\ all\ the\ possible\ locations\ that\ we\ might\ find\ LLH\ scans\ for\ this\ type\ of\ LLH}}
+\DoxyCodeLine{00568\ \ \ \ \ \ \ YAML::Node\ testLLHConfig\ =\ thisFitterSpec\_config[LLHType\ +\ \textcolor{stringliteral}{"{}\_LLH"{}}];}
+\DoxyCodeLine{00569\ \ \ \ \ \ \ std::vector<std::string>\ testLLHRawLocations\ =}
+\DoxyCodeLine{00570\ \ \ \ \ \ \ \ \ \ \ testLLHConfig[\textcolor{stringliteral}{"{}location"{}}].as<std::vector<std::string>>();}
+\DoxyCodeLine{00571\ }
+\DoxyCodeLine{00572\ \ \ \ \ \ \ \textcolor{comment}{//\ counter\ for\ the\ total\ number\ of\ parameters\ we\ find\ scans\ for}}
+\DoxyCodeLine{00573\ \ \ \ \ \ \ numLLHParams\ =\ 0;}
+\DoxyCodeLine{00574\ }
+\DoxyCodeLine{00575\ \ \ \ \ \ \ std::vector<std::string>\ enabledLLHParams;}
+\DoxyCodeLine{00576\ }
+\DoxyCodeLine{00577\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ std::string\ \&parameter\ :\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a3915837631cc08351a34cb135b0bb351}{\_knownParameters}})}
+\DoxyCodeLine{00578\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00579\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}\ \ \ \ \ -\/\ for\ \{\}"{}},\ parameter);}
+\DoxyCodeLine{00580\ \ \ \ \ \ \ \ \ inputFileDef.availableParams\_map\_LLH[LLHType][parameter]\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00581\ }
+\DoxyCodeLine{00582\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ check\ if\ we\ find\ the\ parameter\ at\ any\ of\ the\ locations\ we\ think\ it\ should\ be\ at}}
+\DoxyCodeLine{00583\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ std::string\ \&rawLocation\ :\ testLLHRawLocations)}
+\DoxyCodeLine{00584\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00585\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a7e9f932d7591cbdd6c99c56c2da75f85}{findRootObject}}(inputFileDef,\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a041b9611ce812326995c54f8c73c4867}{parseLocation}}(rawLocation,\ fitter,\ \mbox{\hyperlink{namespaceMaCh3Plotting_a4152b51a260d6a18f41b3a22aa2a6b75a439e10ed490e0eae34588a3e8005c619}{kLLH}},\ parameter))\ !=}
+\DoxyCodeLine{00586\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00587\ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00588\ \ \ \ \ \ \ \ \ \ \ \ \ numLLHParams++;}
+\DoxyCodeLine{00589\ \ \ \ \ \ \ \ \ \ \ \ \ enabledLLHParams.push\_back(parameter);}
+\DoxyCodeLine{00590\ \ \ \ \ \ \ \ \ \ \ \ \ inputFileDef.availableParams\_map\_LLH[LLHType][parameter]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00591\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}\ \ \ \ \ \ FOUND!"{}});}
+\DoxyCodeLine{00592\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};\ \textcolor{comment}{//\ <-\/\ we've\ found\ it,\ no\ point\ checking\ the\ rest\ of\ the\ locations}}
+\DoxyCodeLine{00593\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00594\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00595\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00596\ }
+\DoxyCodeLine{00597\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (printThoughts)}
+\DoxyCodeLine{00598\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}....\ Found\ \{\}\(\backslash\)n"{}},\ numLLHParams);}
+\DoxyCodeLine{00599\ }
+\DoxyCodeLine{00600\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (numLLHParams\ >\ 0)}
+\DoxyCodeLine{00601\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00602\ \ \ \ \ \ \ \ \ foundFitter\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00603\ \ \ \ \ \ \ \ \ inputFileDef.hasLLHScans\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00604\ \ \ \ \ \ \ \ \ inputFileDef.availableParams\_LLH\ =\ enabledLLHParams;}
+\DoxyCodeLine{00605\ \ \ \ \ \ \ \ \ inputFileDef.hasLLHScans\_map[LLHType]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00606\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00607\ }
+\DoxyCodeLine{00610\ \ \ \ \ \}}
+\DoxyCodeLine{00611\ }
+\DoxyCodeLine{00612\ \ \ \ \ \textcolor{keywordflow}{if}\ (printThoughts)}
+\DoxyCodeLine{00613\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00614\ }
+\DoxyCodeLine{00615\ \ \ \ \ \textcolor{comment}{//\ \#\#\#\#\#\ now\ look\ for\ processed\ post\ fit\ errors\ \#\#\#\#\#}}
+\DoxyCodeLine{00616\ \ \ \ \ \textcolor{keywordflow}{if}\ (printThoughts)}
+\DoxyCodeLine{00617\ \ \ \ \ \{}
+\DoxyCodeLine{00618\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}....searching\ for\ Post\ Fit\ Parameters"{}});}
+\DoxyCodeLine{00619\ }
+\DoxyCodeLine{00620\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (thisFitterSpec\_config[\textcolor{stringliteral}{"{}defaultPostFitErrorType"{}}])}
+\DoxyCodeLine{00621\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00622\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}\ \ Default\ type\ specified\ with\ possible\ locations:\ "{}});}
+\DoxyCodeLine{00623\ \ \ \ \ \ \ \ \ YAML::Node\ postFitErrorSpec\ =\ thisFitterSpec\_config[\textcolor{stringliteral}{"{}postFitErrorTypes"{}}];}
+\DoxyCodeLine{00624\ \ \ \ \ \ \ \ \ YAML::Node\ defaultErrorType\ =}
+\DoxyCodeLine{00625\ \ \ \ \ \ \ \ \ \ \ \ \ postFitErrorSpec[thisFitterSpec\_config[\textcolor{stringliteral}{"{}defaultPostFitErrorType"{}}].as<std::string>()];}
+\DoxyCodeLine{00626\ \ \ \ \ \ \ \ \ std::vector<std::string>\ locations\ =\ defaultErrorType[\textcolor{stringliteral}{"{}location"{}}].as<std::vector<std::string>>();}
+\DoxyCodeLine{00627\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (std::string\ loc\ :\ locations)}
+\DoxyCodeLine{00628\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(loc);}
+\DoxyCodeLine{00629\ \ \ \ \ \ \ \}\ }
+\DoxyCodeLine{00630\ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00631\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00632\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}\ \ No\ default\ location\ specified"{}});}
+\DoxyCodeLine{00633\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00634\ \ \ \ \ \ \ }
+\DoxyCodeLine{00635\ \ \ \ \ \}}
+\DoxyCodeLine{00636\ }
+\DoxyCodeLine{00637\ \ \ \ \ \textcolor{keywordtype}{int}\ numPostFitParams\ =\ 0;}
+\DoxyCodeLine{00638\ \ \ \ \ std::vector<std::string>\ enabledPostFitParams;}
+\DoxyCodeLine{00639\ }
+\DoxyCodeLine{00640\ \ \ \ \ std::string\ defaultErrorType\ =}
+\DoxyCodeLine{00641\ \ \ \ \ \ \ \ \ thisFitterSpec\_config[\textcolor{stringliteral}{"{}defaultPostFitErrorType"{}}].as<std::string>();}
+\DoxyCodeLine{00642\ \ \ \ \ \textcolor{keywordflow}{for}\ (std::string\ parameter\ :\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a3915837631cc08351a34cb135b0bb351}{\_knownParameters}})}
+\DoxyCodeLine{00643\ \ \ \ \ \{}
+\DoxyCodeLine{00644\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_ab379210534dceaf26a6b3506fd47da27}{findPostFitParamError}}(inputFileDef,\ parameter,\ fitter,\ defaultErrorType))}
+\DoxyCodeLine{00645\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00646\ \ \ \ \ \ \ \ \ numPostFitParams++;}
+\DoxyCodeLine{00647\ \ \ \ \ \ \ \ \ enabledPostFitParams.push\_back(parameter);}
+\DoxyCodeLine{00648\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00649\ \ \ \ \ \}}
+\DoxyCodeLine{00650\ }
+\DoxyCodeLine{00651\ \ \ \ \ \textcolor{keywordflow}{if}\ (printThoughts)}
+\DoxyCodeLine{00652\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}....\ Found\ \{\}\(\backslash\)n"{}},\ numPostFitParams);}
+\DoxyCodeLine{00653\ }
+\DoxyCodeLine{00654\ \ \ \ \ \textcolor{keywordflow}{if}\ (numPostFitParams\ >\ 0)}
+\DoxyCodeLine{00655\ \ \ \ \ \{}
+\DoxyCodeLine{00656\ \ \ \ \ \ \ foundFitter\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00657\ \ \ \ \ \ \ inputFileDef.hasPostFitErrors\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00658\ \ \ \ \ \ \ inputFileDef.availableParams\_postFitErrors\ =\ enabledPostFitParams;}
+\DoxyCodeLine{00659\ \ \ \ \ \}}
+\DoxyCodeLine{00660\ }
+\DoxyCodeLine{00661\ \ \ \ \ \textcolor{comment}{//\ \#\#\#\#\#\#\#\#\#\ Now\ look\ for\ LLH\ scans\ broken\ down\ by\ sample\ \#\#\#\#\#\#\#\#\#}}
+\DoxyCodeLine{00662\ \ \ \ \ \textcolor{comment}{//\ This\ is\ really\ just\ a\ check\ to\ see\ if\ the\ number\ of\ by\ sample\ LLH\ scans\ is\ the\ same\ as\ normal}}
+\DoxyCodeLine{00663\ \ \ \ \ \textcolor{comment}{//\ LLH\ scans}}
+\DoxyCodeLine{00664\ \ \ \ \ \textcolor{keywordflow}{if}\ (printThoughts)}
+\DoxyCodeLine{00665\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}....Searching\ for\ LLH\ scans\ broken\ down\ by\ sample"{}});}
+\DoxyCodeLine{00666\ }
+\DoxyCodeLine{00667\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ std::string\ \&sample\ :\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_abafd844353d8fc69cf31ccf85b2bdcbe}{\_knownSamples}})}
+\DoxyCodeLine{00668\ \ \ \ \ \{}
+\DoxyCodeLine{00669\ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ numLLHBySampleParams\ =\ 0;}
+\DoxyCodeLine{00670\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ std::string\ \&parameter\ :\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a3915837631cc08351a34cb135b0bb351}{\_knownParameters}})}
+\DoxyCodeLine{00671\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00672\ \ \ \ \ \ \ \ \ inputFileDef.availableParams\_map\_LLHBySample[sample][parameter]\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00673\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_ae0689fdfe514534e094f0e87fe69539f}{findBySampleLLH}}(inputFileDef,\ parameter,\ fitter,\ sample))}
+\DoxyCodeLine{00674\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00675\ \ \ \ \ \ \ \ \ \ \ inputFileDef.availableParams\_map\_LLHBySample[sample][parameter]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00676\ \ \ \ \ \ \ \ \ \ \ numLLHBySampleParams++;}
+\DoxyCodeLine{00677\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00678\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00679\ }
+\DoxyCodeLine{00680\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (numLLHBySampleParams\ !=\ 0)}
+\DoxyCodeLine{00681\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00682\ \ \ \ \ \ \ \ \ inputFileDef.availableSamples\_LLH.push\_back(sample);}
+\DoxyCodeLine{00683\ }
+\DoxyCodeLine{00684\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (printThoughts)}
+\DoxyCodeLine{00685\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}........\ Found\ \{\}\ LLH\ scans\ for\ sample\ \{\}"{}},\ numLLHBySampleParams,\ sample);}
+\DoxyCodeLine{00686\ }
+\DoxyCodeLine{00687\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((numLLHParams\ !=\ numLLHBySampleParams))}
+\DoxyCodeLine{00688\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00689\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}hmmmmm\ something\ weird\ is\ happening\ here"{}});}
+\DoxyCodeLine{00690\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}\ \ I\ have\ \{\}\ LLH\ scans\ for\ sample\ \{\}"{}},\ numLLHBySampleParams,\ sample);}
+\DoxyCodeLine{00691\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}\ \ But\ \{\}\ parameters\ with\ Total\_LLH\ scals"{}},\ numLLHParams);}
+\DoxyCodeLine{00692\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00693\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00694\ \ \ \ \ \}}
+\DoxyCodeLine{00695\ }
+\DoxyCodeLine{00696\ \ \ \ \ \textcolor{comment}{//\ \#\#\#\#\#\#\#\#\#\ Now\ for\ the\ main\ event:\ Look\ for\ MCMC\ chains\ and\ processed\ posteriors\ \#\#\#\#\#\#\#\#\#\#\#}}
+\DoxyCodeLine{00697\ \ \ \ \ }
+\DoxyCodeLine{00698\ \ \ \ \ \textcolor{comment}{//\ EM:\ if\ "{}MCMCsteps"{}\ was\ defined\ for\ this\ fitter,\ we\ assume\ that\ it\ is\ a\ MaCh3\ raw\ MCMC\ file}}
+\DoxyCodeLine{00699\ \ \ \ \ \textcolor{comment}{//\ thus\ it\ needs\ an\ MCMCProcessor\ to\ read\ from\ it.\ This\ isn't\ super\ general\ and\ it\ would\ probably}}
+\DoxyCodeLine{00700\ \ \ \ \ \textcolor{comment}{//\ be\ good\ to\ have\ some\ additional\ "{}isMaCh3"{}\ option\ that\ can\ decide\ whether\ or\ not\ to\ use\ MCMCProcessor}}
+\DoxyCodeLine{00701\ \ \ \ \ \textcolor{comment}{//\ but\ hey\ ho\ it's\ good\ enough\ for\ now}}
+\DoxyCodeLine{00702\ \ \ \ \ \textcolor{keywordflow}{if}\ (\ thisFitterSpec\_config[\textcolor{stringliteral}{"{}MCMCsteps"{}}]\ )}
+\DoxyCodeLine{00703\ \ \ \ \ \{}
+\DoxyCodeLine{00704\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}Initialising\ MCMCProcessor\ for\ the\ input\ file"{}});}
+\DoxyCodeLine{00705\ \ \ \ \ \ \ std::vector<std::string>\ posteriorTreeRawLocations\ =\ thisFitterSpec\_config[\textcolor{stringliteral}{"{}MCMCsteps"{}}][\textcolor{stringliteral}{"{}location"{}}].as<std::vector<std::string>>();}
+\DoxyCodeLine{00706\ \ \ \ \ \ \ }
+\DoxyCodeLine{00707\ \ \ \ \ \ \ TTree\ *postTree\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00708\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\ \textcolor{keyword}{const}\ std::string\ \&rawLoc:\ posteriorTreeRawLocations\ )}
+\DoxyCodeLine{00709\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00710\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}\ \ -\/\ Looking\ for\ MCMC\ chain\ parameter\ values\ at:\ \{\}"{}},\ rawLoc);}
+\DoxyCodeLine{00711\ }
+\DoxyCodeLine{00712\ \ \ \ \ \ \ \ \ postTree\ =\ inputFileDef.file-\/>Get<TTree>(rawLoc.c\_str());}
+\DoxyCodeLine{00713\ }
+\DoxyCodeLine{00714\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\ postTree\ !=\ \textcolor{keyword}{nullptr}\ )}
+\DoxyCodeLine{00715\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00716\ \ \ \ \ \ \ \ \ \ \ inputFileDef.mcmcProc\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classMCMCProcessor}{MCMCProcessor}}(inputFileDef.fileName);}
+\DoxyCodeLine{00717\ \ \ \ \ \ \ \ \ \ \ inputFileDef.mcmcProc-\/>Initialise();}
+\DoxyCodeLine{00718\ }
+\DoxyCodeLine{00719\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}\ \ -\/\ FOUND!"{}});}
+\DoxyCodeLine{00720\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00721\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00722\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00723\ \ \ \ \ }
+\DoxyCodeLine{00724\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\ postTree\ !=\ \textcolor{keyword}{nullptr}\ )}
+\DoxyCodeLine{00725\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00726\ \ \ \ \ \ \ \ \ inputFileDef.posteriorTree\ =\ postTree;}
+\DoxyCodeLine{00727\ \ \ \ \ \ \ \ \ inputFileDef.nMCMCentries\ =\ int(postTree-\/>GetEntries());}
+\DoxyCodeLine{00728\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00729\ \ \ \ \ \}}
+\DoxyCodeLine{00730\ }
+\DoxyCodeLine{00731\ \ \ \ \ \textcolor{keywordflow}{if}\ (printThoughts)}
+\DoxyCodeLine{00732\ \ \ \ \ \{}
+\DoxyCodeLine{00733\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}....Searching\ for\ MCMC\ related\ things"{}});}
+\DoxyCodeLine{00734\ \ \ \ \ \}}
+\DoxyCodeLine{00735\ \ \ \ \ }
+\DoxyCodeLine{00736\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ num1dPosteriors\ =\ 0;}
+\DoxyCodeLine{00737\ \ \ \ \ std::vector<std::string>\ enabled1dPosteriorParams;}
+\DoxyCodeLine{00738\ }
+\DoxyCodeLine{00739\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ numMCMCchainParams\ =\ 0;}
+\DoxyCodeLine{00740\ \ \ \ \ std::vector<std::string>\ enabledMCMCchainParams;}
+\DoxyCodeLine{00741\ }
+\DoxyCodeLine{00742\ \ \ \ \ \textcolor{keywordflow}{for}\ (\ \textcolor{keyword}{const}\ std::string\ \&parameter\ :\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a3915837631cc08351a34cb135b0bb351}{\_knownParameters}}\ )}
+\DoxyCodeLine{00743\ \ \ \ \ \{}
+\DoxyCodeLine{00744\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}\ \ \ \ \ -\/\ for\ \{\}"{}},\ parameter);}
+\DoxyCodeLine{00745\ \ \ \ \ \ \ \textcolor{comment}{//\ check\ for\ 1d\ post\ processing\ posterior.q}}
+\DoxyCodeLine{00746\ \ \ \ \ \ \ inputFileDef.availableParams\_map\_1dPosteriors[parameter]\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00747\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\ thisFitterSpec\_config[\textcolor{stringliteral}{"{}1dPosteriors"{}}]\ \&\&\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a479520c576d5f58f6db5c28133ad1714}{find1dPosterior}}(inputFileDef,\ parameter,\ fitter)\ )}
+\DoxyCodeLine{00748\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00749\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}\ \ \ \ \ \ \ Found\ 1d\ processed\ posterior!"{}});}
+\DoxyCodeLine{00750\ \ \ \ \ \ \ \ \ enabled1dPosteriorParams.push\_back(parameter);}
+\DoxyCodeLine{00751\ \ \ \ \ \ \ \ \ num1dPosteriors++;}
+\DoxyCodeLine{00752\ \ \ \ \ \ \ \ \ inputFileDef.availableParams\_map\_1dPosteriors[parameter]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00753\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00754\ \ \ \ \ \ \ \textcolor{comment}{//\ now\ check\ for\ parameters\ in\ chain\ }}
+\DoxyCodeLine{00755\ \ \ \ \ \ \ inputFileDef.availableParams\_map\_MCMCchain[parameter]\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00756\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\ thisFitterSpec\_config[\textcolor{stringliteral}{"{}MCMCsteps"{}}]\ \&\&\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_ab547af49427a637364a6d58f484c6826}{findRawChainSteps}}(inputFileDef,\ parameter,\ fitter)\ )}
+\DoxyCodeLine{00757\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00758\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}\ \ \ \ \ \ \ Found\ raw\ MCMC\ steps!"{}});}
+\DoxyCodeLine{00759\ \ \ \ \ \ \ \ \ enabledMCMCchainParams.push\_back(parameter);}
+\DoxyCodeLine{00760\ \ \ \ \ \ \ \ \ numMCMCchainParams++;}
+\DoxyCodeLine{00761\ \ \ \ \ \ \ \ \ inputFileDef.availableParams\_map\_MCMCchain[parameter]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00762\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00763\ \ \ \ \ \}}
+\DoxyCodeLine{00764\ }
+\DoxyCodeLine{00765\ \ \ \ \ \textcolor{keywordflow}{if}\ \ (num1dPosteriors\ >\ 0\ )}
+\DoxyCodeLine{00766\ \ \ \ \ \{}
+\DoxyCodeLine{00767\ \ \ \ \ \ \ foundFitter\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00768\ \ \ \ \ \ \ inputFileDef.has1dPosteriors\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00769\ \ \ \ \ \ \ inputFileDef.availableParams\_1dPosteriors\ =\ enabled1dPosteriorParams;}
+\DoxyCodeLine{00770\ }
+\DoxyCodeLine{00771\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (printThoughts)}
+\DoxyCodeLine{00772\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}........\ Found\ \{\}\ 1d\ processed\ posteriors"{}},\ num1dPosteriors);}
+\DoxyCodeLine{00773\ \ \ \ \ \}}
+\DoxyCodeLine{00774\ \ \ \ \ \textcolor{keywordflow}{if}\ (\ numMCMCchainParams\ >\ 0\ )}
+\DoxyCodeLine{00775\ \ \ \ \ \{}
+\DoxyCodeLine{00776\ \ \ \ \ \ \ foundFitter\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00777\ \ \ \ \ \ \ inputFileDef.hasMCMCchain\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00778\ \ \ \ \ \ \ inputFileDef.availableParams\_MCMCchain\ =\ enabledMCMCchainParams;}
+\DoxyCodeLine{00779\ }
+\DoxyCodeLine{00780\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (printThoughts)}
+\DoxyCodeLine{00781\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}........\ Found\ \{\}\ parameters\ in\ MCMC\ chain"{}},\ numMCMCchainParams);}
+\DoxyCodeLine{00782\ \ \ \ \ \}}
+\DoxyCodeLine{00783\ }
+\DoxyCodeLine{00784\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00785\ \textcolor{comment}{\ \ \ \ switch\ (i)\ \{}}
+\DoxyCodeLine{00786\ \textcolor{comment}{\ \ \ \ \ \ \ \ //\ any\ other\ weird\ fitter\ specific\ conditions/\ edge\ cases\ should\ go\ in\ here}}
+\DoxyCodeLine{00787\ \textcolor{comment}{\ \ \ \ \}}}
+\DoxyCodeLine{00788\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00789\ }
+\DoxyCodeLine{00790\ \ \ \ \ \textcolor{keywordflow}{if}\ (foundFitter)}
+\DoxyCodeLine{00791\ \ \ \ \ \{}
+\DoxyCodeLine{00792\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (printThoughts)}
+\DoxyCodeLine{00793\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00794\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}This\ is\ a\ \{\}\ file!\(\backslash\)n"{}},\ fitter);}
+\DoxyCodeLine{00795\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00796\ \ \ \ \ \ \ inputFileDef.fitter\ =\ fitter;}
+\DoxyCodeLine{00797\ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00798\ \ \ \ \ \}}
+\DoxyCodeLine{00799\ \ \ \}}
+\DoxyCodeLine{00800\ }
+\DoxyCodeLine{00801\ \ \ \textcolor{comment}{//\ if\ we\ didn't\ return\ above\ then\ the\ fitter\ type\ wasn't\ found}}
+\DoxyCodeLine{00802\ \ \ \textcolor{keywordflow}{if}\ (printThoughts)}
+\DoxyCodeLine{00803\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_ad5b2eb6377721e3ac95def22c2386bb1}{MACH3LOG\_WARN}}(\textcolor{stringliteral}{"{}I\ don't\ know\ what\ kinda\ fitter\ this\ came\ from,\ will\ proceed\ with\ caution"{}});}
+\DoxyCodeLine{00804\ \ \ inputFileDef.fitter\ =\ \textcolor{stringliteral}{"{}UNKNOWN\_FITTER"{}};}
+\DoxyCodeLine{00805\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_a479520c576d5f58f6db5c28133ad1714}\label{classMaCh3Plotting_1_1InputManager_a479520c576d5f58f6db5c28133ad1714}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!find1dPosterior@{find1dPosterior}}
+\index{find1dPosterior@{find1dPosterior}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{find1dPosterior()}{find1dPosterior()}}
+{\footnotesize\ttfamily bool Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::find1d\+Posterior (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMaCh3Plotting_1_1InputFile}{Input\+File}} \&}]{input\+File\+Def,  }\item[{const std\+::string \&}]{parameter,  }\item[{std\+::string \&}]{fitter,  }\item[{bool}]{set\+File\+Data = {\ttfamily false} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8cpp_source_l00450}{450}} of file \mbox{\hyperlink{inputManager_8cpp_source}{input\+Manager.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00450\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00451\ \ \ }
+\DoxyCodeLine{00452\ \ \ \textcolor{keywordtype}{bool}\ wasFound\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00453\ \ \ }
+\DoxyCodeLine{00454\ \ \ YAML::Node\ thisFitterSpec\_config\ =\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_ad2e204406fd336e7fcf00fafdff87703}{\_fitterSpecConfig}}[fitter];}
+\DoxyCodeLine{00455\ }
+\DoxyCodeLine{00456\ \ \ \textcolor{keywordflow}{if}\ (\ thisFitterSpec\_config[\textcolor{stringliteral}{"{}1dPosteriors"{}}]\ )\ \{}
+\DoxyCodeLine{00457\ \ \ \ \ std::vector<std::string>\ rawLocations\ =\ thisFitterSpec\_config[\textcolor{stringliteral}{"{}1dPosteriors"{}}][\textcolor{stringliteral}{"{}location"{}}].as<std::vector<std::string>>();}
+\DoxyCodeLine{00458\ }
+\DoxyCodeLine{00459\ \ \ \ \ \textcolor{keywordflow}{for}\ (\ \textcolor{keyword}{const}\ std::string\ \&rawLoc\ :\ rawLocations)}
+\DoxyCodeLine{00460\ \ \ \ \ \{}
+\DoxyCodeLine{00461\ \ \ \ \ \ \ std::shared\_ptr<TH1D>\ posterior1d\ =\ std::static\_pointer\_cast<TH1D>(\mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a7e9f932d7591cbdd6c99c56c2da75f85}{findRootObject}}(inputFileDef,\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a041b9611ce812326995c54f8c73c4867}{parseLocation}}(rawLoc,\ fitter,\ \mbox{\hyperlink{namespaceMaCh3Plotting_a4152b51a260d6a18f41b3a22aa2a6b75a9b27490997d0011b93a1bb7d063edb0a}{kMCMC}},\ parameter)));}
+\DoxyCodeLine{00462\ }
+\DoxyCodeLine{00463\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\ posterior1d\ !=\ \textcolor{keyword}{nullptr}\ )}
+\DoxyCodeLine{00464\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00465\ \ \ \ \ \ \ \ \ wasFound\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00466\ }
+\DoxyCodeLine{00467\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\ setFileData\ )}
+\DoxyCodeLine{00468\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00469\ \ \ \ \ \ \ \ \ \ \ inputFileDef.posteriors1d\_map[parameter]\ =\ std::make\_shared<TGraph>(posterior1d.get());}
+\DoxyCodeLine{00470\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00471\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00472\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00473\ \ \ \ \ \}}
+\DoxyCodeLine{00474\ }
+\DoxyCodeLine{00475\ \ \ \}}
+\DoxyCodeLine{00476\ }
+\DoxyCodeLine{00477\ \ \ \textcolor{keywordflow}{return}\ wasFound;}
+\DoxyCodeLine{00478\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_ae0689fdfe514534e094f0e87fe69539f}\label{classMaCh3Plotting_1_1InputManager_ae0689fdfe514534e094f0e87fe69539f}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!findBySampleLLH@{findBySampleLLH}}
+\index{findBySampleLLH@{findBySampleLLH}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{findBySampleLLH()}{findBySampleLLH()}}
+{\footnotesize\ttfamily bool Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::find\+By\+Sample\+LLH (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMaCh3Plotting_1_1InputFile}{Input\+File}} \&}]{input\+File\+Def,  }\item[{const std\+::string \&}]{parameter,  }\item[{std\+::string \&}]{fitter,  }\item[{const std\+::string \&}]{sample,  }\item[{bool}]{set\+Input\+File\+Scan = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8cpp_source_l00359}{359}} of file \mbox{\hyperlink{inputManager_8cpp_source}{input\+Manager.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00360\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00361\ }
+\DoxyCodeLine{00362\ \ \ YAML::Node\ thisFitterSpec\_config\ =\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_ad2e204406fd336e7fcf00fafdff87703}{\_fitterSpecConfig}}[fitter];}
+\DoxyCodeLine{00363\ }
+\DoxyCodeLine{00364\ \ \ \textcolor{comment}{//\ EM:\ Get\ where\ the\ by\ sample\ LLH\ scan\ for\ this\ parameter\ *should*\ live\ if\ it\ exists}}
+\DoxyCodeLine{00365\ \ \ YAML::Node\ testLLHConfig\ =\ thisFitterSpec\_config[\textcolor{stringliteral}{"{}bySample\_LLH"{}}];}
+\DoxyCodeLine{00366\ \ \ std::vector<std::string>\ testLLHRawLocations\ =}
+\DoxyCodeLine{00367\ \ \ \ \ \ \ testLLHConfig[\textcolor{stringliteral}{"{}location"{}}].as<std::vector<std::string>>();}
+\DoxyCodeLine{00368\ }
+\DoxyCodeLine{00369\ \ \ std::string\ LLHObjType\ =\ thisFitterSpec\_config[\textcolor{stringliteral}{"{}LLHObjectType"{}}].as<std::string>();}
+\DoxyCodeLine{00370\ }
+\DoxyCodeLine{00371\ \ \ \textcolor{comment}{//\ EM:\ Now\ look\ for\ the\ parameter\ in\ this\ folder}}
+\DoxyCodeLine{00372\ \ \ std::shared\_ptr<TObject>\ LLHObj\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00373\ \ \ \textcolor{keywordflow}{for}\ (std::string\ rawLocation\ :\ testLLHRawLocations)}
+\DoxyCodeLine{00374\ \ \ \{}
+\DoxyCodeLine{00375\ \ \ \ \ LLHObj\ =}
+\DoxyCodeLine{00376\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a7e9f932d7591cbdd6c99c56c2da75f85}{findRootObject}}(inputFileDef,\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a041b9611ce812326995c54f8c73c4867}{parseLocation}}(rawLocation,\ fitter,\ \mbox{\hyperlink{namespaceMaCh3Plotting_a4152b51a260d6a18f41b3a22aa2a6b75a439e10ed490e0eae34588a3e8005c619}{kLLH}},\ parameter,\ sample));}
+\DoxyCodeLine{00377\ \ \ \ \ \textcolor{keywordflow}{if}\ (LLHObj\ !=\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00378\ \ \ \ \ \{}
+\DoxyCodeLine{00379\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00380\ \ \ \ \ \}}
+\DoxyCodeLine{00381\ \ \ \}}
+\DoxyCodeLine{00382\ }
+\DoxyCodeLine{00383\ \ \ \textcolor{comment}{//\ EM:\ If\ it's\ not\ in\ there\ we\ can\ return\ here}}
+\DoxyCodeLine{00384\ \ \ \textcolor{keywordflow}{if}\ (LLHObj\ ==\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00385\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00386\ }
+\DoxyCodeLine{00387\ \ \ \textcolor{comment}{//\ EM:\ If\ specified,\ we\ set\ the\ object\ in\ the\ InputFile\ object}}
+\DoxyCodeLine{00388\ \ \ \textcolor{keywordflow}{if}\ (setInputFileScan)}
+\DoxyCodeLine{00389\ \ \ \{}
+\DoxyCodeLine{00390\ \ \ \ \ std::shared\_ptr<TGraph>\ LLHGraph\ =\ std::make\_shared<TGraph>();}
+\DoxyCodeLine{00391\ }
+\DoxyCodeLine{00392\ \ \ \ \ \textcolor{keywordflow}{if}\ (LLHObjType\ ==\ \textcolor{stringliteral}{"{}TH1D"{}})}
+\DoxyCodeLine{00393\ \ \ \ \ \{}
+\DoxyCodeLine{00394\ \ \ \ \ \ \ LLHGraph\ =\ std::make\_shared<TGraph>(\textcolor{keyword}{static\_cast<}TH1D*\textcolor{keyword}{>}(LLHObj.get()));}
+\DoxyCodeLine{00395\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (LLHObjType\ ==\ \textcolor{stringliteral}{"{}TGraph"{}})}
+\DoxyCodeLine{00396\ \ \ \ \ \{}
+\DoxyCodeLine{00397\ \ \ \ \ \ \ LLHGraph\ =\ std::shared\_ptr<TGraph>(\textcolor{keyword}{static\_cast<}TGraph*\textcolor{keyword}{>}(LLHObj-\/>Clone()));}
+\DoxyCodeLine{00398\ \ \ \ \ \}\ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00399\ \ \ \ \ \{}
+\DoxyCodeLine{00400\ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_\ ,\ \_\_LINE\_\_,\ \textcolor{stringliteral}{"{}uknown\ type\ of\ LLH\ object\ specified:\ "{}}\ +\ LLHObjType);}
+\DoxyCodeLine{00401\ \ \ \ \ \}}
+\DoxyCodeLine{00402\ }
+\DoxyCodeLine{00403\ \ \ \ \ inputFileDef.LLHScansBySample\_map[sample][parameter]\ =\ LLHGraph;}
+\DoxyCodeLine{00404\ \ \ \}}
+\DoxyCodeLine{00405\ }
+\DoxyCodeLine{00406\ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00407\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_ab379210534dceaf26a6b3506fd47da27}\label{classMaCh3Plotting_1_1InputManager_ab379210534dceaf26a6b3506fd47da27}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!findPostFitParamError@{findPostFitParamError}}
+\index{findPostFitParamError@{findPostFitParamError}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{findPostFitParamError()}{findPostFitParamError()}}
+{\footnotesize\ttfamily bool Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::find\+Post\+Fit\+Param\+Error (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMaCh3Plotting_1_1InputFile}{Input\+File}} \&}]{input\+File\+Def,  }\item[{const std\+::string \&}]{parameter,  }\item[{std\+::string \&}]{fitter,  }\item[{const std\+::string \&}]{error\+Type,  }\item[{bool}]{set\+Input\+File\+Error = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8cpp_source_l00480}{480}} of file \mbox{\hyperlink{inputManager_8cpp_source}{input\+Manager.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00482\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00483\ \ \ std::string\ specificName\ =\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_aa3a91c2525f5aea76ba182b3be4b2b2a}{getFitterSpecificParamName}}(fitter,\ \mbox{\hyperlink{namespaceMaCh3Plotting_a4152b51a260d6a18f41b3a22aa2a6b75a0dd2e9b7a6fcbfa5724ac5e17ea0eeaf}{kPostFit}},\ parameter);}
+\DoxyCodeLine{00484\ \ \ YAML::Node\ thisFitterSpec\_config\ =\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_ad2e204406fd336e7fcf00fafdff87703}{\_fitterSpecConfig}}[fitter];}
+\DoxyCodeLine{00485\ }
+\DoxyCodeLine{00486\ \ \ \textcolor{comment}{//\ EM:\ Get\ which\ hist\ this\ parameter\ lives\ in\ from\ the\ config}}
+\DoxyCodeLine{00487\ \ \ YAML::Node\ postFitErrorTypes\ =\ thisFitterSpec\_config[\textcolor{stringliteral}{"{}postFitErrorTypes"{}}];}
+\DoxyCodeLine{00488\ \ \ YAML::Node\ specificErrorType\ =\ postFitErrorTypes[errorType];}
+\DoxyCodeLine{00489\ \ \ std::vector<std::string>\ postFitLocations\ =}
+\DoxyCodeLine{00490\ \ \ \ \ \ \ specificErrorType[\textcolor{stringliteral}{"{}location"{}}].as<std::vector<std::string>>();}
+\DoxyCodeLine{00491\ }
+\DoxyCodeLine{00492\ \ \ \textcolor{comment}{//\ EM:\ If\ the\ parameter\ has\ a\ specified\ list\ of\ locations\ then\ override\ the\ default\ one}}
+\DoxyCodeLine{00493\ \ \ std::vector<std::string>\ postFitLocations\_override;}
+\DoxyCodeLine{00494\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a942677ee3a65b1d4b48ce474dddaf3b1}{getFitterSpecificParamOption}}<std::vector<std::string>>(fitter,\ \textcolor{stringliteral}{"{}postFitLoc"{}},}
+\DoxyCodeLine{00495\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ postFitLocations\_override,\ parameter))}
+\DoxyCodeLine{00496\ \ \ \{}
+\DoxyCodeLine{00497\ \ \ \ \ postFitLocations\ =\ postFitLocations\_override;}
+\DoxyCodeLine{00498\ \ \ \}}
+\DoxyCodeLine{00499\ }
+\DoxyCodeLine{00500\ \ \ \textcolor{keywordflow}{for}\ (std::string\ postFitLoc\ :\ postFitLocations)}
+\DoxyCodeLine{00501\ \ \ \{}
+\DoxyCodeLine{00502\ \ \ \ \ std::shared\_ptr<TH1D>\ postFitErrors\ =\ std::static\_pointer\_cast<TH1D>(\mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a7e9f932d7591cbdd6c99c56c2da75f85}{findRootObject}}(inputFileDef,\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a041b9611ce812326995c54f8c73c4867}{parseLocation}}(postFitLoc,\ fitter,\ \mbox{\hyperlink{namespaceMaCh3Plotting_a4152b51a260d6a18f41b3a22aa2a6b75a0dd2e9b7a6fcbfa5724ac5e17ea0eeaf}{kPostFit}},\ parameter)));}
+\DoxyCodeLine{00503\ }
+\DoxyCodeLine{00504\ \ \ \ \ \textcolor{comment}{//\ EM:\ the\ postfit\ hist\ for\ this\ parameter\ isn't\ in\ this\ file}}
+\DoxyCodeLine{00505\ \ \ \ \ \textcolor{keywordflow}{if}\ (postFitErrors\ ==\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00506\ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00507\ }
+\DoxyCodeLine{00508\ \ \ \ \ \textcolor{comment}{//\ EM:\ Loop\ through\ the\ hist\ to\ see\ if\ it\ contains\ the\ parameter\ we're\ looking\ for}}
+\DoxyCodeLine{00509\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ binIdx\ =\ 0;\ binIdx\ <=\ postFitErrors-\/>GetNbinsX();\ binIdx++)}
+\DoxyCodeLine{00510\ \ \ \ \ \{}
+\DoxyCodeLine{00511\ \ \ \ \ \ \ std::string\ binLabel\ =\ std::string(postFitErrors-\/>GetXaxis()-\/>GetBinLabel(binIdx));}
+\DoxyCodeLine{00512\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a008c0e9535ebe6b0fa6f8e62737add3c}{strEndsWith}}(binLabel,\ specificName))}
+\DoxyCodeLine{00513\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00514\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (setInputFileError)}
+\DoxyCodeLine{00515\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00516\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ EM:\ if\ specified,\ we\ fill\ the\ postfit\ error\ TH1D\ in\ the\ provided\ InputFile\ object}}
+\DoxyCodeLine{00517\ \ \ \ \ \ \ \ \ \ \ inputFileDef.postFitErrors[errorType][parameter]\ =\ postFitErrors-\/>GetBinError(binIdx);}
+\DoxyCodeLine{00518\ \ \ \ \ \ \ \ \ \ \ inputFileDef.postFitValues[errorType][parameter]\ =\ postFitErrors-\/>GetBinContent(binIdx);}
+\DoxyCodeLine{00519\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00520\ }
+\DoxyCodeLine{00521\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00522\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00523\ \ \ \ \ \}}
+\DoxyCodeLine{00524\ \ \ \}}
+\DoxyCodeLine{00525\ \ \ \textcolor{comment}{//\ EM:\ Didn't\ find\ the\ parameter\ in\ any\ of\ the\ specified\ locations}}
+\DoxyCodeLine{00526\ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00527\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_ab547af49427a637364a6d58f484c6826}\label{classMaCh3Plotting_1_1InputManager_ab547af49427a637364a6d58f484c6826}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!findRawChainSteps@{findRawChainSteps}}
+\index{findRawChainSteps@{findRawChainSteps}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{findRawChainSteps()}{findRawChainSteps()}}
+{\footnotesize\ttfamily bool Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::find\+Raw\+Chain\+Steps (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMaCh3Plotting_1_1InputFile}{Input\+File}} \&}]{input\+File\+Def,  }\item[{const std\+::string \&}]{parameter,  }\item[{std\+::string \&}]{fitter,  }\item[{bool}]{set\+Input\+Branch = {\ttfamily false} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8cpp_source_l00410}{410}} of file \mbox{\hyperlink{inputManager_8cpp_source}{input\+Manager.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00410\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00411\ \ \ \textcolor{comment}{//\ we'll\ assume\ for\ now\ that\ the\ chain\ is\ in\ the\ form\ of\ a\ TTree\ and\ the\ branch\ names\ are\ parameter\ names}}
+\DoxyCodeLine{00412\ }
+\DoxyCodeLine{00413\ \ \ \textcolor{keywordtype}{bool}\ wasFound\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00414\ }
+\DoxyCodeLine{00415\ \ \ \textcolor{comment}{//\ make\ sure\ that\ the\ filedef\ object\ has\ all\ the\ necessary\ stuff\ to\ read\ from\ the\ posterior\ tree}}
+\DoxyCodeLine{00416\ \ \ \textcolor{keywordflow}{if}\ (\ (inputFileDef.mcmcProc\ !=\ \textcolor{keyword}{nullptr})\ \&\&\ (inputFileDef.posteriorTree\ !=\ \textcolor{keyword}{nullptr})\ )}
+\DoxyCodeLine{00417\ \ \ \{}
+\DoxyCodeLine{00418\ }
+\DoxyCodeLine{00419\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<TString>\ branchNames\ =\ inputFileDef.mcmcProc-\/>GetBranchNames();}
+\DoxyCodeLine{00420\ }
+\DoxyCodeLine{00421\ \ \ \ \ std::string\ specificName\ =\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_aa3a91c2525f5aea76ba182b3be4b2b2a}{getFitterSpecificParamName}}(fitter,\ \mbox{\hyperlink{namespaceMaCh3Plotting_a4152b51a260d6a18f41b3a22aa2a6b75a9b27490997d0011b93a1bb7d063edb0a}{kMCMC}},\ parameter);}
+\DoxyCodeLine{00422\ }
+\DoxyCodeLine{00423\ \ \ \ \ \textcolor{comment}{//\ loop\ over\ possible\ parameters\ and\ compare\ names}}
+\DoxyCodeLine{00424\ \ \ \ \ \textcolor{keywordflow}{for}\ (\ \textcolor{keywordtype}{int}\ paramIdx\ =\ 0;\ paramIdx\ <\ inputFileDef.mcmcProc-\/>GetNParams()\ -\/1\ ;\ paramIdx\ ++\ )}
+\DoxyCodeLine{00425\ \ \ \ \ \{}
+\DoxyCodeLine{00426\ \ \ \ \ \ \ TString\ title;}
+\DoxyCodeLine{00427\ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ prior,\ priorError;\ \textcolor{comment}{//\ <-\/\ will\ be\ discarded}}
+\DoxyCodeLine{00428\ \ \ \ \ \ \ inputFileDef.mcmcProc-\/>GetNthParameter(paramIdx,\ prior,\ priorError,\ title);}
+\DoxyCodeLine{00429\ }
+\DoxyCodeLine{00430\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a008c0e9535ebe6b0fa6f8e62737add3c}{strEndsWith}}(title.Data(),\ specificName)\ )}
+\DoxyCodeLine{00431\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00432\ \ \ \ \ \ \ \ \ wasFound\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00433\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\ setInputBranch\ )}
+\DoxyCodeLine{00434\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00435\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ EM:\ should\ probably\ use\ MCMCProcessor\ for\ this\ so\ we\ can\ use\ caching,\ gpu\ etc.}}
+\DoxyCodeLine{00436\ \ \ \ \ \ \ \ \ \ \ inputFileDef.MCMCstepParamsMap[parameter]\ =\ \textcolor{keyword}{new}\ double(\ \mbox{\hyperlink{Structs_8h_aa2920b946077e971486eaf1b49101f01}{\_BAD\_DOUBLE\_}}\ );\ \textcolor{comment}{//\ <-\/\ initialise\ the\ parameter\ step\ values\ }}
+\DoxyCodeLine{00437\ \ \ \ \ \ \ \ \ \ \ inputFileDef.posteriorTree-\/>SetBranchAddress(\ branchNames[paramIdx],\ inputFileDef.MCMCstepParamsMap.at(parameter)\ );}
+\DoxyCodeLine{00438\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00439\ }
+\DoxyCodeLine{00440\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00441\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00442\ \ \ \ \ \}}
+\DoxyCodeLine{00443\ \ \ \}}
+\DoxyCodeLine{00444\ }
+\DoxyCodeLine{00445\ \ \ \textcolor{keywordflow}{return}\ wasFound;}
+\DoxyCodeLine{00446\ }
+\DoxyCodeLine{00447\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_a7e9f932d7591cbdd6c99c56c2da75f85}\label{classMaCh3Plotting_1_1InputManager_a7e9f932d7591cbdd6c99c56c2da75f85}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!findRootObject@{findRootObject}}
+\index{findRootObject@{findRootObject}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{findRootObject()}{findRootObject()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ TObject $>$ Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::find\+Root\+Object (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile}{Input\+File}} \&}]{file\+Def,  }\item[{const std\+::vector$<$ std\+::string $>$ \&}]{location\+Vec }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8cpp_source_l00295}{295}} of file \mbox{\hyperlink{inputManager_8cpp_source}{input\+Manager.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00297\ }
+\DoxyCodeLine{00298\ \ \ std::shared\_ptr<TObject>\ \textcolor{keywordtype}{object}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00299\ }
+\DoxyCodeLine{00300\ \ \ \textcolor{comment}{//\ if\ vector\ only\ has\ one\ element,\ just\ interpret\ it\ as\ the\ absolute\ path\ to\ the\ object}}
+\DoxyCodeLine{00301\ \ \ \textcolor{keywordflow}{if}\ (locationVec.size()\ ==\ 1)}
+\DoxyCodeLine{00302\ \ \ \{}
+\DoxyCodeLine{00303\ \ \ \ \ \textcolor{keywordtype}{object}\ =\ std::shared\_ptr<TObject>(fileDef.file-\/>Get(locationVec[0].c\_str()));}
+\DoxyCodeLine{00304\ \ \ \}}
+\DoxyCodeLine{00305\ }
+\DoxyCodeLine{00306\ \ \ \textcolor{comment}{//\ if\ vector\ has\ two\ elements,\ interpret\ the\ first\ as\ the\ directory\ and\ the\ second\ as\ a\ string\ to}}
+\DoxyCodeLine{00307\ \ \ \textcolor{comment}{//\ match\ with\ the\ end\ of\ the\ objects\ in\ the\ file}}
+\DoxyCodeLine{00308\ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (locationVec.size()\ ==\ 2)}
+\DoxyCodeLine{00309\ \ \ \{}
+\DoxyCodeLine{00310\ \ \ \ \ TDirectoryFile\ *directory\ =\ fileDef.file-\/>Get<TDirectoryFile>(locationVec[0].c\_str());}
+\DoxyCodeLine{00311\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ nMatchingObjects\ =\ 0;}
+\DoxyCodeLine{00312\ }
+\DoxyCodeLine{00313\ \ \ \ \ \textcolor{comment}{//\ let's\ make\ sure\ that\ the\ directory\ itself\ exists}}
+\DoxyCodeLine{00314\ \ \ \ \ \textcolor{keywordflow}{if}\ (directory\ ==\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00315\ \ \ \ \ \{}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \textcolor{keywordtype}{object}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00317\ \ \ \ \ \}}
+\DoxyCodeLine{00318\ }
+\DoxyCodeLine{00319\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00320\ \ \ \ \ \{}
+\DoxyCodeLine{00321\ \ \ \ \ \ \ \textcolor{comment}{//\ loop\ through\ the\ keys\ in\ the\ directory\ and\ find\ objects\ whose\ name\ matches\ the\ specified}}
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \textcolor{comment}{//\ pattern}}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ TIter\ next(directory-\/>GetListOfKeys());}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (TKey\ *key\ =\ \textcolor{keyword}{static\_cast<}TKey*\textcolor{keyword}{>}(next()))}
+\DoxyCodeLine{00325\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00326\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a008c0e9535ebe6b0fa6f8e62737add3c}{strEndsWith}}(std::string(key-\/>GetName()),\ locationVec[1]))}
+\DoxyCodeLine{00327\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00328\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{object}\ =\ std::shared\_ptr<TObject>(directory-\/>Get(key-\/>GetName()));}
+\DoxyCodeLine{00329\ \ \ \ \ \ \ \ \ \ \ nMatchingObjects++;}
+\DoxyCodeLine{00330\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00331\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00332\ \ \ \ \ \}}
+\DoxyCodeLine{00333\ }
+\DoxyCodeLine{00334\ \ \ \ \ \textcolor{comment}{//\ check\ that\ only\ one\ object\ matched\ the\ pattern}}
+\DoxyCodeLine{00335\ \ \ \ \ \textcolor{keywordflow}{if}\ (nMatchingObjects\ >\ 1)}
+\DoxyCodeLine{00336\ \ \ \ \ \{}
+\DoxyCodeLine{00337\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a07ff6d6a15b24f94afc88a1b89779beb}{MACH3LOG\_CRITICAL}}(\textcolor{stringliteral}{"{}Too\ many\ objects\ match\ the\ pattern\ specified\ by\ \{\}\ \{\}"{}},\ locationVec[0],\ locationVec.size()==2\ ?\ locationVec[1]\ :\ \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00338\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a07ff6d6a15b24f94afc88a1b89779beb}{MACH3LOG\_CRITICAL}}(\textcolor{stringliteral}{"{}Found\ \{\}\ matching\ objects,\ should\ just\ be\ one"{}},\ nMatchingObjects);}
+\DoxyCodeLine{00339\ }
+\DoxyCodeLine{00340\ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_\ ,\ \_\_LINE\_\_\ );}
+\DoxyCodeLine{00341\ \ \ \ \ \}}
+\DoxyCodeLine{00342\ }
+\DoxyCodeLine{00343\ \ \ \}}
+\DoxyCodeLine{00344\ }
+\DoxyCodeLine{00345\ \ \ \textcolor{comment}{//\ Vector\ too\ big!!}}
+\DoxyCodeLine{00346\ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00347\ \ \ \{}
+\DoxyCodeLine{00348\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a07ff6d6a15b24f94afc88a1b89779beb}{MACH3LOG\_CRITICAL}}(\textcolor{stringliteral}{"{}Invalid\ object\ location\ vector"{}});}
+\DoxyCodeLine{00349\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a07ff6d6a15b24f94afc88a1b89779beb}{MACH3LOG\_CRITICAL}}(\textcolor{stringliteral}{"{}Should\ have\ two\ elements:\ [\ (directory\ to\ look\ in),\ (end\ of\ the\ name\ of\ the\ object)\ ]"{}});}
+\DoxyCodeLine{00350\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a07ff6d6a15b24f94afc88a1b89779beb}{MACH3LOG\_CRITICAL}}(\textcolor{stringliteral}{"{}Or\ one\ element\ that\ is\ just\ the\ absolute\ path\ to\ the\ object"{}});}
+\DoxyCodeLine{00351\ \ \ \ \ }
+\DoxyCodeLine{00352\ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_\ ,\ \_\_LINE\_\_\ );}
+\DoxyCodeLine{00353\ \ \ \}}
+\DoxyCodeLine{00354\ }
+\DoxyCodeLine{00355\ \ \ \textcolor{keywordflow}{return}\ object;}
+\DoxyCodeLine{00356\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_a8d057975eff09472e51740e57cbb148d}\label{classMaCh3Plotting_1_1InputManager_a8d057975eff09472e51740e57cbb148d}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!get1dPosterior@{get1dPosterior}}
+\index{get1dPosterior@{get1dPosterior}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{get1dPosterior()}{get1dPosterior()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ double $>$ $>$ Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::get1d\+Posterior (\begin{DoxyParamCaption}\item[{int}]{file\+Num,  }\item[{std\+::string}]{param\+Name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the 1d posterior particular parameter from a particular input file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Num} & The index of the file you want the data from. \\
+\hline
+{\em param\+Name} & The parameter you want the information about. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of vectors containing the posterior data. First entry is x axis (i.\+e. the parameter values), 2nd is y axis 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00334}{334}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00334\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00335\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a7707e97f306066bd39660088d2d08c93}{getEnabled1dPosteriors}}(fileNum,\ paramName))}
+\DoxyCodeLine{00336\ \ \ \ \ \{}
+\DoxyCodeLine{00337\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_ad5b2eb6377721e3ac95def22c2386bb1}{MACH3LOG\_WARN}}(\textcolor{stringliteral}{"{}file\ at\ index\ \{\}\ does\ not\ have\ a\ 1d\ posterior\ for\ parameter\ \{\}"{}},\ fileNum,\ paramName);}
+\DoxyCodeLine{00338\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_ad5b2eb6377721e3ac95def22c2386bb1}{MACH3LOG\_WARN}}(\textcolor{stringliteral}{"{}am\ returning\ an\ empty\ vector"{}});}
+\DoxyCodeLine{00339\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::vector<std::vector<double>>(2);}
+\DoxyCodeLine{00340\ \ \ \ \ \}}
+\DoxyCodeLine{00341\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{group__Utils_gabee3ac13b77811574c1650016e81a229}{TGraphToVector}}(*\mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a29202faed03b0e9a22f2d34bce604793}{\_fileVec}}[fileNum].posteriors1d\_map.at(paramName));}
+\DoxyCodeLine{00342\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_a7707e97f306066bd39660088d2d08c93}\label{classMaCh3Plotting_1_1InputManager_a7707e97f306066bd39660088d2d08c93}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!getEnabled1dPosteriors@{getEnabled1dPosteriors}}
+\index{getEnabled1dPosteriors@{getEnabled1dPosteriors}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{getEnabled1dPosteriors()}{getEnabled1dPosteriors()}}
+{\footnotesize\ttfamily bool Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::get\+Enabled1d\+Posteriors (\begin{DoxyParamCaption}\item[{int}]{file\+Num,  }\item[{std\+::string}]{param\+Name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get whether or not a particular parameter has 1d posteriors in a particular input file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Num} & The index of the file that you would like to know about. \\
+\hline
+{\em param\+Name} & The name of the parameter whose 1d posterior you would like to check for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if scan exists, false if not. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00447}{447}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00447\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00448\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a29202faed03b0e9a22f2d34bce604793}{\_fileVec}}[fileNum].availableParams\_map\_1dPosteriors.at(paramName);}
+\DoxyCodeLine{00449\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_a049bc81681a3f72487a3606d88cd23a8}\label{classMaCh3Plotting_1_1InputManager_a049bc81681a3f72487a3606d88cd23a8}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!getEnabledLLH@{getEnabledLLH}}
+\index{getEnabledLLH@{getEnabledLLH}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{getEnabledLLH()}{getEnabledLLH()}}
+{\footnotesize\ttfamily bool Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::get\+Enabled\+LLH (\begin{DoxyParamCaption}\item[{int}]{file\+Num,  }\item[{std\+::string}]{param\+Name,  }\item[{std\+::string}]{LLHType = {\ttfamily \char`\"{}total\char`\"{}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get whether or not a particular parameter has an LLH scan in a particular input file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Num} & The index of the file that you would like to know about. \\
+\hline
+{\em param\+Name} & The name of the parameter whose LLH scan you would like to check for. \\
+\hline
+{\em LLHType} & The type of likelihood scan you would like to check for, e.\+h. total, prior etc. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if scan exists, false if not. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00420}{420}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00421\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00422\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a29202faed03b0e9a22f2d34bce604793}{\_fileVec}}[fileNum].availableParams\_map\_LLH.at(LLHType).at(paramName);}
+\DoxyCodeLine{00423\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_ae2d12152db0ed06d1d862dad2cb4cc9e}\label{classMaCh3Plotting_1_1InputManager_ae2d12152db0ed06d1d862dad2cb4cc9e}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!getEnabledLLHBySample@{getEnabledLLHBySample}}
+\index{getEnabledLLHBySample@{getEnabledLLHBySample}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{getEnabledLLHBySample()}{getEnabledLLHBySample()}}
+{\footnotesize\ttfamily bool Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::get\+Enabled\+LLHBy\+Sample (\begin{DoxyParamCaption}\item[{int}]{file\+Num,  }\item[{std\+::string}]{param\+Name,  }\item[{std\+::string}]{sample }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get whether or not a particular parameter has an LLH scan in a particular input file for a particular sample. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Num} & The index of the file that you would like to know about. \\
+\hline
+{\em param\+Name} & The name of the parameter whose LLH scan you would like to check for. \\
+\hline
+{\em sample} & The sample to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if scan exists, false if not. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00431}{431}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00431\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00432\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a29202faed03b0e9a22f2d34bce604793}{\_fileVec}}[fileNum].availableParams\_map\_LLHBySample.at(sample).at(paramName);}
+\DoxyCodeLine{00433\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_aeac58645b18dbc0784adc4b44ee0b33b}\label{classMaCh3Plotting_1_1InputManager_aeac58645b18dbc0784adc4b44ee0b33b}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!getEnabledMCMCchain@{getEnabledMCMCchain}}
+\index{getEnabledMCMCchain@{getEnabledMCMCchain}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{getEnabledMCMCchain()}{getEnabledMCMCchain()}}
+{\footnotesize\ttfamily bool Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::get\+Enabled\+MCMCchain (\begin{DoxyParamCaption}\item[{int}]{file\+Num,  }\item[{std\+::string}]{param\+Name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get whether or not a particular parameter has MCMC chain entries in a particular input file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Num} & The index of the file that you would like to know about. \\
+\hline
+{\em param\+Name} & The name of the parameter whose LLH scan you would like to check for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if scan exists, false if not. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00439}{439}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00439\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00440\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a29202faed03b0e9a22f2d34bce604793}{\_fileVec}}[fileNum].availableParams\_map\_MCMCchain.at(paramName);}
+\DoxyCodeLine{00441\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_a2f8f94ca3b6e0d2b34c75dee24b81e49}\label{classMaCh3Plotting_1_1InputManager_a2f8f94ca3b6e0d2b34c75dee24b81e49}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!getFile@{getFile}}
+\index{getFile@{getFile}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{getFile()}{getFile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile}{Input\+File}} const  \& Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::get\+File (\begin{DoxyParamCaption}\item[{int}]{file\+Id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00500}{500}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00500\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a29202faed03b0e9a22f2d34bce604793}{\_fileVec}}[fileId];\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_a24fb21a5f30a5b397feec23d2e04c3d3}\label{classMaCh3Plotting_1_1InputManager_a24fb21a5f30a5b397feec23d2e04c3d3}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!getFitterSpecificOption@{getFitterSpecificOption}}
+\index{getFitterSpecificOption@{getFitterSpecificOption}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{getFitterSpecificOption()}{getFitterSpecificOption()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::get\+Fitter\+Specific\+Option (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{fitter,  }\item[{const std\+::string \&}]{option,  }\item[{T \&}]{ret,  }\item[{const std\+::string \&}]{parameter,  }\item[{YAML\+::\+Node}]{sub\+Config }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00572}{572}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00573\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00574\ \ \ \ \ \textcolor{keywordflow}{if}\ (subConfig[parameter])}
+\DoxyCodeLine{00575\ \ \ \ \ \{}
+\DoxyCodeLine{00576\ }
+\DoxyCodeLine{00577\ \ \ \ \ \ \ \textcolor{comment}{//\ EM:\ this\ is\ config\ definition\ of\ fitter\ specific\ names\ for\ this\ parameter}}
+\DoxyCodeLine{00578\ \ \ \ \ \ \ YAML::Node\ paramTranslation\ =\ subConfig[parameter];}
+\DoxyCodeLine{00579\ }
+\DoxyCodeLine{00580\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (paramTranslation[fitter])}
+\DoxyCodeLine{00581\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00582\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ EM:\ then\ this\ is\ definition\ of\ how\ to\ find\ parameter\ in\ the\ specified\ fitter}}
+\DoxyCodeLine{00583\ \ \ \ \ \ \ \ \ YAML::Node\ fitterParamTranslation\ =\ paramTranslation[fitter];}
+\DoxyCodeLine{00584\ }
+\DoxyCodeLine{00585\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fitterParamTranslation[option])}
+\DoxyCodeLine{00586\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00587\ \ \ \ \ \ \ \ \ \ \ ret\ =\ fitterParamTranslation[option].as<T>();}
+\DoxyCodeLine{00588\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00589\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00590\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00591\ \ \ \ \ \}}
+\DoxyCodeLine{00592\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00593\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_aa3a91c2525f5aea76ba182b3be4b2b2a}\label{classMaCh3Plotting_1_1InputManager_aa3a91c2525f5aea76ba182b3be4b2b2a}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!getFitterSpecificParamName@{getFitterSpecificParamName}}
+\index{getFitterSpecificParamName@{getFitterSpecificParamName}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{getFitterSpecificParamName()}{getFitterSpecificParamName()}}
+{\footnotesize\ttfamily std\+::string Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::get\+Fitter\+Specific\+Param\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{fitter,  }\item[{\mbox{\hyperlink{namespaceMaCh3Plotting_a4152b51a260d6a18f41b3a22aa2a6b75}{file\+Type\+Enum}}}]{file\+Type,  }\item[{const std\+::string \&}]{parameter }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00611}{611}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00612\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00613\ \ \ \ \ std::string\ specificName;}
+\DoxyCodeLine{00614\ \ \ \ \ \textcolor{keywordflow}{if}\ (getFitterSpecificParamOption<std::string>(fitter,\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a487b62643d1a5c63415685d662b7118d}{convertFileTypeNames}}(fileType),}
+\DoxyCodeLine{00615\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ specificName,\ parameter))}
+\DoxyCodeLine{00616\ \ \ \ \ \{}
+\DoxyCodeLine{00617\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ specificName;}
+\DoxyCodeLine{00618\ \ \ \ \ \}}
+\DoxyCodeLine{00619\ \ \ \ \ \textcolor{comment}{//\ EM:\ Default\ to\ just\ return\ the\ specified\ name}}
+\DoxyCodeLine{00620\ \ \ \ \ \textcolor{keywordflow}{return}\ parameter;}
+\DoxyCodeLine{00621\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_a942677ee3a65b1d4b48ce474dddaf3b1}\label{classMaCh3Plotting_1_1InputManager_a942677ee3a65b1d4b48ce474dddaf3b1}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!getFitterSpecificParamOption@{getFitterSpecificParamOption}}
+\index{getFitterSpecificParamOption@{getFitterSpecificParamOption}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{getFitterSpecificParamOption()}{getFitterSpecificParamOption()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::get\+Fitter\+Specific\+Param\+Option (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{fitter,  }\item[{const std\+::string \&}]{option,  }\item[{T \&}]{ret,  }\item[{const std\+::string \&}]{parameter }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00597}{597}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00598\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00599\ \ \ \ \ \textcolor{keywordflow}{return}\ getFitterSpecificOption<T>(fitter,\ option,\ ret,\ parameter,\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_ad243d0438a33356e6bca0677c8b588e6}{\_parametersConfig}});}
+\DoxyCodeLine{00600\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_abd7bd6137530d4ba7f8a64c2b6e5dfa6}\label{classMaCh3Plotting_1_1InputManager_abd7bd6137530d4ba7f8a64c2b6e5dfa6}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!getFitterSpecificSampleName@{getFitterSpecificSampleName}}
+\index{getFitterSpecificSampleName@{getFitterSpecificSampleName}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{getFitterSpecificSampleName()}{getFitterSpecificSampleName()}}
+{\footnotesize\ttfamily std\+::string Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::get\+Fitter\+Specific\+Sample\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{fitter,  }\item[{\mbox{\hyperlink{namespaceMaCh3Plotting_a4152b51a260d6a18f41b3a22aa2a6b75}{file\+Type\+Enum}}}]{file\+Type,  }\item[{const std\+::string \&}]{sample }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00625}{625}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00626\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00627\ \ \ \ \ std::string\ specificName;}
+\DoxyCodeLine{00628\ \ \ \ \ \textcolor{keywordflow}{if}\ (getFitterSpecificSampleOption<std::string>(fitter,\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a487b62643d1a5c63415685d662b7118d}{convertFileTypeNames}}(fileType),}
+\DoxyCodeLine{00629\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ specificName,\ sample))}
+\DoxyCodeLine{00630\ \ \ \ \ \{}
+\DoxyCodeLine{00631\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ specificName;}
+\DoxyCodeLine{00632\ \ \ \ \ \}}
+\DoxyCodeLine{00633\ \ \ \ \ \textcolor{comment}{//\ EM:\ Default\ to\ just\ return\ the\ specified\ name}}
+\DoxyCodeLine{00634\ \ \ \ \ \textcolor{keywordflow}{return}\ sample;}
+\DoxyCodeLine{00635\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_aab2d9af2a6a61706074d0588a0d335e6}\label{classMaCh3Plotting_1_1InputManager_aab2d9af2a6a61706074d0588a0d335e6}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!getFitterSpecificSampleOption@{getFitterSpecificSampleOption}}
+\index{getFitterSpecificSampleOption@{getFitterSpecificSampleOption}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{getFitterSpecificSampleOption()}{getFitterSpecificSampleOption()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::get\+Fitter\+Specific\+Sample\+Option (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{fitter,  }\item[{std\+::string}]{option,  }\item[{T \&}]{ret,  }\item[{std\+::string}]{parameter }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00604}{604}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00605\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00606\ \ \ \ \ \textcolor{keywordflow}{return}\ getFitterSpecificOption<T>(fitter,\ option,\ ret,\ parameter,\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a1eed58ec2fc42d44474c80b8f4e91e15}{\_samplesConfig}});}
+\DoxyCodeLine{00607\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_a04e3077f2dbad6dd10a9e175275fecef}\label{classMaCh3Plotting_1_1InputManager_a04e3077f2dbad6dd10a9e175275fecef}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!getKnown1dPosteriorParameters@{getKnown1dPosteriorParameters}}
+\index{getKnown1dPosteriorParameters@{getKnown1dPosteriorParameters}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{getKnown1dPosteriorParameters()}{getKnown1dPosteriorParameters()}}
+{\footnotesize\ttfamily const std\+::vector$<$ std\+::string $>$ \& Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::get\+Known1d\+Posterior\+Parameters (\begin{DoxyParamCaption}\item[{int}]{file\+Id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00516}{516}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00516\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00517\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a29202faed03b0e9a22f2d34bce604793}{\_fileVec}}[fileId].availableParams\_1dPosteriors;}
+\DoxyCodeLine{00518\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_a9de33b0ef3ed1bcc870c8ef1060a8f93}\label{classMaCh3Plotting_1_1InputManager_a9de33b0ef3ed1bcc870c8ef1060a8f93}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!getKnownLLHParameters@{getKnownLLHParameters}}
+\index{getKnownLLHParameters@{getKnownLLHParameters}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{getKnownLLHParameters()}{getKnownLLHParameters()}}
+{\footnotesize\ttfamily const std\+::vector$<$ std\+::string $>$ \& Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::get\+Known\+LLHParameters (\begin{DoxyParamCaption}\item[{int}]{file\+Id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00504}{504}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00504\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00505\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a29202faed03b0e9a22f2d34bce604793}{\_fileVec}}[fileId].availableParams\_LLH;}
+\DoxyCodeLine{00506\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_a05b45bf6d3504b3756f0717e3cbd9c9b}\label{classMaCh3Plotting_1_1InputManager_a05b45bf6d3504b3756f0717e3cbd9c9b}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!getKnownLLHSamples@{getKnownLLHSamples}}
+\index{getKnownLLHSamples@{getKnownLLHSamples}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{getKnownLLHSamples()}{getKnownLLHSamples()}}
+{\footnotesize\ttfamily const std\+::vector$<$ std\+::string $>$ \& Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::get\+Known\+LLHSamples (\begin{DoxyParamCaption}\item[{int}]{file\+Id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00507}{507}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00507\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00508\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a29202faed03b0e9a22f2d34bce604793}{\_fileVec}}[fileId].availableSamples\_LLH;}
+\DoxyCodeLine{00509\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_a0b5b8db8805681ad02c7e87ee7e246aa}\label{classMaCh3Plotting_1_1InputManager_a0b5b8db8805681ad02c7e87ee7e246aa}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!getKnownMCMCParameters@{getKnownMCMCParameters}}
+\index{getKnownMCMCParameters@{getKnownMCMCParameters}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{getKnownMCMCParameters()}{getKnownMCMCParameters()}}
+{\footnotesize\ttfamily const std\+::vector$<$ std\+::string $>$ \& Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::get\+Known\+MCMCParameters (\begin{DoxyParamCaption}\item[{int}]{file\+Id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00513}{513}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00513\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00514\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a29202faed03b0e9a22f2d34bce604793}{\_fileVec}}[fileId].availableParams\_MCMCchain;}
+\DoxyCodeLine{00515\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_aa7dff0cd24826afdb02ef8e8d9e6fe87}\label{classMaCh3Plotting_1_1InputManager_aa7dff0cd24826afdb02ef8e8d9e6fe87}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!getKnownParameters@{getKnownParameters}}
+\index{getKnownParameters@{getKnownParameters}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{getKnownParameters()}{getKnownParameters()}}
+{\footnotesize\ttfamily const std\+::vector$<$ std\+::string $>$ \& Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::get\+Known\+Parameters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00471}{471}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00471\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a3915837631cc08351a34cb135b0bb351}{\_knownParameters}};\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_a2819e5a25838db9f90a46a4b4d6cfc7c}\label{classMaCh3Plotting_1_1InputManager_a2819e5a25838db9f90a46a4b4d6cfc7c}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!getKnownPostFitParameters@{getKnownPostFitParameters}}
+\index{getKnownPostFitParameters@{getKnownPostFitParameters}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{getKnownPostFitParameters()}{getKnownPostFitParameters()}}
+{\footnotesize\ttfamily const std\+::vector$<$ std\+::string $>$ \& Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::get\+Known\+Post\+Fit\+Parameters (\begin{DoxyParamCaption}\item[{int}]{file\+Id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00510}{510}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00510\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00511\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a29202faed03b0e9a22f2d34bce604793}{\_fileVec}}[fileId].availableParams\_postFitErrors;}
+\DoxyCodeLine{00512\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_a694c12c1ee25a4e9343769e7f74942bd}\label{classMaCh3Plotting_1_1InputManager_a694c12c1ee25a4e9343769e7f74942bd}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!getKnownSamples@{getKnownSamples}}
+\index{getKnownSamples@{getKnownSamples}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{getKnownSamples()}{getKnownSamples()}}
+{\footnotesize\ttfamily const std\+::vector$<$ std\+::string $>$ \& Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::get\+Known\+Samples (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00472}{472}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00472\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_abafd844353d8fc69cf31ccf85b2bdcbe}{\_knownSamples}};\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_a51314d45eb8b9eb288a520f17661b3a1}\label{classMaCh3Plotting_1_1InputManager_a51314d45eb8b9eb288a520f17661b3a1}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!getLLHScan@{getLLHScan}}
+\index{getLLHScan@{getLLHScan}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{getLLHScan()}{getLLHScan()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ double $>$ $>$ Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::get\+LLHScan (\begin{DoxyParamCaption}\item[{int}]{file\+Num,  }\item[{std\+::string}]{param\+Name,  }\item[{std\+::string}]{LLHType }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the log likelihood scan data for a particular parameter from a particular input file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Num} & The index of the file you want the data from. \\
+\hline
+{\em param\+Name} & The parameter you want the information about. \\
+\hline
+{\em LLHType} & The type of log likelihood scan you want (e.\+g. total, penalty, etc.) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of vectors containing the LLH scan data. First entry is x axis, 2nd is y axis 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00285}{285}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00286\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a049bc81681a3f72487a3606d88cd23a8}{getEnabledLLH}}(fileNum,\ paramName,\ LLHType))}
+\DoxyCodeLine{00287\ \ \ \ \ \{}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_ad5b2eb6377721e3ac95def22c2386bb1}{MACH3LOG\_WARN}}(\textcolor{stringliteral}{"{}file\ at\ index\ \{\}\ does\ not\ have\ LLH\ scan\ for\ parameter\ \{\}"{}},\ fileNum,\ paramName);}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_ad5b2eb6377721e3ac95def22c2386bb1}{MACH3LOG\_WARN}}(\textcolor{stringliteral}{"{}am\ returning\ an\ empty\ vector"{}});}
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::vector<std::vector<double>>(2);\ }
+\DoxyCodeLine{00291\ \ \ \ \ \}}
+\DoxyCodeLine{00292\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{group__Utils_gabee3ac13b77811574c1650016e81a229}{TGraphToVector}}(*\mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a29202faed03b0e9a22f2d34bce604793}{\_fileVec}}[fileNum].LLHScans\_map.at(LLHType).at(paramName));}
+\DoxyCodeLine{00293\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_ae6702997870974753d89cccb9c2fb9d0}\label{classMaCh3Plotting_1_1InputManager_ae6702997870974753d89cccb9c2fb9d0}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!getLLHScan\_TGraph@{getLLHScan\_TGraph}}
+\index{getLLHScan\_TGraph@{getLLHScan\_TGraph}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{getLLHScan\_TGraph()}{getLLHScan\_TGraph()}}
+{\footnotesize\ttfamily TGraph Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::get\+LLHScan\+\_\+\+TGraph (\begin{DoxyParamCaption}\item[{int}]{file\+Num,  }\item[{std\+::string}]{param\+Name,  }\item[{std\+::string}]{LLHType }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the log likelihood scan for a particular parameter from a particular input file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Num} & The index of the file that you would like to get the scan from. \\
+\hline
+{\em param\+Name} & The name of the parameter whose LLH scan you would like. \\
+\hline
+{\em LLHType} & The type of likelihood scan you would like, e.\+h. total, prior etc. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type you would like your scan returned as, currently only TGraph and TH1D are supported \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+The graph of the likelihood scan. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00357}{357}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00357\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00358\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a049bc81681a3f72487a3606d88cd23a8}{getEnabledLLH}}(fileNum,\ paramName,\ LLHType))}
+\DoxyCodeLine{00359\ \ \ \ \ \{}
+\DoxyCodeLine{00360\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_ad5b2eb6377721e3ac95def22c2386bb1}{MACH3LOG\_WARN}}(\textcolor{stringliteral}{"{}file\ at\ index\ \{\}\ does\ not\ have\ LLH\ scan\ for\ parameter\ \{\}"{}},\ fileNum,\ paramName);}
+\DoxyCodeLine{00361\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_ad5b2eb6377721e3ac95def22c2386bb1}{MACH3LOG\_WARN}}(\textcolor{stringliteral}{"{}am\ returning\ an\ empty\ TGraph"{}});}
+\DoxyCodeLine{00362\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ TGraph();\ }
+\DoxyCodeLine{00363\ \ \ \ \ \}}
+\DoxyCodeLine{00364\ \ \ \ \ \textcolor{keywordflow}{return}\ *\mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a29202faed03b0e9a22f2d34bce604793}{\_fileVec}}[fileNum].LLHScans\_map.at(LLHType).at(paramName);}
+\DoxyCodeLine{00365\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_a1317c9d6da9a840fa56e5d4df3da03cd}\label{classMaCh3Plotting_1_1InputManager_a1317c9d6da9a840fa56e5d4df3da03cd}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!getLLHScan\_TH1D@{getLLHScan\_TH1D}}
+\index{getLLHScan\_TH1D@{getLLHScan\_TH1D}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{getLLHScan\_TH1D()}{getLLHScan\_TH1D()}}
+{\footnotesize\ttfamily TH1D Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::get\+LLHScan\+\_\+\+TH1D (\begin{DoxyParamCaption}\item[{int}]{file\+Num,  }\item[{std\+::string}]{param\+Name,  }\item[{std\+::string}]{LLHType }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00367}{367}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00367\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00368\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a049bc81681a3f72487a3606d88cd23a8}{getEnabledLLH}}(fileNum,\ paramName,\ LLHType))}
+\DoxyCodeLine{00369\ \ \ \ \ \{}
+\DoxyCodeLine{00370\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_ad5b2eb6377721e3ac95def22c2386bb1}{MACH3LOG\_WARN}}(\textcolor{stringliteral}{"{}file\ at\ index\ \{\}\ does\ not\ have\ LLH\ scan\ for\ parameter\ \{\}"{}},\ fileNum,\ paramName);}
+\DoxyCodeLine{00371\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_ad5b2eb6377721e3ac95def22c2386bb1}{MACH3LOG\_WARN}}(\textcolor{stringliteral}{"{}am\ returning\ an\ empty\ TH1D"{}});}
+\DoxyCodeLine{00372\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ TH1D();\ }
+\DoxyCodeLine{00373\ \ \ \ \ \}}
+\DoxyCodeLine{00374\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{group__Utils_gaf1329db6e5a742f7dcfa154629c54542}{TGraphToTH1D}}(*\mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a29202faed03b0e9a22f2d34bce604793}{\_fileVec}}[fileNum].LLHScans\_map.at(LLHType).at(paramName));}
+\DoxyCodeLine{00375\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_a2d43d7f24dc43efec668d9118e0267e7}\label{classMaCh3Plotting_1_1InputManager_a2d43d7f24dc43efec668d9118e0267e7}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!getMCMCentry@{getMCMCentry}}
+\index{getMCMCentry@{getMCMCentry}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{getMCMCentry()}{getMCMCentry()}}
+{\footnotesize\ttfamily void Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::get\+MCMCentry (\begin{DoxyParamCaption}\item[{int}]{file\+Num,  }\item[{int}]{entry }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the MCMC chain entry in an \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile}{Input\+File}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Num} & The index of the file you want the data from. \\
+\hline
+{\em entry} & The entry to get. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00298}{298}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00298\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00299\ \ \ \ \ \textcolor{comment}{//\ EM:\ the\ const\ here\ is\ a\ little\ bit\ of\ a\ lie\ since\ GetEntry\ will\ in\ fact\ modify\ }}
+\DoxyCodeLine{00300\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ the\ pointers\ to\ the\ stored\ data\ for\ the\ MCMC\ chain\ values\ but\ hopefully\ this\ should\ be\ ok}}
+\DoxyCodeLine{00301\ \ \ \ \ \textcolor{keyword}{const}\ InputFile\ \&file\ =\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a29202faed03b0e9a22f2d34bce604793}{\_fileVec}}[fileNum];}
+\DoxyCodeLine{00302\ }
+\DoxyCodeLine{00303\ \ \ \ \ \textcolor{keywordflow}{if}(\ entry\ >\ file.nMCMCentries\ )}
+\DoxyCodeLine{00304\ \ \ \ \ \{}
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Trying\ to\ access\ entries\ beyond\ what\ exist\ in\ file\ \{\}.\ No-\/can-\/do!"{}},\ file.fileName);}
+\DoxyCodeLine{00306\ \ \ \ \ \}}
+\DoxyCodeLine{00307\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00308\ \ \ \ \ \{}
+\DoxyCodeLine{00309\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_afc88f0aa23c7127b2ff6e5c7ca3fa892}{MACH3LOG\_TRACE}}(\textcolor{stringliteral}{"{}Getting\ entry\ \{\}\ in\ MCMC\ tree\ for\ file\ at\ index\ \{\}"{}},\ entry,\ fileNum);}
+\DoxyCodeLine{00310\ \ \ \ \ \ \ file.posteriorTree-\/>GetEntry(entry);}
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_afc88f0aa23c7127b2ff6e5c7ca3fa892}{MACH3LOG\_TRACE}}(\textcolor{stringliteral}{"{}\ \ Got\ successfuly"{}});}
+\DoxyCodeLine{00312\ \ \ \ \ \}}
+\DoxyCodeLine{00313\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_ac8e8538fd3ae525cb707f2ed1e869e8e}\label{classMaCh3Plotting_1_1InputManager_ac8e8538fd3ae525cb707f2ed1e869e8e}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!getMCMCvalue@{getMCMCvalue}}
+\index{getMCMCvalue@{getMCMCvalue}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{getMCMCvalue()}{getMCMCvalue()}}
+{\footnotesize\ttfamily double Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::get\+MCMCvalue (\begin{DoxyParamCaption}\item[{int}]{file\+Num,  }\item[{std\+::string}]{param\+Name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the parameter value for the current step for a particular parameter from a particular input file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Num} & The index of the file you want the data from. \\
+\hline
+{\em param\+Name} & The parameter you want the value of. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00318}{318}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00319\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_aeac58645b18dbc0784adc4b44ee0b33b}{getEnabledMCMCchain}}(fileNum,\ paramName))}
+\DoxyCodeLine{00320\ \ \ \ \ \{}
+\DoxyCodeLine{00321\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_ad5b2eb6377721e3ac95def22c2386bb1}{MACH3LOG\_WARN}}(\textcolor{stringliteral}{"{}file\ at\ index\ \{\}\ does\ not\ have\ an\ MCMC\ entry\ for\ parameter\ \{\}"{}},\ fileNum,\ paramName);}
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_ad5b2eb6377721e3ac95def22c2386bb1}{MACH3LOG\_WARN}}(\textcolor{stringliteral}{"{}am\ returning\ a\ bad\ float"{}});}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{Structs_8h_aa2920b946077e971486eaf1b49101f01}{\_BAD\_DOUBLE\_}};\ }
+\DoxyCodeLine{00324\ \ \ \ \ \}}
+\DoxyCodeLine{00325\ }
+\DoxyCodeLine{00326\ \ \ \ \ \textcolor{keywordflow}{return}\ *\mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a29202faed03b0e9a22f2d34bce604793}{\_fileVec}}[fileNum].MCMCstepParamsMap.at(paramName);}
+\DoxyCodeLine{00327\ }
+\DoxyCodeLine{00328\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_ae330e86f77b9be82935d6a86fa7c96fa}\label{classMaCh3Plotting_1_1InputManager_ae330e86f77b9be82935d6a86fa7c96fa}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!getNInputFiles@{getNInputFiles}}
+\index{getNInputFiles@{getNInputFiles}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{getNInputFiles()}{getNInputFiles()}}
+{\footnotesize\ttfamily size\+\_\+t Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::get\+NInput\+Files (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00473}{473}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00473\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a29202faed03b0e9a22f2d34bce604793}{\_fileVec}}.size();\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_a5e43751a549e93c5ff352ad9f189ba24}\label{classMaCh3Plotting_1_1InputManager_a5e43751a549e93c5ff352ad9f189ba24}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!getnMCMCentries@{getnMCMCentries}}
+\index{getnMCMCentries@{getnMCMCentries}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{getnMCMCentries()}{getnMCMCentries()}}
+{\footnotesize\ttfamily int Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::getn\+MCMCentries (\begin{DoxyParamCaption}\item[{int}]{file\+Num }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the number of entries in the MCMC chain in a particular file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Num} & The index of the file you want the number of steps from. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00346}{346}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00346\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00347\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a29202faed03b0e9a22f2d34bce604793}{\_fileVec}}[fileNum].nMCMCentries;}
+\DoxyCodeLine{00348\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_a034d2d777197242c95d92cd2b286249b}\label{classMaCh3Plotting_1_1InputManager_a034d2d777197242c95d92cd2b286249b}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!getPostFitError@{getPostFitError}}
+\index{getPostFitError@{getPostFitError}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{getPostFitError()}{getPostFitError()}}
+{\footnotesize\ttfamily double Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::get\+Post\+Fit\+Error (\begin{DoxyParamCaption}\item[{int}]{file\+Num,  }\item[{const std\+::string \&}]{param\+Name,  }\item[{std\+::string}]{error\+Type = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption}) const}
+
+
+
+Get the post fit error for a particular parameter from a particular input file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Num} & The index of the file that you would like to get the value from. \\
+\hline
+{\em param\+Name} & The name of the parameter whose error you would like. \\
+\hline
+{\em error\+Type} & The type of error to return, usually \char`\"{}prior\char`\"{} will be defined, but other possible types will be fitter dependent, e.\+g. \char`\"{}gauss\char`\"{} or \char`\"{}hpd\char`\"{} for Ma\+Ch3. If not specified, will use the default one, as specified in the fitter definition config. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The error on the specified parameter. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{inputManager_8cpp_source_l00111}{111}} of file \mbox{\hyperlink{inputManager_8cpp_source}{input\+Manager.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \textcolor{keyword}{const}\ InputFile\ \&inputFileDef\ =\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a2f8f94ca3b6e0d2b34c75dee24b81e49}{getFile}}(fileNum);}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \ \ \textcolor{comment}{//\ set\ default\ type\ if\ not\ specified}}
+\DoxyCodeLine{00117\ \ \ \textcolor{keywordflow}{if}\ (errorType\ ==\ \textcolor{stringliteral}{"{}"{}})}
+\DoxyCodeLine{00118\ \ \ \ \ errorType\ =\ inputFileDef.defaultErrorType;}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \ \ \textcolor{keywordflow}{if}\ (inputFileDef.postFitErrors.find(errorType)\ ==\ inputFileDef.postFitErrors.end())}
+\DoxyCodeLine{00121\ \ \ \{}
+\DoxyCodeLine{00122\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a07ff6d6a15b24f94afc88a1b89779beb}{MACH3LOG\_CRITICAL}}(\textcolor{stringliteral}{"{}Requested\ error\ type,\ \{\}\ does\ not\ exist\ in\ the\ specified\ file:\ "{}},\ errorType);}
+\DoxyCodeLine{00123\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a07ff6d6a15b24f94afc88a1b89779beb}{MACH3LOG\_CRITICAL}}(\textcolor{stringliteral}{"{}\ \ \{\}"{}},\ inputFileDef.fileName);}
+\DoxyCodeLine{00124\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a07ff6d6a15b24f94afc88a1b89779beb}{MACH3LOG\_CRITICAL}}(\textcolor{stringliteral}{"{}\ \ at\ index\ \{\}"{}},\ fileNum);}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_\ ,\ \_\_LINE\_\_\ );}
+\DoxyCodeLine{00127\ \ \ \}}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \ \ \textcolor{keywordflow}{if}\ (inputFileDef.postFitErrors.at(errorType).find(paramName)\ !=}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ inputFileDef.postFitErrors.at(errorType).end())}
+\DoxyCodeLine{00131\ \ \ \{}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordflow}{return}\ inputFileDef.postFitErrors.at(errorType).at(paramName);}
+\DoxyCodeLine{00133\ \ \ \}}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_ad5b2eb6377721e3ac95def22c2386bb1}{MACH3LOG\_WARN}}(\textcolor{stringliteral}{"{}Didn't\ fnd\ \{\}\ post\ fit\ error\ for\ \{\}.\ Returning\ \{\}"{}},\ errorType,\ paramName,\ \mbox{\hyperlink{Structs_8h_aa2920b946077e971486eaf1b49101f01}{\_BAD\_DOUBLE\_}});}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{Structs_8h_aa2920b946077e971486eaf1b49101f01}{\_BAD\_DOUBLE\_}};}
+\DoxyCodeLine{00138\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_ac2ea3f272dc8492be331f1cd1ae21b2a}\label{classMaCh3Plotting_1_1InputManager_ac2ea3f272dc8492be331f1cd1ae21b2a}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!getPostFitValue@{getPostFitValue}}
+\index{getPostFitValue@{getPostFitValue}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{getPostFitValue()}{getPostFitValue()}}
+{\footnotesize\ttfamily double Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::get\+Post\+Fit\+Value (\begin{DoxyParamCaption}\item[{int}]{file\+Num,  }\item[{const std\+::string \&}]{param\+Name,  }\item[{std\+::string}]{error\+Type = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption}) const}
+
+
+
+Get the post fit value for a particular parameter from a particular input file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Num} & The index of the file that you would like to get the value from. \\
+\hline
+{\em param\+Name} & The name of the parameter whose value you would like. \\
+\hline
+{\em error\+Type} & The type of error to return, usually \char`\"{}prior\char`\"{} will be defined, but other possible types will be fitter dependent, e.\+g. \char`\"{}gauss\char`\"{} or \char`\"{}hpd\char`\"{} for Ma\+Ch3. If not specified, will use the default one, as specified in the fitter definition config. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value of the specified parameter. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{inputManager_8cpp_source_l00140}{140}} of file \mbox{\hyperlink{inputManager_8cpp_source}{input\+Manager.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00142\ \ \ }
+\DoxyCodeLine{00143\ \ \ \textcolor{keyword}{const}\ InputFile\ \&inputFileDef\ =\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a2f8f94ca3b6e0d2b34c75dee24b81e49}{getFile}}(fileNum);}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \ \ \textcolor{comment}{//\ set\ default\ type\ if\ not\ specified}}
+\DoxyCodeLine{00146\ \ \ \textcolor{keywordflow}{if}\ (errorType\ ==\ \textcolor{stringliteral}{"{}"{}})}
+\DoxyCodeLine{00147\ \ \ \ \ errorType\ =\ inputFileDef.defaultErrorType;}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ \ \ \textcolor{keywordflow}{if}\ (inputFileDef.postFitErrors.find(errorType)\ ==\ inputFileDef.postFitErrors.end())}
+\DoxyCodeLine{00150\ \ \ \{}
+\DoxyCodeLine{00151\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a07ff6d6a15b24f94afc88a1b89779beb}{MACH3LOG\_CRITICAL}}(\textcolor{stringliteral}{"{}Requested\ error\ type,\ \{\}\ does\ not\ exist\ in\ the\ specified\ file:\ "{}},\ errorType);}
+\DoxyCodeLine{00152\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a07ff6d6a15b24f94afc88a1b89779beb}{MACH3LOG\_CRITICAL}}(\textcolor{stringliteral}{"{}\ \ \{\}"{}},\ inputFileDef.fileName);}
+\DoxyCodeLine{00153\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a07ff6d6a15b24f94afc88a1b89779beb}{MACH3LOG\_CRITICAL}}(\textcolor{stringliteral}{"{}\ \ at\ index\ \{\}"{}},\ fileNum);}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_\ ,\ \_\_LINE\_\_\ );}
+\DoxyCodeLine{00156\ \ \ \}}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00158\ \ \ \textcolor{keywordflow}{if}\ (inputFileDef.postFitValues.at(errorType).find(paramName)\ !=}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ inputFileDef.postFitValues.at(errorType).end())}
+\DoxyCodeLine{00160\ \ \ \{}
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordflow}{return}\ inputFileDef.postFitValues.at(errorType).at(paramName);}
+\DoxyCodeLine{00162\ \ \ \}}
+\DoxyCodeLine{00163\ \ \ }
+\DoxyCodeLine{00164\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_ad5b2eb6377721e3ac95def22c2386bb1}{MACH3LOG\_WARN}}(\textcolor{stringliteral}{"{}Didn't\ fnd\ \{\}\ post\ fit\ value\ for\ \{\}.\ Returning\ \{\}"{}},\ errorType,\ paramName,\ \mbox{\hyperlink{Structs_8h_aa2920b946077e971486eaf1b49101f01}{\_BAD\_DOUBLE\_}});}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{Structs_8h_aa2920b946077e971486eaf1b49101f01}{\_BAD\_DOUBLE\_}};}
+\DoxyCodeLine{00167\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_a28eb1f73f00a6bebfca0faca0fb2080c}\label{classMaCh3Plotting_1_1InputManager_a28eb1f73f00a6bebfca0faca0fb2080c}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!getSampleSpecificLLHScan@{getSampleSpecificLLHScan}}
+\index{getSampleSpecificLLHScan@{getSampleSpecificLLHScan}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{getSampleSpecificLLHScan()}{getSampleSpecificLLHScan()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ double $>$ $>$ Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::get\+Sample\+Specific\+LLHScan (\begin{DoxyParamCaption}\item[{int}]{file\+Num,  }\item[{std\+::string}]{param\+Name,  }\item[{std\+::string}]{sample }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the log likelihood scan for a particular parameter, for a specific sample, from a particular input file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Num} & The index of the file that you would like to get the scan from. \\
+\hline
+{\em param\+Name} & The name of the parameter whose LLH scan you would like. \\
+\hline
+{\em sample} & The sample that you would like the LLH scan for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of vectors containing the LLH scan data. First entry is x axis, 2nd is y axis. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00383}{383}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00383\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00384\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_ae2d12152db0ed06d1d862dad2cb4cc9e}{getEnabledLLHBySample}}(fileNum,\ paramName,\ sample))}
+\DoxyCodeLine{00385\ \ \ \ \ \{}
+\DoxyCodeLine{00386\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_ad5b2eb6377721e3ac95def22c2386bb1}{MACH3LOG\_WARN}}(\textcolor{stringliteral}{"{}file\ at\ index\ \{\}\ does\ not\ have\ LLH\ scan\ for\ sample\ \{\}\ for\ parameter\ \{\}"{}},\ fileNum,\ sample,\ paramName);}
+\DoxyCodeLine{00387\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_ad5b2eb6377721e3ac95def22c2386bb1}{MACH3LOG\_WARN}}(\textcolor{stringliteral}{"{}am\ returning\ an\ empty\ vector"{}});}
+\DoxyCodeLine{00388\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::vector<std::vector<double>>(2);\ }
+\DoxyCodeLine{00389\ \ \ \ \ \}}
+\DoxyCodeLine{00390\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{group__Utils_gabee3ac13b77811574c1650016e81a229}{TGraphToVector}}(*\mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a29202faed03b0e9a22f2d34bce604793}{\_fileVec}}[fileNum].LLHScansBySample\_map.at(sample).at(paramName));}
+\DoxyCodeLine{00391\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_aa7d0decfcf5eaa4ecd6bf389255e8682}\label{classMaCh3Plotting_1_1InputManager_aa7d0decfcf5eaa4ecd6bf389255e8682}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!getSampleSpecificLLHScan\_TGraph@{getSampleSpecificLLHScan\_TGraph}}
+\index{getSampleSpecificLLHScan\_TGraph@{getSampleSpecificLLHScan\_TGraph}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{getSampleSpecificLLHScan\_TGraph()}{getSampleSpecificLLHScan\_TGraph()}}
+{\footnotesize\ttfamily TGraph Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::get\+Sample\+Specific\+LLHScan\+\_\+\+TGraph (\begin{DoxyParamCaption}\item[{int}]{file\+Num,  }\item[{std\+::string}]{param\+Name,  }\item[{std\+::string}]{sample }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00393}{393}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00394\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00395\ \ \ \ \ }
+\DoxyCodeLine{00396\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_ae2d12152db0ed06d1d862dad2cb4cc9e}{getEnabledLLHBySample}}(fileNum,\ paramName,\ sample))}
+\DoxyCodeLine{00397\ \ \ \ \ \{}
+\DoxyCodeLine{00398\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_ad5b2eb6377721e3ac95def22c2386bb1}{MACH3LOG\_WARN}}(\textcolor{stringliteral}{"{}file\ at\ index\ \{\}\ does\ not\ have\ LLH\ scan\ for\ sample\ \{\}\ for\ parameter\ \{\}"{}},\ fileNum,\ sample,\ paramName);}
+\DoxyCodeLine{00399\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_ad5b2eb6377721e3ac95def22c2386bb1}{MACH3LOG\_WARN}}(\textcolor{stringliteral}{"{}am\ returning\ an\ empty\ TGraph"{}});}
+\DoxyCodeLine{00400\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ TGraph();}
+\DoxyCodeLine{00401\ \ \ \ \ \}}
+\DoxyCodeLine{00402\ \ \ \ \ \textcolor{keywordflow}{return}\ *\mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a29202faed03b0e9a22f2d34bce604793}{\_fileVec}}[fileNum].LLHScansBySample\_map.at(sample).at(paramName);}
+\DoxyCodeLine{00403\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_a74b058c312200657f046c64347f6a304}\label{classMaCh3Plotting_1_1InputManager_a74b058c312200657f046c64347f6a304}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!getSampleSpecificLLHScan\_TH1D@{getSampleSpecificLLHScan\_TH1D}}
+\index{getSampleSpecificLLHScan\_TH1D@{getSampleSpecificLLHScan\_TH1D}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{getSampleSpecificLLHScan\_TH1D()}{getSampleSpecificLLHScan\_TH1D()}}
+{\footnotesize\ttfamily TH1D Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::get\+Sample\+Specific\+LLHScan\+\_\+\+TH1D (\begin{DoxyParamCaption}\item[{int}]{file\+Num,  }\item[{std\+::string}]{param\+Name,  }\item[{std\+::string}]{sample }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00405}{405}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00405\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00406\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_ae2d12152db0ed06d1d862dad2cb4cc9e}{getEnabledLLHBySample}}(fileNum,\ paramName,\ sample))}
+\DoxyCodeLine{00407\ \ \ \ \ \{}
+\DoxyCodeLine{00408\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_ad5b2eb6377721e3ac95def22c2386bb1}{MACH3LOG\_WARN}}(\textcolor{stringliteral}{"{}file\ at\ index\ \{\}\ does\ not\ have\ LLH\ scan\ for\ sample\ \{\}\ for\ parameter\ \{\}"{}},\ fileNum,\ sample,\ paramName);}
+\DoxyCodeLine{00409\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_ad5b2eb6377721e3ac95def22c2386bb1}{MACH3LOG\_WARN}}(\textcolor{stringliteral}{"{}am\ returning\ an\ empty\ TH1D"{}});}
+\DoxyCodeLine{00410\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ TH1D();}
+\DoxyCodeLine{00411\ \ \ \ \ \}}
+\DoxyCodeLine{00412\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{group__Utils_gaf1329db6e5a742f7dcfa154629c54542}{TGraphToTH1D}}(*\mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a29202faed03b0e9a22f2d34bce604793}{\_fileVec}}[fileNum].LLHScansBySample\_map.at(sample).at(paramName));}
+\DoxyCodeLine{00413\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_a375aba4aa8fc8b763756f8b45682a715}\label{classMaCh3Plotting_1_1InputManager_a375aba4aa8fc8b763756f8b45682a715}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!getTaggedParameters@{getTaggedParameters}}
+\index{getTaggedParameters@{getTaggedParameters}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{getTaggedParameters()}{getTaggedParameters()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::get\+Tagged\+Parameters (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{tags,  }\item[{std\+::string}]{check\+Type = {\ttfamily \char`\"{}all\char`\"{}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get all parameters which have some set of tags. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tags} & The tags to check for \\
+\hline
+{\em check\+Type} & The type of check to perform\+: check\+Type can be one of\+:
+\begin{DoxyItemize}
+\item all\+: All parameters which have {\itshape all} of the specified tags will be returned
+\item any\+: All parameters which have {\itshape any} of the specified tags will be returned
+\item exact\+: All of the parameters which have {\itshape exactly} the specified tags will be returned 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00482}{482}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00482\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00483\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a7d2679e29c99220b8e99bdaa0b642441}{getTaggedValues}}(\mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a3915837631cc08351a34cb135b0bb351}{\_knownParameters}},\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a0d66afafbba133fc3c1b4867957eb3db}{\_paramToTagsMap}},\ tags,\ checkType);}
+\DoxyCodeLine{00484\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_ad9911c236e6afab25d056530ece5d54b}\label{classMaCh3Plotting_1_1InputManager_ad9911c236e6afab25d056530ece5d54b}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!getTaggedSamples@{getTaggedSamples}}
+\index{getTaggedSamples@{getTaggedSamples}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{getTaggedSamples()}{getTaggedSamples()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::get\+Tagged\+Samples (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{tags,  }\item[{std\+::string}]{check\+Type = {\ttfamily \char`\"{}all\char`\"{}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get all samples which have some set of tags. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tags} & The tags to check for \\
+\hline
+{\em check\+Type} & The type of check to perform\+: check\+Type can be one of\+:
+\begin{DoxyItemize}
+\item all\+: All samples which have {\itshape all} of the specified tags will be returned
+\item any\+: All samples which have {\itshape any} of the specified tags will be returned
+\item exact\+: All of the samples which have {\itshape exactly} the specified tags will be returned 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00493}{493}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00493\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00494\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a7d2679e29c99220b8e99bdaa0b642441}{getTaggedValues}}(\mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_abafd844353d8fc69cf31ccf85b2bdcbe}{\_knownSamples}},\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_ada0eddda54a072bdfc2464a9902cfe01}{\_sampleToTagsMap}},\ tags,\ checkType);}
+\DoxyCodeLine{00495\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_a7d2679e29c99220b8e99bdaa0b642441}\label{classMaCh3Plotting_1_1InputManager_a7d2679e29c99220b8e99bdaa0b642441}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!getTaggedValues@{getTaggedValues}}
+\index{getTaggedValues@{getTaggedValues}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{getTaggedValues()}{getTaggedValues()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::get\+Tagged\+Values (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{values,  }\item[{const std\+::unordered\+\_\+map$<$ std\+::string, std\+::vector$<$ std\+::string $>$ $>$ \&}]{tag\+Map,  }\item[{const std\+::vector$<$ std\+::string $>$ \&}]{tags,  }\item[{std\+::string}]{check\+Type }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8cpp_source_l00174}{174}} of file \mbox{\hyperlink{inputManager_8cpp_source}{input\+Manager.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00178\ \ \ \textcolor{comment}{//\ check\ that\ checkType\ is\ valid}}
+\DoxyCodeLine{00179\ \ \ \textcolor{keywordflow}{if}(}
+\DoxyCodeLine{00180\ \ \ \ \ checkType\ !=\ \textcolor{stringliteral}{"{}all"{}}\ \&\&}
+\DoxyCodeLine{00181\ \ \ \ \ checkType\ !=\ \textcolor{stringliteral}{"{}any"{}}\ \&\&}
+\DoxyCodeLine{00182\ \ \ \ \ checkType\ !=\ \textcolor{stringliteral}{"{}exact"{}}}
+\DoxyCodeLine{00183\ \ \ )}
+\DoxyCodeLine{00184\ \ \ \{\ \ }
+\DoxyCodeLine{00185\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a61052119a625282d0ec6d4a97adf3ee2}{MACH3LOG\_ERROR}}(\textcolor{stringliteral}{"{}Invalid\ tag\ check\ type\ specified:\ \{\}.\ Will\ instead\ use\ the\ default\ type:\ 'all'"{}},\ checkType);}
+\DoxyCodeLine{00186\ \ \ \ \ checkType\ =\ \textcolor{stringliteral}{"{}all"{}};}
+\DoxyCodeLine{00187\ \ \ \}}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00189\ \ \ \textcolor{comment}{//\ If\ no\ tags\ were\ specified,\ take\ this\ to\ mean\ that\ anything\ should\ be\ a\ match}}
+\DoxyCodeLine{00190\ \ \ \textcolor{keywordflow}{if}\ (tags.size()\ ==\ 0)\ \textcolor{keywordflow}{return}\ values;}
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00192\ \ \ std::vector<std::string>\ retVec;}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00194\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}Getting\ tagged\ values\ using\ checkType\ \{\}"{}},\ checkType);}
+\DoxyCodeLine{00195\ \ \ \textcolor{keywordflow}{for}\ (\ std::string\ val:\ values\ )}
+\DoxyCodeLine{00196\ \ \ \{}
+\DoxyCodeLine{00197\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}Checking\ tags\ of\ \{\}"{}},\ val);}
+\DoxyCodeLine{00198\ \ \ \ \ \textcolor{comment}{//\ get\ the\ tags\ that\ this\ value\ has}}
+\DoxyCodeLine{00199\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::string>\ \&valTags\ =\ tagMap.at(val);}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00201\ \ \ \ \ \textcolor{comment}{//\ we\ can\ skip\ it\ if\ it\ has\ no\ tags}}
+\DoxyCodeLine{00202\ \ \ \ \ \textcolor{keywordflow}{if}\ (valTags.size()\ ==\ 0)\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00203\ }
+\DoxyCodeLine{00204\ \ \ \ \ \textcolor{comment}{//\ count\ how\ many\ of\ the\ specified\ tags\ match\ the\ tags\ of\ the\ current\ value\ }}
+\DoxyCodeLine{00205\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ tagCount\ =\ 0;}
+\DoxyCodeLine{00206\ \ \ \ \ \textcolor{keywordflow}{for}\ (\ \textcolor{keyword}{const}\ std::string\ \&tag:\ tags\ )}
+\DoxyCodeLine{00207\ \ \ \ \ \{}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\ std::find(\ valTags.begin(),\ valTags.end(),\ tag\ )\ !=\ valTags.end()\ )\ }
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \{\ \ \ \ }
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}\ \ -\/\ Matched\ tag\ \{\}\ !"{}},\ tag);}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ tagCount\ ++;}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00213\ \ \ \ \ \}}
+\DoxyCodeLine{00214\ }
+\DoxyCodeLine{00215\ \ \ \ \ \textcolor{comment}{//\ now\ decide\ if\ we\ include\ the\ current\ value\ based\ on\ the\ check\ type}}
+\DoxyCodeLine{00216\ \ \ \ \ \textcolor{keywordflow}{if}\ (\ checkType\ ==\ \textcolor{stringliteral}{"{}all"{}}\ )}
+\DoxyCodeLine{00217\ \ \ \ \ \{}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\ tagCount\ ==\ tags.size()\ )\ retVec.push\_back(val);}
+\DoxyCodeLine{00219\ \ \ \ \ \}}
+\DoxyCodeLine{00220\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\ checkType\ ==\ \textcolor{stringliteral}{"{}any"{}}\ )}
+\DoxyCodeLine{00221\ \ \ \ \ \{}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\ tagCount\ >\ 0\ )\ retVec.push\_back(val);}
+\DoxyCodeLine{00223\ \ \ \ \ \}}
+\DoxyCodeLine{00224\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\ checkType\ ==\ \textcolor{stringliteral}{"{}exect"{}}\ )}
+\DoxyCodeLine{00225\ \ \ \ \ \{}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \textcolor{comment}{//\ EM:\ note\ that\ this\ will\ break\ if\ duplicate\ tags\ are\ specified\ in\ either\ vector...\ so\ please\ don't\ do\ that}}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\ tagCount\ ==\ valTags.size()\ )\ retVec.push\_back(val);}
+\DoxyCodeLine{00228\ \ \ \ \ \}}
+\DoxyCodeLine{00229\ \ \ \}}
+\DoxyCodeLine{00230\ }
+\DoxyCodeLine{00231\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a4db4657acad5c79ac4bbb66a9d1c5905}{MACH3LOG\_DEBUG}}(\textcolor{stringliteral}{"{}Found\ \{\}\ values\ matching\ the\ specified\ tags"{}},\ retVec.size());}
+\DoxyCodeLine{00232\ \ \ \textcolor{keywordflow}{return}\ retVec;}
+\DoxyCodeLine{00233\ }
+\DoxyCodeLine{00234\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_a041b9611ce812326995c54f8c73c4867}\label{classMaCh3Plotting_1_1InputManager_a041b9611ce812326995c54f8c73c4867}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!parseLocation@{parseLocation}}
+\index{parseLocation@{parseLocation}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{parseLocation()}{parseLocation()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::parse\+Location (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{location\+String,  }\item[{std\+::string \&}]{fitter,  }\item[{\mbox{\hyperlink{namespaceMaCh3Plotting_a4152b51a260d6a18f41b3a22aa2a6b75}{file\+Type\+Enum}}}]{file\+Type,  }\item[{const std\+::string \&}]{parameter = {\ttfamily \char`\"{}\char`\"{}},  }\item[{const std\+::string \&}]{sample = {\ttfamily \char`\"{}\char`\"{}},  }\item[{const std\+::string \&}]{parameter2 = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8cpp_source_l00236}{236}} of file \mbox{\hyperlink{inputManager_8cpp_source}{input\+Manager.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00239\ }
+\DoxyCodeLine{00240\ \ \ std::string\ locationString(rawLocationString);}
+\DoxyCodeLine{00241\ \ \ std::vector<std::string>\ tokens;}
+\DoxyCodeLine{00242\ }
+\DoxyCodeLine{00243\ \ \ std::size\_t\ pos\ =\ 0;}
+\DoxyCodeLine{00244\ \ \ std::string\ toReplace\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00245\ }
+\DoxyCodeLine{00246\ \ \ \textcolor{comment}{//\ loop\ through\ the\ raw\ location\ string\ and\ replace\ any\ instance\ of\ \{PARAMETER\}\ with\ the\ name\ of}}
+\DoxyCodeLine{00247\ \ \ \textcolor{comment}{//\ the\ parameter}}
+\DoxyCodeLine{00248\ \ \ toReplace\ =\ \textcolor{stringliteral}{"{}\{PARAMETER\}"{}};}
+\DoxyCodeLine{00249\ \ \ \textcolor{keywordflow}{while}\ ((pos\ =\ locationString.find(toReplace))\ !=\ std::string::npos)}
+\DoxyCodeLine{00250\ \ \ \{}
+\DoxyCodeLine{00251\ \ \ \ \ locationString.replace(pos,\ toReplace.length(),}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_aa3a91c2525f5aea76ba182b3be4b2b2a}{getFitterSpecificParamName}}(fitter,\ fileType,\ parameter));}
+\DoxyCodeLine{00253\ \ \ \}}
+\DoxyCodeLine{00254\ }
+\DoxyCodeLine{00255\ \ \ \textcolor{comment}{//\ same\ again\ with\ \{SAMPLE\}}}
+\DoxyCodeLine{00256\ \ \ toReplace\ =\ \textcolor{stringliteral}{"{}\{SAMPLE\}"{}};}
+\DoxyCodeLine{00257\ \ \ \textcolor{keywordflow}{while}\ ((pos\ =\ locationString.find(toReplace))\ !=\ std::string::npos)}
+\DoxyCodeLine{00258\ \ \ \{}
+\DoxyCodeLine{00259\ \ \ \ \ locationString.replace(pos,\ toReplace.length(),}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_abd7bd6137530d4ba7f8a64c2b6e5dfa6}{getFitterSpecificSampleName}}(fitter,\ fileType,\ sample));}
+\DoxyCodeLine{00261\ \ \ \}}
+\DoxyCodeLine{00262\ }
+\DoxyCodeLine{00263\ \ \ \textcolor{comment}{//\ loop\ through\ the\ raw\ location\ string\ and\ replace\ any\ instance\ of\ \{PARAMETER2\}\ with\ the\ name\ of}}
+\DoxyCodeLine{00264\ \ \ \textcolor{comment}{//\ the\ second\ specified\ parameter}}
+\DoxyCodeLine{00265\ \ \ toReplace\ =\ \textcolor{stringliteral}{"{}\{PARAMETER2\}"{}};}
+\DoxyCodeLine{00266\ \ \ \textcolor{keywordflow}{while}\ ((pos\ =\ locationString.find(toReplace))\ !=\ std::string::npos)}
+\DoxyCodeLine{00267\ \ \ \{}
+\DoxyCodeLine{00268\ \ \ \ \ locationString.replace(pos,\ toReplace.length(),}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_aa3a91c2525f5aea76ba182b3be4b2b2a}{getFitterSpecificParamName}}(fitter,\ fileType,\ parameter2));}
+\DoxyCodeLine{00270\ \ \ \}}
+\DoxyCodeLine{00271\ }
+\DoxyCodeLine{00272\ \ \ \textcolor{comment}{//\ Now\ we\ go\ through\ and\ look\ for\ "{}:"{}\ and\ split\ the\ location\ into\ two\ parts}}
+\DoxyCodeLine{00273\ \ \ \textcolor{comment}{//\ first\ part\ should\ be\ the\ directory\ to\ look\ for\ the\ parameter}}
+\DoxyCodeLine{00274\ \ \ \textcolor{comment}{//\ lats\ part\ should\ be\ the\ end\ of\ the\ name\ of\ the\ object\ to\ look\ for}}
+\DoxyCodeLine{00275\ \ \ std::string\ token;}
+\DoxyCodeLine{00276\ \ \ std::string\ delimiter\ =\ \textcolor{stringliteral}{"{}:"{}};}
+\DoxyCodeLine{00277\ \ \ \textcolor{keywordflow}{while}\ ((pos\ =\ locationString.find(delimiter))\ !=\ std::string::npos)}
+\DoxyCodeLine{00278\ \ \ \{}
+\DoxyCodeLine{00279\ \ \ \ \ token\ =\ locationString.substr(0,\ pos);}
+\DoxyCodeLine{00280\ \ \ \ \ tokens.push\_back(token);}
+\DoxyCodeLine{00281\ \ \ \ \ locationString.erase(0,\ pos\ +\ delimiter.length());}
+\DoxyCodeLine{00282\ \ \ \}}
+\DoxyCodeLine{00283\ \ \ tokens.push\_back(locationString);}
+\DoxyCodeLine{00284\ }
+\DoxyCodeLine{00285\ \ \ \textcolor{comment}{//\ should\ only\ have\ found\ 2\ parts,\ anything\ more\ means\ there\ was\ too\ many}}
+\DoxyCodeLine{00286\ \ \ \textcolor{comment}{//\ "{}:"{}\ in\ the\ location\ string}}
+\DoxyCodeLine{00287\ \ \ \textcolor{keywordflow}{if}\ (tokens.size()\ >\ 2)}
+\DoxyCodeLine{00288\ \ \ \{}
+\DoxyCodeLine{00289\ \ \ \ \ \textcolor{keywordflow}{throw}\ \mbox{\hyperlink{classMaCh3Exception}{MaCh3Exception}}(\_\_FILE\_\_\ ,\ \_\_LINE\_\_,\ \textcolor{stringliteral}{"{}Too\ many\ :\ tokens\ in\ location\ string:\ "{}}\ +\ rawLocationString);}
+\DoxyCodeLine{00290\ \ \ \}}
+\DoxyCodeLine{00291\ }
+\DoxyCodeLine{00292\ \ \ \textcolor{keywordflow}{return}\ tokens;}
+\DoxyCodeLine{00293\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_af497dbf8556c361191c4f3c287ef12c7}\label{classMaCh3Plotting_1_1InputManager_af497dbf8556c361191c4f3c287ef12c7}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!print@{print}}
+\index{print@{print}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::print (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{print\+Level = {\ttfamily \char`\"{}summary\char`\"{}} }\end{DoxyParamCaption}) const}
+
+
+
+Print out what this Inputmanager instance knows about. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em print\+Level} & The level of detail to go into in the summary printout\+: options are \char`\"{}summary\char`\"{}, and \char`\"{}dump\char`\"{}.\\
+\hline
+\end{DoxyParams}
+If print\+Level is \char`\"{}summary\char`\"{}, will loop through all the files known to this \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager}{Input\+Manager}} and call \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_a4b3753ca1fa1a399e519aa15bca8658a}{Input\+File\+::\+Summarise()}}. If print\+Level is \char`\"{}dump\char`\"{}, will print all parameters known to this \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager}{Input\+Manager}} and then loop through all input files and call \mbox{\hyperlink{structMaCh3Plotting_1_1InputFile_a0897b76fdbfc674ed94da1d2b4adb0a2}{Input\+File\+::\+Dump()}}. 
+
+Definition at line \mbox{\hyperlink{inputManager_8cpp_source_l00084}{84}} of file \mbox{\hyperlink{inputManager_8cpp_source}{input\+Manager.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00085\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}Printing\ contents\ of\ InputManager\ instance:"{}});}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \textcolor{keywordflow}{if}\ (printLevel\ ==\ \textcolor{stringliteral}{"{}dump"{}})}
+\DoxyCodeLine{00088\ \ \ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}parameters\ known\ to\ this\ manager:\ "{}});}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordflow}{for}\ (std::string\ param\ :\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a3915837631cc08351a34cb135b0bb351}{\_knownParameters}})}
+\DoxyCodeLine{00091\ \ \ \ \ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}\ \ "{}});}
+\DoxyCodeLine{00093\ \ \ \ \ \}}
+\DoxyCodeLine{00094\ \ \ \}}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \textcolor{keywordtype}{int}\ fileCount\ =\ 0;}
+\DoxyCodeLine{00097\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ InputFile\ \&file\ :\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a29202faed03b0e9a22f2d34bce604793}{\_fileVec}})}
+\DoxyCodeLine{00098\ \ \ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}\ For\ file\ \{\}"{}},\ fileCount);}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordflow}{if}\ (printLevel\ ==\ \textcolor{stringliteral}{"{}summary"{}})}
+\DoxyCodeLine{00101\ \ \ \ \ \{}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ file.Summarise();}
+\DoxyCodeLine{00103\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (printLevel\ ==\ \textcolor{stringliteral}{"{}dump"{}})}
+\DoxyCodeLine{00104\ \ \ \ \ \{\ file.Dump();\ \}}
+\DoxyCodeLine{00105\ \ \ \ \ fileCount++;}
+\DoxyCodeLine{00106\ \ \ \}}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \ \mbox{\hyperlink{MaCh3Logger_8h_a95fa4dffc648e4c5536c9292c2bdcac3}{MACH3LOG\_INFO}}(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00109\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_a008c0e9535ebe6b0fa6f8e62737add3c}\label{classMaCh3Plotting_1_1InputManager_a008c0e9535ebe6b0fa6f8e62737add3c}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!strEndsWith@{strEndsWith}}
+\index{strEndsWith@{strEndsWith}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{strEndsWith()}{strEndsWith()}}
+{\footnotesize\ttfamily bool Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::str\+Ends\+With (\begin{DoxyParamCaption}\item[{std\+::string}]{str,  }\item[{std\+::string}]{ending }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00638}{638}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00638\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00639\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ pos\ =\ str.find(ending);}
+\DoxyCodeLine{00640\ \ \ \ \ \textcolor{keywordflow}{return}\ (pos\ ==\ str.length()\ -\/\ ending.length());}
+\DoxyCodeLine{00641\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_ab4ecb1daf7b700137a15c3cad48cdaa4}\label{classMaCh3Plotting_1_1InputManager_ab4ecb1daf7b700137a15c3cad48cdaa4}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!translateName@{translateName}}
+\index{translateName@{translateName}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{translateName()}{translateName()}}
+{\footnotesize\ttfamily std\+::string Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::translate\+Name (\begin{DoxyParamCaption}\item[{int}]{file\+Id,  }\item[{\mbox{\hyperlink{namespaceMaCh3Plotting_a4152b51a260d6a18f41b3a22aa2a6b75}{file\+Type\+Enum}}}]{file\+Type,  }\item[{std\+::string}]{param\+Name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00501}{501}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00501\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00502\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_aa3a91c2525f5aea76ba182b3be4b2b2a}{getFitterSpecificParamName}}(\mbox{\hyperlink{classMaCh3Plotting_1_1InputManager_a29202faed03b0e9a22f2d34bce604793}{\_fileVec}}[fileId].fitter,\ fileType,\ paramName);}
+\DoxyCodeLine{00503\ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_a29202faed03b0e9a22f2d34bce604793}\label{classMaCh3Plotting_1_1InputManager_a29202faed03b0e9a22f2d34bce604793}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!\_fileVec@{\_fileVec}}
+\index{\_fileVec@{\_fileVec}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{\_fileVec}{\_fileVec}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structMaCh3Plotting_1_1InputFile}{Input\+File}}$>$ Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::\+\_\+file\+Vec\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00670}{670}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_ad2e204406fd336e7fcf00fafdff87703}\label{classMaCh3Plotting_1_1InputManager_ad2e204406fd336e7fcf00fafdff87703}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!\_fitterSpecConfig@{\_fitterSpecConfig}}
+\index{\_fitterSpecConfig@{\_fitterSpecConfig}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{\_fitterSpecConfig}{\_fitterSpecConfig}}
+{\footnotesize\ttfamily YAML\+::\+Node Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::\+\_\+fitter\+Spec\+Config\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00665}{665}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_a836a1772cb3fdf2d6e38ee1b113bc4e8}\label{classMaCh3Plotting_1_1InputManager_a836a1772cb3fdf2d6e38ee1b113bc4e8}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!\_knownFitters@{\_knownFitters}}
+\index{\_knownFitters@{\_knownFitters}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{\_knownFitters}{\_knownFitters}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::\+\_\+known\+Fitters\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00655}{655}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_a3915837631cc08351a34cb135b0bb351}\label{classMaCh3Plotting_1_1InputManager_a3915837631cc08351a34cb135b0bb351}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!\_knownParameters@{\_knownParameters}}
+\index{\_knownParameters@{\_knownParameters}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{\_knownParameters}{\_knownParameters}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::\+\_\+known\+Parameters\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00648}{648}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_abafd844353d8fc69cf31ccf85b2bdcbe}\label{classMaCh3Plotting_1_1InputManager_abafd844353d8fc69cf31ccf85b2bdcbe}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!\_knownSamples@{\_knownSamples}}
+\index{\_knownSamples@{\_knownSamples}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{\_knownSamples}{\_knownSamples}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::\+\_\+known\+Samples\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00652}{652}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_ad243d0438a33356e6bca0677c8b588e6}\label{classMaCh3Plotting_1_1InputManager_ad243d0438a33356e6bca0677c8b588e6}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!\_parametersConfig@{\_parametersConfig}}
+\index{\_parametersConfig@{\_parametersConfig}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{\_parametersConfig}{\_parametersConfig}}
+{\footnotesize\ttfamily YAML\+::\+Node Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::\+\_\+parameters\+Config\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00666}{666}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_a0d66afafbba133fc3c1b4867957eb3db}\label{classMaCh3Plotting_1_1InputManager_a0d66afafbba133fc3c1b4867957eb3db}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!\_paramToTagsMap@{\_paramToTagsMap}}
+\index{\_paramToTagsMap@{\_paramToTagsMap}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{\_paramToTagsMap}{\_paramToTagsMap}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, std\+::vector$<$std\+::string$>$ $>$ Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::\+\_\+param\+To\+Tags\+Map\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00658}{658}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_a1eed58ec2fc42d44474c80b8f4e91e15}\label{classMaCh3Plotting_1_1InputManager_a1eed58ec2fc42d44474c80b8f4e91e15}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!\_samplesConfig@{\_samplesConfig}}
+\index{\_samplesConfig@{\_samplesConfig}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{\_samplesConfig}{\_samplesConfig}}
+{\footnotesize\ttfamily YAML\+::\+Node Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::\+\_\+samples\+Config\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00667}{667}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_ada0eddda54a072bdfc2464a9902cfe01}\label{classMaCh3Plotting_1_1InputManager_ada0eddda54a072bdfc2464a9902cfe01}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!\_sampleToTagsMap@{\_sampleToTagsMap}}
+\index{\_sampleToTagsMap@{\_sampleToTagsMap}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{\_sampleToTagsMap}{\_sampleToTagsMap}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, std\+::vector$<$std\+::string$>$ $>$ Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::\+\_\+sample\+To\+Tags\+Map\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00660}{660}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_ad2cec8b2758ffcb661db59f930e8010e}\label{classMaCh3Plotting_1_1InputManager_ad2cec8b2758ffcb661db59f930e8010e}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!\_translatorConfig@{\_translatorConfig}}
+\index{\_translatorConfig@{\_translatorConfig}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{\_translatorConfig}{\_translatorConfig}}
+{\footnotesize\ttfamily YAML\+::\+Node Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::\+\_\+translator\+Config\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00664}{664}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+\mbox{\Hypertarget{classMaCh3Plotting_1_1InputManager_a5f0ecb6c4e1aa097af43830b1c0ff56e}\label{classMaCh3Plotting_1_1InputManager_a5f0ecb6c4e1aa097af43830b1c0ff56e}} 
+\index{MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}!NOT\_FOUND\_STR@{NOT\_FOUND\_STR}}
+\index{NOT\_FOUND\_STR@{NOT\_FOUND\_STR}!MaCh3Plotting::InputManager@{MaCh3Plotting::InputManager}}
+\doxysubsubsection{\texorpdfstring{NOT\_FOUND\_STR}{NOT\_FOUND\_STR}}
+{\footnotesize\ttfamily const std\+::string Ma\+Ch3\+Plotting\+::\+Input\+Manager\+::\+NOT\+\_\+\+FOUND\+\_\+\+STR}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{stringliteral}{"{}\_\_PARAM\_NAME\_NOT\_FOUND\_\_"{}}}
+
+\end{DoxyCode}
+
+
+the default string to return if something can\textquotesingle{}t be found 
+
+
+
+Definition at line \mbox{\hyperlink{inputManager_8h_source_l00217}{217}} of file \mbox{\hyperlink{inputManager_8h_source}{input\+Manager.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/runner/work/\+Ma\+Ch3/\+Ma\+Ch3/plotting/plotting\+Utils/\mbox{\hyperlink{inputManager_8h}{input\+Manager.\+h}}\item 
+/home/runner/work/\+Ma\+Ch3/\+Ma\+Ch3/plotting/plotting\+Utils/\mbox{\hyperlink{inputManager_8cpp}{input\+Manager.\+cpp}}\end{DoxyCompactItemize}
