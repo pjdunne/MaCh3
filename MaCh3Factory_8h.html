@@ -170,6 +170,7 @@ Functions</h2></td></tr>
 <tr class="separator:adf686154f88c21b8937a8c9062d41644"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22a2462a2451e3c1e2d6d95c07d94da9"><td class="memTemplParams" colspan="2">template&lt;typename SampleType &gt; </td></tr>
 <tr class="memitem:a22a2462a2451e3c1e2d6d95c07d94da9"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; SampleType * &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="MaCh3Factory_8h.html#a22a2462a2451e3c1e2d6d95c07d94da9">MaCh3SamplePDFFactory</a> (const std::vector&lt; std::string &gt; &amp;SampleConfig, <a class="el" href="classcovarianceXsec.html">covarianceXsec</a> *xsec, <a class="el" href="classcovarianceOsc.html">covarianceOsc</a> *osc=nullptr)</td></tr>
+<tr class="memdesc:a22a2462a2451e3c1e2d6d95c07d94da9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory function for creating SamplePDF and initialisation with systematic.  <br /></td></tr>
 <tr class="separator:a22a2462a2451e3c1e2d6d95c07d94da9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -327,8 +328,25 @@ template&lt;typename SampleType &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2runner_2work_2MaCh3_2MaCh3_2mcmc_2MaCh3Factory_8h-example.html#a4">/home/runner/work/MaCh3/MaCh3/mcmc/MaCh3Factory.h</a>.</dd>
+
+<p>Factory function for creating SamplePDF and initialisation with systematic. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">SampleType</td><td>The class type of the sample to create, e.g., <code>samplePDFTutorial</code>. </td></tr>
+  </table>
+  </dd>
 </dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">SampleConfig</td><td>Path to sample config. </td></tr>
+    <tr><td class="paramname">xsec</td><td>A pointer to a <a class="el" href="classcovarianceXsec.html" title="Class responsible for handling of systematic error parameters with different types defined in the con...">covarianceXsec</a> object for cross-section systematic settings. </td></tr>
+    <tr><td class="paramname">osc</td><td>(Optional) A pointer to a <a class="el" href="classcovarianceOsc.html" title="Class responsible for handling of neutrino oscillation parameters.">covarianceOsc</a> object for oscillation systematic settings. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Vector of SampleType object, initialized and ready for use.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Example <div class="fragment"><div class="line"><span class="keyword">auto</span> mySamples = MaCh3SamplePDFFactory&lt;samplePDFTutorial&gt;(SampleConfig, xsec, osc);</div>
+</div><!-- fragment --> </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="MaCh3Factory_8h_source.html#l00068">68</a> of file <a class="el" href="MaCh3Factory_8h_source.html">MaCh3Factory.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   71</span>{</div>
