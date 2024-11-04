@@ -1,20 +1,20 @@
-<map id="/home/runner/work/MaCh3/MaCh3/plotting/plottingUtils/styleManager.h" name="/home/runner/work/MaCh3/MaCh3/plotting/plottingUtils/styleManager.h">
-<area shape="rect" id="node1" title=" " alt="" coords="531,5,740,60"/>
-<area shape="rect" id="node2" href="$MaCh3Logger_8h.html" title=" " alt="" coords="197,181,381,207"/>
-<area shape="rect" id="node8" href="$YamlHelper_8h.html" title="Utility functions for handling YAML nodes." alt="" coords="617,181,787,207"/>
-<area shape="rect" id="node14" href="$MaCh3Exception_8h.html" title=" " alt="" coords="355,108,561,133"/>
-<area shape="rect" id="node16" title=" " alt="" coords="635,108,710,133"/>
-<area shape="rect" id="node17" title=" " alt="" coords="735,108,795,133"/>
-<area shape="rect" id="node18" title=" " alt="" coords="819,108,894,133"/>
-<area shape="rect" id="node3" title=" " alt="" coords="116,255,240,280"/>
-<area shape="rect" id="node4" title=" " alt="" coords="363,255,443,280"/>
-<area shape="rect" id="node5" title=" " alt="" coords="265,255,339,280"/>
-<area shape="rect" id="node6" title=" " alt="" coords="5,255,92,280"/>
-<area shape="rect" id="node7" title=" " alt="" coords="467,255,526,280"/>
-<area shape="rect" id="node9" title=" " alt="" coords="551,255,624,280"/>
-<area shape="rect" id="node10" title=" " alt="" coords="649,255,731,280"/>
-<area shape="rect" id="node11" title=" " alt="" coords="756,255,821,280"/>
-<area shape="rect" id="node12" title=" " alt="" coords="845,255,948,280"/>
-<area shape="rect" id="node13" title=" " alt="" coords="972,255,1104,280"/>
-<area shape="rect" id="node15" title=" " alt="" coords="507,181,593,207"/>
+<map id="plotting/plottingUtils/styleManager.h" name="plotting/plottingUtils/styleManager.h">
+<area shape="rect" id="node1" title=" " alt="" coords="557,5,713,45"/>
+<area shape="rect" id="node2" href="$MaCh3Logger_8h.html" title=" " alt="" coords="197,167,381,192"/>
+<area shape="rect" id="node8" href="$YamlHelper_8h.html" title="Utility functions for handling YAML nodes." alt="" coords="617,167,787,192"/>
+<area shape="rect" id="node14" href="$MaCh3Exception_8h.html" title=" " alt="" coords="355,93,561,119"/>
+<area shape="rect" id="node16" title=" " alt="" coords="635,93,710,119"/>
+<area shape="rect" id="node17" title=" " alt="" coords="735,93,795,119"/>
+<area shape="rect" id="node18" title=" " alt="" coords="819,93,894,119"/>
+<area shape="rect" id="node3" title=" " alt="" coords="116,240,240,265"/>
+<area shape="rect" id="node4" title=" " alt="" coords="363,240,443,265"/>
+<area shape="rect" id="node5" title=" " alt="" coords="265,240,339,265"/>
+<area shape="rect" id="node6" title=" " alt="" coords="5,240,92,265"/>
+<area shape="rect" id="node7" title=" " alt="" coords="467,240,526,265"/>
+<area shape="rect" id="node9" title=" " alt="" coords="551,240,624,265"/>
+<area shape="rect" id="node10" title=" " alt="" coords="649,240,731,265"/>
+<area shape="rect" id="node11" title=" " alt="" coords="756,240,821,265"/>
+<area shape="rect" id="node12" title=" " alt="" coords="845,240,948,265"/>
+<area shape="rect" id="node13" title=" " alt="" coords="972,240,1104,265"/>
+<area shape="rect" id="node15" title=" " alt="" coords="507,167,593,192"/>
 </map>

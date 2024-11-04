@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MaCh3: /home/runner/work/MaCh3/MaCh3/samplePDF/Structs.cpp Source File</title>
+<title>MaCh3: samplePDF/Structs.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -79,7 +79,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_1036706e55c22cab35bc1c58ee689f1d.html">runner</a></li><li class="navelem"><a class="el" href="dir_629f8151d55d307162ff2d619fb1783d.html">work</a></li><li class="navelem"><a class="el" href="dir_a50b9e3ecffd0792033cf4aced2b0765.html">MaCh3</a></li><li class="navelem"><a class="el" href="dir_29d60c598fcad042cfaabbe0a0485dbc.html">MaCh3</a></li><li class="navelem"><a class="el" href="dir_8929165a2bfc78fcadc853d75f418be1.html">samplePDF</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_8ab82b4d49d905c57b21b814a783a10f.html">samplePDF</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -546,10 +546,10 @@ $(function() {
 <div class="line"><a id="l00458" name="l00458"></a><span class="lineno">  458</span>}</div>
 <div class="line"><a id="l00459" name="l00459"></a><span class="lineno">  459</span> </div>
 <div class="line"><a id="l00460" name="l00460"></a><span class="lineno">  460</span><span class="comment">// ****************</span></div>
-<div class="line"><a id="l00461" name="l00461"></a><span class="lineno">  461</span><span class="comment">//DB Get the Cernekov momentum threshold in MeV</span></div>
+<div class="line"><a id="l00461" name="l00461"></a><span class="lineno">  461</span><span class="comment">//DB Get the Cherenkov momentum threshold in MeV</span></div>
 <div class="line"><a id="l00462" name="l00462"></a><span class="lineno"><a class="line" href="Structs_8cpp.html#a6c6f918bcc5cfc261888be8d8ce2e444">  462</a></span><span class="keywordtype">double</span> <a class="code hl_function" href="Structs_8cpp.html#a6c6f918bcc5cfc261888be8d8ce2e444">returnCherenkovThresholdMomentum</a>(<span class="keywordtype">int</span> PDG) {</div>
 <div class="line"><a id="l00463" name="l00463"></a><span class="lineno">  463</span><span class="comment">// ****************</span></div>
-<div class="line"><a id="l00464" name="l00464"></a><span class="lineno">  464</span>  <span class="keywordtype">double</span> refractiveIndex = 1.334; <span class="comment">//DB From https://github.com/fiTQun/fiTQun/blob/646cf9c8ba3d4f7400bcbbde029d5ca15513a3bf/fiTQun_shared.cc#L757</span></div>
+<div class="line"><a id="l00464" name="l00464"></a><span class="lineno">  464</span>  <span class="keyword">constexpr</span> <span class="keywordtype">double</span> refractiveIndex = 1.334; <span class="comment">//DB From https://github.com/fiTQun/fiTQun/blob/646cf9c8ba3d4f7400bcbbde029d5ca15513a3bf/fiTQun_shared.cc#L757</span></div>
 <div class="line"><a id="l00465" name="l00465"></a><span class="lineno">  465</span>  <span class="keywordtype">double</span> mass =  <a class="code hl_function" href="namespaceMaCh3Utils.html#a86d34372bb55524024fbdadd65834967">MaCh3Utils::GetMassFromPDG</a>(PDG)*1e3;</div>
 <div class="line"><a id="l00466" name="l00466"></a><span class="lineno">  466</span>  <span class="keywordtype">double</span> momentumThreshold = mass/sqrt(refractiveIndex*refractiveIndex-1.);</div>
 <div class="line"><a id="l00467" name="l00467"></a><span class="lineno">  467</span>  <span class="keywordflow">return</span> momentumThreshold;</div>
@@ -559,7 +559,7 @@ $(function() {
 <div class="line"><a id="l00471" name="l00471"></a><span class="lineno">  471</span><span class="comment">// Recalculate Q^2 after Eb shift. Takes in shifted lepton momentum, lepton angle, and true neutrino energy</span></div>
 <div class="line"><a id="l00472" name="l00472"></a><span class="lineno"><a class="line" href="Structs_8cpp.html#af6c0e794fc9fe6b93be0d07fc84ca67a">  472</a></span><span class="keywordtype">double</span> <a class="code hl_function" href="Structs_8cpp.html#af6c0e794fc9fe6b93be0d07fc84ca67a">CalculateQ2</a>(<span class="keywordtype">double</span> PLep, <span class="keywordtype">double</span> PUpd, <span class="keywordtype">double</span> EnuTrue, <span class="keywordtype">double</span> InitialQ2){</div>
 <div class="line"><a id="l00473" name="l00473"></a><span class="lineno">  473</span><span class="comment">// ***************************************************************************</span></div>
-<div class="line"><a id="l00474" name="l00474"></a><span class="lineno">  474</span>  <span class="keyword">const</span> <span class="keywordtype">double</span> MLep = 0.10565837;</div>
+<div class="line"><a id="l00474" name="l00474"></a><span class="lineno">  474</span>  <span class="keyword">constexpr</span> <span class="keywordtype">double</span> MLep = 0.10565837;</div>
 <div class="line"><a id="l00475" name="l00475"></a><span class="lineno">  475</span> </div>
 <div class="line"><a id="l00476" name="l00476"></a><span class="lineno">  476</span>  <span class="comment">// Caluclate muon energy</span></div>
 <div class="line"><a id="l00477" name="l00477"></a><span class="lineno">  477</span>  <span class="keywordtype">double</span> ELep = sqrt((MLep*MLep)+(PLep*PLep));</div>

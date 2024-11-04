@@ -38,7 +38,7 @@ var searchData=
   ['splinebinning_35',['SplineBinning',['../classsplineFDBase.html#af71b65713518f42e59c543dbad5dab70',1,'splineFDBase']]],
   ['splinefileparprefixnames_36',['SplineFileParPrefixNames',['../classsplineFDBase.html#a5619363447e607cd835c46d601b10675',1,'splineFDBase']]],
   ['splinehandler_37',['SplineHandler',['../classsamplePDFFDBase.html#aa5e4bbbc2793215c20d5a10f46cf5b65',1,'samplePDFFDBase']]],
-  ['splineinfoarray_38',['SplineInfoArray',['../classSMonolith.html#a50a4ad58aebffdb820626f855bae6821',1,'SMonolith']]],
+  ['splineinfoarray_38',['SplineInfoArray',['../classSMonolith.html#a701e12512a1d8b8c9038d881adc9264c',1,'SMonolith']]],
   ['splinemodevecs_39',['SplineModeVecs',['../classsplineFDBase.html#a6b7aeec6d03dad01975582226b39632b',1,'splineFDBase']]],
   ['splineparams_40',['SplineParams',['../classcovarianceXsec.html#ae95bafab0c674dc838635aaeca40bc2c',1,'covarianceXsec']]],
   ['splineparsindex_41',['SplineParsIndex',['../classsplineFDBase.html#a0570b0b59ff6ba13af94c64c7271202d',1,'splineFDBase']]],

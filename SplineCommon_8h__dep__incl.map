@@ -1,13 +1,13 @@
-<map id="/home/runner/work/MaCh3/MaCh3/splines/SplineCommon.h" name="/home/runner/work/MaCh3/MaCh3/splines/SplineCommon.h">
-<area shape="rect" id="node1" title="Contains definitions for spline coefficients and structure used in both CPU and GPU code." alt="" coords="505,5,741,45"/>
-<area shape="rect" id="node2" href="$SplineBase_8h.html" title=" " alt="" coords="393,93,602,133"/>
-<area shape="rect" id="node10" href="$gpuSplineUtils_8cuh.html" title="MaCh3 event&#45;by&#45;event cross&#45;section spline code." alt="" coords="693,93,939,133"/>
-<area shape="rect" id="node3" href="$SplineBase_8cpp.html" title=" " alt="" coords="5,181,229,221"/>
-<area shape="rect" id="node4" href="$SplineMonolith_8h.html" title=" " alt="" coords="253,181,488,221"/>
-<area shape="rect" id="node6" href="$splineFDBase_8h.html" title=" " alt="" coords="512,181,739,221"/>
-<area shape="rect" id="node5" href="$SplineMonolith_8cpp.html" title=" " alt="" coords="207,269,457,309"/>
-<area shape="rect" id="node7" href="$samplePDFFDBase_8h.html" title=" " alt="" coords="481,269,770,309"/>
-<area shape="rect" id="node9" href="$splineFDBase_8cpp.html" title=" " alt="" coords="794,269,1035,309"/>
-<area shape="rect" id="node8" href="$samplePDFFDBase_8cpp.html" title=" " alt="" coords="473,357,777,397"/>
-<area shape="rect" id="node11" href="$gpuSplineUtils_8cu.html" title=" " alt="" coords="763,181,1002,221"/>
+<map id="splines/SplineCommon.h" name="splines/SplineCommon.h">
+<area shape="rect" id="node1" title="Contains definitions for spline coefficients and structure used in both CPU and GPU code." alt="" coords="398,5,581,31"/>
+<area shape="rect" id="node2" href="$SplineBase_8h.html" title=" " alt="" coords="313,79,469,104"/>
+<area shape="rect" id="node10" href="$gpuSplineUtils_8cuh.html" title="MaCh3 event&#45;by&#45;event cross&#45;section spline code." alt="" coords="546,79,739,104"/>
+<area shape="rect" id="node3" href="$SplineBase_8cpp.html" title=" " alt="" coords="5,152,176,177"/>
+<area shape="rect" id="node4" href="$SplineMonolith_8h.html" title=" " alt="" coords="200,152,381,177"/>
+<area shape="rect" id="node6" href="$splineFDBase_8h.html" title=" " alt="" coords="405,152,579,177"/>
+<area shape="rect" id="node5" href="$SplineMonolith_8cpp.html" title=" " alt="" coords="154,225,350,251"/>
+<area shape="rect" id="node7" href="$samplePDFFDBase_8h.html" title=" " alt="" coords="374,225,610,251"/>
+<area shape="rect" id="node9" href="$splineFDBase_8cpp.html" title=" " alt="" coords="634,225,822,251"/>
+<area shape="rect" id="node8" href="$samplePDFFDBase_8cpp.html" title=" " alt="" coords="367,299,617,324"/>
+<area shape="rect" id="node11" href="$gpuSplineUtils_8cu.html" title=" " alt="" coords="603,152,789,177"/>
 </map>

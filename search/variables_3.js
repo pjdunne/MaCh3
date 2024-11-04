@@ -28,8 +28,8 @@ var searchData=
   ['cpu_5fspline_5fhandler_25',['cpu_spline_handler',['../classSMonolith.html#a48d0e5e5b4130fcd191c3e8f1d841eb7',1,'SMonolith']]],
   ['cpu_5ftotal_5fweights_26',['cpu_total_weights',['../classSMonolith.html#ab572dd7e0a46caf44eb925a89cbfb0cf',1,'SMonolith']]],
   ['cpu_5fweights_27',['cpu_weights',['../classSMonolith.html#a8614e8ef07431d99f62ab88d9ebdad16',1,'SMonolith']]],
-  ['cpu_5fweights_5ftf1_5fvar_28',['cpu_weights_tf1_var',['../classSMonolith.html#a4a1d45d273cc40cb4f684400812dcb60',1,'SMonolith']]],
-  ['cpu_5fweights_5fvar_29',['cpu_weights_var',['../classSMonolith.html#ab6a29f13d8e6efb380f2b9d59cfa88fc',1,'SMonolith']]],
+  ['cpu_5fweights_5fspline_5fvar_28',['cpu_weights_spline_var',['../classSMonolith.html#a870bb2bce61e17162b9425f82cf2a099',1,'SMonolith']]],
+  ['cpu_5fweights_5ftf1_5fvar_29',['cpu_weights_tf1_var',['../classSMonolith.html#a4a1d45d273cc40cb4f684400812dcb60',1,'SMonolith']]],
   ['crosssectionparameters_30',['CrossSectionParameters',['../GetPostfitParamPlots_8cpp.html#a5307771642312031f0050189b493a621',1,'GetPostfitParamPlots.cpp']]],
   ['curr_5fvalue_31',['curr_value',['../classparticle.html#a3fa66bc070aa43b66389b8e0b9754f32',1,'particle']]],
   ['currsegment_32',['CurrSegment',['../structFastSplineInfo.html#a80e4c1195099d2c34a1a511e4f749fe4',1,'FastSplineInfo']]]

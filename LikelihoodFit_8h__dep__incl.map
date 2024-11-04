@@ -1,10 +1,10 @@
-<map id="/home/runner/work/MaCh3/MaCh3/mcmc/LikelihoodFit.h" name="/home/runner/work/MaCh3/MaCh3/mcmc/LikelihoodFit.h">
-<area shape="rect" id="node1" title=" " alt="" coords="315,5,529,45"/>
-<area shape="rect" id="node2" href="$LikelihoodFit_8cpp.html" title=" " alt="" coords="5,93,233,133"/>
-<area shape="rect" id="node3" href="$MaCh3Factory_8h.html" title=" " alt="" coords="430,181,651,221"/>
-<area shape="rect" id="node5" href="$MinuitFit_8h.html" title=" " alt="" coords="258,93,453,133"/>
-<area shape="rect" id="node7" href="$PSO_8h.html" title=" " alt="" coords="527,93,722,133"/>
-<area shape="rect" id="node4" href="$MaCh3Factory_8cpp.html" title=" " alt="" coords="423,269,659,309"/>
-<area shape="rect" id="node6" href="$MinuitFit_8cpp.html" title=" " alt="" coords="203,181,406,221"/>
-<area shape="rect" id="node8" href="$PSO_8cpp.html" title=" " alt="" coords="675,181,870,221"/>
+<map id="mcmc/LikelihoodFit.h" name="mcmc/LikelihoodFit.h">
+<area shape="rect" id="node1" title=" " alt="" coords="243,5,403,31"/>
+<area shape="rect" id="node2" href="$LikelihoodFit_8cpp.html" title=" " alt="" coords="5,79,180,104"/>
+<area shape="rect" id="node3" href="$MaCh3Factory_8h.html" title=" " alt="" coords="333,152,501,177"/>
+<area shape="rect" id="node5" href="$MinuitFit_8h.html" title=" " alt="" coords="204,79,339,104"/>
+<area shape="rect" id="node7" href="$PSO_8h.html" title=" " alt="" coords="414,79,518,104"/>
+<area shape="rect" id="node4" href="$MaCh3Factory_8cpp.html" title=" " alt="" coords="325,225,508,251"/>
+<area shape="rect" id="node6" href="$MinuitFit_8cpp.html" title=" " alt="" coords="157,152,308,177"/>
+<area shape="rect" id="node8" href="$PSO_8cpp.html" title=" " alt="" coords="525,152,644,177"/>
 </map>

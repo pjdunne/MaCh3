@@ -91,7 +91,7 @@ $(function() {
 <p>Class responsible for handling implementation of samples used in analysis, reweighting and returning LLH.  
  <a href="classsamplePDFBase.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="samplePDFBase_8h_source.html">/home/runner/work/MaCh3/MaCh3/samplePDF/samplePDFBase.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="samplePDFBase_8h_source.html">samplePDF/samplePDFBase.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for samplePDFBase:</div>
 <div class="dyncontent">
@@ -198,11 +198,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad994df38f665190f3e15dbe21f663126"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c02e6a8107a0fd8b9deed6d98015ba3"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsamplePDFBase.html#a2c02e6a8107a0fd8b9deed6d98015ba3">GetKinVarLabel</a> (const int sample, const int Dimension)</td></tr>
 <tr class="separator:a2c02e6a8107a0fd8b9deed6d98015ba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a772ebf22fbffd9336b2d8c2f46988453"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsamplePDFBase.html#a772ebf22fbffd9336b2d8c2f46988453">getTestStatLLH</a> (double data, double mc)</td></tr>
-<tr class="separator:a772ebf22fbffd9336b2d8c2f46988453"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae43146f1732e7095839c3e6d9e3832a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsamplePDFBase.html#aae43146f1732e7095839c3e6d9e3832a">getTestStatLLH</a> (const double data, const double mc, const double w2)</td></tr>
-<tr class="memdesc:aae43146f1732e7095839c3e6d9e3832a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate test statistic for a single bin. Calculation depends on setting of fTestStatistic.  <br /></td></tr>
-<tr class="separator:aae43146f1732e7095839c3e6d9e3832a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2e2eab110efc30a2aee13a5011acb8a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsamplePDFBase.html#ab2e2eab110efc30a2aee13a5011acb8a">getTestStatLLH</a> (double data, double mc) const</td></tr>
+<tr class="separator:ab2e2eab110efc30a2aee13a5011acb8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdd336ec964ba05544d7cb91afdc0fe7"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsamplePDFBase.html#afdd336ec964ba05544d7cb91afdc0fe7">getTestStatLLH</a> (const double data, const double mc, const double w2) const</td></tr>
+<tr class="memdesc:afdd336ec964ba05544d7cb91afdc0fe7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate test statistic for a single bin. Calculation depends on setting of fTestStatistic.  <br /></td></tr>
+<tr class="separator:afdd336ec964ba05544d7cb91afdc0fe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb444a6114e59d6c1208f67f3f7cfb82"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsamplePDFBase.html#afb444a6114e59d6c1208f67f3f7cfb82">SetTestStatistic</a> (<a class="el" href="Structs_8h.html#a960da89e33ac45a56f7bbfac3068dc67">TestStatistic</a> testStat)</td></tr>
 <tr class="memdesc:afb444a6114e59d6c1208f67f3f7cfb82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the test statistic to be used when calculating the binned likelihoods.  <br /></td></tr>
 <tr class="separator:afb444a6114e59d6c1208f67f3f7cfb82"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1287,8 +1287,8 @@ Protected Attributes</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="aae43146f1732e7095839c3e6d9e3832a" name="aae43146f1732e7095839c3e6d9e3832a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aae43146f1732e7095839c3e6d9e3832a">&#9670;&#160;</a></span>getTestStatLLH() <span class="overload">[1/2]</span></h2>
+<a id="afdd336ec964ba05544d7cb91afdc0fe7" name="afdd336ec964ba05544d7cb91afdc0fe7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdd336ec964ba05544d7cb91afdc0fe7">&#9670;&#160;</a></span>getTestStatLLH() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1314,7 +1314,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1330,7 +1330,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="samplePDFBase_8cpp_source.html#l00221">221</a> of file <a class="el" href="samplePDFBase_8cpp_source.html">samplePDFBase.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  221</span>                                                                                        {</div>
+<div class="fragment"><div class="line"><span class="lineno">  221</span>                                                                                              {</div>
 <div class="line"><span class="lineno">  222</span><span class="comment">// *************************</span></div>
 <div class="line"><span class="lineno">  223</span> </div>
 <div class="line"><span class="lineno">  224</span>  <span class="comment">// Need some MC</span></div>
@@ -1455,7 +1455,7 @@ Protected Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  343</span>    {</div>
 <div class="line"><span class="lineno">  344</span>      <span class="comment">//Just call getTestStatLLH which doesn&#39;t take in weights</span></div>
 <div class="line"><span class="lineno">  345</span>      <span class="comment">//and is a Poisson likelihood comparison.</span></div>
-<div class="line"><span class="lineno">  346</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="classsamplePDFBase.html#a772ebf22fbffd9336b2d8c2f46988453">getTestStatLLH</a>(data, mc);<span class="comment">//stat;</span></div>
+<div class="line"><span class="lineno">  346</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="classsamplePDFBase.html#ab2e2eab110efc30a2aee13a5011acb8a">getTestStatLLH</a>(data, mc);<span class="comment">//stat;</span></div>
 <div class="line"><span class="lineno">  347</span>    }</div>
 <div class="line"><span class="lineno">  348</span>    <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="lineno">  349</span> </div>
@@ -1470,13 +1470,13 @@ Protected Attributes</h2></td></tr>
 <div class="ttc" id="aStructs_8h_html_a960da89e33ac45a56f7bbfac3068dc67a5a1aedce85942661f297f503d606c472"><div class="ttname"><a href="Structs_8h.html#a960da89e33ac45a56f7bbfac3068dc67a5a1aedce85942661f297f503d606c472">kIceCube</a></div><div class="ttdeci">@ kIceCube</div><div class="ttdoc">Based on .</div><div class="ttdef"><b>Definition:</b> <a href="Structs_8h_source.html#l00422">Structs.h:422</a></div></div>
 <div class="ttc" id="aStructs_8h_html_a960da89e33ac45a56f7bbfac3068dc67a6589bdeaef8de84e7ef545fd709772bb"><div class="ttname"><a href="Structs_8h.html#a960da89e33ac45a56f7bbfac3068dc67a6589bdeaef8de84e7ef545fd709772bb">kDembinskiAbdelmottele</a></div><div class="ttdeci">@ kDembinskiAbdelmottele</div><div class="ttdoc">Based on .</div><div class="ttdef"><b>Definition:</b> <a href="Structs_8h_source.html#l00424">Structs.h:424</a></div></div>
 <div class="ttc" id="aStructs_8h_html_a960da89e33ac45a56f7bbfac3068dc67a82f43d91f1eda213c4b5c486672a32a5"><div class="ttname"><a href="Structs_8h.html#a960da89e33ac45a56f7bbfac3068dc67a82f43d91f1eda213c4b5c486672a32a5">kPoisson</a></div><div class="ttdeci">@ kPoisson</div><div class="ttdoc">Standard Poisson likelihood.</div><div class="ttdef"><b>Definition:</b> <a href="Structs_8h_source.html#l00420">Structs.h:420</a></div></div>
-<div class="ttc" id="aclasssamplePDFBase_html_a772ebf22fbffd9336b2d8c2f46988453"><div class="ttname"><a href="classsamplePDFBase.html#a772ebf22fbffd9336b2d8c2f46988453">samplePDFBase::getTestStatLLH</a></div><div class="ttdeci">double getTestStatLLH(double data, double mc)</div><div class="ttdef"><b>Definition:</b> <a href="samplePDFBase_8cpp_source.html#l00203">samplePDFBase.cpp:203</a></div></div>
+<div class="ttc" id="aclasssamplePDFBase_html_ab2e2eab110efc30a2aee13a5011acb8a"><div class="ttname"><a href="classsamplePDFBase.html#ab2e2eab110efc30a2aee13a5011acb8a">samplePDFBase::getTestStatLLH</a></div><div class="ttdeci">double getTestStatLLH(double data, double mc) const</div><div class="ttdef"><b>Definition:</b> <a href="samplePDFBase_8cpp_source.html#l00203">samplePDFBase.cpp:203</a></div></div>
 <div class="ttc" id="aclasssamplePDFBase_html_adc5cd0002708ad049ba4fb5e3c62075d"><div class="ttname"><a href="classsamplePDFBase.html#adc5cd0002708ad049ba4fb5e3c62075d">samplePDFBase::fTestStatistic</a></div><div class="ttdeci">TestStatistic fTestStatistic</div><div class="ttdoc">Test statistic tells what kind of likelihood sample is using.</div><div class="ttdef"><b>Definition:</b> <a href="samplePDFBase_8h_source.html#l00100">samplePDFBase.h:100</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a772ebf22fbffd9336b2d8c2f46988453" name="a772ebf22fbffd9336b2d8c2f46988453"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a772ebf22fbffd9336b2d8c2f46988453">&#9670;&#160;</a></span>getTestStatLLH() <span class="overload">[2/2]</span></h2>
+<a id="ab2e2eab110efc30a2aee13a5011acb8a" name="ab2e2eab110efc30a2aee13a5011acb8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2e2eab110efc30a2aee13a5011acb8a">&#9670;&#160;</a></span>getTestStatLLH() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1496,13 +1496,13 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="samplePDFBase_8cpp_source.html#l00203">203</a> of file <a class="el" href="samplePDFBase_8cpp_source.html">samplePDFBase.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  203</span>                                                                       {</div>
+<div class="fragment"><div class="line"><span class="lineno">  203</span>                                                                             {</div>
 <div class="line"><span class="lineno">  204</span><span class="comment">// ***************************************************************************</span></div>
 <div class="line"><span class="lineno">  205</span>  <span class="comment">// Need some MC</span></div>
 <div class="line"><span class="lineno">  206</span>  <span class="keywordflow">if</span>(mc == 0) <span class="keywordflow">return</span> 0.;</div>
@@ -2406,8 +2406,8 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/runner/work/MaCh3/MaCh3/samplePDF/<a class="el" href="samplePDFBase_8h_source.html">samplePDFBase.h</a></li>
-<li>/home/runner/work/MaCh3/MaCh3/samplePDF/<a class="el" href="samplePDFBase_8cpp_source.html">samplePDFBase.cpp</a></li>
+<li>samplePDF/<a class="el" href="samplePDFBase_8h_source.html">samplePDFBase.h</a></li>
+<li>samplePDF/<a class="el" href="samplePDFBase_8cpp_source.html">samplePDFBase.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

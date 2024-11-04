@@ -1,12 +1,14 @@
 <map id="covarianceOsc" name="covarianceOsc">
-<area shape="rect" id="node1" title="Class responsible for handling of neutrino oscillation parameters." alt="" coords="1172,394,1289,419"/>
-<area shape="rect" id="node2" href="$classcovarianceBase.html" title="Base class responsible for handling of systematic error parameters. Capable of using PCA or using ada..." alt="" coords="997,394,1123,419"/>
-<area shape="rect" id="node3" title=" " alt="" coords="233,75,319,101"/>
-<area shape="rect" id="node5" title=" " alt="" coords="600,119,787,145"/>
-<area shape="rect" id="node4" title=" " alt="" coords="5,68,144,108"/>
-<area shape="rect" id="node6" title=" " alt="" coords="193,367,359,393"/>
-<area shape="rect" id="node9" href="$classPCAHandler.html" title="Class responsible for handling Principal Component Analysis (PCA) of covariance matrix." alt="" coords="644,394,743,419"/>
-<area shape="rect" id="node10" href="$classadaptive__mcmc_1_1AdaptiveMCMCHandler.html" title="Contains information about adaptive covariance matrix." alt="" coords="551,443,836,469"/>
-<area shape="rect" id="node7" title=" " alt="" coords="619,593,768,618"/>
-<area shape="rect" id="node8" title=" " alt="" coords="207,509,345,534"/>
+<area shape="rect" id="node1" title="Class responsible for handling of neutrino oscillation parameters." alt="" coords="1225,427,1343,453"/>
+<area shape="rect" id="node2" href="$classcovarianceBase.html" title="Base class responsible for handling of systematic error parameters. Capable of using PCA or using ada..." alt="" coords="1051,427,1176,453"/>
+<area shape="rect" id="node3" title=" " alt="" coords="259,89,346,114"/>
+<area shape="rect" id="node7" title=" " alt="" coords="653,133,840,158"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,81,144,121"/>
+<area shape="rect" id="node5" title=" " alt="" coords="657,183,836,223"/>
+<area shape="rect" id="node6" title=" " alt="" coords="193,190,412,215"/>
+<area shape="rect" id="node8" title=" " alt="" coords="220,445,385,470"/>
+<area shape="rect" id="node11" href="$classPCAHandler.html" title="Class responsible for handling Principal Component Analysis (PCA) of covariance matrix." alt="" coords="697,471,796,497"/>
+<area shape="rect" id="node12" href="$classadaptive__mcmc_1_1AdaptiveMCMCHandler.html" title="Contains information about adaptive covariance matrix." alt="" coords="604,521,889,546"/>
+<area shape="rect" id="node9" title=" " alt="" coords="672,670,821,695"/>
+<area shape="rect" id="node10" title=" " alt="" coords="233,586,372,611"/>
 </map>

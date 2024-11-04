@@ -91,7 +91,7 @@ $(function() {
 <p>Class to calculate pvalue produce posterior predictive and many fancy Bayesian stuff <a class="el" href="citelist.html#CITEREF_gelman1996posterior">[8]</a>.  
  <a href="classSampleSummary.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="SampleSummary_8h_source.html">/home/runner/work/MaCh3/MaCh3/mcmc/SampleSummary.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="SampleSummary_8h_source.html">mcmc/SampleSummary.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for SampleSummary:</div>
 <div class="dyncontent">
@@ -1665,12 +1665,12 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno"> 1814</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> data = DatHist-&gt;GetBinContent(i);</div>
 <div class="line"><span class="lineno"> 1815</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> mc = MCHist-&gt;GetBinContent(i);</div>
 <div class="line"><span class="lineno"> 1816</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> w2 = W2Hist-&gt;GetBinContent(i);</div>
-<div class="line"><span class="lineno"> 1817</span>    llh += <a class="code hl_variable" href="classSampleSummary.html#abd938805245ca6cfeb8c49363f5ff11c">SamplePDF</a>-&gt;<a class="code hl_function" href="classsamplePDFBase.html#a772ebf22fbffd9336b2d8c2f46988453">getTestStatLLH</a>(data, mc, w2);</div>
+<div class="line"><span class="lineno"> 1817</span>    llh += <a class="code hl_variable" href="classSampleSummary.html#abd938805245ca6cfeb8c49363f5ff11c">SamplePDF</a>-&gt;<a class="code hl_function" href="classsamplePDFBase.html#ab2e2eab110efc30a2aee13a5011acb8a">getTestStatLLH</a>(data, mc, w2);</div>
 <div class="line"><span class="lineno"> 1818</span>  }</div>
 <div class="line"><span class="lineno"> 1819</span>  <span class="comment">//KS: do times 2 because banff reports chi2</span></div>
 <div class="line"><span class="lineno"> 1820</span>  <span class="keywordflow">return</span> 2*llh;</div>
 <div class="line"><span class="lineno"> 1821</span>}</div>
-<div class="ttc" id="aclasssamplePDFBase_html_a772ebf22fbffd9336b2d8c2f46988453"><div class="ttname"><a href="classsamplePDFBase.html#a772ebf22fbffd9336b2d8c2f46988453">samplePDFBase::getTestStatLLH</a></div><div class="ttdeci">double getTestStatLLH(double data, double mc)</div><div class="ttdef"><b>Definition:</b> <a href="samplePDFBase_8cpp_source.html#l00203">samplePDFBase.cpp:203</a></div></div>
+<div class="ttc" id="aclasssamplePDFBase_html_ab2e2eab110efc30a2aee13a5011acb8a"><div class="ttname"><a href="classsamplePDFBase.html#ab2e2eab110efc30a2aee13a5011acb8a">samplePDFBase::getTestStatLLH</a></div><div class="ttdeci">double getTestStatLLH(double data, double mc) const</div><div class="ttdef"><b>Definition:</b> <a href="samplePDFBase_8cpp_source.html#l00203">samplePDFBase.cpp:203</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1725,7 +1725,7 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno"> 1799</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> data = DatHist-&gt;GetBinContent(i);</div>
 <div class="line"><span class="lineno"> 1800</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> mc = MCHist-&gt;GetBinContent(i);</div>
 <div class="line"><span class="lineno"> 1801</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> w2 = W2Hist-&gt;GetBinContent(i);</div>
-<div class="line"><span class="lineno"> 1802</span>    llh += <a class="code hl_variable" href="classSampleSummary.html#abd938805245ca6cfeb8c49363f5ff11c">SamplePDF</a>-&gt;<a class="code hl_function" href="classsamplePDFBase.html#a772ebf22fbffd9336b2d8c2f46988453">getTestStatLLH</a>(data, mc, w2);</div>
+<div class="line"><span class="lineno"> 1802</span>    llh += <a class="code hl_variable" href="classSampleSummary.html#abd938805245ca6cfeb8c49363f5ff11c">SamplePDF</a>-&gt;<a class="code hl_function" href="classsamplePDFBase.html#ab2e2eab110efc30a2aee13a5011acb8a">getTestStatLLH</a>(data, mc, w2);</div>
 <div class="line"><span class="lineno"> 1803</span>  }</div>
 <div class="line"><span class="lineno"> 1804</span>  <span class="comment">//KS: do times 2 because banff reports chi2</span></div>
 <div class="line"><span class="lineno"> 1805</span>  <span class="keywordflow">return</span> 2*llh;</div>
@@ -2043,12 +2043,12 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno"> 1378</span> </div>
 <div class="line"><span class="lineno"> 1379</span><span class="comment">//Rate Based p-value</span></div>
 <div class="line"><span class="lineno"> 1380</span>      <span class="comment">// Likelihood between the drawn histogram and the data</span></div>
-<div class="line"><span class="lineno"> 1381</span>      <span class="keyword">const</span> <span class="keywordtype">double</span> RateDataDrawLLH = <a class="code hl_variable" href="classSampleSummary.html#abd938805245ca6cfeb8c49363f5ff11c">SamplePDF</a>-&gt;<a class="code hl_function" href="classsamplePDFBase.html#a772ebf22fbffd9336b2d8c2f46988453">getTestStatLLH</a>(<a class="code hl_function" href="Structs_8cpp.html#ab18c6b2408d7b9021bad06d47a06ee8d">NoOverflowIntegral</a>(<a class="code hl_variable" href="classSampleSummary.html#a584178216a524d9b9c114d1ff9f3e604">DataHist</a>[SampleNum]), <a class="code hl_function" href="Structs_8cpp.html#ab18c6b2408d7b9021bad06d47a06ee8d">NoOverflowIntegral</a>(DrawHist), <a class="code hl_function" href="Structs_8cpp.html#ab18c6b2408d7b9021bad06d47a06ee8d">NoOverflowIntegral</a>(DrawW2Hist));</div>
+<div class="line"><span class="lineno"> 1381</span>      <span class="keyword">const</span> <span class="keywordtype">double</span> RateDataDrawLLH = <a class="code hl_variable" href="classSampleSummary.html#abd938805245ca6cfeb8c49363f5ff11c">SamplePDF</a>-&gt;<a class="code hl_function" href="classsamplePDFBase.html#ab2e2eab110efc30a2aee13a5011acb8a">getTestStatLLH</a>(<a class="code hl_function" href="Structs_8cpp.html#ab18c6b2408d7b9021bad06d47a06ee8d">NoOverflowIntegral</a>(<a class="code hl_variable" href="classSampleSummary.html#a584178216a524d9b9c114d1ff9f3e604">DataHist</a>[SampleNum]), <a class="code hl_function" href="Structs_8cpp.html#ab18c6b2408d7b9021bad06d47a06ee8d">NoOverflowIntegral</a>(DrawHist), <a class="code hl_function" href="Structs_8cpp.html#ab18c6b2408d7b9021bad06d47a06ee8d">NoOverflowIntegral</a>(DrawW2Hist));</div>
 <div class="line"><span class="lineno"> 1382</span>      <a class="code hl_variable" href="classSampleSummary.html#ad766eb771115b2800b3a8e20f95ac612">llh_rate_data_draw</a>[SampleNum] += RateDataDrawLLH;</div>
 <div class="line"><span class="lineno"> 1383</span>      total_llh_rate_data_draw_temp += RateDataDrawLLH;</div>
 <div class="line"><span class="lineno"> 1384</span> </div>
 <div class="line"><span class="lineno"> 1385</span>      <span class="comment">// Likelihood between drawn histogram and fluctuated posterior predictive distribution using rate</span></div>
-<div class="line"><span class="lineno"> 1386</span>      <span class="keyword">const</span> <span class="keywordtype">double</span> RatePredFlucDrawLLH = <a class="code hl_variable" href="classSampleSummary.html#abd938805245ca6cfeb8c49363f5ff11c">SamplePDF</a>-&gt;<a class="code hl_function" href="classsamplePDFBase.html#a772ebf22fbffd9336b2d8c2f46988453">getTestStatLLH</a>(<a class="code hl_function" href="Structs_8cpp.html#ab18c6b2408d7b9021bad06d47a06ee8d">NoOverflowIntegral</a>(FluctHist[SampleNum]), <a class="code hl_function" href="Structs_8cpp.html#ab18c6b2408d7b9021bad06d47a06ee8d">NoOverflowIntegral</a>(DrawHist), <a class="code hl_function" href="Structs_8cpp.html#ab18c6b2408d7b9021bad06d47a06ee8d">NoOverflowIntegral</a>(DrawW2Hist));</div>
+<div class="line"><span class="lineno"> 1386</span>      <span class="keyword">const</span> <span class="keywordtype">double</span> RatePredFlucDrawLLH = <a class="code hl_variable" href="classSampleSummary.html#abd938805245ca6cfeb8c49363f5ff11c">SamplePDF</a>-&gt;<a class="code hl_function" href="classsamplePDFBase.html#ab2e2eab110efc30a2aee13a5011acb8a">getTestStatLLH</a>(<a class="code hl_function" href="Structs_8cpp.html#ab18c6b2408d7b9021bad06d47a06ee8d">NoOverflowIntegral</a>(FluctHist[SampleNum]), <a class="code hl_function" href="Structs_8cpp.html#ab18c6b2408d7b9021bad06d47a06ee8d">NoOverflowIntegral</a>(DrawHist), <a class="code hl_function" href="Structs_8cpp.html#ab18c6b2408d7b9021bad06d47a06ee8d">NoOverflowIntegral</a>(DrawW2Hist));</div>
 <div class="line"><span class="lineno"> 1387</span>      <a class="code hl_variable" href="classSampleSummary.html#a09609fb1b319d270011d01983fa88d79">llh_rate_predfluc_draw</a>[SampleNum] += RatePredFlucDrawLLH;</div>
 <div class="line"><span class="lineno"> 1388</span>      total_llh_rate_predfluc_draw_temp += RatePredFlucDrawLLH;</div>
 <div class="line"><span class="lineno"> 1389</span> </div>
@@ -2923,8 +2923,8 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno"> 1116</span>      <span class="keywordtype">double</span> TempLLH_Mode = 0.0;</div>
 <div class="line"><span class="lineno"> 1117</span>      </div>
 <div class="line"><span class="lineno"> 1118</span>      <span class="comment">//KS:Get LLH contribution getTestStatLLH can calculate Barlow Beeston/IceCube or Poisson</span></div>
-<div class="line"><span class="lineno"> 1119</span>      TempLLH_Mean = <a class="code hl_variable" href="classSampleSummary.html#abd938805245ca6cfeb8c49363f5ff11c">SamplePDF</a>-&gt;<a class="code hl_function" href="classsamplePDFBase.html#a772ebf22fbffd9336b2d8c2f46988453">getTestStatLLH</a>(nData, nMean, nW2Mean);</div>
-<div class="line"><span class="lineno"> 1120</span>      TempLLH_Mode = <a class="code hl_variable" href="classSampleSummary.html#abd938805245ca6cfeb8c49363f5ff11c">SamplePDF</a>-&gt;<a class="code hl_function" href="classsamplePDFBase.html#a772ebf22fbffd9336b2d8c2f46988453">getTestStatLLH</a>(nData, nMode, nW2Mode);</div>
+<div class="line"><span class="lineno"> 1119</span>      TempLLH_Mean = <a class="code hl_variable" href="classSampleSummary.html#abd938805245ca6cfeb8c49363f5ff11c">SamplePDF</a>-&gt;<a class="code hl_function" href="classsamplePDFBase.html#ab2e2eab110efc30a2aee13a5011acb8a">getTestStatLLH</a>(nData, nMean, nW2Mean);</div>
+<div class="line"><span class="lineno"> 1120</span>      TempLLH_Mode = <a class="code hl_variable" href="classSampleSummary.html#abd938805245ca6cfeb8c49363f5ff11c">SamplePDF</a>-&gt;<a class="code hl_function" href="classsamplePDFBase.html#ab2e2eab110efc30a2aee13a5011acb8a">getTestStatLLH</a>(nData, nMode, nW2Mode);</div>
 <div class="line"><span class="lineno"> 1121</span> </div>
 <div class="line"><span class="lineno"> 1122</span>      <span class="comment">// Increment -2LLH</span></div>
 <div class="line"><span class="lineno"> 1123</span>      <span class="comment">//KS: do times 2 because banff reports chi2</span></div>
@@ -3009,7 +3009,7 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno"> 1202</span>      <span class="keyword">const</span> <span class="keywordtype">double</span> nW2Mean = W2MeanProjectX-&gt;GetBinContent(j);</div>
 <div class="line"><span class="lineno"> 1203</span> </div>
 <div class="line"><span class="lineno"> 1204</span>      <span class="keywordtype">double</span> TempLLH_Mean = 0.0;</div>
-<div class="line"><span class="lineno"> 1205</span>      TempLLH_Mean = <a class="code hl_variable" href="classSampleSummary.html#abd938805245ca6cfeb8c49363f5ff11c">SamplePDF</a>-&gt;<a class="code hl_function" href="classsamplePDFBase.html#a772ebf22fbffd9336b2d8c2f46988453">getTestStatLLH</a>(nData, nMean, nW2Mean);</div>
+<div class="line"><span class="lineno"> 1205</span>      TempLLH_Mean = <a class="code hl_variable" href="classSampleSummary.html#abd938805245ca6cfeb8c49363f5ff11c">SamplePDF</a>-&gt;<a class="code hl_function" href="classsamplePDFBase.html#ab2e2eab110efc30a2aee13a5011acb8a">getTestStatLLH</a>(nData, nMean, nW2Mean);</div>
 <div class="line"><span class="lineno"> 1206</span> </div>
 <div class="line"><span class="lineno"> 1207</span>      <span class="comment">//KS: do times 2 because banff reports chi2</span></div>
 <div class="line"><span class="lineno"> 1208</span>      <a class="code hl_variable" href="classSampleSummary.html#a9e6d97ff3cffed6a40689a547ec7e5d7">lnLHist_Mean_ProjectX</a>[SampleNum]-&gt;SetBinContent(j, 2.0*TempLLH_Mean);</div>
@@ -6938,8 +6938,8 @@ template&lt;class HistType &gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/runner/work/MaCh3/MaCh3/mcmc/<a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a></li>
-<li>/home/runner/work/MaCh3/MaCh3/mcmc/<a class="el" href="SampleSummary_8cpp_source.html">SampleSummary.cpp</a></li>
+<li>mcmc/<a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a></li>
+<li>mcmc/<a class="el" href="SampleSummary_8cpp_source.html">SampleSummary.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

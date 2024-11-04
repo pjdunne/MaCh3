@@ -43,7 +43,7 @@ var searchData=
   ['_5fknownfitters_40',['_knownFitters',['../classMaCh3Plotting_1_1InputManager.html#a836a1772cb3fdf2d6e38ee1b113bc4e8',1,'MaCh3Plotting::InputManager']]],
   ['_5fknownparameters_41',['_knownParameters',['../classMaCh3Plotting_1_1InputManager.html#a3915837631cc08351a34cb135b0bb351',1,'MaCh3Plotting::InputManager']]],
   ['_5fknownsamples_42',['_knownSamples',['../classMaCh3Plotting_1_1InputManager.html#abafd844353d8fc69cf31ccf85b2bdcbe',1,'MaCh3Plotting::InputManager']]],
-  ['_5flarge_5flogl_5f_43',['_LARGE_LOGL_',['../covarianceBase_8h.html#a194098591fd0bc4afaf13b4fd8fee408',1,'covarianceBase.h']]],
+  ['_5flarge_5flogl_5f_43',['_LARGE_LOGL_',['../covarianceBase_8h.html#abca890bf9293ecdebfc0494ce32cee96',1,'covarianceBase.h']]],
   ['_5fmax_5fknots_44',['_max_knots',['../classSMonolith.html#ac0d1df54649909e4cee3385f68132799',1,'SMonolith']]],
   ['_5fn_5fsplines_5f_45',['_N_SPLINES_',['../gpuSplineUtils_8cu.html#a466f32a4912da866d5014fd8cdbd06a4',1,'gpuSplineUtils.cu']]],
   ['_5fncoeff_5f_46',['_nCoeff_',['../SplineCommon_8h.html#a283177311bade7400c6088e8fad71a1f',1,'SplineCommon.h']]],
