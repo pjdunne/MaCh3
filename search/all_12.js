@@ -41,7 +41,7 @@ var searchData=
   ['savesplinefile_38',['SaveSplineFile',['../classSMonolith.html#ab5692081772ca14bd012eb125e2ccfd4',1,'SMonolith']]],
   ['saveupdatedmatrixconfig_39',['SaveUpdatedMatrixConfig',['../classcovarianceBase.html#ab36f40d40f4747718c98d368c04f41b7',1,'covarianceBase']]],
   ['scaninput_40',['ScanInput',['../classMCMCProcessor.html#aeff2174617268c1e55333529459bffb6',1,'MCMCProcessor']]],
-  ['scanmasterspline_41',['ScanMasterSpline',['../classSMonolith.html#a12cddfcbec851b468cba86dc9b223c78',1,'SMonolith']]],
+  ['scanmasterspline_41',['ScanMasterSpline',['../classSMonolith.html#af2a015f3d6f4f8a51d27f8cd8a67c229',1,'SMonolith']]],
   ['scanparameterorder_42',['ScanParameterOrder',['../classMCMCProcessor.html#a015cf0d6925d026e5bd9d82aa31083b6',1,'MCMCProcessor']]],
   ['segment_5fgpu_43',['segment_gpu',['../gpuSplineUtils_8cu.html#ab99f54969e418c0517309fae3f648588',1,'gpuSplineUtils.cu']]],
   ['segments_44',['segments',['../classSMonolith.html#a53ab5b2235fd697f27556f1a1a7a5354',1,'SMonolith']]],

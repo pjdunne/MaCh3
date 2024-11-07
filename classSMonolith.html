@@ -178,9 +178,9 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a45cece9dcbe699e00a7b5fdff4806c1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSMonolith.html#a45cece9dcbe699e00a7b5fdff4806c1e">Initialise</a> ()</td></tr>
 <tr class="memdesc:a45cece9dcbe699e00a7b5fdff4806c1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">KS: Set everything to null etc.  <br /></td></tr>
 <tr class="separator:a45cece9dcbe699e00a7b5fdff4806c1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12cddfcbec851b468cba86dc9b223c78"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSMonolith.html#a12cddfcbec851b468cba86dc9b223c78">ScanMasterSpline</a> (std::vector&lt; std::vector&lt; <a class="el" href="classTResponseFunction__red.html">TResponseFunction_red</a> * &gt; &gt; &amp;MasterSpline, unsigned int &amp;nEvents, int &amp;MaxPoints, short int &amp;numParams, int &amp;nSplines, unsigned int &amp;NSplinesValid, unsigned int &amp;numKnots, unsigned int &amp;nTF1Valid, unsigned int &amp;nTF1_coeff, const std::vector&lt; <a class="el" href="Structs_8h.html#a6a73aa1ad819973a9c421c17c2a7f36d">RespFuncType</a> &gt; &amp;SplineType)</td></tr>
-<tr class="memdesc:a12cddfcbec851b468cba86dc9b223c78"><td class="mdescLeft">&#160;</td><td class="mdescRight">CW: Function to scan through the MasterSpline of TSpline3.  <br /></td></tr>
-<tr class="separator:a12cddfcbec851b468cba86dc9b223c78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2a015f3d6f4f8a51d27f8cd8a67c229"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSMonolith.html#af2a015f3d6f4f8a51d27f8cd8a67c229">ScanMasterSpline</a> (std::vector&lt; std::vector&lt; <a class="el" href="classTResponseFunction__red.html">TResponseFunction_red</a> * &gt; &gt; &amp;MasterSpline, unsigned int &amp;nEvents, short int &amp;MaxPoints, short int &amp;numParams, int &amp;nSplines, unsigned int &amp;NSplinesValid, unsigned int &amp;numKnots, unsigned int &amp;nTF1Valid, unsigned int &amp;nTF1_coeff, const std::vector&lt; <a class="el" href="Structs_8h.html#a6a73aa1ad819973a9c421c17c2a7f36d">RespFuncType</a> &gt; &amp;SplineType)</td></tr>
+<tr class="memdesc:af2a015f3d6f4f8a51d27f8cd8a67c229"><td class="mdescLeft">&#160;</td><td class="mdescRight">CW: Function to scan through the MasterSpline of TSpline3.  <br /></td></tr>
+<tr class="separator:af2a015f3d6f4f8a51d27f8cd8a67c229"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1bd2dc5c55b7258d5544512659ef9d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSMonolith.html#aa1bd2dc5c55b7258d5544512659ef9d7">PrepareForGPU</a> (std::vector&lt; std::vector&lt; <a class="el" href="classTResponseFunction__red.html">TResponseFunction_red</a> * &gt; &gt; &amp;MasterSpline, const std::vector&lt; <a class="el" href="Structs_8h.html#a6a73aa1ad819973a9c421c17c2a7f36d">RespFuncType</a> &gt; &amp;SplineType)</td></tr>
 <tr class="memdesc:aa1bd2dc5c55b7258d5544512659ef9d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">CW: Prepare the <a class="el" href="classTSpline3__red.html" title="CW: Reduced TSpline3 class.">TSpline3_red</a> objects for the GPU.  <br /></td></tr>
 <tr class="separator:aa1bd2dc5c55b7258d5544512659ef9d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -231,9 +231,9 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a4606b53f321992377d420a838c76ab3b"><td class="memItemLeft" align="right" valign="top">short int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSMonolith.html#a4606b53f321992377d420a838c76ab3b">nParams</a></td></tr>
 <tr class="memdesc:a4606b53f321992377d420a838c76ab3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of NIWG parameters that have splines.  <br /></td></tr>
 <tr class="separator:a4606b53f321992377d420a838c76ab3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0d1df54649909e4cee3385f68132799"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSMonolith.html#ac0d1df54649909e4cee3385f68132799">_max_knots</a></td></tr>
-<tr class="memdesc:ac0d1df54649909e4cee3385f68132799"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max knots for production.  <br /></td></tr>
-<tr class="separator:ac0d1df54649909e4cee3385f68132799"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af54ea9c613ef95b36dcf9c194dd38e85"><td class="memItemLeft" align="right" valign="top">short int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSMonolith.html#af54ea9c613ef95b36dcf9c194dd38e85">_max_knots</a></td></tr>
+<tr class="memdesc:af54ea9c613ef95b36dcf9c194dd38e85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max knots for production.  <br /></td></tr>
+<tr class="separator:af54ea9c613ef95b36dcf9c194dd38e85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c4fa00b6e36d150d52e87e6463aabaa"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSMonolith.html#a9c4fa00b6e36d150d52e87e6463aabaa">index_spline_cpu</a></td></tr>
 <tr class="memdesc:a9c4fa00b6e36d150d52e87e6463aabaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">holds the index for good splines; don't do unsigned since starts with negative value!  <br /></td></tr>
 <tr class="separator:a9c4fa00b6e36d150d52e87e6463aabaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -554,7 +554,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno"> 1055</span>      <span class="keyword">const</span> <span class="keywordtype">short</span> <span class="keywordtype">int</span> segment = <a class="code hl_variable" href="classSMonolith.html#a53ab5b2235fd697f27556f1a1a7a5354">segments</a>[Param];</div>
 <div class="line"><span class="lineno"> 1056</span> </div>
 <div class="line"><span class="lineno"> 1057</span>      <span class="comment">//KS: Segment for coeff_x is simply parameter*max knots + segment as each parameters has the same spacing</span></div>
-<div class="line"><span class="lineno"> 1058</span>      <span class="keyword">const</span> <span class="keywordtype">short</span> <span class="keywordtype">int</span> segment_X = short(Param*<a class="code hl_variable" href="classSMonolith.html#ac0d1df54649909e4cee3385f68132799">_max_knots</a>+segment);</div>
+<div class="line"><span class="lineno"> 1058</span>      <span class="keyword">const</span> <span class="keywordtype">short</span> <span class="keywordtype">int</span> segment_X = short(Param*<a class="code hl_variable" href="classSMonolith.html#af54ea9c613ef95b36dcf9c194dd38e85">_max_knots</a>+segment);</div>
 <div class="line"><span class="lineno"> 1059</span> </div>
 <div class="line"><span class="lineno"> 1060</span>      <span class="comment">//KS: Find knot position in out monolithical structure</span></div>
 <div class="line"><span class="lineno"> 1061</span>      <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> CurrentKnotPos = <a class="code hl_variable" href="classSMonolith.html#a48d0e5e5b4130fcd191c3e8f1d841eb7">cpu_spline_handler</a>-&gt;<a class="code hl_variable" href="structSplineMonoStruct.html#a398e0212915793852137384a3406b37f">nKnots_arr</a>[splineNum]*<a class="code hl_define" href="SplineCommon_8h.html#a283177311bade7400c6088e8fad71a1f">_nCoeff_</a>+segment*<a class="code hl_define" href="SplineCommon_8h.html#a283177311bade7400c6088e8fad71a1f">_nCoeff_</a>;</div>
@@ -600,7 +600,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aSplineCommon_8h_html_a911160077ffa38727e0494f178ce380a"><div class="ttname"><a href="SplineCommon_8h.html#a911160077ffa38727e0494f178ce380a">_nTF1Coeff_</a></div><div class="ttdeci">#define _nTF1Coeff_</div><div class="ttdoc">KS: For TF1 we store at most 5 coefficients, we could make it more flexible but for now define it her...</div><div class="ttdef"><b>Definition:</b> <a href="SplineCommon_8h_source.html#l00017">SplineCommon.h:17</a></div></div>
 <div class="ttc" id="aclassSMonolith_html_a13699796db31517edba3a8009317f779"><div class="ttname"><a href="classSMonolith.html#a13699796db31517edba3a8009317f779">SMonolith::NTF1_valid</a></div><div class="ttdeci">unsigned int NTF1_valid</div><div class="ttdoc">Number of valid TF1.</div><div class="ttdef"><b>Definition:</b> <a href="SplineMonolith_8h_source.html#l00133">SplineMonolith.h:133</a></div></div>
 <div class="ttc" id="aclassSMonolith_html_ab72795333d6f632565b0f7eb0ca8a658"><div class="ttname"><a href="classSMonolith.html#ab72795333d6f632565b0f7eb0ca8a658">SMonolith::NSplines_valid</a></div><div class="ttdeci">unsigned int NSplines_valid</div><div class="ttdoc">Number of valid splines.</div><div class="ttdef"><b>Definition:</b> <a href="SplineMonolith_8h_source.html#l00131">SplineMonolith.h:131</a></div></div>
-<div class="ttc" id="aclassSMonolith_html_ac0d1df54649909e4cee3385f68132799"><div class="ttname"><a href="classSMonolith.html#ac0d1df54649909e4cee3385f68132799">SMonolith::_max_knots</a></div><div class="ttdeci">int _max_knots</div><div class="ttdoc">Max knots for production.</div><div class="ttdef"><b>Definition:</b> <a href="SplineMonolith_8h_source.html#l00124">SplineMonolith.h:124</a></div></div>
+<div class="ttc" id="aclassSMonolith_html_af54ea9c613ef95b36dcf9c194dd38e85"><div class="ttname"><a href="classSMonolith.html#af54ea9c613ef95b36dcf9c194dd38e85">SMonolith::_max_knots</a></div><div class="ttdeci">short int _max_knots</div><div class="ttdoc">Max knots for production.</div><div class="ttdef"><b>Definition:</b> <a href="SplineMonolith_8h_source.html#l00124">SplineMonolith.h:124</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -889,7 +889,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">  861</span>                                                                                                            {</div>
 <div class="line"><span class="lineno">  862</span><span class="comment">// *****************************************</span></div>
 <div class="line"><span class="lineno">  863</span>  <span class="comment">// Initialise all arrays to 1.0</span></div>
-<div class="line"><span class="lineno">  864</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classSMonolith.html#ac0d1df54649909e4cee3385f68132799">_max_knots</a>; ++i) {</div>
+<div class="line"><span class="lineno">  864</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classSMonolith.html#af54ea9c613ef95b36dcf9c194dd38e85">_max_knots</a>; ++i) {</div>
 <div class="line"><span class="lineno">  865</span>    xArray[i] = 1.0;</div>
 <div class="line"><span class="lineno">  866</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code hl_define" href="SplineCommon_8h.html#a283177311bade7400c6088e8fad71a1f">_nCoeff_</a>; j++) {</div>
 <div class="line"><span class="lineno">  867</span>      manyArray[i*<a class="code hl_define" href="SplineCommon_8h.html#a283177311bade7400c6088e8fad71a1f">_nCoeff_</a>+j] = 1.0;</div>
@@ -901,10 +901,10 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  873</span>  <span class="comment">// This is used later to expedite the calculations for flat splines</span></div>
 <div class="line"><span class="lineno">  874</span>  <span class="comment">// tmpArray[0] is number of knots</span></div>
 <div class="line"><span class="lineno">  875</span>  nPoints = Np;</div>
-<div class="line"><span class="lineno">  876</span>  <span class="keywordflow">if</span> (Np &gt; <a class="code hl_variable" href="classSMonolith.html#ac0d1df54649909e4cee3385f68132799">_max_knots</a>) {</div>
-<div class="line"><span class="lineno">  877</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a>(<span class="stringliteral">&quot;Error, number of points is greater than saved {}&quot;</span>, <a class="code hl_variable" href="classSMonolith.html#ac0d1df54649909e4cee3385f68132799">_max_knots</a>);</div>
+<div class="line"><span class="lineno">  876</span>  <span class="keywordflow">if</span> (Np &gt; <a class="code hl_variable" href="classSMonolith.html#af54ea9c613ef95b36dcf9c194dd38e85">_max_knots</a>) {</div>
+<div class="line"><span class="lineno">  877</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a>(<span class="stringliteral">&quot;Error, number of points is greater than saved {}&quot;</span>, <a class="code hl_variable" href="classSMonolith.html#af54ea9c613ef95b36dcf9c194dd38e85">_max_knots</a>);</div>
 <div class="line"><span class="lineno">  878</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a>(<span class="stringliteral">&quot;This _WILL_ cause problems with GPU splines and _SHOULD_ be fixed!&quot;</span>);</div>
-<div class="line"><span class="lineno">  879</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a>(<span class="stringliteral">&quot;nPoints = {}, _max_knots = {}&quot;</span>, nPoints, <a class="code hl_variable" href="classSMonolith.html#ac0d1df54649909e4cee3385f68132799">_max_knots</a>);</div>
+<div class="line"><span class="lineno">  879</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a>(<span class="stringliteral">&quot;nPoints = {}, _max_knots = {}&quot;</span>, nPoints, <a class="code hl_variable" href="classSMonolith.html#af54ea9c613ef95b36dcf9c194dd38e85">_max_knots</a>);</div>
 <div class="line"><span class="lineno">  880</span>    <span class="keywordflow">throw</span> <a class="code hl_class" href="classMaCh3Exception.html">MaCh3Exception</a>(__FILE__ , __LINE__ );</div>
 <div class="line"><span class="lineno">  881</span>  }</div>
 <div class="line"><span class="lineno">  882</span> </div>
@@ -973,7 +973,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   21</span>  <a class="code hl_variable" href="classSMonolith.html#afc0e3d1eafd575cf7628319a66925d5b">nKnots</a> = 0;</div>
 <div class="line"><span class="lineno">   22</span>  <a class="code hl_variable" href="classSMonolith.html#a403e7cf909f98d4c59b5f6c7ff8aac5b">nTF1coeff</a> = 0;</div>
 <div class="line"><span class="lineno">   23</span>  <a class="code hl_variable" href="classSMonolith.html#ac86282b04659bae5cccb6073c9edc0a5">NEvents</a> = 0;</div>
-<div class="line"><span class="lineno">   24</span>  <a class="code hl_variable" href="classSMonolith.html#ac0d1df54649909e4cee3385f68132799">_max_knots</a> = 0;</div>
+<div class="line"><span class="lineno">   24</span>  <a class="code hl_variable" href="classSMonolith.html#af54ea9c613ef95b36dcf9c194dd38e85">_max_knots</a> = 0;</div>
 <div class="line"><span class="lineno">   25</span>  <a class="code hl_variable" href="classSMonolith.html#a4606b53f321992377d420a838c76ab3b">nParams</a> = 0;</div>
 <div class="line"><span class="lineno">   26</span> </div>
 <div class="line"><span class="lineno">   27</span>  <a class="code hl_variable" href="classSMonolith.html#ab72795333d6f632565b0f7eb0ca8a658">NSplines_valid</a> = 0;</div>
@@ -1070,11 +1070,11 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  559</span> </div>
 <div class="line"><span class="lineno">  560</span>  <a class="code hl_variable" href="classSMonolith.html#ac86282b04659bae5cccb6073c9edc0a5">NEvents</a> = NEvents_temp;</div>
 <div class="line"><span class="lineno">  561</span>  <a class="code hl_variable" href="classSMonolith.html#a4606b53f321992377d420a838c76ab3b">nParams</a> = nParams_temp;</div>
-<div class="line"><span class="lineno">  562</span>  <a class="code hl_variable" href="classSMonolith.html#ac0d1df54649909e4cee3385f68132799">_max_knots</a> = _max_knots_temp;</div>
+<div class="line"><span class="lineno">  562</span>  <a class="code hl_variable" href="classSMonolith.html#af54ea9c613ef95b36dcf9c194dd38e85">_max_knots</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">short</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(_max_knots_temp);</div>
 <div class="line"><span class="lineno">  563</span>  <a class="code hl_variable" href="classSMonolith.html#afc0e3d1eafd575cf7628319a66925d5b">nKnots</a> = nKnots_temp;</div>
 <div class="line"><span class="lineno">  564</span>  <a class="code hl_variable" href="classSMonolith.html#ab72795333d6f632565b0f7eb0ca8a658">NSplines_valid</a> = NSplines_valid_temp;</div>
 <div class="line"><span class="lineno">  565</span>  <a class="code hl_variable" href="classSMonolith.html#a13699796db31517edba3a8009317f779">NTF1_valid</a> = nTF1Valid_temp;</div>
-<div class="line"><span class="lineno">  566</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> event_size_max = <a class="code hl_variable" href="classSMonolith.html#ac0d1df54649909e4cee3385f68132799">_max_knots</a> * <a class="code hl_variable" href="classSMonolith.html#a4606b53f321992377d420a838c76ab3b">nParams</a>;</div>
+<div class="line"><span class="lineno">  566</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> event_size_max = <a class="code hl_variable" href="classSMonolith.html#af54ea9c613ef95b36dcf9c194dd38e85">_max_knots</a> * <a class="code hl_variable" href="classSMonolith.html#a4606b53f321992377d420a838c76ab3b">nParams</a>;</div>
 <div class="line"><span class="lineno">  567</span>  <a class="code hl_variable" href="classSMonolith.html#a403e7cf909f98d4c59b5f6c7ff8aac5b">nTF1coeff</a> = nTF1coeff_temp;</div>
 <div class="line"><span class="lineno">  568</span> </div>
 <div class="line"><span class="lineno">  569</span>  <span class="comment">//KS: Since we are going to copy it each step use fancy CUDA memory allocation</span></div>
@@ -1337,7 +1337,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">  308</span>                          {</div>
 <div class="line"><span class="lineno">  309</span><span class="comment">// *****************************************</span></div>
 <div class="line"><span class="lineno">  310</span><span class="preprocessor">  #ifdef CUDA</span></div>
-<div class="line"><span class="lineno">  311</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> event_size_max = <a class="code hl_variable" href="classSMonolith.html#ac0d1df54649909e4cee3385f68132799">_max_knots</a> * <a class="code hl_variable" href="classSMonolith.html#a4606b53f321992377d420a838c76ab3b">nParams</a>;</div>
+<div class="line"><span class="lineno">  311</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> event_size_max = <a class="code hl_variable" href="classSMonolith.html#af54ea9c613ef95b36dcf9c194dd38e85">_max_knots</a> * <a class="code hl_variable" href="classSMonolith.html#a4606b53f321992377d420a838c76ab3b">nParams</a>;</div>
 <div class="line"><span class="lineno">  312</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;Total size = {:.2f} MB memory on CPU to move to GPU&quot;</span>,</div>
 <div class="line"><span class="lineno">  313</span>                (<span class="keywordtype">double</span>(<span class="keyword">sizeof</span>(<span class="keywordtype">float</span>) * <a class="code hl_variable" href="classSMonolith.html#afc0e3d1eafd575cf7628319a66925d5b">nKnots</a> * <a class="code hl_define" href="SplineCommon_8h.html#a283177311bade7400c6088e8fad71a1f">_nCoeff_</a>) + <span class="keywordtype">double</span>(<span class="keyword">sizeof</span>(<span class="keywordtype">float</span>) * event_size_max) / 1.E6 +</div>
 <div class="line"><span class="lineno">  314</span>                <span class="keywordtype">double</span>(<span class="keyword">sizeof</span>(<span class="keywordtype">short</span> <span class="keywordtype">int</span>) * <a class="code hl_variable" href="classSMonolith.html#ab72795333d6f632565b0f7eb0ca8a658">NSplines_valid</a>)) / 1.E6);</div>
@@ -1386,7 +1386,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  357</span>          #endif</div>
 <div class="line"><span class="lineno">  358</span>          <a class="code hl_variable" href="classSMonolith.html#a4606b53f321992377d420a838c76ab3b">nParams</a>,</div>
 <div class="line"><span class="lineno">  359</span>          <a class="code hl_variable" href="classSMonolith.html#ab72795333d6f632565b0f7eb0ca8a658">NSplines_valid</a>,</div>
-<div class="line"><span class="lineno">  360</span>          <a class="code hl_variable" href="classSMonolith.html#ac0d1df54649909e4cee3385f68132799">_max_knots</a>,</div>
+<div class="line"><span class="lineno">  360</span>          <a class="code hl_variable" href="classSMonolith.html#af54ea9c613ef95b36dcf9c194dd38e85">_max_knots</a>,</div>
 <div class="line"><span class="lineno">  361</span>          <a class="code hl_variable" href="classSMonolith.html#afc0e3d1eafd575cf7628319a66925d5b">nKnots</a>,</div>
 <div class="line"><span class="lineno">  362</span>          <a class="code hl_variable" href="classSMonolith.html#a13699796db31517edba3a8009317f779">NTF1_valid</a>);</div>
 <div class="line"><span class="lineno">  363</span> </div>
@@ -1468,9 +1468,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   59</span> </div>
 <div class="line"><span class="lineno">   60</span>  <span class="comment">// Scan for the max number of knots, the number of events (number of splines), and number of parameters</span></div>
 <div class="line"><span class="lineno">   61</span>  <span class="keywordtype">int</span> maxnSplines = 0;</div>
-<div class="line"><span class="lineno">   62</span>  <a class="code hl_function" href="classSMonolith.html#a12cddfcbec851b468cba86dc9b223c78">ScanMasterSpline</a>(MasterSpline,</div>
+<div class="line"><span class="lineno">   62</span>  <a class="code hl_function" href="classSMonolith.html#af2a015f3d6f4f8a51d27f8cd8a67c229">ScanMasterSpline</a>(MasterSpline,</div>
 <div class="line"><span class="lineno">   63</span>                   <a class="code hl_variable" href="classSMonolith.html#ac86282b04659bae5cccb6073c9edc0a5">NEvents</a>,</div>
-<div class="line"><span class="lineno">   64</span>                   <a class="code hl_variable" href="classSMonolith.html#ac0d1df54649909e4cee3385f68132799">_max_knots</a>,</div>
+<div class="line"><span class="lineno">   64</span>                   <a class="code hl_variable" href="classSMonolith.html#af54ea9c613ef95b36dcf9c194dd38e85">_max_knots</a>,</div>
 <div class="line"><span class="lineno">   65</span>                   <a class="code hl_variable" href="classSMonolith.html#a4606b53f321992377d420a838c76ab3b">nParams</a>,</div>
 <div class="line"><span class="lineno">   66</span>                   maxnSplines,</div>
 <div class="line"><span class="lineno">   67</span>                   <a class="code hl_variable" href="classSMonolith.html#ab72795333d6f632565b0f7eb0ca8a658">NSplines_valid</a>,</div>
@@ -1480,7 +1480,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   71</span>                   SplineType);</div>
 <div class="line"><span class="lineno">   72</span> </div>
 <div class="line"><span class="lineno">   73</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;Found {} events&quot;</span>, <a class="code hl_variable" href="classSMonolith.html#ac86282b04659bae5cccb6073c9edc0a5">NEvents</a>);</div>
-<div class="line"><span class="lineno">   74</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;Found {} knots at max&quot;</span>, <a class="code hl_variable" href="classSMonolith.html#ac0d1df54649909e4cee3385f68132799">_max_knots</a>);</div>
+<div class="line"><span class="lineno">   74</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;Found {} knots at max&quot;</span>, <a class="code hl_variable" href="classSMonolith.html#af54ea9c613ef95b36dcf9c194dd38e85">_max_knots</a>);</div>
 <div class="line"><span class="lineno">   75</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;Found {} parameters&quot;</span>, <a class="code hl_variable" href="classSMonolith.html#a4606b53f321992377d420a838c76ab3b">nParams</a>);</div>
 <div class="line"><span class="lineno">   76</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;Found {} maximum number of splines in an event&quot;</span>, maxnSplines);</div>
 <div class="line"><span class="lineno">   77</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;Found total {} knots in all splines&quot;</span>, <a class="code hl_variable" href="classSMonolith.html#afc0e3d1eafd575cf7628319a66925d5b">nKnots</a>);</div>
@@ -1508,7 +1508,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   99</span>  <span class="comment">// Number of objects we have in total if each event has *EVERY* spline. Needed for some arrays</span></div>
 <div class="line"><span class="lineno">  100</span>  <a class="code hl_variable" href="classSMonolith.html#aee3c18513f8209f1ac940b492cd3ed68">NSplines_total_large</a> = <a class="code hl_variable" href="classSMonolith.html#ac86282b04659bae5cccb6073c9edc0a5">NEvents</a>*<a class="code hl_variable" href="classSMonolith.html#a4606b53f321992377d420a838c76ab3b">nParams</a>;</div>
 <div class="line"><span class="lineno">  101</span> </div>
-<div class="line"><span class="lineno">  102</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> event_size_max = <a class="code hl_variable" href="classSMonolith.html#ac0d1df54649909e4cee3385f68132799">_max_knots</a> * <a class="code hl_variable" href="classSMonolith.html#a4606b53f321992377d420a838c76ab3b">nParams</a>;</div>
+<div class="line"><span class="lineno">  102</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> event_size_max = <a class="code hl_variable" href="classSMonolith.html#af54ea9c613ef95b36dcf9c194dd38e85">_max_knots</a> * <a class="code hl_variable" href="classSMonolith.html#a4606b53f321992377d420a838c76ab3b">nParams</a>;</div>
 <div class="line"><span class="lineno">  103</span>  <span class="comment">// Declare the {x}, {y,b,c,d} arrays for all possible splines which the event has</span></div>
 <div class="line"><span class="lineno">  104</span>  <span class="comment">// We&#39;ll filter off the flat and &quot;disabled&quot; (e.g. CCQE event should not have MARES spline) ones in the next for loop, but need to declare these beasts here</span></div>
 <div class="line"><span class="lineno">  105</span> </div>
@@ -1568,8 +1568,8 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  159</span>  <span class="comment">// Temporary arrays to hold the coefficients for each spline</span></div>
 <div class="line"><span class="lineno">  160</span>  <span class="comment">// We get one x, one y, one b,... for each point, so only need to be _max_knots big</span></div>
 <div class="line"><span class="lineno">  161</span>  <span class="comment">//KS: Some params has less splines but this is all right main array will get proper number while this temp will be deleted</span></div>
-<div class="line"><span class="lineno">  162</span>  <span class="keywordtype">float</span> *x_tmp = <span class="keyword">new</span> <span class="keywordtype">float</span>[<a class="code hl_variable" href="classSMonolith.html#ac0d1df54649909e4cee3385f68132799">_max_knots</a>]();</div>
-<div class="line"><span class="lineno">  163</span>  <span class="keywordtype">float</span> *many_tmp = <span class="keyword">new</span> <span class="keywordtype">float</span>[<a class="code hl_variable" href="classSMonolith.html#ac0d1df54649909e4cee3385f68132799">_max_knots</a>*<a class="code hl_define" href="SplineCommon_8h.html#a283177311bade7400c6088e8fad71a1f">_nCoeff_</a>]();</div>
+<div class="line"><span class="lineno">  162</span>  <span class="keywordtype">float</span> *x_tmp = <span class="keyword">new</span> <span class="keywordtype">float</span>[<a class="code hl_variable" href="classSMonolith.html#af54ea9c613ef95b36dcf9c194dd38e85">_max_knots</a>]();</div>
+<div class="line"><span class="lineno">  163</span>  <span class="keywordtype">float</span> *many_tmp = <span class="keyword">new</span> <span class="keywordtype">float</span>[<a class="code hl_variable" href="classSMonolith.html#af54ea9c613ef95b36dcf9c194dd38e85">_max_knots</a>*<a class="code hl_define" href="SplineCommon_8h.html#a283177311bade7400c6088e8fad71a1f">_nCoeff_</a>]();</div>
 <div class="line"><span class="lineno">  164</span>  <span class="keywordtype">float</span> *temp_coeffs = <span class="keyword">new</span> <span class="keywordtype">float</span>[<a class="code hl_define" href="SplineCommon_8h.html#a911160077ffa38727e0494f178ce380a">_nTF1Coeff_</a>]();</div>
 <div class="line"><span class="lineno">  165</span> </div>
 <div class="line"><span class="lineno">  166</span>  <span class="comment">// Count the number of events</span></div>
@@ -1603,8 +1603,8 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  194</span> </div>
 <div class="line"><span class="lineno">  195</span>        <span class="comment">//KS: One knot means flat spline so ignore</span></div>
 <div class="line"><span class="lineno">  196</span>        <span class="keywordflow">if</span> (nPoints_tmp == 1) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  197</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code hl_variable" href="classSMonolith.html#ac0d1df54649909e4cee3385f68132799">_max_knots</a>; ++j) {</div>
-<div class="line"><span class="lineno">  198</span>          <a class="code hl_variable" href="classSMonolith.html#a48d0e5e5b4130fcd191c3e8f1d841eb7">cpu_spline_handler</a>-&gt;<a class="code hl_variable" href="structSplineMonoStruct.html#a47012ee423ea21f99d06eff8257cf0f0">coeff_x</a>[ParamNumber*<a class="code hl_variable" href="classSMonolith.html#ac0d1df54649909e4cee3385f68132799">_max_knots</a> + j] = x_tmp[j];</div>
+<div class="line"><span class="lineno">  197</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code hl_variable" href="classSMonolith.html#af54ea9c613ef95b36dcf9c194dd38e85">_max_knots</a>; ++j) {</div>
+<div class="line"><span class="lineno">  198</span>          <a class="code hl_variable" href="classSMonolith.html#a48d0e5e5b4130fcd191c3e8f1d841eb7">cpu_spline_handler</a>-&gt;<a class="code hl_variable" href="structSplineMonoStruct.html#a47012ee423ea21f99d06eff8257cf0f0">coeff_x</a>[ParamNumber*<a class="code hl_variable" href="classSMonolith.html#af54ea9c613ef95b36dcf9c194dd38e85">_max_knots</a> + j] = x_tmp[j];</div>
 <div class="line"><span class="lineno">  199</span>        }</div>
 <div class="line"><span class="lineno">  200</span>        <span class="comment">//KS: Contrary to X coeff we keep for other coeff only filled knots, there is no much gain for doing so for x coeff</span></div>
 <div class="line"><span class="lineno">  201</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; nPoints_tmp; ++j) {</div>
@@ -1714,9 +1714,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aMaCh3Logger_8h_html_ad5b2eb6377721e3ac95def22c2386bb1"><div class="ttname"><a href="MaCh3Logger_8h.html#ad5b2eb6377721e3ac95def22c2386bb1">MACH3LOG_WARN</a></div><div class="ttdeci">#define MACH3LOG_WARN</div><div class="ttdef"><b>Definition:</b> <a href="MaCh3Logger_8h_source.html#l00017">MaCh3Logger.h:17</a></div></div>
 <div class="ttc" id="aStructs_8h_html_a6a73aa1ad819973a9c421c17c2a7f36da847a18b0a859ce2b3b87a98f455855b1"><div class="ttname"><a href="Structs_8h.html#a6a73aa1ad819973a9c421c17c2a7f36da847a18b0a859ce2b3b87a98f455855b1">kTF1_red</a></div><div class="ttdeci">@ kTF1_red</div><div class="ttdoc">Uses TF1_red for interpolation.</div><div class="ttdef"><b>Definition:</b> <a href="Structs_8h_source.html#l00121">Structs.h:121</a></div></div>
 <div class="ttc" id="aStructs_8h_html_a6a73aa1ad819973a9c421c17c2a7f36da8bea6994e011cc85a5a88b50c97ce7b2"><div class="ttname"><a href="Structs_8h.html#a6a73aa1ad819973a9c421c17c2a7f36da8bea6994e011cc85a5a88b50c97ce7b2">kTSpline3_red</a></div><div class="ttdeci">@ kTSpline3_red</div><div class="ttdoc">Uses TSpline3_red for interpolation.</div><div class="ttdef"><b>Definition:</b> <a href="Structs_8h_source.html#l00120">Structs.h:120</a></div></div>
-<div class="ttc" id="aclassSMonolith_html_a12cddfcbec851b468cba86dc9b223c78"><div class="ttname"><a href="classSMonolith.html#a12cddfcbec851b468cba86dc9b223c78">SMonolith::ScanMasterSpline</a></div><div class="ttdeci">void ScanMasterSpline(std::vector&lt; std::vector&lt; TResponseFunction_red * &gt; &gt; &amp;MasterSpline, unsigned int &amp;nEvents, int &amp;MaxPoints, short int &amp;numParams, int &amp;nSplines, unsigned int &amp;NSplinesValid, unsigned int &amp;numKnots, unsigned int &amp;nTF1Valid, unsigned int &amp;nTF1_coeff, const std::vector&lt; RespFuncType &gt; &amp;SplineType)</div><div class="ttdoc">CW: Function to scan through the MasterSpline of TSpline3.</div><div class="ttdef"><b>Definition:</b> <a href="SplineMonolith_8cpp_source.html#l00392">SplineMonolith.cpp:392</a></div></div>
 <div class="ttc" id="aclassSMonolith_html_a79f4bf0cac279cf57ab8f06698052922"><div class="ttname"><a href="classSMonolith.html#a79f4bf0cac279cf57ab8f06698052922">SMonolith::PrepareSplineFile</a></div><div class="ttdeci">void PrepareSplineFile()</div><div class="ttdoc">KS: Prepare spline file that can be used for fast loading.</div><div class="ttdef"><b>Definition:</b> <a href="SplineMonolith_8cpp_source.html#l00673">SplineMonolith.cpp:673</a></div></div>
 <div class="ttc" id="aclassSMonolith_html_acbbe3398718d0d02d65a1e92a91c112c"><div class="ttname"><a href="classSMonolith.html#acbbe3398718d0d02d65a1e92a91c112c">SMonolith::getSplineCoeff_SepMany</a></div><div class="ttdeci">void getSplineCoeff_SepMany(TSpline3_red *&amp;spl, int &amp;nPoints, float *&amp;xArray, float *&amp;manyArray)</div><div class="ttdoc">CW: This loads up coefficients into two arrays: one x array and one yabcd array.</div><div class="ttdef"><b>Definition:</b> <a href="SplineMonolith_8cpp_source.html#l00861">SplineMonolith.cpp:861</a></div></div>
+<div class="ttc" id="aclassSMonolith_html_af2a015f3d6f4f8a51d27f8cd8a67c229"><div class="ttname"><a href="classSMonolith.html#af2a015f3d6f4f8a51d27f8cd8a67c229">SMonolith::ScanMasterSpline</a></div><div class="ttdeci">void ScanMasterSpline(std::vector&lt; std::vector&lt; TResponseFunction_red * &gt; &gt; &amp;MasterSpline, unsigned int &amp;nEvents, short int &amp;MaxPoints, short int &amp;numParams, int &amp;nSplines, unsigned int &amp;NSplinesValid, unsigned int &amp;numKnots, unsigned int &amp;nTF1Valid, unsigned int &amp;nTF1_coeff, const std::vector&lt; RespFuncType &gt; &amp;SplineType)</div><div class="ttdoc">CW: Function to scan through the MasterSpline of TSpline3.</div><div class="ttdef"><b>Definition:</b> <a href="SplineMonolith_8cpp_source.html#l00392">SplineMonolith.cpp:392</a></div></div>
 <div class="ttc" id="aclassSplineBase_html_ac8a5f86ac6f156a7e11ef188b06f425f"><div class="ttname"><a href="classSplineBase.html#ac8a5f86ac6f156a7e11ef188b06f425f">SplineBase::getTF1Coeff</a></div><div class="ttdeci">void getTF1Coeff(TF1_red *&amp;spl, int &amp;nPoints, float *&amp;coeffs)</div><div class="ttdoc">CW: Gets the polynomial coefficients for TF1.</div><div class="ttdef"><b>Definition:</b> <a href="SplineBase_8cpp_source.html#l00025">SplineBase.cpp:25</a></div></div>
 <div class="ttc" id="aclassTF1__red_html"><div class="ttname"><a href="classTF1__red.html">TF1_red</a></div><div class="ttdoc">CW: A reduced TF1 class only. Only saves parameters for each TF1 and how many parameters each paramet...</div><div class="ttdef"><b>Definition:</b> <a href="SplineStructs_8h_source.html#l00119">SplineStructs.h:119</a></div></div>
 <div class="ttc" id="aclassTResponseFunction__red_html"><div class="ttname"><a href="classTResponseFunction__red.html">TResponseFunction_red</a></div><div class="ttdoc">KS: A reduced ResponseFunction Generic function used for evaluating weight.</div><div class="ttdef"><b>Definition:</b> <a href="SplineStructs_8h_source.html#l00102">SplineStructs.h:102</a></div></div>
@@ -1768,7 +1768,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  688</span> </div>
 <div class="line"><span class="lineno">  689</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> NEvents_temp = <a class="code hl_variable" href="classSMonolith.html#ac86282b04659bae5cccb6073c9edc0a5">NEvents</a>;</div>
 <div class="line"><span class="lineno">  690</span>  <span class="keywordtype">short</span> <span class="keywordtype">int</span> nParams_temp = <a class="code hl_variable" href="classSMonolith.html#a4606b53f321992377d420a838c76ab3b">nParams</a>;</div>
-<div class="line"><span class="lineno">  691</span>  <span class="keywordtype">int</span> _max_knots_temp = <a class="code hl_variable" href="classSMonolith.html#ac0d1df54649909e4cee3385f68132799">_max_knots</a>;</div>
+<div class="line"><span class="lineno">  691</span>  <span class="keywordtype">int</span> _max_knots_temp = <a class="code hl_variable" href="classSMonolith.html#af54ea9c613ef95b36dcf9c194dd38e85">_max_knots</a>;</div>
 <div class="line"><span class="lineno">  692</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> nKnots_temp = <a class="code hl_variable" href="classSMonolith.html#afc0e3d1eafd575cf7628319a66925d5b">nKnots</a>;</div>
 <div class="line"><span class="lineno">  693</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> NSplines_valid_temp = <a class="code hl_variable" href="classSMonolith.html#ab72795333d6f632565b0f7eb0ca8a658">NSplines_valid</a>;</div>
 <div class="line"><span class="lineno">  694</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> nTF1Valid_temp = <a class="code hl_variable" href="classSMonolith.html#a13699796db31517edba3a8009317f779">NTF1_valid</a>;</div>
@@ -1822,7 +1822,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  742</span>  SplineFile-&gt;cd();</div>
 <div class="line"><span class="lineno">  743</span>  ParamInfo-&gt;Write();</div>
 <div class="line"><span class="lineno">  744</span> </div>
-<div class="line"><span class="lineno">  745</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> event_size_max = <a class="code hl_variable" href="classSMonolith.html#ac0d1df54649909e4cee3385f68132799">_max_knots</a> * <a class="code hl_variable" href="classSMonolith.html#a4606b53f321992377d420a838c76ab3b">nParams</a>;</div>
+<div class="line"><span class="lineno">  745</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> event_size_max = <a class="code hl_variable" href="classSMonolith.html#af54ea9c613ef95b36dcf9c194dd38e85">_max_knots</a> * <a class="code hl_variable" href="classSMonolith.html#a4606b53f321992377d420a838c76ab3b">nParams</a>;</div>
 <div class="line"><span class="lineno">  746</span> </div>
 <div class="line"><span class="lineno">  747</span>  <span class="keywordtype">float</span> coeff_x = 0.;</div>
 <div class="line"><span class="lineno">  748</span>  XKnots-&gt;Branch(<span class="stringliteral">&quot;cpu_coeff_x&quot;</span>, &amp;coeff_x, <span class="stringliteral">&quot;cpu_coeff_x/F&quot;</span>);</div>
@@ -1909,7 +1909,7 @@ Additional Inherited Members</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="SplineMonolith_8cpp_source.html#l01169">1169</a> of file <a class="el" href="SplineMonolith_8cpp_source.html">SplineMonolith.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno"> 1169</span>                                    {</div>
 <div class="line"><span class="lineno"> 1170</span><span class="comment">//*********************************************************</span></div>
-<div class="line"><span class="lineno"> 1171</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> event_size_max = <a class="code hl_variable" href="classSMonolith.html#ac0d1df54649909e4cee3385f68132799">_max_knots</a> * <a class="code hl_variable" href="classSMonolith.html#a4606b53f321992377d420a838c76ab3b">nParams</a>;</div>
+<div class="line"><span class="lineno"> 1171</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> event_size_max = <a class="code hl_variable" href="classSMonolith.html#af54ea9c613ef95b36dcf9c194dd38e85">_max_knots</a> * <a class="code hl_variable" href="classSMonolith.html#a4606b53f321992377d420a838c76ab3b">nParams</a>;</div>
 <div class="line"><span class="lineno"> 1172</span> </div>
 <div class="line"><span class="lineno"> 1173</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;--- INITIALISED Spline Monolith ---&quot;</span>);</div>
 <div class="line"><span class="lineno"> 1174</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;{} events with {} splines&quot;</span>, <a class="code hl_variable" href="classSMonolith.html#ac86282b04659bae5cccb6073c9edc0a5">NEvents</a>, <a class="code hl_variable" href="classSMonolith.html#ab72795333d6f632565b0f7eb0ca8a658">NSplines_valid</a>);</div>
@@ -1962,8 +1962,8 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a12cddfcbec851b468cba86dc9b223c78" name="a12cddfcbec851b468cba86dc9b223c78"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a12cddfcbec851b468cba86dc9b223c78">&#9670;&#160;</a></span>ScanMasterSpline()</h2>
+<a id="af2a015f3d6f4f8a51d27f8cd8a67c229" name="af2a015f3d6f4f8a51d27f8cd8a67c229"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2a015f3d6f4f8a51d27f8cd8a67c229">&#9670;&#160;</a></span>ScanMasterSpline()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1986,7 +1986,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramtype">short int &amp;&#160;</td>
           <td class="paramname"><em>MaxPoints</em>, </td>
         </tr>
         <tr>
@@ -2112,7 +2112,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">  449</span>        <a class="code hl_class" href="classTSpline3__red.html">TSpline3_red</a>* CurrSpline = <span class="keyword">dynamic_cast&lt;</span><a class="code hl_class" href="classTSpline3__red.html">TSpline3_red</a>*<span class="keyword">&gt;</span>(TespFunc);</div>
 <div class="line"><span class="lineno">  450</span>        <span class="keywordtype">int</span> nPoints = CurrSpline-&gt;<a class="code hl_function" href="classTSpline3__red.html#a6b680cfb96e11c55b8325e1274251b91">GetNp</a>();</div>
 <div class="line"><span class="lineno">  451</span>        <span class="keywordflow">if</span> (nPoints &gt; MaxPoints) {</div>
-<div class="line"><span class="lineno">  452</span>          MaxPoints = nPoints;</div>
+<div class="line"><span class="lineno">  452</span>          MaxPoints = <span class="keyword">static_cast&lt;</span><span class="keywordtype">short</span> <span class="keywordtype">int</span><span class="keyword">&gt;</span>(nPoints);</div>
 <div class="line"><span class="lineno">  453</span>        }</div>
 <div class="line"><span class="lineno">  454</span>        numKnots += nPoints;</div>
 <div class="line"><span class="lineno">  455</span>        nSplines_SingleEvent++;</div>
@@ -2243,8 +2243,8 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="ac0d1df54649909e4cee3385f68132799" name="ac0d1df54649909e4cee3385f68132799"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac0d1df54649909e4cee3385f68132799">&#9670;&#160;</a></span>_max_knots</h2>
+<a id="af54ea9c613ef95b36dcf9c194dd38e85" name="af54ea9c613ef95b36dcf9c194dd38e85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af54ea9c613ef95b36dcf9c194dd38e85">&#9670;&#160;</a></span>_max_knots</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2253,7 +2253,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int SMonolith::_max_knots</td>
+          <td class="memname">short int SMonolith::_max_knots</td>
         </tr>
       </table>
   </td>
