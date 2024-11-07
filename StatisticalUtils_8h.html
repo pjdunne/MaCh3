@@ -195,7 +195,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:a3dbcf2e503dd81c1c26f063a7e6b3362"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Bayesian Information Criterion (BIC) or Schwarz information criterion (also SIC, SBC, SBIC)  <br /></td></tr>
 <tr class="separator:a3dbcf2e503dd81c1c26f063a7e6b3362"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf02981e45bb7adc146cebb4d82c6f36"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="StatisticalUtils_8h.html#aaf02981e45bb7adc146cebb4d82c6f36">GetNeffective</a> (const int N1, const int N2)</td></tr>
-<tr class="memdesc:aaf02981e45bb7adc146cebb4d82c6f36"><td class="mdescLeft">&#160;</td><td class="mdescRight">KS: See 14.3.10 in Numerical Recipes in C <a class="el" href="citelist.html#CITEREF_press1992numerical">[13]</a>.  <br /></td></tr>
+<tr class="memdesc:aaf02981e45bb7adc146cebb4d82c6f36"><td class="mdescLeft">&#160;</td><td class="mdescRight">KS: See 14.3.10 in Numerical Recipes in C <a class="el" href="citelist.html#CITEREF_press1992numerical">[14]</a>.  <br /></td></tr>
 <tr class="separator:aaf02981e45bb7adc146cebb4d82c6f36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adba5abb16555092305a8b459f94a24c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="StatisticalUtils_8h.html#adba5abb16555092305a8b459f94a24c1">CheckBonferoniCorrectedpValue</a> (const std::vector&lt; std::string &gt; &amp;SampleNameVec, const std::vector&lt; double &gt; &amp;PValVec, const double Threshold=0.05)</td></tr>
 <tr class="memdesc:adba5abb16555092305a8b459f94a24c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">KS: For more see <a href="https://www.t2k.org/docs/technotes/429/TN429_v8#page=63">https://www.t2k.org/docs/technotes/429/TN429_v8#page=63</a>.  <br /></td></tr>
@@ -209,7 +209,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:afecd84c56d6546271c4547192aae31af"><td class="mdescLeft">&#160;</td><td class="mdescRight">KS: Calculate Beta parameter which will be different based on specified test statistic.  <br /></td></tr>
 <tr class="separator:afecd84c56d6546271c4547192aae31af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34d5232bfb12e29ec9d63acaa8744b58"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="StatisticalUtils_8h.html#a34d5232bfb12e29ec9d63acaa8744b58">GetSubOptimality</a> (const std::vector&lt; double &gt; &amp;EigenValues, const int TotalTarameters)</td></tr>
-<tr class="memdesc:a34d5232bfb12e29ec9d63acaa8744b58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Based on <a class="el" href="citelist.html#CITEREF_roberts2009adaptive">[14]</a>.  <br /></td></tr>
+<tr class="memdesc:a34d5232bfb12e29ec9d63acaa8744b58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Based on <a class="el" href="citelist.html#CITEREF_roberts2009adaptive">[15]</a>.  <br /></td></tr>
 <tr class="separator:a34d5232bfb12e29ec9d63acaa8744b58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4dc9e4455015e55031e2cc8a076349d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="StatisticalUtils_8h.html#ab4dc9e4455015e55031e2cc8a076349d">GetArithmetic</a> (TH1D *const hist, double &amp;<a class="el" href="RHat_8cpp.html#ab7d224b5fffa9367046f2976bb4972d1">Mean</a>, double &amp;Error)</td></tr>
 <tr class="memdesc:ab4dc9e4455015e55031e2cc8a076349d"><td class="mdescLeft">&#160;</td><td class="mdescRight">CW: Get Arithmetic mean from posterior.  <br /></td></tr>
@@ -235,6 +235,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a8ba1090ae92f61008a6576c45b4b3b7b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="StatisticalUtils_8h.html#a8ba1090ae92f61008a6576c45b4b3b7b">FisherCombinedPValue</a> (const std::vector&lt; double &gt; &amp;pvalues)</td></tr>
 <tr class="memdesc:a8ba1090ae92f61008a6576c45b4b3b7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">KS: Combine p-values using Fisher's method.  <br /></td></tr>
 <tr class="separator:a8ba1090ae92f61008a6576c45b4b3b7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6fd944e00fcda133cfef10782f08de0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="StatisticalUtils_8h.html#aa6fd944e00fcda133cfef10782f08de0">ThinningMCMC</a> (const std::string &amp;FilePath, const int ThinningCut)</td></tr>
+<tr class="memdesc:aa6fd944e00fcda133cfef10782f08de0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thin MCMC Chain, to save space and maintain low autocorrelations.  <br /></td></tr>
+<tr class="separator:aa6fd944e00fcda133cfef10782f08de0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Utility functions for statistical interpretations in MaCh3. </p>
@@ -1334,7 +1337,7 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>KS: See 14.3.10 in Numerical Recipes in C <a class="el" href="citelist.html#CITEREF_press1992numerical">[13]</a>. </p>
+<p>KS: See 14.3.10 in Numerical Recipes in C <a class="el" href="citelist.html#CITEREF_press1992numerical">[14]</a>. </p>
 
 <p class="definition">Definition at line <a class="el" href="StatisticalUtils_8h_source.html#l00103">103</a> of file <a class="el" href="StatisticalUtils_8h_source.html">StatisticalUtils.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  103</span>                                                        {</div>
@@ -1486,7 +1489,7 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Based on <a class="el" href="citelist.html#CITEREF_roberts2009adaptive">[14]</a>. </p>
+<p>Based on <a class="el" href="citelist.html#CITEREF_roberts2009adaptive">[15]</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">EigenValues</td><td>Eigen values of covariance matrix </td></tr>
@@ -1509,6 +1512,100 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">  235</span>  <span class="keyword">const</span> <span class="keywordtype">double</span> SubOptimality = TotalTarameters * sum_eigenvalues_squared_inv / std::pow(sum_eigenvalues_inv, 2);</div>
 <div class="line"><span class="lineno">  236</span>  <span class="keywordflow">return</span> SubOptimality;</div>
 <div class="line"><span class="lineno">  237</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa6fd944e00fcda133cfef10782f08de0" name="aa6fd944e00fcda133cfef10782f08de0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6fd944e00fcda133cfef10782f08de0">&#9670;&#160;</a></span>ThinningMCMC()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ThinningMCMC </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>FilePath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>ThinningCut</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Thin MCMC Chain, to save space and maintain low autocorrelations. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">FilePath</td><td>Path to MCMC chain you want to thin </td></tr>
+    <tr><td class="paramname">ThinningCut</td><td>every which entry you want to thin <a class="el" href="citelist.html#CITEREF_2011ThinningMCMC">[13]</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>Thinning is done over entry not steps, it may now work very well for merged chains </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="StatisticalUtils_8h_source.html#l00542">542</a> of file <a class="el" href="StatisticalUtils_8h_source.html">StatisticalUtils.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  542</span>                                                                           {</div>
+<div class="line"><span class="lineno">  543</span><span class="comment">// ********************</span></div>
+<div class="line"><span class="lineno">  544</span>  <span class="comment">// Define the path for the temporary thinned file</span></div>
+<div class="line"><span class="lineno">  545</span>  std::string TempFilePath = <span class="stringliteral">&quot;Thinned_&quot;</span> + FilePath;</div>
+<div class="line"><span class="lineno">  546</span>  <span class="keywordtype">int</span> ret = system((<span class="stringliteral">&quot;cp &quot;</span> + FilePath + <span class="stringliteral">&quot; &quot;</span> + TempFilePath).c_str());</div>
+<div class="line"><span class="lineno">  547</span>  <span class="keywordflow">if</span> (ret != 0) {</div>
+<div class="line"><span class="lineno">  548</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#ad5b2eb6377721e3ac95def22c2386bb1">MACH3LOG_WARN</a>(<span class="stringliteral">&quot;Error: system call to copy file failed with code {}&quot;</span>, ret);</div>
+<div class="line"><span class="lineno">  549</span>  }</div>
+<div class="line"><span class="lineno">  550</span> </div>
+<div class="line"><span class="lineno">  551</span>  TFile *inFile = TFile::Open(TempFilePath.c_str(), <span class="stringliteral">&quot;UPDATE&quot;</span>);</div>
+<div class="line"><span class="lineno">  552</span>  <span class="keywordflow">if</span> (!inFile || inFile-&gt;IsZombie()) {</div>
+<div class="line"><span class="lineno">  553</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a>(<span class="stringliteral">&quot;Error opening file: {}&quot;</span>, TempFilePath);</div>
+<div class="line"><span class="lineno">  554</span>    <span class="keywordflow">throw</span> <a class="code hl_class" href="classMaCh3Exception.html">MaCh3Exception</a>(__FILE__, __LINE__);</div>
+<div class="line"><span class="lineno">  555</span>  }</div>
+<div class="line"><span class="lineno">  556</span> </div>
+<div class="line"><span class="lineno">  557</span>  TTree *inTree = inFile-&gt;Get&lt;TTree&gt;(<span class="stringliteral">&quot;posteriors&quot;</span>);</div>
+<div class="line"><span class="lineno">  558</span>  <span class="keywordflow">if</span> (!inTree) {</div>
+<div class="line"><span class="lineno">  559</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a>(<span class="stringliteral">&quot;Error: TTree &#39;posteriors&#39; not found in file.&quot;</span>);</div>
+<div class="line"><span class="lineno">  560</span>    inFile-&gt;ls();</div>
+<div class="line"><span class="lineno">  561</span>    inFile-&gt;Close();</div>
+<div class="line"><span class="lineno">  562</span>    <span class="keywordflow">throw</span> <a class="code hl_class" href="classMaCh3Exception.html">MaCh3Exception</a>(__FILE__, __LINE__);</div>
+<div class="line"><span class="lineno">  563</span>  }</div>
+<div class="line"><span class="lineno">  564</span> </div>
+<div class="line"><span class="lineno">  565</span>  <span class="comment">// Clone the structure without data</span></div>
+<div class="line"><span class="lineno">  566</span>  TTree *outTree = inTree-&gt;CloneTree(0);</div>
+<div class="line"><span class="lineno">  567</span> </div>
+<div class="line"><span class="lineno">  568</span>  <span class="comment">// Loop over entries and apply thinning</span></div>
+<div class="line"><span class="lineno">  569</span>  Long64_t nEntries = inTree-&gt;GetEntries();</div>
+<div class="line"><span class="lineno">  570</span>  <span class="keywordtype">double</span> retainedPercentage = (double(nEntries) / ThinningCut) / <span class="keywordtype">double</span>(nEntries) * 100;</div>
+<div class="line"><span class="lineno">  571</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;Thinning will retain {:.2f}% of chains&quot;</span>, retainedPercentage);</div>
+<div class="line"><span class="lineno">  572</span>  <span class="keywordflow">for</span> (Long64_t i = 0; i &lt; nEntries; i++) {</div>
+<div class="line"><span class="lineno">  573</span>    <span class="keywordflow">if</span> (i % (nEntries/10) == 0) {</div>
+<div class="line"><span class="lineno">  574</span>      <a class="code hl_function" href="namespaceMaCh3Utils.html#a4c8bdeb1d34606aed192e9f1311a72f5">MaCh3Utils::PrintProgressBar</a>(i, nEntries);</div>
+<div class="line"><span class="lineno">  575</span>    }</div>
+<div class="line"><span class="lineno">  576</span>    <span class="keywordflow">if</span> (i % ThinningCut == 0) {</div>
+<div class="line"><span class="lineno">  577</span>      inTree-&gt;GetEntry(i);</div>
+<div class="line"><span class="lineno">  578</span>      outTree-&gt;Fill();</div>
+<div class="line"><span class="lineno">  579</span>    }</div>
+<div class="line"><span class="lineno">  580</span>  }</div>
+<div class="line"><span class="lineno">  581</span>  inFile-&gt;WriteTObject(outTree, <span class="stringliteral">&quot;posteriors&quot;</span>, <span class="stringliteral">&quot;kOverwrite&quot;</span>);</div>
+<div class="line"><span class="lineno">  582</span>  inFile-&gt;Close();</div>
+<div class="line"><span class="lineno">  583</span>  <span class="keyword">delete</span> inFile;</div>
+<div class="line"><span class="lineno">  584</span> </div>
+<div class="line"><span class="lineno">  585</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;Thinned TTree saved and overwrote original in: {}&quot;</span>, TempFilePath);</div>
+<div class="line"><span class="lineno">  586</span>}</div>
+<div class="ttc" id="anamespaceMaCh3Utils_html_a4c8bdeb1d34606aed192e9f1311a72f5"><div class="ttname"><a href="namespaceMaCh3Utils.html#a4c8bdeb1d34606aed192e9f1311a72f5">MaCh3Utils::PrintProgressBar</a></div><div class="ttdeci">void PrintProgressBar(const Long64_t Done, const Long64_t All)</div><div class="ttdoc">KS: Simply print progress bar.</div><div class="ttdef"><b>Definition:</b> <a href="Monitor_8cpp_source.html#l00189">Monitor.cpp:189</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
