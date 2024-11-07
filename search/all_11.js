@@ -44,7 +44,7 @@ var searchData=
   ['rhat_41',['RHat',['../RHat_8cpp.html#ab5cfb5e8741283e8d8252aae184004e4',1,'RHat.cpp']]],
   ['rhat_2ecpp_42',['RHat.cpp',['../RHat_8cpp.html',1,'']]],
   ['rhatfolded_43',['RHatFolded',['../RHat_8cpp.html#a754fbe6088f05d880121693722fe6b99',1,'RHat.cpp']]],
-  ['rnd_44',['rnd',['../classsamplePDFBase.html#a06fd2c9575c0b9e56aaaf78b5be59b44',1,'samplePDFBase::rnd()'],['../classSampleSummary.html#a8322552ef396f34af5ee4bd47a44e39e',1,'SampleSummary::rnd()']]],
+  ['rnd_44',['rnd',['../classsamplePDFBase.html#a06fd2c9575c0b9e56aaaf78b5be59b44',1,'samplePDFBase::rnd()'],['../classSampleSummary.html#a364fb16938a26adbe59fdd057f4b9405',1,'SampleSummary::rnd()']]],
   ['run_45',['run',['../classPSO.html#af09adc84344d8618a37c900b05fd1bd7',1,'PSO']]],
   ['run2dllhscan_46',['Run2DLLHScan',['../classFitterBase.html#ab8b32ca268c20dd643eaf92dae04cd0a',1,'FitterBase']]],
   ['rundiagnostic_47',['RunDiagnostic',['../RHat_8cpp.html#a4c5629fb030eb27c32cab42a42c6623b',1,'RHat.cpp']]],

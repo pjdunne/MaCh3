@@ -22,7 +22,7 @@ var searchData=
   ['detids_19',['DetIDs',['../classsplineFDBase.html#aeb743760ca4a477771132aaf0e334d15',1,'splineFDBase']]],
   ['dimensionlabels_20',['DimensionLabels',['../classsplineFDBase.html#a00e1aeea8e9389c41f93469a26c83adc',1,'splineFDBase']]],
   ['dimensions_21',['Dimensions',['../classsplineFDBase.html#a6c28400605049bdee229885c46463dcd',1,'splineFDBase']]],
-  ['dir_22',['Dir',['../classSampleSummary.html#a916c6d1f50b54f1f4509622359b2a1b7',1,'SampleSummary']]],
+  ['dir_22',['Dir',['../classSampleSummary.html#aa2064e7455c3164ee5118a5e5162f282',1,'SampleSummary']]],
   ['dobetaparam_23',['DoBetaParam',['../classSampleSummary.html#adf610d698a50c4930d95be320e99a8e8',1,'SampleSummary']]],
   ['dobymodeplots_24',['DoByModePlots',['../classSampleSummary.html#a795ac96bf6958c8a2f38c9de23c3c081',1,'SampleSummary']]],
   ['dodiagmcmc_25',['doDiagMCMC',['../classMCMCProcessor.html#adf449e50cf358f737fe4a2b65d9668e9',1,'MCMCProcessor']]],

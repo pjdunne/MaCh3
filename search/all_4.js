@@ -28,7 +28,7 @@ var searchData=
   ['diagnostic_25',['Diagnostic',['../md_Diagnostics_README.html',1,'']]],
   ['dimensionlabels_26',['DimensionLabels',['../classsplineFDBase.html#a00e1aeea8e9389c41f93469a26c83adc',1,'splineFDBase']]],
   ['dimensions_27',['Dimensions',['../classsplineFDBase.html#a6c28400605049bdee229885c46463dcd',1,'splineFDBase']]],
-  ['dir_28',['Dir',['../classSampleSummary.html#a916c6d1f50b54f1f4509622359b2a1b7',1,'SampleSummary']]],
+  ['dir_28',['Dir',['../classSampleSummary.html#aa2064e7455c3164ee5118a5e5162f282',1,'SampleSummary']]],
   ['dobetaparam_29',['DoBetaParam',['../classSampleSummary.html#adf610d698a50c4930d95be320e99a8e8',1,'SampleSummary']]],
   ['dobymodeplots_30',['DoByModePlots',['../classSampleSummary.html#a795ac96bf6958c8a2f38c9de23c3c081',1,'SampleSummary']]],
   ['dodiagmcmc_31',['doDiagMCMC',['../classMCMCProcessor.html#adf449e50cf358f737fe4a2b65d9668e9',1,'MCMCProcessor']]],

@@ -77,7 +77,7 @@ var searchData=
   ['matrixplotter_2ecpp_74',['MatrixPlotter.cpp',['../MatrixPlotter_8cpp.html',1,'']]],
   ['matrixvectormulti_75',['MatrixVectorMulti',['../classcovarianceBase.html#a43367db263b2607232077410f27b1146',1,'covarianceBase']]],
   ['matrixvectormultisingle_76',['MatrixVectorMultiSingle',['../classcovarianceBase.html#a29d3a7af51740c17ae5002b579923446',1,'covarianceBase']]],
-  ['maxbins_77',['maxBins',['../classSampleSummary.html#a780a82a74bb9d1c3b798a995dfef7ec2',1,'SampleSummary']]],
+  ['maxbins_77',['maxBins',['../classSampleSummary.html#af5a3139cef917abfddc36dbb8d4ac2fd',1,'SampleSummary']]],
   ['mc_5ffiles_78',['mc_files',['../classsamplePDFFDBase.html#a48ec5ccc753e412865513d4168657ac4',1,'samplePDFFDBase']]],
   ['mc_5fstat_5fllh_79',['mc_stat_llh',['../classmanager.html#aa7619b235f224c34e77f8d09f42a5911',1,'manager']]],
   ['mcmc_80',['mcmc',['../classmcmc.html',1,'mcmc'],['../classmcmc.html#a56195958aee22996158d3ba341dcf31e',1,'mcmc::mcmc()']]],

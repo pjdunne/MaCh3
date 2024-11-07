@@ -6,7 +6,7 @@ var searchData=
   ['marginalposteriorvariance_3',['MarginalPosteriorVariance',['../RHat_8cpp.html#a68813385f1240d1264e139391b12bf05',1,'RHat.cpp']]],
   ['marginalposteriorvariancefolded_4',['MarginalPosteriorVarianceFolded',['../RHat_8cpp.html#af4fae3d323e2f5220b3506386304f8f4',1,'RHat.cpp']]],
   ['matrixname_5',['matrixName',['../classcovarianceBase.html#a26618d3f5633b33ce20e38ce8261b3ee',1,'covarianceBase']]],
-  ['maxbins_6',['maxBins',['../classSampleSummary.html#a780a82a74bb9d1c3b798a995dfef7ec2',1,'SampleSummary']]],
+  ['maxbins_6',['maxBins',['../classSampleSummary.html#af5a3139cef917abfddc36dbb8d4ac2fd',1,'SampleSummary']]],
   ['mc_5ffiles_7',['mc_files',['../classsamplePDFFDBase.html#a48ec5ccc753e412865513d4168657ac4',1,'samplePDFFDBase']]],
   ['mc_5fstat_5fllh_8',['mc_stat_llh',['../classmanager.html#aa7619b235f224c34e77f8d09f42a5911',1,'manager']]],
   ['mcmcfile_9',['MCMCFile',['../RHat_8cpp.html#aa19a5e341d34dce5448ee490dedba8ef',1,'MCMCFile():&#160;RHat.cpp'],['../classMCMCProcessor.html#a6d212d77a818304a8674a7b9b18d43b8',1,'MCMCProcessor::MCMCFile()']]],
