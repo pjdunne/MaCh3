@@ -112,14 +112,16 @@ Building against MaCh3</h1>
 </div><!-- fragment --><p>Some functionalities rely on setting <code>Env{MACH3}</code> which should point to path experiment specific MaCh3. This way MaCh3 can easily find <code>Env{MACH3}/inputs/SomeInput.root</code> for example.</p>
 <h1><a class="anchor" id="autotoc_md5"></a>
 Python</h1>
-<p>MaCh3 can be compiled with a python interface by specifying the cmake option </p><div class="fragment"><div class="line">cmake ../ -DMaCh3_PYTHON_ENABLED=ON</div>
+<p>MaCh3 has an optional python interface (pyMaCh3) which provides much of the same functionality as the c++ interface (see <a href="https://mach3-software.github.io/MaCh3/pyMaCh3/mainpage.html">here</a> for documentation).</p>
+<p>You can tell the build system to set up the pyMaCh3 interface by specifying</p>
+<div class="fragment"><div class="line">cmake ../ -DMaCh3_PYTHON_ENABLED=ON</div>
 <div class="line">make &amp;&amp; make install</div>
-</div><!-- fragment --><p>Currently the python module only contains an interface to the plotting library (see <a href="https://github.com/mach3-software/MaCh3/blob/develop/plotting/README.md#python">here</a> for more information on how to use it)</p>
+</div><!-- fragment --><p>when building</p>
 <h2><a class="anchor" id="autotoc_md6"></a>
 Building with Pip</h2>
 <p>Additionally, you can build just the Python module by doing:</p>
 <div class="fragment"><div class="line">pip install -t &lt;install location&gt; .</div>
-</div><!-- fragment --><p> The -t option specifies an install location which can be useful if you are on a computing cluster and don't have write access to the default install location. If you specify a non-standard location you will need to add it to your <code>PYTHONPATH</code> as above so that python can find the module.</p>
+</div><!-- fragment --><p> The (optional) -t option specifies an install location which can be useful if you are on a computing cluster and don't have write access to the default install location. If you specify a non-standard location you will need to add it to your <code>PYTHONPATH</code> as above so that python can find the module.</p>
 <h1><a class="anchor" id="autotoc_md7"></a>
 Multithreading</h1>
 <p>MaCh3 quite heavily relies on Multithreading, it is turned on by default. If for debugging purposes you would like to turn it off please use </p><div class="fragment"><div class="line">cmake ../ -DMaCh3_MULTITHREAD_ENABLED=OFF</div>
