@@ -1,5 +1,5 @@
 <map id="Diagnostics/ProcessMCMC.cpp" name="Diagnostics/ProcessMCMC.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="1167,5,1388,31"/>
+<area shape="rect" id="node1" title="Main exectable responsible for different types of MCMC processing like drawing posteriors,..." alt="" coords="1167,5,1388,31"/>
 <area shape="rect" id="node2" href="$MCMCProcessor_8h.html" title=" " alt="" coords="1938,79,2121,104"/>
 <area shape="rect" id="node47" href="$manager_8h.html" title=" " alt="" coords="423,225,577,251"/>
 <area shape="rect" id="node3" title=" " alt="" coords="3589,152,3667,177"/>

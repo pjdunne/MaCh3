@@ -40,7 +40,7 @@ var searchData=
   ['returnstringfromkinematicparameter_37',['ReturnStringFromKinematicParameter',['../classsamplePDFFDBase.html#a206f555af9a21aba3c6a912c61a9a3cc',1,'samplePDFFDBase']]],
   ['returnunity_38',['ReturnUnity',['../classcovarianceBase.html#a3e2c11c7c0a3557068369b30e7aac17f',1,'covarianceBase']]],
   ['reweight_39',['reweight',['../classsamplePDFFDBase.html#a701fb3176df59d80a4707e25e4320678',1,'samplePDFFDBase::reweight()'],['../classsamplePDFBase.html#a50450fdab6faae1ecf17da543fd22e70',1,'samplePDFBase::reweight()']]],
-  ['reweightprior_40',['ReweightPrior',['../ProcessMCMC_8cpp.html#abbd13994de9f24524b06b19aa901d73f',1,'ReweightPrior():&#160;ProcessMCMC.cpp'],['../classMCMCProcessor.html#ad3b1cfab21c7063bc29d1cf5dcca888c',1,'MCMCProcessor::ReweightPrior()']]],
+  ['reweightprior_40',['ReweightPrior',['../ProcessMCMC_8cpp.html#a65a553e49041cfa24ab0432d1307416a',1,'ReweightPrior():&#160;ProcessMCMC.cpp'],['../classMCMCProcessor.html#ad3b1cfab21c7063bc29d1cf5dcca888c',1,'MCMCProcessor::ReweightPrior()']]],
   ['rhat_41',['RHat',['../RHat_8cpp.html#ab5cfb5e8741283e8d8252aae184004e4',1,'RHat.cpp']]],
   ['rhat_2ecpp_42',['RHat.cpp',['../RHat_8cpp.html',1,'']]],
   ['rhatfolded_43',['RHatFolded',['../RHat_8cpp.html#a754fbe6088f05d880121693722fe6b99',1,'RHat.cpp']]],

@@ -3,7 +3,7 @@ var searchData=
   ['declarenewmode_0',['DeclareNewMode',['../classMaCh3Modes.html#ad32518cbc4d3c4d45c3737193e637cb8',1,'MaCh3Modes']]],
   ['destroyarrays_1',['DestroyArrays',['../RHat_8cpp.html#abb60917440a91d5a3507fd4059d3e23b',1,'RHat.cpp']]],
   ['diagmcmc_2',['DiagMCMC',['../classMCMCProcessor.html#a7f8faecae63616ba100cf24ae42ecc08',1,'MCMCProcessor::DiagMCMC()'],['../DiagMCMC_8cpp.html#ae234755b7b483f97d2a48d8959e90a18',1,'DiagMCMC(const std::string &amp;inputFile, const std::string &amp;config):&#160;DiagMCMC.cpp']]],
-  ['diagnosecovariancematrix_3',['DiagnoseCovarianceMatrix',['../ProcessMCMC_8cpp.html#a08adc262bf03d1cb8df996b39404572c',1,'ProcessMCMC.cpp']]],
+  ['diagnosecovariancematrix_3',['DiagnoseCovarianceMatrix',['../ProcessMCMC_8cpp.html#a721fcdb3001f72ff5e40d6334d56e0d0',1,'ProcessMCMC.cpp']]],
   ['dragrace_4',['DragRace',['../classFitterBase.html#ab3db1d0bb7364e70cd432a3e1c0a600e',1,'FitterBase']]],
   ['drawcorrelations1d_5',['DrawCorrelations1D',['../classMCMCProcessor.html#a5b0961bcb0eea7a347e6a29ef7738d80',1,'MCMCProcessor']]],
   ['drawcovariance_6',['DrawCovariance',['../classMCMCProcessor.html#a8d9b9c1c780a51b130fe528583dc5019',1,'MCMCProcessor']]],

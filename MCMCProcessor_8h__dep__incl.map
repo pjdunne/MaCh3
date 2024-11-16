@@ -1,7 +1,7 @@
 <map id="mcmc/MCMCProcessor.h" name="mcmc/MCMCProcessor.h">
 <area shape="rect" id="node1" title=" " alt="" coords="555,5,737,31"/>
 <area shape="rect" id="node2" href="$DiagMCMC_8cpp.html" title=" " alt="" coords="5,86,207,111"/>
-<area shape="rect" id="node3" href="$ProcessMCMC_8cpp.html" title=" " alt="" coords="231,86,453,111"/>
+<area shape="rect" id="node3" href="$ProcessMCMC_8cpp.html" title="Main exectable responsible for different types of MCMC processing like drawing posteriors,..." alt="" coords="231,86,453,111"/>
 <area shape="rect" id="node4" href="$FitterBase_8h.html" title=" " alt="" coords="477,86,621,111"/>
 <area shape="rect" id="node16" href="$MCMCProcessor_8cpp.html" title=" " alt="" coords="645,86,842,111"/>
 <area shape="rect" id="node17" href="$SampleSummary_8h.html" title=" " alt="" coords="867,86,1055,111"/>

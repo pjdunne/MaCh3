@@ -212,7 +212,7 @@ var searchData=
   ['getthrowmatrix_209',['getThrowMatrix',['../classcovarianceBase.html#aa306bea2b30013ca55f2a95b8d16ec42',1,'covarianceBase']]],
   ['getthrowmatrix_5fcholdecomp_210',['getThrowMatrix_CholDecomp',['../classcovarianceBase.html#a563a904298d0bd5ec5518708396e0e22',1,'covarianceBase']]],
   ['gettransfermatrix_211',['getTransferMatrix',['../classcovarianceBase.html#acdcf459e3ef443e93c66d83cde87e238',1,'covarianceBase']]],
-  ['gettriangleplot_212',['GetTrianglePlot',['../ProcessMCMC_8cpp.html#a02c2311b736096adc8525876c0ec1487',1,'ProcessMCMC.cpp']]],
+  ['gettriangleplot_212',['GetTrianglePlot',['../ProcessMCMC_8cpp.html#a36519c64a11fdb905e91fd3db08e0f80',1,'ProcessMCMC.cpp']]],
   ['getupperbound_213',['GetUpperBound',['../classcovarianceBase.html#a0c6510aa48248382ba2da0330015b8c6',1,'covarianceBase']]],
   ['getuseroption_214',['getUserOption',['../classMaCh3Plotting_1_1PlottingManager.html#af9f60a6196a9249d7ad7fee6c7bba89a',1,'MaCh3Plotting::PlottingManager']]],
   ['getvalue_215',['getValue',['../namespaceMaCh3Utils.html#aa406fc13341d99d4ca7a4f43bbb38019',1,'MaCh3Utils']]],
