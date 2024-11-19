@@ -151,144 +151,14 @@ Include dependency graph for MaCh3Factory.cpp:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:adc486d9a678970321030996bd965de77"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classFitterBase.html">FitterBase</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MaCh3Factory_8cpp.html#adc486d9a678970321030996bd965de77">MaCh3FitterFactory</a> (<a class="el" href="classmanager.html">manager</a> *fitMan, std::vector&lt; <a class="el" href="classsamplePDFBase.html">samplePDFBase</a> * &gt; &amp;Samples, std::vector&lt; <a class="el" href="classcovarianceBase.html">covarianceBase</a> * &gt; &amp;Covariances)</td></tr>
-<tr class="separator:adc486d9a678970321030996bd965de77"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24f887a3654e745105ec22bb90b7ab89"><td class="memTemplParams" colspan="2">template&lt;typename CovType &gt; </td></tr>
-<tr class="memitem:a24f887a3654e745105ec22bb90b7ab89"><td class="memTemplItemLeft" align="right" valign="top">CovType *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="MaCh3Factory_8cpp.html#a24f887a3654e745105ec22bb90b7ab89">MaCh3CovarianceFactory</a> (<a class="el" href="classmanager.html">manager</a> *FitManager, const std::string &amp;PreFix)</td></tr>
-<tr class="memdesc:a24f887a3654e745105ec22bb90b7ab89"><td class="mdescLeft">&#160;</td><td class="mdescRight">MaCh3 Factory initiates one of implemented fitting algorithms.  <br /></td></tr>
-<tr class="separator:a24f887a3654e745105ec22bb90b7ab89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a126d15eeabecd1e4ab67422784a9f84a"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classFitterBase.html">FitterBase</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MaCh3Factory_8cpp.html#a126d15eeabecd1e4ab67422784a9f84a">MaCh3FitterFactory</a> (<a class="el" href="classmanager.html">manager</a> *fitMan)</td></tr>
+<tr class="separator:a126d15eeabecd1e4ab67422784a9f84a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37464d72da10c4e30eba841888416f40"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcovarianceXsec.html">covarianceXsec</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MaCh3Factory_8cpp.html#a37464d72da10c4e30eba841888416f40">MaCh3CovarianceFactory</a> (<a class="el" href="classmanager.html">manager</a> *FitManager, const std::string &amp;PreFix)</td></tr>
-<tr class="memdesc:a37464d72da10c4e30eba841888416f40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory function for creating a covariance class for systematic handling.  <br /></td></tr>
 <tr class="separator:a37464d72da10c4e30eba841888416f40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a24f887a3654e745105ec22bb90b7ab89" name="a24f887a3654e745105ec22bb90b7ab89"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a24f887a3654e745105ec22bb90b7ab89">&#9670;&#160;</a></span>MaCh3CovarianceFactory() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename CovType &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">CovType * MaCh3CovarianceFactory </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classmanager.html">manager</a> *&#160;</td>
-          <td class="paramname"><em>FitManager</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>PreFix</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>MaCh3 Factory initiates one of implemented fitting algorithms. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">fitMan</td><td>pointer to Manager class </td></tr>
-    <tr><td class="paramname">Samples</td><td>vector of Sample PDF which will be used in the fits </td></tr>
-    <tr><td class="paramname">Covariances</td><td>vector of Systematic objects which will be used in the fits</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>Example YAML configuration: <div class="fragment"><div class="line">    General:</div>
-<div class="line">      FittingAlgorithm: [<span class="stringliteral">&quot;MCMC&quot;</span>]</div>
-<div class="line">std::unique_ptr&lt;FitterBase&gt; <a class="code hl_function" href="MaCh3Factory_8cpp.html#adc486d9a678970321030996bd965de77">MaCh3FitterFactory</a>(<a class="code hl_class" href="classmanager.html">manager</a> *fitMan, std::vector&lt;samplePDFBase&gt;&amp; Samples, std::vector&lt;covarianceBase&gt;&amp; Covariances);</div>
-<div class="line"> </div>
-<div class="line"> </div>
-<div class="line">    @brief Factory function <span class="keywordflow">for</span> creating a covariance <span class="keyword">class </span>for systematic handling.</div>
-<div class="line">   </div>
-<div class="line">    @param fitMan Pointer to the <a class="code hl_class" href="classmanager.html">manager</a> class that holds the configuration settings.</div>
-<div class="line">    @param name Prefix, for example Xsec, then code will look for XsecCovFile</div>
-<div class="line">    @return Pointer to the initialized <a class="code hl_class" href="classcovarianceXsec.html">covarianceXsec</a> matrix object.</div>
-<div class="line">   </div>
-<div class="line">    @note Example YAML configuration:</div>
-<div class="line">    @code</div>
-<div class="line">   <a class="code hl_function" href="MaCh3Factory_8cpp.html#a24f887a3654e745105ec22bb90b7ab89">MaCh3CovarianceFactory</a>(, Xsec)</div>
-<div class="line">   </div>
-<div class="line">    General:</div>
-<div class="line">      Systematics:</div>
-<div class="line">          XsecCovName: <span class="stringliteral">&quot;xsec_cov&quot;</span></div>
-<div class="line">          XsecCovFile: [<span class="stringliteral">&quot;inputs/blarb1.yaml&quot;</span>,</div>
-<div class="line">                        <span class="stringliteral">&quot;inputs/blarb2.yaml&quot;</span>]</div>
-<div class="line">          XsecFix: [<span class="stringliteral">&quot;Param_0&quot;</span>,</div>
-<div class="line">                    <span class="stringliteral">&quot;Param_1&quot;</span>]</div>
-<div class="line">          XsecPCAThreshold: -1</div>
-<div class="line"><span class="preprocessor">          #XsecPCAThreshold: 0.00001</span></div>
-<div class="line">   </div>
-<div class="line">          XsecPCAParams: [-999, -999]</div>
-<div class="line">          XsecStepScale: 0.0075</div>
-<div class="ttc" id="aMaCh3Factory_8cpp_html_a24f887a3654e745105ec22bb90b7ab89"><div class="ttname"><a href="MaCh3Factory_8cpp.html#a24f887a3654e745105ec22bb90b7ab89">MaCh3CovarianceFactory</a></div><div class="ttdeci">CovType * MaCh3CovarianceFactory(manager *FitManager, const std::string &amp;PreFix)</div><div class="ttdoc">MaCh3 Factory initiates one of implemented fitting algorithms.</div><div class="ttdef"><b>Definition:</b> <a href="MaCh3Factory_8cpp_source.html#l00039">MaCh3Factory.cpp:39</a></div></div>
-<div class="ttc" id="aMaCh3Factory_8cpp_html_adc486d9a678970321030996bd965de77"><div class="ttname"><a href="MaCh3Factory_8cpp.html#adc486d9a678970321030996bd965de77">MaCh3FitterFactory</a></div><div class="ttdeci">std::unique_ptr&lt; FitterBase &gt; MaCh3FitterFactory(manager *fitMan, std::vector&lt; samplePDFBase * &gt; &amp;Samples, std::vector&lt; covarianceBase * &gt; &amp;Covariances)</div><div class="ttdef"><b>Definition:</b> <a href="MaCh3Factory_8cpp_source.html#l00006">MaCh3Factory.cpp:6</a></div></div>
-<div class="ttc" id="aclasscovarianceXsec_html"><div class="ttname"><a href="classcovarianceXsec.html">covarianceXsec</a></div><div class="ttdoc">Class responsible for handling of systematic error parameters with different types defined in the con...</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8h_source.html#l00009">covarianceXsec.h:9</a></div></div>
-<div class="ttc" id="aclassmanager_html"><div class="ttname"><a href="classmanager.html">manager</a></div><div class="ttdoc">The manager class is responsible for managing configurations and settings.</div><div class="ttdef"><b>Definition:</b> <a href="manager_8h_source.html#l00016">manager.h:16</a></div></div>
-</div><!-- fragment --></dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Todo:</a></b></dt><dd>add adaptive stuff </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000007">Todo:</a></b></dt><dd>this massive hack with "xsec_cov" is because we have const char * ... will have to fix it later... </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="MaCh3Factory_8cpp_source.html#l00039">39</a> of file <a class="el" href="MaCh3Factory_8cpp_source.html">MaCh3Factory.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   39</span>                                                                             {</div>
-<div class="line"><span class="lineno">   40</span><span class="comment">// ********************************************</span></div>
-<div class="line"><span class="lineno">   41</span> </div>
-<div class="line"><span class="lineno">   42</span>  <span class="comment">// config for our matrix</span></div>
-<div class="line"><span class="lineno">   43</span>  YAML::Node Settings = FitManager-&gt;<a class="code hl_function" href="classmanager.html#ab3999cc856ede72b37f68bdb28bd5520">raw</a>()[<span class="stringliteral">&quot;General&quot;</span>][<span class="stringliteral">&quot;Systematics&quot;</span>];</div>
-<div class="line"><span class="lineno">   44</span>  <span class="keyword">auto</span> CovMatrixName = Settings[std::string(PreFix) + <span class="stringliteral">&quot;CovName&quot;</span>].as&lt;std::string&gt;();</div>
-<div class="line"><span class="lineno">   45</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;Initialising {} matrix&quot;</span>, CovMatrixName);</div>
-<div class="line"><span class="lineno">   46</span> </div>
-<div class="line"><span class="lineno">   47</span>  <span class="comment">// yaml files initialising out matrix</span></div>
-<div class="line"><span class="lineno">   48</span>  <span class="keyword">auto</span> CovMatrixFile = Settings[std::string(PreFix) + <span class="stringliteral">&quot;CovFile&quot;</span>].as&lt;std::vector&lt;std::string&gt;&gt;();</div>
-<div class="line"><span class="lineno">   49</span> </div>
-<div class="line"><span class="lineno">   50</span>  <span class="comment">// PCA threshold, -1 means no pca</span></div>
-<div class="line"><span class="lineno">   51</span>  <span class="keyword">auto</span> PCAThreshold = GetFromManager&lt;int&gt;(Settings[std::string(PreFix) + <span class="stringliteral">&quot;PCAThreshold&quot;</span>], -1);</div>
-<div class="line"><span class="lineno">   52</span>  <span class="comment">// do we pca whole matrix or only submatrix</span></div>
-<div class="line"><span class="lineno">   53</span>  <span class="keyword">auto</span> PCAParamRegion = GetFromManager&lt;std::vector&lt;int&gt;&gt;(Settings[std::string(PreFix) + <span class="stringliteral">&quot;PCAParams&quot;</span>], {-999, -999});</div>
-<div class="line"><span class="lineno">   54</span> </div>
-<div class="line"><span class="lineno">   56</span>  CovType* CovObject = <span class="keyword">new</span> CovType(CovMatrixFile, <span class="stringliteral">&quot;xsec_cov&quot;</span>, PCAThreshold, PCAParamRegion[0], PCAParamRegion[1]);</div>
-<div class="line"><span class="lineno">   57</span> </div>
-<div class="line"><span class="lineno">   58</span>  <span class="comment">// Fill the parameter values with their nominal values</span></div>
-<div class="line"><span class="lineno">   59</span>  <span class="comment">// should _ALWAYS_ be done before overriding with fix or flat</span></div>
-<div class="line"><span class="lineno">   60</span>  CovObject-&gt;setParameters();</div>
-<div class="line"><span class="lineno">   61</span> </div>
-<div class="line"><span class="lineno">   62</span>  <span class="keyword">auto</span> FixParams = GetFromManager&lt;std::vector&lt;std::string&gt;&gt;(Settings[std::string(PreFix) + <span class="stringliteral">&quot;FixParams&quot;</span>], {});</div>
-<div class="line"><span class="lineno">   63</span> </div>
-<div class="line"><span class="lineno">   64</span>  <span class="comment">// Fixed CovObject parameters loop</span></div>
-<div class="line"><span class="lineno">   65</span>  <span class="keywordflow">if</span> (FixParams.size() == 1 &amp;&amp; FixParams.at(0) == <span class="stringliteral">&quot;All&quot;</span>) {</div>
-<div class="line"><span class="lineno">   66</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; CovObject-&gt;GetNumParams(); j++) {</div>
-<div class="line"><span class="lineno">   67</span>      CovObject-&gt;toggleFixParameter(j);</div>
-<div class="line"><span class="lineno">   68</span>    }</div>
-<div class="line"><span class="lineno">   69</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   70</span>    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0; j &lt; FixParams.size(); j++) {</div>
-<div class="line"><span class="lineno">   71</span>      CovObject-&gt;toggleFixParameter(FixParams.at(j));</div>
-<div class="line"><span class="lineno">   72</span>    }</div>
-<div class="line"><span class="lineno">   73</span>  }</div>
-<div class="line"><span class="lineno">   74</span>  <span class="comment">//Global step scale for matrix</span></div>
-<div class="line"><span class="lineno">   75</span>  <span class="keyword">auto</span> StepScale = Settings[std::string(PreFix) + <span class="stringliteral">&quot;StepScale&quot;</span>].as&lt;<span class="keywordtype">double</span>&gt;();</div>
-<div class="line"><span class="lineno">   76</span> </div>
-<div class="line"><span class="lineno">   77</span>  CovObject-&gt;setStepScale(StepScale);</div>
-<div class="line"><span class="lineno">   78</span> </div>
-<div class="line"><span class="lineno">   79</span>  <span class="comment">// Adaptive MCMC stuff</span></div>
-<div class="line"><span class="lineno">   80</span>  <span class="keywordflow">if</span>(FitManager-&gt;<a class="code hl_function" href="classmanager.html#ab3999cc856ede72b37f68bdb28bd5520">raw</a>()[<span class="stringliteral">&quot;AdaptionOptions&quot;</span>])</div>
-<div class="line"><span class="lineno">   81</span>    CovObject-&gt;initialiseAdaption(FitManager-&gt;<a class="code hl_function" href="classmanager.html#ab3999cc856ede72b37f68bdb28bd5520">raw</a>());</div>
-<div class="line"><span class="lineno">   82</span> </div>
-<div class="line"><span class="lineno">   83</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;Factory successful&quot;</span>);</div>
-<div class="line"><span class="lineno">   84</span> </div>
-<div class="line"><span class="lineno">   85</span>  <span class="keywordflow">return</span> CovObject;</div>
-<div class="line"><span class="lineno">   86</span>}</div>
-<div class="ttc" id="aMaCh3Logger_8h_html_a95fa4dffc648e4c5536c9292c2bdcac3"><div class="ttname"><a href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a></div><div class="ttdeci">#define MACH3LOG_INFO</div><div class="ttdef"><b>Definition:</b> <a href="MaCh3Logger_8h_source.html#l00016">MaCh3Logger.h:16</a></div></div>
-<div class="ttc" id="aclassmanager_html_ab3999cc856ede72b37f68bdb28bd5520"><div class="ttname"><a href="classmanager.html#ab3999cc856ede72b37f68bdb28bd5520">manager::raw</a></div><div class="ttdeci">YAML::Node const &amp; raw()</div><div class="ttdoc">Return config.</div><div class="ttdef"><b>Definition:</b> <a href="manager_8h_source.html#l00036">manager.h:36</a></div></div>
-</div><!-- fragment -->
-</div>
-</div>
 <a id="a37464d72da10c4e30eba841888416f40" name="a37464d72da10c4e30eba841888416f40"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a37464d72da10c4e30eba841888416f40">&#9670;&#160;</a></span>MaCh3CovarianceFactory() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a37464d72da10c4e30eba841888416f40">&#9670;&#160;</a></span>MaCh3CovarianceFactory()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -313,18 +183,16 @@ template&lt;typename CovType &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Factory function for creating a covariance class for systematic handling. </p>
-
-<p class="definition">Definition at line <a class="el" href="MaCh3Factory_8cpp_source.html#l00090">90</a> of file <a class="el" href="MaCh3Factory_8cpp_source.html">MaCh3Factory.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   90</span>                                                                                     {</div>
-<div class="line"><span class="lineno">   91</span><span class="comment">// ********************************************</span></div>
-<div class="line"><span class="lineno">   92</span>  <span class="keywordflow">return</span> MaCh3CovarianceFactory&lt;covarianceXsec&gt;(FitManager, PreFix);</div>
-<div class="line"><span class="lineno">   93</span>}</div>
+<p class="definition">Definition at line <a class="el" href="MaCh3Factory_8cpp_source.html#l00031">31</a> of file <a class="el" href="MaCh3Factory_8cpp_source.html">MaCh3Factory.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   31</span>                                                                                     {</div>
+<div class="line"><span class="lineno">   32</span><span class="comment">// ********************************************</span></div>
+<div class="line"><span class="lineno">   33</span>  <span class="keywordflow">return</span> MaCh3CovarianceFactory&lt;covarianceXsec&gt;(FitManager, PreFix);</div>
+<div class="line"><span class="lineno">   34</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="adc486d9a678970321030996bd965de77" name="adc486d9a678970321030996bd965de77"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc486d9a678970321030996bd965de77">&#9670;&#160;</a></span>MaCh3FitterFactory()</h2>
+<a id="a126d15eeabecd1e4ab67422784a9f84a" name="a126d15eeabecd1e4ab67422784a9f84a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a126d15eeabecd1e4ab67422784a9f84a">&#9670;&#160;</a></span>MaCh3FitterFactory()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -333,30 +201,14 @@ template&lt;typename CovType &gt; </div>
           <td class="memname">std::unique_ptr&lt; <a class="el" href="classFitterBase.html">FitterBase</a> &gt; MaCh3FitterFactory </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classmanager.html">manager</a> *&#160;</td>
-          <td class="paramname"><em>fitMan</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>fitMan</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="classsamplePDFBase.html">samplePDFBase</a> * &gt; &amp;&#160;</td>
-          <td class="paramname"><em>Samples</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="classcovarianceBase.html">covarianceBase</a> * &gt; &amp;&#160;</td>
-          <td class="paramname"><em>Covariances</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="MaCh3Factory_8cpp_source.html#l00006">6</a> of file <a class="el" href="MaCh3Factory_8cpp_source.html">MaCh3Factory.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    6</span>                                                                                                                                           {</div>
+<div class="fragment"><div class="line"><span class="lineno">    6</span>                                                              {</div>
 <div class="line"><span class="lineno">    7</span><span class="comment">// ********************************************</span></div>
 <div class="line"><span class="lineno">    8</span>  std::unique_ptr&lt;FitterBase&gt; MaCh3Fitter = <span class="keyword">nullptr</span>;</div>
 <div class="line"><span class="lineno">    9</span> </div>
@@ -377,17 +229,11 @@ template&lt;typename CovType &gt; </div>
 <div class="line"><span class="lineno">   24</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a>(<span class="stringliteral">&quot;You want to use algorithm {}, I don&#39;t recognize it, sry&quot;</span>, Algorithm);</div>
 <div class="line"><span class="lineno">   25</span>    <span class="keywordflow">throw</span> <a class="code hl_class" href="classMaCh3Exception.html">MaCh3Exception</a>(__FILE__ , __LINE__ );</div>
 <div class="line"><span class="lineno">   26</span>  }</div>
-<div class="line"><span class="lineno">   27</span> </div>
-<div class="line"><span class="lineno">   28</span>  <span class="comment">//KS: Adding samples and covariances to the Fitter class could be in the factory</span></div>
-<div class="line"><span class="lineno">   29</span>  <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; Samples.size(); i++)</div>
-<div class="line"><span class="lineno">   30</span>    MaCh3Fitter-&gt;addSamplePDF(Samples[i]);</div>
-<div class="line"><span class="lineno">   31</span>  <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; Covariances.size(); i++)</div>
-<div class="line"><span class="lineno">   32</span>    MaCh3Fitter-&gt;addSystObj(Covariances[i]);</div>
-<div class="line"><span class="lineno">   33</span> </div>
-<div class="line"><span class="lineno">   34</span>  <span class="keywordflow">return</span> MaCh3Fitter;</div>
-<div class="line"><span class="lineno">   35</span>}</div>
+<div class="line"><span class="lineno">   27</span>  <span class="keywordflow">return</span> MaCh3Fitter;</div>
+<div class="line"><span class="lineno">   28</span>}</div>
 <div class="ttc" id="aMaCh3Logger_8h_html_a61052119a625282d0ec6d4a97adf3ee2"><div class="ttname"><a href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a></div><div class="ttdeci">#define MACH3LOG_ERROR</div><div class="ttdef"><b>Definition:</b> <a href="MaCh3Logger_8h_source.html#l00018">MaCh3Logger.h:18</a></div></div>
 <div class="ttc" id="aclassMaCh3Exception_html"><div class="ttname"><a href="classMaCh3Exception.html">MaCh3Exception</a></div><div class="ttdoc">Custom exception class for MaCh3 errors.</div><div class="ttdef"><b>Definition:</b> <a href="MaCh3Exception_8h_source.html#l00012">MaCh3Exception.h:12</a></div></div>
+<div class="ttc" id="aclassmanager_html_ab3999cc856ede72b37f68bdb28bd5520"><div class="ttname"><a href="classmanager.html#ab3999cc856ede72b37f68bdb28bd5520">manager::raw</a></div><div class="ttdeci">YAML::Node const &amp; raw()</div><div class="ttdoc">Return config.</div><div class="ttdef"><b>Definition:</b> <a href="manager_8h_source.html#l00036">manager.h:36</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
