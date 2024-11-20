@@ -272,7 +272,7 @@ template&lt;typename CovType &gt; </div>
 <div class="line"><span class="lineno">   76</span>  <span class="comment">// should _ALWAYS_ be done before overriding with fix or flat</span></div>
 <div class="line"><span class="lineno">   77</span>  CovObject-&gt;setParameters();</div>
 <div class="line"><span class="lineno">   78</span> </div>
-<div class="line"><span class="lineno">   79</span>  <span class="keyword">auto</span> FixParams = GetFromManager&lt;std::vector&lt;std::string&gt;&gt;(Settings[std::string(PreFix) + <span class="stringliteral">&quot;FixParams&quot;</span>], {});</div>
+<div class="line"><span class="lineno">   79</span>  <span class="keyword">auto</span> FixParams = GetFromManager&lt;std::vector&lt;std::string&gt;&gt;(Settings[std::string(PreFix) + <span class="stringliteral">&quot;Fix&quot;</span>], {});</div>
 <div class="line"><span class="lineno">   80</span> </div>
 <div class="line"><span class="lineno">   81</span>  <span class="comment">// Fixed CovObject parameters loop</span></div>
 <div class="line"><span class="lineno">   82</span>  <span class="keywordflow">if</span> (FixParams.size() == 1 &amp;&amp; FixParams.at(0) == <span class="stringliteral">&quot;All&quot;</span>) {</div>
