@@ -174,7 +174,7 @@ var searchData=
   ['steptime_171',['stepTime',['../classFitterBase.html#a8354e9a7a9cc534277ff76ab37c9a763',1,'FitterBase']]],
   ['storedselection_172',['StoredSelection',['../classsamplePDFFDBase.html#a185c166f11a096fc75eb1b76a4a31ac3',1,'samplePDFFDBase']]],
   ['str2int_173',['str2int',['../Structs_8h.html#ab29c200876205c3add1d71f053195658',1,'Structs.h']]],
-  ['strendswith_174',['strEndsWith',['../classMaCh3Plotting_1_1InputManager.html#a008c0e9535ebe6b0fa6f8e62737add3c',1,'MaCh3Plotting::InputManager']]],
+  ['strendswith_174',['strEndsWith',['../classMaCh3Plotting_1_1InputManager.html#a9f98ca215112178b1de36e328424aa35',1,'MaCh3Plotting::InputManager']]],
   ['stringtoyaml_175',['STRINGtoYAML',['../YamlHelper_8h.html#a3ff1f2154c0a70ad5a145fcc5891e7ec',1,'YamlHelper.h']]],
   ['stripduplicatedmodes_176',['StripDuplicatedModes',['../classsplineFDBase.html#a62f37395f7b1eb73c3ad0a1204bb3c2d',1,'splineFDBase']]],
   ['structs_2ecpp_177',['Structs.cpp',['../Structs_8cpp.html',1,'']]],

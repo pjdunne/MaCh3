@@ -271,8 +271,8 @@ Private Member Functions</h2></td></tr>
 <tr class="separator:aa3a91c2525f5aea76ba182b3be4b2b2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd7bd6137530d4ba7f8a64c2b6e5dfa6"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMaCh3Plotting_1_1InputManager.html#abd7bd6137530d4ba7f8a64c2b6e5dfa6">getFitterSpecificSampleName</a> (const std::string &amp;fitter, <a class="el" href="namespaceMaCh3Plotting.html#a4152b51a260d6a18f41b3a22aa2a6b75">fileTypeEnum</a> fileType, const std::string &amp;sample) const</td></tr>
 <tr class="separator:abd7bd6137530d4ba7f8a64c2b6e5dfa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a008c0e9535ebe6b0fa6f8e62737add3c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMaCh3Plotting_1_1InputManager.html#a008c0e9535ebe6b0fa6f8e62737add3c">strEndsWith</a> (std::string str, std::string ending) const</td></tr>
-<tr class="separator:a008c0e9535ebe6b0fa6f8e62737add3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f98ca215112178b1de36e328424aa35"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMaCh3Plotting_1_1InputManager.html#a9f98ca215112178b1de36e328424aa35">strEndsWith</a> (const std::string &amp;str, const std::string &amp;ending) const</td></tr>
+<tr class="separator:a9f98ca215112178b1de36e328424aa35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -400,15 +400,15 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   60</span>  }</div>
 <div class="line"><span class="lineno">   61</span>}</div>
 <div class="ttc" id="aMaCh3Logger_8h_html_a4db4657acad5c79ac4bbb66a9d1c5905"><div class="ttname"><a href="MaCh3Logger_8h.html#a4db4657acad5c79ac4bbb66a9d1c5905">MACH3LOG_DEBUG</a></div><div class="ttdeci">#define MACH3LOG_DEBUG</div><div class="ttdef"><b>Definition:</b> <a href="MaCh3Logger_8h_source.html#l00015">MaCh3Logger.h:15</a></div></div>
-<div class="ttc" id="aclassMaCh3Plotting_1_1InputManager_html_a0d66afafbba133fc3c1b4867957eb3db"><div class="ttname"><a href="classMaCh3Plotting_1_1InputManager.html#a0d66afafbba133fc3c1b4867957eb3db">MaCh3Plotting::InputManager::_paramToTagsMap</a></div><div class="ttdeci">std::unordered_map&lt; std::string, std::vector&lt; std::string &gt; &gt; _paramToTagsMap</div><div class="ttdef"><b>Definition:</b> <a href="inputManager_8h_source.html#l00658">inputManager.h:658</a></div></div>
-<div class="ttc" id="aclassMaCh3Plotting_1_1InputManager_html_a1eed58ec2fc42d44474c80b8f4e91e15"><div class="ttname"><a href="classMaCh3Plotting_1_1InputManager.html#a1eed58ec2fc42d44474c80b8f4e91e15">MaCh3Plotting::InputManager::_samplesConfig</a></div><div class="ttdeci">YAML::Node _samplesConfig</div><div class="ttdef"><b>Definition:</b> <a href="inputManager_8h_source.html#l00667">inputManager.h:667</a></div></div>
-<div class="ttc" id="aclassMaCh3Plotting_1_1InputManager_html_a3915837631cc08351a34cb135b0bb351"><div class="ttname"><a href="classMaCh3Plotting_1_1InputManager.html#a3915837631cc08351a34cb135b0bb351">MaCh3Plotting::InputManager::_knownParameters</a></div><div class="ttdeci">std::vector&lt; std::string &gt; _knownParameters</div><div class="ttdef"><b>Definition:</b> <a href="inputManager_8h_source.html#l00648">inputManager.h:648</a></div></div>
-<div class="ttc" id="aclassMaCh3Plotting_1_1InputManager_html_a836a1772cb3fdf2d6e38ee1b113bc4e8"><div class="ttname"><a href="classMaCh3Plotting_1_1InputManager.html#a836a1772cb3fdf2d6e38ee1b113bc4e8">MaCh3Plotting::InputManager::_knownFitters</a></div><div class="ttdeci">std::vector&lt; std::string &gt; _knownFitters</div><div class="ttdef"><b>Definition:</b> <a href="inputManager_8h_source.html#l00655">inputManager.h:655</a></div></div>
-<div class="ttc" id="aclassMaCh3Plotting_1_1InputManager_html_abafd844353d8fc69cf31ccf85b2bdcbe"><div class="ttname"><a href="classMaCh3Plotting_1_1InputManager.html#abafd844353d8fc69cf31ccf85b2bdcbe">MaCh3Plotting::InputManager::_knownSamples</a></div><div class="ttdeci">std::vector&lt; std::string &gt; _knownSamples</div><div class="ttdef"><b>Definition:</b> <a href="inputManager_8h_source.html#l00652">inputManager.h:652</a></div></div>
-<div class="ttc" id="aclassMaCh3Plotting_1_1InputManager_html_ad243d0438a33356e6bca0677c8b588e6"><div class="ttname"><a href="classMaCh3Plotting_1_1InputManager.html#ad243d0438a33356e6bca0677c8b588e6">MaCh3Plotting::InputManager::_parametersConfig</a></div><div class="ttdeci">YAML::Node _parametersConfig</div><div class="ttdef"><b>Definition:</b> <a href="inputManager_8h_source.html#l00666">inputManager.h:666</a></div></div>
-<div class="ttc" id="aclassMaCh3Plotting_1_1InputManager_html_ad2cec8b2758ffcb661db59f930e8010e"><div class="ttname"><a href="classMaCh3Plotting_1_1InputManager.html#ad2cec8b2758ffcb661db59f930e8010e">MaCh3Plotting::InputManager::_translatorConfig</a></div><div class="ttdeci">YAML::Node _translatorConfig</div><div class="ttdef"><b>Definition:</b> <a href="inputManager_8h_source.html#l00664">inputManager.h:664</a></div></div>
-<div class="ttc" id="aclassMaCh3Plotting_1_1InputManager_html_ad2e204406fd336e7fcf00fafdff87703"><div class="ttname"><a href="classMaCh3Plotting_1_1InputManager.html#ad2e204406fd336e7fcf00fafdff87703">MaCh3Plotting::InputManager::_fitterSpecConfig</a></div><div class="ttdeci">YAML::Node _fitterSpecConfig</div><div class="ttdef"><b>Definition:</b> <a href="inputManager_8h_source.html#l00665">inputManager.h:665</a></div></div>
-<div class="ttc" id="aclassMaCh3Plotting_1_1InputManager_html_ada0eddda54a072bdfc2464a9902cfe01"><div class="ttname"><a href="classMaCh3Plotting_1_1InputManager.html#ada0eddda54a072bdfc2464a9902cfe01">MaCh3Plotting::InputManager::_sampleToTagsMap</a></div><div class="ttdeci">std::unordered_map&lt; std::string, std::vector&lt; std::string &gt; &gt; _sampleToTagsMap</div><div class="ttdef"><b>Definition:</b> <a href="inputManager_8h_source.html#l00660">inputManager.h:660</a></div></div>
+<div class="ttc" id="aclassMaCh3Plotting_1_1InputManager_html_a0d66afafbba133fc3c1b4867957eb3db"><div class="ttname"><a href="classMaCh3Plotting_1_1InputManager.html#a0d66afafbba133fc3c1b4867957eb3db">MaCh3Plotting::InputManager::_paramToTagsMap</a></div><div class="ttdeci">std::unordered_map&lt; std::string, std::vector&lt; std::string &gt; &gt; _paramToTagsMap</div><div class="ttdef"><b>Definition:</b> <a href="inputManager_8h_source.html#l00660">inputManager.h:660</a></div></div>
+<div class="ttc" id="aclassMaCh3Plotting_1_1InputManager_html_a1eed58ec2fc42d44474c80b8f4e91e15"><div class="ttname"><a href="classMaCh3Plotting_1_1InputManager.html#a1eed58ec2fc42d44474c80b8f4e91e15">MaCh3Plotting::InputManager::_samplesConfig</a></div><div class="ttdeci">YAML::Node _samplesConfig</div><div class="ttdef"><b>Definition:</b> <a href="inputManager_8h_source.html#l00669">inputManager.h:669</a></div></div>
+<div class="ttc" id="aclassMaCh3Plotting_1_1InputManager_html_a3915837631cc08351a34cb135b0bb351"><div class="ttname"><a href="classMaCh3Plotting_1_1InputManager.html#a3915837631cc08351a34cb135b0bb351">MaCh3Plotting::InputManager::_knownParameters</a></div><div class="ttdeci">std::vector&lt; std::string &gt; _knownParameters</div><div class="ttdef"><b>Definition:</b> <a href="inputManager_8h_source.html#l00650">inputManager.h:650</a></div></div>
+<div class="ttc" id="aclassMaCh3Plotting_1_1InputManager_html_a836a1772cb3fdf2d6e38ee1b113bc4e8"><div class="ttname"><a href="classMaCh3Plotting_1_1InputManager.html#a836a1772cb3fdf2d6e38ee1b113bc4e8">MaCh3Plotting::InputManager::_knownFitters</a></div><div class="ttdeci">std::vector&lt; std::string &gt; _knownFitters</div><div class="ttdef"><b>Definition:</b> <a href="inputManager_8h_source.html#l00657">inputManager.h:657</a></div></div>
+<div class="ttc" id="aclassMaCh3Plotting_1_1InputManager_html_abafd844353d8fc69cf31ccf85b2bdcbe"><div class="ttname"><a href="classMaCh3Plotting_1_1InputManager.html#abafd844353d8fc69cf31ccf85b2bdcbe">MaCh3Plotting::InputManager::_knownSamples</a></div><div class="ttdeci">std::vector&lt; std::string &gt; _knownSamples</div><div class="ttdef"><b>Definition:</b> <a href="inputManager_8h_source.html#l00654">inputManager.h:654</a></div></div>
+<div class="ttc" id="aclassMaCh3Plotting_1_1InputManager_html_ad243d0438a33356e6bca0677c8b588e6"><div class="ttname"><a href="classMaCh3Plotting_1_1InputManager.html#ad243d0438a33356e6bca0677c8b588e6">MaCh3Plotting::InputManager::_parametersConfig</a></div><div class="ttdeci">YAML::Node _parametersConfig</div><div class="ttdef"><b>Definition:</b> <a href="inputManager_8h_source.html#l00668">inputManager.h:668</a></div></div>
+<div class="ttc" id="aclassMaCh3Plotting_1_1InputManager_html_ad2cec8b2758ffcb661db59f930e8010e"><div class="ttname"><a href="classMaCh3Plotting_1_1InputManager.html#ad2cec8b2758ffcb661db59f930e8010e">MaCh3Plotting::InputManager::_translatorConfig</a></div><div class="ttdeci">YAML::Node _translatorConfig</div><div class="ttdef"><b>Definition:</b> <a href="inputManager_8h_source.html#l00666">inputManager.h:666</a></div></div>
+<div class="ttc" id="aclassMaCh3Plotting_1_1InputManager_html_ad2e204406fd336e7fcf00fafdff87703"><div class="ttname"><a href="classMaCh3Plotting_1_1InputManager.html#ad2e204406fd336e7fcf00fafdff87703">MaCh3Plotting::InputManager::_fitterSpecConfig</a></div><div class="ttdeci">YAML::Node _fitterSpecConfig</div><div class="ttdef"><b>Definition:</b> <a href="inputManager_8h_source.html#l00667">inputManager.h:667</a></div></div>
+<div class="ttc" id="aclassMaCh3Plotting_1_1InputManager_html_ada0eddda54a072bdfc2464a9902cfe01"><div class="ttname"><a href="classMaCh3Plotting_1_1InputManager.html#ada0eddda54a072bdfc2464a9902cfe01">MaCh3Plotting::InputManager::_sampleToTagsMap</a></div><div class="ttdeci">std::unordered_map&lt; std::string, std::vector&lt; std::string &gt; &gt; _sampleToTagsMap</div><div class="ttdef"><b>Definition:</b> <a href="inputManager_8h_source.html#l00662">inputManager.h:662</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -448,7 +448,7 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  239</span> </div>
 <div class="line"><span class="lineno">  240</span>    <a class="code hl_variable" href="classMaCh3Plotting_1_1InputManager.html#a29202faed03b0e9a22f2d34bce604793">_fileVec</a>.clear();</div>
 <div class="line"><span class="lineno">  241</span>  }</div>
-<div class="ttc" id="aclassMaCh3Plotting_1_1InputManager_html_a29202faed03b0e9a22f2d34bce604793"><div class="ttname"><a href="classMaCh3Plotting_1_1InputManager.html#a29202faed03b0e9a22f2d34bce604793">MaCh3Plotting::InputManager::_fileVec</a></div><div class="ttdeci">std::vector&lt; InputFile &gt; _fileVec</div><div class="ttdef"><b>Definition:</b> <a href="inputManager_8h_source.html#l00670">inputManager.h:670</a></div></div>
+<div class="ttc" id="aclassMaCh3Plotting_1_1InputManager_html_a29202faed03b0e9a22f2d34bce604793"><div class="ttname"><a href="classMaCh3Plotting_1_1InputManager.html#a29202faed03b0e9a22f2d34bce604793">MaCh3Plotting::InputManager::_fileVec</a></div><div class="ttdeci">std::vector&lt; InputFile &gt; _fileVec</div><div class="ttdef"><b>Definition:</b> <a href="inputManager_8h_source.html#l00672">inputManager.h:672</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1336,7 +1336,7 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  509</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> binIdx = 0; binIdx &lt;= postFitErrors-&gt;GetNbinsX(); binIdx++)</div>
 <div class="line"><span class="lineno">  510</span>    {</div>
 <div class="line"><span class="lineno">  511</span>      std::string binLabel = std::string(postFitErrors-&gt;GetXaxis()-&gt;GetBinLabel(binIdx));</div>
-<div class="line"><span class="lineno">  512</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="classMaCh3Plotting_1_1InputManager.html#a008c0e9535ebe6b0fa6f8e62737add3c">strEndsWith</a>(binLabel, specificName))</div>
+<div class="line"><span class="lineno">  512</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="classMaCh3Plotting_1_1InputManager.html#a9f98ca215112178b1de36e328424aa35">strEndsWith</a>(binLabel, specificName))</div>
 <div class="line"><span class="lineno">  513</span>      {</div>
 <div class="line"><span class="lineno">  514</span>        <span class="keywordflow">if</span> (setInputFileError)</div>
 <div class="line"><span class="lineno">  515</span>        {</div>
@@ -1352,8 +1352,8 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  525</span>  <span class="comment">// EM: Didn&#39;t find the parameter in any of the specified locations</span></div>
 <div class="line"><span class="lineno">  526</span>  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">  527</span>}</div>
-<div class="ttc" id="aclassMaCh3Plotting_1_1InputManager_html_a008c0e9535ebe6b0fa6f8e62737add3c"><div class="ttname"><a href="classMaCh3Plotting_1_1InputManager.html#a008c0e9535ebe6b0fa6f8e62737add3c">MaCh3Plotting::InputManager::strEndsWith</a></div><div class="ttdeci">bool strEndsWith(std::string str, std::string ending) const</div><div class="ttdef"><b>Definition:</b> <a href="inputManager_8h_source.html#l00638">inputManager.h:638</a></div></div>
 <div class="ttc" id="aclassMaCh3Plotting_1_1InputManager_html_a942677ee3a65b1d4b48ce474dddaf3b1"><div class="ttname"><a href="classMaCh3Plotting_1_1InputManager.html#a942677ee3a65b1d4b48ce474dddaf3b1">MaCh3Plotting::InputManager::getFitterSpecificParamOption</a></div><div class="ttdeci">bool getFitterSpecificParamOption(const std::string &amp;fitter, const std::string &amp;option, T &amp;ret, const std::string &amp;parameter) const</div><div class="ttdef"><b>Definition:</b> <a href="inputManager_8h_source.html#l00597">inputManager.h:597</a></div></div>
+<div class="ttc" id="aclassMaCh3Plotting_1_1InputManager_html_a9f98ca215112178b1de36e328424aa35"><div class="ttname"><a href="classMaCh3Plotting_1_1InputManager.html#a9f98ca215112178b1de36e328424aa35">MaCh3Plotting::InputManager::strEndsWith</a></div><div class="ttdeci">bool strEndsWith(const std::string &amp;str, const std::string &amp;ending) const</div><div class="ttdef"><b>Definition:</b> <a href="inputManager_8h_source.html#l00638">inputManager.h:638</a></div></div>
 <div class="ttc" id="aclassMaCh3Plotting_1_1InputManager_html_aa3a91c2525f5aea76ba182b3be4b2b2a"><div class="ttname"><a href="classMaCh3Plotting_1_1InputManager.html#aa3a91c2525f5aea76ba182b3be4b2b2a">MaCh3Plotting::InputManager::getFitterSpecificParamName</a></div><div class="ttdeci">std::string getFitterSpecificParamName(const std::string &amp;fitter, fileTypeEnum fileType, const std::string &amp;parameter) const</div><div class="ttdef"><b>Definition:</b> <a href="inputManager_8h_source.html#l00611">inputManager.h:611</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -1425,7 +1425,7 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  427</span>      <span class="keywordtype">double</span> prior, priorError; <span class="comment">// &lt;- will be discarded</span></div>
 <div class="line"><span class="lineno">  428</span>      inputFileDef.mcmcProc-&gt;GetNthParameter(paramIdx, prior, priorError, title);</div>
 <div class="line"><span class="lineno">  429</span> </div>
-<div class="line"><span class="lineno">  430</span>      <span class="keywordflow">if</span> ( <a class="code hl_function" href="classMaCh3Plotting_1_1InputManager.html#a008c0e9535ebe6b0fa6f8e62737add3c">strEndsWith</a>(title.Data(), specificName) )</div>
+<div class="line"><span class="lineno">  430</span>      <span class="keywordflow">if</span> ( <a class="code hl_function" href="classMaCh3Plotting_1_1InputManager.html#a9f98ca215112178b1de36e328424aa35">strEndsWith</a>(title.Data(), specificName) )</div>
 <div class="line"><span class="lineno">  431</span>      {</div>
 <div class="line"><span class="lineno">  432</span>        wasFound = <span class="keyword">true</span>;</div>
 <div class="line"><span class="lineno">  433</span>        <span class="keywordflow">if</span> ( setInputBranch )</div>
@@ -1512,7 +1512,7 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  323</span>      TIter next(directory-&gt;GetListOfKeys());</div>
 <div class="line"><span class="lineno">  324</span>      <span class="keywordflow">while</span> (TKey *key = <span class="keyword">static_cast&lt;</span>TKey*<span class="keyword">&gt;</span>(next()))</div>
 <div class="line"><span class="lineno">  325</span>      {</div>
-<div class="line"><span class="lineno">  326</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classMaCh3Plotting_1_1InputManager.html#a008c0e9535ebe6b0fa6f8e62737add3c">strEndsWith</a>(std::string(key-&gt;GetName()), locationVec[1]))</div>
+<div class="line"><span class="lineno">  326</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classMaCh3Plotting_1_1InputManager.html#a9f98ca215112178b1de36e328424aa35">strEndsWith</a>(std::string(key-&gt;GetName()), locationVec[1]))</div>
 <div class="line"><span class="lineno">  327</span>        {</div>
 <div class="line"><span class="lineno">  328</span>          <span class="keywordtype">object</span> = std::shared_ptr&lt;TObject&gt;(directory-&gt;Get(key-&gt;GetName()));</div>
 <div class="line"><span class="lineno">  329</span>          nMatchingObjects++;</div>
@@ -3455,8 +3455,8 @@ template&lt;typename T &gt; </div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a008c0e9535ebe6b0fa6f8e62737add3c" name="a008c0e9535ebe6b0fa6f8e62737add3c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a008c0e9535ebe6b0fa6f8e62737add3c">&#9670;&#160;</a></span>strEndsWith()</h2>
+<a id="a9f98ca215112178b1de36e328424aa35" name="a9f98ca215112178b1de36e328424aa35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f98ca215112178b1de36e328424aa35">&#9670;&#160;</a></span>strEndsWith()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3467,13 +3467,13 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="memname">bool MaCh3Plotting::InputManager::strEndsWith </td>
           <td>(</td>
-          <td class="paramtype">std::string&#160;</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>str</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::string&#160;</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>ending</em>&#160;</td>
         </tr>
         <tr>
@@ -3490,10 +3490,12 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="inputManager_8h_source.html#l00638">638</a> of file <a class="el" href="inputManager_8h_source.html">inputManager.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  638</span>                                                                 {</div>
-<div class="line"><span class="lineno">  639</span>    <span class="keywordtype">size_t</span> pos = str.find(ending);</div>
-<div class="line"><span class="lineno">  640</span>    <span class="keywordflow">return</span> (pos == str.length() - ending.length());</div>
-<div class="line"><span class="lineno">  641</span>  }</div>
+<div class="fragment"><div class="line"><span class="lineno">  638</span>                                                                               {</div>
+<div class="line"><span class="lineno">  639</span>    <span class="keywordflow">if</span> (str.size() &gt;= ending.size()) {</div>
+<div class="line"><span class="lineno">  640</span>      <span class="keywordflow">return</span> str.compare(str.size() - ending.size(), ending.size(), ending) == 0;</div>
+<div class="line"><span class="lineno">  641</span>    }</div>
+<div class="line"><span class="lineno">  642</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  643</span>  }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -3565,7 +3567,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="inputManager_8h_source.html#l00670">670</a> of file <a class="el" href="inputManager_8h_source.html">inputManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="inputManager_8h_source.html#l00672">672</a> of file <a class="el" href="inputManager_8h_source.html">inputManager.h</a>.</p>
 
 </div>
 </div>
@@ -3589,7 +3591,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="inputManager_8h_source.html#l00665">665</a> of file <a class="el" href="inputManager_8h_source.html">inputManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="inputManager_8h_source.html#l00667">667</a> of file <a class="el" href="inputManager_8h_source.html">inputManager.h</a>.</p>
 
 </div>
 </div>
@@ -3613,7 +3615,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="inputManager_8h_source.html#l00655">655</a> of file <a class="el" href="inputManager_8h_source.html">inputManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="inputManager_8h_source.html#l00657">657</a> of file <a class="el" href="inputManager_8h_source.html">inputManager.h</a>.</p>
 
 </div>
 </div>
@@ -3637,7 +3639,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="inputManager_8h_source.html#l00648">648</a> of file <a class="el" href="inputManager_8h_source.html">inputManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="inputManager_8h_source.html#l00650">650</a> of file <a class="el" href="inputManager_8h_source.html">inputManager.h</a>.</p>
 
 </div>
 </div>
@@ -3661,7 +3663,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="inputManager_8h_source.html#l00652">652</a> of file <a class="el" href="inputManager_8h_source.html">inputManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="inputManager_8h_source.html#l00654">654</a> of file <a class="el" href="inputManager_8h_source.html">inputManager.h</a>.</p>
 
 </div>
 </div>
@@ -3685,7 +3687,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="inputManager_8h_source.html#l00666">666</a> of file <a class="el" href="inputManager_8h_source.html">inputManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="inputManager_8h_source.html#l00668">668</a> of file <a class="el" href="inputManager_8h_source.html">inputManager.h</a>.</p>
 
 </div>
 </div>
@@ -3709,7 +3711,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="inputManager_8h_source.html#l00658">658</a> of file <a class="el" href="inputManager_8h_source.html">inputManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="inputManager_8h_source.html#l00660">660</a> of file <a class="el" href="inputManager_8h_source.html">inputManager.h</a>.</p>
 
 </div>
 </div>
@@ -3733,7 +3735,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="inputManager_8h_source.html#l00667">667</a> of file <a class="el" href="inputManager_8h_source.html">inputManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="inputManager_8h_source.html#l00669">669</a> of file <a class="el" href="inputManager_8h_source.html">inputManager.h</a>.</p>
 
 </div>
 </div>
@@ -3757,7 +3759,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="inputManager_8h_source.html#l00660">660</a> of file <a class="el" href="inputManager_8h_source.html">inputManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="inputManager_8h_source.html#l00662">662</a> of file <a class="el" href="inputManager_8h_source.html">inputManager.h</a>.</p>
 
 </div>
 </div>
@@ -3781,7 +3783,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="inputManager_8h_source.html#l00664">664</a> of file <a class="el" href="inputManager_8h_source.html">inputManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="inputManager_8h_source.html#l00666">666</a> of file <a class="el" href="inputManager_8h_source.html">inputManager.h</a>.</p>
 
 </div>
 </div>
