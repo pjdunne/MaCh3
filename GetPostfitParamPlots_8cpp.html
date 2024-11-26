@@ -30,7 +30,7 @@ MathJax.Hub.Config({
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="mach3logo_small.png"/></td>
   <td id="projectalign">
-   <div id="projectname">MaCh3<span id="projectnumber">&#160;1.2.0</span>
+   <div id="projectname">MaCh3<span id="projectnumber">&#160;1.2.1</span>
    </div>
    <div id="projectbrief">Reference Guide</div>
   </td>
@@ -489,100 +489,114 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000013">Todo:</a></b></dt><dd>this is temporary hack </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="GetPostfitParamPlots_8cpp_source.html#l00693">693</a> of file <a class="el" href="GetPostfitParamPlots_8cpp_source.html">GetPostfitParamPlots.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  694</span>{</div>
-<div class="line"><span class="lineno">  695</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a78b45c4d250d7b2113925577bbce2dad">SaveName</a> = <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aa6f3c9a8cee8f72f6f8ce65b720a2d40">man</a>-&gt;<a class="code hl_function" href="classMaCh3Plotting_1_1PlottingManager.html#a0aead494d2ffb4b2ba2c1e2265dd56be">getOutputName</a>();</div>
-<div class="line"><span class="lineno">  696</span>  </div>
-<div class="line"><span class="lineno">  697</span>  <span class="comment">//KS: By default we take HPD values, but by changing &quot;plotType&quot; you can use for example Gauss</span></div>
-<div class="line"><span class="lineno">  698</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aee5c9d8d7ad14d8728dffad47b8d4efe">plotType</a> = <span class="stringliteral">&quot;HPD&quot;</span>;</div>
-<div class="line"><span class="lineno">  699</span>  <span class="comment">//plotType = &quot;gaus&quot;; </span></div>
-<div class="line"><span class="lineno">  700</span>    </div>
-<div class="line"><span class="lineno">  701</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;Plotting {} errors&quot;</span>, <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aee5c9d8d7ad14d8728dffad47b8d4efe">plotType</a>);</div>
-<div class="line"><span class="lineno">  702</span>  </div>
-<div class="line"><span class="lineno">  703</span>  <a class="code hl_function" href="GetPostfitParamPlots_8cpp.html#a03d65d008bce22fa656f2d4e9f2bc78b">ReadSettings</a>(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aa6f3c9a8cee8f72f6f8ce65b720a2d40">man</a>-&gt;<a class="code hl_function" href="classMaCh3Plotting_1_1PlottingManager.html#afcde3593be0894c7c1dbef6fa9055dee">input</a>().<a class="code hl_function" href="classMaCh3Plotting_1_1InputManager.html#a2f8f94ca3b6e0d2b34c75dee24b81e49">getFile</a>(0).<a class="code hl_variable" href="structMaCh3Plotting_1_1InputFile.html#a11c074dd45647dd2957987f8b55f9d73">file</a>);</div>
-<div class="line"><span class="lineno">  704</span> </div>
-<div class="line"><span class="lineno">  705</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a> = <span class="keyword">new</span> TCanvas(<span class="stringliteral">&quot;canv&quot;</span>, <span class="stringliteral">&quot;canv&quot;</span>, 1024, 1024);</div>
-<div class="line"><span class="lineno">  706</span>  <span class="comment">//gStyle-&gt;SetPalette(51);</span></div>
-<div class="line"><span class="lineno">  707</span>  gStyle-&gt;SetOptStat(0); <span class="comment">//Set 0 to disable statystic box</span></div>
-<div class="line"><span class="lineno">  708</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;SetLeftMargin(0.12);</div>
-<div class="line"><span class="lineno">  709</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;SetBottomMargin(0.12);</div>
-<div class="line"><span class="lineno">  710</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;SetTopMargin(0.08);</div>
-<div class="line"><span class="lineno">  711</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;SetRightMargin(0.04);</div>
-<div class="line"><span class="lineno">  712</span> </div>
-<div class="line"><span class="lineno">  713</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;Print((<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a78b45c4d250d7b2113925577bbce2dad">SaveName</a>+<span class="stringliteral">&quot;[&quot;</span>).c_str());</div>
-<div class="line"><span class="lineno">  714</span> </div>
-<div class="line"><span class="lineno">  715</span>  <span class="comment">// these for non named params where we dont need as much space</span></div>
-<div class="line"><span class="lineno">  716</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#af4718de299aea80f595dd6c21509a5eb">p1</a> = <span class="keyword">new</span> TPad(<span class="stringliteral">&quot;p1&quot;</span>, <span class="stringliteral">&quot;p1&quot;</span>, 0.0, 0.3, 1.0, 1.0);</div>
-<div class="line"><span class="lineno">  717</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#afcf736152a1c6e4f65d2d41b7335136c">p2</a> = <span class="keyword">new</span> TPad(<span class="stringliteral">&quot;p2&quot;</span>, <span class="stringliteral">&quot;p2&quot;</span>, 0.0, 0.0, 1.0, 0.3);</div>
-<div class="line"><span class="lineno">  718</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#af4718de299aea80f595dd6c21509a5eb">p1</a>-&gt;SetLeftMargin(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;GetLeftMargin());</div>
-<div class="line"><span class="lineno">  719</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#af4718de299aea80f595dd6c21509a5eb">p1</a>-&gt;SetRightMargin(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;GetRightMargin());</div>
-<div class="line"><span class="lineno">  720</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#af4718de299aea80f595dd6c21509a5eb">p1</a>-&gt;SetTopMargin(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;GetTopMargin());</div>
-<div class="line"><span class="lineno">  721</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#af4718de299aea80f595dd6c21509a5eb">p1</a>-&gt;SetBottomMargin(0);</div>
-<div class="line"><span class="lineno">  722</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#af4718de299aea80f595dd6c21509a5eb">p1</a>-&gt;SetGrid();</div>
-<div class="line"><span class="lineno">  723</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#afcf736152a1c6e4f65d2d41b7335136c">p2</a>-&gt;SetLeftMargin(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;GetLeftMargin());</div>
-<div class="line"><span class="lineno">  724</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#afcf736152a1c6e4f65d2d41b7335136c">p2</a>-&gt;SetRightMargin(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;GetRightMargin());</div>
-<div class="line"><span class="lineno">  725</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#afcf736152a1c6e4f65d2d41b7335136c">p2</a>-&gt;SetTopMargin(0);</div>
-<div class="line"><span class="lineno">  726</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#afcf736152a1c6e4f65d2d41b7335136c">p2</a>-&gt;SetBottomMargin(0.25);</div>
-<div class="line"><span class="lineno">  727</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#afcf736152a1c6e4f65d2d41b7335136c">p2</a>-&gt;SetGrid();</div>
-<div class="line"><span class="lineno">  728</span> </div>
-<div class="line"><span class="lineno">  729</span>  <span class="comment">// these for named parameters where we need a nice big gap at the botto to fit the names</span></div>
-<div class="line"><span class="lineno">  730</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a814cbca1b36d9e3f622031e0e9634ce0">p3</a> = <span class="keyword">new</span> TPad(<span class="stringliteral">&quot;p3&quot;</span>, <span class="stringliteral">&quot;p3&quot;</span>, 0.0, 0.4, 1.0, 1.0);</div>
-<div class="line"><span class="lineno">  731</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#ac577141e2ab46a432ac74c34d18d0739">p4</a> = <span class="keyword">new</span> TPad(<span class="stringliteral">&quot;p4&quot;</span>, <span class="stringliteral">&quot;p4&quot;</span>, 0.0, 0.0, 1.0, 0.4);</div>
-<div class="line"><span class="lineno">  732</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a814cbca1b36d9e3f622031e0e9634ce0">p3</a>-&gt;SetLeftMargin(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;GetLeftMargin());</div>
-<div class="line"><span class="lineno">  733</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a814cbca1b36d9e3f622031e0e9634ce0">p3</a>-&gt;SetRightMargin(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;GetRightMargin());</div>
-<div class="line"><span class="lineno">  734</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a814cbca1b36d9e3f622031e0e9634ce0">p3</a>-&gt;SetTopMargin(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;GetTopMargin());</div>
-<div class="line"><span class="lineno">  735</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a814cbca1b36d9e3f622031e0e9634ce0">p3</a>-&gt;SetBottomMargin(0);</div>
-<div class="line"><span class="lineno">  736</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a814cbca1b36d9e3f622031e0e9634ce0">p3</a>-&gt;SetGrid();</div>
-<div class="line"><span class="lineno">  737</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#ac577141e2ab46a432ac74c34d18d0739">p4</a>-&gt;SetLeftMargin(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;GetLeftMargin());</div>
-<div class="line"><span class="lineno">  738</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#ac577141e2ab46a432ac74c34d18d0739">p4</a>-&gt;SetRightMargin(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;GetRightMargin());</div>
-<div class="line"><span class="lineno">  739</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#ac577141e2ab46a432ac74c34d18d0739">p4</a>-&gt;SetTopMargin(0);</div>
-<div class="line"><span class="lineno">  740</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#ac577141e2ab46a432ac74c34d18d0739">p4</a>-&gt;SetBottomMargin(0.75);</div>
-<div class="line"><span class="lineno">  741</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#ac577141e2ab46a432ac74c34d18d0739">p4</a>-&gt;SetGrid();</div>
-<div class="line"><span class="lineno">  742</span> </div>
-<div class="line"><span class="lineno">  743</span>  <span class="comment">// Make a Legend page</span></div>
-<div class="line"><span class="lineno">  744</span>  <span class="keyword">auto</span> leg = std::make_unique&lt;TLegend&gt;(0.0, 0.0, 1.0, 1.0);</div>
-<div class="line"><span class="lineno">  745</span>  <span class="comment">// make a dummy TH1 to set out legend</span></div>
-<div class="line"><span class="lineno">  746</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a3622d45d00f446252f0ea513d7f1f6cb">Prefit</a> = <span class="keyword">new</span> TH1D();</div>
-<div class="line"><span class="lineno">  747</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aa6f3c9a8cee8f72f6f8ce65b720a2d40">man</a>-&gt;<a class="code hl_function" href="classMaCh3Plotting_1_1PlottingManager.html#ad07460f382733b379d0f122d6b0322c7">style</a>().<a class="code hl_function" href="classMaCh3Plotting_1_1StyleManager.html#a0fb156073fed66e627b7e67b2ea2e2d2">setTH1Style</a>(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a3622d45d00f446252f0ea513d7f1f6cb">Prefit</a>, <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aa6f3c9a8cee8f72f6f8ce65b720a2d40">man</a>-&gt;<a class="code hl_function" href="classMaCh3Plotting_1_1PlottingManager.html#afcd58efd96096596d4ab3f2a2b7f78af">getOption</a>&lt;std::string&gt;(<span class="stringliteral">&quot;prefitHistStyle&quot;</span>));</div>
-<div class="line"><span class="lineno">  748</span>  leg-&gt;AddEntry(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a3622d45d00f446252f0ea513d7f1f6cb">Prefit</a>, <span class="stringliteral">&quot;Prior&quot;</span>, <span class="stringliteral">&quot;lpf&quot;</span>);</div>
-<div class="line"><span class="lineno">  749</span> </div>
-<div class="line"><span class="lineno">  750</span>  <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> fileId = 0; fileId &lt; <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aa6f3c9a8cee8f72f6f8ce65b720a2d40">man</a>-&gt;<a class="code hl_function" href="classMaCh3Plotting_1_1PlottingManager.html#a4710a50cc20ac3ed7ee403d56e1a8eaa">getNFiles</a>(); fileId++){</div>
-<div class="line"><span class="lineno">  751</span>    TH1D *postFitHist_tmp = <span class="keyword">new</span> TH1D();</div>
-<div class="line"><span class="lineno">  752</span>    postFitHist_tmp-&gt;SetBit(kCanDelete);</div>
-<div class="line"><span class="lineno">  753</span>    </div>
-<div class="line"><span class="lineno">  754</span>    postFitHist_tmp-&gt;SetMarkerColor(TColor::GetColorPalette(fileId));</div>
-<div class="line"><span class="lineno">  755</span>    postFitHist_tmp-&gt;SetLineColor(TColor::GetColorPalette(fileId));</div>
-<div class="line"><span class="lineno">  756</span>    postFitHist_tmp-&gt;SetMarkerStyle(7);</div>
-<div class="line"><span class="lineno">  757</span>    postFitHist_tmp-&gt;SetLineStyle(1+fileId);</div>
-<div class="line"><span class="lineno">  758</span>    postFitHist_tmp-&gt;SetLineWidth(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aa6f3c9a8cee8f72f6f8ce65b720a2d40">man</a>-&gt;<a class="code hl_function" href="classMaCh3Plotting_1_1PlottingManager.html#afcd58efd96096596d4ab3f2a2b7f78af">getOption</a>&lt;<span class="keywordtype">int</span>&gt;(<span class="stringliteral">&quot;plotLineWidth&quot;</span>));</div>
-<div class="line"><span class="lineno">  759</span>    leg-&gt;AddEntry(postFitHist_tmp, <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aa6f3c9a8cee8f72f6f8ce65b720a2d40">man</a>-&gt;<a class="code hl_function" href="classMaCh3Plotting_1_1PlottingManager.html#ac3180484af4d04aa7a0febd1cda99c54">getFileLabel</a>(fileId).c_str(), <span class="stringliteral">&quot;lpf&quot;</span>);</div>
-<div class="line"><span class="lineno">  760</span>  }</div>
-<div class="line"><span class="lineno">  761</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;cd();</div>
-<div class="line"><span class="lineno">  762</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;Clear();</div>
-<div class="line"><span class="lineno">  763</span>  leg-&gt;Draw();</div>
-<div class="line"><span class="lineno">  764</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;Print((<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a78b45c4d250d7b2113925577bbce2dad">SaveName</a>).c_str());</div>
-<div class="line"><span class="lineno">  765</span> </div>
-<div class="line"><span class="lineno">  766</span>  <a class="code hl_function" href="GetPostfitParamPlots_8cpp.html#af79360b46fcb2923363d459ca9c4a0a8">MakeXsecPlots</a>();</div>
-<div class="line"><span class="lineno">  767</span> </div>
-<div class="line"><span class="lineno">  768</span>  <a class="code hl_function" href="GetPostfitParamPlots_8cpp.html#a8eea239b18cd012be79062d6704ba590">MakeFluxPlots</a>();</div>
-<div class="line"><span class="lineno">  769</span> </div>
-<div class="line"><span class="lineno">  770</span>  <span class="comment">//KS: By default we don&#39;t run ProcessMCMC with PlotDet as this take some time, in case we did let&#39;s make fancy plots</span></div>
-<div class="line"><span class="lineno">  771</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;ND detector parameters: {}&quot;</span>, <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#adb4ee3a874472b4ffccc8734da66250e">NDParameters</a>);</div>
-<div class="line"><span class="lineno">  772</span>  <span class="keywordflow">if</span>(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#adb4ee3a874472b4ffccc8734da66250e">NDParameters</a> &gt; 0) <a class="code hl_function" href="GetPostfitParamPlots_8cpp.html#a537db5b05ce6037e9221b2250d91c688">MakeNDDetPlots</a>();</div>
-<div class="line"><span class="lineno">  773</span>  </div>
-<div class="line"><span class="lineno">  774</span>  <span class="comment">//KS: Same as above but for FD parameters,</span></div>
-<div class="line"><span class="lineno">  775</span>  <span class="keywordflow">if</span>(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a15657a5f07a9fde98fc9210b7ae80f9e">FDParameters</a> &gt; 0) <a class="code hl_function" href="GetPostfitParamPlots_8cpp.html#afe35956eaa3ea0ca15aa76c791342ee7">MakeFDDetPlots</a>();</div>
-<div class="line"><span class="lineno">  776</span>  </div>
-<div class="line"><span class="lineno">  777</span>  <span class="keywordflow">if</span>(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a5aedbc0849506477d31e20d345c967eb">OscParameters</a> &gt; 0) <a class="code hl_function" href="GetPostfitParamPlots_8cpp.html#a955c5fe946d1b9941e2b9444514f2699">MakeOscPlots</a>();</div>
+<p class="definition">Definition at line <a class="el" href="GetPostfitParamPlots_8cpp_source.html#l00690">690</a> of file <a class="el" href="GetPostfitParamPlots_8cpp_source.html">GetPostfitParamPlots.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  691</span>{</div>
+<div class="line"><span class="lineno">  692</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a78b45c4d250d7b2113925577bbce2dad">SaveName</a> = <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aa6f3c9a8cee8f72f6f8ce65b720a2d40">man</a>-&gt;<a class="code hl_function" href="classMaCh3Plotting_1_1PlottingManager.html#a0aead494d2ffb4b2ba2c1e2265dd56be">getOutputName</a>();</div>
+<div class="line"><span class="lineno">  693</span>  </div>
+<div class="line"><span class="lineno">  694</span>  <span class="comment">//KS: By default we take HPD values, but by changing &quot;plotType&quot; you can use for example Gauss</span></div>
+<div class="line"><span class="lineno">  695</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aee5c9d8d7ad14d8728dffad47b8d4efe">plotType</a> = <span class="stringliteral">&quot;HPD&quot;</span>;</div>
+<div class="line"><span class="lineno">  696</span>  <span class="comment">//plotType = &quot;gaus&quot;; </span></div>
+<div class="line"><span class="lineno">  697</span>    </div>
+<div class="line"><span class="lineno">  698</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;Plotting {} errors&quot;</span>, <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aee5c9d8d7ad14d8728dffad47b8d4efe">plotType</a>);</div>
+<div class="line"><span class="lineno">  699</span>  </div>
+<div class="line"><span class="lineno">  700</span>  <a class="code hl_function" href="GetPostfitParamPlots_8cpp.html#a03d65d008bce22fa656f2d4e9f2bc78b">ReadSettings</a>(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aa6f3c9a8cee8f72f6f8ce65b720a2d40">man</a>-&gt;<a class="code hl_function" href="classMaCh3Plotting_1_1PlottingManager.html#afcde3593be0894c7c1dbef6fa9055dee">input</a>().<a class="code hl_function" href="classMaCh3Plotting_1_1InputManager.html#a2f8f94ca3b6e0d2b34c75dee24b81e49">getFile</a>(0).<a class="code hl_variable" href="structMaCh3Plotting_1_1InputFile.html#a11c074dd45647dd2957987f8b55f9d73">file</a>);</div>
+<div class="line"><span class="lineno">  701</span> </div>
+<div class="line"><span class="lineno">  702</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a> = <span class="keyword">new</span> TCanvas(<span class="stringliteral">&quot;canv&quot;</span>, <span class="stringliteral">&quot;canv&quot;</span>, 1024, 1024);</div>
+<div class="line"><span class="lineno">  703</span>  <span class="comment">//gStyle-&gt;SetPalette(51);</span></div>
+<div class="line"><span class="lineno">  704</span>  gStyle-&gt;SetOptStat(0); <span class="comment">//Set 0 to disable statystic box</span></div>
+<div class="line"><span class="lineno">  705</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;SetLeftMargin(0.12);</div>
+<div class="line"><span class="lineno">  706</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;SetBottomMargin(0.12);</div>
+<div class="line"><span class="lineno">  707</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;SetTopMargin(0.08);</div>
+<div class="line"><span class="lineno">  708</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;SetRightMargin(0.04);</div>
+<div class="line"><span class="lineno">  709</span> </div>
+<div class="line"><span class="lineno">  710</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;Print((<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a78b45c4d250d7b2113925577bbce2dad">SaveName</a>+<span class="stringliteral">&quot;[&quot;</span>).c_str());</div>
+<div class="line"><span class="lineno">  711</span> </div>
+<div class="line"><span class="lineno">  712</span>  <span class="comment">// these for non named params where we dont need as much space</span></div>
+<div class="line"><span class="lineno">  713</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#af4718de299aea80f595dd6c21509a5eb">p1</a> = <span class="keyword">new</span> TPad(<span class="stringliteral">&quot;p1&quot;</span>, <span class="stringliteral">&quot;p1&quot;</span>, 0.0, 0.3, 1.0, 1.0);</div>
+<div class="line"><span class="lineno">  714</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#afcf736152a1c6e4f65d2d41b7335136c">p2</a> = <span class="keyword">new</span> TPad(<span class="stringliteral">&quot;p2&quot;</span>, <span class="stringliteral">&quot;p2&quot;</span>, 0.0, 0.0, 1.0, 0.3);</div>
+<div class="line"><span class="lineno">  715</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#af4718de299aea80f595dd6c21509a5eb">p1</a>-&gt;SetLeftMargin(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;GetLeftMargin());</div>
+<div class="line"><span class="lineno">  716</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#af4718de299aea80f595dd6c21509a5eb">p1</a>-&gt;SetRightMargin(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;GetRightMargin());</div>
+<div class="line"><span class="lineno">  717</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#af4718de299aea80f595dd6c21509a5eb">p1</a>-&gt;SetTopMargin(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;GetTopMargin());</div>
+<div class="line"><span class="lineno">  718</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#af4718de299aea80f595dd6c21509a5eb">p1</a>-&gt;SetBottomMargin(0);</div>
+<div class="line"><span class="lineno">  719</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#af4718de299aea80f595dd6c21509a5eb">p1</a>-&gt;SetGrid();</div>
+<div class="line"><span class="lineno">  720</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#afcf736152a1c6e4f65d2d41b7335136c">p2</a>-&gt;SetLeftMargin(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;GetLeftMargin());</div>
+<div class="line"><span class="lineno">  721</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#afcf736152a1c6e4f65d2d41b7335136c">p2</a>-&gt;SetRightMargin(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;GetRightMargin());</div>
+<div class="line"><span class="lineno">  722</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#afcf736152a1c6e4f65d2d41b7335136c">p2</a>-&gt;SetTopMargin(0);</div>
+<div class="line"><span class="lineno">  723</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#afcf736152a1c6e4f65d2d41b7335136c">p2</a>-&gt;SetBottomMargin(0.25);</div>
+<div class="line"><span class="lineno">  724</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#afcf736152a1c6e4f65d2d41b7335136c">p2</a>-&gt;SetGrid();</div>
+<div class="line"><span class="lineno">  725</span> </div>
+<div class="line"><span class="lineno">  726</span>  <span class="comment">// these for named parameters where we need a nice big gap at the botto to fit the names</span></div>
+<div class="line"><span class="lineno">  727</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a814cbca1b36d9e3f622031e0e9634ce0">p3</a> = <span class="keyword">new</span> TPad(<span class="stringliteral">&quot;p3&quot;</span>, <span class="stringliteral">&quot;p3&quot;</span>, 0.0, 0.4, 1.0, 1.0);</div>
+<div class="line"><span class="lineno">  728</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#ac577141e2ab46a432ac74c34d18d0739">p4</a> = <span class="keyword">new</span> TPad(<span class="stringliteral">&quot;p4&quot;</span>, <span class="stringliteral">&quot;p4&quot;</span>, 0.0, 0.0, 1.0, 0.4);</div>
+<div class="line"><span class="lineno">  729</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a814cbca1b36d9e3f622031e0e9634ce0">p3</a>-&gt;SetLeftMargin(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;GetLeftMargin());</div>
+<div class="line"><span class="lineno">  730</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a814cbca1b36d9e3f622031e0e9634ce0">p3</a>-&gt;SetRightMargin(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;GetRightMargin());</div>
+<div class="line"><span class="lineno">  731</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a814cbca1b36d9e3f622031e0e9634ce0">p3</a>-&gt;SetTopMargin(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;GetTopMargin());</div>
+<div class="line"><span class="lineno">  732</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a814cbca1b36d9e3f622031e0e9634ce0">p3</a>-&gt;SetBottomMargin(0);</div>
+<div class="line"><span class="lineno">  733</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a814cbca1b36d9e3f622031e0e9634ce0">p3</a>-&gt;SetGrid();</div>
+<div class="line"><span class="lineno">  734</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#ac577141e2ab46a432ac74c34d18d0739">p4</a>-&gt;SetLeftMargin(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;GetLeftMargin());</div>
+<div class="line"><span class="lineno">  735</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#ac577141e2ab46a432ac74c34d18d0739">p4</a>-&gt;SetRightMargin(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;GetRightMargin());</div>
+<div class="line"><span class="lineno">  736</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#ac577141e2ab46a432ac74c34d18d0739">p4</a>-&gt;SetTopMargin(0);</div>
+<div class="line"><span class="lineno">  737</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#ac577141e2ab46a432ac74c34d18d0739">p4</a>-&gt;SetBottomMargin(0.75);</div>
+<div class="line"><span class="lineno">  738</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#ac577141e2ab46a432ac74c34d18d0739">p4</a>-&gt;SetGrid();</div>
+<div class="line"><span class="lineno">  739</span> </div>
+<div class="line"><span class="lineno">  740</span>  <span class="comment">// Make a Legend page</span></div>
+<div class="line"><span class="lineno">  741</span>  <span class="keyword">auto</span> leg = std::make_unique&lt;TLegend&gt;(0.0, 0.0, 1.0, 1.0);</div>
+<div class="line"><span class="lineno">  742</span>  <span class="comment">// make a dummy TH1 to set out legend</span></div>
+<div class="line"><span class="lineno">  743</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a3622d45d00f446252f0ea513d7f1f6cb">Prefit</a> = <span class="keyword">new</span> TH1D();</div>
+<div class="line"><span class="lineno">  744</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aa6f3c9a8cee8f72f6f8ce65b720a2d40">man</a>-&gt;<a class="code hl_function" href="classMaCh3Plotting_1_1PlottingManager.html#ad07460f382733b379d0f122d6b0322c7">style</a>().<a class="code hl_function" href="classMaCh3Plotting_1_1StyleManager.html#a0fb156073fed66e627b7e67b2ea2e2d2">setTH1Style</a>(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a3622d45d00f446252f0ea513d7f1f6cb">Prefit</a>, <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aa6f3c9a8cee8f72f6f8ce65b720a2d40">man</a>-&gt;<a class="code hl_function" href="classMaCh3Plotting_1_1PlottingManager.html#afcd58efd96096596d4ab3f2a2b7f78af">getOption</a>&lt;std::string&gt;(<span class="stringliteral">&quot;prefitHistStyle&quot;</span>));</div>
+<div class="line"><span class="lineno">  745</span>  leg-&gt;AddEntry(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a3622d45d00f446252f0ea513d7f1f6cb">Prefit</a>, <span class="stringliteral">&quot;Prior&quot;</span>, <span class="stringliteral">&quot;lpf&quot;</span>);</div>
+<div class="line"><span class="lineno">  746</span> </div>
+<div class="line"><span class="lineno">  747</span>  <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> fileId = 0; fileId &lt; <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aa6f3c9a8cee8f72f6f8ce65b720a2d40">man</a>-&gt;<a class="code hl_function" href="classMaCh3Plotting_1_1PlottingManager.html#a4710a50cc20ac3ed7ee403d56e1a8eaa">getNFiles</a>(); fileId++){</div>
+<div class="line"><span class="lineno">  748</span>    TH1D *postFitHist_tmp = <span class="keyword">new</span> TH1D();</div>
+<div class="line"><span class="lineno">  749</span>    postFitHist_tmp-&gt;SetBit(kCanDelete);</div>
+<div class="line"><span class="lineno">  750</span>    </div>
+<div class="line"><span class="lineno">  751</span>    postFitHist_tmp-&gt;SetMarkerColor(TColor::GetColorPalette(fileId));</div>
+<div class="line"><span class="lineno">  752</span>    postFitHist_tmp-&gt;SetLineColor(TColor::GetColorPalette(fileId));</div>
+<div class="line"><span class="lineno">  753</span>    postFitHist_tmp-&gt;SetMarkerStyle(7);</div>
+<div class="line"><span class="lineno">  754</span>    postFitHist_tmp-&gt;SetLineStyle(1+fileId);</div>
+<div class="line"><span class="lineno">  755</span>    postFitHist_tmp-&gt;SetLineWidth(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aa6f3c9a8cee8f72f6f8ce65b720a2d40">man</a>-&gt;<a class="code hl_function" href="classMaCh3Plotting_1_1PlottingManager.html#afcd58efd96096596d4ab3f2a2b7f78af">getOption</a>&lt;<span class="keywordtype">int</span>&gt;(<span class="stringliteral">&quot;plotLineWidth&quot;</span>));</div>
+<div class="line"><span class="lineno">  756</span>    leg-&gt;AddEntry(postFitHist_tmp, <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aa6f3c9a8cee8f72f6f8ce65b720a2d40">man</a>-&gt;<a class="code hl_function" href="classMaCh3Plotting_1_1PlottingManager.html#ac3180484af4d04aa7a0febd1cda99c54">getFileLabel</a>(fileId).c_str(), <span class="stringliteral">&quot;lpf&quot;</span>);</div>
+<div class="line"><span class="lineno">  757</span>  }</div>
+<div class="line"><span class="lineno">  759</span>  <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> fileId = 0; fileId &lt; <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aa6f3c9a8cee8f72f6f8ce65b720a2d40">man</a>-&gt;<a class="code hl_function" href="classMaCh3Plotting_1_1PlottingManager.html#a4710a50cc20ac3ed7ee403d56e1a8eaa">getNFiles</a>(); fileId++)</div>
+<div class="line"><span class="lineno">  760</span>  {</div>
+<div class="line"><span class="lineno">  761</span>    TH1D *Hist = <span class="keyword">static_cast&lt;</span>TH1D*<span class="keyword">&gt;</span>((<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aa6f3c9a8cee8f72f6f8ce65b720a2d40">man</a>-&gt;<a class="code hl_function" href="classMaCh3Plotting_1_1PlottingManager.html#afcde3593be0894c7c1dbef6fa9055dee">input</a>().<a class="code hl_function" href="classMaCh3Plotting_1_1InputManager.html#a2f8f94ca3b6e0d2b34c75dee24b81e49">getFile</a>(fileId).<a class="code hl_variable" href="structMaCh3Plotting_1_1InputFile.html#a11c074dd45647dd2957987f8b55f9d73">file</a>-&gt;Get( (<span class="stringliteral">&quot;param_xsec_&quot;</span>+<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aee5c9d8d7ad14d8728dffad47b8d4efe">plotType</a>).c_str()))-&gt;Clone());</div>
+<div class="line"><span class="lineno">  762</span> </div>
+<div class="line"><span class="lineno">  763</span>    Hist-&gt;SetMarkerColor(TColor::GetColorPalette(fileId));</div>
+<div class="line"><span class="lineno">  764</span>    Hist-&gt;SetLineColor(TColor::GetColorPalette(fileId));</div>
+<div class="line"><span class="lineno">  765</span>    Hist-&gt;SetMarkerStyle(7);</div>
+<div class="line"><span class="lineno">  766</span>    Hist-&gt;SetLineStyle(1+fileId);</div>
+<div class="line"><span class="lineno">  767</span>    Hist-&gt;SetLineWidth(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aa6f3c9a8cee8f72f6f8ce65b720a2d40">man</a>-&gt;<a class="code hl_function" href="classMaCh3Plotting_1_1PlottingManager.html#afcd58efd96096596d4ab3f2a2b7f78af">getOption</a>&lt;<span class="keywordtype">int</span>&gt;(<span class="stringliteral">&quot;plotLineWidth&quot;</span>));</div>
+<div class="line"><span class="lineno">  768</span> </div>
+<div class="line"><span class="lineno">  769</span>    <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#adf27e2a8c89392ebe0a2d6d7a65dab9e">PostfitHistVec</a>.push_back(Hist);</div>
+<div class="line"><span class="lineno">  770</span>  }</div>
+<div class="line"><span class="lineno">  771</span> </div>
+<div class="line"><span class="lineno">  772</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;cd();</div>
+<div class="line"><span class="lineno">  773</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;Clear();</div>
+<div class="line"><span class="lineno">  774</span>  leg-&gt;Draw();</div>
+<div class="line"><span class="lineno">  775</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;Print((<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a78b45c4d250d7b2113925577bbce2dad">SaveName</a>).c_str());</div>
+<div class="line"><span class="lineno">  776</span> </div>
+<div class="line"><span class="lineno">  777</span>  <a class="code hl_function" href="GetPostfitParamPlots_8cpp.html#af79360b46fcb2923363d459ca9c4a0a8">MakeXsecPlots</a>();</div>
 <div class="line"><span class="lineno">  778</span> </div>
-<div class="line"><span class="lineno">  779</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;Print((<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a78b45c4d250d7b2113925577bbce2dad">SaveName</a>+<span class="stringliteral">&quot;]&quot;</span>).c_str());</div>
+<div class="line"><span class="lineno">  779</span>  <a class="code hl_function" href="GetPostfitParamPlots_8cpp.html#a8eea239b18cd012be79062d6704ba590">MakeFluxPlots</a>();</div>
 <div class="line"><span class="lineno">  780</span> </div>
-<div class="line"><span class="lineno">  781</span>  <a class="code hl_function" href="GetPostfitParamPlots_8cpp.html#afd4a3205511125d3d4d95dd3b925f7e4">MakeXsecRidgePlots</a>();</div>
-<div class="line"><span class="lineno">  782</span> </div>
-<div class="line"><span class="lineno">  783</span>  <span class="keyword">delete</span> <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>;</div>
-<div class="line"><span class="lineno">  784</span>  <span class="keyword">delete</span> <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a3622d45d00f446252f0ea513d7f1f6cb">Prefit</a>;</div>
-<div class="line"><span class="lineno">  785</span>}</div>
+<div class="line"><span class="lineno">  781</span>  <span class="comment">//KS: By default we don&#39;t run ProcessMCMC with PlotDet as this take some time, in case we did let&#39;s make fancy plots</span></div>
+<div class="line"><span class="lineno">  782</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;ND detector parameters: {}&quot;</span>, <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#adb4ee3a874472b4ffccc8734da66250e">NDParameters</a>);</div>
+<div class="line"><span class="lineno">  783</span>  <span class="keywordflow">if</span>(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#adb4ee3a874472b4ffccc8734da66250e">NDParameters</a> &gt; 0) <a class="code hl_function" href="GetPostfitParamPlots_8cpp.html#a537db5b05ce6037e9221b2250d91c688">MakeNDDetPlots</a>();</div>
+<div class="line"><span class="lineno">  784</span>  </div>
+<div class="line"><span class="lineno">  785</span>  <span class="comment">//KS: Same as above but for FD parameters,</span></div>
+<div class="line"><span class="lineno">  786</span>  <span class="keywordflow">if</span>(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a15657a5f07a9fde98fc9210b7ae80f9e">FDParameters</a> &gt; 0) <a class="code hl_function" href="GetPostfitParamPlots_8cpp.html#afe35956eaa3ea0ca15aa76c791342ee7">MakeFDDetPlots</a>();</div>
+<div class="line"><span class="lineno">  787</span>  </div>
+<div class="line"><span class="lineno">  788</span>  <span class="keywordflow">if</span>(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a5aedbc0849506477d31e20d345c967eb">OscParameters</a> &gt; 0) <a class="code hl_function" href="GetPostfitParamPlots_8cpp.html#a955c5fe946d1b9941e2b9444514f2699">MakeOscPlots</a>();</div>
+<div class="line"><span class="lineno">  789</span> </div>
+<div class="line"><span class="lineno">  790</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;Print((<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a78b45c4d250d7b2113925577bbce2dad">SaveName</a>+<span class="stringliteral">&quot;]&quot;</span>).c_str());</div>
+<div class="line"><span class="lineno">  791</span> </div>
+<div class="line"><span class="lineno">  792</span>  <a class="code hl_function" href="GetPostfitParamPlots_8cpp.html#afd4a3205511125d3d4d95dd3b925f7e4">MakeXsecRidgePlots</a>();</div>
+<div class="line"><span class="lineno">  793</span> </div>
+<div class="line"><span class="lineno">  794</span>  <span class="keyword">delete</span> <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>;</div>
+<div class="line"><span class="lineno">  795</span>  <span class="keyword">delete</span> <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a3622d45d00f446252f0ea513d7f1f6cb">Prefit</a>;</div>
+<div class="line"><span class="lineno">  796</span>}</div>
 <div class="ttc" id="aGetPostfitParamPlots_8cpp_html_a03d65d008bce22fa656f2d4e9f2bc78b"><div class="ttname"><a href="GetPostfitParamPlots_8cpp.html#a03d65d008bce22fa656f2d4e9f2bc78b">ReadSettings</a></div><div class="ttdeci">void ReadSettings(std::shared_ptr&lt; TFile &gt; File1)</div><div class="ttdef"><b>Definition:</b> <a href="GetPostfitParamPlots_8cpp_source.html#l00117">GetPostfitParamPlots.cpp:117</a></div></div>
 <div class="ttc" id="aGetPostfitParamPlots_8cpp_html_a15657a5f07a9fde98fc9210b7ae80f9e"><div class="ttname"><a href="GetPostfitParamPlots_8cpp.html#a15657a5f07a9fde98fc9210b7ae80f9e">FDParameters</a></div><div class="ttdeci">int FDParameters</div><div class="ttdef"><b>Definition:</b> <a href="GetPostfitParamPlots_8cpp_source.html#l00053">GetPostfitParamPlots.cpp:53</a></div></div>
 <div class="ttc" id="aGetPostfitParamPlots_8cpp_html_a3622d45d00f446252f0ea513d7f1f6cb"><div class="ttname"><a href="GetPostfitParamPlots_8cpp.html#a3622d45d00f446252f0ea513d7f1f6cb">Prefit</a></div><div class="ttdeci">TH1D * Prefit</div><div class="ttdef"><b>Definition:</b> <a href="GetPostfitParamPlots_8cpp_source.html#l00044">GetPostfitParamPlots.cpp:44</a></div></div>
@@ -593,6 +607,7 @@ Variables</h2></td></tr>
 <div class="ttc" id="aGetPostfitParamPlots_8cpp_html_a955c5fe946d1b9941e2b9444514f2699"><div class="ttname"><a href="GetPostfitParamPlots_8cpp.html#a955c5fe946d1b9941e2b9444514f2699">MakeOscPlots</a></div><div class="ttdeci">void MakeOscPlots()</div><div class="ttdef"><b>Definition:</b> <a href="GetPostfitParamPlots_8cpp_source.html#l00518">GetPostfitParamPlots.cpp:518</a></div></div>
 <div class="ttc" id="aGetPostfitParamPlots_8cpp_html_ac577141e2ab46a432ac74c34d18d0739"><div class="ttname"><a href="GetPostfitParamPlots_8cpp.html#ac577141e2ab46a432ac74c34d18d0739">p4</a></div><div class="ttdeci">TPad * p4</div><div class="ttdef"><b>Definition:</b> <a href="GetPostfitParamPlots_8cpp_source.html#l00074">GetPostfitParamPlots.cpp:74</a></div></div>
 <div class="ttc" id="aGetPostfitParamPlots_8cpp_html_adb4ee3a874472b4ffccc8734da66250e"><div class="ttname"><a href="GetPostfitParamPlots_8cpp.html#adb4ee3a874472b4ffccc8734da66250e">NDParameters</a></div><div class="ttdeci">int NDParameters</div><div class="ttdef"><b>Definition:</b> <a href="GetPostfitParamPlots_8cpp_source.html#l00050">GetPostfitParamPlots.cpp:50</a></div></div>
+<div class="ttc" id="aGetPostfitParamPlots_8cpp_html_adf27e2a8c89392ebe0a2d6d7a65dab9e"><div class="ttname"><a href="GetPostfitParamPlots_8cpp.html#adf27e2a8c89392ebe0a2d6d7a65dab9e">PostfitHistVec</a></div><div class="ttdeci">std::vector&lt; TH1D * &gt; PostfitHistVec</div><div class="ttdef"><b>Definition:</b> <a href="GetPostfitParamPlots_8cpp_source.html#l00080">GetPostfitParamPlots.cpp:80</a></div></div>
 <div class="ttc" id="aGetPostfitParamPlots_8cpp_html_aec2fb4e7af6c83a8ccbdfcfcb7b76a83"><div class="ttname"><a href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a></div><div class="ttdeci">TCanvas * canv</div><div class="ttdef"><b>Definition:</b> <a href="GetPostfitParamPlots_8cpp_source.html#l00067">GetPostfitParamPlots.cpp:67</a></div></div>
 <div class="ttc" id="aGetPostfitParamPlots_8cpp_html_aee5c9d8d7ad14d8728dffad47b8d4efe"><div class="ttname"><a href="GetPostfitParamPlots_8cpp.html#aee5c9d8d7ad14d8728dffad47b8d4efe">plotType</a></div><div class="ttdeci">std::string plotType</div><div class="ttdef"><b>Definition:</b> <a href="GetPostfitParamPlots_8cpp_source.html#l00078">GetPostfitParamPlots.cpp:78</a></div></div>
 <div class="ttc" id="aGetPostfitParamPlots_8cpp_html_af4718de299aea80f595dd6c21509a5eb"><div class="ttname"><a href="GetPostfitParamPlots_8cpp.html#af4718de299aea80f595dd6c21509a5eb">p1</a></div><div class="ttdeci">TPad * p1</div><div class="ttdef"><b>Definition:</b> <a href="GetPostfitParamPlots_8cpp_source.html#l00070">GetPostfitParamPlots.cpp:70</a></div></div>
@@ -637,239 +652,239 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="GetPostfitParamPlots_8cpp_source.html#l00825">825</a> of file <a class="el" href="GetPostfitParamPlots_8cpp_source.html">GetPostfitParamPlots.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  826</span>{</div>
-<div class="line"><span class="lineno">  827</span>  <span class="comment">//KS: Should be in some config... either way it control whether you plot symetric or assymetric error bars</span></div>
-<div class="line"><span class="lineno">  828</span>  <span class="keywordtype">bool</span> PlotAssym = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  829</span>    </div>
-<div class="line"><span class="lineno">  830</span>  <span class="comment">//KS: No idea why but ROOT changed treatment of viilin in R6. If you have non uniform binning this will results in very hard to see violin plots.</span></div>
-<div class="line"><span class="lineno">  831</span>  TCandle::SetScaledViolin(<span class="keyword">false</span>);</div>
-<div class="line"><span class="lineno">  832</span> </div>
-<div class="line"><span class="lineno">  833</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;Making Violin Plot&quot;</span>);</div>
-<div class="line"><span class="lineno">  834</span>  <span class="keywordflow">if</span> (!FileName1.empty()) <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;File 1: {} &quot;</span>, FileName1);</div>
-<div class="line"><span class="lineno">  835</span>  <span class="keywordflow">if</span> (!FileName2.empty()) <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;File 2: {}&quot;</span>, FileName2);</div>
-<div class="line"><span class="lineno">  836</span>    </div>
-<div class="line"><span class="lineno">  837</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a78b45c4d250d7b2113925577bbce2dad">SaveName</a> = FileName1;</div>
-<div class="line"><span class="lineno">  838</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a78b45c4d250d7b2113925577bbce2dad">SaveName</a> = <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a78b45c4d250d7b2113925577bbce2dad">SaveName</a>.substr(0, <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a78b45c4d250d7b2113925577bbce2dad">SaveName</a>.find(<span class="stringliteral">&quot;.root&quot;</span>));</div>
-<div class="line"><span class="lineno">  839</span>  <span class="keywordflow">if</span>(FileName2 != <span class="stringliteral">&quot;&quot;</span>) <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a78b45c4d250d7b2113925577bbce2dad">SaveName</a> += FileName2;</div>
-<div class="line"><span class="lineno">  840</span>  <span class="keywordflow">if</span>(FileName2 != <span class="stringliteral">&quot;&quot;</span>) <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a78b45c4d250d7b2113925577bbce2dad">SaveName</a> = <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a78b45c4d250d7b2113925577bbce2dad">SaveName</a>.substr(0, <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a78b45c4d250d7b2113925577bbce2dad">SaveName</a>.find(<span class="stringliteral">&quot;.root&quot;</span>));</div>
-<div class="line"><span class="lineno">  841</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a78b45c4d250d7b2113925577bbce2dad">SaveName</a> += <span class="stringliteral">&quot;_Violin&quot;</span>;</div>
-<div class="line"><span class="lineno">  842</span>  <span class="keywordflow">if</span>(PlotAssym) <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a78b45c4d250d7b2113925577bbce2dad">SaveName</a> += <span class="stringliteral">&quot;_Assym&quot;</span>;</div>
-<div class="line"><span class="lineno">  843</span>   </div>
-<div class="line"><span class="lineno">  844</span>  std::shared_ptr&lt;TFile&gt; File1 = std::make_shared&lt;TFile&gt;(FileName1.c_str());</div>
-<div class="line"><span class="lineno">  845</span>  std::shared_ptr&lt;TFile&gt; File2 = <span class="keyword">nullptr</span>;</div>
-<div class="line"><span class="lineno">  846</span>  <span class="keywordflow">if</span>(FileName2 != <span class="stringliteral">&quot;&quot;</span>) File2 = std::make_shared&lt;TFile&gt;(FileName2.c_str());</div>
-<div class="line"><span class="lineno">  847</span>  </div>
-<div class="line"><span class="lineno">  848</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a> = <span class="keyword">new</span> TCanvas(<span class="stringliteral">&quot;canv&quot;</span>, <span class="stringliteral">&quot;canv&quot;</span>, 1024, 1024);</div>
-<div class="line"><span class="lineno">  849</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;SetGrid();</div>
-<div class="line"><span class="lineno">  850</span>  gStyle-&gt;SetOptStat(0);</div>
-<div class="line"><span class="lineno">  851</span>  <span class="comment">//KS: Remove errors on X axis as they are confusing in violin type of plot</span></div>
-<div class="line"><span class="lineno">  852</span>  <span class="keywordflow">if</span>(!PlotAssym) gStyle-&gt;SetErrorX(0.0001);</div>
-<div class="line"><span class="lineno">  853</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;SetTickx();</div>
-<div class="line"><span class="lineno">  854</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;SetTicky();</div>
-<div class="line"><span class="lineno">  855</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;SetBottomMargin(0.25);</div>
-<div class="line"><span class="lineno">  856</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;SetTopMargin(0.08);</div>
-<div class="line"><span class="lineno">  857</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;SetRightMargin(0.03);</div>
-<div class="line"><span class="lineno">  858</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;SetLeftMargin(0.10);</div>
-<div class="line"><span class="lineno">  859</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;Print((<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a78b45c4d250d7b2113925577bbce2dad">SaveName</a>+<span class="stringliteral">&quot;.pdf[&quot;</span>).c_str());</div>
+<p class="definition">Definition at line <a class="el" href="GetPostfitParamPlots_8cpp_source.html#l00836">836</a> of file <a class="el" href="GetPostfitParamPlots_8cpp_source.html">GetPostfitParamPlots.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  837</span>{</div>
+<div class="line"><span class="lineno">  838</span>  <span class="comment">//KS: Should be in some config... either way it control whether you plot symetric or assymetric error bars</span></div>
+<div class="line"><span class="lineno">  839</span>  <span class="keywordtype">bool</span> PlotAssym = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  840</span>    </div>
+<div class="line"><span class="lineno">  841</span>  <span class="comment">//KS: No idea why but ROOT changed treatment of viilin in R6. If you have non uniform binning this will results in very hard to see violin plots.</span></div>
+<div class="line"><span class="lineno">  842</span>  TCandle::SetScaledViolin(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  843</span> </div>
+<div class="line"><span class="lineno">  844</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;Making Violin Plot&quot;</span>);</div>
+<div class="line"><span class="lineno">  845</span>  <span class="keywordflow">if</span> (!FileName1.empty()) <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;File 1: {} &quot;</span>, FileName1);</div>
+<div class="line"><span class="lineno">  846</span>  <span class="keywordflow">if</span> (!FileName2.empty()) <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;File 2: {}&quot;</span>, FileName2);</div>
+<div class="line"><span class="lineno">  847</span>    </div>
+<div class="line"><span class="lineno">  848</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a78b45c4d250d7b2113925577bbce2dad">SaveName</a> = FileName1;</div>
+<div class="line"><span class="lineno">  849</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a78b45c4d250d7b2113925577bbce2dad">SaveName</a> = <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a78b45c4d250d7b2113925577bbce2dad">SaveName</a>.substr(0, <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a78b45c4d250d7b2113925577bbce2dad">SaveName</a>.find(<span class="stringliteral">&quot;.root&quot;</span>));</div>
+<div class="line"><span class="lineno">  850</span>  <span class="keywordflow">if</span>(FileName2 != <span class="stringliteral">&quot;&quot;</span>) <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a78b45c4d250d7b2113925577bbce2dad">SaveName</a> += FileName2;</div>
+<div class="line"><span class="lineno">  851</span>  <span class="keywordflow">if</span>(FileName2 != <span class="stringliteral">&quot;&quot;</span>) <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a78b45c4d250d7b2113925577bbce2dad">SaveName</a> = <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a78b45c4d250d7b2113925577bbce2dad">SaveName</a>.substr(0, <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a78b45c4d250d7b2113925577bbce2dad">SaveName</a>.find(<span class="stringliteral">&quot;.root&quot;</span>));</div>
+<div class="line"><span class="lineno">  852</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a78b45c4d250d7b2113925577bbce2dad">SaveName</a> += <span class="stringliteral">&quot;_Violin&quot;</span>;</div>
+<div class="line"><span class="lineno">  853</span>  <span class="keywordflow">if</span>(PlotAssym) <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a78b45c4d250d7b2113925577bbce2dad">SaveName</a> += <span class="stringliteral">&quot;_Assym&quot;</span>;</div>
+<div class="line"><span class="lineno">  854</span>   </div>
+<div class="line"><span class="lineno">  855</span>  std::shared_ptr&lt;TFile&gt; File1 = std::make_shared&lt;TFile&gt;(FileName1.c_str());</div>
+<div class="line"><span class="lineno">  856</span>  std::shared_ptr&lt;TFile&gt; File2 = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  857</span>  <span class="keywordflow">if</span>(FileName2 != <span class="stringliteral">&quot;&quot;</span>) File2 = std::make_shared&lt;TFile&gt;(FileName2.c_str());</div>
+<div class="line"><span class="lineno">  858</span>  </div>
+<div class="line"><span class="lineno">  859</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a> = <span class="keyword">new</span> TCanvas(<span class="stringliteral">&quot;canv&quot;</span>, <span class="stringliteral">&quot;canv&quot;</span>, 1024, 1024);</div>
 <div class="line"><span class="lineno">  860</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;SetGrid();</div>
-<div class="line"><span class="lineno">  861</span> </div>
-<div class="line"><span class="lineno">  862</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a92251598dc4d11508ddb63e3ff2ba4cb">Violin</a> = <span class="keyword">nullptr</span>;</div>
-<div class="line"><span class="lineno">  863</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a> = File1-&gt;Get&lt;TH2D&gt;( <span class="stringliteral">&quot;param_violin_prior&quot;</span> );</div>
-<div class="line"><span class="lineno">  864</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a92251598dc4d11508ddb63e3ff2ba4cb">Violin</a> = File1-&gt;Get&lt;TH2D&gt;( <span class="stringliteral">&quot;param_violin&quot;</span> );</div>
-<div class="line"><span class="lineno">  865</span>  <span class="keywordflow">if</span>(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a92251598dc4d11508ddb63e3ff2ba4cb">Violin</a> == <span class="keyword">nullptr</span>)</div>
-<div class="line"><span class="lineno">  866</span>  {</div>
-<div class="line"><span class="lineno">  867</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a>(<span class="stringliteral">&quot;Couldn&#39;t find violin plot, make sure method from MCMCProcessor is being called&quot;</span>);</div>
-<div class="line"><span class="lineno">  868</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  869</span>  }</div>
-<div class="line"><span class="lineno">  870</span> </div>
-<div class="line"><span class="lineno">  871</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>-&gt;SetFillColor(kRed);</div>
-<div class="line"><span class="lineno">  872</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>-&gt;SetFillColorAlpha(kRed, 0.35);</div>
-<div class="line"><span class="lineno">  873</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>-&gt;SetMarkerColor(kRed);</div>
-<div class="line"><span class="lineno">  874</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>-&gt;SetMarkerStyle(20);</div>
-<div class="line"><span class="lineno">  875</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>-&gt;SetMarkerSize(0.5);</div>
-<div class="line"><span class="lineno">  876</span> </div>
-<div class="line"><span class="lineno">  877</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>-&gt;GetYaxis()-&gt;SetTitleOffset(1.3);</div>
-<div class="line"><span class="lineno">  878</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>-&gt;GetYaxis()-&gt;SetTitle(<span class="stringliteral">&quot;Parameter Value&quot;</span>);</div>
-<div class="line"><span class="lineno">  879</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>-&gt;GetXaxis()-&gt;LabelsOption(<span class="stringliteral">&quot;v&quot;</span>);</div>
-<div class="line"><span class="lineno">  880</span> </div>
-<div class="line"><span class="lineno">  881</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a92251598dc4d11508ddb63e3ff2ba4cb">Violin</a>-&gt;SetFillColor(kBlue);</div>
-<div class="line"><span class="lineno">  882</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a92251598dc4d11508ddb63e3ff2ba4cb">Violin</a>-&gt;SetFillColorAlpha(kBlue, 0.35);</div>
-<div class="line"><span class="lineno">  883</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a92251598dc4d11508ddb63e3ff2ba4cb">Violin</a>-&gt;SetMarkerColor(kBlue);</div>
-<div class="line"><span class="lineno">  884</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a92251598dc4d11508ddb63e3ff2ba4cb">Violin</a>-&gt;SetMarkerStyle(20);</div>
-<div class="line"><span class="lineno">  885</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a92251598dc4d11508ddb63e3ff2ba4cb">Violin</a>-&gt;SetMarkerSize(0.5);</div>
-<div class="line"><span class="lineno">  886</span>    </div>
-<div class="line"><span class="lineno">  887</span>  TH1D* Postfit = File1-&gt;Get&lt;TH1D&gt;( (<span class="stringliteral">&quot;param_xsec_&quot;</span>+<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aee5c9d8d7ad14d8728dffad47b8d4efe">plotType</a>).c_str() );</div>
-<div class="line"><span class="lineno">  888</span>  Postfit-&gt;SetMarkerColor(kRed);</div>
-<div class="line"><span class="lineno">  889</span>  Postfit-&gt;SetLineColor(kRed);</div>
-<div class="line"><span class="lineno">  890</span>  Postfit-&gt;SetMarkerStyle(7);</div>
-<div class="line"><span class="lineno">  891</span>  </div>
-<div class="line"><span class="lineno">  892</span>  TGraphAsymmErrors* PostGraph = <a class="code hl_function" href="GetPostfitParamPlots_8cpp.html#ab5cb45b8ada99453683a7021e520f734">MakeTGraphAsymmErrors</a>(File1);</div>
-<div class="line"><span class="lineno">  893</span>  PostGraph-&gt;SetMarkerColor(kBlack);</div>
-<div class="line"><span class="lineno">  894</span>  PostGraph-&gt;SetLineColor(kBlack);</div>
-<div class="line"><span class="lineno">  895</span>  PostGraph-&gt;SetMarkerStyle(7);</div>
-<div class="line"><span class="lineno">  896</span>  PostGraph-&gt;SetLineWidth(2);</div>
-<div class="line"><span class="lineno">  897</span>  PostGraph-&gt;SetLineStyle(kSolid);</div>
-<div class="line"><span class="lineno">  898</span> <span class="keywordflow">if</span>(File2 != <span class="keyword">nullptr</span>)</div>
-<div class="line"><span class="lineno">  899</span>  {</div>
-<div class="line"><span class="lineno">  900</span>    <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#abb13e28854ba4a299e5ac10ab1ac3c99">Violin2</a> = File2-&gt;Get&lt;TH2D&gt;( <span class="stringliteral">&quot;param_violin&quot;</span> );</div>
-<div class="line"><span class="lineno">  901</span>    <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#abb13e28854ba4a299e5ac10ab1ac3c99">Violin2</a>-&gt;SetMarkerColor(kGreen);</div>
-<div class="line"><span class="lineno">  902</span>    <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#abb13e28854ba4a299e5ac10ab1ac3c99">Violin2</a>-&gt;SetLineColor(kGreen);</div>
-<div class="line"><span class="lineno">  903</span>    <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#abb13e28854ba4a299e5ac10ab1ac3c99">Violin2</a>-&gt;SetFillColor(kGreen);</div>
-<div class="line"><span class="lineno">  904</span>    <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#abb13e28854ba4a299e5ac10ab1ac3c99">Violin2</a>-&gt;SetFillColorAlpha(kGreen, 0.35);</div>
-<div class="line"><span class="lineno">  905</span>  }</div>
-<div class="line"><span class="lineno">  906</span>  </div>
-<div class="line"><span class="lineno">  907</span>  <span class="comment">// Make a Legend page</span></div>
-<div class="line"><span class="lineno">  908</span>  <span class="keyword">auto</span> leg = std::make_unique&lt;TLegend&gt;(0.0, 0.0, 1.0, 1.0);</div>
-<div class="line"><span class="lineno">  909</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a> != <span class="keyword">nullptr</span>) leg-&gt;AddEntry(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>, <span class="stringliteral">&quot;Prior&quot;</span>, <span class="stringliteral">&quot;lpf&quot;</span>);</div>
-<div class="line"><span class="lineno">  910</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a92251598dc4d11508ddb63e3ff2ba4cb">Violin</a> != <span class="keyword">nullptr</span>)    leg-&gt;AddEntry(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a92251598dc4d11508ddb63e3ff2ba4cb">Violin</a>, <span class="stringliteral">&quot;Posterior&quot;</span>, <span class="stringliteral">&quot;lpf&quot;</span>);</div>
-<div class="line"><span class="lineno">  911</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#abb13e28854ba4a299e5ac10ab1ac3c99">Violin2</a> != <span class="keyword">nullptr</span>)   leg-&gt;AddEntry(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#abb13e28854ba4a299e5ac10ab1ac3c99">Violin2</a>, <span class="stringliteral">&quot;Second Violin&quot;</span>, <span class="stringliteral">&quot;lpf&quot;</span>);</div>
-<div class="line"><span class="lineno">  912</span>  <span class="keywordflow">if</span>(PlotAssym)             leg-&gt;AddEntry(PostGraph, <span class="stringliteral">&quot;HPD Assym&quot;</span>, <span class="stringliteral">&quot;lp&quot;</span>);</div>
-<div class="line"><span class="lineno">  913</span>  <span class="keywordflow">else</span>                      leg-&gt;AddEntry(Postfit, <span class="stringliteral">&quot;HPD&quot;</span>, <span class="stringliteral">&quot;lpf&quot;</span>);</div>
-<div class="line"><span class="lineno">  914</span> </div>
-<div class="line"><span class="lineno">  915</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;cd();</div>
-<div class="line"><span class="lineno">  916</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;Clear();</div>
-<div class="line"><span class="lineno">  917</span>  leg-&gt;Draw();</div>
-<div class="line"><span class="lineno">  918</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;Print((<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a78b45c4d250d7b2113925577bbce2dad">SaveName</a>+<span class="stringliteral">&quot;.pdf&quot;</span>).c_str());</div>
-<div class="line"><span class="lineno">  919</span>  </div>
-<div class="line"><span class="lineno">  920</span>   <span class="comment">// Do some fancy replacements</span></div>
-<div class="line"><span class="lineno">  921</span>  <a class="code hl_function" href="GetPostfitParamPlots_8cpp.html#acbde284ea52643cf3db23f6edc77850c">PrettifyTitles</a>(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>);</div>
-<div class="line"><span class="lineno">  922</span>  <span class="comment">//WARNING this is super hardcoded keep this in mind, ranges are diffefernt from one defined for postfit param</span></div>
-<div class="line"><span class="lineno">  923</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> XsecPlots = 8;</div>
-<div class="line"><span class="lineno">  924</span>  <span class="keywordtype">int</span> XsecOffset[XsecPlots] = {<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a3bb8bb8766f5ea15aa9ac31a1c9127e8">XsecStartingPos</a>, <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a3bb8bb8766f5ea15aa9ac31a1c9127e8">XsecStartingPos</a>+16, <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a3bb8bb8766f5ea15aa9ac31a1c9127e8">XsecStartingPos</a>+22, <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a3bb8bb8766f5ea15aa9ac31a1c9127e8">XsecStartingPos</a>+22+12, <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a3bb8bb8766f5ea15aa9ac31a1c9127e8">XsecStartingPos</a>+22+12+11, <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a3bb8bb8766f5ea15aa9ac31a1c9127e8">XsecStartingPos</a>+22+12+11+7,  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a3bb8bb8766f5ea15aa9ac31a1c9127e8">XsecStartingPos</a>+22+12+7+7+22, <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a3bb8bb8766f5ea15aa9ac31a1c9127e8">XsecStartingPos</a>+<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a5307771642312031f0050189b493a621">CrossSectionParameters</a>-<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#adf4147e2ac31f2cb321121a90cb8c853">FluxParameters</a>};</div>
-<div class="line"><span class="lineno">  925</span>  std::string titles[XsecPlots-1] = {<span class="stringliteral">&quot;CCQE&quot;</span>, <span class="stringliteral">&quot;Pauli Blocking and Optical Potential&quot;</span>, <span class="stringliteral">&quot;2p2h&quot;</span>, <span class="stringliteral">&quot;SPP&quot;</span>, <span class="stringliteral">&quot;FSI&quot;</span>, <span class="stringliteral">&quot;CC DIS, CC Multi #pi, CC coh., NC, #nu_{e}&quot;</span>, <span class="stringliteral">&quot;CCQE Binding Energy&quot;</span>};</div>
-<div class="line"><span class="lineno">  926</span> </div>
-<div class="line"><span class="lineno">  927</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; XsecPlots; ++i) </div>
-<div class="line"><span class="lineno">  928</span>  {</div>
-<div class="line"><span class="lineno">  929</span>    <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;cd();</div>
-<div class="line"><span class="lineno">  930</span>    <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>-&gt;SetTitle(titles[i-1].c_str());</div>
-<div class="line"><span class="lineno">  931</span>    <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>-&gt;GetXaxis()-&gt;SetRangeUser(XsecOffset[i-1], XsecOffset[i]);</div>
-<div class="line"><span class="lineno">  932</span>    <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>-&gt;GetYaxis()-&gt;SetRangeUser(-1.5, 2.5);</div>
-<div class="line"><span class="lineno">  933</span> </div>
-<div class="line"><span class="lineno">  934</span>    <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a92251598dc4d11508ddb63e3ff2ba4cb">Violin</a>-&gt;GetXaxis()-&gt;SetRangeUser(XsecOffset[i-1], XsecOffset[i]);</div>
-<div class="line"><span class="lineno">  935</span>    <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a92251598dc4d11508ddb63e3ff2ba4cb">Violin</a>-&gt;GetYaxis()-&gt;SetRangeUser(-1.5, 2.5);</div>
-<div class="line"><span class="lineno">  936</span>    <span class="keywordflow">if</span>(File2 != <span class="keyword">nullptr</span>) <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#abb13e28854ba4a299e5ac10ab1ac3c99">Violin2</a>-&gt;GetYaxis()-&gt;SetRangeUser(-1.5, 2.5);</div>
-<div class="line"><span class="lineno">  937</span>    </div>
-<div class="line"><span class="lineno">  938</span>    std::string name = <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>-&gt;GetTitle();</div>
-<div class="line"><span class="lineno">  939</span>    <span class="keywordflow">if</span> (name.find(<span class="stringliteral">&quot;SPP&quot;</span>) != std::string::npos)</div>
-<div class="line"><span class="lineno">  940</span>    { </div>
-<div class="line"><span class="lineno">  941</span>      <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>-&gt;GetYaxis()-&gt;SetRangeUser(-5., 25.); <span class="comment">//For RES Eb we need huge range</span></div>
-<div class="line"><span class="lineno">  942</span>      <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a92251598dc4d11508ddb63e3ff2ba4cb">Violin</a>-&gt;GetYaxis()-&gt;SetRangeUser(-5., 25.);</div>
-<div class="line"><span class="lineno">  943</span>      <span class="keywordflow">if</span>(File2 != <span class="keyword">nullptr</span>) <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#abb13e28854ba4a299e5ac10ab1ac3c99">Violin2</a>-&gt;GetYaxis()-&gt;SetRangeUser(-5., 25.);</div>
-<div class="line"><span class="lineno">  944</span>    }</div>
-<div class="line"><span class="lineno">  945</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (name.find(<span class="stringliteral">&quot;CCQE Binding Energy&quot;</span>) != std::string::npos)   </div>
-<div class="line"><span class="lineno">  946</span>    {</div>
-<div class="line"><span class="lineno">  947</span>      <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>-&gt;GetYaxis()-&gt;SetRangeUser(-10., 16.); <span class="comment">//For Eb we need bigger range</span></div>
-<div class="line"><span class="lineno">  948</span>      <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a92251598dc4d11508ddb63e3ff2ba4cb">Violin</a>-&gt;GetYaxis()-&gt;SetRangeUser(-10., 16.); <span class="comment">//For Eb we need bigger range</span></div>
-<div class="line"><span class="lineno">  949</span>      <span class="keywordflow">if</span>(File2 != <span class="keyword">nullptr</span>) <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#abb13e28854ba4a299e5ac10ab1ac3c99">Violin2</a>-&gt;GetYaxis()-&gt;SetRangeUser(-10., 16.);</div>
-<div class="line"><span class="lineno">  950</span>    }</div>
-<div class="line"><span class="lineno">  951</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (name.find(<span class="stringliteral">&quot;FSI&quot;</span>) != std::string::npos)   </div>
-<div class="line"><span class="lineno">  952</span>    {</div>
-<div class="line"><span class="lineno">  953</span>      <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>-&gt;GetYaxis()-&gt;SetRangeUser(-0.5, 2.8);</div>
-<div class="line"><span class="lineno">  954</span>      <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a92251598dc4d11508ddb63e3ff2ba4cb">Violin</a>-&gt;GetYaxis()-&gt;SetRangeUser(-0.5, 2.8);</div>
-<div class="line"><span class="lineno">  955</span>      <span class="keywordflow">if</span>(File2 != <span class="keyword">nullptr</span>) <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#abb13e28854ba4a299e5ac10ab1ac3c99">Violin2</a>-&gt;GetYaxis()-&gt;SetRangeUser(-0.5, 2.8);</div>
-<div class="line"><span class="lineno">  956</span>    }</div>
-<div class="line"><span class="lineno">  957</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (name.find(<span class="stringliteral">&quot;CCQE&quot;</span>) != std::string::npos)   </div>
-<div class="line"><span class="lineno">  958</span>    {</div>
-<div class="line"><span class="lineno">  959</span>      <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>-&gt;GetYaxis()-&gt;SetRangeUser(-2., 3.);</div>
-<div class="line"><span class="lineno">  960</span>      <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a92251598dc4d11508ddb63e3ff2ba4cb">Violin</a>-&gt;GetYaxis()-&gt;SetRangeUser(-2., 3.);</div>
-<div class="line"><span class="lineno">  961</span>      <span class="keywordflow">if</span>(File2 != <span class="keyword">nullptr</span>) <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#abb13e28854ba4a299e5ac10ab1ac3c99">Violin2</a>-&gt;GetYaxis()-&gt;SetRangeUser(-2., 3.);</div>
-<div class="line"><span class="lineno">  962</span>    }</div>
-<div class="line"><span class="lineno">  963</span>    <span class="comment">//KS: ROOT6 has some additional options, consider updating it. more https://root.cern/doc/master/classTHistPainter.html#HP140b</span></div>
-<div class="line"><span class="lineno">  964</span>    <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>-&gt;Draw(<span class="stringliteral">&quot;violinX(03100300)&quot;</span>);</div>
-<div class="line"><span class="lineno">  965</span>    <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a92251598dc4d11508ddb63e3ff2ba4cb">Violin</a>-&gt;Draw(<span class="stringliteral">&quot;violinX(03100300) SAME&quot;</span>);</div>
-<div class="line"><span class="lineno">  966</span>    <span class="keywordflow">if</span>(File2 != <span class="keyword">nullptr</span>)</div>
-<div class="line"><span class="lineno">  967</span>    {</div>
-<div class="line"><span class="lineno">  968</span>      <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#abb13e28854ba4a299e5ac10ab1ac3c99">Violin2</a>-&gt;GetXaxis()-&gt;SetRangeUser(XsecOffset[i-1], XsecOffset[i]);</div>
-<div class="line"><span class="lineno">  969</span>      <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#abb13e28854ba4a299e5ac10ab1ac3c99">Violin2</a>-&gt;GetXaxis()-&gt;SetRangeUser(XsecOffset[i-1], XsecOffset[i]);</div>
-<div class="line"><span class="lineno">  970</span>      <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#abb13e28854ba4a299e5ac10ab1ac3c99">Violin2</a>-&gt;Draw(<span class="stringliteral">&quot;violinX(03100300) SAME&quot;</span>);</div>
-<div class="line"><span class="lineno">  971</span>    }</div>
-<div class="line"><span class="lineno">  972</span>    <span class="keywordflow">if</span> (Postfit != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><span class="lineno">  973</span>      Postfit-&gt;GetXaxis()-&gt;SetRangeUser(XsecOffset[i-1], XsecOffset[i]);</div>
-<div class="line"><span class="lineno">  974</span>      <span class="keywordflow">if</span>(!PlotAssym) Postfit-&gt;Draw(<span class="stringliteral">&quot;SAME&quot;</span>);</div>
-<div class="line"><span class="lineno">  975</span>    }</div>
-<div class="line"><span class="lineno">  976</span>    <span class="keywordflow">if</span> (PostGraph != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><span class="lineno">  977</span>      PostGraph-&gt;GetXaxis()-&gt;SetRangeUser(XsecOffset[i-1], XsecOffset[i]);</div>
-<div class="line"><span class="lineno">  978</span>      <span class="keywordflow">if</span>(PlotAssym) PostGraph-&gt;Draw(<span class="stringliteral">&quot;P SAME&quot;</span>);</div>
-<div class="line"><span class="lineno">  979</span>    }</div>
-<div class="line"><span class="lineno">  980</span>    </div>
-<div class="line"><span class="lineno">  981</span>    <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;Print((<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a78b45c4d250d7b2113925577bbce2dad">SaveName</a>+<span class="stringliteral">&quot;.pdf&quot;</span>).c_str());</div>
-<div class="line"><span class="lineno">  982</span>  }</div>
-<div class="line"><span class="lineno">  983</span>  </div>
-<div class="line"><span class="lineno">  984</span>  <span class="comment">//KS: Now flux</span></div>
-<div class="line"><span class="lineno">  985</span>  <span class="keywordflow">if</span>(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#adf4147e2ac31f2cb321121a90cb8c853">FluxParameters</a> &gt; 0)</div>
-<div class="line"><span class="lineno">  986</span>  {</div>
-<div class="line"><span class="lineno">  987</span>    <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;SetBottomMargin(0.1);</div>
-<div class="line"><span class="lineno">  988</span>    gStyle-&gt;SetOptTitle(0);</div>
-<div class="line"><span class="lineno">  989</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> FluxInterval = 25;</div>
-<div class="line"><span class="lineno">  990</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> nFlux = <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a3bb8bb8766f5ea15aa9ac31a1c9127e8">XsecStartingPos</a>+<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a5307771642312031f0050189b493a621">CrossSectionParameters</a>-<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#adf4147e2ac31f2cb321121a90cb8c853">FluxParameters</a>; nFlux &lt; <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a3bb8bb8766f5ea15aa9ac31a1c9127e8">XsecStartingPos</a>+<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a5307771642312031f0050189b493a621">CrossSectionParameters</a>; nFlux += FluxInterval)</div>
-<div class="line"><span class="lineno">  991</span>    {</div>
-<div class="line"><span class="lineno">  992</span>      <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>-&gt;GetXaxis()-&gt;SetRangeUser(nFlux, nFlux+FluxInterval);</div>
-<div class="line"><span class="lineno">  993</span>      <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a92251598dc4d11508ddb63e3ff2ba4cb">Violin</a>-&gt;GetXaxis()-&gt;SetRangeUser(nFlux, nFlux+FluxInterval);</div>
-<div class="line"><span class="lineno">  994</span>      Postfit-&gt;GetXaxis()-&gt;SetRangeUser(nFlux, nFlux+FluxInterval);</div>
-<div class="line"><span class="lineno">  995</span>      PostGraph-&gt;GetXaxis()-&gt;SetRangeUser(nFlux, nFlux+FluxInterval);</div>
-<div class="line"><span class="lineno">  996</span> </div>
-<div class="line"><span class="lineno">  997</span>      <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>-&gt;GetYaxis()-&gt;SetRangeUser(0.7, 1.3);</div>
-<div class="line"><span class="lineno">  998</span>      <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a92251598dc4d11508ddb63e3ff2ba4cb">Violin</a>-&gt;GetYaxis()-&gt;SetRangeUser(0.7, 1.3);</div>
-<div class="line"><span class="lineno">  999</span>      Postfit-&gt;GetYaxis()-&gt;SetRangeUser(0.7, 1.3);</div>
-<div class="line"><span class="lineno"> 1000</span>      PostGraph-&gt;GetYaxis()-&gt;SetRangeUser(0.7, 1.3);</div>
-<div class="line"><span class="lineno"> 1001</span> </div>
-<div class="line"><span class="lineno"> 1002</span>      <span class="comment">//KS: ROOT6 has some additional options, consider updaiting it. more https://root.cern/doc/master/classTHistPainter.html#HP140b</span></div>
-<div class="line"><span class="lineno"> 1003</span>      <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>-&gt;Draw(<span class="stringliteral">&quot;violinX(03100300)&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1004</span>      <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a92251598dc4d11508ddb63e3ff2ba4cb">Violin</a>-&gt;Draw(<span class="stringliteral">&quot;violinX(03100300) SAME&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1005</span>      <span class="keywordflow">if</span>(File2 != <span class="keyword">nullptr</span>)</div>
-<div class="line"><span class="lineno"> 1006</span>      {</div>
-<div class="line"><span class="lineno"> 1007</span>        <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#abb13e28854ba4a299e5ac10ab1ac3c99">Violin2</a>-&gt;GetYaxis()-&gt;SetRangeUser(0.7, 1.3);</div>
-<div class="line"><span class="lineno"> 1008</span>        <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#abb13e28854ba4a299e5ac10ab1ac3c99">Violin2</a>-&gt;GetXaxis()-&gt;SetRangeUser(nFlux, nFlux+FluxInterval);</div>
-<div class="line"><span class="lineno"> 1009</span>        <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#abb13e28854ba4a299e5ac10ab1ac3c99">Violin2</a>-&gt;Draw(<span class="stringliteral">&quot;violinX(03100300) SAME&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1010</span>      }</div>
-<div class="line"><span class="lineno"> 1011</span>      <span class="keywordflow">if</span>(PlotAssym) PostGraph-&gt;Draw(<span class="stringliteral">&quot;P SAME&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1012</span>      <span class="keywordflow">else</span> Postfit-&gt;Draw(<span class="stringliteral">&quot;SAME&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1013</span>      <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;Print((<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a78b45c4d250d7b2113925577bbce2dad">SaveName</a>+<span class="stringliteral">&quot;.pdf&quot;</span>).c_str());</div>
-<div class="line"><span class="lineno"> 1014</span>    }</div>
-<div class="line"><span class="lineno"> 1015</span>  }</div>
-<div class="line"><span class="lineno"> 1016</span>  <span class="comment">//KS all other parmeters just in case</span></div>
-<div class="line"><span class="lineno"> 1017</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>-&gt;GetXaxis()-&gt;SetRangeUser(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a5307771642312031f0050189b493a621">CrossSectionParameters</a>, <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#ae4842c1619a902b2761696f3849889a1">nBins</a>);</div>
-<div class="line"><span class="lineno"> 1018</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a92251598dc4d11508ddb63e3ff2ba4cb">Violin</a>-&gt;GetXaxis()-&gt;SetRangeUser(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a5307771642312031f0050189b493a621">CrossSectionParameters</a>, <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#ae4842c1619a902b2761696f3849889a1">nBins</a>);</div>
-<div class="line"><span class="lineno"> 1019</span>  Postfit-&gt;GetXaxis()-&gt;SetRangeUser(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a5307771642312031f0050189b493a621">CrossSectionParameters</a>, <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#ae4842c1619a902b2761696f3849889a1">nBins</a>);</div>
-<div class="line"><span class="lineno"> 1020</span>  PostGraph-&gt;GetXaxis()-&gt;SetRangeUser(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a5307771642312031f0050189b493a621">CrossSectionParameters</a>, <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#ae4842c1619a902b2761696f3849889a1">nBins</a>);</div>
-<div class="line"><span class="lineno"> 1021</span> </div>
-<div class="line"><span class="lineno"> 1022</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>-&gt;GetYaxis()-&gt;SetRangeUser(-3.4, 3.4);</div>
-<div class="line"><span class="lineno"> 1023</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a92251598dc4d11508ddb63e3ff2ba4cb">Violin</a>-&gt;GetYaxis()-&gt;SetRangeUser(-3.4, 3.4);</div>
-<div class="line"><span class="lineno"> 1024</span>  Postfit-&gt;GetYaxis()-&gt;SetRangeUser(-3.4, 3.4);</div>
-<div class="line"><span class="lineno"> 1025</span>  PostGraph-&gt;GetYaxis()-&gt;SetRangeUser(-3.4, 3.4);</div>
-<div class="line"><span class="lineno"> 1026</span>         </div>
-<div class="line"><span class="lineno"> 1027</span>  <span class="comment">//KS: ROOT6 has some additional options, consider updating it. more https://root.cern/doc/master/classTHistPainter.html#HP140b</span></div>
-<div class="line"><span class="lineno"> 1028</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>-&gt;Draw(<span class="stringliteral">&quot;violinX(03100300)&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1029</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a92251598dc4d11508ddb63e3ff2ba4cb">Violin</a>-&gt;Draw(<span class="stringliteral">&quot;violinX(03100300) SAME&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1030</span>  <span class="keywordflow">if</span>(File2 != <span class="keyword">nullptr</span>)</div>
-<div class="line"><span class="lineno"> 1031</span>  {</div>
-<div class="line"><span class="lineno"> 1032</span>    <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#abb13e28854ba4a299e5ac10ab1ac3c99">Violin2</a>-&gt;GetXaxis()-&gt;SetRangeUser(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a5307771642312031f0050189b493a621">CrossSectionParameters</a>, <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#ae4842c1619a902b2761696f3849889a1">nBins</a>);</div>
-<div class="line"><span class="lineno"> 1033</span>    <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#abb13e28854ba4a299e5ac10ab1ac3c99">Violin2</a>-&gt;GetYaxis()-&gt;SetRangeUser(-3.4, 3.4);</div>
-<div class="line"><span class="lineno"> 1034</span>    <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#abb13e28854ba4a299e5ac10ab1ac3c99">Violin2</a>-&gt;Draw(<span class="stringliteral">&quot;violinX(03100300) SAME&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1035</span>  }</div>
-<div class="line"><span class="lineno"> 1036</span>  <span class="keywordflow">if</span>(PlotAssym) PostGraph-&gt;Draw(<span class="stringliteral">&quot;P SAME&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1037</span>  <span class="keywordflow">else</span> Postfit-&gt;Draw(<span class="stringliteral">&quot;SAME&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1038</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;Print((<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a78b45c4d250d7b2113925577bbce2dad">SaveName</a>+<span class="stringliteral">&quot;.pdf&quot;</span>).c_str());</div>
-<div class="line"><span class="lineno"> 1039</span>     </div>
-<div class="line"><span class="lineno"> 1040</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;Print((<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a78b45c4d250d7b2113925577bbce2dad">SaveName</a>+<span class="stringliteral">&quot;.pdf]&quot;</span>).c_str());</div>
-<div class="line"><span class="lineno"> 1041</span>  <span class="keyword">delete</span> <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>;</div>
-<div class="line"><span class="lineno"> 1042</span>  <span class="keyword">delete</span> <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>;</div>
-<div class="line"><span class="lineno"> 1043</span>  <span class="keyword">delete</span> <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a92251598dc4d11508ddb63e3ff2ba4cb">Violin</a>;</div>
-<div class="line"><span class="lineno"> 1044</span>  <span class="keywordflow">if</span>(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#abb13e28854ba4a299e5ac10ab1ac3c99">Violin2</a> != <span class="keyword">nullptr</span>) <span class="keyword">delete</span> <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#abb13e28854ba4a299e5ac10ab1ac3c99">Violin2</a>;</div>
-<div class="line"><span class="lineno"> 1045</span>  <span class="keyword">delete</span> Postfit;</div>
-<div class="line"><span class="lineno"> 1046</span>  <span class="keyword">delete</span> PostGraph;</div>
-<div class="line"><span class="lineno"> 1047</span>  File1-&gt;Close();</div>
-<div class="line"><span class="lineno"> 1048</span>  <span class="keywordflow">if</span>(File2 != <span class="keyword">nullptr</span>)</div>
-<div class="line"><span class="lineno"> 1049</span>  {</div>
-<div class="line"><span class="lineno"> 1050</span>    File2-&gt;Close();</div>
-<div class="line"><span class="lineno"> 1051</span>  }</div>
-<div class="line"><span class="lineno"> 1052</span>}</div>
+<div class="line"><span class="lineno">  861</span>  gStyle-&gt;SetOptStat(0);</div>
+<div class="line"><span class="lineno">  862</span>  <span class="comment">//KS: Remove errors on X axis as they are confusing in violin type of plot</span></div>
+<div class="line"><span class="lineno">  863</span>  <span class="keywordflow">if</span>(!PlotAssym) gStyle-&gt;SetErrorX(0.0001);</div>
+<div class="line"><span class="lineno">  864</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;SetTickx();</div>
+<div class="line"><span class="lineno">  865</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;SetTicky();</div>
+<div class="line"><span class="lineno">  866</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;SetBottomMargin(0.25);</div>
+<div class="line"><span class="lineno">  867</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;SetTopMargin(0.08);</div>
+<div class="line"><span class="lineno">  868</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;SetRightMargin(0.03);</div>
+<div class="line"><span class="lineno">  869</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;SetLeftMargin(0.10);</div>
+<div class="line"><span class="lineno">  870</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;Print((<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a78b45c4d250d7b2113925577bbce2dad">SaveName</a>+<span class="stringliteral">&quot;.pdf[&quot;</span>).c_str());</div>
+<div class="line"><span class="lineno">  871</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;SetGrid();</div>
+<div class="line"><span class="lineno">  872</span> </div>
+<div class="line"><span class="lineno">  873</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a92251598dc4d11508ddb63e3ff2ba4cb">Violin</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  874</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a> = File1-&gt;Get&lt;TH2D&gt;( <span class="stringliteral">&quot;param_violin_prior&quot;</span> );</div>
+<div class="line"><span class="lineno">  875</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a92251598dc4d11508ddb63e3ff2ba4cb">Violin</a> = File1-&gt;Get&lt;TH2D&gt;( <span class="stringliteral">&quot;param_violin&quot;</span> );</div>
+<div class="line"><span class="lineno">  876</span>  <span class="keywordflow">if</span>(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a92251598dc4d11508ddb63e3ff2ba4cb">Violin</a> == <span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno">  877</span>  {</div>
+<div class="line"><span class="lineno">  878</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a>(<span class="stringliteral">&quot;Couldn&#39;t find violin plot, make sure method from MCMCProcessor is being called&quot;</span>);</div>
+<div class="line"><span class="lineno">  879</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  880</span>  }</div>
+<div class="line"><span class="lineno">  881</span> </div>
+<div class="line"><span class="lineno">  882</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>-&gt;SetFillColor(kRed);</div>
+<div class="line"><span class="lineno">  883</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>-&gt;SetFillColorAlpha(kRed, 0.35);</div>
+<div class="line"><span class="lineno">  884</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>-&gt;SetMarkerColor(kRed);</div>
+<div class="line"><span class="lineno">  885</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>-&gt;SetMarkerStyle(20);</div>
+<div class="line"><span class="lineno">  886</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>-&gt;SetMarkerSize(0.5);</div>
+<div class="line"><span class="lineno">  887</span> </div>
+<div class="line"><span class="lineno">  888</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>-&gt;GetYaxis()-&gt;SetTitleOffset(1.3);</div>
+<div class="line"><span class="lineno">  889</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>-&gt;GetYaxis()-&gt;SetTitle(<span class="stringliteral">&quot;Parameter Value&quot;</span>);</div>
+<div class="line"><span class="lineno">  890</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>-&gt;GetXaxis()-&gt;LabelsOption(<span class="stringliteral">&quot;v&quot;</span>);</div>
+<div class="line"><span class="lineno">  891</span> </div>
+<div class="line"><span class="lineno">  892</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a92251598dc4d11508ddb63e3ff2ba4cb">Violin</a>-&gt;SetFillColor(kBlue);</div>
+<div class="line"><span class="lineno">  893</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a92251598dc4d11508ddb63e3ff2ba4cb">Violin</a>-&gt;SetFillColorAlpha(kBlue, 0.35);</div>
+<div class="line"><span class="lineno">  894</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a92251598dc4d11508ddb63e3ff2ba4cb">Violin</a>-&gt;SetMarkerColor(kBlue);</div>
+<div class="line"><span class="lineno">  895</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a92251598dc4d11508ddb63e3ff2ba4cb">Violin</a>-&gt;SetMarkerStyle(20);</div>
+<div class="line"><span class="lineno">  896</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a92251598dc4d11508ddb63e3ff2ba4cb">Violin</a>-&gt;SetMarkerSize(0.5);</div>
+<div class="line"><span class="lineno">  897</span>    </div>
+<div class="line"><span class="lineno">  898</span>  TH1D* Postfit = File1-&gt;Get&lt;TH1D&gt;( (<span class="stringliteral">&quot;param_xsec_&quot;</span>+<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aee5c9d8d7ad14d8728dffad47b8d4efe">plotType</a>).c_str() );</div>
+<div class="line"><span class="lineno">  899</span>  Postfit-&gt;SetMarkerColor(kRed);</div>
+<div class="line"><span class="lineno">  900</span>  Postfit-&gt;SetLineColor(kRed);</div>
+<div class="line"><span class="lineno">  901</span>  Postfit-&gt;SetMarkerStyle(7);</div>
+<div class="line"><span class="lineno">  902</span>  </div>
+<div class="line"><span class="lineno">  903</span>  TGraphAsymmErrors* PostGraph = <a class="code hl_function" href="GetPostfitParamPlots_8cpp.html#ab5cb45b8ada99453683a7021e520f734">MakeTGraphAsymmErrors</a>(File1);</div>
+<div class="line"><span class="lineno">  904</span>  PostGraph-&gt;SetMarkerColor(kBlack);</div>
+<div class="line"><span class="lineno">  905</span>  PostGraph-&gt;SetLineColor(kBlack);</div>
+<div class="line"><span class="lineno">  906</span>  PostGraph-&gt;SetMarkerStyle(7);</div>
+<div class="line"><span class="lineno">  907</span>  PostGraph-&gt;SetLineWidth(2);</div>
+<div class="line"><span class="lineno">  908</span>  PostGraph-&gt;SetLineStyle(kSolid);</div>
+<div class="line"><span class="lineno">  909</span> <span class="keywordflow">if</span>(File2 != <span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno">  910</span>  {</div>
+<div class="line"><span class="lineno">  911</span>    <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#abb13e28854ba4a299e5ac10ab1ac3c99">Violin2</a> = File2-&gt;Get&lt;TH2D&gt;( <span class="stringliteral">&quot;param_violin&quot;</span> );</div>
+<div class="line"><span class="lineno">  912</span>    <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#abb13e28854ba4a299e5ac10ab1ac3c99">Violin2</a>-&gt;SetMarkerColor(kGreen);</div>
+<div class="line"><span class="lineno">  913</span>    <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#abb13e28854ba4a299e5ac10ab1ac3c99">Violin2</a>-&gt;SetLineColor(kGreen);</div>
+<div class="line"><span class="lineno">  914</span>    <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#abb13e28854ba4a299e5ac10ab1ac3c99">Violin2</a>-&gt;SetFillColor(kGreen);</div>
+<div class="line"><span class="lineno">  915</span>    <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#abb13e28854ba4a299e5ac10ab1ac3c99">Violin2</a>-&gt;SetFillColorAlpha(kGreen, 0.35);</div>
+<div class="line"><span class="lineno">  916</span>  }</div>
+<div class="line"><span class="lineno">  917</span>  </div>
+<div class="line"><span class="lineno">  918</span>  <span class="comment">// Make a Legend page</span></div>
+<div class="line"><span class="lineno">  919</span>  <span class="keyword">auto</span> leg = std::make_unique&lt;TLegend&gt;(0.0, 0.0, 1.0, 1.0);</div>
+<div class="line"><span class="lineno">  920</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a> != <span class="keyword">nullptr</span>) leg-&gt;AddEntry(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>, <span class="stringliteral">&quot;Prior&quot;</span>, <span class="stringliteral">&quot;lpf&quot;</span>);</div>
+<div class="line"><span class="lineno">  921</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a92251598dc4d11508ddb63e3ff2ba4cb">Violin</a> != <span class="keyword">nullptr</span>)    leg-&gt;AddEntry(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a92251598dc4d11508ddb63e3ff2ba4cb">Violin</a>, <span class="stringliteral">&quot;Posterior&quot;</span>, <span class="stringliteral">&quot;lpf&quot;</span>);</div>
+<div class="line"><span class="lineno">  922</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#abb13e28854ba4a299e5ac10ab1ac3c99">Violin2</a> != <span class="keyword">nullptr</span>)   leg-&gt;AddEntry(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#abb13e28854ba4a299e5ac10ab1ac3c99">Violin2</a>, <span class="stringliteral">&quot;Second Violin&quot;</span>, <span class="stringliteral">&quot;lpf&quot;</span>);</div>
+<div class="line"><span class="lineno">  923</span>  <span class="keywordflow">if</span>(PlotAssym)             leg-&gt;AddEntry(PostGraph, <span class="stringliteral">&quot;HPD Assym&quot;</span>, <span class="stringliteral">&quot;lp&quot;</span>);</div>
+<div class="line"><span class="lineno">  924</span>  <span class="keywordflow">else</span>                      leg-&gt;AddEntry(Postfit, <span class="stringliteral">&quot;HPD&quot;</span>, <span class="stringliteral">&quot;lpf&quot;</span>);</div>
+<div class="line"><span class="lineno">  925</span> </div>
+<div class="line"><span class="lineno">  926</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;cd();</div>
+<div class="line"><span class="lineno">  927</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;Clear();</div>
+<div class="line"><span class="lineno">  928</span>  leg-&gt;Draw();</div>
+<div class="line"><span class="lineno">  929</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;Print((<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a78b45c4d250d7b2113925577bbce2dad">SaveName</a>+<span class="stringliteral">&quot;.pdf&quot;</span>).c_str());</div>
+<div class="line"><span class="lineno">  930</span>  </div>
+<div class="line"><span class="lineno">  931</span>   <span class="comment">// Do some fancy replacements</span></div>
+<div class="line"><span class="lineno">  932</span>  <a class="code hl_function" href="GetPostfitParamPlots_8cpp.html#acbde284ea52643cf3db23f6edc77850c">PrettifyTitles</a>(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>);</div>
+<div class="line"><span class="lineno">  933</span>  <span class="comment">//WARNING this is super hardcoded keep this in mind, ranges are diffefernt from one defined for postfit param</span></div>
+<div class="line"><span class="lineno">  934</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> XsecPlots = 8;</div>
+<div class="line"><span class="lineno">  935</span>  <span class="keywordtype">int</span> XsecOffset[XsecPlots] = {<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a3bb8bb8766f5ea15aa9ac31a1c9127e8">XsecStartingPos</a>, <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a3bb8bb8766f5ea15aa9ac31a1c9127e8">XsecStartingPos</a>+16, <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a3bb8bb8766f5ea15aa9ac31a1c9127e8">XsecStartingPos</a>+22, <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a3bb8bb8766f5ea15aa9ac31a1c9127e8">XsecStartingPos</a>+22+12, <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a3bb8bb8766f5ea15aa9ac31a1c9127e8">XsecStartingPos</a>+22+12+11, <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a3bb8bb8766f5ea15aa9ac31a1c9127e8">XsecStartingPos</a>+22+12+11+7,  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a3bb8bb8766f5ea15aa9ac31a1c9127e8">XsecStartingPos</a>+22+12+7+7+22, <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a3bb8bb8766f5ea15aa9ac31a1c9127e8">XsecStartingPos</a>+<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a5307771642312031f0050189b493a621">CrossSectionParameters</a>-<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#adf4147e2ac31f2cb321121a90cb8c853">FluxParameters</a>};</div>
+<div class="line"><span class="lineno">  936</span>  std::string titles[XsecPlots-1] = {<span class="stringliteral">&quot;CCQE&quot;</span>, <span class="stringliteral">&quot;Pauli Blocking and Optical Potential&quot;</span>, <span class="stringliteral">&quot;2p2h&quot;</span>, <span class="stringliteral">&quot;SPP&quot;</span>, <span class="stringliteral">&quot;FSI&quot;</span>, <span class="stringliteral">&quot;CC DIS, CC Multi #pi, CC coh., NC, #nu_{e}&quot;</span>, <span class="stringliteral">&quot;CCQE Binding Energy&quot;</span>};</div>
+<div class="line"><span class="lineno">  937</span> </div>
+<div class="line"><span class="lineno">  938</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; XsecPlots; ++i) </div>
+<div class="line"><span class="lineno">  939</span>  {</div>
+<div class="line"><span class="lineno">  940</span>    <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;cd();</div>
+<div class="line"><span class="lineno">  941</span>    <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>-&gt;SetTitle(titles[i-1].c_str());</div>
+<div class="line"><span class="lineno">  942</span>    <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>-&gt;GetXaxis()-&gt;SetRangeUser(XsecOffset[i-1], XsecOffset[i]);</div>
+<div class="line"><span class="lineno">  943</span>    <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>-&gt;GetYaxis()-&gt;SetRangeUser(-1.5, 2.5);</div>
+<div class="line"><span class="lineno">  944</span> </div>
+<div class="line"><span class="lineno">  945</span>    <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a92251598dc4d11508ddb63e3ff2ba4cb">Violin</a>-&gt;GetXaxis()-&gt;SetRangeUser(XsecOffset[i-1], XsecOffset[i]);</div>
+<div class="line"><span class="lineno">  946</span>    <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a92251598dc4d11508ddb63e3ff2ba4cb">Violin</a>-&gt;GetYaxis()-&gt;SetRangeUser(-1.5, 2.5);</div>
+<div class="line"><span class="lineno">  947</span>    <span class="keywordflow">if</span>(File2 != <span class="keyword">nullptr</span>) <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#abb13e28854ba4a299e5ac10ab1ac3c99">Violin2</a>-&gt;GetYaxis()-&gt;SetRangeUser(-1.5, 2.5);</div>
+<div class="line"><span class="lineno">  948</span>    </div>
+<div class="line"><span class="lineno">  949</span>    std::string name = <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>-&gt;GetTitle();</div>
+<div class="line"><span class="lineno">  950</span>    <span class="keywordflow">if</span> (name.find(<span class="stringliteral">&quot;SPP&quot;</span>) != std::string::npos)</div>
+<div class="line"><span class="lineno">  951</span>    { </div>
+<div class="line"><span class="lineno">  952</span>      <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>-&gt;GetYaxis()-&gt;SetRangeUser(-5., 25.); <span class="comment">//For RES Eb we need huge range</span></div>
+<div class="line"><span class="lineno">  953</span>      <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a92251598dc4d11508ddb63e3ff2ba4cb">Violin</a>-&gt;GetYaxis()-&gt;SetRangeUser(-5., 25.);</div>
+<div class="line"><span class="lineno">  954</span>      <span class="keywordflow">if</span>(File2 != <span class="keyword">nullptr</span>) <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#abb13e28854ba4a299e5ac10ab1ac3c99">Violin2</a>-&gt;GetYaxis()-&gt;SetRangeUser(-5., 25.);</div>
+<div class="line"><span class="lineno">  955</span>    }</div>
+<div class="line"><span class="lineno">  956</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (name.find(<span class="stringliteral">&quot;CCQE Binding Energy&quot;</span>) != std::string::npos)   </div>
+<div class="line"><span class="lineno">  957</span>    {</div>
+<div class="line"><span class="lineno">  958</span>      <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>-&gt;GetYaxis()-&gt;SetRangeUser(-10., 16.); <span class="comment">//For Eb we need bigger range</span></div>
+<div class="line"><span class="lineno">  959</span>      <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a92251598dc4d11508ddb63e3ff2ba4cb">Violin</a>-&gt;GetYaxis()-&gt;SetRangeUser(-10., 16.); <span class="comment">//For Eb we need bigger range</span></div>
+<div class="line"><span class="lineno">  960</span>      <span class="keywordflow">if</span>(File2 != <span class="keyword">nullptr</span>) <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#abb13e28854ba4a299e5ac10ab1ac3c99">Violin2</a>-&gt;GetYaxis()-&gt;SetRangeUser(-10., 16.);</div>
+<div class="line"><span class="lineno">  961</span>    }</div>
+<div class="line"><span class="lineno">  962</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (name.find(<span class="stringliteral">&quot;FSI&quot;</span>) != std::string::npos)   </div>
+<div class="line"><span class="lineno">  963</span>    {</div>
+<div class="line"><span class="lineno">  964</span>      <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>-&gt;GetYaxis()-&gt;SetRangeUser(-0.5, 2.8);</div>
+<div class="line"><span class="lineno">  965</span>      <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a92251598dc4d11508ddb63e3ff2ba4cb">Violin</a>-&gt;GetYaxis()-&gt;SetRangeUser(-0.5, 2.8);</div>
+<div class="line"><span class="lineno">  966</span>      <span class="keywordflow">if</span>(File2 != <span class="keyword">nullptr</span>) <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#abb13e28854ba4a299e5ac10ab1ac3c99">Violin2</a>-&gt;GetYaxis()-&gt;SetRangeUser(-0.5, 2.8);</div>
+<div class="line"><span class="lineno">  967</span>    }</div>
+<div class="line"><span class="lineno">  968</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (name.find(<span class="stringliteral">&quot;CCQE&quot;</span>) != std::string::npos)   </div>
+<div class="line"><span class="lineno">  969</span>    {</div>
+<div class="line"><span class="lineno">  970</span>      <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>-&gt;GetYaxis()-&gt;SetRangeUser(-2., 3.);</div>
+<div class="line"><span class="lineno">  971</span>      <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a92251598dc4d11508ddb63e3ff2ba4cb">Violin</a>-&gt;GetYaxis()-&gt;SetRangeUser(-2., 3.);</div>
+<div class="line"><span class="lineno">  972</span>      <span class="keywordflow">if</span>(File2 != <span class="keyword">nullptr</span>) <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#abb13e28854ba4a299e5ac10ab1ac3c99">Violin2</a>-&gt;GetYaxis()-&gt;SetRangeUser(-2., 3.);</div>
+<div class="line"><span class="lineno">  973</span>    }</div>
+<div class="line"><span class="lineno">  974</span>    <span class="comment">//KS: ROOT6 has some additional options, consider updating it. more https://root.cern/doc/master/classTHistPainter.html#HP140b</span></div>
+<div class="line"><span class="lineno">  975</span>    <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>-&gt;Draw(<span class="stringliteral">&quot;violinX(03100300)&quot;</span>);</div>
+<div class="line"><span class="lineno">  976</span>    <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a92251598dc4d11508ddb63e3ff2ba4cb">Violin</a>-&gt;Draw(<span class="stringliteral">&quot;violinX(03100300) SAME&quot;</span>);</div>
+<div class="line"><span class="lineno">  977</span>    <span class="keywordflow">if</span>(File2 != <span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno">  978</span>    {</div>
+<div class="line"><span class="lineno">  979</span>      <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#abb13e28854ba4a299e5ac10ab1ac3c99">Violin2</a>-&gt;GetXaxis()-&gt;SetRangeUser(XsecOffset[i-1], XsecOffset[i]);</div>
+<div class="line"><span class="lineno">  980</span>      <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#abb13e28854ba4a299e5ac10ab1ac3c99">Violin2</a>-&gt;GetXaxis()-&gt;SetRangeUser(XsecOffset[i-1], XsecOffset[i]);</div>
+<div class="line"><span class="lineno">  981</span>      <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#abb13e28854ba4a299e5ac10ab1ac3c99">Violin2</a>-&gt;Draw(<span class="stringliteral">&quot;violinX(03100300) SAME&quot;</span>);</div>
+<div class="line"><span class="lineno">  982</span>    }</div>
+<div class="line"><span class="lineno">  983</span>    <span class="keywordflow">if</span> (Postfit != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">  984</span>      Postfit-&gt;GetXaxis()-&gt;SetRangeUser(XsecOffset[i-1], XsecOffset[i]);</div>
+<div class="line"><span class="lineno">  985</span>      <span class="keywordflow">if</span>(!PlotAssym) Postfit-&gt;Draw(<span class="stringliteral">&quot;SAME&quot;</span>);</div>
+<div class="line"><span class="lineno">  986</span>    }</div>
+<div class="line"><span class="lineno">  987</span>    <span class="keywordflow">if</span> (PostGraph != <span class="keyword">nullptr</span>) {</div>
+<div class="line"><span class="lineno">  988</span>      PostGraph-&gt;GetXaxis()-&gt;SetRangeUser(XsecOffset[i-1], XsecOffset[i]);</div>
+<div class="line"><span class="lineno">  989</span>      <span class="keywordflow">if</span>(PlotAssym) PostGraph-&gt;Draw(<span class="stringliteral">&quot;P SAME&quot;</span>);</div>
+<div class="line"><span class="lineno">  990</span>    }</div>
+<div class="line"><span class="lineno">  991</span>    </div>
+<div class="line"><span class="lineno">  992</span>    <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;Print((<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a78b45c4d250d7b2113925577bbce2dad">SaveName</a>+<span class="stringliteral">&quot;.pdf&quot;</span>).c_str());</div>
+<div class="line"><span class="lineno">  993</span>  }</div>
+<div class="line"><span class="lineno">  994</span>  </div>
+<div class="line"><span class="lineno">  995</span>  <span class="comment">//KS: Now flux</span></div>
+<div class="line"><span class="lineno">  996</span>  <span class="keywordflow">if</span>(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#adf4147e2ac31f2cb321121a90cb8c853">FluxParameters</a> &gt; 0)</div>
+<div class="line"><span class="lineno">  997</span>  {</div>
+<div class="line"><span class="lineno">  998</span>    <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;SetBottomMargin(0.1);</div>
+<div class="line"><span class="lineno">  999</span>    gStyle-&gt;SetOptTitle(0);</div>
+<div class="line"><span class="lineno"> 1000</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> FluxInterval = 25;</div>
+<div class="line"><span class="lineno"> 1001</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> nFlux = <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a3bb8bb8766f5ea15aa9ac31a1c9127e8">XsecStartingPos</a>+<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a5307771642312031f0050189b493a621">CrossSectionParameters</a>-<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#adf4147e2ac31f2cb321121a90cb8c853">FluxParameters</a>; nFlux &lt; <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a3bb8bb8766f5ea15aa9ac31a1c9127e8">XsecStartingPos</a>+<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a5307771642312031f0050189b493a621">CrossSectionParameters</a>; nFlux += FluxInterval)</div>
+<div class="line"><span class="lineno"> 1002</span>    {</div>
+<div class="line"><span class="lineno"> 1003</span>      <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>-&gt;GetXaxis()-&gt;SetRangeUser(nFlux, nFlux+FluxInterval);</div>
+<div class="line"><span class="lineno"> 1004</span>      <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a92251598dc4d11508ddb63e3ff2ba4cb">Violin</a>-&gt;GetXaxis()-&gt;SetRangeUser(nFlux, nFlux+FluxInterval);</div>
+<div class="line"><span class="lineno"> 1005</span>      Postfit-&gt;GetXaxis()-&gt;SetRangeUser(nFlux, nFlux+FluxInterval);</div>
+<div class="line"><span class="lineno"> 1006</span>      PostGraph-&gt;GetXaxis()-&gt;SetRangeUser(nFlux, nFlux+FluxInterval);</div>
+<div class="line"><span class="lineno"> 1007</span> </div>
+<div class="line"><span class="lineno"> 1008</span>      <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>-&gt;GetYaxis()-&gt;SetRangeUser(0.7, 1.3);</div>
+<div class="line"><span class="lineno"> 1009</span>      <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a92251598dc4d11508ddb63e3ff2ba4cb">Violin</a>-&gt;GetYaxis()-&gt;SetRangeUser(0.7, 1.3);</div>
+<div class="line"><span class="lineno"> 1010</span>      Postfit-&gt;GetYaxis()-&gt;SetRangeUser(0.7, 1.3);</div>
+<div class="line"><span class="lineno"> 1011</span>      PostGraph-&gt;GetYaxis()-&gt;SetRangeUser(0.7, 1.3);</div>
+<div class="line"><span class="lineno"> 1012</span> </div>
+<div class="line"><span class="lineno"> 1013</span>      <span class="comment">//KS: ROOT6 has some additional options, consider updaiting it. more https://root.cern/doc/master/classTHistPainter.html#HP140b</span></div>
+<div class="line"><span class="lineno"> 1014</span>      <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>-&gt;Draw(<span class="stringliteral">&quot;violinX(03100300)&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1015</span>      <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a92251598dc4d11508ddb63e3ff2ba4cb">Violin</a>-&gt;Draw(<span class="stringliteral">&quot;violinX(03100300) SAME&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1016</span>      <span class="keywordflow">if</span>(File2 != <span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno"> 1017</span>      {</div>
+<div class="line"><span class="lineno"> 1018</span>        <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#abb13e28854ba4a299e5ac10ab1ac3c99">Violin2</a>-&gt;GetYaxis()-&gt;SetRangeUser(0.7, 1.3);</div>
+<div class="line"><span class="lineno"> 1019</span>        <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#abb13e28854ba4a299e5ac10ab1ac3c99">Violin2</a>-&gt;GetXaxis()-&gt;SetRangeUser(nFlux, nFlux+FluxInterval);</div>
+<div class="line"><span class="lineno"> 1020</span>        <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#abb13e28854ba4a299e5ac10ab1ac3c99">Violin2</a>-&gt;Draw(<span class="stringliteral">&quot;violinX(03100300) SAME&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1021</span>      }</div>
+<div class="line"><span class="lineno"> 1022</span>      <span class="keywordflow">if</span>(PlotAssym) PostGraph-&gt;Draw(<span class="stringliteral">&quot;P SAME&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1023</span>      <span class="keywordflow">else</span> Postfit-&gt;Draw(<span class="stringliteral">&quot;SAME&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1024</span>      <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;Print((<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a78b45c4d250d7b2113925577bbce2dad">SaveName</a>+<span class="stringliteral">&quot;.pdf&quot;</span>).c_str());</div>
+<div class="line"><span class="lineno"> 1025</span>    }</div>
+<div class="line"><span class="lineno"> 1026</span>  }</div>
+<div class="line"><span class="lineno"> 1027</span>  <span class="comment">//KS all other parmeters just in case</span></div>
+<div class="line"><span class="lineno"> 1028</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>-&gt;GetXaxis()-&gt;SetRangeUser(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a5307771642312031f0050189b493a621">CrossSectionParameters</a>, <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#ae4842c1619a902b2761696f3849889a1">nBins</a>);</div>
+<div class="line"><span class="lineno"> 1029</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a92251598dc4d11508ddb63e3ff2ba4cb">Violin</a>-&gt;GetXaxis()-&gt;SetRangeUser(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a5307771642312031f0050189b493a621">CrossSectionParameters</a>, <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#ae4842c1619a902b2761696f3849889a1">nBins</a>);</div>
+<div class="line"><span class="lineno"> 1030</span>  Postfit-&gt;GetXaxis()-&gt;SetRangeUser(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a5307771642312031f0050189b493a621">CrossSectionParameters</a>, <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#ae4842c1619a902b2761696f3849889a1">nBins</a>);</div>
+<div class="line"><span class="lineno"> 1031</span>  PostGraph-&gt;GetXaxis()-&gt;SetRangeUser(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a5307771642312031f0050189b493a621">CrossSectionParameters</a>, <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#ae4842c1619a902b2761696f3849889a1">nBins</a>);</div>
+<div class="line"><span class="lineno"> 1032</span> </div>
+<div class="line"><span class="lineno"> 1033</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>-&gt;GetYaxis()-&gt;SetRangeUser(-3.4, 3.4);</div>
+<div class="line"><span class="lineno"> 1034</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a92251598dc4d11508ddb63e3ff2ba4cb">Violin</a>-&gt;GetYaxis()-&gt;SetRangeUser(-3.4, 3.4);</div>
+<div class="line"><span class="lineno"> 1035</span>  Postfit-&gt;GetYaxis()-&gt;SetRangeUser(-3.4, 3.4);</div>
+<div class="line"><span class="lineno"> 1036</span>  PostGraph-&gt;GetYaxis()-&gt;SetRangeUser(-3.4, 3.4);</div>
+<div class="line"><span class="lineno"> 1037</span>         </div>
+<div class="line"><span class="lineno"> 1038</span>  <span class="comment">//KS: ROOT6 has some additional options, consider updating it. more https://root.cern/doc/master/classTHistPainter.html#HP140b</span></div>
+<div class="line"><span class="lineno"> 1039</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>-&gt;Draw(<span class="stringliteral">&quot;violinX(03100300)&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1040</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a92251598dc4d11508ddb63e3ff2ba4cb">Violin</a>-&gt;Draw(<span class="stringliteral">&quot;violinX(03100300) SAME&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1041</span>  <span class="keywordflow">if</span>(File2 != <span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno"> 1042</span>  {</div>
+<div class="line"><span class="lineno"> 1043</span>    <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#abb13e28854ba4a299e5ac10ab1ac3c99">Violin2</a>-&gt;GetXaxis()-&gt;SetRangeUser(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a5307771642312031f0050189b493a621">CrossSectionParameters</a>, <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#ae4842c1619a902b2761696f3849889a1">nBins</a>);</div>
+<div class="line"><span class="lineno"> 1044</span>    <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#abb13e28854ba4a299e5ac10ab1ac3c99">Violin2</a>-&gt;GetYaxis()-&gt;SetRangeUser(-3.4, 3.4);</div>
+<div class="line"><span class="lineno"> 1045</span>    <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#abb13e28854ba4a299e5ac10ab1ac3c99">Violin2</a>-&gt;Draw(<span class="stringliteral">&quot;violinX(03100300) SAME&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1046</span>  }</div>
+<div class="line"><span class="lineno"> 1047</span>  <span class="keywordflow">if</span>(PlotAssym) PostGraph-&gt;Draw(<span class="stringliteral">&quot;P SAME&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1048</span>  <span class="keywordflow">else</span> Postfit-&gt;Draw(<span class="stringliteral">&quot;SAME&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1049</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;Print((<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a78b45c4d250d7b2113925577bbce2dad">SaveName</a>+<span class="stringliteral">&quot;.pdf&quot;</span>).c_str());</div>
+<div class="line"><span class="lineno"> 1050</span>     </div>
+<div class="line"><span class="lineno"> 1051</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>-&gt;Print((<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a78b45c4d250d7b2113925577bbce2dad">SaveName</a>+<span class="stringliteral">&quot;.pdf]&quot;</span>).c_str());</div>
+<div class="line"><span class="lineno"> 1052</span>  <span class="keyword">delete</span> <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aec2fb4e7af6c83a8ccbdfcfcb7b76a83">canv</a>;</div>
+<div class="line"><span class="lineno"> 1053</span>  <span class="keyword">delete</span> <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a>;</div>
+<div class="line"><span class="lineno"> 1054</span>  <span class="keyword">delete</span> <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#a92251598dc4d11508ddb63e3ff2ba4cb">Violin</a>;</div>
+<div class="line"><span class="lineno"> 1055</span>  <span class="keywordflow">if</span>(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#abb13e28854ba4a299e5ac10ab1ac3c99">Violin2</a> != <span class="keyword">nullptr</span>) <span class="keyword">delete</span> <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#abb13e28854ba4a299e5ac10ab1ac3c99">Violin2</a>;</div>
+<div class="line"><span class="lineno"> 1056</span>  <span class="keyword">delete</span> Postfit;</div>
+<div class="line"><span class="lineno"> 1057</span>  <span class="keyword">delete</span> PostGraph;</div>
+<div class="line"><span class="lineno"> 1058</span>  File1-&gt;Close();</div>
+<div class="line"><span class="lineno"> 1059</span>  <span class="keywordflow">if</span>(File2 != <span class="keyword">nullptr</span>)</div>
+<div class="line"><span class="lineno"> 1060</span>  {</div>
+<div class="line"><span class="lineno"> 1061</span>    File2-&gt;Close();</div>
+<div class="line"><span class="lineno"> 1062</span>  }</div>
+<div class="line"><span class="lineno"> 1063</span>}</div>
 <div class="ttc" id="aGetPostfitParamPlots_8cpp_html_a3bb8bb8766f5ea15aa9ac31a1c9127e8"><div class="ttname"><a href="GetPostfitParamPlots_8cpp.html#a3bb8bb8766f5ea15aa9ac31a1c9127e8">XsecStartingPos</a></div><div class="ttdeci">int XsecStartingPos</div><div class="ttdef"><b>Definition:</b> <a href="GetPostfitParamPlots_8cpp_source.html#l00060">GetPostfitParamPlots.cpp:60</a></div></div>
 <div class="ttc" id="aGetPostfitParamPlots_8cpp_html_a458a0e952db082d150759dc07985394a"><div class="ttname"><a href="GetPostfitParamPlots_8cpp.html#a458a0e952db082d150759dc07985394a">ViolinPre</a></div><div class="ttdeci">TH2D * ViolinPre</div><div class="ttdef"><b>Definition:</b> <a href="GetPostfitParamPlots_8cpp_source.html#l00048">GetPostfitParamPlots.cpp:48</a></div></div>
 <div class="ttc" id="aGetPostfitParamPlots_8cpp_html_a5307771642312031f0050189b493a621"><div class="ttname"><a href="GetPostfitParamPlots_8cpp.html#a5307771642312031f0050189b493a621">CrossSectionParameters</a></div><div class="ttdeci">int CrossSectionParameters</div><div class="ttdef"><b>Definition:</b> <a href="GetPostfitParamPlots_8cpp_source.html#l00059">GetPostfitParamPlots.cpp:59</a></div></div>
 <div class="ttc" id="aGetPostfitParamPlots_8cpp_html_a92251598dc4d11508ddb63e3ff2ba4cb"><div class="ttname"><a href="GetPostfitParamPlots_8cpp.html#a92251598dc4d11508ddb63e3ff2ba4cb">Violin</a></div><div class="ttdeci">TH2D * Violin</div><div class="ttdef"><b>Definition:</b> <a href="GetPostfitParamPlots_8cpp_source.html#l00046">GetPostfitParamPlots.cpp:46</a></div></div>
-<div class="ttc" id="aGetPostfitParamPlots_8cpp_html_ab5cb45b8ada99453683a7021e520f734"><div class="ttname"><a href="GetPostfitParamPlots_8cpp.html#ab5cb45b8ada99453683a7021e520f734">MakeTGraphAsymmErrors</a></div><div class="ttdeci">TGraphAsymmErrors * MakeTGraphAsymmErrors(std::shared_ptr&lt; TFile &gt; File)</div><div class="ttdef"><b>Definition:</b> <a href="GetPostfitParamPlots_8cpp_source.html#l00788">GetPostfitParamPlots.cpp:788</a></div></div>
+<div class="ttc" id="aGetPostfitParamPlots_8cpp_html_ab5cb45b8ada99453683a7021e520f734"><div class="ttname"><a href="GetPostfitParamPlots_8cpp.html#ab5cb45b8ada99453683a7021e520f734">MakeTGraphAsymmErrors</a></div><div class="ttdeci">TGraphAsymmErrors * MakeTGraphAsymmErrors(std::shared_ptr&lt; TFile &gt; File)</div><div class="ttdef"><b>Definition:</b> <a href="GetPostfitParamPlots_8cpp_source.html#l00799">GetPostfitParamPlots.cpp:799</a></div></div>
 <div class="ttc" id="aGetPostfitParamPlots_8cpp_html_abb13e28854ba4a299e5ac10ab1ac3c99"><div class="ttname"><a href="GetPostfitParamPlots_8cpp.html#abb13e28854ba4a299e5ac10ab1ac3c99">Violin2</a></div><div class="ttdeci">TH2D * Violin2</div><div class="ttdef"><b>Definition:</b> <a href="GetPostfitParamPlots_8cpp_source.html#l00047">GetPostfitParamPlots.cpp:47</a></div></div>
 <div class="ttc" id="aGetPostfitParamPlots_8cpp_html_acbde284ea52643cf3db23f6edc77850c"><div class="ttname"><a href="GetPostfitParamPlots_8cpp.html#acbde284ea52643cf3db23f6edc77850c">PrettifyTitles</a></div><div class="ttdeci">void PrettifyTitles(TH1D *Hist)</div><div class="ttdef"><b>Definition:</b> <a href="GetPostfitParamPlots_8cpp_source.html#l00098">GetPostfitParamPlots.cpp:98</a></div></div>
 <div class="ttc" id="aGetPostfitParamPlots_8cpp_html_adf4147e2ac31f2cb321121a90cb8c853"><div class="ttname"><a href="GetPostfitParamPlots_8cpp.html#adf4147e2ac31f2cb321121a90cb8c853">FluxParameters</a></div><div class="ttdeci">int FluxParameters</div><div class="ttdef"><b>Definition:</b> <a href="GetPostfitParamPlots_8cpp_source.html#l00062">GetPostfitParamPlots.cpp:62</a></div></div>
@@ -904,52 +919,52 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="GetPostfitParamPlots_8cpp_source.html#l01054">1054</a> of file <a class="el" href="GetPostfitParamPlots_8cpp_source.html">GetPostfitParamPlots.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno"> 1055</span>{</div>
-<div class="line"><span class="lineno"> 1056</span>  <a class="code hl_function" href="MaCh3Logger_8h.html#aa603c55ea73cd86d1994901227883e1e">SetMaCh3LoggerFormat</a>();</div>
-<div class="line"><span class="lineno"> 1057</span> </div>
-<div class="line"><span class="lineno"> 1058</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aa6f3c9a8cee8f72f6f8ce65b720a2d40">man</a> = <span class="keyword">new</span> <a class="code hl_class" href="classMaCh3Plotting_1_1PlottingManager.html">MaCh3Plotting::PlottingManager</a>();</div>
-<div class="line"><span class="lineno"> 1059</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aa6f3c9a8cee8f72f6f8ce65b720a2d40">man</a>-&gt;<a class="code hl_function" href="classMaCh3Plotting_1_1PlottingManager.html#a6abd05428a9f8827c67a22bd6f8ffce3">parseInputs</a>(argc, argv);</div>
-<div class="line"><span class="lineno"> 1060</span>  std::cout &lt;&lt; std::endl &lt;&lt; std::endl &lt;&lt; <span class="stringliteral">&quot;====================&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno"> 1061</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aa6f3c9a8cee8f72f6f8ce65b720a2d40">man</a>-&gt;<a class="code hl_function" href="classMaCh3Plotting_1_1PlottingManager.html#afcde3593be0894c7c1dbef6fa9055dee">input</a>().<a class="code hl_function" href="classMaCh3Plotting_1_1InputManager.html#a2f8f94ca3b6e0d2b34c75dee24b81e49">getFile</a>(0).<a class="code hl_variable" href="structMaCh3Plotting_1_1InputFile.html#a11c074dd45647dd2957987f8b55f9d73">file</a>-&gt;ls();</div>
-<div class="line"><span class="lineno"> 1062</span> </div>
-<div class="line"><span class="lineno"> 1063</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aa6f3c9a8cee8f72f6f8ce65b720a2d40">man</a>-&gt;<a class="code hl_function" href="classMaCh3Plotting_1_1PlottingManager.html#a46b6bdc0f207ca3243eef5c23966bcd1">setExec</a>(<span class="stringliteral">&quot;GetPostfitParamPlots&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1064</span> </div>
-<div class="line"><span class="lineno"> 1065</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aa6f3c9a8cee8f72f6f8ce65b720a2d40">man</a>-&gt;<a class="code hl_function" href="classMaCh3Plotting_1_1PlottingManager.html#ad07460f382733b379d0f122d6b0322c7">style</a>().<a class="code hl_function" href="classMaCh3Plotting_1_1StyleManager.html#a4b1dd7b013237cbb4b80d08373186484">setPalette</a>(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aa6f3c9a8cee8f72f6f8ce65b720a2d40">man</a>-&gt;<a class="code hl_function" href="classMaCh3Plotting_1_1PlottingManager.html#afcd58efd96096596d4ab3f2a2b7f78af">getOption</a>&lt;std::string&gt;(<span class="stringliteral">&quot;colorPalette&quot;</span>));</div>
-<div class="line"><span class="lineno"> 1066</span> </div>
-<div class="line"><span class="lineno"> 1067</span>  <a class="code hl_function" href="GetPostfitParamPlots_8cpp.html#ad53f55565623ac6efd066209b1821ea6">GetPostfitParamPlots</a>();</div>
+<p class="definition">Definition at line <a class="el" href="GetPostfitParamPlots_8cpp_source.html#l01065">1065</a> of file <a class="el" href="GetPostfitParamPlots_8cpp_source.html">GetPostfitParamPlots.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno"> 1066</span>{</div>
+<div class="line"><span class="lineno"> 1067</span>  <a class="code hl_function" href="MaCh3Logger_8h.html#aa603c55ea73cd86d1994901227883e1e">SetMaCh3LoggerFormat</a>();</div>
 <div class="line"><span class="lineno"> 1068</span> </div>
-<div class="line"><span class="lineno"> 1069</span>  <span class="keywordflow">if</span> (argc != 2 &amp;&amp; argc != 3 &amp;&amp; argc !=4)</div>
-<div class="line"><span class="lineno"> 1070</span>  {</div>
-<div class="line"><span class="lineno"> 1071</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a07ff6d6a15b24f94afc88a1b89779beb">MACH3LOG_CRITICAL</a>(<span class="stringliteral">&quot;Invalid command line options specified&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1072</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a07ff6d6a15b24f94afc88a1b89779beb">MACH3LOG_CRITICAL</a>(<span class="stringliteral">&quot;How to use: {} &lt;MCMC_Processor_Output&gt;.root&quot;</span>, argv[0]);</div>
-<div class="line"><span class="lineno"> 1073</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a07ff6d6a15b24f94afc88a1b89779beb">MACH3LOG_CRITICAL</a>(<span class="stringliteral">&quot;You can add up to 3 different files&quot;</span>);</div>
-<div class="line"><span class="lineno"> 1074</span>    <span class="keywordflow">throw</span> <a class="code hl_class" href="classMaCh3Exception.html">MaCh3Exception</a>(__FILE__, __LINE__);</div>
-<div class="line"><span class="lineno"> 1075</span>  }</div>
-<div class="line"><span class="lineno"> 1076</span> </div>
-<div class="line"><span class="lineno"> 1077</span>  <span class="keywordflow">if</span> (argc == 2)</div>
-<div class="line"><span class="lineno"> 1078</span>  {</div>
-<div class="line"><span class="lineno"> 1079</span>    std::string filename = argv[1];</div>
-<div class="line"><span class="lineno"> 1080</span>    <a class="code hl_function" href="GetPostfitParamPlots_8cpp.html#a8681598ff6721b09a9d1f03c4efe114d">GetViolinPlots</a>(filename);</div>
-<div class="line"><span class="lineno"> 1081</span>  }</div>
-<div class="line"><span class="lineno"> 1082</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (argc == 3)</div>
-<div class="line"><span class="lineno"> 1083</span>  {</div>
-<div class="line"><span class="lineno"> 1084</span>    std::string filename1 = argv[1];</div>
-<div class="line"><span class="lineno"> 1085</span>    std::string filename2 = argv[2];</div>
-<div class="line"><span class="lineno"> 1086</span>    <a class="code hl_function" href="GetPostfitParamPlots_8cpp.html#a8681598ff6721b09a9d1f03c4efe114d">GetViolinPlots</a>(filename1, filename2);</div>
-<div class="line"><span class="lineno"> 1087</span>  }</div>
-<div class="line"><span class="lineno"> 1088</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (argc == 4)</div>
+<div class="line"><span class="lineno"> 1069</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aa6f3c9a8cee8f72f6f8ce65b720a2d40">man</a> = <span class="keyword">new</span> <a class="code hl_class" href="classMaCh3Plotting_1_1PlottingManager.html">MaCh3Plotting::PlottingManager</a>();</div>
+<div class="line"><span class="lineno"> 1070</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aa6f3c9a8cee8f72f6f8ce65b720a2d40">man</a>-&gt;<a class="code hl_function" href="classMaCh3Plotting_1_1PlottingManager.html#a6abd05428a9f8827c67a22bd6f8ffce3">parseInputs</a>(argc, argv);</div>
+<div class="line"><span class="lineno"> 1071</span>  std::cout &lt;&lt; std::endl &lt;&lt; std::endl &lt;&lt; <span class="stringliteral">&quot;====================&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno"> 1072</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aa6f3c9a8cee8f72f6f8ce65b720a2d40">man</a>-&gt;<a class="code hl_function" href="classMaCh3Plotting_1_1PlottingManager.html#afcde3593be0894c7c1dbef6fa9055dee">input</a>().<a class="code hl_function" href="classMaCh3Plotting_1_1InputManager.html#a2f8f94ca3b6e0d2b34c75dee24b81e49">getFile</a>(0).<a class="code hl_variable" href="structMaCh3Plotting_1_1InputFile.html#a11c074dd45647dd2957987f8b55f9d73">file</a>-&gt;ls();</div>
+<div class="line"><span class="lineno"> 1073</span> </div>
+<div class="line"><span class="lineno"> 1074</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aa6f3c9a8cee8f72f6f8ce65b720a2d40">man</a>-&gt;<a class="code hl_function" href="classMaCh3Plotting_1_1PlottingManager.html#a46b6bdc0f207ca3243eef5c23966bcd1">setExec</a>(<span class="stringliteral">&quot;GetPostfitParamPlots&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1075</span> </div>
+<div class="line"><span class="lineno"> 1076</span>  <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aa6f3c9a8cee8f72f6f8ce65b720a2d40">man</a>-&gt;<a class="code hl_function" href="classMaCh3Plotting_1_1PlottingManager.html#ad07460f382733b379d0f122d6b0322c7">style</a>().<a class="code hl_function" href="classMaCh3Plotting_1_1StyleManager.html#a4b1dd7b013237cbb4b80d08373186484">setPalette</a>(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aa6f3c9a8cee8f72f6f8ce65b720a2d40">man</a>-&gt;<a class="code hl_function" href="classMaCh3Plotting_1_1PlottingManager.html#afcd58efd96096596d4ab3f2a2b7f78af">getOption</a>&lt;std::string&gt;(<span class="stringliteral">&quot;colorPalette&quot;</span>));</div>
+<div class="line"><span class="lineno"> 1077</span> </div>
+<div class="line"><span class="lineno"> 1078</span>  <a class="code hl_function" href="GetPostfitParamPlots_8cpp.html#ad53f55565623ac6efd066209b1821ea6">GetPostfitParamPlots</a>();</div>
+<div class="line"><span class="lineno"> 1079</span> </div>
+<div class="line"><span class="lineno"> 1080</span>  <span class="keywordflow">if</span> (argc != 2 &amp;&amp; argc != 3 &amp;&amp; argc !=4)</div>
+<div class="line"><span class="lineno"> 1081</span>  {</div>
+<div class="line"><span class="lineno"> 1082</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a07ff6d6a15b24f94afc88a1b89779beb">MACH3LOG_CRITICAL</a>(<span class="stringliteral">&quot;Invalid command line options specified&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1083</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a07ff6d6a15b24f94afc88a1b89779beb">MACH3LOG_CRITICAL</a>(<span class="stringliteral">&quot;How to use: {} &lt;MCMC_Processor_Output&gt;.root&quot;</span>, argv[0]);</div>
+<div class="line"><span class="lineno"> 1084</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a07ff6d6a15b24f94afc88a1b89779beb">MACH3LOG_CRITICAL</a>(<span class="stringliteral">&quot;You can add up to 3 different files&quot;</span>);</div>
+<div class="line"><span class="lineno"> 1085</span>    <span class="keywordflow">throw</span> <a class="code hl_class" href="classMaCh3Exception.html">MaCh3Exception</a>(__FILE__, __LINE__);</div>
+<div class="line"><span class="lineno"> 1086</span>  }</div>
+<div class="line"><span class="lineno"> 1087</span> </div>
+<div class="line"><span class="lineno"> 1088</span>  <span class="keywordflow">if</span> (argc == 2)</div>
 <div class="line"><span class="lineno"> 1089</span>  {</div>
-<div class="line"><span class="lineno"> 1090</span>    std::string filename1 = argv[1];</div>
-<div class="line"><span class="lineno"> 1091</span>    std::string filename2 = argv[2];</div>
-<div class="line"><span class="lineno"> 1092</span>    std::string filename3 = argv[3];</div>
-<div class="line"><span class="lineno"> 1093</span>    <span class="comment">//KS: Violin plot currently not supported by three file veriosn although it should be super easy to adapt</span></div>
-<div class="line"><span class="lineno"> 1094</span>  }</div>
-<div class="line"><span class="lineno"> 1095</span>    </div>
-<div class="line"><span class="lineno"> 1096</span>  <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno"> 1097</span>}</div>
-<div class="ttc" id="aGetPostfitParamPlots_8cpp_html_a8681598ff6721b09a9d1f03c4efe114d"><div class="ttname"><a href="GetPostfitParamPlots_8cpp.html#a8681598ff6721b09a9d1f03c4efe114d">GetViolinPlots</a></div><div class="ttdeci">void GetViolinPlots(std::string FileName1=&quot;&quot;, std::string FileName2=&quot;&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="GetPostfitParamPlots_8cpp_source.html#l00825">GetPostfitParamPlots.cpp:825</a></div></div>
-<div class="ttc" id="aGetPostfitParamPlots_8cpp_html_ad53f55565623ac6efd066209b1821ea6"><div class="ttname"><a href="GetPostfitParamPlots_8cpp.html#ad53f55565623ac6efd066209b1821ea6">GetPostfitParamPlots</a></div><div class="ttdeci">void GetPostfitParamPlots()</div><div class="ttdef"><b>Definition:</b> <a href="GetPostfitParamPlots_8cpp_source.html#l00693">GetPostfitParamPlots.cpp:693</a></div></div>
+<div class="line"><span class="lineno"> 1090</span>    std::string filename = argv[1];</div>
+<div class="line"><span class="lineno"> 1091</span>    <a class="code hl_function" href="GetPostfitParamPlots_8cpp.html#a8681598ff6721b09a9d1f03c4efe114d">GetViolinPlots</a>(filename);</div>
+<div class="line"><span class="lineno"> 1092</span>  }</div>
+<div class="line"><span class="lineno"> 1093</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (argc == 3)</div>
+<div class="line"><span class="lineno"> 1094</span>  {</div>
+<div class="line"><span class="lineno"> 1095</span>    std::string filename1 = argv[1];</div>
+<div class="line"><span class="lineno"> 1096</span>    std::string filename2 = argv[2];</div>
+<div class="line"><span class="lineno"> 1097</span>    <a class="code hl_function" href="GetPostfitParamPlots_8cpp.html#a8681598ff6721b09a9d1f03c4efe114d">GetViolinPlots</a>(filename1, filename2);</div>
+<div class="line"><span class="lineno"> 1098</span>  }</div>
+<div class="line"><span class="lineno"> 1099</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (argc == 4)</div>
+<div class="line"><span class="lineno"> 1100</span>  {</div>
+<div class="line"><span class="lineno"> 1101</span>    std::string filename1 = argv[1];</div>
+<div class="line"><span class="lineno"> 1102</span>    std::string filename2 = argv[2];</div>
+<div class="line"><span class="lineno"> 1103</span>    std::string filename3 = argv[3];</div>
+<div class="line"><span class="lineno"> 1104</span>    <span class="comment">//KS: Violin plot currently not supported by three file veriosn although it should be super easy to adapt</span></div>
+<div class="line"><span class="lineno"> 1105</span>  }</div>
+<div class="line"><span class="lineno"> 1106</span>    </div>
+<div class="line"><span class="lineno"> 1107</span>  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno"> 1108</span>}</div>
+<div class="ttc" id="aGetPostfitParamPlots_8cpp_html_a8681598ff6721b09a9d1f03c4efe114d"><div class="ttname"><a href="GetPostfitParamPlots_8cpp.html#a8681598ff6721b09a9d1f03c4efe114d">GetViolinPlots</a></div><div class="ttdeci">void GetViolinPlots(std::string FileName1=&quot;&quot;, std::string FileName2=&quot;&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="GetPostfitParamPlots_8cpp_source.html#l00836">GetPostfitParamPlots.cpp:836</a></div></div>
+<div class="ttc" id="aGetPostfitParamPlots_8cpp_html_ad53f55565623ac6efd066209b1821ea6"><div class="ttname"><a href="GetPostfitParamPlots_8cpp.html#ad53f55565623ac6efd066209b1821ea6">GetPostfitParamPlots</a></div><div class="ttdeci">void GetPostfitParamPlots()</div><div class="ttdef"><b>Definition:</b> <a href="GetPostfitParamPlots_8cpp_source.html#l00690">GetPostfitParamPlots.cpp:690</a></div></div>
 <div class="ttc" id="aMaCh3Logger_8h_html_a07ff6d6a15b24f94afc88a1b89779beb"><div class="ttname"><a href="MaCh3Logger_8h.html#a07ff6d6a15b24f94afc88a1b89779beb">MACH3LOG_CRITICAL</a></div><div class="ttdeci">#define MACH3LOG_CRITICAL</div><div class="ttdef"><b>Definition:</b> <a href="MaCh3Logger_8h_source.html#l00019">MaCh3Logger.h:19</a></div></div>
 <div class="ttc" id="aMaCh3Logger_8h_html_aa603c55ea73cd86d1994901227883e1e"><div class="ttname"><a href="MaCh3Logger_8h.html#aa603c55ea73cd86d1994901227883e1e">SetMaCh3LoggerFormat</a></div><div class="ttdeci">void SetMaCh3LoggerFormat()</div><div class="ttdoc">Set messaging format of the logger.</div><div class="ttdef"><b>Definition:</b> <a href="MaCh3Logger_8h_source.html#l00023">MaCh3Logger.h:23</a></div></div>
 <div class="ttc" id="aclassMaCh3Exception_html"><div class="ttname"><a href="classMaCh3Exception.html">MaCh3Exception</a></div><div class="ttdoc">Custom exception class for MaCh3 errors.</div><div class="ttdef"><b>Definition:</b> <a href="MaCh3Exception_8h_source.html#l00012">MaCh3Exception.h:12</a></div></div>
@@ -1009,7 +1024,6 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  516</span>}</div>
 <div class="ttc" id="aGetPostfitParamPlots_8cpp_html_a447545e50107fe970fde19c465f33700"><div class="ttname"><a href="GetPostfitParamPlots_8cpp.html#a447545e50107fe970fde19c465f33700">DrawPlots</a></div><div class="ttdeci">void DrawPlots(TCanvas *plotCanv, TH1D *PrefitCopy, std::vector&lt; TH1D * &gt;PostfitVec, TPad *mainPad, TPad *ratioPad)</div><div class="ttdef"><b>Definition:</b> <a href="GetPostfitParamPlots_8cpp_source.html#l00219">GetPostfitParamPlots.cpp:219</a></div></div>
 <div class="ttc" id="aGetPostfitParamPlots_8cpp_html_a6dfe886b2ff4881ee2434479a9028985"><div class="ttname"><a href="GetPostfitParamPlots_8cpp.html#a6dfe886b2ff4881ee2434479a9028985">FDParametersStartingPos</a></div><div class="ttdeci">int FDParametersStartingPos</div><div class="ttdef"><b>Definition:</b> <a href="GetPostfitParamPlots_8cpp_source.html#l00054">GetPostfitParamPlots.cpp:54</a></div></div>
-<div class="ttc" id="aGetPostfitParamPlots_8cpp_html_adf27e2a8c89392ebe0a2d6d7a65dab9e"><div class="ttname"><a href="GetPostfitParamPlots_8cpp.html#adf27e2a8c89392ebe0a2d6d7a65dab9e">PostfitHistVec</a></div><div class="ttdeci">std::vector&lt; TH1D * &gt; PostfitHistVec</div><div class="ttdef"><b>Definition:</b> <a href="GetPostfitParamPlots_8cpp_source.html#l00080">GetPostfitParamPlots.cpp:80</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1346,41 +1360,41 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="GetPostfitParamPlots_8cpp_source.html#l00788">788</a> of file <a class="el" href="GetPostfitParamPlots_8cpp_source.html">GetPostfitParamPlots.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  789</span>{</div>
-<div class="line"><span class="lineno">  790</span>  std::vector&lt;double&gt; x(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#ae4842c1619a902b2761696f3849889a1">nBins</a>);</div>
-<div class="line"><span class="lineno">  791</span>  std::vector&lt;double&gt; y(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#ae4842c1619a902b2761696f3849889a1">nBins</a>);</div>
-<div class="line"><span class="lineno">  792</span>  std::vector&lt;double&gt; exl(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#ae4842c1619a902b2761696f3849889a1">nBins</a>);</div>
-<div class="line"><span class="lineno">  793</span>  std::vector&lt;double&gt; eyl(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#ae4842c1619a902b2761696f3849889a1">nBins</a>);</div>
-<div class="line"><span class="lineno">  794</span>  std::vector&lt;double&gt; exh(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#ae4842c1619a902b2761696f3849889a1">nBins</a>);</div>
-<div class="line"><span class="lineno">  795</span>  std::vector&lt;double&gt; eyh(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#ae4842c1619a902b2761696f3849889a1">nBins</a>);</div>
-<div class="line"><span class="lineno">  796</span> </div>
-<div class="line"><span class="lineno">  797</span>  TH1D* PostHist = <span class="keyword">static_cast&lt;</span>TH1D*<span class="keyword">&gt;</span>(File-&gt;Get( (<span class="stringliteral">&quot;param_xsec_&quot;</span>+<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aee5c9d8d7ad14d8728dffad47b8d4efe">plotType</a>).c_str() )-&gt;Clone());</div>
-<div class="line"><span class="lineno">  798</span> </div>
-<div class="line"><span class="lineno">  799</span>  TVectorD* Errors_HPD_Positive = <span class="keyword">static_cast&lt;</span>TVectorD*<span class="keyword">&gt;</span>(File-&gt;Get( <span class="stringliteral">&quot;Errors_HPD_Positive&quot;</span> )-&gt;Clone());</div>
-<div class="line"><span class="lineno">  800</span>  TVectorD* Errors_HPD_Negative = <span class="keyword">static_cast&lt;</span>TVectorD*<span class="keyword">&gt;</span>(File-&gt;Get( <span class="stringliteral">&quot;Errors_HPD_Negative&quot;</span> )-&gt;Clone());</div>
-<div class="line"><span class="lineno">  801</span>  <span class="comment">//KS: I am tempted to multithread this...</span></div>
-<div class="line"><span class="lineno">  802</span>  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#ae4842c1619a902b2761696f3849889a1">nBins</a>; ++i)</div>
-<div class="line"><span class="lineno">  803</span>  {</div>
-<div class="line"><span class="lineno">  804</span>    <span class="comment">//KS: We are extrcting value from three object each having different numbering scheme, I have checked carefully so this is correct please don&#39;t cahnge all these +1 +0.5 etc. it just work...</span></div>
-<div class="line"><span class="lineno">  805</span>    x[i] = i + 0.5;</div>
-<div class="line"><span class="lineno">  806</span>    y[i] = PostHist-&gt;GetBinContent(i+1);</div>
+<p class="definition">Definition at line <a class="el" href="GetPostfitParamPlots_8cpp_source.html#l00799">799</a> of file <a class="el" href="GetPostfitParamPlots_8cpp_source.html">GetPostfitParamPlots.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  800</span>{</div>
+<div class="line"><span class="lineno">  801</span>  std::vector&lt;double&gt; x(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#ae4842c1619a902b2761696f3849889a1">nBins</a>);</div>
+<div class="line"><span class="lineno">  802</span>  std::vector&lt;double&gt; y(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#ae4842c1619a902b2761696f3849889a1">nBins</a>);</div>
+<div class="line"><span class="lineno">  803</span>  std::vector&lt;double&gt; exl(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#ae4842c1619a902b2761696f3849889a1">nBins</a>);</div>
+<div class="line"><span class="lineno">  804</span>  std::vector&lt;double&gt; eyl(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#ae4842c1619a902b2761696f3849889a1">nBins</a>);</div>
+<div class="line"><span class="lineno">  805</span>  std::vector&lt;double&gt; exh(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#ae4842c1619a902b2761696f3849889a1">nBins</a>);</div>
+<div class="line"><span class="lineno">  806</span>  std::vector&lt;double&gt; eyh(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#ae4842c1619a902b2761696f3849889a1">nBins</a>);</div>
 <div class="line"><span class="lineno">  807</span> </div>
-<div class="line"><span class="lineno">  808</span>    <span class="comment">//KS: We don&#39;t want x axis errors as they are confusing in Violin plot</span></div>
-<div class="line"><span class="lineno">  809</span>    exh[i] = 0.00001;</div>
-<div class="line"><span class="lineno">  810</span>    exl[i] = 0.00001;</div>
-<div class="line"><span class="lineno">  811</span>    eyh[i] = (*Errors_HPD_Positive)(i);</div>
-<div class="line"><span class="lineno">  812</span>    eyl[i] = (*Errors_HPD_Negative)(i);</div>
-<div class="line"><span class="lineno">  813</span>  }</div>
-<div class="line"><span class="lineno">  814</span>  TGraphAsymmErrors* PostGraph = <span class="keyword">new</span> TGraphAsymmErrors(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#ae4842c1619a902b2761696f3849889a1">nBins</a>, x.data(), y.data(), exl.data(), exh.data(), eyl.data(), eyh.data());</div>
-<div class="line"><span class="lineno">  815</span>  PostGraph-&gt;SetTitle(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">  816</span> </div>
-<div class="line"><span class="lineno">  817</span>  <span class="keyword">delete</span> PostHist;</div>
-<div class="line"><span class="lineno">  818</span>  <span class="keyword">delete</span> Errors_HPD_Positive;</div>
-<div class="line"><span class="lineno">  819</span>  <span class="keyword">delete</span> Errors_HPD_Negative;</div>
-<div class="line"><span class="lineno">  820</span> </div>
-<div class="line"><span class="lineno">  821</span>  <span class="keywordflow">return</span> PostGraph;</div>
-<div class="line"><span class="lineno">  822</span>}</div>
+<div class="line"><span class="lineno">  808</span>  TH1D* PostHist = <span class="keyword">static_cast&lt;</span>TH1D*<span class="keyword">&gt;</span>(File-&gt;Get( (<span class="stringliteral">&quot;param_xsec_&quot;</span>+<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aee5c9d8d7ad14d8728dffad47b8d4efe">plotType</a>).c_str() )-&gt;Clone());</div>
+<div class="line"><span class="lineno">  809</span> </div>
+<div class="line"><span class="lineno">  810</span>  TVectorD* Errors_HPD_Positive = <span class="keyword">static_cast&lt;</span>TVectorD*<span class="keyword">&gt;</span>(File-&gt;Get( <span class="stringliteral">&quot;Errors_HPD_Positive&quot;</span> )-&gt;Clone());</div>
+<div class="line"><span class="lineno">  811</span>  TVectorD* Errors_HPD_Negative = <span class="keyword">static_cast&lt;</span>TVectorD*<span class="keyword">&gt;</span>(File-&gt;Get( <span class="stringliteral">&quot;Errors_HPD_Negative&quot;</span> )-&gt;Clone());</div>
+<div class="line"><span class="lineno">  812</span>  <span class="comment">//KS: I am tempted to multithread this...</span></div>
+<div class="line"><span class="lineno">  813</span>  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#ae4842c1619a902b2761696f3849889a1">nBins</a>; ++i)</div>
+<div class="line"><span class="lineno">  814</span>  {</div>
+<div class="line"><span class="lineno">  815</span>    <span class="comment">//KS: We are extrcting value from three object each having different numbering scheme, I have checked carefully so this is correct please don&#39;t cahnge all these +1 +0.5 etc. it just work...</span></div>
+<div class="line"><span class="lineno">  816</span>    x[i] = i + 0.5;</div>
+<div class="line"><span class="lineno">  817</span>    y[i] = PostHist-&gt;GetBinContent(i+1);</div>
+<div class="line"><span class="lineno">  818</span> </div>
+<div class="line"><span class="lineno">  819</span>    <span class="comment">//KS: We don&#39;t want x axis errors as they are confusing in Violin plot</span></div>
+<div class="line"><span class="lineno">  820</span>    exh[i] = 0.00001;</div>
+<div class="line"><span class="lineno">  821</span>    exl[i] = 0.00001;</div>
+<div class="line"><span class="lineno">  822</span>    eyh[i] = (*Errors_HPD_Positive)(i);</div>
+<div class="line"><span class="lineno">  823</span>    eyl[i] = (*Errors_HPD_Negative)(i);</div>
+<div class="line"><span class="lineno">  824</span>  }</div>
+<div class="line"><span class="lineno">  825</span>  TGraphAsymmErrors* PostGraph = <span class="keyword">new</span> TGraphAsymmErrors(<a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#ae4842c1619a902b2761696f3849889a1">nBins</a>, x.data(), y.data(), exl.data(), exh.data(), eyl.data(), eyh.data());</div>
+<div class="line"><span class="lineno">  826</span>  PostGraph-&gt;SetTitle(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  827</span> </div>
+<div class="line"><span class="lineno">  828</span>  <span class="keyword">delete</span> PostHist;</div>
+<div class="line"><span class="lineno">  829</span>  <span class="keyword">delete</span> Errors_HPD_Positive;</div>
+<div class="line"><span class="lineno">  830</span>  <span class="keyword">delete</span> Errors_HPD_Negative;</div>
+<div class="line"><span class="lineno">  831</span> </div>
+<div class="line"><span class="lineno">  832</span>  <span class="keywordflow">return</span> PostGraph;</div>
+<div class="line"><span class="lineno">  833</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1502,7 +1516,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  556</span>    <span class="keyword">auto</span> blockContents = paramBlock[2].as&lt;std::vector&lt;std::string&gt;&gt;();</div>
 <div class="line"><span class="lineno">  557</span> </div>
 <div class="line"><span class="lineno">  558</span>    <span class="comment">// the directory of histograms</span></div>
-<div class="line"><span class="lineno">  559</span>    TDirectoryFile *posteriorDir = <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aa6f3c9a8cee8f72f6f8ce65b720a2d40">man</a>-&gt;<a class="code hl_function" href="classMaCh3Plotting_1_1PlottingManager.html#afcde3593be0894c7c1dbef6fa9055dee">input</a>().<a class="code hl_function" href="classMaCh3Plotting_1_1InputManager.html#a2f8f94ca3b6e0d2b34c75dee24b81e49">getFile</a>(0).<a class="code hl_variable" href="structMaCh3Plotting_1_1InputFile.html#a11c074dd45647dd2957987f8b55f9d73">file</a>-&gt;Get&lt;TDirectoryFile&gt;(<span class="stringliteral">&quot;Post&quot;</span>);</div>
+<div class="line"><span class="lineno">  559</span>    TDirectoryFile *posteriorDir = <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aa6f3c9a8cee8f72f6f8ce65b720a2d40">man</a>-&gt;<a class="code hl_function" href="classMaCh3Plotting_1_1PlottingManager.html#afcde3593be0894c7c1dbef6fa9055dee">input</a>().<a class="code hl_function" href="classMaCh3Plotting_1_1InputManager.html#a2f8f94ca3b6e0d2b34c75dee24b81e49">getFile</a>(0).<a class="code hl_variable" href="structMaCh3Plotting_1_1InputFile.html#a11c074dd45647dd2957987f8b55f9d73">file</a>-&gt;Get&lt;TDirectoryFile&gt;(<span class="stringliteral">&quot;Post_1d_hists&quot;</span>);</div>
 <div class="line"><span class="lineno">  560</span> </div>
 <div class="line"><span class="lineno">  561</span>    <span class="comment">// get num of params in the block</span></div>
 <div class="line"><span class="lineno">  562</span>    <span class="keywordtype">int</span> nParams = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(blockContents.size());</div>
@@ -1525,116 +1539,113 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  579</span>    <span class="comment">// use this to set the limits and also to plot the x axis and grid</span></div>
 <div class="line"><span class="lineno">  580</span>    TH1D *axisPlot = <span class="keyword">new</span> TH1D(<span class="stringliteral">&quot;axis plot&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, 1, blockLimits[0], blockLimits[1]);</div>
 <div class="line"><span class="lineno">  581</span> </div>
-<div class="line"><span class="lineno">  582</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> parId = 0; parId &lt; nParams; parId++){</div>
+<div class="line"><span class="lineno">  582</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> parId = 0; parId &lt; nParams; parId++) {</div>
 <div class="line"><span class="lineno">  583</span>      std::string paramName = blockContents[parId];</div>
 <div class="line"><span class="lineno">  584</span> </div>
-<div class="line"><span class="lineno">  585</span>      TCanvas *posteriorDistCanv = <span class="keyword">nullptr</span>;</div>
-<div class="line"><span class="lineno">  586</span>      TH1D *posteriorDist = <span class="keyword">nullptr</span>;</div>
-<div class="line"><span class="lineno">  587</span> </div>
-<div class="line"><span class="lineno">  588</span>      <span class="comment">// get the list of objects in the directory</span></div>
-<div class="line"><span class="lineno">  589</span>      TIter next(posteriorDir-&gt;GetListOfKeys());</div>
-<div class="line"><span class="lineno">  590</span>      <span class="keywordflow">while</span> (TKey* key = <span class="keyword">static_cast&lt;</span>TKey*<span class="keyword">&gt;</span>(next())) {</div>
-<div class="line"><span class="lineno">  591</span>        <span class="comment">// check if the end of the param name matches with the MaCh3 name, do this so we exclude things like nds_ at the start of the name</span></div>
-<div class="line"><span class="lineno">  592</span>        std::string str(key-&gt;GetTitle());</div>
-<div class="line"><span class="lineno">  593</span>        std::string name = <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aa6f3c9a8cee8f72f6f8ce65b720a2d40">man</a>-&gt;<a class="code hl_function" href="classMaCh3Plotting_1_1PlottingManager.html#afcde3593be0894c7c1dbef6fa9055dee">input</a>().<a class="code hl_function" href="classMaCh3Plotting_1_1InputManager.html#ab4ecb1daf7b700137a15c3cad48cdaa4">translateName</a>(0, <a class="code hl_enumvalue" href="namespaceMaCh3Plotting.html#a4152b51a260d6a18f41b3a22aa2a6b75a0dd2e9b7a6fcbfa5724ac5e17ea0eeaf">MaCh3Plotting::kPostFit</a>, paramName);</div>
-<div class="line"><span class="lineno">  594</span>        uint pos = str.find(name);</div>
-<div class="line"><span class="lineno">  595</span>        <span class="keywordtype">bool</span> foundPar = (pos == str.length() - name.length());</div>
-<div class="line"><span class="lineno">  596</span> </div>
-<div class="line"><span class="lineno">  597</span>        <span class="keywordflow">if</span>(foundPar){</div>
-<div class="line"><span class="lineno">  598</span>          posteriorDistCanv = posteriorDir-&gt;Get&lt;TCanvas&gt;(key-&gt;GetName());</div>
-<div class="line"><span class="lineno">  599</span>          posteriorDist = <span class="keyword">static_cast&lt;</span>TH1D*<span class="keyword">&gt;</span>(posteriorDistCanv-&gt;GetPrimitive(key-&gt;GetName()));</div>
-<div class="line"><span class="lineno">  600</span>        }</div>
-<div class="line"><span class="lineno">  601</span>      }</div>
-<div class="line"><span class="lineno">  602</span> </div>
-<div class="line"><span class="lineno">  603</span>      <span class="keywordflow">if</span>(posteriorDist == <span class="keyword">nullptr</span>){</div>
-<div class="line"><span class="lineno">  604</span>        <a class="code hl_define" href="MaCh3Logger_8h.html#ad5b2eb6377721e3ac95def22c2386bb1">MACH3LOG_WARN</a>(<span class="stringliteral">&quot;Couldnt find parameter {} when making ridgeline plots&quot;</span>, paramName);</div>
-<div class="line"><span class="lineno">  605</span>        <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  606</span>      }</div>
-<div class="line"><span class="lineno">  607</span>      </div>
-<div class="line"><span class="lineno">  608</span>      <span class="comment">// EM: do some funky scaling so that we always get evenly spaced pads in the range [bottomMargin, TopMargin] with the specified overlap</span></div>
-<div class="line"><span class="lineno">  609</span>      <span class="keywordtype">double</span> padAnchor = padBottomMargin + (<span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(nParams - parId - 1) /</div>
-<div class="line"><span class="lineno">  610</span>                                  <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(nParams - 1)) * (padTopMargin - padBottomMargin);</div>
-<div class="line"><span class="lineno">  611</span>      <span class="keywordtype">double</span> padWidth = (padTopMargin - padBottomMargin) / <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(nParams);</div>
-<div class="line"><span class="lineno">  612</span>      <span class="keywordtype">double</span> norm = (padTopMargin - padBottomMargin);</div>
+<div class="line"><span class="lineno">  585</span>      TH1D *posteriorDist = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">  586</span>      <span class="comment">// get the list of objects in the directory</span></div>
+<div class="line"><span class="lineno">  587</span>      TIter next(posteriorDir-&gt;GetListOfKeys());</div>
+<div class="line"><span class="lineno">  588</span>      <span class="keywordflow">while</span> (TKey* key = <span class="keyword">static_cast&lt;</span>TKey*<span class="keyword">&gt;</span>(next())) {</div>
+<div class="line"><span class="lineno">  589</span>        <span class="comment">// check if the end of the param name matches with the MaCh3 name, do this so we exclude things like nds_ at the start of the name</span></div>
+<div class="line"><span class="lineno">  590</span>        std::string str(key-&gt;GetTitle());</div>
+<div class="line"><span class="lineno">  591</span>        std::string name = <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aa6f3c9a8cee8f72f6f8ce65b720a2d40">man</a>-&gt;<a class="code hl_function" href="classMaCh3Plotting_1_1PlottingManager.html#afcde3593be0894c7c1dbef6fa9055dee">input</a>().<a class="code hl_function" href="classMaCh3Plotting_1_1InputManager.html#ab4ecb1daf7b700137a15c3cad48cdaa4">translateName</a>(0, <a class="code hl_enumvalue" href="namespaceMaCh3Plotting.html#a4152b51a260d6a18f41b3a22aa2a6b75a0dd2e9b7a6fcbfa5724ac5e17ea0eeaf">MaCh3Plotting::kPostFit</a>, paramName);</div>
+<div class="line"><span class="lineno">  592</span>        uint pos = str.find(name);</div>
+<div class="line"><span class="lineno">  593</span>        <span class="keywordtype">bool</span> foundPar = (pos == str.length() - name.length());</div>
+<div class="line"><span class="lineno">  594</span> </div>
+<div class="line"><span class="lineno">  595</span>        <span class="keywordflow">if</span>(foundPar){</div>
+<div class="line"><span class="lineno">  596</span>          posteriorDist = posteriorDir-&gt;Get&lt;TH1D&gt;(key-&gt;GetName());</div>
+<div class="line"><span class="lineno">  597</span>        }</div>
+<div class="line"><span class="lineno">  598</span>      }</div>
+<div class="line"><span class="lineno">  599</span> </div>
+<div class="line"><span class="lineno">  600</span>      <span class="keywordflow">if</span>(posteriorDist == <span class="keyword">nullptr</span>){</div>
+<div class="line"><span class="lineno">  601</span>        <a class="code hl_define" href="MaCh3Logger_8h.html#ad5b2eb6377721e3ac95def22c2386bb1">MACH3LOG_WARN</a>(<span class="stringliteral">&quot;Couldn&#39;t find parameter {} when making ridgeline plots&quot;</span>, paramName);</div>
+<div class="line"><span class="lineno">  602</span>        <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  603</span>      }</div>
+<div class="line"><span class="lineno">  604</span>      </div>
+<div class="line"><span class="lineno">  605</span>      <span class="comment">// EM: do some funky scaling so that we always get evenly spaced pads in the range [bottomMargin, TopMargin] with the specified overlap</span></div>
+<div class="line"><span class="lineno">  606</span>      <span class="keywordtype">double</span> padAnchor = padBottomMargin + (<span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(nParams - parId - 1) /</div>
+<div class="line"><span class="lineno">  607</span>                                  <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(nParams - 1)) * (padTopMargin - padBottomMargin);</div>
+<div class="line"><span class="lineno">  608</span>      <span class="keywordtype">double</span> padWidth = (padTopMargin - padBottomMargin) / <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(nParams);</div>
+<div class="line"><span class="lineno">  609</span>      <span class="keywordtype">double</span> norm = (padTopMargin - padBottomMargin);</div>
+<div class="line"><span class="lineno">  610</span> </div>
+<div class="line"><span class="lineno">  611</span>      <span class="keywordtype">double</span> padTop = padWidth * (1.0 + padOverlap) * (padTopMargin - padAnchor) / norm + padAnchor;</div>
+<div class="line"><span class="lineno">  612</span>      <span class="keywordtype">double</span> padBottom = padAnchor - padWidth * (1.0 + padOverlap) * (padAnchor - padBottomMargin) / norm;</div>
 <div class="line"><span class="lineno">  613</span> </div>
-<div class="line"><span class="lineno">  614</span>      <span class="keywordtype">double</span> padTop = padWidth * (1.0 + padOverlap) * (padTopMargin - padAnchor) / norm + padAnchor;</div>
-<div class="line"><span class="lineno">  615</span>      <span class="keywordtype">double</span> padBottom = padAnchor - padWidth * (1.0 + padOverlap) * (padAnchor - padBottomMargin) / norm;</div>
+<div class="line"><span class="lineno">  614</span>      TPad *pad = <span class="keyword">new</span> TPad(paramName.c_str(), <span class="stringliteral">&quot;&quot;</span>, 0.3, padBottom, 0.9, padTop, -1, 0, -1); </div>
+<div class="line"><span class="lineno">  615</span>      ridgeCanv-&gt;cd();</div>
 <div class="line"><span class="lineno">  616</span> </div>
-<div class="line"><span class="lineno">  617</span>      TPad *pad = <span class="keyword">new</span> TPad(paramName.c_str(), <span class="stringliteral">&quot;&quot;</span>, 0.3, padBottom, 0.9, padTop, -1, 0, -1); </div>
-<div class="line"><span class="lineno">  618</span>      ridgeCanv-&gt;cd();</div>
-<div class="line"><span class="lineno">  619</span> </div>
-<div class="line"><span class="lineno">  620</span>      pad-&gt;SetBottomMargin(0.0);</div>
-<div class="line"><span class="lineno">  621</span>      pad-&gt;SetTopMargin(0.0);</div>
-<div class="line"><span class="lineno">  622</span>      pad-&gt;SetLeftMargin(0.0);</div>
-<div class="line"><span class="lineno">  623</span>      pad-&gt;SetRightMargin(0.0);</div>
-<div class="line"><span class="lineno">  624</span> </div>
-<div class="line"><span class="lineno">  625</span>      pad-&gt;Draw();</div>
-<div class="line"><span class="lineno">  626</span>      pad-&gt;cd();</div>
-<div class="line"><span class="lineno">  627</span>      pad-&gt;SetFillStyle(4000);</div>
-<div class="line"><span class="lineno">  628</span> </div>
-<div class="line"><span class="lineno">  629</span>      gPad-&gt;SetFrameFillStyle(4000);</div>
-<div class="line"><span class="lineno">  630</span>      posteriorDist-&gt;GetFunction(<span class="stringliteral">&quot;Gauss&quot;</span>)-&gt;SetBit(TF1::kNotDraw);</div>
-<div class="line"><span class="lineno">  631</span>      posteriorDist-&gt;SetTitle(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">  632</span>      posteriorDist-&gt;SetLineWidth(ridgeLineWidth);</div>
-<div class="line"><span class="lineno">  633</span>      </div>
-<div class="line"><span class="lineno">  634</span>      TH1D* axisPlot_tmp = <span class="keyword">static_cast&lt;</span>TH1D*<span class="keyword">&gt;</span>(axisPlot-&gt;Clone(Form(<span class="stringliteral">&quot;AxisPlot_%s&quot;</span>, paramName.c_str())));</div>
-<div class="line"><span class="lineno">  635</span>      axisPlot_tmp-&gt;Draw(<span class="stringliteral">&quot;A&quot;</span>);</div>
-<div class="line"><span class="lineno">  636</span>      posteriorDist-&gt;Draw(<span class="stringliteral">&quot;H SAME&quot;</span>);</div>
-<div class="line"><span class="lineno">  637</span>    </div>
-<div class="line"><span class="lineno">  638</span>      axisPlot_tmp-&gt;GetYaxis()-&gt;SetRangeUser(0.0, 0.7 *posteriorDist-&gt;GetMaximum());</div>
-<div class="line"><span class="lineno">  639</span>      posteriorDist-&gt;SetLineColor(kWhite);</div>
-<div class="line"><span class="lineno">  640</span>      posteriorDist-&gt;SetFillColorAlpha(TColor::GetColorPalette(floor(<span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(parId) *</div>
-<div class="line"><span class="lineno">  641</span>                                          TColor::GetNumberOfColors() / <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(nParams))), 0.85);</div>
+<div class="line"><span class="lineno">  617</span>      pad-&gt;SetBottomMargin(0.0);</div>
+<div class="line"><span class="lineno">  618</span>      pad-&gt;SetTopMargin(0.0);</div>
+<div class="line"><span class="lineno">  619</span>      pad-&gt;SetLeftMargin(0.0);</div>
+<div class="line"><span class="lineno">  620</span>      pad-&gt;SetRightMargin(0.0);</div>
+<div class="line"><span class="lineno">  621</span> </div>
+<div class="line"><span class="lineno">  622</span>      pad-&gt;Draw();</div>
+<div class="line"><span class="lineno">  623</span>      pad-&gt;cd();</div>
+<div class="line"><span class="lineno">  624</span>      pad-&gt;SetFillStyle(4000);</div>
+<div class="line"><span class="lineno">  625</span> </div>
+<div class="line"><span class="lineno">  626</span>      gPad-&gt;SetFrameFillStyle(4000);</div>
+<div class="line"><span class="lineno">  627</span>      posteriorDist-&gt;GetFunction(<span class="stringliteral">&quot;Gauss&quot;</span>)-&gt;SetBit(TF1::kNotDraw);</div>
+<div class="line"><span class="lineno">  628</span>      posteriorDist-&gt;SetTitle(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  629</span>      posteriorDist-&gt;SetLineWidth(ridgeLineWidth);</div>
+<div class="line"><span class="lineno">  630</span>      </div>
+<div class="line"><span class="lineno">  631</span>      TH1D* axisPlot_tmp = <span class="keyword">static_cast&lt;</span>TH1D*<span class="keyword">&gt;</span>(axisPlot-&gt;Clone(Form(<span class="stringliteral">&quot;AxisPlot_%s&quot;</span>, paramName.c_str())));</div>
+<div class="line"><span class="lineno">  632</span>      axisPlot_tmp-&gt;Draw(<span class="stringliteral">&quot;A&quot;</span>);</div>
+<div class="line"><span class="lineno">  633</span>      posteriorDist-&gt;Draw(<span class="stringliteral">&quot;H SAME&quot;</span>);</div>
+<div class="line"><span class="lineno">  634</span>    </div>
+<div class="line"><span class="lineno">  635</span>      axisPlot_tmp-&gt;GetYaxis()-&gt;SetRangeUser(0.0, 0.7 *posteriorDist-&gt;GetMaximum());</div>
+<div class="line"><span class="lineno">  636</span>      posteriorDist-&gt;SetLineColor(kWhite);</div>
+<div class="line"><span class="lineno">  637</span>      posteriorDist-&gt;SetFillColorAlpha(TColor::GetColorPalette(floor(<span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(parId) *</div>
+<div class="line"><span class="lineno">  638</span>                                          TColor::GetNumberOfColors() / <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(nParams))), 0.85);</div>
+<div class="line"><span class="lineno">  639</span>      </div>
+<div class="line"><span class="lineno">  640</span>      posteriorDist-&gt;GetXaxis()-&gt;SetRangeUser(blockLimits[0], blockLimits[1]);</div>
+<div class="line"><span class="lineno">  641</span>      posteriorDist-&gt;GetYaxis()-&gt;SetTitle(paramName.c_str());</div>
 <div class="line"><span class="lineno">  642</span>      </div>
-<div class="line"><span class="lineno">  643</span>      posteriorDist-&gt;GetXaxis()-&gt;SetRangeUser(blockLimits[0], blockLimits[1]);</div>
-<div class="line"><span class="lineno">  644</span>      posteriorDist-&gt;GetYaxis()-&gt;SetTitle(paramName.c_str());</div>
-<div class="line"><span class="lineno">  645</span>      </div>
-<div class="line"><span class="lineno">  646</span>      <span class="comment">//EM: Have to get the frame drawn by the histogram and then set it to be transparent... it took me an hour to get rid of this one line on a plot</span></div>
-<div class="line"><span class="lineno">  647</span>      gPad-&gt;Modified(); gPad-&gt;Update();</div>
-<div class="line"><span class="lineno">  648</span>      TFrame *frame = gPad-&gt;GetFrame();</div>
-<div class="line"><span class="lineno">  649</span>      frame-&gt;SetLineColorAlpha(0, 0.0);</div>
-<div class="line"><span class="lineno">  650</span>      </div>
-<div class="line"><span class="lineno">  651</span>      ridgeCanv-&gt;cd();</div>
-<div class="line"><span class="lineno">  652</span>      label-&gt;DrawLatexNDC(0.29, padBottom + 0.005, <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aa6f3c9a8cee8f72f6f8ce65b720a2d40">man</a>-&gt;<a class="code hl_function" href="classMaCh3Plotting_1_1PlottingManager.html#ad07460f382733b379d0f122d6b0322c7">style</a>().<a class="code hl_function" href="classMaCh3Plotting_1_1StyleManager.html#a0677ca5b68a2ecb684189524fb533019">prettifyParamName</a>(paramName).c_str());</div>
-<div class="line"><span class="lineno">  653</span>      line-&gt;DrawLine(0.1, padBottom, 0.9, padBottom);</div>
-<div class="line"><span class="lineno">  654</span> </div>
-<div class="line"><span class="lineno">  655</span>    }</div>
-<div class="line"><span class="lineno">  656</span> </div>
-<div class="line"><span class="lineno">  657</span>    ridgeCanv-&gt;cd();</div>
-<div class="line"><span class="lineno">  658</span>    ridgeCanv-&gt;SetGrid(1,1);</div>
-<div class="line"><span class="lineno">  659</span>    TPad *axisPad = <span class="keyword">new</span> TPad(<span class="stringliteral">&quot;AxisPad&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, 0.3, 0.0, 0.9, 1.0, -1, 0, -1);</div>
-<div class="line"><span class="lineno">  660</span>    axisPad-&gt;SetLeftMargin(0.0);</div>
-<div class="line"><span class="lineno">  661</span>    axisPad-&gt;SetRightMargin(0.0);</div>
-<div class="line"><span class="lineno">  662</span>    axisPad-&gt;Draw();</div>
-<div class="line"><span class="lineno">  663</span>    axisPad-&gt;cd();</div>
-<div class="line"><span class="lineno">  664</span>    axisPad-&gt;SetGrid(1,1);</div>
-<div class="line"><span class="lineno">  665</span>    axisPad-&gt;SetFrameFillStyle(4000);</div>
-<div class="line"><span class="lineno">  666</span>    </div>
-<div class="line"><span class="lineno">  667</span>    axisPlot-&gt;GetXaxis()-&gt;SetTickSize(0.01);</div>
-<div class="line"><span class="lineno">  668</span>    axisPlot-&gt;GetXaxis()-&gt;SetTitle(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">  669</span>    axisPlot-&gt;GetYaxis()-&gt;SetLabelOffset(9999);</div>
-<div class="line"><span class="lineno">  670</span>    axisPlot-&gt;GetYaxis()-&gt;SetLabelSize(0);</div>
-<div class="line"><span class="lineno">  671</span>    axisPlot-&gt;GetYaxis()-&gt;SetTickSize(0);</div>
-<div class="line"><span class="lineno">  672</span>    axisPlot-&gt;GetYaxis()-&gt;SetAxisColor(0,0.0);</div>
-<div class="line"><span class="lineno">  673</span>    axisPlot-&gt;Draw(<span class="stringliteral">&quot;AXIS&quot;</span>);</div>
-<div class="line"><span class="lineno">  674</span>    axisPlot-&gt;Draw(<span class="stringliteral">&quot;AXIG SAME&quot;</span>);</div>
-<div class="line"><span class="lineno">  675</span> </div>
-<div class="line"><span class="lineno">  676</span>    axisPlot-&gt;SetFillStyle(4000);</div>
-<div class="line"><span class="lineno">  677</span>    axisPad-&gt;SetFillStyle(4000);</div>
-<div class="line"><span class="lineno">  678</span>    </div>
-<div class="line"><span class="lineno">  679</span>    axisPad-&gt;SetGrid(1,1);</div>
+<div class="line"><span class="lineno">  643</span>      <span class="comment">//EM: Have to get the frame drawn by the histogram and then set it to be transparent... it took me an hour to get rid of this one line on a plot</span></div>
+<div class="line"><span class="lineno">  644</span>      gPad-&gt;Modified(); gPad-&gt;Update();</div>
+<div class="line"><span class="lineno">  645</span>      TFrame *frame = gPad-&gt;GetFrame();</div>
+<div class="line"><span class="lineno">  646</span>      frame-&gt;SetLineColorAlpha(0, 0.0);</div>
+<div class="line"><span class="lineno">  647</span>      </div>
+<div class="line"><span class="lineno">  648</span>      ridgeCanv-&gt;cd();</div>
+<div class="line"><span class="lineno">  649</span>      label-&gt;DrawLatexNDC(0.29, padBottom + 0.005, <a class="code hl_variable" href="GetPostfitParamPlots_8cpp.html#aa6f3c9a8cee8f72f6f8ce65b720a2d40">man</a>-&gt;<a class="code hl_function" href="classMaCh3Plotting_1_1PlottingManager.html#ad07460f382733b379d0f122d6b0322c7">style</a>().<a class="code hl_function" href="classMaCh3Plotting_1_1StyleManager.html#a0677ca5b68a2ecb684189524fb533019">prettifyParamName</a>(paramName).c_str());</div>
+<div class="line"><span class="lineno">  650</span>      line-&gt;DrawLine(0.1, padBottom, 0.9, padBottom);</div>
+<div class="line"><span class="lineno">  651</span> </div>
+<div class="line"><span class="lineno">  652</span>    }</div>
+<div class="line"><span class="lineno">  653</span> </div>
+<div class="line"><span class="lineno">  654</span>    ridgeCanv-&gt;cd();</div>
+<div class="line"><span class="lineno">  655</span>    ridgeCanv-&gt;SetGrid(1,1);</div>
+<div class="line"><span class="lineno">  656</span>    TPad *axisPad = <span class="keyword">new</span> TPad(<span class="stringliteral">&quot;AxisPad&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, 0.3, 0.0, 0.9, 1.0, -1, 0, -1);</div>
+<div class="line"><span class="lineno">  657</span>    axisPad-&gt;SetLeftMargin(0.0);</div>
+<div class="line"><span class="lineno">  658</span>    axisPad-&gt;SetRightMargin(0.0);</div>
+<div class="line"><span class="lineno">  659</span>    axisPad-&gt;Draw();</div>
+<div class="line"><span class="lineno">  660</span>    axisPad-&gt;cd();</div>
+<div class="line"><span class="lineno">  661</span>    axisPad-&gt;SetGrid(1,1);</div>
+<div class="line"><span class="lineno">  662</span>    axisPad-&gt;SetFrameFillStyle(4000);</div>
+<div class="line"><span class="lineno">  663</span>    </div>
+<div class="line"><span class="lineno">  664</span>    axisPlot-&gt;GetXaxis()-&gt;SetTickSize(0.01);</div>
+<div class="line"><span class="lineno">  665</span>    axisPlot-&gt;GetXaxis()-&gt;SetTitle(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  666</span>    axisPlot-&gt;GetYaxis()-&gt;SetLabelOffset(9999);</div>
+<div class="line"><span class="lineno">  667</span>    axisPlot-&gt;GetYaxis()-&gt;SetLabelSize(0);</div>
+<div class="line"><span class="lineno">  668</span>    axisPlot-&gt;GetYaxis()-&gt;SetTickSize(0);</div>
+<div class="line"><span class="lineno">  669</span>    axisPlot-&gt;GetYaxis()-&gt;SetAxisColor(0,0.0);</div>
+<div class="line"><span class="lineno">  670</span>    axisPlot-&gt;Draw(<span class="stringliteral">&quot;AXIS&quot;</span>);</div>
+<div class="line"><span class="lineno">  671</span>    axisPlot-&gt;Draw(<span class="stringliteral">&quot;AXIG SAME&quot;</span>);</div>
+<div class="line"><span class="lineno">  672</span> </div>
+<div class="line"><span class="lineno">  673</span>    axisPlot-&gt;SetFillStyle(4000);</div>
+<div class="line"><span class="lineno">  674</span>    axisPad-&gt;SetFillStyle(4000);</div>
+<div class="line"><span class="lineno">  675</span>    </div>
+<div class="line"><span class="lineno">  676</span>    axisPad-&gt;SetGrid(1,1);</div>
+<div class="line"><span class="lineno">  677</span>    gPad-&gt;Modified(); gPad-&gt;Update();</div>
+<div class="line"><span class="lineno">  678</span>    gPad-&gt;SetFrameFillStyle(4000);</div>
+<div class="line"><span class="lineno">  679</span> </div>
 <div class="line"><span class="lineno">  680</span>    gPad-&gt;Modified(); gPad-&gt;Update();</div>
-<div class="line"><span class="lineno">  681</span>    gPad-&gt;SetFrameFillStyle(4000);</div>
-<div class="line"><span class="lineno">  682</span> </div>
-<div class="line"><span class="lineno">  683</span>    gPad-&gt;Modified(); gPad-&gt;Update();</div>
-<div class="line"><span class="lineno">  684</span>    TFrame *frame = gPad-&gt;GetFrame();</div>
-<div class="line"><span class="lineno">  685</span>    frame-&gt;SetLineColorAlpha(0, 0.0);</div>
-<div class="line"><span class="lineno">  686</span> </div>
-<div class="line"><span class="lineno">  687</span>    ridgeCanv-&gt;SaveAs(<span class="stringliteral">&quot;RidgePlots.pdf&quot;</span>);</div>
-<div class="line"><span class="lineno">  688</span>    <span class="keyword">delete</span> ridgeCanv;</div>
-<div class="line"><span class="lineno">  689</span>  }</div>
-<div class="line"><span class="lineno">  690</span>  blankCanv-&gt;SaveAs(<span class="stringliteral">&quot;RidgePlots.pdf]&quot;</span>);</div>
-<div class="line"><span class="lineno">  691</span>}</div>
+<div class="line"><span class="lineno">  681</span>    TFrame *frame = gPad-&gt;GetFrame();</div>
+<div class="line"><span class="lineno">  682</span>    frame-&gt;SetLineColorAlpha(0, 0.0);</div>
+<div class="line"><span class="lineno">  683</span> </div>
+<div class="line"><span class="lineno">  684</span>    ridgeCanv-&gt;SaveAs(<span class="stringliteral">&quot;RidgePlots.pdf&quot;</span>);</div>
+<div class="line"><span class="lineno">  685</span>    <span class="keyword">delete</span> ridgeCanv;</div>
+<div class="line"><span class="lineno">  686</span>  }</div>
+<div class="line"><span class="lineno">  687</span>  blankCanv-&gt;SaveAs(<span class="stringliteral">&quot;RidgePlots.pdf]&quot;</span>);</div>
+<div class="line"><span class="lineno">  688</span>}</div>
 <div class="ttc" id="aMaCh3Logger_8h_html_ad5b2eb6377721e3ac95def22c2386bb1"><div class="ttname"><a href="MaCh3Logger_8h.html#ad5b2eb6377721e3ac95def22c2386bb1">MACH3LOG_WARN</a></div><div class="ttdeci">#define MACH3LOG_WARN</div><div class="ttdef"><b>Definition:</b> <a href="MaCh3Logger_8h_source.html#l00017">MaCh3Logger.h:17</a></div></div>
 <div class="ttc" id="aclassMaCh3Plotting_1_1StyleManager_html_a0677ca5b68a2ecb684189524fb533019"><div class="ttname"><a href="classMaCh3Plotting_1_1StyleManager.html#a0677ca5b68a2ecb684189524fb533019">MaCh3Plotting::StyleManager::prettifyParamName</a></div><div class="ttdeci">std::string prettifyParamName(const std::string &amp;origName) const</div><div class="ttdoc">Convert hideous and vulgar internal parameter name into a beautiful presentable name.</div><div class="ttdef"><b>Definition:</b> <a href="styleManager_8h_source.html#l00033">styleManager.h:33</a></div></div>
 </div><!-- fragment -->
