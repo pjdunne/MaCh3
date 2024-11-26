@@ -28,8 +28,8 @@ var searchData=
   ['dodiagmcmc_25',['doDiagMCMC',['../classMCMCProcessor.html#adf449e50cf358f737fe4a2b65d9668e9',1,'MCMCProcessor']]],
   ['doshapeonly_26',['doShapeOnly',['../classSampleSummary.html#aebd01b201cf04608b251cd3e272878b7',1,'SampleSummary']]],
   ['drawrange_27',['DrawRange',['../classMCMCProcessor.html#a4abe633b264acd9b0459c7b8ccd8b9df',1,'MCMCProcessor']]],
-  ['draws_28',['Draws',['../RHat_8cpp.html#a9adc829d645affbb93eff1775ab7c0c6',1,'RHat.cpp']]],
-  ['drawsfolded_29',['DrawsFolded',['../RHat_8cpp.html#a7e7fe290fda4362be54b8cf5d56fea51',1,'RHat.cpp']]],
+  ['draws_28',['Draws',['../RHat__HighMem_8cpp.html#a9adc829d645affbb93eff1775ab7c0c6',1,'RHat_HighMem.cpp']]],
+  ['drawsfolded_29',['DrawsFolded',['../RHat__HighMem_8cpp.html#a7e7fe290fda4362be54b8cf5d56fea51',1,'RHat_HighMem.cpp']]],
   ['dummy_5fvalue_30',['dummy_value',['../structFarDetectorCoreInfo.html#a6999d8f0b1299aaad447cd1886110ffa',1,'FarDetectorCoreInfo']]],
   ['dummyfile_31',['DUMMYFILE',['../PlotMCMC__Diagnosis_8cpp.html#aff052b2c086f67396715402e80de5fd7',1,'PlotMCMC_Diagnosis.cpp']]]
 ];

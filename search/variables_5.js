@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['effectivesamplesize_0',['EffectiveSampleSize',['../RHat_8cpp.html#ae673254e98992bd483de55c6c1d1dcaf',1,'RHat.cpp']]],
-  ['effectivesamplesizefolded_1',['EffectiveSampleSizeFolded',['../RHat_8cpp.html#a39a08e7110f564d00239beccded97be8',1,'RHat.cpp']]],
+  ['effectivesamplesize_0',['EffectiveSampleSize',['../RHat__HighMem_8cpp.html#ae673254e98992bd483de55c6c1d1dcaf',1,'EffectiveSampleSize():&#160;RHat_HighMem.cpp'],['../RHat_8cpp.html#ae673254e98992bd483de55c6c1d1dcaf',1,'EffectiveSampleSize():&#160;RHat.cpp']]],
+  ['effectivesamplesizefolded_1',['EffectiveSampleSizeFolded',['../RHat__HighMem_8cpp.html#a39a08e7110f564d00239beccded97be8',1,'RHat_HighMem.cpp']]],
   ['eigen_5fthreshold_2',['eigen_threshold',['../classPCAHandler.html#afdf5f929fe9211a2ce05f6bab2b8633a',1,'PCAHandler::eigen_threshold()'],['../classcovarianceBase.html#add54ab1ba46b723fa23d7c95dfad671a',1,'covarianceBase::eigen_threshold()']]],
   ['eigen_5fvalues_3',['eigen_values',['../classPCAHandler.html#a8d95ecb29e091e9b09c5011691516c28',1,'PCAHandler']]],
   ['eigen_5fvalues_5fmaster_4',['eigen_values_master',['../classPCAHandler.html#a2924386fef0cf65215c51b4f81cdb0d1',1,'PCAHandler']]],

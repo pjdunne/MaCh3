@@ -1,7 +1,7 @@
 var searchData=
 [
   ['val_5fgpu_0',['val_gpu',['../gpuSplineUtils_8cu.html#ac95f6dd3bc9efb4292a4e3f264492f05',1,'gpuSplineUtils.cu']]],
-  ['validpar_1',['ValidPar',['../RHat_8cpp.html#a5217beba3b3cb82269e95bf52c3d62c5',1,'RHat.cpp']]],
+  ['validpar_1',['ValidPar',['../RHat_8cpp.html#a5217beba3b3cb82269e95bf52c3d62c5',1,'ValidPar():&#160;RHat.cpp'],['../RHat__HighMem_8cpp.html#a5217beba3b3cb82269e95bf52c3d62c5',1,'ValidPar():&#160;RHat_HighMem.cpp']]],
   ['vector_5fadd_2',['vector_add',['../classPSO.html#a0ade870a1dde6ec231b508e629ed1ba2',1,'PSO']]],
   ['vector_5fmultiply_3',['vector_multiply',['../classPSO.html#a400ceec227bfe822db4b5d4557e06a1b',1,'PSO']]],
   ['vector_5fsubtract_4',['vector_subtract',['../classPSO.html#a1a67501489c5cea6b871525447f09255',1,'PSO']]],

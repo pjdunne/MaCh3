@@ -30,6 +30,7 @@ var searchData=
   ['total_5fweight_5fpointers_27',['total_weight_pointers',['../structFarDetectorCoreInfo.html#a6935feab558a39ccc611bb22c16510e5',1,'FarDetectorCoreInfo']]],
   ['totalnsamples_28',['TotalNSamples',['../classFitterBase.html#abe9814558b8ff1bccdde3b4c894467e6',1,'FitterBase']]],
   ['totalonsplitplots_29',['totalOnSplitPlots',['../PlotLLH_8cpp.html#a6446498097144fc5f704c241f009d44d',1,'PlotLLH.cpp']]],
-  ['transfermat_30',['TransferMat',['../classPCAHandler.html#a1d9302633ed96ec57fbe26d25cbcee61',1,'PCAHandler']]],
-  ['transfermatt_31',['TransferMatT',['../classPCAHandler.html#a6f6443a487bb544e6a6e458d86f35f27',1,'PCAHandler']]]
+  ['tottoys_30',['TotToys',['../RHat_8cpp.html#a8d5589b851b154e9a366017ca14da0f5',1,'RHat.cpp']]],
+  ['transfermat_31',['TransferMat',['../classPCAHandler.html#a1d9302633ed96ec57fbe26d25cbcee61',1,'PCAHandler']]],
+  ['transfermatt_32',['TransferMatT',['../classPCAHandler.html#a6f6443a487bb544e6a6e458d86f35f27',1,'PCAHandler']]]
 ];
