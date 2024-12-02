@@ -6,7 +6,9 @@ name: Validations CI
 on:
   pull_request:
     branches: [ develop ]
-
+  push:
+    branches: [ feature_codecov ]
+    
 permissions:
   contents: read
   packages: write
@@ -145,20 +147,16 @@ jobs:
             ${{ matrix.test_9 }}
         fi
 
-    - name: Install gcovr
+    - name: Install codecov
       run: |
-        pip3 install gcovr
+        pip install codecov
 
-    - name: Generate Coverage Report
+    - name: Code Coverage
       working-directory: /opt/MaCh3Validations/build
       run: |
-        gcovr --json -o MaCh3_coverage.json -r .. -f "../CIValidations/*"
+        lcov --json -o coverage.json -r .. -f "../CIValidations/*"
+        lcov --html --html-details -o coverage.html -r .. -f "../CIValidations/*"
         ls -l /opt/MaCh3Validations/build
-
-    - name: Upload coverage reports to Codecov
-      uses: codecov/codecov-action@v4.0.1
-      with:
-        verbose: true
-        files: /opt/MaCh3Validations/build/MaCh3_coverage.json
+        bash <(curl -s https://codecov.io/bash) -f coverage.json || echo "Codecov did not collect coverage reports"
       env:
         CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
