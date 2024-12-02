@@ -147,15 +147,15 @@ jobs:
             ${{ matrix.test_9 }}
         fi
 
-    - name: Install codecov
+    - name: Install gcovr
       run: |
-        pip install codecov
+        pip install gcovr
 
     - name: Code Coverage
       working-directory: /opt/MaCh3Validations/build
       run: |
-        lcov --json -o coverage.json -r .. -f "../CIValidations/*"
-        lcov --html --html-details -o coverage.html -r .. -f "../CIValidations/*"
+        gcovr --json -o coverage.json -r .. -f "../CIValidations/*"
+        gcovr --html --html-details -o coverage.html -r .. -f "../CIValidations/*"
         ls -l /opt/MaCh3Validations/build
         bash <(curl -s https://codecov.io/bash) -f coverage.json || echo "Codecov did not collect coverage reports"
       env:
