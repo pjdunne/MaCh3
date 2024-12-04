@@ -3,7 +3,7 @@ var searchData=
   ['random_0',['random',['../classFitterBase.html#a138f250d9204a30204e4ca5b973008b2',1,'FitterBase']]],
   ['random_5fnumber_1',['random_number',['../classcovarianceBase.html#a0704c430bdc8e87fd6f03f01b2ab00df',1,'covarianceBase']]],
   ['randomconfiguration_2',['RandomConfiguration',['../classcovarianceBase.html#a867bff214af25bba68f921eaea8b5cdd',1,'covarianceBase']]],
-  ['randomhist_3',['RandomHist',['../classSampleSummary.html#a07ea4bf6cf23214263ec63cd69de49c1',1,'SampleSummary']]],
+  ['randomhist_3',['RandomHist',['../classSampleSummary.html#a2ced5be9bc8ba79530464d53b9c23797',1,'SampleSummary']]],
   ['randomize_4',['randomize',['../classcovarianceBase.html#a8d58b8e8ac3b2a8f1c6867e8b6cd7ff8',1,'covarianceBase']]],
   ['randparams_5',['randParams',['../classcovarianceBase.html#a705e648220c06083cd1acc5fba4f2ef7',1,'covarianceBase']]],
   ['ranges_5fmax_6',['ranges_max',['../classPSO.html#a1c5454d8b4000375138447cada8a46a2',1,'PSO']]],

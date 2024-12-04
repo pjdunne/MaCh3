@@ -67,7 +67,7 @@ var searchData=
   ['post2dplotthreshold_64',['Post2DPlotThreshold',['../classMCMCProcessor.html#a25e4685b6299181021b02ac0e0b74681',1,'MCMCProcessor']]],
   ['posterior_65',['Posterior',['../classMCMCProcessor.html#a82e6cfef1ba6fcfc8ac8f61acb5bf931',1,'MCMCProcessor']]],
   ['posterior1dcut_66',['Posterior1DCut',['../classMCMCProcessor.html#a85917e25c4f5b5b966c50cccd9ddd6a0',1,'MCMCProcessor']]],
-  ['posteriorhist_67',['PosteriorHist',['../classSampleSummary.html#a57653c676681b825720c2c1eaae4df3f',1,'SampleSummary']]],
+  ['posteriorhist_67',['PosteriorHist',['../classSampleSummary.html#a508ef812c8b1275580759832e33c98ee',1,'SampleSummary']]],
   ['posteriorhist_5fbymode_68',['PosteriorHist_ByMode',['../classSampleSummary.html#aa6cfe4fb92b67f08b0d94f0fe1d8a3a2',1,'SampleSummary']]],
   ['posteriors1d_5fmap_69',['posteriors1d_map',['../structMaCh3Plotting_1_1InputFile.html#a784de266deed02c52fda2900b420e433',1,'MaCh3Plotting::InputFile']]],
   ['posteriortree_70',['posteriorTree',['../structMaCh3Plotting_1_1InputFile.html#a231dcc94331cbb1bc0947ed085292516',1,'MaCh3Plotting::InputFile']]],

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['respfunctype_0',['RespFuncType',['../Structs_8h.html#a6a73aa1ad819973a9c421c17c2a7f36d',1,'Structs.h']]]
+  ['parameterenum_0',['ParameterEnum',['../MCMCProcessor_8h.html#acd2848273413543fe14936252942c20b',1,'MCMCProcessor.h']]],
+  ['probnu_1',['ProbNu',['../Structs_8h.html#a5a4651943de972b89fd091d11fa7b3d7',1,'Structs.h']]]
 ];

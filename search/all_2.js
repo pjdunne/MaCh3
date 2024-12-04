@@ -4,7 +4,7 @@ var searchData=
   ['batchedaverages_1',['BatchedAverages',['../classMCMCProcessor.html#ab3f590b501162fc2ee5b78ce75689771',1,'MCMCProcessor']]],
   ['batchedmeans_2',['BatchedMeans',['../classMCMCProcessor.html#af3658b8adee50f6ef5557ebbd1c87b8e',1,'MCMCProcessor']]],
   ['best_5fparticle_3',['best_particle',['../classPSO.html#aaf8a31e5604b900ce5702910d7e12c15',1,'PSO']]],
-  ['betahist_4',['BetaHist',['../classSampleSummary.html#a1041f478d0610e2a363a3993991599e5',1,'SampleSummary']]],
+  ['betahist_4',['BetaHist',['../classSampleSummary.html#a479f46f89c0c752c3e3e147d5b04b458',1,'SampleSummary']]],
   ['betweenchainvariance_5',['BetweenChainVariance',['../RHat__HighMem_8cpp.html#a52dcf07f8f740636605516f6c2ab3e40',1,'BetweenChainVariance():&#160;RHat_HighMem.cpp'],['../RHat_8cpp.html#a52dcf07f8f740636605516f6c2ab3e40',1,'BetweenChainVariance():&#160;RHat.cpp']]],
   ['betweenchainvariancefolded_6',['BetweenChainVarianceFolded',['../RHat__HighMem_8cpp.html#a3a65452412d9dd00c1a9e93d0bab1a26',1,'RHat_HighMem.cpp']]],
   ['bibliography_7',['Bibliography',['../citelist.html',1,'']]],

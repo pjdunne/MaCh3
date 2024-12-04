@@ -28,7 +28,7 @@ var searchData=
   ['nmodelparams_25',['nModelParams',['../classSampleSummary.html#a49215601479aaa99f9f64d8f7c900385',1,'SampleSummary']]],
   ['nmodes_26',['NModes',['../classMaCh3Modes.html#a3bde53f0145673d99b9866b3fb5dcbaf',1,'MaCh3Modes']]],
   ['nominal_27',['nominal',['../GetPenaltyTerm_8cpp.html#a35f9d8ea46badc9ea84d62feaa0e73df',1,'GetPenaltyTerm.cpp']]],
-  ['nominalhist_28',['NominalHist',['../classSampleSummary.html#af997228f24e00ac2ba766883cfb83ee0',1,'SampleSummary']]],
+  ['nominalhist_28',['NominalHist',['../classSampleSummary.html#a503b0dc19bb1ad57e7f2560cc64feef9',1,'SampleSummary']]],
   ['nomxbin_29',['NomXBin',['../structFarDetectorCoreInfo.html#a12e9a8a1d7f2a2cf411de51b94dda4d0',1,'FarDetectorCoreInfo']]],
   ['nomybin_30',['NomYBin',['../structFarDetectorCoreInfo.html#aec27373f59732649b666502cb489efae',1,'FarDetectorCoreInfo']]],
   ['normparams_31',['NormParams',['../classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5',1,'covarianceXsec']]],

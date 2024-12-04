@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['nupdg_0',['NuPDG',['../Structs_8h.html#a0dfdd8cf84b8fa3495e9e5e520fe6cd2',1,'Structs.h']]]
+  ['kinfcrit_0',['kInfCrit',['../namespaceM3.html#a007e5ed320c3672a3faf79da0a38fb7a',1,'M3']]]
 ];
