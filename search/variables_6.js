@@ -33,7 +33,5 @@ var searchData=
   ['fparticles_30',['fParticles',['../classPSO.html#a9e9da89144237a7f3369b9b3739e73ad',1,'PSO']]],
   ['ftestlikelihood_31',['fTestLikelihood',['../classFitterBase.html#ada898e35bab22af470f2cd1e28af609b',1,'FitterBase']]],
   ['fteststatistic_32',['fTestStatistic',['../classsamplePDFBase.html#adc5cd0002708ad049ba4fb5e3c62075d',1,'samplePDFBase']]],
-  ['ftwo_33',['fTwo',['../classPSO.html#a56539eb264d11e1c37674ad55504d454',1,'PSO']]],
-  ['funcparsindex_34',['funcParsIndex',['../classsamplePDFFDBase.html#af0ab9ed944f1db59fa156837d80e8d78',1,'samplePDFFDBase']]],
-  ['funcparsnames_35',['funcParsNames',['../classsamplePDFFDBase.html#a9708eeeaddb815efbe81ede6fc773900',1,'samplePDFFDBase']]]
+  ['ftwo_33',['fTwo',['../classPSO.html#a56539eb264d11e1c37674ad55504d454',1,'PSO']]]
 ];

@@ -362,22 +362,20 @@ template&lt;typename SampleType &gt; </div>
 <div class="line"><span class="lineno">  124</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; SampleConfig.size(); ++i)</div>
 <div class="line"><span class="lineno">  125</span>  {</div>
 <div class="line"><span class="lineno">  126</span>    <span class="comment">// Instantiate the sample using the specified class type</span></div>
-<div class="line"><span class="lineno">  127</span>    SampleType* Sample = <span class="keyword">new</span> SampleType(SampleConfig[i], xsec);</div>
-<div class="line"><span class="lineno">  128</span>    Sample-&gt;SetXsecCov(xsec);</div>
-<div class="line"><span class="lineno">  129</span>    <span class="keywordflow">if</span> (osc != <span class="keyword">nullptr</span>) Sample-&gt;SetOscCov(osc);</div>
-<div class="line"><span class="lineno">  130</span>    Sample-&gt;reweight();</div>
-<div class="line"><span class="lineno">  131</span> </div>
-<div class="line"><span class="lineno">  132</span>    <span class="comment">// Obtain sample name and create a TString version for histogram naming</span></div>
-<div class="line"><span class="lineno">  133</span>    std::string name = Sample-&gt;GetName();</div>
-<div class="line"><span class="lineno">  134</span>    TString NameTString = TString(name.c_str());</div>
-<div class="line"><span class="lineno">  135</span> </div>
-<div class="line"><span class="lineno">  136</span>    <span class="comment">// Clone the 1D histogram with a modified name</span></div>
-<div class="line"><span class="lineno">  137</span>    TH1D* SampleHistogramPrior = <span class="keyword">static_cast&lt;</span>TH1D*<span class="keyword">&gt;</span>(Sample-&gt;get1DHist()-&gt;Clone(NameTString + <span class="stringliteral">&quot;_Prior&quot;</span>));</div>
-<div class="line"><span class="lineno">  138</span>    Sample-&gt;addData(SampleHistogramPrior);</div>
-<div class="line"><span class="lineno">  139</span>    PDFs[i] = Sample;</div>
-<div class="line"><span class="lineno">  140</span>  }</div>
-<div class="line"><span class="lineno">  141</span>  <span class="keywordflow">return</span> PDFs;</div>
-<div class="line"><span class="lineno">  142</span>}</div>
+<div class="line"><span class="lineno">  127</span>    SampleType* Sample = <span class="keyword">new</span> SampleType(SampleConfig[i], xsec, osc);</div>
+<div class="line"><span class="lineno">  128</span>    Sample-&gt;reweight();</div>
+<div class="line"><span class="lineno">  129</span> </div>
+<div class="line"><span class="lineno">  130</span>    <span class="comment">// Obtain sample name and create a TString version for histogram naming</span></div>
+<div class="line"><span class="lineno">  131</span>    std::string name = Sample-&gt;GetName();</div>
+<div class="line"><span class="lineno">  132</span>    TString NameTString = TString(name.c_str());</div>
+<div class="line"><span class="lineno">  133</span> </div>
+<div class="line"><span class="lineno">  134</span>    <span class="comment">// Clone the 1D histogram with a modified name</span></div>
+<div class="line"><span class="lineno">  135</span>    TH1D* SampleHistogramPrior = <span class="keyword">static_cast&lt;</span>TH1D*<span class="keyword">&gt;</span>(Sample-&gt;get1DHist()-&gt;Clone(NameTString + <span class="stringliteral">&quot;_Prior&quot;</span>));</div>
+<div class="line"><span class="lineno">  136</span>    Sample-&gt;addData(SampleHistogramPrior);</div>
+<div class="line"><span class="lineno">  137</span>    PDFs[i] = Sample;</div>
+<div class="line"><span class="lineno">  138</span>  }</div>
+<div class="line"><span class="lineno">  139</span>  <span class="keywordflow">return</span> PDFs;</div>
+<div class="line"><span class="lineno">  140</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>

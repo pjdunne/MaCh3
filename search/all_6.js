@@ -37,7 +37,7 @@ var searchData=
   ['findrawchainsteps_34',['findRawChainSteps',['../classMaCh3Plotting_1_1InputManager.html#ab547af49427a637364a6d58f484c6826',1,'MaCh3Plotting::InputManager']]],
   ['findrootobject_35',['findRootObject',['../classMaCh3Plotting_1_1InputManager.html#a7e9f932d7591cbdd6c99c56c2da75f85',1,'MaCh3Plotting::InputManager']]],
   ['findsplinebinning_36',['FindSplineBinning',['../classsplineFDBase.html#a00c0e93b4c4799ffacaa58578e5dcf6b',1,'splineFDBase']]],
-  ['findsplinesegment_37',['FindSplineSegment',['../classSplineBase.html#ae18e490295762416c8627d2db11ee98d',1,'SplineBase::FindSplineSegment()'],['../classSMonolith.html#a7128a7c13b10f331df8946a0a87c4b33',1,'SMonolith::FindSplineSegment()'],['../classsplineFDBase.html#ab4a852337aab961abbcaa0c9f70c88ba',1,'splineFDBase::FindSplineSegment()']]],
+  ['findsplinesegment_37',['FindSplineSegment',['../classsplineFDBase.html#ab4a852337aab961abbcaa0c9f70c88ba',1,'splineFDBase::FindSplineSegment()'],['../classSMonolith.html#a7128a7c13b10f331df8946a0a87c4b33',1,'SMonolith::FindSplineSegment()'],['../classSplineBase.html#ae18e490295762416c8627d2db11ee98d',1,'SplineBase::FindSplineSegment()']]],
   ['findx_38',['FindX',['../classTSpline3__red.html#a39668a1dc14058a1f833e9621ec19caf',1,'TSpline3_red']]],
   ['finertia_39',['fInertia',['../classPSO.html#a9b3d14a97a9d838a9f009f9cc54968d3',1,'PSO']]],
   ['first_5fpass_40',['first_pass',['../classSampleSummary.html#a4ade2ccb94981d4483f0b4e6e367b1a0',1,'SampleSummary']]],
@@ -46,7 +46,7 @@ var searchData=
   ['fiterations_43',['fIterations',['../classPSO.html#aa2adb0a6985424439c44b8d0c7afec08',1,'PSO']]],
   ['fitman_44',['fitMan',['../classFitterBase.html#a4fceb68f242feeb04a0ddf42a5a37095',1,'FitterBase']]],
   ['fitter_45',['fitter',['../structMaCh3Plotting_1_1InputFile.html#a6ad1094c5fb3dcd4479ef8fdf378370c',1,'MaCh3Plotting::InputFile']]],
-  ['fitterbase_46',['FitterBase',['../classFitterBase.html',1,'FitterBase'],['../classFitterBase.html#a2d45811f9bcb9719f312048bbd36a423',1,'FitterBase::FitterBase()']]],
+  ['fitterbase_46',['FitterBase',['../classFitterBase.html#a2d45811f9bcb9719f312048bbd36a423',1,'FitterBase::FitterBase()'],['../classFitterBase.html',1,'FitterBase']]],
   ['fitterbase_2ecpp_47',['FitterBase.cpp',['../FitterBase_8cpp.html',1,'']]],
   ['fitterbase_2eh_48',['FitterBase.h',['../FitterBase_8h.html',1,'']]],
   ['fixed_49',['fixed',['../classPSO.html#a90cf855167748b488851c559de49283c',1,'PSO']]],
@@ -65,7 +65,5 @@ var searchData=
   ['fparticles_62',['fParticles',['../classPSO.html#a9e9da89144237a7f3369b9b3739e73ad',1,'PSO']]],
   ['ftestlikelihood_63',['fTestLikelihood',['../classFitterBase.html#ada898e35bab22af470f2cd1e28af609b',1,'FitterBase']]],
   ['fteststatistic_64',['fTestStatistic',['../classsamplePDFBase.html#adc5cd0002708ad049ba4fb5e3c62075d',1,'samplePDFBase']]],
-  ['ftwo_65',['fTwo',['../classPSO.html#a56539eb264d11e1c37674ad55504d454',1,'PSO']]],
-  ['funcparsindex_66',['funcParsIndex',['../classsamplePDFFDBase.html#af0ab9ed944f1db59fa156837d80e8d78',1,'samplePDFFDBase']]],
-  ['funcparsnames_67',['funcParsNames',['../classsamplePDFFDBase.html#a9708eeeaddb815efbe81ede6fc773900',1,'samplePDFFDBase']]]
+  ['ftwo_65',['fTwo',['../classPSO.html#a56539eb264d11e1c37674ad55504d454',1,'PSO']]]
 ];
