@@ -188,10 +188,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a98c68c6c894132a984c6bdd90c3e85dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">DB Get norm/func parameters depending on given DetID.  <br /></td></tr>
 <tr class="separator:a98c68c6c894132a984c6bdd90c3e85dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98cf4b870e62badc83bcda99ae3574ae"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcovarianceXsec.html#a98cf4b870e62badc83bcda99ae3574ae">getNominalArray</a> () override</td></tr>
-<tr class="memdesc:a98cf4b870e62badc83bcda99ae3574ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">KS: For most covariances nominal and fparInit (prior) are the same, however for Xsec those can be different For example Sigma Var are done around nominal in ND280, no idea why though...  <br /></td></tr>
+<tr class="memdesc:a98cf4b870e62badc83bcda99ae3574ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">KS: For most covariances prior and fparInit (prior) are the same, however for Xsec those can be different.  <br /></td></tr>
 <tr class="separator:a98cf4b870e62badc83bcda99ae3574ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea8d453c3b4bfe236faff0bf48623118"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcovarianceXsec.html#aea8d453c3b4bfe236faff0bf48623118">getNominal</a> (const int i) override</td></tr>
-<tr class="memdesc:aea8d453c3b4bfe236faff0bf48623118"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get nominal for a given param.  <br /></td></tr>
+<tr class="memdesc:aea8d453c3b4bfe236faff0bf48623118"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get prior for a given param.  <br /></td></tr>
 <tr class="separator:aea8d453c3b4bfe236faff0bf48623118"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5dc8900054a498107e39cc41641879a8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcovarianceXsec.html#a5dc8900054a498107e39cc41641879a8">IsParFromGroup</a> (const int i, const std::string &amp;Group)</td></tr>
 <tr class="memdesc:a5dc8900054a498107e39cc41641879a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if parameter belongs to a given group.  <br /></td></tr>
@@ -346,7 +346,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a3daac6405cc791347b768a5afe8a13d2 inherit pub_methods_classcovarianceBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get total number of parameters.  <br /></td></tr>
 <tr class="separator:a3daac6405cc791347b768a5afe8a13d2 inherit pub_methods_classcovarianceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0a231f87266048a3cd2e0032eaf0f30 inherit pub_methods_classcovarianceBase"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcovarianceBase.html#ae0a231f87266048a3cd2e0032eaf0f30">getNominalArray</a> ()</td></tr>
-<tr class="memdesc:ae0a231f87266048a3cd2e0032eaf0f30 inherit pub_methods_classcovarianceBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the nominal array for parameters.  <br /></td></tr>
+<tr class="memdesc:ae0a231f87266048a3cd2e0032eaf0f30 inherit pub_methods_classcovarianceBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the prior array for parameters.  <br /></td></tr>
 <tr class="separator:ae0a231f87266048a3cd2e0032eaf0f30 inherit pub_methods_classcovarianceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab34500d7b559db68c46a2838667c3e03 inherit pub_methods_classcovarianceBase"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcovarianceBase.html#ab34500d7b559db68c46a2838667c3e03">getPreFitValues</a> ()</td></tr>
 <tr class="memdesc:ab34500d7b559db68c46a2838667c3e03 inherit pub_methods_classcovarianceBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the pre-fit values of the parameters.  <br /></td></tr>
@@ -367,7 +367,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a1cede85accaac2ea7056740893d90c49 inherit pub_methods_classcovarianceBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get prior parameter value.  <br /></td></tr>
 <tr class="separator:a1cede85accaac2ea7056740893d90c49 inherit pub_methods_classcovarianceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5bf31f7d7a5e24c49d4157d411080dbf inherit pub_methods_classcovarianceBase"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcovarianceBase.html#a5bf31f7d7a5e24c49d4157d411080dbf">getNominal</a> (const int i)</td></tr>
-<tr class="memdesc:a5bf31f7d7a5e24c49d4157d411080dbf inherit pub_methods_classcovarianceBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return generated value, although is virtual so class inheriting might actual get nominal not generated.  <br /></td></tr>
+<tr class="memdesc:a5bf31f7d7a5e24c49d4157d411080dbf inherit pub_methods_classcovarianceBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return generated value, although is virtual so class inheriting might actual get prior not generated.  <br /></td></tr>
 <tr class="separator:a5bf31f7d7a5e24c49d4157d411080dbf inherit pub_methods_classcovarianceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d8d40e4f44cd0c89a1a2d4b4711f332 inherit pub_methods_classcovarianceBase"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcovarianceBase.html#a3d8d40e4f44cd0c89a1a2d4b4711f332">GetGenerated</a> (const int i)</td></tr>
 <tr class="memdesc:a3d8d40e4f44cd0c89a1a2d4b4711f332 inherit pub_methods_classcovarianceBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return generated value for a given parameter.  <br /></td></tr>
@@ -415,10 +415,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a261941a4c06e5d875174d8769a4d02f1 inherit pub_methods_classcovarianceBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of params which will be different depending if using Eigen decomposition or not.  <br /></td></tr>
 <tr class="separator:a261941a4c06e5d875174d8769a4d02f1 inherit pub_methods_classcovarianceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebd37baf2d6551863d810bea83c73020 inherit pub_methods_classcovarianceBase"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcovarianceBase.html#aebd37baf2d6551863d810bea83c73020">printNominal</a> ()</td></tr>
-<tr class="memdesc:aebd37baf2d6551863d810bea83c73020 inherit pub_methods_classcovarianceBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print nominal value for every parameter.  <br /></td></tr>
+<tr class="memdesc:aebd37baf2d6551863d810bea83c73020 inherit pub_methods_classcovarianceBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print prior value for every parameter.  <br /></td></tr>
 <tr class="separator:aebd37baf2d6551863d810bea83c73020 inherit pub_methods_classcovarianceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a732268706d083b6ae4495e34e703bbda inherit pub_methods_classcovarianceBase"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcovarianceBase.html#a732268706d083b6ae4495e34e703bbda">printNominalCurrProp</a> ()</td></tr>
-<tr class="memdesc:a732268706d083b6ae4495e34e703bbda inherit pub_methods_classcovarianceBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print nominal, current and proposed value for each parameter.  <br /></td></tr>
+<tr class="memdesc:a732268706d083b6ae4495e34e703bbda inherit pub_methods_classcovarianceBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print prior, current and proposed value for each parameter.  <br /></td></tr>
 <tr class="separator:a732268706d083b6ae4495e34e703bbda inherit pub_methods_classcovarianceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1ff984cbc1b7858af9dd237cc1648d3 inherit pub_methods_classcovarianceBase"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcovarianceBase.html#ac1ff984cbc1b7858af9dd237cc1648d3">printPars</a> ()</td></tr>
 <tr class="separator:ac1ff984cbc1b7858af9dd237cc1648d3 inherit pub_methods_classcovarianceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -849,10 +849,10 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="covarianceXsec_8h_source.html#l00135">135</a> of file <a class="el" href="covarianceXsec_8h_source.html">covarianceXsec.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  135</span>                                                                    {</div>
-<div class="line"><span class="lineno">  136</span>      <span class="keywordflow">return</span> (<a class="code hl_function" href="classcovarianceXsec.html#aad522479b06581729efd6c1cd12d11df">GetParDetID</a>(SystIndex) &amp; DetID) != 0;</div>
-<div class="line"><span class="lineno">  137</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="covarianceXsec_8h_source.html#l00134">134</a> of file <a class="el" href="covarianceXsec_8h_source.html">covarianceXsec.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  134</span>                                                                    {</div>
+<div class="line"><span class="lineno">  135</span>      <span class="keywordflow">return</span> (<a class="code hl_function" href="classcovarianceXsec.html#aad522479b06581729efd6c1cd12d11df">GetParDetID</a>(SystIndex) &amp; DetID) != 0;</div>
+<div class="line"><span class="lineno">  136</span>    }</div>
 <div class="ttc" id="aclasscovarianceXsec_html_aad522479b06581729efd6c1cd12d11df"><div class="ttname"><a href="classcovarianceXsec.html#aad522479b06581729efd6c1cd12d11df">covarianceXsec::GetParDetID</a></div><div class="ttdeci">int GetParDetID(const int i) const</div><div class="ttdoc">ETA - just return the int of the DetID, this can be removed to do a string comp at some point.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8h_source.html#l00024">covarianceXsec.h:24</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -906,7 +906,7 @@ Protected Attributes</h2></td></tr>
 <div class="ttc" id="aMaCh3Logger_8h_html_a07ff6d6a15b24f94afc88a1b89779beb"><div class="ttname"><a href="MaCh3Logger_8h.html#a07ff6d6a15b24f94afc88a1b89779beb">MACH3LOG_CRITICAL</a></div><div class="ttdeci">#define MACH3LOG_CRITICAL</div><div class="ttdef"><b>Definition:</b> <a href="MaCh3Logger_8h_source.html#l00019">MaCh3Logger.h:19</a></div></div>
 <div class="ttc" id="aclassMaCh3Exception_html"><div class="ttname"><a href="classMaCh3Exception.html">MaCh3Exception</a></div><div class="ttdoc">Custom exception class for MaCh3 errors.</div><div class="ttdef"><b>Definition:</b> <a href="MaCh3Exception_8h_source.html#l00012">MaCh3Exception.h:12</a></div></div>
 <div class="ttc" id="aclasscovarianceBase_html_a973671386a2f8ea924f25f8f5404654c"><div class="ttname"><a href="classcovarianceBase.html#a973671386a2f8ea924f25f8f5404654c">covarianceBase::_fFancyNames</a></div><div class="ttdeci">std::vector&lt; std::string &gt; _fFancyNames</div><div class="ttdoc">Fancy name for example rather than xsec_0 it is MAQE, useful for human reading.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceBase_8h_source.html#l00412">covarianceBase.h:412</a></div></div>
-<div class="ttc" id="aclasscovarianceXsec_html_a4d3074db3c9edb7465a4409abd9c91fc"><div class="ttname"><a href="classcovarianceXsec.html#a4d3074db3c9edb7465a4409abd9c91fc">covarianceXsec::_fSplineNames</a></div><div class="ttdeci">std::vector&lt; std::string &gt; _fSplineNames</div><div class="ttdoc">Name of spline in TTree (TBranch),.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8h_source.html#l00159">covarianceXsec.h:159</a></div></div>
+<div class="ttc" id="aclasscovarianceXsec_html_a4d3074db3c9edb7465a4409abd9c91fc"><div class="ttname"><a href="classcovarianceXsec.html#a4d3074db3c9edb7465a4409abd9c91fc">covarianceXsec::_fSplineNames</a></div><div class="ttdeci">std::vector&lt; std::string &gt; _fSplineNames</div><div class="ttdoc">Name of spline in TTree (TBranch),.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8h_source.html#l00158">covarianceXsec.h:158</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -947,7 +947,7 @@ Protected Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  594</span>  TVectorD* xsec_param_prior = <span class="keyword">new</span> TVectorD(<a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>);</div>
 <div class="line"><span class="lineno">  595</span>  TVectorD* xsec_flat_prior = <span class="keyword">new</span> TVectorD(<a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>);</div>
 <div class="line"><span class="lineno">  596</span>  TVectorD* xsec_stepscale = <span class="keyword">new</span> TVectorD(<a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>);</div>
-<div class="line"><span class="lineno">  597</span>  TVectorD* xsec_param_nom = <span class="keyword">new</span> TVectorD(<a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>);</div>
+<div class="line"><span class="lineno">  597</span>  TVectorD* xsec_param_generated = <span class="keyword">new</span> TVectorD(<a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>);</div>
 <div class="line"><span class="lineno">  598</span>  TVectorD* xsec_param_lb = <span class="keyword">new</span> TVectorD(<a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>);</div>
 <div class="line"><span class="lineno">  599</span>  TVectorD* xsec_param_ub = <span class="keyword">new</span> TVectorD(<a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>);</div>
 <div class="line"><span class="lineno">  600</span> </div>
@@ -969,7 +969,7 @@ Protected Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  616</span>    xsec_spline_names-&gt;AddLast(splineName);</div>
 <div class="line"><span class="lineno">  617</span> </div>
 <div class="line"><span class="lineno">  618</span>    (*xsec_param_prior)[i] = <a class="code hl_variable" href="classcovarianceBase.html#a7578a2cc2e8e9100fad88310a824cb1c">_fPreFitValue</a>[i];</div>
-<div class="line"><span class="lineno">  619</span>    (*xsec_param_nom)[i] = <a class="code hl_variable" href="classcovarianceBase.html#a9b753f52711600a9f8d648531d95b044">_fGenerated</a>[i];</div>
+<div class="line"><span class="lineno">  619</span>    (*xsec_param_generated)[i] = <a class="code hl_variable" href="classcovarianceBase.html#a9b753f52711600a9f8d648531d95b044">_fGenerated</a>[i];</div>
 <div class="line"><span class="lineno">  620</span>    (*xsec_flat_prior)[i] = <a class="code hl_variable" href="classcovarianceBase.html#ad9c47deb7009bff81210f666e80012eb">_fFlatPrior</a>[i];</div>
 <div class="line"><span class="lineno">  621</span>    (*xsec_stepscale)[i] = <a class="code hl_variable" href="classcovarianceBase.html#a3cda39026e336a49cef482efd4062561">_fIndivStepScale</a>[i];</div>
 <div class="line"><span class="lineno">  622</span>    (*xsec_error)[i] = <a class="code hl_variable" href="classcovarianceBase.html#a34f877fc160b4a93a3aab1b3a8977858">_fError</a>[i];</div>
@@ -1009,8 +1009,8 @@ Protected Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  656</span>  <span class="keyword">delete</span> xsec_flat_prior;</div>
 <div class="line"><span class="lineno">  657</span>  xsec_stepscale-&gt;Write(<span class="stringliteral">&quot;xsec_stepscale&quot;</span>);</div>
 <div class="line"><span class="lineno">  658</span>  <span class="keyword">delete</span> xsec_stepscale;</div>
-<div class="line"><span class="lineno">  659</span>  xsec_param_nom-&gt;Write(<span class="stringliteral">&quot;xsec_param_nom&quot;</span>);</div>
-<div class="line"><span class="lineno">  660</span>  <span class="keyword">delete</span> xsec_param_nom;</div>
+<div class="line"><span class="lineno">  659</span>  xsec_param_generated-&gt;Write(<span class="stringliteral">&quot;xsec_param_nom&quot;</span>);</div>
+<div class="line"><span class="lineno">  660</span>  <span class="keyword">delete</span> xsec_param_generated;</div>
 <div class="line"><span class="lineno">  661</span>  xsec_param_lb-&gt;Write(<span class="stringliteral">&quot;xsec_param_lb&quot;</span>);</div>
 <div class="line"><span class="lineno">  662</span>  <span class="keyword">delete</span> xsec_param_lb;</div>
 <div class="line"><span class="lineno">  663</span>  xsec_param_ub-&gt;Write(<span class="stringliteral">&quot;xsec_param_ub&quot;</span>);</div>
@@ -1045,11 +1045,11 @@ Protected Attributes</h2></td></tr>
 <div class="ttc" id="aclasscovarianceBase_html_a7578a2cc2e8e9100fad88310a824cb1c"><div class="ttname"><a href="classcovarianceBase.html#a7578a2cc2e8e9100fad88310a824cb1c">covarianceBase::_fPreFitValue</a></div><div class="ttdeci">std::vector&lt; double &gt; _fPreFitValue</div><div class="ttdoc">Parameter value dictated by the prior model. Based on it penalty term is calculated.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceBase_8h_source.html#l00418">covarianceBase.h:418</a></div></div>
 <div class="ttc" id="aclasscovarianceBase_html_a8f1d94838f188cc85c4f82557c0b0b66"><div class="ttname"><a href="classcovarianceBase.html#a8f1d94838f188cc85c4f82557c0b0b66">covarianceBase::_fLowBound</a></div><div class="ttdeci">std::vector&lt; double &gt; _fLowBound</div><div class="ttdoc">Lowest physical bound, parameter will not be able to go beyond it.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceBase_8h_source.html#l00428">covarianceBase.h:428</a></div></div>
 <div class="ttc" id="aclasscovarianceBase_html_a9b753f52711600a9f8d648531d95b044"><div class="ttname"><a href="classcovarianceBase.html#a9b753f52711600a9f8d648531d95b044">covarianceBase::_fGenerated</a></div><div class="ttdeci">std::vector&lt; double &gt; _fGenerated</div><div class="ttdoc">Generated value of the parameter.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceBase_8h_source.html#l00424">covarianceBase.h:424</a></div></div>
-<div class="ttc" id="aclasscovarianceBase_html_ac14fabdb87f5101cdbfcecb8e6b6b811"><div class="ttname"><a href="classcovarianceBase.html#ac14fabdb87f5101cdbfcecb8e6b6b811">covarianceBase::GetCorrelationMatrix</a></div><div class="ttdeci">TH2D * GetCorrelationMatrix()</div><div class="ttdoc">KS: Convert covariance matrix to correlation matrix and return TH2D which can be used for fancy plott...</div><div class="ttdef"><b>Definition:</b> <a href="covarianceBase_8cpp_source.html#l01315">covarianceBase.cpp:1315</a></div></div>
+<div class="ttc" id="aclasscovarianceBase_html_ac14fabdb87f5101cdbfcecb8e6b6b811"><div class="ttname"><a href="classcovarianceBase.html#ac14fabdb87f5101cdbfcecb8e6b6b811">covarianceBase::GetCorrelationMatrix</a></div><div class="ttdeci">TH2D * GetCorrelationMatrix()</div><div class="ttdoc">KS: Convert covariance matrix to correlation matrix and return TH2D which can be used for fancy plott...</div><div class="ttdef"><b>Definition:</b> <a href="covarianceBase_8cpp_source.html#l01316">covarianceBase.cpp:1316</a></div></div>
 <div class="ttc" id="aclasscovarianceBase_html_ad9c47deb7009bff81210f666e80012eb"><div class="ttname"><a href="classcovarianceBase.html#ad9c47deb7009bff81210f666e80012eb">covarianceBase::_fFlatPrior</a></div><div class="ttdeci">std::vector&lt; bool &gt; _fFlatPrior</div><div class="ttdoc">Whether to apply flat prior or not.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceBase_8h_source.html#l00434">covarianceBase.h:434</a></div></div>
-<div class="ttc" id="aclasscovarianceXsec_html_a183f01056fc0e9b42db202e944021332"><div class="ttname"><a href="classcovarianceXsec.html#a183f01056fc0e9b42db202e944021332">covarianceXsec::_fDetID</a></div><div class="ttdeci">std::vector&lt; int &gt; _fDetID</div><div class="ttdoc">Tells to which samples object param should be applied.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8h_source.html#l00154">covarianceXsec.h:154</a></div></div>
-<div class="ttc" id="aclasscovarianceXsec_html_adddfbaa235113603542826df331ed61e"><div class="ttname"><a href="classcovarianceXsec.html#adddfbaa235113603542826df331ed61e">covarianceXsec::_fSystToGlobalSystIndexMap</a></div><div class="ttdeci">std::vector&lt; std::map&lt; int, int &gt; &gt; _fSystToGlobalSystIndexMap</div><div class="ttdoc">Map between number of given parameter type with global parameter numbering. For example 2nd norm para...</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8h_source.html#l00165">covarianceXsec.h:165</a></div></div>
-<div class="ttc" id="aclasscovarianceXsec_html_ae95bafab0c674dc838635aaeca40bc2c"><div class="ttname"><a href="classcovarianceXsec.html#ae95bafab0c674dc838635aaeca40bc2c">covarianceXsec::SplineParams</a></div><div class="ttdeci">std::vector&lt; XsecSplines1 &gt; SplineParams</div><div class="ttdoc">Vector containing info for normalisation systematics.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8h_source.html#l00168">covarianceXsec.h:168</a></div></div>
+<div class="ttc" id="aclasscovarianceXsec_html_a183f01056fc0e9b42db202e944021332"><div class="ttname"><a href="classcovarianceXsec.html#a183f01056fc0e9b42db202e944021332">covarianceXsec::_fDetID</a></div><div class="ttdeci">std::vector&lt; int &gt; _fDetID</div><div class="ttdoc">Tells to which samples object param should be applied.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8h_source.html#l00153">covarianceXsec.h:153</a></div></div>
+<div class="ttc" id="aclasscovarianceXsec_html_adddfbaa235113603542826df331ed61e"><div class="ttname"><a href="classcovarianceXsec.html#adddfbaa235113603542826df331ed61e">covarianceXsec::_fSystToGlobalSystIndexMap</a></div><div class="ttdeci">std::vector&lt; std::map&lt; int, int &gt; &gt; _fSystToGlobalSystIndexMap</div><div class="ttdoc">Map between number of given parameter type with global parameter numbering. For example 2nd norm para...</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8h_source.html#l00164">covarianceXsec.h:164</a></div></div>
+<div class="ttc" id="aclasscovarianceXsec_html_ae95bafab0c674dc838635aaeca40bc2c"><div class="ttname"><a href="classcovarianceXsec.html#ae95bafab0c674dc838635aaeca40bc2c">covarianceXsec::SplineParams</a></div><div class="ttdeci">std::vector&lt; XsecSplines1 &gt; SplineParams</div><div class="ttdoc">Vector containing info for normalisation systematics.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8h_source.html#l00167">covarianceXsec.h:167</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1091,7 +1091,7 @@ Protected Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  230</span>  }</div>
 <div class="line"><span class="lineno">  231</span>  <span class="keywordflow">return</span> returnVec;</div>
 <div class="line"><span class="lineno">  232</span>}</div>
-<div class="ttc" id="aclasscovarianceXsec_html_a5b8c672fce660dd1b8d25f34ddf14474"><div class="ttname"><a href="classcovarianceXsec.html#a5b8c672fce660dd1b8d25f34ddf14474">covarianceXsec::AppliesToDetID</a></div><div class="ttdeci">bool AppliesToDetID(const int SystIndex, const int DetID) const</div><div class="ttdoc">Check if parameter is affecting given det ID.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8h_source.html#l00135">covarianceXsec.h:135</a></div></div>
+<div class="ttc" id="aclasscovarianceXsec_html_a5b8c672fce660dd1b8d25f34ddf14474"><div class="ttname"><a href="classcovarianceXsec.html#a5b8c672fce660dd1b8d25f34ddf14474">covarianceXsec::AppliesToDetID</a></div><div class="ttdeci">bool AppliesToDetID(const int SystIndex, const int DetID) const</div><div class="ttdoc">Check if parameter is affecting given det ID.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8h_source.html#l00134">covarianceXsec.h:134</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1119,7 +1119,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get nominal for a given param. </p>
+<p>Get prior for a given param. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">i</td><td>parameter index </td></tr>
@@ -1129,8 +1129,8 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classcovarianceBase.html#a5bf31f7d7a5e24c49d4157d411080dbf">covarianceBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceXsec_8h_source.html#l00085">85</a> of file <a class="el" href="covarianceXsec_8h_source.html">covarianceXsec.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   85</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#a7578a2cc2e8e9100fad88310a824cb1c">_fPreFitValue</a>.at(i); };</div>
+<p class="definition">Definition at line <a class="el" href="covarianceXsec_8h_source.html#l00084">84</a> of file <a class="el" href="covarianceXsec_8h_source.html">covarianceXsec.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   84</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceBase.html#a7578a2cc2e8e9100fad88310a824cb1c">_fPreFitValue</a>.at(i); };</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1157,19 +1157,18 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>KS: For most covariances nominal and fparInit (prior) are the same, however for Xsec those can be different For example Sigma Var are done around nominal in ND280, no idea why though... </p>
+<p>KS: For most covariances prior and fparInit (prior) are the same, however for Xsec those can be different. </p>
 
 <p>Reimplemented from <a class="el" href="classcovarianceBase.html#ae0a231f87266048a3cd2e0032eaf0f30">covarianceBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceXsec_8h_source.html#l00075">75</a> of file <a class="el" href="covarianceXsec_8h_source.html">covarianceXsec.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   76</span>    {</div>
-<div class="line"><span class="lineno">   77</span>      std::vector&lt;double&gt; <a class="code hl_variable" href="GetPenaltyTerm_8cpp.html#a35f9d8ea46badc9ea84d62feaa0e73df">nominal</a>(<a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>);</div>
-<div class="line"><span class="lineno">   78</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>; i++) {</div>
-<div class="line"><span class="lineno">   79</span>        <a class="code hl_variable" href="GetPenaltyTerm_8cpp.html#a35f9d8ea46badc9ea84d62feaa0e73df">nominal</a>[i] = <a class="code hl_variable" href="classcovarianceBase.html#a7578a2cc2e8e9100fad88310a824cb1c">_fPreFitValue</a>.at(i);</div>
-<div class="line"><span class="lineno">   80</span>      }</div>
-<div class="line"><span class="lineno">   81</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="GetPenaltyTerm_8cpp.html#a35f9d8ea46badc9ea84d62feaa0e73df">nominal</a>;</div>
-<div class="line"><span class="lineno">   82</span>    }</div>
-<div class="ttc" id="aGetPenaltyTerm_8cpp_html_a35f9d8ea46badc9ea84d62feaa0e73df"><div class="ttname"><a href="GetPenaltyTerm_8cpp.html#a35f9d8ea46badc9ea84d62feaa0e73df">nominal</a></div><div class="ttdeci">std::vector&lt; double &gt; nominal</div><div class="ttdef"><b>Definition:</b> <a href="GetPenaltyTerm_8cpp_source.html#l00034">GetPenaltyTerm.cpp:34</a></div></div>
+<p class="definition">Definition at line <a class="el" href="covarianceXsec_8h_source.html#l00074">74</a> of file <a class="el" href="covarianceXsec_8h_source.html">covarianceXsec.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   75</span>    {</div>
+<div class="line"><span class="lineno">   76</span>      std::vector&lt;double&gt; prior(<a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>);</div>
+<div class="line"><span class="lineno">   77</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>; i++) {</div>
+<div class="line"><span class="lineno">   78</span>        prior[i] = <a class="code hl_variable" href="classcovarianceBase.html#a7578a2cc2e8e9100fad88310a824cb1c">_fPreFitValue</a>.at(i);</div>
+<div class="line"><span class="lineno">   79</span>      }</div>
+<div class="line"><span class="lineno">   80</span>      <span class="keywordflow">return</span> prior;</div>
+<div class="line"><span class="lineno">   81</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1209,7 +1208,7 @@ Protected Attributes</h2></td></tr>
 <div class="ttc" id="aStructs_8h_html_affc27d8b7b82d3713f45af17873fde2fa085cb29127b1cf7b1ddd429ff4440b17"><div class="ttname"><a href="Structs_8h.html#affc27d8b7b82d3713f45af17873fde2fa085cb29127b1cf7b1ddd429ff4440b17">kNorm</a></div><div class="ttdeci">@ kNorm</div><div class="ttdoc">For normalisation parameters.</div><div class="ttdef"><b>Definition:</b> <a href="Structs_8h_source.html#l00219">Structs.h:219</a></div></div>
 <div class="ttc" id="aclasscovarianceXsec_html_a17c24905af91f1fc7b806cfc39e50035"><div class="ttname"><a href="classcovarianceXsec.html#a17c24905af91f1fc7b806cfc39e50035">covarianceXsec::IterateOverParams</a></div><div class="ttdeci">void IterateOverParams(const int DetID, FilterFunc filter, ActionFunc action)</div><div class="ttdoc">Iterates over parameters and applies a filter and action function.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8cpp_source.html#l00329">covarianceXsec.cpp:329</a></div></div>
 <div class="ttc" id="aclasscovarianceXsec_html_a50cca3de3274be7a57d25cc1b454e890"><div class="ttname"><a href="classcovarianceXsec.html#a50cca3de3274be7a57d25cc1b454e890">covarianceXsec::GetParamType</a></div><div class="ttdeci">SystType GetParamType(const int i) const</div><div class="ttdoc">Returns enum describing our param type.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8h_source.html#l00030">covarianceXsec.h:30</a></div></div>
-<div class="ttc" id="aclasscovarianceXsec_html_acd6c2346a5b808c6917e4828bbb633f5"><div class="ttname"><a href="classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5">covarianceXsec::NormParams</a></div><div class="ttdeci">std::vector&lt; XsecNorms4 &gt; NormParams</div><div class="ttdoc">Vector containing info for normalisation systematics.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8h_source.html#l00171">covarianceXsec.h:171</a></div></div>
+<div class="ttc" id="aclasscovarianceXsec_html_acd6c2346a5b808c6917e4828bbb633f5"><div class="ttname"><a href="classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5">covarianceXsec::NormParams</a></div><div class="ttdeci">std::vector&lt; XsecNorms4 &gt; NormParams</div><div class="ttdoc">Vector containing info for normalisation systematics.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8h_source.html#l00170">covarianceXsec.h:170</a></div></div>
 <div class="ttc" id="astructXsecNorms4_html"><div class="ttname"><a href="structXsecNorms4.html">XsecNorms4</a></div><div class="ttdoc">ETA - Normalisations for cross-section parameters Carrier for whether you want to apply a systematic ...</div><div class="ttdef"><b>Definition:</b> <a href="Structs_8h_source.html#l00088">Structs.h:88</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -1295,7 +1294,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="covarianceXsec_8h_source.html#l00030">30</a> of file <a class="el" href="covarianceXsec_8h_source.html">covarianceXsec.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   30</span>{<span class="keywordflow">return</span> <a class="code hl_variable" href="classcovarianceXsec.html#aae3338ca71027adab7fdfd3e828c0f79">_fParamType</a>[i];}</div>
-<div class="ttc" id="aclasscovarianceXsec_html_aae3338ca71027adab7fdfd3e828c0f79"><div class="ttname"><a href="classcovarianceXsec.html#aae3338ca71027adab7fdfd3e828c0f79">covarianceXsec::_fParamType</a></div><div class="ttdeci">std::vector&lt; SystType &gt; _fParamType</div><div class="ttdoc">Type of parameter like norm, spline etc.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8h_source.html#l00156">covarianceXsec.h:156</a></div></div>
+<div class="ttc" id="aclasscovarianceXsec_html_aae3338ca71027adab7fdfd3e828c0f79"><div class="ttname"><a href="classcovarianceXsec.html#aae3338ca71027adab7fdfd3e828c0f79">covarianceXsec::_fParamType</a></div><div class="ttdeci">std::vector&lt; SystType &gt; _fParamType</div><div class="ttdoc">Type of parameter like norm, spline etc.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8h_source.html#l00155">covarianceXsec.h:155</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2032,8 +2031,8 @@ Protected Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  365</span>}</div>
 <div class="ttc" id="aclasscovarianceBase_html_a12f0eb31a5ef48b014baa11d4ab919e9"><div class="ttname"><a href="classcovarianceBase.html#a12f0eb31a5ef48b014baa11d4ab919e9">covarianceBase::_fPropVal</a></div><div class="ttdeci">std::vector&lt; double &gt; _fPropVal</div><div class="ttdoc">Proposed value of the parameter.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceBase_8h_source.html#l00422">covarianceBase.h:422</a></div></div>
 <div class="ttc" id="aclasscovarianceBase_html_a5ebdc744b733656972a15f1657915a3f"><div class="ttname"><a href="classcovarianceBase.html#a5ebdc744b733656972a15f1657915a3f">covarianceBase::LastPCAdpar</a></div><div class="ttdeci">int LastPCAdpar</div><div class="ttdoc">Index of the last param that is being decomposed.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceBase_8h_source.html#l00448">covarianceBase.h:448</a></div></div>
-<div class="ttc" id="aclasscovarianceBase_html_a651f5ecd8973918d5683606a607fa88c"><div class="ttname"><a href="classcovarianceBase.html#a651f5ecd8973918d5683606a607fa88c">covarianceBase::TransferToPCA</a></div><div class="ttdeci">void TransferToPCA()</div><div class="ttdoc">Transfer param values from normal base to PCA base.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceBase_8cpp_source.html#l00425">covarianceBase.cpp:425</a></div></div>
-<div class="ttc" id="aclasscovarianceBase_html_a8d58b8e8ac3b2a8f1c6867e8b6cd7ff8"><div class="ttname"><a href="classcovarianceBase.html#a8d58b8e8ac3b2a8f1c6867e8b6cd7ff8">covarianceBase::randomize</a></div><div class="ttdeci">void randomize() _noexcept_</div><div class="ttdoc">&quot;Randomize&quot; the parameters in the covariance class for the proposed step. Used the proposal kernel an...</div><div class="ttdef"><b>Definition:</b> <a href="covarianceBase_8cpp_source.html#l00599">covarianceBase.cpp:599</a></div></div>
+<div class="ttc" id="aclasscovarianceBase_html_a651f5ecd8973918d5683606a607fa88c"><div class="ttname"><a href="classcovarianceBase.html#a651f5ecd8973918d5683606a607fa88c">covarianceBase::TransferToPCA</a></div><div class="ttdeci">void TransferToPCA()</div><div class="ttdoc">Transfer param values from normal base to PCA base.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceBase_8cpp_source.html#l00427">covarianceBase.cpp:427</a></div></div>
+<div class="ttc" id="aclasscovarianceBase_html_a8d58b8e8ac3b2a8f1c6867e8b6cd7ff8"><div class="ttname"><a href="classcovarianceBase.html#a8d58b8e8ac3b2a8f1c6867e8b6cd7ff8">covarianceBase::randomize</a></div><div class="ttdeci">void randomize() _noexcept_</div><div class="ttdoc">&quot;Randomize&quot; the parameters in the covariance class for the proposed step. Used the proposal kernel an...</div><div class="ttdef"><b>Definition:</b> <a href="covarianceBase_8cpp_source.html#l00601">covarianceBase.cpp:601</a></div></div>
 <div class="ttc" id="aclasscovarianceBase_html_aa96f87ab90dc26fc1b5e157149b9dfd3"><div class="ttname"><a href="classcovarianceBase.html#aa96f87ab90dc26fc1b5e157149b9dfd3">covarianceBase::fParCurr_PCA</a></div><div class="ttdeci">TVectorD fParCurr_PCA</div><div class="ttdoc">CW: Proposed parameter value in PCA base.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceBase_8h_source.html#l00455">covarianceBase.h:455</a></div></div>
 <div class="ttc" id="aclasscovarianceBase_html_ab4b7f96d3e977a0b3307ceecbd0baeb4"><div class="ttname"><a href="classcovarianceBase.html#ab4b7f96d3e977a0b3307ceecbd0baeb4">covarianceBase::pca</a></div><div class="ttdeci">bool pca</div><div class="ttdoc">perform PCA or not</div><div class="ttdef"><b>Definition:</b> <a href="covarianceBase_8h_source.html#l00440">covarianceBase.h:440</a></div></div>
 <div class="ttc" id="aclasscovarianceBase_html_abba75182305d556818c76974a054a17d"><div class="ttname"><a href="classcovarianceBase.html#abba75182305d556818c76974a054a17d">covarianceBase::FirstPCAdpar</a></div><div class="ttdeci">int FirstPCAdpar</div><div class="ttdoc">Index of the first param that is being decomposed.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceBase_8h_source.html#l00446">covarianceBase.h:446</a></div></div>
@@ -2147,7 +2146,7 @@ Protected Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  102</span>}</div>
 <div class="ttc" id="aStructs_8h_html_affc27d8b7b82d3713f45af17873fde2f"><div class="ttname"><a href="Structs_8h.html#affc27d8b7b82d3713f45af17873fde2f">SystType</a></div><div class="ttdeci">SystType</div><div class="ttdef"><b>Definition:</b> <a href="Structs_8h_source.html#l00218">Structs.h:218</a></div></div>
 <div class="ttc" id="aclasscovarianceBase_html_a933ff3dc0af99629ba3582a5d9d89d23"><div class="ttname"><a href="classcovarianceBase.html#a933ff3dc0af99629ba3582a5d9d89d23">covarianceBase::_fYAMLDoc</a></div><div class="ttdeci">YAML::Node _fYAMLDoc</div><div class="ttdoc">Stores config describing systematics.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceBase_8h_source.html#l00414">covarianceBase.h:414</a></div></div>
-<div class="ttc" id="aclasscovarianceXsec_html_a47cd1802e0dac0c22c8c16f214272c34"><div class="ttname"><a href="classcovarianceXsec.html#a47cd1802e0dac0c22c8c16f214272c34">covarianceXsec::_ParameterGroup</a></div><div class="ttdeci">std::vector&lt; std::string &gt; _ParameterGroup</div><div class="ttdoc">KS: Allow to group parameters for example to affect only cross-section or only flux etc.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8h_source.html#l00162">covarianceXsec.h:162</a></div></div>
+<div class="ttc" id="aclasscovarianceXsec_html_a47cd1802e0dac0c22c8c16f214272c34"><div class="ttname"><a href="classcovarianceXsec.html#a47cd1802e0dac0c22c8c16f214272c34">covarianceXsec::_ParameterGroup</a></div><div class="ttdeci">std::vector&lt; std::string &gt; _ParameterGroup</div><div class="ttdoc">KS: Allow to group parameters for example to affect only cross-section or only flux etc.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8h_source.html#l00161">covarianceXsec.h:161</a></div></div>
 <div class="ttc" id="aclasscovarianceXsec_html_a68938d9079d05782eb1f415a5204284c"><div class="ttname"><a href="classcovarianceXsec.html#a68938d9079d05782eb1f415a5204284c">covarianceXsec::GetXsecNorm</a></div><div class="ttdeci">XsecNorms4 GetXsecNorm(const YAML::Node &amp;param, const int Index)</div><div class="ttdoc">Get Norm params.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8cpp_source.html#l00163">covarianceXsec.cpp:163</a></div></div>
 <div class="ttc" id="aclasscovarianceXsec_html_acf3b87f72369d597d27d2a32fc01e779"><div class="ttname"><a href="classcovarianceXsec.html#acf3b87f72369d597d27d2a32fc01e779">covarianceXsec::GetXsecSpline</a></div><div class="ttdeci">XsecSplines1 GetXsecSpline(const YAML::Node &amp;param)</div><div class="ttdoc">Get Spline params.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8cpp_source.html#l00252">covarianceXsec.cpp:252</a></div></div>
 </div><!-- fragment -->
@@ -2401,7 +2400,7 @@ template&lt;typename FilterFunc , typename ActionFunc &gt; </div>
 <div class="fragment"><div class="line"><span class="lineno">  392</span>                                      {</div>
 <div class="line"><span class="lineno">  393</span><span class="comment">// ********************************************</span></div>
 <div class="line"><span class="lineno">  394</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;============================================================================================================================================================&quot;</span>);</div>
-<div class="line"><span class="lineno">  395</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;{:&lt;5} {:2} {:&lt;40} {:2} {:&lt;10} {:2} {:&lt;10} {:2} {:&lt;10} {:2} {:&lt;10} {:2} {:&lt;10} {:2} {:&lt;10} {:2} {:&lt;5} {:2} {:&lt;10}&quot;</span>, <span class="stringliteral">&quot;#&quot;</span>, <span class="stringliteral">&quot;|&quot;</span>, <span class="stringliteral">&quot;Name&quot;</span>, <span class="stringliteral">&quot;|&quot;</span>, <span class="stringliteral">&quot;Nom.&quot;</span>, <span class="stringliteral">&quot;|&quot;</span>, <span class="stringliteral">&quot;Prior&quot;</span>, <span class="stringliteral">&quot;|&quot;</span>, <span class="stringliteral">&quot;Error&quot;</span>, <span class="stringliteral">&quot;|&quot;</span>, <span class="stringliteral">&quot;Lower&quot;</span>, <span class="stringliteral">&quot;|&quot;</span>, <span class="stringliteral">&quot;Upper&quot;</span>, <span class="stringliteral">&quot;|&quot;</span>, <span class="stringliteral">&quot;StepScale&quot;</span>, <span class="stringliteral">&quot;|&quot;</span>, <span class="stringliteral">&quot;DetID&quot;</span>, <span class="stringliteral">&quot;|&quot;</span>, <span class="stringliteral">&quot;Type&quot;</span>);</div>
+<div class="line"><span class="lineno">  395</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;{:&lt;5} {:2} {:&lt;40} {:2} {:&lt;10} {:2} {:&lt;10} {:2} {:&lt;10} {:2} {:&lt;10} {:2} {:&lt;10} {:2} {:&lt;10} {:2} {:&lt;5} {:2} {:&lt;10}&quot;</span>, <span class="stringliteral">&quot;#&quot;</span>, <span class="stringliteral">&quot;|&quot;</span>, <span class="stringliteral">&quot;Name&quot;</span>, <span class="stringliteral">&quot;|&quot;</span>, <span class="stringliteral">&quot;Gen.&quot;</span>, <span class="stringliteral">&quot;|&quot;</span>, <span class="stringliteral">&quot;Prior&quot;</span>, <span class="stringliteral">&quot;|&quot;</span>, <span class="stringliteral">&quot;Error&quot;</span>, <span class="stringliteral">&quot;|&quot;</span>, <span class="stringliteral">&quot;Lower&quot;</span>, <span class="stringliteral">&quot;|&quot;</span>, <span class="stringliteral">&quot;Upper&quot;</span>, <span class="stringliteral">&quot;|&quot;</span>, <span class="stringliteral">&quot;StepScale&quot;</span>, <span class="stringliteral">&quot;|&quot;</span>, <span class="stringliteral">&quot;DetID&quot;</span>, <span class="stringliteral">&quot;|&quot;</span>, <span class="stringliteral">&quot;Type&quot;</span>);</div>
 <div class="line"><span class="lineno">  396</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;------------------------------------------------------------------------------------------------------------------------------------------------------------&quot;</span>);</div>
 <div class="line"><span class="lineno">  397</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_function" href="classcovarianceBase.html#a3daac6405cc791347b768a5afe8a13d2">GetNumParams</a>(); i++) {</div>
 <div class="line"><span class="lineno">  398</span>    std::string ErrString = fmt::format(<span class="stringliteral">&quot;{:.2f}&quot;</span>, <a class="code hl_variable" href="classcovarianceBase.html#a34f877fc160b4a93a3aab1b3a8977858">_fError</a>[i]);</div>
@@ -2673,7 +2672,7 @@ template&lt;typename FilterFunc , typename ActionFunc &gt; </div>
 
 <p>Tells to which samples object param should be applied. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceXsec_8h_source.html#l00154">154</a> of file <a class="el" href="covarianceXsec_8h_source.html">covarianceXsec.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceXsec_8h_source.html#l00153">153</a> of file <a class="el" href="covarianceXsec_8h_source.html">covarianceXsec.h</a>.</p>
 
 </div>
 </div>
@@ -2699,7 +2698,7 @@ template&lt;typename FilterFunc , typename ActionFunc &gt; </div>
 
 <p>Type of parameter like norm, spline etc. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceXsec_8h_source.html#l00156">156</a> of file <a class="el" href="covarianceXsec_8h_source.html">covarianceXsec.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceXsec_8h_source.html#l00155">155</a> of file <a class="el" href="covarianceXsec_8h_source.html">covarianceXsec.h</a>.</p>
 
 </div>
 </div>
@@ -2725,7 +2724,7 @@ template&lt;typename FilterFunc , typename ActionFunc &gt; </div>
 
 <p>Name of spline in TTree (TBranch),. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceXsec_8h_source.html#l00159">159</a> of file <a class="el" href="covarianceXsec_8h_source.html">covarianceXsec.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceXsec_8h_source.html#l00158">158</a> of file <a class="el" href="covarianceXsec_8h_source.html">covarianceXsec.h</a>.</p>
 
 </div>
 </div>
@@ -2751,7 +2750,7 @@ template&lt;typename FilterFunc , typename ActionFunc &gt; </div>
 
 <p>Map between number of given parameter type with global parameter numbering. For example 2nd norm param may be 10-th global param. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceXsec_8h_source.html#l00165">165</a> of file <a class="el" href="covarianceXsec_8h_source.html">covarianceXsec.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceXsec_8h_source.html#l00164">164</a> of file <a class="el" href="covarianceXsec_8h_source.html">covarianceXsec.h</a>.</p>
 
 </div>
 </div>
@@ -2777,7 +2776,7 @@ template&lt;typename FilterFunc , typename ActionFunc &gt; </div>
 
 <p>KS: Allow to group parameters for example to affect only cross-section or only flux etc. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceXsec_8h_source.html#l00162">162</a> of file <a class="el" href="covarianceXsec_8h_source.html">covarianceXsec.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceXsec_8h_source.html#l00161">161</a> of file <a class="el" href="covarianceXsec_8h_source.html">covarianceXsec.h</a>.</p>
 
 </div>
 </div>
@@ -2803,7 +2802,7 @@ template&lt;typename FilterFunc , typename ActionFunc &gt; </div>
 
 <p>Vector containing info for normalisation systematics. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceXsec_8h_source.html#l00171">171</a> of file <a class="el" href="covarianceXsec_8h_source.html">covarianceXsec.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceXsec_8h_source.html#l00170">170</a> of file <a class="el" href="covarianceXsec_8h_source.html">covarianceXsec.h</a>.</p>
 
 </div>
 </div>
@@ -2829,7 +2828,7 @@ template&lt;typename FilterFunc , typename ActionFunc &gt; </div>
 
 <p>Vector containing info for normalisation systematics. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceXsec_8h_source.html#l00168">168</a> of file <a class="el" href="covarianceXsec_8h_source.html">covarianceXsec.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceXsec_8h_source.html#l00167">167</a> of file <a class="el" href="covarianceXsec_8h_source.html">covarianceXsec.h</a>.</p>
 
 </div>
 </div>
