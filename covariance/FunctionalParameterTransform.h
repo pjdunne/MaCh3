@@ -63,7 +63,9 @@ class MeanScaler : public FunctionalParameterTransform{
     MeanScaler(std::vector<double> parameter_means, std::vector<double> parameter_errors) :
         FunctionalParameterTransform(),
         par_means(parameter_means),
-        par_errs(parameter_errors){}
+        par_errs(parameter_errors){
+            MACH3LOG_INFO("Throwing throwing parameters scaled by mean + error");
+        }
 
 
     /// @brief destructor
@@ -101,7 +103,9 @@ class ScaledLogTransform : public FunctionalParameterTransform{
     /// @brief constructor
     /// @param parameter_means Prior means for parameter
     ScaledLogTransform() :
-        FunctionalParameterTransform(){}
+        FunctionalParameterTransform(){
+            MACH3LOG_INFO("Scaling parameters based on log value");
+        }
 
     /// @brief destructor
     virtual ~ScaledLogTransform() = default;
