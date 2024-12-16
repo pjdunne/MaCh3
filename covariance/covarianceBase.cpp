@@ -140,6 +140,7 @@ void covarianceBase::init(std::string name, std::string file) {
   }
   // Not using adaptive by default
   use_adaptive = false;
+  scale_pars = false;
   // Set the covariance matrix
   _fNumPar = CovMat->GetNrows();
     
@@ -205,6 +206,7 @@ void covarianceBase::init(const std::vector<std::string>& YAMLFile) {
   _fNumPar = int(_fYAMLDoc["Systematics"].size());
 
   use_adaptive = false;
+  scale_pars = false;
 
   InvertCovMatrix = new double*[_fNumPar]();
   throwMatrixCholDecomp = new double*[_fNumPar]();
@@ -340,6 +342,8 @@ void covarianceBase::init(TMatrixDSym* covMat) {
   }
 
   use_adaptive = false;
+  scale_pars = false;
+
   setCovMatrix(covMat);
 
   ReserveMemory(_fNumPar);
@@ -647,16 +651,29 @@ void covarianceBase::CorrelateSteps() _noexcept_ {
   //KS: Using custom function compared to ROOT one with 8 threads we have almost factor 2 performance increase, by replacing TMatrix with just double we increase it even more
   MatrixVectorMulti(corr_throw, throwMatrixCholDecomp, randParams, _fNumPar);
 
+
   // If not doing PCA
   if (!pca) {
+
+    // HW Hacky af
+    std::vector<double> curr_throw_vals = _fCurrVal;
+    if(scale_pars){
+      curr_throw_vals = parameter_scaler->TransformParameters(_fCurrVal);
+    }
+
     #ifdef MULTITHREAD
     #pragma omp parallel for
     #endif
     for (int i = 0; i < _fNumPar; ++i) {
       if (_fError[i] > 0.) {
-        _fPropVal[i] = _fCurrVal[i] + corr_throw[i]*_fGlobalStepScale*_fIndivStepScale[i];
+        _fPropVal[i] = curr_throw_vals[i] + corr_throw[i]*_fGlobalStepScale*_fIndivStepScale[i];
       }
     }
+
+    if(scale_pars){
+      _fPropVal = parameter_scaler->InvertTransformParameters(_fPropVal);
+    }
+
     // If doing PCA throw uncorrelated in PCA basis (orthogonal basis by definition)
   } else { 
     // Throw around the current step
@@ -1236,8 +1253,13 @@ void covarianceBase::updateAdaptiveCovariance(){
   if(AdaptiveHandler.SkipAdaption()) return;
 
   // Call main adaption function
-  AdaptiveHandler.UpdateAdaptiveCovariance(_fCurrVal, _fNumPar);
 
+  if(!scale_pars){
+    AdaptiveHandler.UpdateAdaptiveCovariance(_fCurrVal, _fNumPar);
+  }
+  else{
+    AdaptiveHandler.UpdateAdaptiveCovariance(parameter_scaler->TransformParameters(_fCurrVal), _fNumPar);
+  }
   //This is likely going to be the slow bit!
   if(AdaptiveHandler.IndivStepScaleAdapt()) {
     resetIndivStepScale();

@@ -55,19 +55,19 @@ class FunctionalParameterTransform{
 };
 
 /// @brief Scales parameters to x' = (x-mu)/sigma where mu and sigma is the prior mean + error resp
-class ScaledParameterTransform : public FunctionalParameterTransform{
+class MeanScaler : public FunctionalParameterTransform{
   public:
 
     /// @brief constructor
     /// @param parameter_means Prior means for parameter
-    ScaledParameterTransform(std::vector<double> parameter_means, std::vector<double> parameter_errors) :
+    MeanScaler(std::vector<double> parameter_means, std::vector<double> parameter_errors) :
         FunctionalParameterTransform(),
         par_means(parameter_means),
         par_errs(parameter_errors){}
 
 
     /// @brief destructor
-    virtual ~ScaledParameterTransform()=default;
+    virtual ~MeanScaler()=default;
 
   protected:
     /// @brief Transforms single parameter to x' = x-mu/sigma
@@ -100,11 +100,11 @@ class ScaledLogTransform : public FunctionalParameterTransform{
 
     /// @brief constructor
     /// @param parameter_means Prior means for parameter
-    ScaledLogTransform(std::vector<double> parameter_means, std::vector<double> parameter_errors) :
+    ScaledLogTransform() :
         FunctionalParameterTransform(){}
 
     /// @brief destructor
-    virtual ~ScaledLogTransform()=default;
+    virtual ~ScaledLogTransform() = default;
 
   protected:
     /// @brief Transforms single parameter to sign(x)log(1+|x|)
@@ -119,7 +119,6 @@ class ScaledLogTransform : public FunctionalParameterTransform{
     /// @param par Parameter value
     /// @param idx Dummy parameter
     /// @return  unscaled parameter
-
     double InvertTransformSingleParameter(double par, int /*dummy*/) override{
         return std::copysign(std::exp(std::abs(par)) - 1.0, par);
     }

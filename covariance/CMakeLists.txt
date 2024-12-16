@@ -5,6 +5,7 @@ set(HEADERS
     covarianceXsec.h
     AdaptiveMCMCHandler.h
     PCAHandler.h
+    FunctionalParameterTransform.h
 )
 
 add_library(Covariance SHARED

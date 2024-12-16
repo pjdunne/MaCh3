@@ -7,6 +7,8 @@
 #include "covariance/AdaptiveMCMCHandler.h"
 #include "covariance/PCAHandler.h"
 
+#include "covariance/FunctionalParameterTransform.h"
+
 /// Large Likelihood is used it parameter go out of physical boundary, this indicates in MCMC that such step should eb removed
 constexpr static const double _LARGE_LOGL_ = 1234567890.0;
 
@@ -340,6 +342,22 @@ class covarianceBase {
 
   /// @brief Getter to return a copy of the YAML node
   YAML::Node GetConfig() const { return _fYAMLDoc; }
+
+  /// @brief Apply scaling?
+  void EnableParameterScaler(std::string scaler_type){
+    if(scaler_type == "log_scaler"){
+      parameter_scaler = std::make_unique<ScaledLogTransform>();
+      scale_pars = true;
+    }
+    else if(scaler_type == "mean_scaler"){
+      parameter_scaler = std::make_unique<MeanScaler>(_fPreFitValue, _fError);
+      scale_pars = true;
+    }
+    else{
+      MACH3LOG_WARN("Error, didn't recognise {}, not applying scaling", scaler_type);
+    }
+  }
+
 protected:
   /// @brief Initialisation of the class using matrix from root file
   void init(std::string name, std::string file);
@@ -464,6 +482,12 @@ protected:
   TMatrixD* throwMatrix_CholDecomp;
   /// Throw matrix that is being used in the fit, much faster as TMatrixDSym cache miss
   double **throwMatrixCholDecomp;
+
+  /// Are we applying some form of scaling?
+  bool scale_pars;
+
+  /// Scaling function
+  std::unique_ptr<FunctionalParameterTransform> parameter_scaler;
 
   /// Are we using AMCMC?
   bool use_adaptive;
