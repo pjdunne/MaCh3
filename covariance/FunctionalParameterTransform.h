@@ -7,7 +7,7 @@ class FunctionalParameterTransform{
   public:
 
     /// @brief constructor
-    FunctionalParameterTransform();
+    FunctionalParameterTransform(){};
     /// @brief destructor
     virtual ~FunctionalParameterTransform()=default;
 
