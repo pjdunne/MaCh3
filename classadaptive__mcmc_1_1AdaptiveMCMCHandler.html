@@ -413,7 +413,7 @@ Public Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   65</span>  <span class="comment">// but we can split the matrix into independent block matrices</span></div>
 <div class="line"><span class="lineno">   66</span> </div>
 <div class="line"><span class="lineno">   67</span>  <span class="comment">// We&quot;ll set a dummy variable here</span></div>
-<div class="line"><span class="lineno">   68</span>  <span class="keyword">auto</span> matrix_blocks = GetFromManager&lt;std::vector&lt;std::vector&lt;int&gt;&gt;&gt;(adapt_manager[<span class="stringliteral">&quot;AdaptionOptions&quot;</span>][<span class="stringliteral">&quot;Settings&quot;</span>][matrix_name_str][<span class="stringliteral">&quot;MatrixBlocks&quot;</span>], {{}});</div>
+<div class="line"><span class="lineno">   68</span>  <span class="keyword">auto</span> matrix_blocks = GetFromManager&lt;std::vector&lt;std::vector&lt;int&gt;&gt;&gt;(adapt_manager[<span class="stringliteral">&quot;AdaptionOptions&quot;</span>][<span class="stringliteral">&quot;Covariance&quot;</span>][matrix_name_str][<span class="stringliteral">&quot;MatrixBlocks&quot;</span>], {{}});</div>
 <div class="line"><span class="lineno">   69</span> </div>
 <div class="line"><span class="lineno">   70</span>  <a class="code hl_function" href="classadaptive__mcmc_1_1AdaptiveMCMCHandler.html#ac47f80e6e94cbeb1cdb1a72563f35fe6">SetAdaptiveBlocks</a>(matrix_blocks, Npars);</div>
 <div class="line"><span class="lineno">   71</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
