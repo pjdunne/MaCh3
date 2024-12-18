@@ -26,12 +26,13 @@ var searchData=
   ['fmirroring_23',['fMirroring',['../classLikelihoodFit.html#ae1e5d13b373bf73e1b1003f7f9d65f00',1,'LikelihoodFit']]],
   ['fmode_24',['fMode',['../classMaCh3Modes.html#af945fab5dc02790abc84d47e7c84bed8',1,'MaCh3Modes']]],
   ['fone_25',['fOne',['../classPSO.html#aa02f509433bb6c25126a180ab27b8277',1,'PSO']]],
-  ['forceoverwrite_26',['forceOverwrite',['../CombineMaCh3Chains_8cpp.html#a3adafbbaf60d2c0038ff083b1b17722d',1,'CombineMaCh3Chains.cpp']]],
-  ['fparcurr_5fpca_27',['fParCurr_PCA',['../classcovarianceBase.html#aa96f87ab90dc26fc1b5e157149b9dfd3',1,'covarianceBase']]],
-  ['fparprop_5fpca_28',['fParProp_PCA',['../classcovarianceBase.html#a2e101b6b7028c82a02e617c90212e4cc',1,'covarianceBase']]],
-  ['fparsigma_5fpca_29',['fParSigma_PCA',['../classcovarianceBase.html#a7b83a17de68cc7838b93de242d91d9a0',1,'covarianceBase']]],
-  ['fparticles_30',['fParticles',['../classPSO.html#a9e9da89144237a7f3369b9b3739e73ad',1,'PSO']]],
-  ['ftestlikelihood_31',['fTestLikelihood',['../classFitterBase.html#ada898e35bab22af470f2cd1e28af609b',1,'FitterBase']]],
-  ['fteststatistic_32',['fTestStatistic',['../classsamplePDFBase.html#adc5cd0002708ad049ba4fb5e3c62075d',1,'samplePDFBase']]],
-  ['ftwo_33',['fTwo',['../classPSO.html#a56539eb264d11e1c37674ad55504d454',1,'PSO']]]
+  ['forcemerge_26',['forceMerge',['../CombineMaCh3Chains_8cpp.html#a08dc26eae54fdf6c8c2c8158004c85d4',1,'CombineMaCh3Chains.cpp']]],
+  ['forceoverwrite_27',['forceOverwrite',['../CombineMaCh3Chains_8cpp.html#a3adafbbaf60d2c0038ff083b1b17722d',1,'CombineMaCh3Chains.cpp']]],
+  ['fparcurr_5fpca_28',['fParCurr_PCA',['../classcovarianceBase.html#aa96f87ab90dc26fc1b5e157149b9dfd3',1,'covarianceBase']]],
+  ['fparprop_5fpca_29',['fParProp_PCA',['../classcovarianceBase.html#a2e101b6b7028c82a02e617c90212e4cc',1,'covarianceBase']]],
+  ['fparsigma_5fpca_30',['fParSigma_PCA',['../classcovarianceBase.html#a7b83a17de68cc7838b93de242d91d9a0',1,'covarianceBase']]],
+  ['fparticles_31',['fParticles',['../classPSO.html#a9e9da89144237a7f3369b9b3739e73ad',1,'PSO']]],
+  ['ftestlikelihood_32',['fTestLikelihood',['../classFitterBase.html#ada898e35bab22af470f2cd1e28af609b',1,'FitterBase']]],
+  ['fteststatistic_33',['fTestStatistic',['../classsamplePDFBase.html#adc5cd0002708ad049ba4fb5e3c62075d',1,'samplePDFBase']]],
+  ['ftwo_34',['fTwo',['../classPSO.html#a56539eb264d11e1c37674ad55504d454',1,'PSO']]]
 ];
