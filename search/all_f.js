@@ -92,9 +92,9 @@ var searchData=
   ['prettifyparamname_89',['prettifyParamName',['../classMaCh3Plotting_1_1StyleManager.html#a0677ca5b68a2ecb684189524fb533019',1,'MaCh3Plotting::StyleManager']]],
   ['prettifysamplename_90',['prettifySampleName',['../classMaCh3Plotting_1_1StyleManager.html#a52c38dc0bcbab3ba04e974bef291d5ed',1,'MaCh3Plotting::StyleManager']]],
   ['prettifytitles_91',['PrettifyTitles',['../GetPostfitParamPlots_8cpp.html#acbde284ea52643cf3db23f6edc77850c',1,'PrettifyTitles(TH1D *Hist):&#160;GetPostfitParamPlots.cpp'],['../GetPostfitParamPlots_8cpp.html#ac62f1b08f728a24d44cfc23cb0e6cd03',1,'PrettifyTitles(TH2D *Hist):&#160;GetPostfitParamPlots.cpp']]],
-  ['print_92',['Print',['../classMaCh3Modes.html#a53a3e7076a1ed535c9d8ce29505a4256',1,'MaCh3Modes']]],
+  ['print_92',['Print',['../classmanager.html#a10ff16396efbc1dedcbd931c50ff7eff',1,'manager::Print()'],['../classMaCh3Modes.html#a53a3e7076a1ed535c9d8ce29505a4256',1,'MaCh3Modes::Print()'],['../classTResponseFunction__red.html#abeb53f28dcb53965afba33bad5c89a02',1,'TResponseFunction_red::Print()'],['../classTF1__red.html#a70e93817adf5b7bf926f781b04fb1f04',1,'TF1_red::Print()'],['../classTSpline3__red.html#a7e4e820b468ff523ed6c507a9b5167d1',1,'TSpline3_red::Print()'],['../classadaptive__mcmc_1_1AdaptiveMCMCHandler.html#a5997a813faf68d891c62cbaf65984aca',1,'adaptive_mcmc::AdaptiveMCMCHandler::Print()'],['../classcovarianceOsc.html#a6f098e51551a6d175cce56027ddfd31f',1,'covarianceOsc::Print()']]],
   ['print_93',['print',['../classMaCh3Plotting_1_1InputManager.html#af497dbf8556c361191c4f3c287ef12c7',1,'MaCh3Plotting::InputManager']]],
-  ['print_94',['Print',['../classmanager.html#a10ff16396efbc1dedcbd931c50ff7eff',1,'manager::Print()'],['../classTResponseFunction__red.html#abeb53f28dcb53965afba33bad5c89a02',1,'TResponseFunction_red::Print()'],['../classTF1__red.html#a70e93817adf5b7bf926f781b04fb1f04',1,'TF1_red::Print()'],['../classTSpline3__red.html#a7e4e820b468ff523ed6c507a9b5167d1',1,'TSpline3_red::Print()'],['../classadaptive__mcmc_1_1AdaptiveMCMCHandler.html#a5997a813faf68d891c62cbaf65984aca',1,'adaptive_mcmc::AdaptiveMCMCHandler::Print()'],['../classcovarianceXsec.html#ade0e8f83dcf75c50e6dad08ab6715093',1,'covarianceXsec::Print()'],['../classcovarianceOsc.html#a6f098e51551a6d175cce56027ddfd31f',1,'covarianceOsc::Print()']]],
+  ['print_94',['Print',['../classcovarianceXsec.html#ade0e8f83dcf75c50e6dad08ab6715093',1,'covarianceXsec']]],
   ['printarraydetails_95',['PrintArrayDetails',['../classsplineFDBase.html#aee80975a1a2892b61fb27b2044e7c9bc',1,'splineFDBase']]],
   ['printarraydimension_96',['PrintArrayDimension',['../classsplineFDBase.html#ab1f9479d702cfee2d0e5ea7edd2aca81',1,'splineFDBase']]],
   ['printbinning_97',['PrintBinning',['../classsplineFDBase.html#a7f5b16b65dc7da748f20bdc803b7e593',1,'splineFDBase']]],
@@ -122,10 +122,9 @@ var searchData=
   ['processmcmc_2ecpp_119',['ProcessMCMC.cpp',['../ProcessMCMC_8cpp.html',1,'']]],
   ['projecthist_120',['ProjectHist',['../classSampleSummary.html#af9277cfce437396a23e3fb22c55196f9',1,'SampleSummary']]],
   ['projectpoly_121',['ProjectPoly',['../classSampleSummary.html#a685a8ef3180d4f6474328b5c806d8b74',1,'SampleSummary']]],
-  ['proposestep_122',['proposeStep',['../classcovarianceBase.html#a95c7ca23995af579cfa7f199833fe24a',1,'covarianceBase']]],
-  ['proposestep_123',['ProposeStep',['../classmcmc.html#aaf921343861cec8bb96beb2503b3fe2c',1,'mcmc']]],
-  ['proposestep_124',['proposeStep',['../classcovarianceOsc.html#abb8df24417b380af9b96763b8abc6b2e',1,'covarianceOsc']]],
-  ['pso_125',['PSO',['../classPSO.html',1,'PSO'],['../classPSO.html#a14542152b9bd6e2e0f59c8ea1e1e890f',1,'PSO::PSO()']]],
-  ['pso_2ecpp_126',['PSO.cpp',['../PSO_8cpp.html',1,'']]],
-  ['pso_2eh_127',['PSO.h',['../PSO_8h.html',1,'']]]
+  ['proposestep_122',['ProposeStep',['../classmcmc.html#aaf921343861cec8bb96beb2503b3fe2c',1,'mcmc']]],
+  ['proposestep_123',['proposeStep',['../classcovarianceOsc.html#abb8df24417b380af9b96763b8abc6b2e',1,'covarianceOsc::proposeStep()'],['../classcovarianceBase.html#a95c7ca23995af579cfa7f199833fe24a',1,'covarianceBase::proposeStep()']]],
+  ['pso_124',['PSO',['../classPSO.html',1,'PSO'],['../classPSO.html#a14542152b9bd6e2e0f59c8ea1e1e890f',1,'PSO::PSO()']]],
+  ['pso_2ecpp_125',['PSO.cpp',['../PSO_8cpp.html',1,'']]],
+  ['pso_2eh_126',['PSO.h',['../PSO_8h.html',1,'']]]
 ];
