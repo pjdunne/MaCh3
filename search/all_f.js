@@ -2,8 +2,8 @@ var searchData=
 [
   ['p3_0',['p3',['../GetPostfitParamPlots_8cpp.html#a814cbca1b36d9e3f622031e0e9634ce0',1,'GetPostfitParamPlots.cpp']]],
   ['p4_1',['p4',['../GetPostfitParamPlots_8cpp.html#ac577141e2ab46a432ac74c34d18d0739',1,'GetPostfitParamPlots.cpp']]],
-  ['par_2',['Par',['../classTSpline3__red.html#a449ef081c6c2701865e371ab1c2e235e',1,'TSpline3_red::Par()'],['../classTF1__red.html#a89ff168cd938509a5081a2a39bcb0be8',1,'TF1_red::Par()']]],
-  ['par_3',['par',['../classPSO.html#ae5eff2b0193e0d7c9c221edbc14118bd',1,'PSO']]],
+  ['par_2',['par',['../classPSO.html#ae5eff2b0193e0d7c9c221edbc14118bd',1,'PSO']]],
+  ['par_3',['Par',['../classTSpline3__red.html#a449ef081c6c2701865e371ab1c2e235e',1,'TSpline3_red::Par()'],['../classTF1__red.html#a89ff168cd938509a5081a2a39bcb0be8',1,'TF1_red::Par()']]],
   ['par_5fmeans_4',['par_means',['../classadaptive__mcmc_1_1AdaptiveMCMCHandler.html#a066984e9598e073d04edec51511cdf0a',1,'adaptive_mcmc::AdaptiveMCMCHandler']]],
   ['paramcentral_5',['ParamCentral',['../classMCMCProcessor.html#a3a6614826ae320e462211e38e96d9d02',1,'MCMCProcessor']]],
   ['paramerrors_6',['ParamErrors',['../classMCMCProcessor.html#a3a97e3cb4be3ceb9eb721eac51d82d60',1,'MCMCProcessor']]],
@@ -122,9 +122,10 @@ var searchData=
   ['processmcmc_2ecpp_119',['ProcessMCMC.cpp',['../ProcessMCMC_8cpp.html',1,'']]],
   ['projecthist_120',['ProjectHist',['../classSampleSummary.html#af9277cfce437396a23e3fb22c55196f9',1,'SampleSummary']]],
   ['projectpoly_121',['ProjectPoly',['../classSampleSummary.html#a685a8ef3180d4f6474328b5c806d8b74',1,'SampleSummary']]],
-  ['proposestep_122',['ProposeStep',['../classmcmc.html#aaf921343861cec8bb96beb2503b3fe2c',1,'mcmc']]],
-  ['proposestep_123',['proposeStep',['../classcovarianceOsc.html#abb8df24417b380af9b96763b8abc6b2e',1,'covarianceOsc::proposeStep()'],['../classcovarianceBase.html#a95c7ca23995af579cfa7f199833fe24a',1,'covarianceBase::proposeStep()']]],
-  ['pso_124',['PSO',['../classPSO.html',1,'PSO'],['../classPSO.html#a14542152b9bd6e2e0f59c8ea1e1e890f',1,'PSO::PSO()']]],
-  ['pso_2ecpp_125',['PSO.cpp',['../PSO_8cpp.html',1,'']]],
-  ['pso_2eh_126',['PSO.h',['../PSO_8h.html',1,'']]]
+  ['proposestep_122',['proposeStep',['../classcovarianceBase.html#a95c7ca23995af579cfa7f199833fe24a',1,'covarianceBase']]],
+  ['proposestep_123',['ProposeStep',['../classmcmc.html#aaf921343861cec8bb96beb2503b3fe2c',1,'mcmc']]],
+  ['proposestep_124',['proposeStep',['../classcovarianceOsc.html#abb8df24417b380af9b96763b8abc6b2e',1,'covarianceOsc']]],
+  ['pso_125',['PSO',['../classPSO.html',1,'PSO'],['../classPSO.html#a14542152b9bd6e2e0f59c8ea1e1e890f',1,'PSO::PSO()']]],
+  ['pso_2ecpp_126',['PSO.cpp',['../PSO_8cpp.html',1,'']]],
+  ['pso_2eh_127',['PSO.h',['../PSO_8h.html',1,'']]]
 ];

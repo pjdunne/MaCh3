@@ -62,7 +62,7 @@ var searchData=
   ['processmcmc_59',['ProcessMCMC',['../classFitterBase.html#a1dccdac8611e70c759c47a65f2b1aea7',1,'FitterBase::ProcessMCMC()'],['../ProcessMCMC_8cpp.html#a52c48199a4bcad577b88768020a91041',1,'ProcessMCMC():&#160;ProcessMCMC.cpp']]],
   ['projecthist_60',['ProjectHist',['../classSampleSummary.html#af9277cfce437396a23e3fb22c55196f9',1,'SampleSummary']]],
   ['projectpoly_61',['ProjectPoly',['../classSampleSummary.html#a685a8ef3180d4f6474328b5c806d8b74',1,'SampleSummary']]],
-  ['proposestep_62',['proposeStep',['../classcovarianceOsc.html#abb8df24417b380af9b96763b8abc6b2e',1,'covarianceOsc::proposeStep()'],['../classcovarianceBase.html#a95c7ca23995af579cfa7f199833fe24a',1,'covarianceBase::proposeStep()']]],
-  ['proposestep_63',['ProposeStep',['../classmcmc.html#aaf921343861cec8bb96beb2503b3fe2c',1,'mcmc']]],
+  ['proposestep_62',['ProposeStep',['../classmcmc.html#aaf921343861cec8bb96beb2503b3fe2c',1,'mcmc']]],
+  ['proposestep_63',['proposeStep',['../classcovarianceOsc.html#abb8df24417b380af9b96763b8abc6b2e',1,'covarianceOsc::proposeStep()'],['../classcovarianceBase.html#a95c7ca23995af579cfa7f199833fe24a',1,'covarianceBase::proposeStep()']]],
   ['pso_64',['PSO',['../classPSO.html#a14542152b9bd6e2e0f59c8ea1e1e890f',1,'PSO']]]
 ];
