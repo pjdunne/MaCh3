@@ -64,7 +64,7 @@ CPMAddPackage(
     GITHUB_REPOSITORY "dbarrow257/NuOscillator"
     GIT_TAG "tags/v1.0.0"
     OPTIONS
-    "UseGPU ${DAN_USE_GPU}"
+    "UseGPU FALSE
     "UseMultithreading ${DAN_USE_MULTITHREAD}"
     "UseDoubles ${DAN_DOUBLE}"
 
