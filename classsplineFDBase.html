@@ -992,7 +992,7 @@ Protected Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  478</span> </div>
 <div class="line"><span class="lineno">  479</span>  <span class="keywordflow">if</span> (isHist3D)</div>
 <div class="line"><span class="lineno">  480</span>  {</div>
-<div class="line"><span class="lineno">  481</span>    Hist3D = File-&gt;Get&lt;TH3F&gt;((<span class="stringliteral">&quot;dev_tmp_0_0&quot;</span>));</div>
+<div class="line"><span class="lineno">  481</span>    Hist3D = File-&gt;Get&lt;TH3F&gt;((TemplateName.c_str()));</div>
 <div class="line"><span class="lineno">  482</span> </div>
 <div class="line"><span class="lineno">  483</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classsplineFDBase.html#a6c28400605049bdee229885c46463dcd">Dimensions</a>[iSample] != 3 &amp;&amp; Hist3D-&gt;GetZaxis()-&gt;GetNbins() != 1)</div>
 <div class="line"><span class="lineno">  484</span>    {</div>
@@ -1824,16 +1824,15 @@ Protected Attributes</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="splineFDBase_8cpp_source.html#l00976">976</a> of file <a class="el" href="splineFDBase_8cpp_source.html">splineFDBase.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  978</span>{</div>
 <div class="line"><span class="lineno">  979</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> NBins = Axis-&gt;GetNbins();</div>
-<div class="line"><span class="lineno">  980</span>  <span class="keyword">const</span> <span class="keywordtype">double</span> *BinEdges = Axis-&gt;GetXbins()-&gt;GetArray();</div>
-<div class="line"><span class="lineno">  981</span>  </div>
-<div class="line"><span class="lineno">  982</span>  std::cout &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span>;</div>
-<div class="line"><span class="lineno">  983</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> iBin = 0; iBin &lt; (NBins + 1); iBin++)</div>
-<div class="line"><span class="lineno">  984</span>  {</div>
-<div class="line"><span class="lineno">  985</span>    std::cout &lt;&lt; BinEdges[iBin] &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
-<div class="line"><span class="lineno">  986</span>  }</div>
-<div class="line"><span class="lineno">  987</span>  std::cout &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">  988</span>  <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  989</span>}</div>
+<div class="line"><span class="lineno">  980</span>  </div>
+<div class="line"><span class="lineno">  981</span>  std::cout &lt;&lt; <span class="stringliteral">&quot;\t&quot;</span>;</div>
+<div class="line"><span class="lineno">  982</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> iBin = 0; iBin &lt; (NBins + 1); iBin++)</div>
+<div class="line"><span class="lineno">  983</span>  {</div>
+<div class="line"><span class="lineno">  984</span>    std::cout &lt;&lt; Axis-&gt;GetXbins()-&gt;GetAt(iBin) &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  985</span>  }</div>
+<div class="line"><span class="lineno">  986</span>  std::cout &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  987</span>  <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  988</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
