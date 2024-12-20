@@ -790,8 +790,8 @@ Protected Attributes</h2></td></tr>
 <div class="ttc" id="aclasscovarianceBase_html_a8d821ce805f2426fe95549170866821f"><div class="ttname"><a href="classcovarianceBase.html#a8d821ce805f2426fe95549170866821f">covarianceBase::PrintLength</a></div><div class="ttdeci">int PrintLength</div><div class="ttdoc">KS: This is used when printing parameters, sometimes we have super long parameters name,...</div><div class="ttdef"><b>Definition:</b> <a href="covarianceBase_8h_source.html#l00422">covarianceBase.h:422</a></div></div>
 <div class="ttc" id="aclasscovarianceBase_html_ac5d922f1a4163b38ebc7a3ef21eec376"><div class="ttname"><a href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">covarianceBase::_fNumPar</a></div><div class="ttdeci">int _fNumPar</div><div class="ttdoc">Number of systematic parameters.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceBase_8h_source.html#l00431">covarianceBase.h:431</a></div></div>
 <div class="ttc" id="aclasscovarianceXsec_html_a90bd7a32f16efc88c070e57fabafd13b"><div class="ttname"><a href="classcovarianceXsec.html#a90bd7a32f16efc88c070e57fabafd13b">covarianceXsec::InitXsecFromConfig</a></div><div class="ttdeci">void InitXsecFromConfig()</div><div class="ttdoc">Parses the YAML configuration to set up cross-section parameters. The YAML file defines the types of ...</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8cpp_source.html#l00027">covarianceXsec.cpp:27</a></div></div>
-<div class="ttc" id="aclasscovarianceXsec_html_ade0e8f83dcf75c50e6dad08ab6715093"><div class="ttname"><a href="classcovarianceXsec.html#ade0e8f83dcf75c50e6dad08ab6715093">covarianceXsec::Print</a></div><div class="ttdeci">void Print()</div><div class="ttdoc">Print information about the whole object once it is set.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8cpp_source.html#l00369">covarianceXsec.cpp:369</a></div></div>
-<div class="ttc" id="aclasscovarianceXsec_html_aea65a8b1ad6399f0b9f356810249bfd1"><div class="ttname"><a href="classcovarianceXsec.html#aea65a8b1ad6399f0b9f356810249bfd1">covarianceXsec::initParams</a></div><div class="ttdeci">void initParams()</div><div class="ttdoc">Initializes the systematic parameters from the configuration file. This function loads parameters lik...</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8cpp_source.html#l00339">covarianceXsec.cpp:339</a></div></div>
+<div class="ttc" id="aclasscovarianceXsec_html_ade0e8f83dcf75c50e6dad08ab6715093"><div class="ttname"><a href="classcovarianceXsec.html#ade0e8f83dcf75c50e6dad08ab6715093">covarianceXsec::Print</a></div><div class="ttdeci">void Print()</div><div class="ttdoc">Print information about the whole object once it is set.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8cpp_source.html#l00370">covarianceXsec.cpp:370</a></div></div>
+<div class="ttc" id="aclasscovarianceXsec_html_aea65a8b1ad6399f0b9f356810249bfd1"><div class="ttname"><a href="classcovarianceXsec.html#aea65a8b1ad6399f0b9f356810249bfd1">covarianceXsec::initParams</a></div><div class="ttdeci">void initParams()</div><div class="ttdoc">Initializes the systematic parameters from the configuration file. This function loads parameters lik...</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8cpp_source.html#l00340">covarianceXsec.cpp:340</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -897,27 +897,27 @@ Protected Attributes</h2></td></tr>
 
 <p>KS: Check if matrix is correctly initialised. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceXsec_8cpp_source.html#l00535">535</a> of file <a class="el" href="covarianceXsec_8cpp_source.html">covarianceXsec.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  535</span>                                                {</div>
-<div class="line"><span class="lineno">  536</span><span class="comment">// ********************************************</span></div>
-<div class="line"><span class="lineno">  537</span>  <span class="comment">// KS: Lambda Function which simply checks if there are no duplicates in std::vector</span></div>
-<div class="line"><span class="lineno">  538</span>  <span class="keyword">auto</span> CheckForDuplicates = [](<span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; names, <span class="keyword">const</span> std::string&amp; nameType) {</div>
-<div class="line"><span class="lineno">  539</span>    std::unordered_map&lt;std::string, size_t&gt; seenStrings;</div>
-<div class="line"><span class="lineno">  540</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; names.size(); ++i) {</div>
-<div class="line"><span class="lineno">  541</span>      <span class="keyword">const</span> <span class="keyword">auto</span>&amp; name = names[i];</div>
-<div class="line"><span class="lineno">  542</span>      <span class="keywordflow">if</span> (seenStrings.find(name) != seenStrings.end()) {</div>
-<div class="line"><span class="lineno">  543</span>        <span class="keywordtype">size_t</span> firstIndex = seenStrings[name];</div>
-<div class="line"><span class="lineno">  544</span>        <a class="code hl_define" href="MaCh3Logger_8h.html#a07ff6d6a15b24f94afc88a1b89779beb">MACH3LOG_CRITICAL</a>(<span class="stringliteral">&quot;There are two systematics with the same {} &#39;{}&#39;, first at index {}, and again at index {}&quot;</span>, nameType, name, firstIndex, i);</div>
-<div class="line"><span class="lineno">  545</span>        <span class="keywordflow">throw</span> <a class="code hl_class" href="classMaCh3Exception.html">MaCh3Exception</a>(__FILE__, __LINE__);</div>
-<div class="line"><span class="lineno">  546</span>      }</div>
-<div class="line"><span class="lineno">  547</span>      seenStrings[name] = i;</div>
-<div class="line"><span class="lineno">  548</span>    }</div>
-<div class="line"><span class="lineno">  549</span>  };</div>
-<div class="line"><span class="lineno">  550</span> </div>
-<div class="line"><span class="lineno">  551</span>  <span class="comment">// KS: Checks if there are no duplicates in fancy names etc, this can happen if we merge configs etc</span></div>
-<div class="line"><span class="lineno">  552</span>  CheckForDuplicates(<a class="code hl_variable" href="classcovarianceBase.html#a973671386a2f8ea924f25f8f5404654c">_fFancyNames</a>, <span class="stringliteral">&quot;_fFancyNames&quot;</span>);</div>
-<div class="line"><span class="lineno">  553</span>  CheckForDuplicates(<a class="code hl_variable" href="classcovarianceXsec.html#a4d3074db3c9edb7465a4409abd9c91fc">_fSplineNames</a>, <span class="stringliteral">&quot;_fSplineNames&quot;</span>);</div>
-<div class="line"><span class="lineno">  554</span>}</div>
+<p class="definition">Definition at line <a class="el" href="covarianceXsec_8cpp_source.html#l00536">536</a> of file <a class="el" href="covarianceXsec_8cpp_source.html">covarianceXsec.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  536</span>                                                {</div>
+<div class="line"><span class="lineno">  537</span><span class="comment">// ********************************************</span></div>
+<div class="line"><span class="lineno">  538</span>  <span class="comment">// KS: Lambda Function which simply checks if there are no duplicates in std::vector</span></div>
+<div class="line"><span class="lineno">  539</span>  <span class="keyword">auto</span> CheckForDuplicates = [](<span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; names, <span class="keyword">const</span> std::string&amp; nameType) {</div>
+<div class="line"><span class="lineno">  540</span>    std::unordered_map&lt;std::string, size_t&gt; seenStrings;</div>
+<div class="line"><span class="lineno">  541</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; names.size(); ++i) {</div>
+<div class="line"><span class="lineno">  542</span>      <span class="keyword">const</span> <span class="keyword">auto</span>&amp; name = names[i];</div>
+<div class="line"><span class="lineno">  543</span>      <span class="keywordflow">if</span> (seenStrings.find(name) != seenStrings.end()) {</div>
+<div class="line"><span class="lineno">  544</span>        <span class="keywordtype">size_t</span> firstIndex = seenStrings[name];</div>
+<div class="line"><span class="lineno">  545</span>        <a class="code hl_define" href="MaCh3Logger_8h.html#a07ff6d6a15b24f94afc88a1b89779beb">MACH3LOG_CRITICAL</a>(<span class="stringliteral">&quot;There are two systematics with the same {} &#39;{}&#39;, first at index {}, and again at index {}&quot;</span>, nameType, name, firstIndex, i);</div>
+<div class="line"><span class="lineno">  546</span>        <span class="keywordflow">throw</span> <a class="code hl_class" href="classMaCh3Exception.html">MaCh3Exception</a>(__FILE__, __LINE__);</div>
+<div class="line"><span class="lineno">  547</span>      }</div>
+<div class="line"><span class="lineno">  548</span>      seenStrings[name] = i;</div>
+<div class="line"><span class="lineno">  549</span>    }</div>
+<div class="line"><span class="lineno">  550</span>  };</div>
+<div class="line"><span class="lineno">  551</span> </div>
+<div class="line"><span class="lineno">  552</span>  <span class="comment">// KS: Checks if there are no duplicates in fancy names etc, this can happen if we merge configs etc</span></div>
+<div class="line"><span class="lineno">  553</span>  CheckForDuplicates(<a class="code hl_variable" href="classcovarianceBase.html#a973671386a2f8ea924f25f8f5404654c">_fFancyNames</a>, <span class="stringliteral">&quot;_fFancyNames&quot;</span>);</div>
+<div class="line"><span class="lineno">  554</span>  CheckForDuplicates(<a class="code hl_variable" href="classcovarianceXsec.html#a4d3074db3c9edb7465a4409abd9c91fc">_fSplineNames</a>, <span class="stringliteral">&quot;_fSplineNames&quot;</span>);</div>
+<div class="line"><span class="lineno">  555</span>}</div>
 <div class="ttc" id="aMaCh3Logger_8h_html_a07ff6d6a15b24f94afc88a1b89779beb"><div class="ttname"><a href="MaCh3Logger_8h.html#a07ff6d6a15b24f94afc88a1b89779beb">MACH3LOG_CRITICAL</a></div><div class="ttdeci">#define MACH3LOG_CRITICAL</div><div class="ttdef"><b>Definition:</b> <a href="MaCh3Logger_8h_source.html#l00019">MaCh3Logger.h:19</a></div></div>
 <div class="ttc" id="aclassMaCh3Exception_html"><div class="ttname"><a href="classMaCh3Exception.html">MaCh3Exception</a></div><div class="ttdoc">Custom exception class for MaCh3 errors.</div><div class="ttdef"><b>Definition:</b> <a href="MaCh3Exception_8h_source.html#l00012">MaCh3Exception.h:12</a></div></div>
 <div class="ttc" id="aclasscovarianceBase_html_a973671386a2f8ea924f25f8f5404654c"><div class="ttname"><a href="classcovarianceBase.html#a973671386a2f8ea924f25f8f5404654c">covarianceBase::_fFancyNames</a></div><div class="ttdeci">std::vector&lt; std::string &gt; _fFancyNames</div><div class="ttdoc">Fancy name for example rather than xsec_0 it is MAQE, useful for human reading.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceBase_8h_source.html#l00427">covarianceBase.h:427</a></div></div>
@@ -950,107 +950,107 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section warning"><dt>Warning</dt><dd>This is mostly used for backward compatibility </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="covarianceXsec_8cpp_source.html#l00586">586</a> of file <a class="el" href="covarianceXsec_8cpp_source.html">covarianceXsec.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  586</span>                                                           {</div>
-<div class="line"><span class="lineno">  587</span><span class="comment">// ********************************************</span></div>
-<div class="line"><span class="lineno">  588</span>  TFile* outputFile = <span class="keyword">new</span> TFile(Name.c_str(), <span class="stringliteral">&quot;RECREATE&quot;</span>);</div>
-<div class="line"><span class="lineno">  589</span> </div>
-<div class="line"><span class="lineno">  590</span>  TObjArray* xsec_param_names = <span class="keyword">new</span> TObjArray();</div>
-<div class="line"><span class="lineno">  591</span>  TObjArray* xsec_spline_interpolation = <span class="keyword">new</span> TObjArray();</div>
-<div class="line"><span class="lineno">  592</span>  TObjArray* xsec_spline_names = <span class="keyword">new</span> TObjArray();</div>
-<div class="line"><span class="lineno">  593</span> </div>
-<div class="line"><span class="lineno">  594</span>  TVectorD* xsec_param_prior = <span class="keyword">new</span> TVectorD(<a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>);</div>
-<div class="line"><span class="lineno">  595</span>  TVectorD* xsec_flat_prior = <span class="keyword">new</span> TVectorD(<a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>);</div>
-<div class="line"><span class="lineno">  596</span>  TVectorD* xsec_stepscale = <span class="keyword">new</span> TVectorD(<a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>);</div>
-<div class="line"><span class="lineno">  597</span>  TVectorD* xsec_param_generated = <span class="keyword">new</span> TVectorD(<a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>);</div>
-<div class="line"><span class="lineno">  598</span>  TVectorD* xsec_param_lb = <span class="keyword">new</span> TVectorD(<a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>);</div>
-<div class="line"><span class="lineno">  599</span>  TVectorD* xsec_param_ub = <span class="keyword">new</span> TVectorD(<a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>);</div>
-<div class="line"><span class="lineno">  600</span> </div>
-<div class="line"><span class="lineno">  601</span>  TVectorD* xsec_param_knot_weight_lb = <span class="keyword">new</span> TVectorD(<a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>);</div>
-<div class="line"><span class="lineno">  602</span>  TVectorD* xsec_param_knot_weight_ub = <span class="keyword">new</span> TVectorD(<a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>);</div>
-<div class="line"><span class="lineno">  603</span> </div>
-<div class="line"><span class="lineno">  604</span>  TVectorD* xsec_error = <span class="keyword">new</span> TVectorD(<a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>);</div>
-<div class="line"><span class="lineno">  605</span>  TVectorD* xsec_param_id = <span class="keyword">new</span> TVectorD(<a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>);</div>
-<div class="line"><span class="lineno">  606</span> </div>
-<div class="line"><span class="lineno">  607</span>  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>; ++i)</div>
-<div class="line"><span class="lineno">  608</span>  {</div>
-<div class="line"><span class="lineno">  609</span>    TObjString* nameObj = <span class="keyword">new</span> TObjString(<a class="code hl_variable" href="classcovarianceBase.html#a973671386a2f8ea924f25f8f5404654c">_fFancyNames</a>[i].c_str());</div>
-<div class="line"><span class="lineno">  610</span>    xsec_param_names-&gt;AddLast(nameObj);</div>
-<div class="line"><span class="lineno">  611</span> </div>
-<div class="line"><span class="lineno">  612</span>    TObjString* splineType = <span class="keyword">new</span> TObjString(<span class="stringliteral">&quot;TSpline3&quot;</span>);</div>
-<div class="line"><span class="lineno">  613</span>    xsec_spline_interpolation-&gt;AddLast(splineType);</div>
-<div class="line"><span class="lineno">  614</span> </div>
-<div class="line"><span class="lineno">  615</span>    TObjString* splineName = <span class="keyword">new</span> TObjString(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><span class="lineno">  616</span>    xsec_spline_names-&gt;AddLast(splineName);</div>
-<div class="line"><span class="lineno">  617</span> </div>
-<div class="line"><span class="lineno">  618</span>    (*xsec_param_prior)[i] = <a class="code hl_variable" href="classcovarianceBase.html#a7578a2cc2e8e9100fad88310a824cb1c">_fPreFitValue</a>[i];</div>
-<div class="line"><span class="lineno">  619</span>    (*xsec_param_generated)[i] = <a class="code hl_variable" href="classcovarianceBase.html#a9b753f52711600a9f8d648531d95b044">_fGenerated</a>[i];</div>
-<div class="line"><span class="lineno">  620</span>    (*xsec_flat_prior)[i] = <a class="code hl_variable" href="classcovarianceBase.html#ad9c47deb7009bff81210f666e80012eb">_fFlatPrior</a>[i];</div>
-<div class="line"><span class="lineno">  621</span>    (*xsec_stepscale)[i] = <a class="code hl_variable" href="classcovarianceBase.html#a3cda39026e336a49cef482efd4062561">_fIndivStepScale</a>[i];</div>
-<div class="line"><span class="lineno">  622</span>    (*xsec_error)[i] = <a class="code hl_variable" href="classcovarianceBase.html#a34f877fc160b4a93a3aab1b3a8977858">_fError</a>[i];</div>
-<div class="line"><span class="lineno">  623</span>    (*xsec_param_id)[i] = <a class="code hl_variable" href="classcovarianceXsec.html#a183f01056fc0e9b42db202e944021332">_fDetID</a>[i];</div>
-<div class="line"><span class="lineno">  624</span> </div>
-<div class="line"><span class="lineno">  625</span>    (*xsec_param_lb)[i] = <a class="code hl_variable" href="classcovarianceBase.html#a8f1d94838f188cc85c4f82557c0b0b66">_fLowBound</a>[i];</div>
-<div class="line"><span class="lineno">  626</span>    (*xsec_param_ub)[i] = <a class="code hl_variable" href="classcovarianceBase.html#a31e636cb6de871bd0c2c8e7e299df9e7">_fUpBound</a>[i];</div>
-<div class="line"><span class="lineno">  627</span> </div>
-<div class="line"><span class="lineno">  628</span>    <span class="comment">//Default values</span></div>
-<div class="line"><span class="lineno">  629</span>    (*xsec_param_knot_weight_lb)[i] = -9999;</div>
-<div class="line"><span class="lineno">  630</span>    (*xsec_param_knot_weight_ub)[i] = +9999;</div>
-<div class="line"><span class="lineno">  631</span>  }</div>
-<div class="line"><span class="lineno">  632</span> </div>
-<div class="line"><span class="lineno">  633</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;pair : <a class="code hl_variable" href="classcovarianceXsec.html#adddfbaa235113603542826df331ed61e">_fSystToGlobalSystIndexMap</a>[SystType::kSpline]) {</div>
-<div class="line"><span class="lineno">  634</span>    <span class="keyword">auto</span> &amp;SplineIndex = pair.first;</div>
-<div class="line"><span class="lineno">  635</span>    <span class="keyword">auto</span> &amp;SystIndex = pair.second;</div>
-<div class="line"><span class="lineno">  636</span> </div>
-<div class="line"><span class="lineno">  637</span>    (*xsec_param_knot_weight_lb)[SystIndex] = <a class="code hl_variable" href="classcovarianceXsec.html#ae95bafab0c674dc838635aaeca40bc2c">SplineParams</a>.at(SplineIndex)._SplineKnotLowBound;</div>
-<div class="line"><span class="lineno">  638</span>    (*xsec_param_knot_weight_ub)[SystIndex] = <a class="code hl_variable" href="classcovarianceXsec.html#ae95bafab0c674dc838635aaeca40bc2c">SplineParams</a>.at(SplineIndex)._SplineKnotUpBound;</div>
-<div class="line"><span class="lineno">  639</span> </div>
-<div class="line"><span class="lineno">  640</span>    TObjString* splineType = <span class="keyword">new</span> TObjString(<a class="code hl_function" href="Structs_8h.html#a2d969ce667e41bd2492cff1775456837">SplineInterpolation_ToString</a>(<a class="code hl_variable" href="classcovarianceXsec.html#ae95bafab0c674dc838635aaeca40bc2c">SplineParams</a>.at(SplineIndex)._SplineInterpolationType).c_str());</div>
-<div class="line"><span class="lineno">  641</span>    xsec_spline_interpolation-&gt;AddAt(splineType, SystIndex);</div>
-<div class="line"><span class="lineno">  642</span> </div>
-<div class="line"><span class="lineno">  643</span>    TObjString* splineName = <span class="keyword">new</span> TObjString(<a class="code hl_variable" href="classcovarianceXsec.html#a4d3074db3c9edb7465a4409abd9c91fc">_fSplineNames</a>[SplineIndex].c_str());</div>
-<div class="line"><span class="lineno">  644</span>    xsec_spline_names-&gt;AddAt(splineName, SystIndex);</div>
-<div class="line"><span class="lineno">  645</span>  }</div>
-<div class="line"><span class="lineno">  646</span>  xsec_param_names-&gt;Write(<span class="stringliteral">&quot;xsec_param_names&quot;</span>, TObject::kSingleKey);</div>
-<div class="line"><span class="lineno">  647</span>  <span class="keyword">delete</span> xsec_param_names;</div>
-<div class="line"><span class="lineno">  648</span>  xsec_spline_interpolation-&gt;Write(<span class="stringliteral">&quot;xsec_spline_interpolation&quot;</span>, TObject::kSingleKey);</div>
-<div class="line"><span class="lineno">  649</span>  <span class="keyword">delete</span> xsec_spline_interpolation;</div>
-<div class="line"><span class="lineno">  650</span>  xsec_spline_names-&gt;Write(<span class="stringliteral">&quot;xsec_spline_names&quot;</span>, TObject::kSingleKey);</div>
-<div class="line"><span class="lineno">  651</span>  <span class="keyword">delete</span> xsec_spline_names;</div>
-<div class="line"><span class="lineno">  652</span> </div>
-<div class="line"><span class="lineno">  653</span>  xsec_param_prior-&gt;Write(<span class="stringliteral">&quot;xsec_param_prior&quot;</span>);</div>
-<div class="line"><span class="lineno">  654</span>  <span class="keyword">delete</span> xsec_param_prior;</div>
-<div class="line"><span class="lineno">  655</span>  xsec_flat_prior-&gt;Write(<span class="stringliteral">&quot;xsec_flat_prior&quot;</span>);</div>
-<div class="line"><span class="lineno">  656</span>  <span class="keyword">delete</span> xsec_flat_prior;</div>
-<div class="line"><span class="lineno">  657</span>  xsec_stepscale-&gt;Write(<span class="stringliteral">&quot;xsec_stepscale&quot;</span>);</div>
-<div class="line"><span class="lineno">  658</span>  <span class="keyword">delete</span> xsec_stepscale;</div>
-<div class="line"><span class="lineno">  659</span>  xsec_param_generated-&gt;Write(<span class="stringliteral">&quot;xsec_param_nom&quot;</span>);</div>
-<div class="line"><span class="lineno">  660</span>  <span class="keyword">delete</span> xsec_param_generated;</div>
-<div class="line"><span class="lineno">  661</span>  xsec_param_lb-&gt;Write(<span class="stringliteral">&quot;xsec_param_lb&quot;</span>);</div>
-<div class="line"><span class="lineno">  662</span>  <span class="keyword">delete</span> xsec_param_lb;</div>
-<div class="line"><span class="lineno">  663</span>  xsec_param_ub-&gt;Write(<span class="stringliteral">&quot;xsec_param_ub&quot;</span>);</div>
-<div class="line"><span class="lineno">  664</span>  <span class="keyword">delete</span> xsec_param_ub;</div>
-<div class="line"><span class="lineno">  665</span> </div>
-<div class="line"><span class="lineno">  666</span>  xsec_param_knot_weight_lb-&gt;Write(<span class="stringliteral">&quot;xsec_param_knot_weight_lb&quot;</span>);</div>
-<div class="line"><span class="lineno">  667</span>  <span class="keyword">delete</span> xsec_param_knot_weight_lb;</div>
-<div class="line"><span class="lineno">  668</span>  xsec_param_knot_weight_ub-&gt;Write(<span class="stringliteral">&quot;xsec_param_knot_weight_ub&quot;</span>);</div>
-<div class="line"><span class="lineno">  669</span>  <span class="keyword">delete</span> xsec_param_knot_weight_ub;</div>
-<div class="line"><span class="lineno">  670</span> </div>
-<div class="line"><span class="lineno">  671</span>  xsec_param_id-&gt;Write(<span class="stringliteral">&quot;xsec_param_id&quot;</span>);</div>
-<div class="line"><span class="lineno">  672</span>  <span class="keyword">delete</span> xsec_param_id;</div>
-<div class="line"><span class="lineno">  673</span>  xsec_error-&gt;Write(<span class="stringliteral">&quot;xsec_error&quot;</span>);</div>
-<div class="line"><span class="lineno">  674</span>  <span class="keyword">delete</span> xsec_error;</div>
-<div class="line"><span class="lineno">  675</span> </div>
-<div class="line"><span class="lineno">  676</span>  <a class="code hl_variable" href="classcovarianceBase.html#a6c3fe8db34c06299fd1633951ac00937">covMatrix</a>-&gt;Write(<span class="stringliteral">&quot;xsec_cov&quot;</span>);</div>
-<div class="line"><span class="lineno">  677</span>  TH2D* CorrMatrix = <a class="code hl_function" href="classcovarianceBase.html#ac14fabdb87f5101cdbfcecb8e6b6b811">GetCorrelationMatrix</a>();</div>
-<div class="line"><span class="lineno">  678</span>  CorrMatrix-&gt;Write(<span class="stringliteral">&quot;hcov&quot;</span>);</div>
-<div class="line"><span class="lineno">  679</span>  <span class="keyword">delete</span> CorrMatrix;</div>
-<div class="line"><span class="lineno">  680</span> </div>
-<div class="line"><span class="lineno">  681</span>  outputFile-&gt;Close();</div>
-<div class="line"><span class="lineno">  682</span>  <span class="keyword">delete</span> outputFile;</div>
-<div class="line"><span class="lineno">  683</span> </div>
-<div class="line"><span class="lineno">  684</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;Finished dumping covariance object&quot;</span>);</div>
-<div class="line"><span class="lineno">  685</span>}</div>
+<p class="definition">Definition at line <a class="el" href="covarianceXsec_8cpp_source.html#l00587">587</a> of file <a class="el" href="covarianceXsec_8cpp_source.html">covarianceXsec.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  587</span>                                                           {</div>
+<div class="line"><span class="lineno">  588</span><span class="comment">// ********************************************</span></div>
+<div class="line"><span class="lineno">  589</span>  TFile* outputFile = <span class="keyword">new</span> TFile(Name.c_str(), <span class="stringliteral">&quot;RECREATE&quot;</span>);</div>
+<div class="line"><span class="lineno">  590</span> </div>
+<div class="line"><span class="lineno">  591</span>  TObjArray* xsec_param_names = <span class="keyword">new</span> TObjArray();</div>
+<div class="line"><span class="lineno">  592</span>  TObjArray* xsec_spline_interpolation = <span class="keyword">new</span> TObjArray();</div>
+<div class="line"><span class="lineno">  593</span>  TObjArray* xsec_spline_names = <span class="keyword">new</span> TObjArray();</div>
+<div class="line"><span class="lineno">  594</span> </div>
+<div class="line"><span class="lineno">  595</span>  TVectorD* xsec_param_prior = <span class="keyword">new</span> TVectorD(<a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>);</div>
+<div class="line"><span class="lineno">  596</span>  TVectorD* xsec_flat_prior = <span class="keyword">new</span> TVectorD(<a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>);</div>
+<div class="line"><span class="lineno">  597</span>  TVectorD* xsec_stepscale = <span class="keyword">new</span> TVectorD(<a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>);</div>
+<div class="line"><span class="lineno">  598</span>  TVectorD* xsec_param_generated = <span class="keyword">new</span> TVectorD(<a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>);</div>
+<div class="line"><span class="lineno">  599</span>  TVectorD* xsec_param_lb = <span class="keyword">new</span> TVectorD(<a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>);</div>
+<div class="line"><span class="lineno">  600</span>  TVectorD* xsec_param_ub = <span class="keyword">new</span> TVectorD(<a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>);</div>
+<div class="line"><span class="lineno">  601</span> </div>
+<div class="line"><span class="lineno">  602</span>  TVectorD* xsec_param_knot_weight_lb = <span class="keyword">new</span> TVectorD(<a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>);</div>
+<div class="line"><span class="lineno">  603</span>  TVectorD* xsec_param_knot_weight_ub = <span class="keyword">new</span> TVectorD(<a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>);</div>
+<div class="line"><span class="lineno">  604</span> </div>
+<div class="line"><span class="lineno">  605</span>  TVectorD* xsec_error = <span class="keyword">new</span> TVectorD(<a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>);</div>
+<div class="line"><span class="lineno">  606</span>  TVectorD* xsec_param_id = <span class="keyword">new</span> TVectorD(<a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>);</div>
+<div class="line"><span class="lineno">  607</span> </div>
+<div class="line"><span class="lineno">  608</span>  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>; ++i)</div>
+<div class="line"><span class="lineno">  609</span>  {</div>
+<div class="line"><span class="lineno">  610</span>    TObjString* nameObj = <span class="keyword">new</span> TObjString(<a class="code hl_variable" href="classcovarianceBase.html#a973671386a2f8ea924f25f8f5404654c">_fFancyNames</a>[i].c_str());</div>
+<div class="line"><span class="lineno">  611</span>    xsec_param_names-&gt;AddLast(nameObj);</div>
+<div class="line"><span class="lineno">  612</span> </div>
+<div class="line"><span class="lineno">  613</span>    TObjString* splineType = <span class="keyword">new</span> TObjString(<span class="stringliteral">&quot;TSpline3&quot;</span>);</div>
+<div class="line"><span class="lineno">  614</span>    xsec_spline_interpolation-&gt;AddLast(splineType);</div>
+<div class="line"><span class="lineno">  615</span> </div>
+<div class="line"><span class="lineno">  616</span>    TObjString* splineName = <span class="keyword">new</span> TObjString(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  617</span>    xsec_spline_names-&gt;AddLast(splineName);</div>
+<div class="line"><span class="lineno">  618</span> </div>
+<div class="line"><span class="lineno">  619</span>    (*xsec_param_prior)[i] = <a class="code hl_variable" href="classcovarianceBase.html#a7578a2cc2e8e9100fad88310a824cb1c">_fPreFitValue</a>[i];</div>
+<div class="line"><span class="lineno">  620</span>    (*xsec_param_generated)[i] = <a class="code hl_variable" href="classcovarianceBase.html#a9b753f52711600a9f8d648531d95b044">_fGenerated</a>[i];</div>
+<div class="line"><span class="lineno">  621</span>    (*xsec_flat_prior)[i] = <a class="code hl_variable" href="classcovarianceBase.html#ad9c47deb7009bff81210f666e80012eb">_fFlatPrior</a>[i];</div>
+<div class="line"><span class="lineno">  622</span>    (*xsec_stepscale)[i] = <a class="code hl_variable" href="classcovarianceBase.html#a3cda39026e336a49cef482efd4062561">_fIndivStepScale</a>[i];</div>
+<div class="line"><span class="lineno">  623</span>    (*xsec_error)[i] = <a class="code hl_variable" href="classcovarianceBase.html#a34f877fc160b4a93a3aab1b3a8977858">_fError</a>[i];</div>
+<div class="line"><span class="lineno">  624</span>    (*xsec_param_id)[i] = <a class="code hl_variable" href="classcovarianceXsec.html#a183f01056fc0e9b42db202e944021332">_fDetID</a>[i];</div>
+<div class="line"><span class="lineno">  625</span> </div>
+<div class="line"><span class="lineno">  626</span>    (*xsec_param_lb)[i] = <a class="code hl_variable" href="classcovarianceBase.html#a8f1d94838f188cc85c4f82557c0b0b66">_fLowBound</a>[i];</div>
+<div class="line"><span class="lineno">  627</span>    (*xsec_param_ub)[i] = <a class="code hl_variable" href="classcovarianceBase.html#a31e636cb6de871bd0c2c8e7e299df9e7">_fUpBound</a>[i];</div>
+<div class="line"><span class="lineno">  628</span> </div>
+<div class="line"><span class="lineno">  629</span>    <span class="comment">//Default values</span></div>
+<div class="line"><span class="lineno">  630</span>    (*xsec_param_knot_weight_lb)[i] = -9999;</div>
+<div class="line"><span class="lineno">  631</span>    (*xsec_param_knot_weight_ub)[i] = +9999;</div>
+<div class="line"><span class="lineno">  632</span>  }</div>
+<div class="line"><span class="lineno">  633</span> </div>
+<div class="line"><span class="lineno">  634</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;pair : <a class="code hl_variable" href="classcovarianceXsec.html#adddfbaa235113603542826df331ed61e">_fSystToGlobalSystIndexMap</a>[SystType::kSpline]) {</div>
+<div class="line"><span class="lineno">  635</span>    <span class="keyword">auto</span> &amp;SplineIndex = pair.first;</div>
+<div class="line"><span class="lineno">  636</span>    <span class="keyword">auto</span> &amp;SystIndex = pair.second;</div>
+<div class="line"><span class="lineno">  637</span> </div>
+<div class="line"><span class="lineno">  638</span>    (*xsec_param_knot_weight_lb)[SystIndex] = <a class="code hl_variable" href="classcovarianceXsec.html#ae95bafab0c674dc838635aaeca40bc2c">SplineParams</a>.at(SplineIndex)._SplineKnotLowBound;</div>
+<div class="line"><span class="lineno">  639</span>    (*xsec_param_knot_weight_ub)[SystIndex] = <a class="code hl_variable" href="classcovarianceXsec.html#ae95bafab0c674dc838635aaeca40bc2c">SplineParams</a>.at(SplineIndex)._SplineKnotUpBound;</div>
+<div class="line"><span class="lineno">  640</span> </div>
+<div class="line"><span class="lineno">  641</span>    TObjString* splineType = <span class="keyword">new</span> TObjString(<a class="code hl_function" href="Structs_8h.html#a2d969ce667e41bd2492cff1775456837">SplineInterpolation_ToString</a>(<a class="code hl_variable" href="classcovarianceXsec.html#ae95bafab0c674dc838635aaeca40bc2c">SplineParams</a>.at(SplineIndex)._SplineInterpolationType).c_str());</div>
+<div class="line"><span class="lineno">  642</span>    xsec_spline_interpolation-&gt;AddAt(splineType, SystIndex);</div>
+<div class="line"><span class="lineno">  643</span> </div>
+<div class="line"><span class="lineno">  644</span>    TObjString* splineName = <span class="keyword">new</span> TObjString(<a class="code hl_variable" href="classcovarianceXsec.html#a4d3074db3c9edb7465a4409abd9c91fc">_fSplineNames</a>[SplineIndex].c_str());</div>
+<div class="line"><span class="lineno">  645</span>    xsec_spline_names-&gt;AddAt(splineName, SystIndex);</div>
+<div class="line"><span class="lineno">  646</span>  }</div>
+<div class="line"><span class="lineno">  647</span>  xsec_param_names-&gt;Write(<span class="stringliteral">&quot;xsec_param_names&quot;</span>, TObject::kSingleKey);</div>
+<div class="line"><span class="lineno">  648</span>  <span class="keyword">delete</span> xsec_param_names;</div>
+<div class="line"><span class="lineno">  649</span>  xsec_spline_interpolation-&gt;Write(<span class="stringliteral">&quot;xsec_spline_interpolation&quot;</span>, TObject::kSingleKey);</div>
+<div class="line"><span class="lineno">  650</span>  <span class="keyword">delete</span> xsec_spline_interpolation;</div>
+<div class="line"><span class="lineno">  651</span>  xsec_spline_names-&gt;Write(<span class="stringliteral">&quot;xsec_spline_names&quot;</span>, TObject::kSingleKey);</div>
+<div class="line"><span class="lineno">  652</span>  <span class="keyword">delete</span> xsec_spline_names;</div>
+<div class="line"><span class="lineno">  653</span> </div>
+<div class="line"><span class="lineno">  654</span>  xsec_param_prior-&gt;Write(<span class="stringliteral">&quot;xsec_param_prior&quot;</span>);</div>
+<div class="line"><span class="lineno">  655</span>  <span class="keyword">delete</span> xsec_param_prior;</div>
+<div class="line"><span class="lineno">  656</span>  xsec_flat_prior-&gt;Write(<span class="stringliteral">&quot;xsec_flat_prior&quot;</span>);</div>
+<div class="line"><span class="lineno">  657</span>  <span class="keyword">delete</span> xsec_flat_prior;</div>
+<div class="line"><span class="lineno">  658</span>  xsec_stepscale-&gt;Write(<span class="stringliteral">&quot;xsec_stepscale&quot;</span>);</div>
+<div class="line"><span class="lineno">  659</span>  <span class="keyword">delete</span> xsec_stepscale;</div>
+<div class="line"><span class="lineno">  660</span>  xsec_param_generated-&gt;Write(<span class="stringliteral">&quot;xsec_param_nom&quot;</span>);</div>
+<div class="line"><span class="lineno">  661</span>  <span class="keyword">delete</span> xsec_param_generated;</div>
+<div class="line"><span class="lineno">  662</span>  xsec_param_lb-&gt;Write(<span class="stringliteral">&quot;xsec_param_lb&quot;</span>);</div>
+<div class="line"><span class="lineno">  663</span>  <span class="keyword">delete</span> xsec_param_lb;</div>
+<div class="line"><span class="lineno">  664</span>  xsec_param_ub-&gt;Write(<span class="stringliteral">&quot;xsec_param_ub&quot;</span>);</div>
+<div class="line"><span class="lineno">  665</span>  <span class="keyword">delete</span> xsec_param_ub;</div>
+<div class="line"><span class="lineno">  666</span> </div>
+<div class="line"><span class="lineno">  667</span>  xsec_param_knot_weight_lb-&gt;Write(<span class="stringliteral">&quot;xsec_param_knot_weight_lb&quot;</span>);</div>
+<div class="line"><span class="lineno">  668</span>  <span class="keyword">delete</span> xsec_param_knot_weight_lb;</div>
+<div class="line"><span class="lineno">  669</span>  xsec_param_knot_weight_ub-&gt;Write(<span class="stringliteral">&quot;xsec_param_knot_weight_ub&quot;</span>);</div>
+<div class="line"><span class="lineno">  670</span>  <span class="keyword">delete</span> xsec_param_knot_weight_ub;</div>
+<div class="line"><span class="lineno">  671</span> </div>
+<div class="line"><span class="lineno">  672</span>  xsec_param_id-&gt;Write(<span class="stringliteral">&quot;xsec_param_id&quot;</span>);</div>
+<div class="line"><span class="lineno">  673</span>  <span class="keyword">delete</span> xsec_param_id;</div>
+<div class="line"><span class="lineno">  674</span>  xsec_error-&gt;Write(<span class="stringliteral">&quot;xsec_error&quot;</span>);</div>
+<div class="line"><span class="lineno">  675</span>  <span class="keyword">delete</span> xsec_error;</div>
+<div class="line"><span class="lineno">  676</span> </div>
+<div class="line"><span class="lineno">  677</span>  <a class="code hl_variable" href="classcovarianceBase.html#a6c3fe8db34c06299fd1633951ac00937">covMatrix</a>-&gt;Write(<span class="stringliteral">&quot;xsec_cov&quot;</span>);</div>
+<div class="line"><span class="lineno">  678</span>  TH2D* CorrMatrix = <a class="code hl_function" href="classcovarianceBase.html#ac14fabdb87f5101cdbfcecb8e6b6b811">GetCorrelationMatrix</a>();</div>
+<div class="line"><span class="lineno">  679</span>  CorrMatrix-&gt;Write(<span class="stringliteral">&quot;hcov&quot;</span>);</div>
+<div class="line"><span class="lineno">  680</span>  <span class="keyword">delete</span> CorrMatrix;</div>
+<div class="line"><span class="lineno">  681</span> </div>
+<div class="line"><span class="lineno">  682</span>  outputFile-&gt;Close();</div>
+<div class="line"><span class="lineno">  683</span>  <span class="keyword">delete</span> outputFile;</div>
+<div class="line"><span class="lineno">  684</span> </div>
+<div class="line"><span class="lineno">  685</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;Finished dumping covariance object&quot;</span>);</div>
+<div class="line"><span class="lineno">  686</span>}</div>
 <div class="ttc" id="aMaCh3Logger_8h_html_a95fa4dffc648e4c5536c9292c2bdcac3"><div class="ttname"><a href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a></div><div class="ttdeci">#define MACH3LOG_INFO</div><div class="ttdef"><b>Definition:</b> <a href="MaCh3Logger_8h_source.html#l00016">MaCh3Logger.h:16</a></div></div>
 <div class="ttc" id="aStructs_8h_html_a2d969ce667e41bd2492cff1775456837"><div class="ttname"><a href="Structs_8h.html#a2d969ce667e41bd2492cff1775456837">SplineInterpolation_ToString</a></div><div class="ttdeci">std::string SplineInterpolation_ToString(const SplineInterpolation i)</div><div class="ttdoc">Convert a LLH type to a string.</div><div class="ttdef"><b>Definition:</b> <a href="Structs_8h_source.html#l00194">Structs.h:194</a></div></div>
 <div class="ttc" id="aclasscovarianceBase_html_a31e636cb6de871bd0c2c8e7e299df9e7"><div class="ttname"><a href="classcovarianceBase.html#a31e636cb6de871bd0c2c8e7e299df9e7">covarianceBase::_fUpBound</a></div><div class="ttdeci">std::vector&lt; double &gt; _fUpBound</div><div class="ttdoc">Upper physical bound, parameter will not be able to go beyond it.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceBase_8h_source.html#l00445">covarianceBase.h:445</a></div></div>
@@ -1094,18 +1094,18 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="covarianceXsec_8cpp_source.html#l00222">222</a> of file <a class="el" href="covarianceXsec_8cpp_source.html">covarianceXsec.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  222</span>                                                                                                     {</div>
-<div class="line"><span class="lineno">  223</span><span class="comment">// ********************************************</span></div>
-<div class="line"><span class="lineno">  224</span>  std::vector&lt;int&gt; returnVec;</div>
-<div class="line"><span class="lineno">  225</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;pair : <a class="code hl_variable" href="classcovarianceXsec.html#adddfbaa235113603542826df331ed61e">_fSystToGlobalSystIndexMap</a>[Type]) {</div>
-<div class="line"><span class="lineno">  226</span>    <span class="keyword">auto</span> &amp;SystIndex = pair.second;</div>
-<div class="line"><span class="lineno">  227</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="classcovarianceXsec.html#a5b8c672fce660dd1b8d25f34ddf14474">AppliesToDetID</a>(SystIndex, DetID)) { <span class="comment">//If parameter applies to required DetID</span></div>
-<div class="line"><span class="lineno">  228</span>      returnVec.push_back(SystIndex);</div>
-<div class="line"><span class="lineno">  229</span>    }</div>
-<div class="line"><span class="lineno">  230</span>  }</div>
-<div class="line"><span class="lineno">  231</span>  <span class="keywordflow">return</span> returnVec;</div>
-<div class="line"><span class="lineno">  232</span>}</div>
+<p class="definition">Definition at line <a class="el" href="covarianceXsec_8cpp_source.html#l00223">223</a> of file <a class="el" href="covarianceXsec_8cpp_source.html">covarianceXsec.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  223</span>                                                                                                     {</div>
+<div class="line"><span class="lineno">  224</span><span class="comment">// ********************************************</span></div>
+<div class="line"><span class="lineno">  225</span>  std::vector&lt;int&gt; returnVec;</div>
+<div class="line"><span class="lineno">  226</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;pair : <a class="code hl_variable" href="classcovarianceXsec.html#adddfbaa235113603542826df331ed61e">_fSystToGlobalSystIndexMap</a>[Type]) {</div>
+<div class="line"><span class="lineno">  227</span>    <span class="keyword">auto</span> &amp;SystIndex = pair.second;</div>
+<div class="line"><span class="lineno">  228</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="classcovarianceXsec.html#a5b8c672fce660dd1b8d25f34ddf14474">AppliesToDetID</a>(SystIndex, DetID)) { <span class="comment">//If parameter applies to required DetID</span></div>
+<div class="line"><span class="lineno">  229</span>      returnVec.push_back(SystIndex);</div>
+<div class="line"><span class="lineno">  230</span>    }</div>
+<div class="line"><span class="lineno">  231</span>  }</div>
+<div class="line"><span class="lineno">  232</span>  <span class="keywordflow">return</span> returnVec;</div>
+<div class="line"><span class="lineno">  233</span>}</div>
 <div class="ttc" id="aclasscovarianceXsec_html_a5b8c672fce660dd1b8d25f34ddf14474"><div class="ttname"><a href="classcovarianceXsec.html#a5b8c672fce660dd1b8d25f34ddf14474">covarianceXsec::AppliesToDetID</a></div><div class="ttdeci">bool AppliesToDetID(const int SystIndex, const int DetID) const</div><div class="ttdoc">Check if parameter is affecting given det ID.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8h_source.html#l00134">covarianceXsec.h:134</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -1205,23 +1205,23 @@ Protected Attributes</h2></td></tr>
 
 <p>DB Get norm/func parameters depending on given DetID. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceXsec_8cpp_source.html#l00276">276</a> of file <a class="el" href="covarianceXsec_8cpp_source.html">covarianceXsec.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  276</span>                                                                                {</div>
-<div class="line"><span class="lineno">  277</span><span class="comment">// ********************************************</span></div>
-<div class="line"><span class="lineno">  278</span>  std::vector&lt;XsecNorms4&gt; returnVec;</div>
-<div class="line"><span class="lineno">  279</span>  <span class="keywordtype">int</span> norm_counter = 0;</div>
-<div class="line"><span class="lineno">  280</span>  <a class="code hl_function" href="classcovarianceXsec.html#a17c24905af91f1fc7b806cfc39e50035">IterateOverParams</a>(DetID,</div>
-<div class="line"><span class="lineno">  281</span>    [&amp;](<span class="keywordtype">int</span> i) { <span class="keywordflow">return</span> <a class="code hl_function" href="classcovarianceXsec.html#a50cca3de3274be7a57d25cc1b454e890">GetParamType</a>(i) == <a class="code hl_enumvalue" href="Structs_8h.html#affc27d8b7b82d3713f45af17873fde2fa085cb29127b1cf7b1ddd429ff4440b17">kNorm</a>; }, <span class="comment">// Filter condition</span></div>
-<div class="line"><span class="lineno">  282</span>    [&amp;](<span class="keyword">auto</span>) {</div>
-<div class="line"><span class="lineno">  283</span>      <a class="code hl_struct" href="structXsecNorms4.html">XsecNorms4</a> Temp = <a class="code hl_variable" href="classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5">NormParams</a>[norm_counter];</div>
-<div class="line"><span class="lineno">  284</span>      returnVec.push_back(Temp);</div>
-<div class="line"><span class="lineno">  285</span>      norm_counter++;</div>
-<div class="line"><span class="lineno">  286</span>    }</div>
-<div class="line"><span class="lineno">  287</span>  );</div>
-<div class="line"><span class="lineno">  288</span>  <span class="keywordflow">return</span> returnVec;</div>
-<div class="line"><span class="lineno">  289</span>}</div>
+<p class="definition">Definition at line <a class="el" href="covarianceXsec_8cpp_source.html#l00277">277</a> of file <a class="el" href="covarianceXsec_8cpp_source.html">covarianceXsec.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  277</span>                                                                                {</div>
+<div class="line"><span class="lineno">  278</span><span class="comment">// ********************************************</span></div>
+<div class="line"><span class="lineno">  279</span>  std::vector&lt;XsecNorms4&gt; returnVec;</div>
+<div class="line"><span class="lineno">  280</span>  <span class="keywordtype">int</span> norm_counter = 0;</div>
+<div class="line"><span class="lineno">  281</span>  <a class="code hl_function" href="classcovarianceXsec.html#a17c24905af91f1fc7b806cfc39e50035">IterateOverParams</a>(DetID,</div>
+<div class="line"><span class="lineno">  282</span>    [&amp;](<span class="keywordtype">int</span> i) { <span class="keywordflow">return</span> <a class="code hl_function" href="classcovarianceXsec.html#a50cca3de3274be7a57d25cc1b454e890">GetParamType</a>(i) == <a class="code hl_enumvalue" href="Structs_8h.html#affc27d8b7b82d3713f45af17873fde2fa085cb29127b1cf7b1ddd429ff4440b17">kNorm</a>; }, <span class="comment">// Filter condition</span></div>
+<div class="line"><span class="lineno">  283</span>    [&amp;](<span class="keyword">auto</span>) {</div>
+<div class="line"><span class="lineno">  284</span>      <a class="code hl_struct" href="structXsecNorms4.html">XsecNorms4</a> Temp = <a class="code hl_variable" href="classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5">NormParams</a>[norm_counter];</div>
+<div class="line"><span class="lineno">  285</span>      returnVec.push_back(Temp);</div>
+<div class="line"><span class="lineno">  286</span>      norm_counter++;</div>
+<div class="line"><span class="lineno">  287</span>    }</div>
+<div class="line"><span class="lineno">  288</span>  );</div>
+<div class="line"><span class="lineno">  289</span>  <span class="keywordflow">return</span> returnVec;</div>
+<div class="line"><span class="lineno">  290</span>}</div>
 <div class="ttc" id="aStructs_8h_html_affc27d8b7b82d3713f45af17873fde2fa085cb29127b1cf7b1ddd429ff4440b17"><div class="ttname"><a href="Structs_8h.html#affc27d8b7b82d3713f45af17873fde2fa085cb29127b1cf7b1ddd429ff4440b17">kNorm</a></div><div class="ttdeci">@ kNorm</div><div class="ttdoc">For normalisation parameters.</div><div class="ttdef"><b>Definition:</b> <a href="Structs_8h_source.html#l00226">Structs.h:226</a></div></div>
-<div class="ttc" id="aclasscovarianceXsec_html_a17c24905af91f1fc7b806cfc39e50035"><div class="ttname"><a href="classcovarianceXsec.html#a17c24905af91f1fc7b806cfc39e50035">covarianceXsec::IterateOverParams</a></div><div class="ttdeci">void IterateOverParams(const int DetID, FilterFunc filter, ActionFunc action)</div><div class="ttdoc">Iterates over parameters and applies a filter and action function.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8cpp_source.html#l00329">covarianceXsec.cpp:329</a></div></div>
+<div class="ttc" id="aclasscovarianceXsec_html_a17c24905af91f1fc7b806cfc39e50035"><div class="ttname"><a href="classcovarianceXsec.html#a17c24905af91f1fc7b806cfc39e50035">covarianceXsec::IterateOverParams</a></div><div class="ttdeci">void IterateOverParams(const int DetID, FilterFunc filter, ActionFunc action)</div><div class="ttdoc">Iterates over parameters and applies a filter and action function.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8cpp_source.html#l00330">covarianceXsec.cpp:330</a></div></div>
 <div class="ttc" id="aclasscovarianceXsec_html_a50cca3de3274be7a57d25cc1b454e890"><div class="ttname"><a href="classcovarianceXsec.html#a50cca3de3274be7a57d25cc1b454e890">covarianceXsec::GetParamType</a></div><div class="ttdeci">SystType GetParamType(const int i) const</div><div class="ttdoc">Returns enum describing our param type.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8h_source.html#l00030">covarianceXsec.h:30</a></div></div>
 <div class="ttc" id="aclasscovarianceXsec_html_acd6c2346a5b808c6917e4828bbb633f5"><div class="ttname"><a href="classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5">covarianceXsec::NormParams</a></div><div class="ttdeci">std::vector&lt; XsecNorms4 &gt; NormParams</div><div class="ttdoc">Vector containing info for normalisation systematics.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8h_source.html#l00170">covarianceXsec.h:170</a></div></div>
 <div class="ttc" id="astructXsecNorms4_html"><div class="ttname"><a href="structXsecNorms4.html">XsecNorms4</a></div><div class="ttdoc">ETA - Normalisations for cross-section parameters Carrier for whether you want to apply a systematic ...</div><div class="ttdef"><b>Definition:</b> <a href="Structs_8h_source.html#l00095">Structs.h:95</a></div></div>
@@ -1262,16 +1262,16 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="covarianceXsec_8cpp_source.html#l00293">293</a> of file <a class="el" href="covarianceXsec_8cpp_source.html">covarianceXsec.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  293</span>                                                                              {</div>
-<div class="line"><span class="lineno">  294</span><span class="comment">// ********************************************</span></div>
-<div class="line"><span class="lineno">  295</span>  <span class="keywordtype">int</span> returnVal = 0;</div>
-<div class="line"><span class="lineno">  296</span>  <a class="code hl_function" href="classcovarianceXsec.html#a17c24905af91f1fc7b806cfc39e50035">IterateOverParams</a>(DetID,</div>
-<div class="line"><span class="lineno">  297</span>    [&amp;](<span class="keywordtype">int</span> i) { <span class="keywordflow">return</span> <a class="code hl_function" href="classcovarianceXsec.html#a50cca3de3274be7a57d25cc1b454e890">GetParamType</a>(i) == Type; }, <span class="comment">// Filter condition</span></div>
-<div class="line"><span class="lineno">  298</span>    [&amp;](int) { returnVal += 1; } <span class="comment">// Action to perform if filter passes</span></div>
-<div class="line"><span class="lineno">  299</span>  );</div>
-<div class="line"><span class="lineno">  300</span>  <span class="keywordflow">return</span> returnVal;</div>
-<div class="line"><span class="lineno">  301</span>}</div>
+<p class="definition">Definition at line <a class="el" href="covarianceXsec_8cpp_source.html#l00294">294</a> of file <a class="el" href="covarianceXsec_8cpp_source.html">covarianceXsec.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  294</span>                                                                              {</div>
+<div class="line"><span class="lineno">  295</span><span class="comment">// ********************************************</span></div>
+<div class="line"><span class="lineno">  296</span>  <span class="keywordtype">int</span> returnVal = 0;</div>
+<div class="line"><span class="lineno">  297</span>  <a class="code hl_function" href="classcovarianceXsec.html#a17c24905af91f1fc7b806cfc39e50035">IterateOverParams</a>(DetID,</div>
+<div class="line"><span class="lineno">  298</span>    [&amp;](<span class="keywordtype">int</span> i) { <span class="keywordflow">return</span> <a class="code hl_function" href="classcovarianceXsec.html#a50cca3de3274be7a57d25cc1b454e890">GetParamType</a>(i) == Type; }, <span class="comment">// Filter condition</span></div>
+<div class="line"><span class="lineno">  299</span>    [&amp;](int) { returnVal += 1; } <span class="comment">// Action to perform if filter passes</span></div>
+<div class="line"><span class="lineno">  300</span>  );</div>
+<div class="line"><span class="lineno">  301</span>  <span class="keywordflow">return</span> returnVal;</div>
+<div class="line"><span class="lineno">  302</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1422,16 +1422,16 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="covarianceXsec_8cpp_source.html#l00317">317</a> of file <a class="el" href="covarianceXsec_8cpp_source.html">covarianceXsec.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  317</span>                                                                                               {</div>
-<div class="line"><span class="lineno">  318</span><span class="comment">// ********************************************</span></div>
-<div class="line"><span class="lineno">  319</span>  std::vector&lt;int&gt; returnVec;</div>
-<div class="line"><span class="lineno">  320</span>  <a class="code hl_function" href="classcovarianceXsec.html#a17c24905af91f1fc7b806cfc39e50035">IterateOverParams</a>(DetID,</div>
-<div class="line"><span class="lineno">  321</span>    [&amp;](<span class="keywordtype">int</span> i) { <span class="keywordflow">return</span> <a class="code hl_function" href="classcovarianceXsec.html#a50cca3de3274be7a57d25cc1b454e890">GetParamType</a>(i) == Type; }, <span class="comment">// Filter condition</span></div>
-<div class="line"><span class="lineno">  322</span>    [&amp;](<span class="keywordtype">int</span> i) { returnVec.push_back(i); } <span class="comment">// Action to perform if filter passes</span></div>
-<div class="line"><span class="lineno">  323</span>  );</div>
-<div class="line"><span class="lineno">  324</span>  <span class="keywordflow">return</span> returnVec;</div>
-<div class="line"><span class="lineno">  325</span>}</div>
+<p class="definition">Definition at line <a class="el" href="covarianceXsec_8cpp_source.html#l00318">318</a> of file <a class="el" href="covarianceXsec_8cpp_source.html">covarianceXsec.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  318</span>                                                                                               {</div>
+<div class="line"><span class="lineno">  319</span><span class="comment">// ********************************************</span></div>
+<div class="line"><span class="lineno">  320</span>  std::vector&lt;int&gt; returnVec;</div>
+<div class="line"><span class="lineno">  321</span>  <a class="code hl_function" href="classcovarianceXsec.html#a17c24905af91f1fc7b806cfc39e50035">IterateOverParams</a>(DetID,</div>
+<div class="line"><span class="lineno">  322</span>    [&amp;](<span class="keywordtype">int</span> i) { <span class="keywordflow">return</span> <a class="code hl_function" href="classcovarianceXsec.html#a50cca3de3274be7a57d25cc1b454e890">GetParamType</a>(i) == Type; }, <span class="comment">// Filter condition</span></div>
+<div class="line"><span class="lineno">  323</span>    [&amp;](<span class="keywordtype">int</span> i) { returnVec.push_back(i); } <span class="comment">// Action to perform if filter passes</span></div>
+<div class="line"><span class="lineno">  324</span>  );</div>
+<div class="line"><span class="lineno">  325</span>  <span class="keywordflow">return</span> returnVec;</div>
+<div class="line"><span class="lineno">  326</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1469,16 +1469,16 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="covarianceXsec_8cpp_source.html#l00305">305</a> of file <a class="el" href="covarianceXsec_8cpp_source.html">covarianceXsec.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  305</span>                                                                                                     {</div>
-<div class="line"><span class="lineno">  306</span><span class="comment">// ********************************************</span></div>
-<div class="line"><span class="lineno">  307</span>  std::vector&lt;std::string&gt; returnVec;</div>
-<div class="line"><span class="lineno">  308</span>  <a class="code hl_function" href="classcovarianceXsec.html#a17c24905af91f1fc7b806cfc39e50035">IterateOverParams</a>(DetID,</div>
-<div class="line"><span class="lineno">  309</span>    [&amp;](<span class="keywordtype">int</span> i) { <span class="keywordflow">return</span> <a class="code hl_function" href="classcovarianceXsec.html#a50cca3de3274be7a57d25cc1b454e890">GetParamType</a>(i) == Type; }, <span class="comment">// Filter condition</span></div>
-<div class="line"><span class="lineno">  310</span>    [&amp;](<span class="keywordtype">int</span> i) { returnVec.push_back(<a class="code hl_function" href="classcovarianceBase.html#a6a46b5fed3e7feb6e9e151e90927bdbc">GetParFancyName</a>(i)); } <span class="comment">// Action to perform if filter passes</span></div>
-<div class="line"><span class="lineno">  311</span>  );</div>
-<div class="line"><span class="lineno">  312</span>  <span class="keywordflow">return</span> returnVec;</div>
-<div class="line"><span class="lineno">  313</span>}</div>
+<p class="definition">Definition at line <a class="el" href="covarianceXsec_8cpp_source.html#l00306">306</a> of file <a class="el" href="covarianceXsec_8cpp_source.html">covarianceXsec.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  306</span>                                                                                                     {</div>
+<div class="line"><span class="lineno">  307</span><span class="comment">// ********************************************</span></div>
+<div class="line"><span class="lineno">  308</span>  std::vector&lt;std::string&gt; returnVec;</div>
+<div class="line"><span class="lineno">  309</span>  <a class="code hl_function" href="classcovarianceXsec.html#a17c24905af91f1fc7b806cfc39e50035">IterateOverParams</a>(DetID,</div>
+<div class="line"><span class="lineno">  310</span>    [&amp;](<span class="keywordtype">int</span> i) { <span class="keywordflow">return</span> <a class="code hl_function" href="classcovarianceXsec.html#a50cca3de3274be7a57d25cc1b454e890">GetParamType</a>(i) == Type; }, <span class="comment">// Filter condition</span></div>
+<div class="line"><span class="lineno">  311</span>    [&amp;](<span class="keywordtype">int</span> i) { returnVec.push_back(<a class="code hl_function" href="classcovarianceBase.html#a6a46b5fed3e7feb6e9e151e90927bdbc">GetParFancyName</a>(i)); } <span class="comment">// Action to perform if filter passes</span></div>
+<div class="line"><span class="lineno">  312</span>  );</div>
+<div class="line"><span class="lineno">  313</span>  <span class="keywordflow">return</span> returnVec;</div>
+<div class="line"><span class="lineno">  314</span>}</div>
 <div class="ttc" id="aclasscovarianceBase_html_a6a46b5fed3e7feb6e9e151e90927bdbc"><div class="ttname"><a href="classcovarianceBase.html#a6a46b5fed3e7feb6e9e151e90927bdbc">covarianceBase::GetParFancyName</a></div><div class="ttdeci">std::string GetParFancyName(const int i)</div><div class="ttdoc">Get fancy name of the Parameter.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceBase_8h_source.html#l00130">covarianceBase.h:130</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -1795,19 +1795,19 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="covarianceXsec_8cpp_source.html#l00237">237</a> of file <a class="el" href="covarianceXsec_8cpp_source.html">covarianceXsec.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  237</span>                                                                                          {</div>
-<div class="line"><span class="lineno">  238</span><span class="comment">// ********************************************</span></div>
-<div class="line"><span class="lineno">  239</span>  std::vector&lt;int&gt; returnVec;</div>
-<div class="line"><span class="lineno">  240</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;pair : <a class="code hl_variable" href="classcovarianceXsec.html#adddfbaa235113603542826df331ed61e">_fSystToGlobalSystIndexMap</a>[Type]) {</div>
-<div class="line"><span class="lineno">  241</span>    <span class="keyword">auto</span> &amp;SplineIndex = pair.first;</div>
-<div class="line"><span class="lineno">  242</span>    <span class="keyword">auto</span> &amp;systIndex = pair.second;</div>
-<div class="line"><span class="lineno">  243</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="classcovarianceXsec.html#a5b8c672fce660dd1b8d25f34ddf14474">AppliesToDetID</a>(systIndex, DetID)) { <span class="comment">//If parameter applies to required DetID</span></div>
-<div class="line"><span class="lineno">  244</span>      returnVec.push_back(SplineIndex);</div>
-<div class="line"><span class="lineno">  245</span>    }</div>
-<div class="line"><span class="lineno">  246</span>  }</div>
-<div class="line"><span class="lineno">  247</span>  <span class="keywordflow">return</span> returnVec;</div>
-<div class="line"><span class="lineno">  248</span>}</div>
+<p class="definition">Definition at line <a class="el" href="covarianceXsec_8cpp_source.html#l00238">238</a> of file <a class="el" href="covarianceXsec_8cpp_source.html">covarianceXsec.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  238</span>                                                                                          {</div>
+<div class="line"><span class="lineno">  239</span><span class="comment">// ********************************************</span></div>
+<div class="line"><span class="lineno">  240</span>  std::vector&lt;int&gt; returnVec;</div>
+<div class="line"><span class="lineno">  241</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;pair : <a class="code hl_variable" href="classcovarianceXsec.html#adddfbaa235113603542826df331ed61e">_fSystToGlobalSystIndexMap</a>[Type]) {</div>
+<div class="line"><span class="lineno">  242</span>    <span class="keyword">auto</span> &amp;SplineIndex = pair.first;</div>
+<div class="line"><span class="lineno">  243</span>    <span class="keyword">auto</span> &amp;systIndex = pair.second;</div>
+<div class="line"><span class="lineno">  244</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="classcovarianceXsec.html#a5b8c672fce660dd1b8d25f34ddf14474">AppliesToDetID</a>(systIndex, DetID)) { <span class="comment">//If parameter applies to required DetID</span></div>
+<div class="line"><span class="lineno">  245</span>      returnVec.push_back(SplineIndex);</div>
+<div class="line"><span class="lineno">  246</span>    }</div>
+<div class="line"><span class="lineno">  247</span>  }</div>
+<div class="line"><span class="lineno">  248</span>  <span class="keywordflow">return</span> returnVec;</div>
+<div class="line"><span class="lineno">  249</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1889,27 +1889,28 @@ Protected Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  194</span>      }</div>
 <div class="line"><span class="lineno">  195</span>      <span class="keywordflow">if</span>(TempKinematicStrings.size() == 0) {</div>
 <div class="line"><span class="lineno">  196</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a>(<span class="stringliteral">&quot;Recived a KinematicCuts node but couldn&#39;t read the contents (it&#39;s a list of single-element dictionaries (python) = map of pairs (C++))&quot;</span>);</div>
-<div class="line"><span class="lineno">  197</span>    <span class="keywordflow">throw</span> <a class="code hl_class" href="classMaCh3Exception.html">MaCh3Exception</a>(__FILE__, __LINE__);</div>
-<div class="line"><span class="lineno">  198</span>      }</div>
-<div class="line"><span class="lineno">  199</span>    }<span class="comment">//KinVar_i</span></div>
-<div class="line"><span class="lineno">  200</span>    norm.<a class="code hl_variable" href="structXsecNorms4.html#a67a1d237f1fdb41a0c11898fada0f00c">KinematicVarStr</a> = TempKinematicStrings;</div>
-<div class="line"><span class="lineno">  201</span>    norm.<a class="code hl_variable" href="structXsecNorms4.html#a1723c13b5d04cff5ce48718cae5b6e14">Selection</a> = TempKinematicBounds;</div>
-<div class="line"><span class="lineno">  202</span>  }</div>
-<div class="line"><span class="lineno">  203</span> </div>
-<div class="line"><span class="lineno">  204</span>  <span class="comment">//Next ones are kinematic bounds on where normalisation parameter should apply (at the moment only etrue but hope to add q2</span></div>
-<div class="line"><span class="lineno">  205</span>  <span class="comment">//We set a bool to see if any bounds exist so we can short-circuit checking all of them every step</span></div>
-<div class="line"><span class="lineno">  206</span>  <span class="keywordtype">bool</span> HasKinBounds = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  207</span> </div>
-<div class="line"><span class="lineno">  208</span>  <span class="keywordflow">if</span>(norm.<a class="code hl_variable" href="structXsecNorms4.html#a67a1d237f1fdb41a0c11898fada0f00c">KinematicVarStr</a>.size() &gt; 0) HasKinBounds = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  209</span> </div>
-<div class="line"><span class="lineno">  210</span>  norm.<a class="code hl_variable" href="structXsecNorms4.html#ab5d815107d57b4f7ae22ccb3f2ae318b">hasKinBounds</a> = HasKinBounds;</div>
-<div class="line"><span class="lineno">  211</span>  <span class="comment">//End of kinematic bound checking</span></div>
-<div class="line"><span class="lineno">  212</span> </div>
-<div class="line"><span class="lineno">  213</span>  <span class="comment">// Set the global parameter index of the normalisation parameter</span></div>
-<div class="line"><span class="lineno">  214</span>  norm.<a class="code hl_variable" href="structXsecNorms4.html#a6c45244b8c559ada13c1c886dea37cc2">index</a> = Index;</div>
-<div class="line"><span class="lineno">  215</span> </div>
-<div class="line"><span class="lineno">  216</span>  <span class="keywordflow">return</span> norm;</div>
-<div class="line"><span class="lineno">  217</span>}</div>
+<div class="line"><span class="lineno">  197</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a>(<span class="stringliteral">&quot;For Param {}&quot;</span>, norm.<a class="code hl_variable" href="structXsecNorms4.html#a848104ff97acc9a0df9861acc8615aa7">name</a>);</div>
+<div class="line"><span class="lineno">  198</span>    <span class="keywordflow">throw</span> <a class="code hl_class" href="classMaCh3Exception.html">MaCh3Exception</a>(__FILE__, __LINE__);</div>
+<div class="line"><span class="lineno">  199</span>      }</div>
+<div class="line"><span class="lineno">  200</span>    }<span class="comment">//KinVar_i</span></div>
+<div class="line"><span class="lineno">  201</span>    norm.<a class="code hl_variable" href="structXsecNorms4.html#a67a1d237f1fdb41a0c11898fada0f00c">KinematicVarStr</a> = TempKinematicStrings;</div>
+<div class="line"><span class="lineno">  202</span>    norm.<a class="code hl_variable" href="structXsecNorms4.html#a1723c13b5d04cff5ce48718cae5b6e14">Selection</a> = TempKinematicBounds;</div>
+<div class="line"><span class="lineno">  203</span>  }</div>
+<div class="line"><span class="lineno">  204</span> </div>
+<div class="line"><span class="lineno">  205</span>  <span class="comment">//Next ones are kinematic bounds on where normalisation parameter should apply (at the moment only etrue but hope to add q2</span></div>
+<div class="line"><span class="lineno">  206</span>  <span class="comment">//We set a bool to see if any bounds exist so we can short-circuit checking all of them every step</span></div>
+<div class="line"><span class="lineno">  207</span>  <span class="keywordtype">bool</span> HasKinBounds = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  208</span> </div>
+<div class="line"><span class="lineno">  209</span>  <span class="keywordflow">if</span>(norm.<a class="code hl_variable" href="structXsecNorms4.html#a67a1d237f1fdb41a0c11898fada0f00c">KinematicVarStr</a>.size() &gt; 0) HasKinBounds = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  210</span> </div>
+<div class="line"><span class="lineno">  211</span>  norm.<a class="code hl_variable" href="structXsecNorms4.html#ab5d815107d57b4f7ae22ccb3f2ae318b">hasKinBounds</a> = HasKinBounds;</div>
+<div class="line"><span class="lineno">  212</span>  <span class="comment">//End of kinematic bound checking</span></div>
+<div class="line"><span class="lineno">  213</span> </div>
+<div class="line"><span class="lineno">  214</span>  <span class="comment">// Set the global parameter index of the normalisation parameter</span></div>
+<div class="line"><span class="lineno">  215</span>  norm.<a class="code hl_variable" href="structXsecNorms4.html#a6c45244b8c559ada13c1c886dea37cc2">index</a> = Index;</div>
+<div class="line"><span class="lineno">  216</span> </div>
+<div class="line"><span class="lineno">  217</span>  <span class="keywordflow">return</span> norm;</div>
+<div class="line"><span class="lineno">  218</span>}</div>
 <div class="ttc" id="aGetPenaltyTerm_8cpp_html_a439227feff9d7f55384e8780cfc2eb82"><div class="ttname"><a href="GetPenaltyTerm_8cpp.html#a439227feff9d7f55384e8780cfc2eb82">size</a></div><div class="ttdeci">int size</div><div class="ttdef"><b>Definition:</b> <a href="GetPenaltyTerm_8cpp_source.html#l00038">GetPenaltyTerm.cpp:38</a></div></div>
 <div class="ttc" id="aMaCh3Logger_8h_html_a61052119a625282d0ec6d4a97adf3ee2"><div class="ttname"><a href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a></div><div class="ttdeci">#define MACH3LOG_ERROR</div><div class="ttdef"><b>Definition:</b> <a href="MaCh3Logger_8h_source.html#l00018">MaCh3Logger.h:18</a></div></div>
 <div class="ttc" id="astructXsecNorms4_html_a0f6b21994200f446f21c42ec1cebf9bb"><div class="ttname"><a href="structXsecNorms4.html#a0f6b21994200f446f21c42ec1cebf9bb">XsecNorms4::targets</a></div><div class="ttdeci">std::vector&lt; int &gt; targets</div><div class="ttdoc">Targets which parameter applies to.</div><div class="ttdef"><b>Definition:</b> <a href="Structs_8h_source.html#l00108">Structs.h:108</a></div></div>
@@ -1956,28 +1957,28 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="covarianceXsec_8cpp_source.html#l00252">252</a> of file <a class="el" href="covarianceXsec_8cpp_source.html">covarianceXsec.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  252</span>                                                                {</div>
-<div class="line"><span class="lineno">  253</span><span class="comment">// ********************************************</span></div>
-<div class="line"><span class="lineno">  254</span>  <a class="code hl_struct" href="structXsecSplines1.html">XsecSplines1</a> Spline;</div>
-<div class="line"><span class="lineno">  255</span> </div>
-<div class="line"><span class="lineno">  256</span>  <span class="comment">//Now get the Spline interpolation type</span></div>
-<div class="line"><span class="lineno">  257</span>  <span class="keywordflow">if</span> (param[<span class="stringliteral">&quot;SplineInformation&quot;</span>][<span class="stringliteral">&quot;InterpolationType&quot;</span>]){</div>
-<div class="line"><span class="lineno">  258</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> InterpType = 0; InterpType &lt; <a class="code hl_enumvalue" href="Structs_8h.html#a6720d732608767153550aebebcf8fbf4a9e1a345912f2baebd863ab7d40c9ab7b">kSplineInterpolations</a> ; ++InterpType){</div>
-<div class="line"><span class="lineno">  259</span>      <span class="keywordflow">if</span>(param[<span class="stringliteral">&quot;SplineInformation&quot;</span>][<span class="stringliteral">&quot;InterpolationType&quot;</span>].as&lt;std::string&gt;() == <a class="code hl_function" href="Structs_8h.html#a2d969ce667e41bd2492cff1775456837">SplineInterpolation_ToString</a>(<a class="code hl_enumeration" href="Structs_8h.html#a6720d732608767153550aebebcf8fbf4">SplineInterpolation</a>(InterpType)))</div>
-<div class="line"><span class="lineno">  260</span>        Spline.<a class="code hl_variable" href="structXsecSplines1.html#aaa0e82ade2dbe697f625c06d9c79cffb">_SplineInterpolationType</a> = <a class="code hl_enumeration" href="Structs_8h.html#a6720d732608767153550aebebcf8fbf4">SplineInterpolation</a>(InterpType);</div>
-<div class="line"><span class="lineno">  261</span>    }</div>
-<div class="line"><span class="lineno">  262</span>  } <span class="keywordflow">else</span> { <span class="comment">//KS: By default use TSpline3</span></div>
-<div class="line"><span class="lineno">  263</span>    Spline.<a class="code hl_variable" href="structXsecSplines1.html#aaa0e82ade2dbe697f625c06d9c79cffb">_SplineInterpolationType</a> = <a class="code hl_enumvalue" href="Structs_8h.html#a6720d732608767153550aebebcf8fbf4a56c886e7b34c938027a7140748999c8a">kTSpline3</a>;</div>
-<div class="line"><span class="lineno">  264</span>  }</div>
-<div class="line"><span class="lineno">  265</span>  Spline.<a class="code hl_variable" href="structXsecSplines1.html#aa253e0c9ad458756613665a5e28e8f3c">_SplineKnotUpBound</a> = GetFromManager&lt;double&gt;(param[<span class="stringliteral">&quot;SplineInformation&quot;</span>][<span class="stringliteral">&quot;SplineKnotUpBound&quot;</span>], 9999);</div>
-<div class="line"><span class="lineno">  266</span>  Spline.<a class="code hl_variable" href="structXsecSplines1.html#a44d06d261a524bf6d7e1b3e2b3ae08c0">_SplineKnotLowBound</a> = GetFromManager&lt;double&gt;(param[<span class="stringliteral">&quot;SplineInformation&quot;</span>][<span class="stringliteral">&quot;SplineKnotLowBound&quot;</span>], -9999);</div>
-<div class="line"><span class="lineno">  267</span> </div>
-<div class="line"><span class="lineno">  268</span>  <span class="comment">//If there is no mode information given then this will be an empty vector</span></div>
-<div class="line"><span class="lineno">  269</span>  Spline.<a class="code hl_variable" href="structXsecSplines1.html#a70fd38fe1866c2672c4d733d994886c9">_fSplineModes</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">GetFromManager</a>(param[<span class="stringliteral">&quot;SplineInformation&quot;</span>][<span class="stringliteral">&quot;Mode&quot;</span>], std::vector&lt;int&gt;());</div>
-<div class="line"><span class="lineno">  270</span> </div>
-<div class="line"><span class="lineno">  271</span>  <span class="keywordflow">return</span> Spline;</div>
-<div class="line"><span class="lineno">  272</span>}</div>
+<p class="definition">Definition at line <a class="el" href="covarianceXsec_8cpp_source.html#l00253">253</a> of file <a class="el" href="covarianceXsec_8cpp_source.html">covarianceXsec.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  253</span>                                                                {</div>
+<div class="line"><span class="lineno">  254</span><span class="comment">// ********************************************</span></div>
+<div class="line"><span class="lineno">  255</span>  <a class="code hl_struct" href="structXsecSplines1.html">XsecSplines1</a> Spline;</div>
+<div class="line"><span class="lineno">  256</span> </div>
+<div class="line"><span class="lineno">  257</span>  <span class="comment">//Now get the Spline interpolation type</span></div>
+<div class="line"><span class="lineno">  258</span>  <span class="keywordflow">if</span> (param[<span class="stringliteral">&quot;SplineInformation&quot;</span>][<span class="stringliteral">&quot;InterpolationType&quot;</span>]){</div>
+<div class="line"><span class="lineno">  259</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> InterpType = 0; InterpType &lt; <a class="code hl_enumvalue" href="Structs_8h.html#a6720d732608767153550aebebcf8fbf4a9e1a345912f2baebd863ab7d40c9ab7b">kSplineInterpolations</a> ; ++InterpType){</div>
+<div class="line"><span class="lineno">  260</span>      <span class="keywordflow">if</span>(param[<span class="stringliteral">&quot;SplineInformation&quot;</span>][<span class="stringliteral">&quot;InterpolationType&quot;</span>].as&lt;std::string&gt;() == <a class="code hl_function" href="Structs_8h.html#a2d969ce667e41bd2492cff1775456837">SplineInterpolation_ToString</a>(<a class="code hl_enumeration" href="Structs_8h.html#a6720d732608767153550aebebcf8fbf4">SplineInterpolation</a>(InterpType)))</div>
+<div class="line"><span class="lineno">  261</span>        Spline.<a class="code hl_variable" href="structXsecSplines1.html#aaa0e82ade2dbe697f625c06d9c79cffb">_SplineInterpolationType</a> = <a class="code hl_enumeration" href="Structs_8h.html#a6720d732608767153550aebebcf8fbf4">SplineInterpolation</a>(InterpType);</div>
+<div class="line"><span class="lineno">  262</span>    }</div>
+<div class="line"><span class="lineno">  263</span>  } <span class="keywordflow">else</span> { <span class="comment">//KS: By default use TSpline3</span></div>
+<div class="line"><span class="lineno">  264</span>    Spline.<a class="code hl_variable" href="structXsecSplines1.html#aaa0e82ade2dbe697f625c06d9c79cffb">_SplineInterpolationType</a> = <a class="code hl_enumvalue" href="Structs_8h.html#a6720d732608767153550aebebcf8fbf4a56c886e7b34c938027a7140748999c8a">kTSpline3</a>;</div>
+<div class="line"><span class="lineno">  265</span>  }</div>
+<div class="line"><span class="lineno">  266</span>  Spline.<a class="code hl_variable" href="structXsecSplines1.html#aa253e0c9ad458756613665a5e28e8f3c">_SplineKnotUpBound</a> = GetFromManager&lt;double&gt;(param[<span class="stringliteral">&quot;SplineInformation&quot;</span>][<span class="stringliteral">&quot;SplineKnotUpBound&quot;</span>], 9999);</div>
+<div class="line"><span class="lineno">  267</span>  Spline.<a class="code hl_variable" href="structXsecSplines1.html#a44d06d261a524bf6d7e1b3e2b3ae08c0">_SplineKnotLowBound</a> = GetFromManager&lt;double&gt;(param[<span class="stringliteral">&quot;SplineInformation&quot;</span>][<span class="stringliteral">&quot;SplineKnotLowBound&quot;</span>], -9999);</div>
+<div class="line"><span class="lineno">  268</span> </div>
+<div class="line"><span class="lineno">  269</span>  <span class="comment">//If there is no mode information given then this will be an empty vector</span></div>
+<div class="line"><span class="lineno">  270</span>  Spline.<a class="code hl_variable" href="structXsecSplines1.html#a70fd38fe1866c2672c4d733d994886c9">_fSplineModes</a> = <a class="code hl_function" href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">GetFromManager</a>(param[<span class="stringliteral">&quot;SplineInformation&quot;</span>][<span class="stringliteral">&quot;Mode&quot;</span>], std::vector&lt;int&gt;());</div>
+<div class="line"><span class="lineno">  271</span> </div>
+<div class="line"><span class="lineno">  272</span>  <span class="keywordflow">return</span> Spline;</div>
+<div class="line"><span class="lineno">  273</span>}</div>
 <div class="ttc" id="aStructs_8h_html_a6720d732608767153550aebebcf8fbf4"><div class="ttname"><a href="Structs_8h.html#a6720d732608767153550aebebcf8fbf4">SplineInterpolation</a></div><div class="ttdeci">SplineInterpolation</div><div class="ttdoc">Make an enum of the spline interpolation type.</div><div class="ttdef"><b>Definition:</b> <a href="Structs_8h_source.html#l00133">Structs.h:133</a></div></div>
 <div class="ttc" id="aStructs_8h_html_a6720d732608767153550aebebcf8fbf4a56c886e7b34c938027a7140748999c8a"><div class="ttname"><a href="Structs_8h.html#a6720d732608767153550aebebcf8fbf4a56c886e7b34c938027a7140748999c8a">kTSpline3</a></div><div class="ttdeci">@ kTSpline3</div><div class="ttdoc">Default TSpline3 interpolation.</div><div class="ttdef"><b>Definition:</b> <a href="Structs_8h_source.html#l00134">Structs.h:134</a></div></div>
 <div class="ttc" id="aStructs_8h_html_a6720d732608767153550aebebcf8fbf4a9e1a345912f2baebd863ab7d40c9ab7b"><div class="ttname"><a href="Structs_8h.html#a6720d732608767153550aebebcf8fbf4a9e1a345912f2baebd863ab7d40c9ab7b">kSplineInterpolations</a></div><div class="ttdeci">@ kSplineInterpolations</div><div class="ttdoc">This only enumerates.</div><div class="ttdef"><b>Definition:</b> <a href="Structs_8h_source.html#l00140">Structs.h:139</a></div></div>
@@ -2016,34 +2017,34 @@ Protected Attributes</h2></td></tr>
 <p>Initializes the systematic parameters from the configuration file. This function loads parameters like normalizations and splines from the provided YAML file. </p>
 <dl class="section note"><dt>Note</dt><dd>This is used internally during the object's initialization process. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="covarianceXsec_8cpp_source.html#l00339">339</a> of file <a class="el" href="covarianceXsec_8cpp_source.html">covarianceXsec.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  339</span>                                {</div>
-<div class="line"><span class="lineno">  340</span><span class="comment">// ********************************************</span></div>
-<div class="line"><span class="lineno">  341</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>; ++i) {</div>
-<div class="line"><span class="lineno">  342</span>    <span class="comment">//ETA - set the name to be xsec_% as this is what ProcessorMCMC expects</span></div>
-<div class="line"><span class="lineno">  343</span>    <a class="code hl_variable" href="classcovarianceBase.html#a3e502d80fd2c30a7da4fe75a3e05b0da">_fNames</a>[i] = <span class="stringliteral">&quot;xsec_&quot;</span>+std::to_string(i);</div>
-<div class="line"><span class="lineno">  344</span> </div>
-<div class="line"><span class="lineno">  345</span>    <span class="comment">// Set covarianceBase parameters (Curr = current, Prop = proposed, Sigma = step)</span></div>
-<div class="line"><span class="lineno">  346</span>    <a class="code hl_variable" href="classcovarianceBase.html#ae70f51df3976975b2dc78fd3bfc28b65">_fCurrVal</a>[i] = <a class="code hl_variable" href="classcovarianceBase.html#a7578a2cc2e8e9100fad88310a824cb1c">_fPreFitValue</a>[i];</div>
-<div class="line"><span class="lineno">  347</span>    <a class="code hl_variable" href="classcovarianceBase.html#a12f0eb31a5ef48b014baa11d4ab919e9">_fPropVal</a>[i] = <a class="code hl_variable" href="classcovarianceBase.html#ae70f51df3976975b2dc78fd3bfc28b65">_fCurrVal</a>[i];</div>
-<div class="line"><span class="lineno">  348</span>  }</div>
-<div class="line"><span class="lineno">  349</span>  <span class="comment">//DB Set Individual Step scale for PCA parameters to the LastPCAdpar fIndivStepScale because the step scale for those parameters is set by &#39;eigen_values[i]&#39; but needs an overall step scale</span></div>
-<div class="line"><span class="lineno">  350</span>  <span class="comment">//   However, individual step scale for non-PCA parameters needs to be set correctly</span></div>
-<div class="line"><span class="lineno">  351</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="classcovarianceBase.html#ab4b7f96d3e977a0b3307ceecbd0baeb4">pca</a>) {</div>
-<div class="line"><span class="lineno">  352</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = <a class="code hl_variable" href="classcovarianceBase.html#abba75182305d556818c76974a054a17d">FirstPCAdpar</a>; i &lt;= <a class="code hl_variable" href="classcovarianceBase.html#a5ebdc744b733656972a15f1657915a3f">LastPCAdpar</a>; i++) {</div>
-<div class="line"><span class="lineno">  353</span>      <a class="code hl_variable" href="classcovarianceBase.html#a3cda39026e336a49cef482efd4062561">_fIndivStepScale</a>[i] = <a class="code hl_variable" href="classcovarianceBase.html#a3cda39026e336a49cef482efd4062561">_fIndivStepScale</a>[<a class="code hl_variable" href="classcovarianceBase.html#a5ebdc744b733656972a15f1657915a3f">LastPCAdpar</a>-1];</div>
-<div class="line"><span class="lineno">  354</span>    }</div>
-<div class="line"><span class="lineno">  355</span>  }</div>
-<div class="line"><span class="lineno">  356</span>  <a class="code hl_function" href="classcovarianceBase.html#a8d58b8e8ac3b2a8f1c6867e8b6cd7ff8">randomize</a>();</div>
-<div class="line"><span class="lineno">  357</span>  <span class="comment">//KS: Transfer the starting parameters to the PCA basis, you don&#39;t want to start with zero..</span></div>
-<div class="line"><span class="lineno">  358</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="classcovarianceBase.html#ab4b7f96d3e977a0b3307ceecbd0baeb4">pca</a>)</div>
-<div class="line"><span class="lineno">  359</span>  {</div>
-<div class="line"><span class="lineno">  360</span>    <a class="code hl_function" href="classcovarianceBase.html#a651f5ecd8973918d5683606a607fa88c">TransferToPCA</a>();</div>
-<div class="line"><span class="lineno">  361</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classcovarianceBase.html#ac57285a48d41ef764b4c659959a36c2d">_fNumParPCA</a>; ++i) {</div>
-<div class="line"><span class="lineno">  362</span>      <a class="code hl_variable" href="classcovarianceBase.html#ae6aada94037640a68e3f37898f276019">_fPreFitValue_PCA</a>[i] = <a class="code hl_variable" href="classcovarianceBase.html#aa96f87ab90dc26fc1b5e157149b9dfd3">fParCurr_PCA</a>(i);</div>
-<div class="line"><span class="lineno">  363</span>    }</div>
-<div class="line"><span class="lineno">  364</span>  }</div>
-<div class="line"><span class="lineno">  365</span>}</div>
+<p class="definition">Definition at line <a class="el" href="covarianceXsec_8cpp_source.html#l00340">340</a> of file <a class="el" href="covarianceXsec_8cpp_source.html">covarianceXsec.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  340</span>                                {</div>
+<div class="line"><span class="lineno">  341</span><span class="comment">// ********************************************</span></div>
+<div class="line"><span class="lineno">  342</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>; ++i) {</div>
+<div class="line"><span class="lineno">  343</span>    <span class="comment">//ETA - set the name to be xsec_% as this is what ProcessorMCMC expects</span></div>
+<div class="line"><span class="lineno">  344</span>    <a class="code hl_variable" href="classcovarianceBase.html#a3e502d80fd2c30a7da4fe75a3e05b0da">_fNames</a>[i] = <span class="stringliteral">&quot;xsec_&quot;</span>+std::to_string(i);</div>
+<div class="line"><span class="lineno">  345</span> </div>
+<div class="line"><span class="lineno">  346</span>    <span class="comment">// Set covarianceBase parameters (Curr = current, Prop = proposed, Sigma = step)</span></div>
+<div class="line"><span class="lineno">  347</span>    <a class="code hl_variable" href="classcovarianceBase.html#ae70f51df3976975b2dc78fd3bfc28b65">_fCurrVal</a>[i] = <a class="code hl_variable" href="classcovarianceBase.html#a7578a2cc2e8e9100fad88310a824cb1c">_fPreFitValue</a>[i];</div>
+<div class="line"><span class="lineno">  348</span>    <a class="code hl_variable" href="classcovarianceBase.html#a12f0eb31a5ef48b014baa11d4ab919e9">_fPropVal</a>[i] = <a class="code hl_variable" href="classcovarianceBase.html#ae70f51df3976975b2dc78fd3bfc28b65">_fCurrVal</a>[i];</div>
+<div class="line"><span class="lineno">  349</span>  }</div>
+<div class="line"><span class="lineno">  350</span>  <span class="comment">//DB Set Individual Step scale for PCA parameters to the LastPCAdpar fIndivStepScale because the step scale for those parameters is set by &#39;eigen_values[i]&#39; but needs an overall step scale</span></div>
+<div class="line"><span class="lineno">  351</span>  <span class="comment">//   However, individual step scale for non-PCA parameters needs to be set correctly</span></div>
+<div class="line"><span class="lineno">  352</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="classcovarianceBase.html#ab4b7f96d3e977a0b3307ceecbd0baeb4">pca</a>) {</div>
+<div class="line"><span class="lineno">  353</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = <a class="code hl_variable" href="classcovarianceBase.html#abba75182305d556818c76974a054a17d">FirstPCAdpar</a>; i &lt;= <a class="code hl_variable" href="classcovarianceBase.html#a5ebdc744b733656972a15f1657915a3f">LastPCAdpar</a>; i++) {</div>
+<div class="line"><span class="lineno">  354</span>      <a class="code hl_variable" href="classcovarianceBase.html#a3cda39026e336a49cef482efd4062561">_fIndivStepScale</a>[i] = <a class="code hl_variable" href="classcovarianceBase.html#a3cda39026e336a49cef482efd4062561">_fIndivStepScale</a>[<a class="code hl_variable" href="classcovarianceBase.html#a5ebdc744b733656972a15f1657915a3f">LastPCAdpar</a>-1];</div>
+<div class="line"><span class="lineno">  355</span>    }</div>
+<div class="line"><span class="lineno">  356</span>  }</div>
+<div class="line"><span class="lineno">  357</span>  <a class="code hl_function" href="classcovarianceBase.html#a8d58b8e8ac3b2a8f1c6867e8b6cd7ff8">randomize</a>();</div>
+<div class="line"><span class="lineno">  358</span>  <span class="comment">//KS: Transfer the starting parameters to the PCA basis, you don&#39;t want to start with zero..</span></div>
+<div class="line"><span class="lineno">  359</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="classcovarianceBase.html#ab4b7f96d3e977a0b3307ceecbd0baeb4">pca</a>)</div>
+<div class="line"><span class="lineno">  360</span>  {</div>
+<div class="line"><span class="lineno">  361</span>    <a class="code hl_function" href="classcovarianceBase.html#a651f5ecd8973918d5683606a607fa88c">TransferToPCA</a>();</div>
+<div class="line"><span class="lineno">  362</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classcovarianceBase.html#ac57285a48d41ef764b4c659959a36c2d">_fNumParPCA</a>; ++i) {</div>
+<div class="line"><span class="lineno">  363</span>      <a class="code hl_variable" href="classcovarianceBase.html#ae6aada94037640a68e3f37898f276019">_fPreFitValue_PCA</a>[i] = <a class="code hl_variable" href="classcovarianceBase.html#aa96f87ab90dc26fc1b5e157149b9dfd3">fParCurr_PCA</a>(i);</div>
+<div class="line"><span class="lineno">  364</span>    }</div>
+<div class="line"><span class="lineno">  365</span>  }</div>
+<div class="line"><span class="lineno">  366</span>}</div>
 <div class="ttc" id="aclasscovarianceBase_html_a12f0eb31a5ef48b014baa11d4ab919e9"><div class="ttname"><a href="classcovarianceBase.html#a12f0eb31a5ef48b014baa11d4ab919e9">covarianceBase::_fPropVal</a></div><div class="ttdeci">std::vector&lt; double &gt; _fPropVal</div><div class="ttdoc">Proposed value of the parameter.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceBase_8h_source.html#l00437">covarianceBase.h:437</a></div></div>
 <div class="ttc" id="aclasscovarianceBase_html_a5ebdc744b733656972a15f1657915a3f"><div class="ttname"><a href="classcovarianceBase.html#a5ebdc744b733656972a15f1657915a3f">covarianceBase::LastPCAdpar</a></div><div class="ttdeci">int LastPCAdpar</div><div class="ttdoc">Index of the last param that is being decomposed.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceBase_8h_source.html#l00463">covarianceBase.h:463</a></div></div>
 <div class="ttc" id="aclasscovarianceBase_html_a651f5ecd8973918d5683606a607fa88c"><div class="ttname"><a href="classcovarianceBase.html#a651f5ecd8973918d5683606a607fa88c">covarianceBase::TransferToPCA</a></div><div class="ttdeci">void TransferToPCA()</div><div class="ttdoc">Transfer param values from normal base to PCA base.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceBase_8cpp_source.html#l00386">covarianceBase.cpp:386</a></div></div>
@@ -2163,7 +2164,7 @@ Protected Attributes</h2></td></tr>
 <div class="ttc" id="aclasscovarianceBase_html_a933ff3dc0af99629ba3582a5d9d89d23"><div class="ttname"><a href="classcovarianceBase.html#a933ff3dc0af99629ba3582a5d9d89d23">covarianceBase::_fYAMLDoc</a></div><div class="ttdeci">YAML::Node _fYAMLDoc</div><div class="ttdoc">Stores config describing systematics.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceBase_8h_source.html#l00429">covarianceBase.h:429</a></div></div>
 <div class="ttc" id="aclasscovarianceXsec_html_a47cd1802e0dac0c22c8c16f214272c34"><div class="ttname"><a href="classcovarianceXsec.html#a47cd1802e0dac0c22c8c16f214272c34">covarianceXsec::_ParameterGroup</a></div><div class="ttdeci">std::vector&lt; std::string &gt; _ParameterGroup</div><div class="ttdoc">KS: Allow to group parameters for example to affect only cross-section or only flux etc.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8h_source.html#l00161">covarianceXsec.h:161</a></div></div>
 <div class="ttc" id="aclasscovarianceXsec_html_a68938d9079d05782eb1f415a5204284c"><div class="ttname"><a href="classcovarianceXsec.html#a68938d9079d05782eb1f415a5204284c">covarianceXsec::GetXsecNorm</a></div><div class="ttdeci">XsecNorms4 GetXsecNorm(const YAML::Node &amp;param, const int Index)</div><div class="ttdoc">Get Norm params.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8cpp_source.html#l00163">covarianceXsec.cpp:163</a></div></div>
-<div class="ttc" id="aclasscovarianceXsec_html_acf3b87f72369d597d27d2a32fc01e779"><div class="ttname"><a href="classcovarianceXsec.html#acf3b87f72369d597d27d2a32fc01e779">covarianceXsec::GetXsecSpline</a></div><div class="ttdeci">XsecSplines1 GetXsecSpline(const YAML::Node &amp;param)</div><div class="ttdoc">Get Spline params.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8cpp_source.html#l00252">covarianceXsec.cpp:252</a></div></div>
+<div class="ttc" id="aclasscovarianceXsec_html_acf3b87f72369d597d27d2a32fc01e779"><div class="ttname"><a href="classcovarianceXsec.html#acf3b87f72369d597d27d2a32fc01e779">covarianceXsec::GetXsecSpline</a></div><div class="ttdeci">XsecSplines1 GetXsecSpline(const YAML::Node &amp;param)</div><div class="ttdoc">Get Spline params.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8cpp_source.html#l00253">covarianceXsec.cpp:253</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2203,18 +2204,18 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>bool telling whether param is part of group </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="covarianceXsec_8cpp_source.html#l00572">572</a> of file <a class="el" href="covarianceXsec_8cpp_source.html">covarianceXsec.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  572</span>                                                                       {</div>
-<div class="line"><span class="lineno">  573</span><span class="comment">// ********************************************</span></div>
-<div class="line"><span class="lineno">  574</span>  std::string groupLower = Group;</div>
-<div class="line"><span class="lineno">  575</span>  std::string paramGroupLower = <a class="code hl_variable" href="classcovarianceXsec.html#a47cd1802e0dac0c22c8c16f214272c34">_ParameterGroup</a>[i];</div>
-<div class="line"><span class="lineno">  576</span> </div>
-<div class="line"><span class="lineno">  577</span>  <span class="comment">// KS: Convert both strings to lowercase, this way comparison will be case insensitive</span></div>
-<div class="line"><span class="lineno">  578</span>  std::transform(groupLower.begin(), groupLower.end(), groupLower.begin(), ::tolower);</div>
-<div class="line"><span class="lineno">  579</span>  std::transform(paramGroupLower.begin(), paramGroupLower.end(), paramGroupLower.begin(), ::tolower);</div>
-<div class="line"><span class="lineno">  580</span> </div>
-<div class="line"><span class="lineno">  581</span>  <span class="keywordflow">return</span> groupLower == paramGroupLower;</div>
-<div class="line"><span class="lineno">  582</span>}</div>
+<p class="definition">Definition at line <a class="el" href="covarianceXsec_8cpp_source.html#l00573">573</a> of file <a class="el" href="covarianceXsec_8cpp_source.html">covarianceXsec.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  573</span>                                                                       {</div>
+<div class="line"><span class="lineno">  574</span><span class="comment">// ********************************************</span></div>
+<div class="line"><span class="lineno">  575</span>  std::string groupLower = Group;</div>
+<div class="line"><span class="lineno">  576</span>  std::string paramGroupLower = <a class="code hl_variable" href="classcovarianceXsec.html#a47cd1802e0dac0c22c8c16f214272c34">_ParameterGroup</a>[i];</div>
+<div class="line"><span class="lineno">  577</span> </div>
+<div class="line"><span class="lineno">  578</span>  <span class="comment">// KS: Convert both strings to lowercase, this way comparison will be case insensitive</span></div>
+<div class="line"><span class="lineno">  579</span>  std::transform(groupLower.begin(), groupLower.end(), groupLower.begin(), ::tolower);</div>
+<div class="line"><span class="lineno">  580</span>  std::transform(paramGroupLower.begin(), paramGroupLower.end(), paramGroupLower.begin(), ::tolower);</div>
+<div class="line"><span class="lineno">  581</span> </div>
+<div class="line"><span class="lineno">  582</span>  <span class="keywordflow">return</span> groupLower == paramGroupLower;</div>
+<div class="line"><span class="lineno">  583</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2276,15 +2277,15 @@ template&lt;typename FilterFunc , typename ActionFunc &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="covarianceXsec_8cpp_source.html#l00329">329</a> of file <a class="el" href="covarianceXsec_8cpp_source.html">covarianceXsec.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  329</span>                                                                                            {</div>
-<div class="line"><span class="lineno">  330</span><span class="comment">// ********************************************</span></div>
-<div class="line"><span class="lineno">  331</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>; ++i) {</div>
-<div class="line"><span class="lineno">  332</span>    <span class="keywordflow">if</span> ((<a class="code hl_function" href="classcovarianceXsec.html#a5b8c672fce660dd1b8d25f34ddf14474">AppliesToDetID</a>(i, DetID)) &amp;&amp; filter(i)) { <span class="comment">// Common filter logic</span></div>
-<div class="line"><span class="lineno">  333</span>      action(i); <span class="comment">// Specific action for each function</span></div>
-<div class="line"><span class="lineno">  334</span>    }</div>
-<div class="line"><span class="lineno">  335</span>  }</div>
-<div class="line"><span class="lineno">  336</span>}</div>
+<p class="definition">Definition at line <a class="el" href="covarianceXsec_8cpp_source.html#l00330">330</a> of file <a class="el" href="covarianceXsec_8cpp_source.html">covarianceXsec.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  330</span>                                                                                            {</div>
+<div class="line"><span class="lineno">  331</span><span class="comment">// ********************************************</span></div>
+<div class="line"><span class="lineno">  332</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>; ++i) {</div>
+<div class="line"><span class="lineno">  333</span>    <span class="keywordflow">if</span> ((<a class="code hl_function" href="classcovarianceXsec.html#a5b8c672fce660dd1b8d25f34ddf14474">AppliesToDetID</a>(i, DetID)) &amp;&amp; filter(i)) { <span class="comment">// Common filter logic</span></div>
+<div class="line"><span class="lineno">  334</span>      action(i); <span class="comment">// Specific action for each function</span></div>
+<div class="line"><span class="lineno">  335</span>    }</div>
+<div class="line"><span class="lineno">  336</span>  }</div>
+<div class="line"><span class="lineno">  337</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2313,33 +2314,33 @@ template&lt;typename FilterFunc , typename ActionFunc &gt; </div>
 
 <p>Print information about the whole object once it is set. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceXsec_8cpp_source.html#l00369">369</a> of file <a class="el" href="covarianceXsec_8cpp_source.html">covarianceXsec.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  369</span>                           {</div>
-<div class="line"><span class="lineno">  370</span><span class="comment">// ********************************************</span></div>
-<div class="line"><span class="lineno">  371</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;#################################################&quot;</span>);</div>
-<div class="line"><span class="lineno">  372</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;Printing covarianceXsec:&quot;</span>);</div>
-<div class="line"><span class="lineno">  373</span> </div>
-<div class="line"><span class="lineno">  374</span>  <a class="code hl_function" href="classcovarianceXsec.html#a41d7f1b1010bddd3e938eb589a089593">PrintGlobablInfo</a>();</div>
-<div class="line"><span class="lineno">  375</span> </div>
-<div class="line"><span class="lineno">  376</span>  <a class="code hl_function" href="classcovarianceXsec.html#a8b408060d825769eec6c8e4594397ec8">PrintNormParams</a>();</div>
-<div class="line"><span class="lineno">  377</span> </div>
-<div class="line"><span class="lineno">  378</span>  <a class="code hl_function" href="classcovarianceXsec.html#a02678dad88cf9dafb7d001208f8b0348">PrintSplineParams</a>();</div>
-<div class="line"><span class="lineno">  379</span> </div>
-<div class="line"><span class="lineno">  380</span>  <a class="code hl_function" href="classcovarianceXsec.html#a36b690efce9b6d073482e461b350871f">PrintFunctionalParams</a>();</div>
-<div class="line"><span class="lineno">  381</span> </div>
-<div class="line"><span class="lineno">  382</span>  <a class="code hl_function" href="classcovarianceXsec.html#ae62615b039cb1e1510934406200bde3a">PrintParameterGroups</a>();</div>
-<div class="line"><span class="lineno">  383</span> </div>
-<div class="line"><span class="lineno">  384</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;Finished&quot;</span>);</div>
-<div class="line"><span class="lineno">  385</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;#################################################&quot;</span>);</div>
-<div class="line"><span class="lineno">  386</span> </div>
-<div class="line"><span class="lineno">  387</span>  <a class="code hl_function" href="classcovarianceXsec.html#a688e670224e9e1fac3d6de97a2016f1a">CheckCorrectInitialisation</a>();</div>
-<div class="line"><span class="lineno">  388</span>} <span class="comment">// End</span></div>
-<div class="ttc" id="aclasscovarianceXsec_html_a02678dad88cf9dafb7d001208f8b0348"><div class="ttname"><a href="classcovarianceXsec.html#a02678dad88cf9dafb7d001208f8b0348">covarianceXsec::PrintSplineParams</a></div><div class="ttdeci">void PrintSplineParams()</div><div class="ttdoc">Prints spline parameters.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8cpp_source.html#l00478">covarianceXsec.cpp:478</a></div></div>
-<div class="ttc" id="aclasscovarianceXsec_html_a36b690efce9b6d073482e461b350871f"><div class="ttname"><a href="classcovarianceXsec.html#a36b690efce9b6d073482e461b350871f">covarianceXsec::PrintFunctionalParams</a></div><div class="ttdeci">void PrintFunctionalParams()</div><div class="ttdoc">Prints functional parameters.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8cpp_source.html#l00500">covarianceXsec.cpp:500</a></div></div>
-<div class="ttc" id="aclasscovarianceXsec_html_a41d7f1b1010bddd3e938eb589a089593"><div class="ttname"><a href="classcovarianceXsec.html#a41d7f1b1010bddd3e938eb589a089593">covarianceXsec::PrintGlobablInfo</a></div><div class="ttdeci">void PrintGlobablInfo()</div><div class="ttdoc">Prints general information about the covarianceXsec object.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8cpp_source.html#l00392">covarianceXsec.cpp:392</a></div></div>
-<div class="ttc" id="aclasscovarianceXsec_html_a688e670224e9e1fac3d6de97a2016f1a"><div class="ttname"><a href="classcovarianceXsec.html#a688e670224e9e1fac3d6de97a2016f1a">covarianceXsec::CheckCorrectInitialisation</a></div><div class="ttdeci">void CheckCorrectInitialisation()</div><div class="ttdoc">KS: Check if matrix is correctly initialised.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8cpp_source.html#l00535">covarianceXsec.cpp:535</a></div></div>
-<div class="ttc" id="aclasscovarianceXsec_html_a8b408060d825769eec6c8e4594397ec8"><div class="ttname"><a href="classcovarianceXsec.html#a8b408060d825769eec6c8e4594397ec8">covarianceXsec::PrintNormParams</a></div><div class="ttdeci">void PrintNormParams()</div><div class="ttdoc">Prints normalization parameters.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8cpp_source.html#l00405">covarianceXsec.cpp:405</a></div></div>
-<div class="ttc" id="aclasscovarianceXsec_html_ae62615b039cb1e1510934406200bde3a"><div class="ttname"><a href="classcovarianceXsec.html#ae62615b039cb1e1510934406200bde3a">covarianceXsec::PrintParameterGroups</a></div><div class="ttdeci">void PrintParameterGroups()</div><div class="ttdoc">Prints groups of parameters.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8cpp_source.html#l00516">covarianceXsec.cpp:516</a></div></div>
+<p class="definition">Definition at line <a class="el" href="covarianceXsec_8cpp_source.html#l00370">370</a> of file <a class="el" href="covarianceXsec_8cpp_source.html">covarianceXsec.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  370</span>                           {</div>
+<div class="line"><span class="lineno">  371</span><span class="comment">// ********************************************</span></div>
+<div class="line"><span class="lineno">  372</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;#################################################&quot;</span>);</div>
+<div class="line"><span class="lineno">  373</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;Printing covarianceXsec:&quot;</span>);</div>
+<div class="line"><span class="lineno">  374</span> </div>
+<div class="line"><span class="lineno">  375</span>  <a class="code hl_function" href="classcovarianceXsec.html#a41d7f1b1010bddd3e938eb589a089593">PrintGlobablInfo</a>();</div>
+<div class="line"><span class="lineno">  376</span> </div>
+<div class="line"><span class="lineno">  377</span>  <a class="code hl_function" href="classcovarianceXsec.html#a8b408060d825769eec6c8e4594397ec8">PrintNormParams</a>();</div>
+<div class="line"><span class="lineno">  378</span> </div>
+<div class="line"><span class="lineno">  379</span>  <a class="code hl_function" href="classcovarianceXsec.html#a02678dad88cf9dafb7d001208f8b0348">PrintSplineParams</a>();</div>
+<div class="line"><span class="lineno">  380</span> </div>
+<div class="line"><span class="lineno">  381</span>  <a class="code hl_function" href="classcovarianceXsec.html#a36b690efce9b6d073482e461b350871f">PrintFunctionalParams</a>();</div>
+<div class="line"><span class="lineno">  382</span> </div>
+<div class="line"><span class="lineno">  383</span>  <a class="code hl_function" href="classcovarianceXsec.html#ae62615b039cb1e1510934406200bde3a">PrintParameterGroups</a>();</div>
+<div class="line"><span class="lineno">  384</span> </div>
+<div class="line"><span class="lineno">  385</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;Finished&quot;</span>);</div>
+<div class="line"><span class="lineno">  386</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;#################################################&quot;</span>);</div>
+<div class="line"><span class="lineno">  387</span> </div>
+<div class="line"><span class="lineno">  388</span>  <a class="code hl_function" href="classcovarianceXsec.html#a688e670224e9e1fac3d6de97a2016f1a">CheckCorrectInitialisation</a>();</div>
+<div class="line"><span class="lineno">  389</span>} <span class="comment">// End</span></div>
+<div class="ttc" id="aclasscovarianceXsec_html_a02678dad88cf9dafb7d001208f8b0348"><div class="ttname"><a href="classcovarianceXsec.html#a02678dad88cf9dafb7d001208f8b0348">covarianceXsec::PrintSplineParams</a></div><div class="ttdeci">void PrintSplineParams()</div><div class="ttdoc">Prints spline parameters.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8cpp_source.html#l00479">covarianceXsec.cpp:479</a></div></div>
+<div class="ttc" id="aclasscovarianceXsec_html_a36b690efce9b6d073482e461b350871f"><div class="ttname"><a href="classcovarianceXsec.html#a36b690efce9b6d073482e461b350871f">covarianceXsec::PrintFunctionalParams</a></div><div class="ttdeci">void PrintFunctionalParams()</div><div class="ttdoc">Prints functional parameters.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8cpp_source.html#l00501">covarianceXsec.cpp:501</a></div></div>
+<div class="ttc" id="aclasscovarianceXsec_html_a41d7f1b1010bddd3e938eb589a089593"><div class="ttname"><a href="classcovarianceXsec.html#a41d7f1b1010bddd3e938eb589a089593">covarianceXsec::PrintGlobablInfo</a></div><div class="ttdeci">void PrintGlobablInfo()</div><div class="ttdoc">Prints general information about the covarianceXsec object.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8cpp_source.html#l00393">covarianceXsec.cpp:393</a></div></div>
+<div class="ttc" id="aclasscovarianceXsec_html_a688e670224e9e1fac3d6de97a2016f1a"><div class="ttname"><a href="classcovarianceXsec.html#a688e670224e9e1fac3d6de97a2016f1a">covarianceXsec::CheckCorrectInitialisation</a></div><div class="ttdeci">void CheckCorrectInitialisation()</div><div class="ttdoc">KS: Check if matrix is correctly initialised.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8cpp_source.html#l00536">covarianceXsec.cpp:536</a></div></div>
+<div class="ttc" id="aclasscovarianceXsec_html_a8b408060d825769eec6c8e4594397ec8"><div class="ttname"><a href="classcovarianceXsec.html#a8b408060d825769eec6c8e4594397ec8">covarianceXsec::PrintNormParams</a></div><div class="ttdeci">void PrintNormParams()</div><div class="ttdoc">Prints normalization parameters.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8cpp_source.html#l00406">covarianceXsec.cpp:406</a></div></div>
+<div class="ttc" id="aclasscovarianceXsec_html_ae62615b039cb1e1510934406200bde3a"><div class="ttname"><a href="classcovarianceXsec.html#ae62615b039cb1e1510934406200bde3a">covarianceXsec::PrintParameterGroups</a></div><div class="ttdeci">void PrintParameterGroups()</div><div class="ttdoc">Prints groups of parameters.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8cpp_source.html#l00517">covarianceXsec.cpp:517</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2368,21 +2369,21 @@ template&lt;typename FilterFunc , typename ActionFunc &gt; </div>
 
 <p>Prints functional parameters. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceXsec_8cpp_source.html#l00500">500</a> of file <a class="el" href="covarianceXsec_8cpp_source.html">covarianceXsec.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  500</span>                                           {</div>
-<div class="line"><span class="lineno">  501</span><span class="comment">// ********************************************</span></div>
-<div class="line"><span class="lineno">  502</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;Functional parameters: {}&quot;</span>, <a class="code hl_variable" href="classcovarianceXsec.html#adddfbaa235113603542826df331ed61e">_fSystToGlobalSystIndexMap</a>[SystType::kFunc].<a class="code hl_variable" href="GetPenaltyTerm_8cpp.html#a439227feff9d7f55384e8780cfc2eb82">size</a>());</div>
-<div class="line"><span class="lineno">  503</span>  <span class="keywordflow">if</span>(<a class="code hl_variable" href="classcovarianceXsec.html#adddfbaa235113603542826df331ed61e">_fSystToGlobalSystIndexMap</a>[SystType::kFunc].<a class="code hl_variable" href="GetPenaltyTerm_8cpp.html#a439227feff9d7f55384e8780cfc2eb82">size</a>() == 0) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  504</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;┌────┬──────────┬────────────────────────────────────────┐&quot;</span>);</div>
-<div class="line"><span class="lineno">  505</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;│{0:4}│{1:10}│{2:40}│&quot;</span>, <span class="stringliteral">&quot;#&quot;</span>, <span class="stringliteral">&quot;Global #&quot;</span>, <span class="stringliteral">&quot;Name&quot;</span>);</div>
-<div class="line"><span class="lineno">  506</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;├────┼──────────┼────────────────────────────────────────┤&quot;</span>);</div>
-<div class="line"><span class="lineno">  507</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;pair : <a class="code hl_variable" href="classcovarianceXsec.html#adddfbaa235113603542826df331ed61e">_fSystToGlobalSystIndexMap</a>[SystType::kFunc]) {</div>
-<div class="line"><span class="lineno">  508</span>    <span class="keyword">auto</span> &amp;FuncIndex = pair.first;</div>
-<div class="line"><span class="lineno">  509</span>    <span class="keyword">auto</span> &amp;GlobalIndex = pair.second;</div>
-<div class="line"><span class="lineno">  510</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;│{0:4}│{1:&lt;10}│{2:40}│&quot;</span>, std::to_string(FuncIndex), GlobalIndex, <a class="code hl_function" href="classcovarianceBase.html#a6a46b5fed3e7feb6e9e151e90927bdbc">GetParFancyName</a>(GlobalIndex));</div>
-<div class="line"><span class="lineno">  511</span>  }</div>
-<div class="line"><span class="lineno">  512</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;└────┴──────────┴────────────────────────────────────────┘&quot;</span>);</div>
-<div class="line"><span class="lineno">  513</span>}</div>
+<p class="definition">Definition at line <a class="el" href="covarianceXsec_8cpp_source.html#l00501">501</a> of file <a class="el" href="covarianceXsec_8cpp_source.html">covarianceXsec.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  501</span>                                           {</div>
+<div class="line"><span class="lineno">  502</span><span class="comment">// ********************************************</span></div>
+<div class="line"><span class="lineno">  503</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;Functional parameters: {}&quot;</span>, <a class="code hl_variable" href="classcovarianceXsec.html#adddfbaa235113603542826df331ed61e">_fSystToGlobalSystIndexMap</a>[SystType::kFunc].<a class="code hl_variable" href="GetPenaltyTerm_8cpp.html#a439227feff9d7f55384e8780cfc2eb82">size</a>());</div>
+<div class="line"><span class="lineno">  504</span>  <span class="keywordflow">if</span>(<a class="code hl_variable" href="classcovarianceXsec.html#adddfbaa235113603542826df331ed61e">_fSystToGlobalSystIndexMap</a>[SystType::kFunc].<a class="code hl_variable" href="GetPenaltyTerm_8cpp.html#a439227feff9d7f55384e8780cfc2eb82">size</a>() == 0) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  505</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;┌────┬──────────┬────────────────────────────────────────┐&quot;</span>);</div>
+<div class="line"><span class="lineno">  506</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;│{0:4}│{1:10}│{2:40}│&quot;</span>, <span class="stringliteral">&quot;#&quot;</span>, <span class="stringliteral">&quot;Global #&quot;</span>, <span class="stringliteral">&quot;Name&quot;</span>);</div>
+<div class="line"><span class="lineno">  507</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;├────┼──────────┼────────────────────────────────────────┤&quot;</span>);</div>
+<div class="line"><span class="lineno">  508</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;pair : <a class="code hl_variable" href="classcovarianceXsec.html#adddfbaa235113603542826df331ed61e">_fSystToGlobalSystIndexMap</a>[SystType::kFunc]) {</div>
+<div class="line"><span class="lineno">  509</span>    <span class="keyword">auto</span> &amp;FuncIndex = pair.first;</div>
+<div class="line"><span class="lineno">  510</span>    <span class="keyword">auto</span> &amp;GlobalIndex = pair.second;</div>
+<div class="line"><span class="lineno">  511</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;│{0:4}│{1:&lt;10}│{2:40}│&quot;</span>, std::to_string(FuncIndex), GlobalIndex, <a class="code hl_function" href="classcovarianceBase.html#a6a46b5fed3e7feb6e9e151e90927bdbc">GetParFancyName</a>(GlobalIndex));</div>
+<div class="line"><span class="lineno">  512</span>  }</div>
+<div class="line"><span class="lineno">  513</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;└────┴──────────┴────────────────────────────────────────┘&quot;</span>);</div>
+<div class="line"><span class="lineno">  514</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2411,18 +2412,18 @@ template&lt;typename FilterFunc , typename ActionFunc &gt; </div>
 
 <p>Prints general information about the <a class="el" href="classcovarianceXsec.html" title="Class responsible for handling of systematic error parameters with different types defined in the con...">covarianceXsec</a> object. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceXsec_8cpp_source.html#l00392">392</a> of file <a class="el" href="covarianceXsec_8cpp_source.html">covarianceXsec.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  392</span>                                      {</div>
-<div class="line"><span class="lineno">  393</span><span class="comment">// ********************************************</span></div>
-<div class="line"><span class="lineno">  394</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;============================================================================================================================================================&quot;</span>);</div>
-<div class="line"><span class="lineno">  395</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;{:&lt;5} {:2} {:&lt;40} {:2} {:&lt;10} {:2} {:&lt;10} {:2} {:&lt;10} {:2} {:&lt;10} {:2} {:&lt;10} {:2} {:&lt;10} {:2} {:&lt;5} {:2} {:&lt;10}&quot;</span>, <span class="stringliteral">&quot;#&quot;</span>, <span class="stringliteral">&quot;|&quot;</span>, <span class="stringliteral">&quot;Name&quot;</span>, <span class="stringliteral">&quot;|&quot;</span>, <span class="stringliteral">&quot;Gen.&quot;</span>, <span class="stringliteral">&quot;|&quot;</span>, <span class="stringliteral">&quot;Prior&quot;</span>, <span class="stringliteral">&quot;|&quot;</span>, <span class="stringliteral">&quot;Error&quot;</span>, <span class="stringliteral">&quot;|&quot;</span>, <span class="stringliteral">&quot;Lower&quot;</span>, <span class="stringliteral">&quot;|&quot;</span>, <span class="stringliteral">&quot;Upper&quot;</span>, <span class="stringliteral">&quot;|&quot;</span>, <span class="stringliteral">&quot;StepScale&quot;</span>, <span class="stringliteral">&quot;|&quot;</span>, <span class="stringliteral">&quot;DetID&quot;</span>, <span class="stringliteral">&quot;|&quot;</span>, <span class="stringliteral">&quot;Type&quot;</span>);</div>
-<div class="line"><span class="lineno">  396</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;------------------------------------------------------------------------------------------------------------------------------------------------------------&quot;</span>);</div>
-<div class="line"><span class="lineno">  397</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_function" href="classcovarianceBase.html#a3daac6405cc791347b768a5afe8a13d2">GetNumParams</a>(); i++) {</div>
-<div class="line"><span class="lineno">  398</span>    std::string ErrString = fmt::format(<span class="stringliteral">&quot;{:.2f}&quot;</span>, <a class="code hl_variable" href="classcovarianceBase.html#a34f877fc160b4a93a3aab1b3a8977858">_fError</a>[i]);</div>
-<div class="line"><span class="lineno">  399</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;{:&lt;5} {:2} {:&lt;40} {:2} {:&lt;10} {:2} {:&lt;10} {:2} {:&lt;10} {:2} {:&lt;10} {:2} {:&lt;10} {:2} {:&lt;10} {:2} {:&lt;5} {:2} {:&lt;10}&quot;</span>, i, <span class="stringliteral">&quot;|&quot;</span>, <a class="code hl_function" href="classcovarianceBase.html#a6a46b5fed3e7feb6e9e151e90927bdbc">GetParFancyName</a>(i), <span class="stringliteral">&quot;|&quot;</span>, <a class="code hl_variable" href="classcovarianceBase.html#a9b753f52711600a9f8d648531d95b044">_fGenerated</a>[i], <span class="stringliteral">&quot;|&quot;</span>, <a class="code hl_variable" href="classcovarianceBase.html#a7578a2cc2e8e9100fad88310a824cb1c">_fPreFitValue</a>[i], <span class="stringliteral">&quot;|&quot;</span>, <span class="stringliteral">&quot;+/- &quot;</span> + ErrString, <span class="stringliteral">&quot;|&quot;</span>, <a class="code hl_variable" href="classcovarianceBase.html#a8f1d94838f188cc85c4f82557c0b0b66">_fLowBound</a>[i], <span class="stringliteral">&quot;|&quot;</span>, <a class="code hl_variable" href="classcovarianceBase.html#a31e636cb6de871bd0c2c8e7e299df9e7">_fUpBound</a>[i], <span class="stringliteral">&quot;|&quot;</span>, <a class="code hl_variable" href="classcovarianceBase.html#a3cda39026e336a49cef482efd4062561">_fIndivStepScale</a>[i], <span class="stringliteral">&quot;|&quot;</span>, <a class="code hl_variable" href="classcovarianceXsec.html#a183f01056fc0e9b42db202e944021332">_fDetID</a>[i], <span class="stringliteral">&quot;|&quot;</span>, <a class="code hl_function" href="Structs_8h.html#ad39c312dc44177340e2ebccd3d3f2d4c">SystType_ToString</a>(<a class="code hl_variable" href="classcovarianceXsec.html#aae3338ca71027adab7fdfd3e828c0f79">_fParamType</a>[i]));</div>
-<div class="line"><span class="lineno">  400</span>  }</div>
-<div class="line"><span class="lineno">  401</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;============================================================================================================================================================&quot;</span>);</div>
-<div class="line"><span class="lineno">  402</span>}</div>
+<p class="definition">Definition at line <a class="el" href="covarianceXsec_8cpp_source.html#l00393">393</a> of file <a class="el" href="covarianceXsec_8cpp_source.html">covarianceXsec.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  393</span>                                      {</div>
+<div class="line"><span class="lineno">  394</span><span class="comment">// ********************************************</span></div>
+<div class="line"><span class="lineno">  395</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;============================================================================================================================================================&quot;</span>);</div>
+<div class="line"><span class="lineno">  396</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;{:&lt;5} {:2} {:&lt;40} {:2} {:&lt;10} {:2} {:&lt;10} {:2} {:&lt;10} {:2} {:&lt;10} {:2} {:&lt;10} {:2} {:&lt;10} {:2} {:&lt;5} {:2} {:&lt;10}&quot;</span>, <span class="stringliteral">&quot;#&quot;</span>, <span class="stringliteral">&quot;|&quot;</span>, <span class="stringliteral">&quot;Name&quot;</span>, <span class="stringliteral">&quot;|&quot;</span>, <span class="stringliteral">&quot;Gen.&quot;</span>, <span class="stringliteral">&quot;|&quot;</span>, <span class="stringliteral">&quot;Prior&quot;</span>, <span class="stringliteral">&quot;|&quot;</span>, <span class="stringliteral">&quot;Error&quot;</span>, <span class="stringliteral">&quot;|&quot;</span>, <span class="stringliteral">&quot;Lower&quot;</span>, <span class="stringliteral">&quot;|&quot;</span>, <span class="stringliteral">&quot;Upper&quot;</span>, <span class="stringliteral">&quot;|&quot;</span>, <span class="stringliteral">&quot;StepScale&quot;</span>, <span class="stringliteral">&quot;|&quot;</span>, <span class="stringliteral">&quot;DetID&quot;</span>, <span class="stringliteral">&quot;|&quot;</span>, <span class="stringliteral">&quot;Type&quot;</span>);</div>
+<div class="line"><span class="lineno">  397</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;------------------------------------------------------------------------------------------------------------------------------------------------------------&quot;</span>);</div>
+<div class="line"><span class="lineno">  398</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_function" href="classcovarianceBase.html#a3daac6405cc791347b768a5afe8a13d2">GetNumParams</a>(); i++) {</div>
+<div class="line"><span class="lineno">  399</span>    std::string ErrString = fmt::format(<span class="stringliteral">&quot;{:.2f}&quot;</span>, <a class="code hl_variable" href="classcovarianceBase.html#a34f877fc160b4a93a3aab1b3a8977858">_fError</a>[i]);</div>
+<div class="line"><span class="lineno">  400</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;{:&lt;5} {:2} {:&lt;40} {:2} {:&lt;10} {:2} {:&lt;10} {:2} {:&lt;10} {:2} {:&lt;10} {:2} {:&lt;10} {:2} {:&lt;10} {:2} {:&lt;5} {:2} {:&lt;10}&quot;</span>, i, <span class="stringliteral">&quot;|&quot;</span>, <a class="code hl_function" href="classcovarianceBase.html#a6a46b5fed3e7feb6e9e151e90927bdbc">GetParFancyName</a>(i), <span class="stringliteral">&quot;|&quot;</span>, <a class="code hl_variable" href="classcovarianceBase.html#a9b753f52711600a9f8d648531d95b044">_fGenerated</a>[i], <span class="stringliteral">&quot;|&quot;</span>, <a class="code hl_variable" href="classcovarianceBase.html#a7578a2cc2e8e9100fad88310a824cb1c">_fPreFitValue</a>[i], <span class="stringliteral">&quot;|&quot;</span>, <span class="stringliteral">&quot;+/- &quot;</span> + ErrString, <span class="stringliteral">&quot;|&quot;</span>, <a class="code hl_variable" href="classcovarianceBase.html#a8f1d94838f188cc85c4f82557c0b0b66">_fLowBound</a>[i], <span class="stringliteral">&quot;|&quot;</span>, <a class="code hl_variable" href="classcovarianceBase.html#a31e636cb6de871bd0c2c8e7e299df9e7">_fUpBound</a>[i], <span class="stringliteral">&quot;|&quot;</span>, <a class="code hl_variable" href="classcovarianceBase.html#a3cda39026e336a49cef482efd4062561">_fIndivStepScale</a>[i], <span class="stringliteral">&quot;|&quot;</span>, <a class="code hl_variable" href="classcovarianceXsec.html#a183f01056fc0e9b42db202e944021332">_fDetID</a>[i], <span class="stringliteral">&quot;|&quot;</span>, <a class="code hl_function" href="Structs_8h.html#ad39c312dc44177340e2ebccd3d3f2d4c">SystType_ToString</a>(<a class="code hl_variable" href="classcovarianceXsec.html#aae3338ca71027adab7fdfd3e828c0f79">_fParamType</a>[i]));</div>
+<div class="line"><span class="lineno">  401</span>  }</div>
+<div class="line"><span class="lineno">  402</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;============================================================================================================================================================&quot;</span>);</div>
+<div class="line"><span class="lineno">  403</span>}</div>
 <div class="ttc" id="aclasscovarianceBase_html_a3daac6405cc791347b768a5afe8a13d2"><div class="ttname"><a href="classcovarianceBase.html#a3daac6405cc791347b768a5afe8a13d2">covarianceBase::GetNumParams</a></div><div class="ttdeci">int GetNumParams()</div><div class="ttdoc">Get total number of parameters.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceBase_8h_source.html#l00193">covarianceBase.h:193</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -2452,78 +2453,78 @@ template&lt;typename FilterFunc , typename ActionFunc &gt; </div>
 
 <p>Prints normalization parameters. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceXsec_8cpp_source.html#l00405">405</a> of file <a class="el" href="covarianceXsec_8cpp_source.html">covarianceXsec.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  405</span>                                     {</div>
-<div class="line"><span class="lineno">  406</span><span class="comment">// ********************************************</span></div>
-<div class="line"><span class="lineno">  407</span>  <span class="comment">// Output the normalisation parameters as a sanity check!</span></div>
-<div class="line"><span class="lineno">  408</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;Normalisation parameters:  {}&quot;</span>, <a class="code hl_variable" href="classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5">NormParams</a>.size());</div>
-<div class="line"><span class="lineno">  409</span>  <span class="keywordflow">if</span>(<a class="code hl_variable" href="classcovarianceXsec.html#adddfbaa235113603542826df331ed61e">_fSystToGlobalSystIndexMap</a>[SystType::kNorm].<a class="code hl_variable" href="GetPenaltyTerm_8cpp.html#a439227feff9d7f55384e8780cfc2eb82">size</a>() == 0) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  410</span> </div>
-<div class="line"><span class="lineno">  411</span>  <span class="keywordtype">bool</span> have_parameter_with_kin_bounds = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  412</span> </div>
-<div class="line"><span class="lineno">  413</span>  <span class="comment">//KS: Consider making some class producing table..</span></div>
-<div class="line"><span class="lineno">  414</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;┌────┬──────────┬────────────────────────────────────────┬────────────────────┬────────────────────┬────────────────────┐&quot;</span>);</div>
-<div class="line"><span class="lineno">  415</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;│{0:4}│{1:10}│{2:40}│{3:20}│{4:20}│{5:20}│&quot;</span>, <span class="stringliteral">&quot;#&quot;</span>, <span class="stringliteral">&quot;Global #&quot;</span>, <span class="stringliteral">&quot;Name&quot;</span>, <span class="stringliteral">&quot;Int. mode&quot;</span>, <span class="stringliteral">&quot;Target&quot;</span>, <span class="stringliteral">&quot;pdg&quot;</span>);</div>
-<div class="line"><span class="lineno">  416</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;├────┼──────────┼────────────────────────────────────────┼────────────────────┼────────────────────┼────────────────────┤&quot;</span>);</div>
-<div class="line"><span class="lineno">  417</span> </div>
-<div class="line"><span class="lineno">  418</span>  <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5">NormParams</a>.size(); ++i)</div>
-<div class="line"><span class="lineno">  419</span>  {</div>
-<div class="line"><span class="lineno">  420</span>    std::string intModeString;</div>
-<div class="line"><span class="lineno">  421</span>    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0; j &lt; <a class="code hl_variable" href="classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5">NormParams</a>[i].modes.size(); j++) {</div>
-<div class="line"><span class="lineno">  422</span>      intModeString += std::to_string(<a class="code hl_variable" href="classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5">NormParams</a>[i].modes[j]);</div>
-<div class="line"><span class="lineno">  423</span>      intModeString += <span class="stringliteral">&quot; &quot;</span>;</div>
-<div class="line"><span class="lineno">  424</span>    }</div>
-<div class="line"><span class="lineno">  425</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5">NormParams</a>[i].modes.empty()) intModeString += <span class="stringliteral">&quot;all&quot;</span>;</div>
-<div class="line"><span class="lineno">  426</span> </div>
-<div class="line"><span class="lineno">  427</span>    std::string targetString;</div>
-<div class="line"><span class="lineno">  428</span>    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0; j &lt; <a class="code hl_variable" href="classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5">NormParams</a>[i].targets.size(); j++) {</div>
-<div class="line"><span class="lineno">  429</span>      targetString += std::to_string(<a class="code hl_variable" href="classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5">NormParams</a>[i].targets[j]);</div>
-<div class="line"><span class="lineno">  430</span>      targetString += <span class="stringliteral">&quot; &quot;</span>;</div>
-<div class="line"><span class="lineno">  431</span>    }</div>
-<div class="line"><span class="lineno">  432</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5">NormParams</a>[i].targets.empty()) targetString += <span class="stringliteral">&quot;all&quot;</span>;</div>
-<div class="line"><span class="lineno">  433</span> </div>
-<div class="line"><span class="lineno">  434</span>    std::string pdgString;</div>
-<div class="line"><span class="lineno">  435</span>    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0; j &lt; <a class="code hl_variable" href="classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5">NormParams</a>[i].pdgs.size(); j++) {</div>
-<div class="line"><span class="lineno">  436</span>      pdgString += std::to_string(<a class="code hl_variable" href="classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5">NormParams</a>[i].pdgs[j]);</div>
-<div class="line"><span class="lineno">  437</span>      pdgString += <span class="stringliteral">&quot; &quot;</span>;</div>
-<div class="line"><span class="lineno">  438</span>    }</div>
-<div class="line"><span class="lineno">  439</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5">NormParams</a>[i].pdgs.empty()) pdgString += <span class="stringliteral">&quot;all&quot;</span>;</div>
-<div class="line"><span class="lineno">  440</span> </div>
-<div class="line"><span class="lineno">  441</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;│{: &lt;4}│{: &lt;10}│{: &lt;40}│{: &lt;20}│{: &lt;20}│{: &lt;20}│&quot;</span>, i, <a class="code hl_variable" href="classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5">NormParams</a>[i].index, <a class="code hl_variable" href="classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5">NormParams</a>[i].name, intModeString, targetString, pdgString);</div>
-<div class="line"><span class="lineno">  442</span> </div>
-<div class="line"><span class="lineno">  443</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5">NormParams</a>[i].hasKinBounds) have_parameter_with_kin_bounds = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  444</span>  }</div>
-<div class="line"><span class="lineno">  445</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;└────┴──────────┴────────────────────────────────────────┴────────────────────┴────────────────────┴────────────────────┘&quot;</span>);</div>
-<div class="line"><span class="lineno">  446</span> </div>
-<div class="line"><span class="lineno">  447</span>  <span class="keywordflow">if</span>(have_parameter_with_kin_bounds) {</div>
-<div class="line"><span class="lineno">  448</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;Normalisation parameters KinematicCuts information&quot;</span>);</div>
-<div class="line"><span class="lineno">  449</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;┌────┬──────────┬────────────────────────────────────────┬────────────────────┬────────────────────────────────────────┐&quot;</span>);</div>
-<div class="line"><span class="lineno">  450</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;│{0:4}│{1:10}│{2:40}│{3:20}│{4:40}│&quot;</span>, <span class="stringliteral">&quot;#&quot;</span>, <span class="stringliteral">&quot;Global #&quot;</span>, <span class="stringliteral">&quot;Name&quot;</span>, <span class="stringliteral">&quot;KinematicCut&quot;</span>, <span class="stringliteral">&quot;Value&quot;</span>);</div>
-<div class="line"><span class="lineno">  451</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;├────┼──────────┼────────────────────────────────────────┼────────────────────┼────────────────────────────────────────┤&quot;</span>);</div>
-<div class="line"><span class="lineno">  452</span>    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5">NormParams</a>.size(); ++i)</div>
-<div class="line"><span class="lineno">  453</span>      {</div>
-<div class="line"><span class="lineno">  454</span>    <span class="comment">//skip parameters with no KinematicCuts</span></div>
-<div class="line"><span class="lineno">  455</span>    <span class="keywordflow">if</span>(!<a class="code hl_variable" href="classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5">NormParams</a>[i].hasKinBounds) <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  456</span> </div>
-<div class="line"><span class="lineno">  457</span>    <span class="keyword">const</span> <span class="keywordtype">long</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ncuts = <a class="code hl_variable" href="classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5">NormParams</a>[i].KinematicVarStr.size();</div>
-<div class="line"><span class="lineno">  458</span>        <span class="keywordflow">for</span>(<span class="keywordtype">long</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> icut = 0; icut &lt; ncuts; icut++) {</div>
-<div class="line"><span class="lineno">  459</span>      std::string kinematicCutValueString;</div>
-<div class="line"><span class="lineno">  460</span>      <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp; value : <a class="code hl_variable" href="classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5">NormParams</a>[i].Selection[icut]) {</div>
-<div class="line"><span class="lineno">  461</span>        kinematicCutValueString += std::to_string(value);</div>
-<div class="line"><span class="lineno">  462</span>        kinematicCutValueString += <span class="stringliteral">&quot; &quot;</span>;</div>
-<div class="line"><span class="lineno">  463</span>      }</div>
-<div class="line"><span class="lineno">  464</span> </div>
-<div class="line"><span class="lineno">  465</span>      <span class="keywordflow">if</span>(icut == 0)</div>
-<div class="line"><span class="lineno">  466</span>        <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;│{: &lt;4}│{: &lt;10}│{: &lt;40}│{: &lt;20}│{: &lt;40}│&quot;</span>, i, <a class="code hl_variable" href="classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5">NormParams</a>[i].index, <a class="code hl_variable" href="classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5">NormParams</a>[i].name, <a class="code hl_variable" href="classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5">NormParams</a>[i].KinematicVarStr[icut], kinematicCutValueString);</div>
-<div class="line"><span class="lineno">  467</span>      <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  468</span>        <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;│{: &lt;4}│{: &lt;10}│{: &lt;40}│{: &lt;20}│{: &lt;40}│&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <a class="code hl_variable" href="classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5">NormParams</a>[i].KinematicVarStr[icut], kinematicCutValueString);</div>
-<div class="line"><span class="lineno">  469</span>    }<span class="comment">//icut</span></div>
-<div class="line"><span class="lineno">  470</span>      }<span class="comment">//i</span></div>
-<div class="line"><span class="lineno">  471</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;└────┴──────────┴────────────────────────────────────────┴────────────────────┴────────────────────────────────────────┘&quot;</span>);</div>
-<div class="line"><span class="lineno">  472</span>  }</div>
-<div class="line"><span class="lineno">  473</span>  <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  474</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;No normalisation parameters have KinematicCuts defined&quot;</span>);</div>
-<div class="line"><span class="lineno">  475</span>}</div>
+<p class="definition">Definition at line <a class="el" href="covarianceXsec_8cpp_source.html#l00406">406</a> of file <a class="el" href="covarianceXsec_8cpp_source.html">covarianceXsec.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  406</span>                                     {</div>
+<div class="line"><span class="lineno">  407</span><span class="comment">// ********************************************</span></div>
+<div class="line"><span class="lineno">  408</span>  <span class="comment">// Output the normalisation parameters as a sanity check!</span></div>
+<div class="line"><span class="lineno">  409</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;Normalisation parameters:  {}&quot;</span>, <a class="code hl_variable" href="classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5">NormParams</a>.size());</div>
+<div class="line"><span class="lineno">  410</span>  <span class="keywordflow">if</span>(<a class="code hl_variable" href="classcovarianceXsec.html#adddfbaa235113603542826df331ed61e">_fSystToGlobalSystIndexMap</a>[SystType::kNorm].<a class="code hl_variable" href="GetPenaltyTerm_8cpp.html#a439227feff9d7f55384e8780cfc2eb82">size</a>() == 0) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  411</span> </div>
+<div class="line"><span class="lineno">  412</span>  <span class="keywordtype">bool</span> have_parameter_with_kin_bounds = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  413</span> </div>
+<div class="line"><span class="lineno">  414</span>  <span class="comment">//KS: Consider making some class producing table..</span></div>
+<div class="line"><span class="lineno">  415</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;┌────┬──────────┬────────────────────────────────────────┬────────────────────┬────────────────────┬────────────────────┐&quot;</span>);</div>
+<div class="line"><span class="lineno">  416</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;│{0:4}│{1:10}│{2:40}│{3:20}│{4:20}│{5:20}│&quot;</span>, <span class="stringliteral">&quot;#&quot;</span>, <span class="stringliteral">&quot;Global #&quot;</span>, <span class="stringliteral">&quot;Name&quot;</span>, <span class="stringliteral">&quot;Int. mode&quot;</span>, <span class="stringliteral">&quot;Target&quot;</span>, <span class="stringliteral">&quot;pdg&quot;</span>);</div>
+<div class="line"><span class="lineno">  417</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;├────┼──────────┼────────────────────────────────────────┼────────────────────┼────────────────────┼────────────────────┤&quot;</span>);</div>
+<div class="line"><span class="lineno">  418</span> </div>
+<div class="line"><span class="lineno">  419</span>  <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5">NormParams</a>.size(); ++i)</div>
+<div class="line"><span class="lineno">  420</span>  {</div>
+<div class="line"><span class="lineno">  421</span>    std::string intModeString;</div>
+<div class="line"><span class="lineno">  422</span>    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0; j &lt; <a class="code hl_variable" href="classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5">NormParams</a>[i].modes.size(); j++) {</div>
+<div class="line"><span class="lineno">  423</span>      intModeString += std::to_string(<a class="code hl_variable" href="classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5">NormParams</a>[i].modes[j]);</div>
+<div class="line"><span class="lineno">  424</span>      intModeString += <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><span class="lineno">  425</span>    }</div>
+<div class="line"><span class="lineno">  426</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5">NormParams</a>[i].modes.empty()) intModeString += <span class="stringliteral">&quot;all&quot;</span>;</div>
+<div class="line"><span class="lineno">  427</span> </div>
+<div class="line"><span class="lineno">  428</span>    std::string targetString;</div>
+<div class="line"><span class="lineno">  429</span>    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0; j &lt; <a class="code hl_variable" href="classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5">NormParams</a>[i].targets.size(); j++) {</div>
+<div class="line"><span class="lineno">  430</span>      targetString += std::to_string(<a class="code hl_variable" href="classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5">NormParams</a>[i].targets[j]);</div>
+<div class="line"><span class="lineno">  431</span>      targetString += <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><span class="lineno">  432</span>    }</div>
+<div class="line"><span class="lineno">  433</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5">NormParams</a>[i].targets.empty()) targetString += <span class="stringliteral">&quot;all&quot;</span>;</div>
+<div class="line"><span class="lineno">  434</span> </div>
+<div class="line"><span class="lineno">  435</span>    std::string pdgString;</div>
+<div class="line"><span class="lineno">  436</span>    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0; j &lt; <a class="code hl_variable" href="classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5">NormParams</a>[i].pdgs.size(); j++) {</div>
+<div class="line"><span class="lineno">  437</span>      pdgString += std::to_string(<a class="code hl_variable" href="classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5">NormParams</a>[i].pdgs[j]);</div>
+<div class="line"><span class="lineno">  438</span>      pdgString += <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><span class="lineno">  439</span>    }</div>
+<div class="line"><span class="lineno">  440</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5">NormParams</a>[i].pdgs.empty()) pdgString += <span class="stringliteral">&quot;all&quot;</span>;</div>
+<div class="line"><span class="lineno">  441</span> </div>
+<div class="line"><span class="lineno">  442</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;│{: &lt;4}│{: &lt;10}│{: &lt;40}│{: &lt;20}│{: &lt;20}│{: &lt;20}│&quot;</span>, i, <a class="code hl_variable" href="classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5">NormParams</a>[i].index, <a class="code hl_variable" href="classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5">NormParams</a>[i].name, intModeString, targetString, pdgString);</div>
+<div class="line"><span class="lineno">  443</span> </div>
+<div class="line"><span class="lineno">  444</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5">NormParams</a>[i].hasKinBounds) have_parameter_with_kin_bounds = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  445</span>  }</div>
+<div class="line"><span class="lineno">  446</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;└────┴──────────┴────────────────────────────────────────┴────────────────────┴────────────────────┴────────────────────┘&quot;</span>);</div>
+<div class="line"><span class="lineno">  447</span> </div>
+<div class="line"><span class="lineno">  448</span>  <span class="keywordflow">if</span>(have_parameter_with_kin_bounds) {</div>
+<div class="line"><span class="lineno">  449</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;Normalisation parameters KinematicCuts information&quot;</span>);</div>
+<div class="line"><span class="lineno">  450</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;┌────┬──────────┬────────────────────────────────────────┬────────────────────┬────────────────────────────────────────┐&quot;</span>);</div>
+<div class="line"><span class="lineno">  451</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;│{0:4}│{1:10}│{2:40}│{3:20}│{4:40}│&quot;</span>, <span class="stringliteral">&quot;#&quot;</span>, <span class="stringliteral">&quot;Global #&quot;</span>, <span class="stringliteral">&quot;Name&quot;</span>, <span class="stringliteral">&quot;KinematicCut&quot;</span>, <span class="stringliteral">&quot;Value&quot;</span>);</div>
+<div class="line"><span class="lineno">  452</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;├────┼──────────┼────────────────────────────────────────┼────────────────────┼────────────────────────────────────────┤&quot;</span>);</div>
+<div class="line"><span class="lineno">  453</span>    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5">NormParams</a>.size(); ++i)</div>
+<div class="line"><span class="lineno">  454</span>      {</div>
+<div class="line"><span class="lineno">  455</span>    <span class="comment">//skip parameters with no KinematicCuts</span></div>
+<div class="line"><span class="lineno">  456</span>    <span class="keywordflow">if</span>(!<a class="code hl_variable" href="classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5">NormParams</a>[i].hasKinBounds) <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  457</span> </div>
+<div class="line"><span class="lineno">  458</span>    <span class="keyword">const</span> <span class="keywordtype">long</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ncuts = <a class="code hl_variable" href="classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5">NormParams</a>[i].KinematicVarStr.size();</div>
+<div class="line"><span class="lineno">  459</span>        <span class="keywordflow">for</span>(<span class="keywordtype">long</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> icut = 0; icut &lt; ncuts; icut++) {</div>
+<div class="line"><span class="lineno">  460</span>      std::string kinematicCutValueString;</div>
+<div class="line"><span class="lineno">  461</span>      <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp; value : <a class="code hl_variable" href="classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5">NormParams</a>[i].Selection[icut]) {</div>
+<div class="line"><span class="lineno">  462</span>        kinematicCutValueString += std::to_string(value);</div>
+<div class="line"><span class="lineno">  463</span>        kinematicCutValueString += <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><span class="lineno">  464</span>      }</div>
+<div class="line"><span class="lineno">  465</span> </div>
+<div class="line"><span class="lineno">  466</span>      <span class="keywordflow">if</span>(icut == 0)</div>
+<div class="line"><span class="lineno">  467</span>        <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;│{: &lt;4}│{: &lt;10}│{: &lt;40}│{: &lt;20}│{: &lt;40}│&quot;</span>, i, <a class="code hl_variable" href="classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5">NormParams</a>[i].index, <a class="code hl_variable" href="classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5">NormParams</a>[i].name, <a class="code hl_variable" href="classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5">NormParams</a>[i].KinematicVarStr[icut], kinematicCutValueString);</div>
+<div class="line"><span class="lineno">  468</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  469</span>        <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;│{: &lt;4}│{: &lt;10}│{: &lt;40}│{: &lt;20}│{: &lt;40}│&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <span class="stringliteral">&quot;&quot;</span>, <a class="code hl_variable" href="classcovarianceXsec.html#acd6c2346a5b808c6917e4828bbb633f5">NormParams</a>[i].KinematicVarStr[icut], kinematicCutValueString);</div>
+<div class="line"><span class="lineno">  470</span>    }<span class="comment">//icut</span></div>
+<div class="line"><span class="lineno">  471</span>      }<span class="comment">//i</span></div>
+<div class="line"><span class="lineno">  472</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;└────┴──────────┴────────────────────────────────────────┴────────────────────┴────────────────────────────────────────┘&quot;</span>);</div>
+<div class="line"><span class="lineno">  473</span>  }</div>
+<div class="line"><span class="lineno">  474</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  475</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;No normalisation parameters have KinematicCuts defined&quot;</span>);</div>
+<div class="line"><span class="lineno">  476</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2552,23 +2553,23 @@ template&lt;typename FilterFunc , typename ActionFunc &gt; </div>
 
 <p>Prints groups of parameters. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceXsec_8cpp_source.html#l00516">516</a> of file <a class="el" href="covarianceXsec_8cpp_source.html">covarianceXsec.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  516</span>                                          {</div>
-<div class="line"><span class="lineno">  517</span><span class="comment">// ********************************************</span></div>
-<div class="line"><span class="lineno">  518</span>  <span class="comment">// KS: Create a map to store the counts of unique strings, in principle this could be in header file</span></div>
-<div class="line"><span class="lineno">  519</span>  std::unordered_map&lt;std::string, int&gt; paramCounts;</div>
-<div class="line"><span class="lineno">  520</span> </div>
-<div class="line"><span class="lineno">  521</span>  std::for_each(<a class="code hl_variable" href="classcovarianceXsec.html#a47cd1802e0dac0c22c8c16f214272c34">_ParameterGroup</a>.begin(), <a class="code hl_variable" href="classcovarianceXsec.html#a47cd1802e0dac0c22c8c16f214272c34">_ParameterGroup</a>.end(),</div>
-<div class="line"><span class="lineno">  522</span>                [&amp;paramCounts](<span class="keyword">const</span> std::string&amp; param) {</div>
-<div class="line"><span class="lineno">  523</span>                  paramCounts[param]++;</div>
-<div class="line"><span class="lineno">  524</span>                });</div>
-<div class="line"><span class="lineno">  525</span> </div>
-<div class="line"><span class="lineno">  526</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;Printing parameter groups&quot;</span>);</div>
-<div class="line"><span class="lineno">  527</span>  <span class="comment">// Output the counts</span></div>
-<div class="line"><span class="lineno">  528</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; pair : paramCounts) {</div>
-<div class="line"><span class="lineno">  529</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;Found {}: {} params&quot;</span>, pair.second, pair.first);</div>
-<div class="line"><span class="lineno">  530</span>  }</div>
-<div class="line"><span class="lineno">  531</span>}</div>
+<p class="definition">Definition at line <a class="el" href="covarianceXsec_8cpp_source.html#l00517">517</a> of file <a class="el" href="covarianceXsec_8cpp_source.html">covarianceXsec.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  517</span>                                          {</div>
+<div class="line"><span class="lineno">  518</span><span class="comment">// ********************************************</span></div>
+<div class="line"><span class="lineno">  519</span>  <span class="comment">// KS: Create a map to store the counts of unique strings, in principle this could be in header file</span></div>
+<div class="line"><span class="lineno">  520</span>  std::unordered_map&lt;std::string, int&gt; paramCounts;</div>
+<div class="line"><span class="lineno">  521</span> </div>
+<div class="line"><span class="lineno">  522</span>  std::for_each(<a class="code hl_variable" href="classcovarianceXsec.html#a47cd1802e0dac0c22c8c16f214272c34">_ParameterGroup</a>.begin(), <a class="code hl_variable" href="classcovarianceXsec.html#a47cd1802e0dac0c22c8c16f214272c34">_ParameterGroup</a>.end(),</div>
+<div class="line"><span class="lineno">  523</span>                [&amp;paramCounts](<span class="keyword">const</span> std::string&amp; param) {</div>
+<div class="line"><span class="lineno">  524</span>                  paramCounts[param]++;</div>
+<div class="line"><span class="lineno">  525</span>                });</div>
+<div class="line"><span class="lineno">  526</span> </div>
+<div class="line"><span class="lineno">  527</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;Printing parameter groups&quot;</span>);</div>
+<div class="line"><span class="lineno">  528</span>  <span class="comment">// Output the counts</span></div>
+<div class="line"><span class="lineno">  529</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; pair : paramCounts) {</div>
+<div class="line"><span class="lineno">  530</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;Found {}: {} params&quot;</span>, pair.second, pair.first);</div>
+<div class="line"><span class="lineno">  531</span>  }</div>
+<div class="line"><span class="lineno">  532</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2597,27 +2598,27 @@ template&lt;typename FilterFunc , typename ActionFunc &gt; </div>
 
 <p>Prints spline parameters. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceXsec_8cpp_source.html#l00478">478</a> of file <a class="el" href="covarianceXsec_8cpp_source.html">covarianceXsec.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  478</span>                                       {</div>
-<div class="line"><span class="lineno">  479</span><span class="comment">// ********************************************</span></div>
-<div class="line"><span class="lineno">  480</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;Spline parameters: {}&quot;</span>, <a class="code hl_variable" href="classcovarianceXsec.html#adddfbaa235113603542826df331ed61e">_fSystToGlobalSystIndexMap</a>[SystType::kSpline].<a class="code hl_variable" href="GetPenaltyTerm_8cpp.html#a439227feff9d7f55384e8780cfc2eb82">size</a>());</div>
-<div class="line"><span class="lineno">  481</span>  <span class="keywordflow">if</span>(<a class="code hl_variable" href="classcovarianceXsec.html#adddfbaa235113603542826df331ed61e">_fSystToGlobalSystIndexMap</a>[SystType::kSpline].<a class="code hl_variable" href="GetPenaltyTerm_8cpp.html#a439227feff9d7f55384e8780cfc2eb82">size</a>() == 0) <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  482</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;=====================================================================================================================================================================&quot;</span>);</div>
-<div class="line"><span class="lineno">  483</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;{:&lt;4} {:&lt;2} {:&lt;40} {:&lt;2} {:&lt;40} {:&lt;2} {:&lt;20} {:&lt;2} {:&lt;20} {:&lt;2} {:&lt;20} {:&lt;2}&quot;</span>, <span class="stringliteral">&quot;#&quot;</span>, <span class="stringliteral">&quot;|&quot;</span>, <span class="stringliteral">&quot;Name&quot;</span>, <span class="stringliteral">&quot;|&quot;</span>, <span class="stringliteral">&quot;Spline Name&quot;</span>, <span class="stringliteral">&quot;|&quot;</span>, <span class="stringliteral">&quot;Spline Interpolation&quot;</span>, <span class="stringliteral">&quot;|&quot;</span>, <span class="stringliteral">&quot;Low Knot Bound&quot;</span>, <span class="stringliteral">&quot;|&quot;</span>, <span class="stringliteral">&quot;Up Knot Bound&quot;</span>, <span class="stringliteral">&quot;|&quot;</span>);</div>
-<div class="line"><span class="lineno">  484</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;---------------------------------------------------------------------------------------------------------------------------------------------------------------------&quot;</span>);</div>
-<div class="line"><span class="lineno">  485</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;pair : <a class="code hl_variable" href="classcovarianceXsec.html#adddfbaa235113603542826df331ed61e">_fSystToGlobalSystIndexMap</a>[SystType::kSpline]) {</div>
-<div class="line"><span class="lineno">  486</span>    <span class="keyword">auto</span> &amp;SplineIndex = pair.first;</div>
-<div class="line"><span class="lineno">  487</span>    <span class="keyword">auto</span> &amp;GlobalIndex = pair.second;</div>
-<div class="line"><span class="lineno">  488</span> </div>
-<div class="line"><span class="lineno">  489</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;{:&lt;4} {:&lt;2} {:&lt;40} {:&lt;2} {:&lt;40} {:&lt;2} {:&lt;20} {:&lt;2} {:&lt;20} {:&lt;2} {:&lt;20} {:&lt;2}&quot;</span>,</div>
-<div class="line"><span class="lineno">  490</span>                  SplineIndex, <span class="stringliteral">&quot;|&quot;</span>, <a class="code hl_function" href="classcovarianceBase.html#a6a46b5fed3e7feb6e9e151e90927bdbc">GetParFancyName</a>(GlobalIndex), <span class="stringliteral">&quot;|&quot;</span>,</div>
-<div class="line"><span class="lineno">  491</span>                  <a class="code hl_variable" href="classcovarianceXsec.html#a4d3074db3c9edb7465a4409abd9c91fc">_fSplineNames</a>[SplineIndex], <span class="stringliteral">&quot;|&quot;</span>,</div>
-<div class="line"><span class="lineno">  492</span>                  <a class="code hl_function" href="Structs_8h.html#a2d969ce667e41bd2492cff1775456837">SplineInterpolation_ToString</a>(<a class="code hl_function" href="classcovarianceXsec.html#a6e7661f9bd67500b66c7499f776b594d">GetParSplineInterpolation</a>(SplineIndex)), <span class="stringliteral">&quot;|&quot;</span>,</div>
-<div class="line"><span class="lineno">  493</span>                  <a class="code hl_function" href="classcovarianceXsec.html#a9ea6bd6b0e021f154ebd1f23605ff3e5">GetParSplineKnotLowerBound</a>(SplineIndex), <span class="stringliteral">&quot;|&quot;</span>,</div>
-<div class="line"><span class="lineno">  494</span>                  <a class="code hl_function" href="classcovarianceXsec.html#ac612a0f939f2f070906af574f98590d6">GetParSplineKnotUpperBound</a>(SplineIndex), <span class="stringliteral">&quot;|&quot;</span>);</div>
-<div class="line"><span class="lineno">  495</span>  }</div>
-<div class="line"><span class="lineno">  496</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;=====================================================================================================================================================================&quot;</span>);</div>
-<div class="line"><span class="lineno">  497</span>}</div>
+<p class="definition">Definition at line <a class="el" href="covarianceXsec_8cpp_source.html#l00479">479</a> of file <a class="el" href="covarianceXsec_8cpp_source.html">covarianceXsec.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  479</span>                                       {</div>
+<div class="line"><span class="lineno">  480</span><span class="comment">// ********************************************</span></div>
+<div class="line"><span class="lineno">  481</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;Spline parameters: {}&quot;</span>, <a class="code hl_variable" href="classcovarianceXsec.html#adddfbaa235113603542826df331ed61e">_fSystToGlobalSystIndexMap</a>[SystType::kSpline].<a class="code hl_variable" href="GetPenaltyTerm_8cpp.html#a439227feff9d7f55384e8780cfc2eb82">size</a>());</div>
+<div class="line"><span class="lineno">  482</span>  <span class="keywordflow">if</span>(<a class="code hl_variable" href="classcovarianceXsec.html#adddfbaa235113603542826df331ed61e">_fSystToGlobalSystIndexMap</a>[SystType::kSpline].<a class="code hl_variable" href="GetPenaltyTerm_8cpp.html#a439227feff9d7f55384e8780cfc2eb82">size</a>() == 0) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  483</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;=====================================================================================================================================================================&quot;</span>);</div>
+<div class="line"><span class="lineno">  484</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;{:&lt;4} {:&lt;2} {:&lt;40} {:&lt;2} {:&lt;40} {:&lt;2} {:&lt;20} {:&lt;2} {:&lt;20} {:&lt;2} {:&lt;20} {:&lt;2}&quot;</span>, <span class="stringliteral">&quot;#&quot;</span>, <span class="stringliteral">&quot;|&quot;</span>, <span class="stringliteral">&quot;Name&quot;</span>, <span class="stringliteral">&quot;|&quot;</span>, <span class="stringliteral">&quot;Spline Name&quot;</span>, <span class="stringliteral">&quot;|&quot;</span>, <span class="stringliteral">&quot;Spline Interpolation&quot;</span>, <span class="stringliteral">&quot;|&quot;</span>, <span class="stringliteral">&quot;Low Knot Bound&quot;</span>, <span class="stringliteral">&quot;|&quot;</span>, <span class="stringliteral">&quot;Up Knot Bound&quot;</span>, <span class="stringliteral">&quot;|&quot;</span>);</div>
+<div class="line"><span class="lineno">  485</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;---------------------------------------------------------------------------------------------------------------------------------------------------------------------&quot;</span>);</div>
+<div class="line"><span class="lineno">  486</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;pair : <a class="code hl_variable" href="classcovarianceXsec.html#adddfbaa235113603542826df331ed61e">_fSystToGlobalSystIndexMap</a>[SystType::kSpline]) {</div>
+<div class="line"><span class="lineno">  487</span>    <span class="keyword">auto</span> &amp;SplineIndex = pair.first;</div>
+<div class="line"><span class="lineno">  488</span>    <span class="keyword">auto</span> &amp;GlobalIndex = pair.second;</div>
+<div class="line"><span class="lineno">  489</span> </div>
+<div class="line"><span class="lineno">  490</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;{:&lt;4} {:&lt;2} {:&lt;40} {:&lt;2} {:&lt;40} {:&lt;2} {:&lt;20} {:&lt;2} {:&lt;20} {:&lt;2} {:&lt;20} {:&lt;2}&quot;</span>,</div>
+<div class="line"><span class="lineno">  491</span>                  SplineIndex, <span class="stringliteral">&quot;|&quot;</span>, <a class="code hl_function" href="classcovarianceBase.html#a6a46b5fed3e7feb6e9e151e90927bdbc">GetParFancyName</a>(GlobalIndex), <span class="stringliteral">&quot;|&quot;</span>,</div>
+<div class="line"><span class="lineno">  492</span>                  <a class="code hl_variable" href="classcovarianceXsec.html#a4d3074db3c9edb7465a4409abd9c91fc">_fSplineNames</a>[SplineIndex], <span class="stringliteral">&quot;|&quot;</span>,</div>
+<div class="line"><span class="lineno">  493</span>                  <a class="code hl_function" href="Structs_8h.html#a2d969ce667e41bd2492cff1775456837">SplineInterpolation_ToString</a>(<a class="code hl_function" href="classcovarianceXsec.html#a6e7661f9bd67500b66c7499f776b594d">GetParSplineInterpolation</a>(SplineIndex)), <span class="stringliteral">&quot;|&quot;</span>,</div>
+<div class="line"><span class="lineno">  494</span>                  <a class="code hl_function" href="classcovarianceXsec.html#a9ea6bd6b0e021f154ebd1f23605ff3e5">GetParSplineKnotLowerBound</a>(SplineIndex), <span class="stringliteral">&quot;|&quot;</span>,</div>
+<div class="line"><span class="lineno">  495</span>                  <a class="code hl_function" href="classcovarianceXsec.html#ac612a0f939f2f070906af574f98590d6">GetParSplineKnotUpperBound</a>(SplineIndex), <span class="stringliteral">&quot;|&quot;</span>);</div>
+<div class="line"><span class="lineno">  496</span>  }</div>
+<div class="line"><span class="lineno">  497</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;=====================================================================================================================================================================&quot;</span>);</div>
+<div class="line"><span class="lineno">  498</span>}</div>
 <div class="ttc" id="aclasscovarianceXsec_html_a6e7661f9bd67500b66c7499f776b594d"><div class="ttname"><a href="classcovarianceXsec.html#a6e7661f9bd67500b66c7499f776b594d">covarianceXsec::GetParSplineInterpolation</a></div><div class="ttdeci">SplineInterpolation GetParSplineInterpolation(const int i)</div><div class="ttdoc">Get interpolation type for a given parameter.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8h_source.html#l00034">covarianceXsec.h:34</a></div></div>
 <div class="ttc" id="aclasscovarianceXsec_html_a9ea6bd6b0e021f154ebd1f23605ff3e5"><div class="ttname"><a href="classcovarianceXsec.html#a9ea6bd6b0e021f154ebd1f23605ff3e5">covarianceXsec::GetParSplineKnotLowerBound</a></div><div class="ttdeci">double GetParSplineKnotLowerBound(const int i)</div><div class="ttdoc">EM: value at which we cap spline knot weight.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8h_source.html#l00048">covarianceXsec.h:48</a></div></div>
 <div class="ttc" id="aclasscovarianceXsec_html_ac612a0f939f2f070906af574f98590d6"><div class="ttname"><a href="classcovarianceXsec.html#ac612a0f939f2f070906af574f98590d6">covarianceXsec::GetParSplineKnotUpperBound</a></div><div class="ttdeci">double GetParSplineKnotUpperBound(const int i)</div><div class="ttdoc">EM: value at which we cap spline knot weight.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8h_source.html#l00045">covarianceXsec.h:45</a></div></div>
@@ -2648,19 +2649,19 @@ template&lt;typename FilterFunc , typename ActionFunc &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="covarianceXsec_8cpp_source.html#l00558">558</a> of file <a class="el" href="covarianceXsec_8cpp_source.html">covarianceXsec.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  558</span>                                                                  {</div>
-<div class="line"><span class="lineno">  559</span><span class="comment">// ********************************************</span></div>
-<div class="line"><span class="lineno">  560</span>  <span class="keywordflow">if</span>(!<a class="code hl_variable" href="classcovarianceBase.html#ab4b7f96d3e977a0b3307ceecbd0baeb4">pca</a>) {</div>
-<div class="line"><span class="lineno">  561</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>; i++) {</div>
-<div class="line"><span class="lineno">  562</span>      <span class="keywordflow">if</span>(<a class="code hl_function" href="classcovarianceXsec.html#a5dc8900054a498107e39cc41641879a8">IsParFromGroup</a>(i, Group)) <a class="code hl_variable" href="classcovarianceBase.html#a12f0eb31a5ef48b014baa11d4ab919e9">_fPropVal</a>[i] = <a class="code hl_variable" href="classcovarianceBase.html#a7578a2cc2e8e9100fad88310a824cb1c">_fPreFitValue</a>[i];</div>
-<div class="line"><span class="lineno">  563</span>    }</div>
-<div class="line"><span class="lineno">  564</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  565</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a>(<span class="stringliteral">&quot;SetGroupOnlyParameters not implemented for PCA&quot;</span>);</div>
-<div class="line"><span class="lineno">  566</span>    <span class="keywordflow">throw</span> <a class="code hl_class" href="classMaCh3Exception.html">MaCh3Exception</a>(__FILE__, __LINE__);</div>
-<div class="line"><span class="lineno">  567</span>  }</div>
-<div class="line"><span class="lineno">  568</span>}</div>
-<div class="ttc" id="aclasscovarianceXsec_html_a5dc8900054a498107e39cc41641879a8"><div class="ttname"><a href="classcovarianceXsec.html#a5dc8900054a498107e39cc41641879a8">covarianceXsec::IsParFromGroup</a></div><div class="ttdeci">bool IsParFromGroup(const int i, const std::string &amp;Group)</div><div class="ttdoc">Checks if parameter belongs to a given group.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8cpp_source.html#l00572">covarianceXsec.cpp:572</a></div></div>
+<p class="definition">Definition at line <a class="el" href="covarianceXsec_8cpp_source.html#l00559">559</a> of file <a class="el" href="covarianceXsec_8cpp_source.html">covarianceXsec.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  559</span>                                                                  {</div>
+<div class="line"><span class="lineno">  560</span><span class="comment">// ********************************************</span></div>
+<div class="line"><span class="lineno">  561</span>  <span class="keywordflow">if</span>(!<a class="code hl_variable" href="classcovarianceBase.html#ab4b7f96d3e977a0b3307ceecbd0baeb4">pca</a>) {</div>
+<div class="line"><span class="lineno">  562</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>; i++) {</div>
+<div class="line"><span class="lineno">  563</span>      <span class="keywordflow">if</span>(<a class="code hl_function" href="classcovarianceXsec.html#a5dc8900054a498107e39cc41641879a8">IsParFromGroup</a>(i, Group)) <a class="code hl_variable" href="classcovarianceBase.html#a12f0eb31a5ef48b014baa11d4ab919e9">_fPropVal</a>[i] = <a class="code hl_variable" href="classcovarianceBase.html#a7578a2cc2e8e9100fad88310a824cb1c">_fPreFitValue</a>[i];</div>
+<div class="line"><span class="lineno">  564</span>    }</div>
+<div class="line"><span class="lineno">  565</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  566</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a>(<span class="stringliteral">&quot;SetGroupOnlyParameters not implemented for PCA&quot;</span>);</div>
+<div class="line"><span class="lineno">  567</span>    <span class="keywordflow">throw</span> <a class="code hl_class" href="classMaCh3Exception.html">MaCh3Exception</a>(__FILE__, __LINE__);</div>
+<div class="line"><span class="lineno">  568</span>  }</div>
+<div class="line"><span class="lineno">  569</span>}</div>
+<div class="ttc" id="aclasscovarianceXsec_html_a5dc8900054a498107e39cc41641879a8"><div class="ttname"><a href="classcovarianceXsec.html#a5dc8900054a498107e39cc41641879a8">covarianceXsec::IsParFromGroup</a></div><div class="ttdeci">bool IsParFromGroup(const int i, const std::string &amp;Group)</div><div class="ttdoc">Checks if parameter belongs to a given group.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceXsec_8cpp_source.html#l00573">covarianceXsec.cpp:573</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
