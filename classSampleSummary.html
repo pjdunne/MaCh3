@@ -524,9 +524,11 @@ Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class to calculate pvalue produce posterior predictive and many fancy Bayesian stuff <a class="el" href="citelist.html#CITEREF_gelman1996posterior">[8]</a>. </p>
-<p>For more information, visit the <a href="https://github.com/mach3-software/MaCh3/wiki/10.-Posterior-Predictive,-p%E2%80%90value-etc.">Wiki</a>. </p>
+<p>For more information, visit the <a href="https://github.com/mach3-software/MaCh3/wiki/10.-Posterior-Predictive,-p%E2%80%90value-etc.">Wiki</a>. </p><dl class="section author"><dt>Author</dt><dd>Clarence Wret </dd>
+<dd>
+Kamil Skwarczynski </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00023">23</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00025">25</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="afa739654e03cce78c48eb99bcd58c99a" name="afa739654e03cce78c48eb99bcd58c99a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afa739654e03cce78c48eb99bcd58c99a">&#9670;&#160;</a></span>SampleSummary()</h2>
@@ -732,58 +734,58 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  160</span>}</div>
 <div class="ttc" id="aMaCh3Logger_8h_html_a4db4657acad5c79ac4bbb66a9d1c5905"><div class="ttname"><a href="MaCh3Logger_8h.html#a4db4657acad5c79ac4bbb66a9d1c5905">MACH3LOG_DEBUG</a></div><div class="ttdeci">#define MACH3LOG_DEBUG</div><div class="ttdef"><b>Definition:</b> <a href="MaCh3Logger_8h_source.html#l00015">MaCh3Logger.h:15</a></div></div>
 <div class="ttc" id="aMaCh3Logger_8h_html_a95fa4dffc648e4c5536c9292c2bdcac3"><div class="ttname"><a href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a></div><div class="ttdeci">#define MACH3LOG_INFO</div><div class="ttdef"><b>Definition:</b> <a href="MaCh3Logger_8h_source.html#l00016">MaCh3Logger.h:16</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_a03bbc94ee26b66875becf22255a205d2"><div class="ttname"><a href="classSampleSummary.html#a03bbc94ee26b66875becf22255a205d2">SampleSummary::lnLHist_Mode</a></div><div class="ttdeci">std::vector&lt; TH2Poly * &gt; lnLHist_Mode</div><div class="ttdoc">The LLH distribution in pmu cosmu for using the mode in each bin.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00240">SampleSummary.h:240</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_a154c9bd15825713c48154fab66190d39"><div class="ttname"><a href="classSampleSummary.html#a154c9bd15825713c48154fab66190d39">SampleSummary::lnLHist_Mean</a></div><div class="ttdeci">std::vector&lt; TH2Poly * &gt; lnLHist_Mean</div><div class="ttdoc">The LLH distribution in pmu cosmu for using the mean in each bin.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00238">SampleSummary.h:238</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_a20237446a72eda2dc833bfc72c7e42e1"><div class="ttname"><a href="classSampleSummary.html#a20237446a72eda2dc833bfc72c7e42e1">SampleSummary::MeanHist_ByMode</a></div><div class="ttdeci">TH2Poly *** MeanHist_ByMode</div><div class="ttdoc">The posterior predictive distribution in pmu cosmu using the mean.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00362">SampleSummary.h:362</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_a2828111584f80f855b56a9a093987673"><div class="ttname"><a href="classSampleSummary.html#a2828111584f80f855b56a9a093987673">SampleSummary::W2MeanHist</a></div><div class="ttdeci">std::vector&lt; TH2Poly * &gt; W2MeanHist</div><div class="ttdoc">Pointer to the w2 histograms (for mean values).</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00208">SampleSummary.h:208</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_a2ced5be9bc8ba79530464d53b9c23797"><div class="ttname"><a href="classSampleSummary.html#a2ced5be9bc8ba79530464d53b9c23797">SampleSummary::RandomHist</a></div><div class="ttdeci">std::unique_ptr&lt; TH1D &gt; RandomHist</div><div class="ttdoc">Holds the history of which entries have been drawn in the MCMC file.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00258">SampleSummary.h:258</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_a364fb16938a26adbe59fdd057f4b9405"><div class="ttname"><a href="classSampleSummary.html#a364fb16938a26adbe59fdd057f4b9405">SampleSummary::rnd</a></div><div class="ttdeci">std::unique_ptr&lt; TRandom3 &gt; rnd</div><div class="ttdoc">Random number generator.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00162">SampleSummary.h:162</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_a424b53de4d9e896526667ddb565e4a6b"><div class="ttname"><a href="classSampleSummary.html#a424b53de4d9e896526667ddb565e4a6b">SampleSummary::lnLHist_Mode1D</a></div><div class="ttdeci">std::vector&lt; TH1D * &gt; lnLHist_Mode1D</div><div class="ttdoc">Holds the bin-by-bin LLH for the mode posterior predictive vs the data.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00255">SampleSummary.h:255</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_a4463f635de4e83c7ada683768454da82"><div class="ttname"><a href="classSampleSummary.html#a4463f635de4e83c7ada683768454da82">SampleSummary::OutputName</a></div><div class="ttdeci">std::string OutputName</div><div class="ttdoc">Output filename.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00284">SampleSummary.h:284</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_a479f46f89c0c752c3e3e147d5b04b458"><div class="ttname"><a href="classSampleSummary.html#a479f46f89c0c752c3e3e147d5b04b458">SampleSummary::BetaHist</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; std::unique_ptr&lt; TH1D &gt; &gt; &gt; BetaHist</div><div class="ttdoc">Distribution of beta parameters in Barlow Beeston formalisms.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00261">SampleSummary.h:261</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_a49215601479aaa99f9f64d8f7c900385"><div class="ttname"><a href="classSampleSummary.html#a49215601479aaa99f9f64d8f7c900385">SampleSummary::nModelParams</a></div><div class="ttdeci">int nModelParams</div><div class="ttdoc">Number of parameters.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00376">SampleSummary.h:376</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_a4a93fa8d52abe2828a4a25e49cf6fee8"><div class="ttname"><a href="classSampleSummary.html#a4a93fa8d52abe2828a4a25e49cf6fee8">SampleSummary::ViolinHists_ProjectX</a></div><div class="ttdeci">std::vector&lt; TH2D * &gt; ViolinHists_ProjectX</div><div class="ttdoc">Posterior predictive but for X projection but as a violin plot.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00193">SampleSummary.h:193</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_a4ade2ccb94981d4483f0b4e6e367b1a0"><div class="ttname"><a href="classSampleSummary.html#a4ade2ccb94981d4483f0b4e6e367b1a0">SampleSummary::first_pass</a></div><div class="ttdeci">bool first_pass</div><div class="ttdoc">KS: Hacky flag to let us know if this is first toy.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00164">SampleSummary.h:164</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_a503b0dc19bb1ad57e7f2560cc64feef9"><div class="ttname"><a href="classSampleSummary.html#a503b0dc19bb1ad57e7f2560cc64feef9">SampleSummary::NominalHist</a></div><div class="ttdeci">std::vector&lt; TH2Poly * &gt; NominalHist</div><div class="ttdoc">The nominal histogram for the selection.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00204">SampleSummary.h:204</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_a508ef812c8b1275580759832e33c98ee"><div class="ttname"><a href="classSampleSummary.html#a508ef812c8b1275580759832e33c98ee">SampleSummary::PosteriorHist</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; std::unique_ptr&lt; TH1D &gt; &gt; &gt; PosteriorHist</div><div class="ttdoc">The posterior predictive for the whole selection: this gets built after adding in the toys....</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00188">SampleSummary.h:188</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_a6191a0fc1c8f1f0889b3dedcc5485a3d"><div class="ttname"><a href="classSampleSummary.html#a6191a0fc1c8f1f0889b3dedcc5485a3d">SampleSummary::MeanHistCorrected</a></div><div class="ttdeci">std::vector&lt; TH2Poly * &gt; MeanHistCorrected</div><div class="ttdoc">The posterior predictive distribution in pmu cosmu using the mean after applying Barlow-Beeston Corre...</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00248">SampleSummary.h:248</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_a6593fed9709673a6910f96adc88fc8f2"><div class="ttname"><a href="classSampleSummary.html#a6593fed9709673a6910f96adc88fc8f2">SampleSummary::Modes</a></div><div class="ttdeci">MaCh3Modes * Modes</div><div class="ttdoc">MaCh3 Modes.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00370">SampleSummary.h:370</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_a70b109c60b7c82a3e36708bd2674cb5e"><div class="ttname"><a href="classSampleSummary.html#a70b109c60b7c82a3e36708bd2674cb5e">SampleSummary::lnLHist</a></div><div class="ttdeci">std::unique_ptr&lt; TH1D &gt; lnLHist</div><div class="ttdoc">The histogram containing the lnL for each throw.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00213">SampleSummary.h:213</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_a718c83e1952f948a5c063c2039a68a19"><div class="ttname"><a href="classSampleSummary.html#a718c83e1952f948a5c063c2039a68a19">SampleSummary::lnLHist_Mean1D</a></div><div class="ttdeci">std::vector&lt; TH1D * &gt; lnLHist_Mean1D</div><div class="ttdoc">Holds the bin-by-bin LLH for the mean posterior predictive vs the data.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00253">SampleSummary.h:253</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_a78eb4766cc8b4758b909b6ce9113a56e"><div class="ttname"><a href="classSampleSummary.html#a78eb4766cc8b4758b909b6ce9113a56e">SampleSummary::OutputTree</a></div><div class="ttdeci">TTree * OutputTree</div><div class="ttdoc">TTree which we save useful information to.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00291">SampleSummary.h:291</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_a795ac96bf6958c8a2f38c9de23c3c081"><div class="ttname"><a href="classSampleSummary.html#a795ac96bf6958c8a2f38c9de23c3c081">SampleSummary::DoByModePlots</a></div><div class="ttdeci">bool DoByModePlots</div><div class="ttdoc">By mode variables.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00360">SampleSummary.h:360</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_a7b1ba5b3b465f78019bb8c36ec5f56d7"><div class="ttname"><a href="classSampleSummary.html#a7b1ba5b3b465f78019bb8c36ec5f56d7">SampleSummary::lnLHist_Mean_ProjectX</a></div><div class="ttdeci">std::vector&lt; TH1D * &gt; lnLHist_Mean_ProjectX</div><div class="ttdoc">The LLH distribution in pmu using the mean in each bin.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00243">SampleSummary.h:243</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_a7e962b36331edb6ff1e9de849cbabee3"><div class="ttname"><a href="classSampleSummary.html#a7e962b36331edb6ff1e9de849cbabee3">SampleSummary::DataHist</a></div><div class="ttdeci">std::vector&lt; TH2Poly * &gt; DataHist</div><div class="ttdoc">The data histogram for the selection.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00198">SampleSummary.h:198</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_a807e348a85fb460c5ca4a1ce56d08aab"><div class="ttname"><a href="classSampleSummary.html#a807e348a85fb460c5ca4a1ce56d08aab">SampleSummary::Debug</a></div><div class="ttdeci">int Debug</div><div class="ttdoc">Tells Debug level to save additional histograms.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00379">SampleSummary.h:379</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_a8c7537f32164be9192f8ba2b12a69cdb"><div class="ttname"><a href="classSampleSummary.html#a8c7537f32164be9192f8ba2b12a69cdb">SampleSummary::lnLDrawHist</a></div><div class="ttdeci">std::unique_ptr&lt; TH2D &gt; lnLDrawHist</div><div class="ttdoc">The 2D lnLhist, showing (draw vs data) and (draw vs fluct), anything above y=x axis is the p-value.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00221">SampleSummary.h:221</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_a93714cf9b778fa7713a641da0cd2d534"><div class="ttname"><a href="classSampleSummary.html#a93714cf9b778fa7713a641da0cd2d534">SampleSummary::ViolinHists_ProjectY</a></div><div class="ttdeci">std::vector&lt; TH2D * &gt; ViolinHists_ProjectY</div><div class="ttdoc">Posterior predictive but for Y projection but as a violin plot.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00195">SampleSummary.h:195</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_a9b21ff74bb8ebd7c3af2c24e02f3d7dc"><div class="ttname"><a href="classSampleSummary.html#a9b21ff74bb8ebd7c3af2c24e02f3d7dc">SampleSummary::ModeHist</a></div><div class="ttdeci">std::vector&lt; TH2Poly * &gt; ModeHist</div><div class="ttdoc">The posterior predictive distribution in pmu cosmu using the mode.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00250">SampleSummary.h:250</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_a9c37d8669c0f55f6a4620b4f0d7b6e20"><div class="ttname"><a href="classSampleSummary.html#a9c37d8669c0f55f6a4620b4f0d7b6e20">SampleSummary::W2NomHist</a></div><div class="ttdeci">std::vector&lt; TH2Poly * &gt; W2NomHist</div><div class="ttdoc">Pointer to the w2 histograms (for nominal values).</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00206">SampleSummary.h:206</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_aa5c4055d4bb4dc720a4118032cdb4910"><div class="ttname"><a href="classSampleSummary.html#aa5c4055d4bb4dc720a4118032cdb4910">SampleSummary::nThrows</a></div><div class="ttdeci">unsigned int nThrows</div><div class="ttdoc">Number of throws.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00275">SampleSummary.h:275</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_aa61561a1e3594ac9250aaee26409245e"><div class="ttname"><a href="classSampleSummary.html#aa61561a1e3594ac9250aaee26409245e">SampleSummary::lnLHist_Sample_DrawData</a></div><div class="ttdeci">std::vector&lt; TH1D * &gt; lnLHist_Sample_DrawData</div><div class="ttdoc">The histogram containing the lnL (draw vs data) for each throw for each sample.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00231">SampleSummary.h:231</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_aa6773885be1b6a2660493718823a2f3f"><div class="ttname"><a href="classSampleSummary.html#aa6773885be1b6a2660493718823a2f3f">SampleSummary::w2Hist</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; std::unique_ptr&lt; TH1D &gt; &gt; &gt; w2Hist</div><div class="ttdoc">The posterior predictive for the whole selection: this gets built after adding in the toys....</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00190">SampleSummary.h:190</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_aa6cfe4fb92b67f08b0d94f0fe1d8a3a2"><div class="ttname"><a href="classSampleSummary.html#aa6cfe4fb92b67f08b0d94f0fe1d8a3a2">SampleSummary::PosteriorHist_ByMode</a></div><div class="ttdeci">TH1D **** PosteriorHist_ByMode</div><div class="ttdoc">Histogram which corresponds to each bin in the sample's th2poly.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00364">SampleSummary.h:364</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_aa6f15a5750ae0224168d487e44ad3d94"><div class="ttname"><a href="classSampleSummary.html#aa6f15a5750ae0224168d487e44ad3d94">SampleSummary::lnLHist_drawflucdraw</a></div><div class="ttdeci">std::unique_ptr&lt; TH1D &gt; lnLHist_drawflucdraw</div><div class="ttdoc">The lnLhist for the draw vs draw fluctuated.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00217">SampleSummary.h:217</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_aa7b948f290517a052f04f61dfa6af68f"><div class="ttname"><a href="classSampleSummary.html#aa7b948f290517a052f04f61dfa6af68f">SampleSummary::Outputfile</a></div><div class="ttdeci">TFile * Outputfile</div><div class="ttdoc">Output filename.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00286">SampleSummary.h:286</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_aae188cf135af004d5364e5b4f3b1bb31"><div class="ttname"><a href="classSampleSummary.html#aae188cf135af004d5364e5b4f3b1bb31">SampleSummary::lnLDrawHistRate</a></div><div class="ttdeci">std::unique_ptr&lt; TH2D &gt; lnLDrawHistRate</div><div class="ttdoc">The 2D lnLhist, showing (draw vs data) and (draw vs fluct), using rate, anything above y=x axis is th...</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00226">SampleSummary.h:226</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_aaf23ed9a699d625adc8639a57de801e8"><div class="ttname"><a href="classSampleSummary.html#aaf23ed9a699d625adc8639a57de801e8">SampleSummary::lnLHist_drawdata</a></div><div class="ttdeci">std::unique_ptr&lt; TH1D &gt; lnLHist_drawdata</div><div class="ttdoc">The lnLhist for the draw vs data.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00219">SampleSummary.h:219</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_ab16d22bf65d2a9c15072901161fc160a"><div class="ttname"><a href="classSampleSummary.html#ab16d22bf65d2a9c15072901161fc160a">SampleSummary::nSamples</a></div><div class="ttdeci">int nSamples</div><div class="ttdoc">Number of samples.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00182">SampleSummary.h:182</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_abd938805245ca6cfeb8c49363f5ff11c"><div class="ttname"><a href="classSampleSummary.html#abd938805245ca6cfeb8c49363f5ff11c">SampleSummary::SamplePDF</a></div><div class="ttdeci">samplePDFBase * SamplePDF</div><div class="ttdoc">Pointer to samplePDF object, mostly used to get sample names, binning etc.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00367">SampleSummary.h:367</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_abeaca1195db794d9e660a377d81c1b21"><div class="ttname"><a href="classSampleSummary.html#abeaca1195db794d9e660a377d81c1b21">SampleSummary::DataHist_ProjectX</a></div><div class="ttdeci">std::vector&lt; TH1D * &gt; DataHist_ProjectX</div><div class="ttdoc">The data histogram for the selection X projection.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00200">SampleSummary.h:200</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_abfeb54f4d95b5b74257a1abf5c98824f"><div class="ttname"><a href="classSampleSummary.html#abfeb54f4d95b5b74257a1abf5c98824f">SampleSummary::DataHist_ProjectY</a></div><div class="ttdeci">std::vector&lt; TH1D * &gt; DataHist_ProjectY</div><div class="ttdoc">The data histogram for the selection Y projection.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00202">SampleSummary.h:202</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_adb737e335e68edeb14a6ce2ca112dc8c"><div class="ttname"><a href="classSampleSummary.html#adb737e335e68edeb14a6ce2ca112dc8c">SampleSummary::isPriorPredictive</a></div><div class="ttdeci">bool isPriorPredictive</div><div class="ttdoc">bool whether we have Prior or Posterior Predictive</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00269">SampleSummary.h:269</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_adf610d698a50c4930d95be320e99a8e8"><div class="ttname"><a href="classSampleSummary.html#adf610d698a50c4930d95be320e99a8e8">SampleSummary::DoBetaParam</a></div><div class="ttdeci">bool DoBetaParam</div><div class="ttdoc">Are we making Beta Histograms.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00263">SampleSummary.h:263</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_adf9b943ba381875b3f2e0c4807a9b8c4"><div class="ttname"><a href="classSampleSummary.html#adf9b943ba381875b3f2e0c4807a9b8c4">SampleSummary::W2ModeHist</a></div><div class="ttdeci">std::vector&lt; TH2Poly * &gt; W2ModeHist</div><div class="ttdoc">Pointer to the w2 histograms (for mode values).</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00210">SampleSummary.h:210</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_ae1aafef6414eafb5572893dded50a1b1"><div class="ttname"><a href="classSampleSummary.html#ae1aafef6414eafb5572893dded50a1b1">SampleSummary::lnLFlucHist</a></div><div class="ttdeci">std::unique_ptr&lt; TH2D &gt; lnLFlucHist</div><div class="ttdoc">The 2D lnLHist, showing (draw vs data) and (draw vs draw fluct), anything above y=x axis is the p-val...</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00223">SampleSummary.h:223</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_ae502645ddf5c53a7a3f2c52566956bf3"><div class="ttname"><a href="classSampleSummary.html#ae502645ddf5c53a7a3f2c52566956bf3">SampleSummary::StandardFluctuation</a></div><div class="ttdeci">bool StandardFluctuation</div><div class="ttdoc">KS: We have two methods for Poissonian fluctuation.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00167">SampleSummary.h:167</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_ae509f51ec2d0323e005e05c255bc0c1f"><div class="ttname"><a href="classSampleSummary.html#ae509f51ec2d0323e005e05c255bc0c1f">SampleSummary::lnLFlucHist_ProjectX</a></div><div class="ttdeci">std::unique_ptr&lt; TH2D &gt; lnLFlucHist_ProjectX</div><div class="ttdoc">The 2D lnLHist but for ProjectionX histogram (pmu), showing (draw vs data) and (draw vs draw fluct),...</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00228">SampleSummary.h:228</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_aead1702a4c1522e685a8af5a875f05ab"><div class="ttname"><a href="classSampleSummary.html#aead1702a4c1522e685a8af5a875f05ab">SampleSummary::lnLHist_drawfluc</a></div><div class="ttdeci">std::unique_ptr&lt; TH1D &gt; lnLHist_drawfluc</div><div class="ttdoc">The lnLhist for the draw vs MC fluctuated.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00215">SampleSummary.h:215</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_aebd01b201cf04608b251cd3e272878b7"><div class="ttname"><a href="classSampleSummary.html#aebd01b201cf04608b251cd3e272878b7">SampleSummary::doShapeOnly</a></div><div class="ttdeci">bool doShapeOnly</div><div class="ttdoc">bool whether to normalise each toy to have shape based p-value and pos pred distribution</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00272">SampleSummary.h:272</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_aecf1c224162e1055e8306d438e1a3761"><div class="ttname"><a href="classSampleSummary.html#aecf1c224162e1055e8306d438e1a3761">SampleSummary::lnLHist_Sample_PredflucDraw</a></div><div class="ttdeci">std::vector&lt; TH1D * &gt; lnLHist_Sample_PredflucDraw</div><div class="ttdoc">The histogram containing the lnL (draw vs pred fluct) for each throw for each sample.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00235">SampleSummary.h:235</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_af0edee6c71137e2a8150c7ba3e8fb6e0"><div class="ttname"><a href="classSampleSummary.html#af0edee6c71137e2a8150c7ba3e8fb6e0">SampleSummary::MeanHist</a></div><div class="ttdeci">std::vector&lt; TH2Poly * &gt; MeanHist</div><div class="ttdoc">The posterior predictive distribution in pmu cosmu using the mean.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00246">SampleSummary.h:246</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_af4767862e5c1f4e3319d16b861213555"><div class="ttname"><a href="classSampleSummary.html#af4767862e5c1f4e3319d16b861213555">SampleSummary::nChainSteps</a></div><div class="ttdeci">unsigned int nChainSteps</div><div class="ttdoc">Number of throws by user.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00266">SampleSummary.h:266</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_af5a3139cef917abfddc36dbb8d4ac2fd"><div class="ttname"><a href="classSampleSummary.html#af5a3139cef917abfddc36dbb8d4ac2fd">SampleSummary::maxBins</a></div><div class="ttdeci">std::vector&lt; int &gt; maxBins</div><div class="ttdoc">Max Number of Bins per each sample.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00278">SampleSummary.h:278</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_afddd2abc0ec07b52dc9004880522ab5a"><div class="ttname"><a href="classSampleSummary.html#afddd2abc0ec07b52dc9004880522ab5a">SampleSummary::lnLHist_Sample_DrawflucDraw</a></div><div class="ttdeci">std::vector&lt; TH1D * &gt; lnLHist_Sample_DrawflucDraw</div><div class="ttdoc">The histogram containing the lnL (draw vs draw fluct) for each throw for each sample.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00233">SampleSummary.h:233</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_a03bbc94ee26b66875becf22255a205d2"><div class="ttname"><a href="classSampleSummary.html#a03bbc94ee26b66875becf22255a205d2">SampleSummary::lnLHist_Mode</a></div><div class="ttdeci">std::vector&lt; TH2Poly * &gt; lnLHist_Mode</div><div class="ttdoc">The LLH distribution in pmu cosmu for using the mode in each bin.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00242">SampleSummary.h:242</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_a154c9bd15825713c48154fab66190d39"><div class="ttname"><a href="classSampleSummary.html#a154c9bd15825713c48154fab66190d39">SampleSummary::lnLHist_Mean</a></div><div class="ttdeci">std::vector&lt; TH2Poly * &gt; lnLHist_Mean</div><div class="ttdoc">The LLH distribution in pmu cosmu for using the mean in each bin.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00240">SampleSummary.h:240</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_a20237446a72eda2dc833bfc72c7e42e1"><div class="ttname"><a href="classSampleSummary.html#a20237446a72eda2dc833bfc72c7e42e1">SampleSummary::MeanHist_ByMode</a></div><div class="ttdeci">TH2Poly *** MeanHist_ByMode</div><div class="ttdoc">The posterior predictive distribution in pmu cosmu using the mean.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00364">SampleSummary.h:364</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_a2828111584f80f855b56a9a093987673"><div class="ttname"><a href="classSampleSummary.html#a2828111584f80f855b56a9a093987673">SampleSummary::W2MeanHist</a></div><div class="ttdeci">std::vector&lt; TH2Poly * &gt; W2MeanHist</div><div class="ttdoc">Pointer to the w2 histograms (for mean values).</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00210">SampleSummary.h:210</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_a2ced5be9bc8ba79530464d53b9c23797"><div class="ttname"><a href="classSampleSummary.html#a2ced5be9bc8ba79530464d53b9c23797">SampleSummary::RandomHist</a></div><div class="ttdeci">std::unique_ptr&lt; TH1D &gt; RandomHist</div><div class="ttdoc">Holds the history of which entries have been drawn in the MCMC file.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00260">SampleSummary.h:260</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_a364fb16938a26adbe59fdd057f4b9405"><div class="ttname"><a href="classSampleSummary.html#a364fb16938a26adbe59fdd057f4b9405">SampleSummary::rnd</a></div><div class="ttdeci">std::unique_ptr&lt; TRandom3 &gt; rnd</div><div class="ttdoc">Random number generator.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00164">SampleSummary.h:164</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_a424b53de4d9e896526667ddb565e4a6b"><div class="ttname"><a href="classSampleSummary.html#a424b53de4d9e896526667ddb565e4a6b">SampleSummary::lnLHist_Mode1D</a></div><div class="ttdeci">std::vector&lt; TH1D * &gt; lnLHist_Mode1D</div><div class="ttdoc">Holds the bin-by-bin LLH for the mode posterior predictive vs the data.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00257">SampleSummary.h:257</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_a4463f635de4e83c7ada683768454da82"><div class="ttname"><a href="classSampleSummary.html#a4463f635de4e83c7ada683768454da82">SampleSummary::OutputName</a></div><div class="ttdeci">std::string OutputName</div><div class="ttdoc">Output filename.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00286">SampleSummary.h:286</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_a479f46f89c0c752c3e3e147d5b04b458"><div class="ttname"><a href="classSampleSummary.html#a479f46f89c0c752c3e3e147d5b04b458">SampleSummary::BetaHist</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; std::unique_ptr&lt; TH1D &gt; &gt; &gt; BetaHist</div><div class="ttdoc">Distribution of beta parameters in Barlow Beeston formalisms.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00263">SampleSummary.h:263</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_a49215601479aaa99f9f64d8f7c900385"><div class="ttname"><a href="classSampleSummary.html#a49215601479aaa99f9f64d8f7c900385">SampleSummary::nModelParams</a></div><div class="ttdeci">int nModelParams</div><div class="ttdoc">Number of parameters.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00378">SampleSummary.h:378</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_a4a93fa8d52abe2828a4a25e49cf6fee8"><div class="ttname"><a href="classSampleSummary.html#a4a93fa8d52abe2828a4a25e49cf6fee8">SampleSummary::ViolinHists_ProjectX</a></div><div class="ttdeci">std::vector&lt; TH2D * &gt; ViolinHists_ProjectX</div><div class="ttdoc">Posterior predictive but for X projection but as a violin plot.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00195">SampleSummary.h:195</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_a4ade2ccb94981d4483f0b4e6e367b1a0"><div class="ttname"><a href="classSampleSummary.html#a4ade2ccb94981d4483f0b4e6e367b1a0">SampleSummary::first_pass</a></div><div class="ttdeci">bool first_pass</div><div class="ttdoc">KS: Hacky flag to let us know if this is first toy.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00166">SampleSummary.h:166</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_a503b0dc19bb1ad57e7f2560cc64feef9"><div class="ttname"><a href="classSampleSummary.html#a503b0dc19bb1ad57e7f2560cc64feef9">SampleSummary::NominalHist</a></div><div class="ttdeci">std::vector&lt; TH2Poly * &gt; NominalHist</div><div class="ttdoc">The nominal histogram for the selection.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00206">SampleSummary.h:206</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_a508ef812c8b1275580759832e33c98ee"><div class="ttname"><a href="classSampleSummary.html#a508ef812c8b1275580759832e33c98ee">SampleSummary::PosteriorHist</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; std::unique_ptr&lt; TH1D &gt; &gt; &gt; PosteriorHist</div><div class="ttdoc">The posterior predictive for the whole selection: this gets built after adding in the toys....</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00190">SampleSummary.h:190</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_a6191a0fc1c8f1f0889b3dedcc5485a3d"><div class="ttname"><a href="classSampleSummary.html#a6191a0fc1c8f1f0889b3dedcc5485a3d">SampleSummary::MeanHistCorrected</a></div><div class="ttdeci">std::vector&lt; TH2Poly * &gt; MeanHistCorrected</div><div class="ttdoc">The posterior predictive distribution in pmu cosmu using the mean after applying Barlow-Beeston Corre...</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00250">SampleSummary.h:250</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_a6593fed9709673a6910f96adc88fc8f2"><div class="ttname"><a href="classSampleSummary.html#a6593fed9709673a6910f96adc88fc8f2">SampleSummary::Modes</a></div><div class="ttdeci">MaCh3Modes * Modes</div><div class="ttdoc">MaCh3 Modes.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00372">SampleSummary.h:372</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_a70b109c60b7c82a3e36708bd2674cb5e"><div class="ttname"><a href="classSampleSummary.html#a70b109c60b7c82a3e36708bd2674cb5e">SampleSummary::lnLHist</a></div><div class="ttdeci">std::unique_ptr&lt; TH1D &gt; lnLHist</div><div class="ttdoc">The histogram containing the lnL for each throw.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00215">SampleSummary.h:215</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_a718c83e1952f948a5c063c2039a68a19"><div class="ttname"><a href="classSampleSummary.html#a718c83e1952f948a5c063c2039a68a19">SampleSummary::lnLHist_Mean1D</a></div><div class="ttdeci">std::vector&lt; TH1D * &gt; lnLHist_Mean1D</div><div class="ttdoc">Holds the bin-by-bin LLH for the mean posterior predictive vs the data.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00255">SampleSummary.h:255</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_a78eb4766cc8b4758b909b6ce9113a56e"><div class="ttname"><a href="classSampleSummary.html#a78eb4766cc8b4758b909b6ce9113a56e">SampleSummary::OutputTree</a></div><div class="ttdeci">TTree * OutputTree</div><div class="ttdoc">TTree which we save useful information to.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00293">SampleSummary.h:293</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_a795ac96bf6958c8a2f38c9de23c3c081"><div class="ttname"><a href="classSampleSummary.html#a795ac96bf6958c8a2f38c9de23c3c081">SampleSummary::DoByModePlots</a></div><div class="ttdeci">bool DoByModePlots</div><div class="ttdoc">By mode variables.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00362">SampleSummary.h:362</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_a7b1ba5b3b465f78019bb8c36ec5f56d7"><div class="ttname"><a href="classSampleSummary.html#a7b1ba5b3b465f78019bb8c36ec5f56d7">SampleSummary::lnLHist_Mean_ProjectX</a></div><div class="ttdeci">std::vector&lt; TH1D * &gt; lnLHist_Mean_ProjectX</div><div class="ttdoc">The LLH distribution in pmu using the mean in each bin.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00245">SampleSummary.h:245</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_a7e962b36331edb6ff1e9de849cbabee3"><div class="ttname"><a href="classSampleSummary.html#a7e962b36331edb6ff1e9de849cbabee3">SampleSummary::DataHist</a></div><div class="ttdeci">std::vector&lt; TH2Poly * &gt; DataHist</div><div class="ttdoc">The data histogram for the selection.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00200">SampleSummary.h:200</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_a807e348a85fb460c5ca4a1ce56d08aab"><div class="ttname"><a href="classSampleSummary.html#a807e348a85fb460c5ca4a1ce56d08aab">SampleSummary::Debug</a></div><div class="ttdeci">int Debug</div><div class="ttdoc">Tells Debug level to save additional histograms.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00381">SampleSummary.h:381</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_a8c7537f32164be9192f8ba2b12a69cdb"><div class="ttname"><a href="classSampleSummary.html#a8c7537f32164be9192f8ba2b12a69cdb">SampleSummary::lnLDrawHist</a></div><div class="ttdeci">std::unique_ptr&lt; TH2D &gt; lnLDrawHist</div><div class="ttdoc">The 2D lnLhist, showing (draw vs data) and (draw vs fluct), anything above y=x axis is the p-value.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00223">SampleSummary.h:223</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_a93714cf9b778fa7713a641da0cd2d534"><div class="ttname"><a href="classSampleSummary.html#a93714cf9b778fa7713a641da0cd2d534">SampleSummary::ViolinHists_ProjectY</a></div><div class="ttdeci">std::vector&lt; TH2D * &gt; ViolinHists_ProjectY</div><div class="ttdoc">Posterior predictive but for Y projection but as a violin plot.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00197">SampleSummary.h:197</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_a9b21ff74bb8ebd7c3af2c24e02f3d7dc"><div class="ttname"><a href="classSampleSummary.html#a9b21ff74bb8ebd7c3af2c24e02f3d7dc">SampleSummary::ModeHist</a></div><div class="ttdeci">std::vector&lt; TH2Poly * &gt; ModeHist</div><div class="ttdoc">The posterior predictive distribution in pmu cosmu using the mode.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00252">SampleSummary.h:252</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_a9c37d8669c0f55f6a4620b4f0d7b6e20"><div class="ttname"><a href="classSampleSummary.html#a9c37d8669c0f55f6a4620b4f0d7b6e20">SampleSummary::W2NomHist</a></div><div class="ttdeci">std::vector&lt; TH2Poly * &gt; W2NomHist</div><div class="ttdoc">Pointer to the w2 histograms (for nominal values).</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00208">SampleSummary.h:208</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_aa5c4055d4bb4dc720a4118032cdb4910"><div class="ttname"><a href="classSampleSummary.html#aa5c4055d4bb4dc720a4118032cdb4910">SampleSummary::nThrows</a></div><div class="ttdeci">unsigned int nThrows</div><div class="ttdoc">Number of throws.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00277">SampleSummary.h:277</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_aa61561a1e3594ac9250aaee26409245e"><div class="ttname"><a href="classSampleSummary.html#aa61561a1e3594ac9250aaee26409245e">SampleSummary::lnLHist_Sample_DrawData</a></div><div class="ttdeci">std::vector&lt; TH1D * &gt; lnLHist_Sample_DrawData</div><div class="ttdoc">The histogram containing the lnL (draw vs data) for each throw for each sample.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00233">SampleSummary.h:233</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_aa6773885be1b6a2660493718823a2f3f"><div class="ttname"><a href="classSampleSummary.html#aa6773885be1b6a2660493718823a2f3f">SampleSummary::w2Hist</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; std::unique_ptr&lt; TH1D &gt; &gt; &gt; w2Hist</div><div class="ttdoc">The posterior predictive for the whole selection: this gets built after adding in the toys....</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00192">SampleSummary.h:192</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_aa6cfe4fb92b67f08b0d94f0fe1d8a3a2"><div class="ttname"><a href="classSampleSummary.html#aa6cfe4fb92b67f08b0d94f0fe1d8a3a2">SampleSummary::PosteriorHist_ByMode</a></div><div class="ttdeci">TH1D **** PosteriorHist_ByMode</div><div class="ttdoc">Histogram which corresponds to each bin in the sample's th2poly.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00366">SampleSummary.h:366</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_aa6f15a5750ae0224168d487e44ad3d94"><div class="ttname"><a href="classSampleSummary.html#aa6f15a5750ae0224168d487e44ad3d94">SampleSummary::lnLHist_drawflucdraw</a></div><div class="ttdeci">std::unique_ptr&lt; TH1D &gt; lnLHist_drawflucdraw</div><div class="ttdoc">The lnLhist for the draw vs draw fluctuated.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00219">SampleSummary.h:219</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_aa7b948f290517a052f04f61dfa6af68f"><div class="ttname"><a href="classSampleSummary.html#aa7b948f290517a052f04f61dfa6af68f">SampleSummary::Outputfile</a></div><div class="ttdeci">TFile * Outputfile</div><div class="ttdoc">Output filename.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00288">SampleSummary.h:288</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_aae188cf135af004d5364e5b4f3b1bb31"><div class="ttname"><a href="classSampleSummary.html#aae188cf135af004d5364e5b4f3b1bb31">SampleSummary::lnLDrawHistRate</a></div><div class="ttdeci">std::unique_ptr&lt; TH2D &gt; lnLDrawHistRate</div><div class="ttdoc">The 2D lnLhist, showing (draw vs data) and (draw vs fluct), using rate, anything above y=x axis is th...</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00228">SampleSummary.h:228</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_aaf23ed9a699d625adc8639a57de801e8"><div class="ttname"><a href="classSampleSummary.html#aaf23ed9a699d625adc8639a57de801e8">SampleSummary::lnLHist_drawdata</a></div><div class="ttdeci">std::unique_ptr&lt; TH1D &gt; lnLHist_drawdata</div><div class="ttdoc">The lnLhist for the draw vs data.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00221">SampleSummary.h:221</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_ab16d22bf65d2a9c15072901161fc160a"><div class="ttname"><a href="classSampleSummary.html#ab16d22bf65d2a9c15072901161fc160a">SampleSummary::nSamples</a></div><div class="ttdeci">int nSamples</div><div class="ttdoc">Number of samples.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00184">SampleSummary.h:184</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_abd938805245ca6cfeb8c49363f5ff11c"><div class="ttname"><a href="classSampleSummary.html#abd938805245ca6cfeb8c49363f5ff11c">SampleSummary::SamplePDF</a></div><div class="ttdeci">samplePDFBase * SamplePDF</div><div class="ttdoc">Pointer to samplePDF object, mostly used to get sample names, binning etc.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00369">SampleSummary.h:369</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_abeaca1195db794d9e660a377d81c1b21"><div class="ttname"><a href="classSampleSummary.html#abeaca1195db794d9e660a377d81c1b21">SampleSummary::DataHist_ProjectX</a></div><div class="ttdeci">std::vector&lt; TH1D * &gt; DataHist_ProjectX</div><div class="ttdoc">The data histogram for the selection X projection.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00202">SampleSummary.h:202</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_abfeb54f4d95b5b74257a1abf5c98824f"><div class="ttname"><a href="classSampleSummary.html#abfeb54f4d95b5b74257a1abf5c98824f">SampleSummary::DataHist_ProjectY</a></div><div class="ttdeci">std::vector&lt; TH1D * &gt; DataHist_ProjectY</div><div class="ttdoc">The data histogram for the selection Y projection.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00204">SampleSummary.h:204</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_adb737e335e68edeb14a6ce2ca112dc8c"><div class="ttname"><a href="classSampleSummary.html#adb737e335e68edeb14a6ce2ca112dc8c">SampleSummary::isPriorPredictive</a></div><div class="ttdeci">bool isPriorPredictive</div><div class="ttdoc">bool whether we have Prior or Posterior Predictive</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00271">SampleSummary.h:271</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_adf610d698a50c4930d95be320e99a8e8"><div class="ttname"><a href="classSampleSummary.html#adf610d698a50c4930d95be320e99a8e8">SampleSummary::DoBetaParam</a></div><div class="ttdeci">bool DoBetaParam</div><div class="ttdoc">Are we making Beta Histograms.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00265">SampleSummary.h:265</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_adf9b943ba381875b3f2e0c4807a9b8c4"><div class="ttname"><a href="classSampleSummary.html#adf9b943ba381875b3f2e0c4807a9b8c4">SampleSummary::W2ModeHist</a></div><div class="ttdeci">std::vector&lt; TH2Poly * &gt; W2ModeHist</div><div class="ttdoc">Pointer to the w2 histograms (for mode values).</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00212">SampleSummary.h:212</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_ae1aafef6414eafb5572893dded50a1b1"><div class="ttname"><a href="classSampleSummary.html#ae1aafef6414eafb5572893dded50a1b1">SampleSummary::lnLFlucHist</a></div><div class="ttdeci">std::unique_ptr&lt; TH2D &gt; lnLFlucHist</div><div class="ttdoc">The 2D lnLHist, showing (draw vs data) and (draw vs draw fluct), anything above y=x axis is the p-val...</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00225">SampleSummary.h:225</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_ae502645ddf5c53a7a3f2c52566956bf3"><div class="ttname"><a href="classSampleSummary.html#ae502645ddf5c53a7a3f2c52566956bf3">SampleSummary::StandardFluctuation</a></div><div class="ttdeci">bool StandardFluctuation</div><div class="ttdoc">KS: We have two methods for Poissonian fluctuation.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00169">SampleSummary.h:169</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_ae509f51ec2d0323e005e05c255bc0c1f"><div class="ttname"><a href="classSampleSummary.html#ae509f51ec2d0323e005e05c255bc0c1f">SampleSummary::lnLFlucHist_ProjectX</a></div><div class="ttdeci">std::unique_ptr&lt; TH2D &gt; lnLFlucHist_ProjectX</div><div class="ttdoc">The 2D lnLHist but for ProjectionX histogram (pmu), showing (draw vs data) and (draw vs draw fluct),...</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00230">SampleSummary.h:230</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_aead1702a4c1522e685a8af5a875f05ab"><div class="ttname"><a href="classSampleSummary.html#aead1702a4c1522e685a8af5a875f05ab">SampleSummary::lnLHist_drawfluc</a></div><div class="ttdeci">std::unique_ptr&lt; TH1D &gt; lnLHist_drawfluc</div><div class="ttdoc">The lnLhist for the draw vs MC fluctuated.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00217">SampleSummary.h:217</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_aebd01b201cf04608b251cd3e272878b7"><div class="ttname"><a href="classSampleSummary.html#aebd01b201cf04608b251cd3e272878b7">SampleSummary::doShapeOnly</a></div><div class="ttdeci">bool doShapeOnly</div><div class="ttdoc">bool whether to normalise each toy to have shape based p-value and pos pred distribution</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00274">SampleSummary.h:274</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_aecf1c224162e1055e8306d438e1a3761"><div class="ttname"><a href="classSampleSummary.html#aecf1c224162e1055e8306d438e1a3761">SampleSummary::lnLHist_Sample_PredflucDraw</a></div><div class="ttdeci">std::vector&lt; TH1D * &gt; lnLHist_Sample_PredflucDraw</div><div class="ttdoc">The histogram containing the lnL (draw vs pred fluct) for each throw for each sample.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00237">SampleSummary.h:237</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_af0edee6c71137e2a8150c7ba3e8fb6e0"><div class="ttname"><a href="classSampleSummary.html#af0edee6c71137e2a8150c7ba3e8fb6e0">SampleSummary::MeanHist</a></div><div class="ttdeci">std::vector&lt; TH2Poly * &gt; MeanHist</div><div class="ttdoc">The posterior predictive distribution in pmu cosmu using the mean.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00248">SampleSummary.h:248</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_af4767862e5c1f4e3319d16b861213555"><div class="ttname"><a href="classSampleSummary.html#af4767862e5c1f4e3319d16b861213555">SampleSummary::nChainSteps</a></div><div class="ttdeci">unsigned int nChainSteps</div><div class="ttdoc">Number of throws by user.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00268">SampleSummary.h:268</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_af5a3139cef917abfddc36dbb8d4ac2fd"><div class="ttname"><a href="classSampleSummary.html#af5a3139cef917abfddc36dbb8d4ac2fd">SampleSummary::maxBins</a></div><div class="ttdeci">std::vector&lt; int &gt; maxBins</div><div class="ttdoc">Max Number of Bins per each sample.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00280">SampleSummary.h:280</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_afddd2abc0ec07b52dc9004880522ab5a"><div class="ttname"><a href="classSampleSummary.html#afddd2abc0ec07b52dc9004880522ab5a">SampleSummary::lnLHist_Sample_DrawflucDraw</a></div><div class="ttdeci">std::vector&lt; TH1D * &gt; lnLHist_Sample_DrawflucDraw</div><div class="ttdoc">The histogram containing the lnL (draw vs draw fluct) for each throw for each sample.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00235">SampleSummary.h:235</a></div></div>
 <div class="ttc" id="aclasssamplePDFBase_html_a2c02e6a8107a0fd8b9deed6d98015ba3"><div class="ttname"><a href="classsamplePDFBase.html#a2c02e6a8107a0fd8b9deed6d98015ba3">samplePDFBase::GetKinVarLabel</a></div><div class="ttdeci">virtual std::string GetKinVarLabel(const int sample, const int Dimension)</div><div class="ttdef"><b>Definition:</b> <a href="samplePDFBase_8h_source.html#l00060">samplePDFBase.h:60</a></div></div>
 <div class="ttc" id="aclasssamplePDFBase_html_ad7ab324d8b7ac73f92ef6a8d74b9dc72"><div class="ttname"><a href="classsamplePDFBase.html#ad7ab324d8b7ac73f92ef6a8d74b9dc72">samplePDFBase::GetMaCh3Modes</a></div><div class="ttdeci">MaCh3Modes * GetMaCh3Modes() const</div><div class="ttdoc">Return pointer to MaCh3 modes.</div><div class="ttdef"><b>Definition:</b> <a href="samplePDFBase_8h_source.html#l00034">samplePDFBase.h:34</a></div></div>
 </div><!-- fragment -->
@@ -860,7 +862,7 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  214</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="classSampleSummary.html#aecf1c224162e1055e8306d438e1a3761">lnLHist_Sample_PredflucDraw</a>[i] != <span class="keyword">nullptr</span>) <span class="keyword">delete</span> <a class="code hl_variable" href="classSampleSummary.html#aecf1c224162e1055e8306d438e1a3761">lnLHist_Sample_PredflucDraw</a>[i];</div>
 <div class="line"><span class="lineno">  215</span>  }</div>
 <div class="line"><span class="lineno">  216</span>}</div>
-<div class="ttc" id="aclassMaCh3Modes_html_aaa508822590464a0ce36d2fed94e4d03"><div class="ttname"><a href="classMaCh3Modes.html#aaa508822590464a0ce36d2fed94e4d03">MaCh3Modes::GetNModes</a></div><div class="ttdeci">int GetNModes()</div><div class="ttdoc">KS: Get number of modes, keep in mind actual number is +1 greater due to unknown category.</div><div class="ttdef"><b>Definition:</b> <a href="MaCh3Modes_8h_source.html#l00044">MaCh3Modes.h:44</a></div></div>
+<div class="ttc" id="aclassMaCh3Modes_html_aaa508822590464a0ce36d2fed94e4d03"><div class="ttname"><a href="classMaCh3Modes.html#aaa508822590464a0ce36d2fed94e4d03">MaCh3Modes::GetNModes</a></div><div class="ttdeci">int GetNModes()</div><div class="ttdoc">KS: Get number of modes, keep in mind actual number is +1 greater due to unknown category.</div><div class="ttdef"><b>Definition:</b> <a href="MaCh3Modes_8h_source.html#l00045">MaCh3Modes.h:45</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1226,12 +1228,12 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  485</span>  } <span class="comment">// end samples loop</span></div>
 <div class="line"><span class="lineno">  486</span>} <span class="comment">// end AddThrow</span></div>
 <div class="ttc" id="aGetPenaltyTerm_8cpp_html_a439227feff9d7f55384e8780cfc2eb82"><div class="ttname"><a href="GetPenaltyTerm_8cpp.html#a439227feff9d7f55384e8780cfc2eb82">size</a></div><div class="ttdeci">int size</div><div class="ttdef"><b>Definition:</b> <a href="GetPenaltyTerm_8cpp_source.html#l00038">GetPenaltyTerm.cpp:38</a></div></div>
-<div class="ttc" id="aStatisticalUtils_8h_html_afecd84c56d6546271c4547192aae31af"><div class="ttname"><a href="StatisticalUtils_8h.html#afecd84c56d6546271c4547192aae31af">GetBetaParameter</a></div><div class="ttdeci">double GetBetaParameter(const double data, const double mc, const double w2, TestStatistic TestStat)</div><div class="ttdoc">KS: Calculate Beta parameter which will be different based on specified test statistic.</div><div class="ttdef"><b>Definition:</b> <a href="StatisticalUtils_8h_source.html#l00192">StatisticalUtils.h:192</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_a068e2a5ad0c02aaa57a27d2b12e37810"><div class="ttname"><a href="classSampleSummary.html#a068e2a5ad0c02aaa57a27d2b12e37810">SampleSummary::LLHPenaltyVector</a></div><div class="ttdeci">std::vector&lt; double &gt; LLHPenaltyVector</div><div class="ttdoc">Vector to hold the penalty term.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00177">SampleSummary.h:177</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_a13177305e8fd4b97812b2ca563740bf2"><div class="ttname"><a href="classSampleSummary.html#a13177305e8fd4b97812b2ca563740bf2">SampleSummary::MCVector</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; TH2Poly * &gt; &gt; MCVector</div><div class="ttdoc">Vector of vectors which holds the loaded MC histograms.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00170">SampleSummary.h:170</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_a263b7541545b8b0ba735e0a3ac2d31e7"><div class="ttname"><a href="classSampleSummary.html#a263b7541545b8b0ba735e0a3ac2d31e7">SampleSummary::W2MCVector</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; TH2Poly * &gt; &gt; W2MCVector</div><div class="ttdoc">Vector of vectors which holds the loaded W2 histograms.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00172">SampleSummary.h:172</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_aafb18632bb987ae9a302d95781d5fdba"><div class="ttname"><a href="classSampleSummary.html#aafb18632bb987ae9a302d95781d5fdba">SampleSummary::likelihood</a></div><div class="ttdeci">TestStatistic likelihood</div><div class="ttdoc">Type of likelihood for example Poisson, Barlow-Beeston or Ice Cube.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00373">SampleSummary.h:373</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_ad40a0514f4be18ef026ea41bd5965fa3"><div class="ttname"><a href="classSampleSummary.html#ad40a0514f4be18ef026ea41bd5965fa3">SampleSummary::WeightVector</a></div><div class="ttdeci">std::vector&lt; double &gt; WeightVector</div><div class="ttdoc">Vector holding weight.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00179">SampleSummary.h:179</a></div></div>
+<div class="ttc" id="aStatisticalUtils_8h_html_afecd84c56d6546271c4547192aae31af"><div class="ttname"><a href="StatisticalUtils_8h.html#afecd84c56d6546271c4547192aae31af">GetBetaParameter</a></div><div class="ttdeci">double GetBetaParameter(const double data, const double mc, const double w2, TestStatistic TestStat)</div><div class="ttdoc">KS: Calculate Beta parameter which will be different based on specified test statistic.</div><div class="ttdef"><b>Definition:</b> <a href="StatisticalUtils_8h_source.html#l00193">StatisticalUtils.h:193</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_a068e2a5ad0c02aaa57a27d2b12e37810"><div class="ttname"><a href="classSampleSummary.html#a068e2a5ad0c02aaa57a27d2b12e37810">SampleSummary::LLHPenaltyVector</a></div><div class="ttdeci">std::vector&lt; double &gt; LLHPenaltyVector</div><div class="ttdoc">Vector to hold the penalty term.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00179">SampleSummary.h:179</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_a13177305e8fd4b97812b2ca563740bf2"><div class="ttname"><a href="classSampleSummary.html#a13177305e8fd4b97812b2ca563740bf2">SampleSummary::MCVector</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; TH2Poly * &gt; &gt; MCVector</div><div class="ttdoc">Vector of vectors which holds the loaded MC histograms.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00172">SampleSummary.h:172</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_a263b7541545b8b0ba735e0a3ac2d31e7"><div class="ttname"><a href="classSampleSummary.html#a263b7541545b8b0ba735e0a3ac2d31e7">SampleSummary::W2MCVector</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; TH2Poly * &gt; &gt; W2MCVector</div><div class="ttdoc">Vector of vectors which holds the loaded W2 histograms.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00174">SampleSummary.h:174</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_aafb18632bb987ae9a302d95781d5fdba"><div class="ttname"><a href="classSampleSummary.html#aafb18632bb987ae9a302d95781d5fdba">SampleSummary::likelihood</a></div><div class="ttdeci">TestStatistic likelihood</div><div class="ttdoc">Type of likelihood for example Poisson, Barlow-Beeston or Ice Cube.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00375">SampleSummary.h:375</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_ad40a0514f4be18ef026ea41bd5965fa3"><div class="ttname"><a href="classSampleSummary.html#ad40a0514f4be18ef026ea41bd5965fa3">SampleSummary::WeightVector</a></div><div class="ttdeci">std::vector&lt; double &gt; WeightVector</div><div class="ttdoc">Vector holding weight.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00181">SampleSummary.h:181</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1325,7 +1327,7 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  559</span>  }</div>
 <div class="line"><span class="lineno">  560</span>} <span class="comment">// end AddThrowByMode</span></div>
 <div class="ttc" id="aclassMaCh3Modes_html_abf4ac35511787907bc16ae26aa6c2a15"><div class="ttname"><a href="classMaCh3Modes.html#abf4ac35511787907bc16ae26aa6c2a15">MaCh3Modes::GetMaCh3ModeName</a></div><div class="ttdeci">std::string GetMaCh3ModeName(const int Index)</div><div class="ttdoc">KS: Get normal name of mode, if mode not known you will get UNKNOWN_BAD.</div><div class="ttdef"><b>Definition:</b> <a href="MaCh3Modes_8cpp_source.html#l00124">MaCh3Modes.cpp:124</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_ab3eeac18b62f7ee3a5c943c3cd0e9b76"><div class="ttname"><a href="classSampleSummary.html#ab3eeac18b62f7ee3a5c943c3cd0e9b76">SampleSummary::MCVectorByMode</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; std::vector&lt; TH2Poly * &gt; &gt; &gt; MCVectorByMode</div><div class="ttdoc">Vector of vectors which holds the loaded MC histograms for each mode.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00174">SampleSummary.h:174</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_ab3eeac18b62f7ee3a5c943c3cd0e9b76"><div class="ttname"><a href="classSampleSummary.html#ab3eeac18b62f7ee3a5c943c3cd0e9b76">SampleSummary::MCVectorByMode</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; std::vector&lt; TH2Poly * &gt; &gt; &gt; MCVectorByMode</div><div class="ttdoc">Vector of vectors which holds the loaded MC histograms for each mode.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00176">SampleSummary.h:176</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2151,37 +2153,37 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno"> 1434</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;Calculated exact p-value using Fluctuation of Draw: {:.2f}&quot;</span>, pvalue_DrawFluc);</div>
 <div class="line"><span class="lineno"> 1435</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;Calculated exact p-value using Fluctuation of Prediction: {:.2f}&quot;</span>, pvalue_PredFluc);</div>
 <div class="line"><span class="lineno"> 1436</span>}</div>
-<div class="ttc" id="aclassSampleSummary_html_a083eb13c61fe7d1b88b2ebe845312640"><div class="ttname"><a href="classSampleSummary.html#a083eb13c61fe7d1b88b2ebe845312640">SampleSummary::llh_data_draw_ProjectX</a></div><div class="ttdeci">std::vector&lt; double &gt; llh_data_draw_ProjectX</div><div class="ttdoc">Projection X (most likely muon momentum) of LLH.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00321">SampleSummary.h:321</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_a107a3073ee178eff7107ccd5f41b91c5"><div class="ttname"><a href="classSampleSummary.html#a107a3073ee178eff7107ccd5f41b91c5">SampleSummary::llh_predfluc_draw</a></div><div class="ttdeci">std::vector&lt; double &gt; llh_predfluc_draw</div><div class="ttdoc">Fluctuated Predictive vs Draw.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00297">SampleSummary.h:297</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_a1f6c2e7ed8f9024cf928da5b56054e07"><div class="ttname"><a href="classSampleSummary.html#a1f6c2e7ed8f9024cf928da5b56054e07">SampleSummary::total_llh_predfluc_pred</a></div><div class="ttdeci">double total_llh_predfluc_pred</div><div class="ttdoc">Fluctuated Predictive vs Predictive.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00352">SampleSummary.h:352</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_a22df11667306c7892f9ed3f8935a5c9e"><div class="ttname"><a href="classSampleSummary.html#a22df11667306c7892f9ed3f8935a5c9e">SampleSummary::total_llh_drawfluc_draw_ProjectX</a></div><div class="ttdeci">double total_llh_drawfluc_draw_ProjectX</div><div class="ttdoc">Fluctuated Draw vs Draw for projection X (most likely muon momentum)</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00357">SampleSummary.h:357</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_a2cb3d8dcbab49b62be3bc2a4a7e4d5f3"><div class="ttname"><a href="classSampleSummary.html#a2cb3d8dcbab49b62be3bc2a4a7e4d5f3">SampleSummary::total_llh_data_draw</a></div><div class="ttdeci">double total_llh_data_draw</div><div class="ttdoc">Data vs Draw.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00328">SampleSummary.h:328</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_a2ebe701d114669fdfcf61e1680bb144d"><div class="ttname"><a href="classSampleSummary.html#a2ebe701d114669fdfcf61e1680bb144d">SampleSummary::total_llh_rate_predfluc_draw</a></div><div class="ttdeci">double total_llh_rate_predfluc_draw</div><div class="ttdoc">Fluctuated Predictive vs Draw using Rate.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00337">SampleSummary.h:337</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_a325a83aec886a90ed6d4c96ccf573c56"><div class="ttname"><a href="classSampleSummary.html#a325a83aec886a90ed6d4c96ccf573c56">SampleSummary::llh_data_predfluc</a></div><div class="ttdeci">std::vector&lt; double &gt; llh_data_predfluc</div><div class="ttdoc">Data vs Fluctuated Predictive.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00307">SampleSummary.h:307</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_a464faf180667c999aec72c140ddb515a"><div class="ttname"><a href="classSampleSummary.html#a464faf180667c999aec72c140ddb515a">SampleSummary::llh_predfluc_pred</a></div><div class="ttdeci">std::vector&lt; double &gt; llh_predfluc_pred</div><div class="ttdoc">Fluctuated Predictive vs Predictive.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00314">SampleSummary.h:314</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_a58efe34df7c43fb40d211036e30a1b5d"><div class="ttname"><a href="classSampleSummary.html#a58efe34df7c43fb40d211036e30a1b5d">SampleSummary::total_llh_draw_pred</a></div><div class="ttdeci">double total_llh_draw_pred</div><div class="ttdoc">Draw vs Predictive.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00344">SampleSummary.h:344</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_a596fc0b5e504bf382c342e950dd7cb95"><div class="ttname"><a href="classSampleSummary.html#a596fc0b5e504bf382c342e950dd7cb95">SampleSummary::llh_drawfluc_draw</a></div><div class="ttdeci">std::vector&lt; double &gt; llh_drawfluc_draw</div><div class="ttdoc">Fluctuated Draw vs Draw.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00295">SampleSummary.h:295</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_a5a973692db89f52c19c9195ffe95c9a1"><div class="ttname"><a href="classSampleSummary.html#a5a973692db89f52c19c9195ffe95c9a1">SampleSummary::total_llh_data_draw_ProjectX</a></div><div class="ttdeci">double total_llh_data_draw_ProjectX</div><div class="ttdoc">Data vs Draw for projection X (most likely muon momentum)</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00355">SampleSummary.h:355</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_a642d0e2bb5bc0729744684a3f8bbc459"><div class="ttname"><a href="classSampleSummary.html#a642d0e2bb5bc0729744684a3f8bbc459">SampleSummary::llh_drawfluc_predfluc</a></div><div class="ttdeci">std::vector&lt; double &gt; llh_drawfluc_predfluc</div><div class="ttdoc">Fluctuated Draw vs Fluctuated Predictive.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00316">SampleSummary.h:316</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_a668c1a7ce4ef8592eae4a91ef99c60dc"><div class="ttname"><a href="classSampleSummary.html#a668c1a7ce4ef8592eae4a91ef99c60dc">SampleSummary::llh_data_draw</a></div><div class="ttdeci">std::vector&lt; double &gt; llh_data_draw</div><div class="ttdoc">Data vs Draw.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00293">SampleSummary.h:293</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_a670c890357fd77997279c83c197f989c"><div class="ttname"><a href="classSampleSummary.html#a670c890357fd77997279c83c197f989c">SampleSummary::total_llh_data_drawfluc</a></div><div class="ttdeci">double total_llh_data_drawfluc</div><div class="ttdoc">Data vs Fluctuated Draw.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00342">SampleSummary.h:342</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_a7e418146cce2c4201c3aa7e1eaad4a38"><div class="ttname"><a href="classSampleSummary.html#a7e418146cce2c4201c3aa7e1eaad4a38">SampleSummary::total_llh_drawfluc_draw</a></div><div class="ttdeci">double total_llh_drawfluc_draw</div><div class="ttdoc">Fluctuated Draw vs Draw.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00330">SampleSummary.h:330</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_a7f46ee13ef20275c5dc162196190984b"><div class="ttname"><a href="classSampleSummary.html#a7f46ee13ef20275c5dc162196190984b">SampleSummary::llh_draw_pred</a></div><div class="ttdeci">std::vector&lt; double &gt; llh_draw_pred</div><div class="ttdoc">Draw vs Predictive.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00309">SampleSummary.h:309</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_a804a117990fd1441c9e3a9d8e8d32e98"><div class="ttname"><a href="classSampleSummary.html#a804a117990fd1441c9e3a9d8e8d32e98">SampleSummary::total_llh_predfluc_draw</a></div><div class="ttdeci">double total_llh_predfluc_draw</div><div class="ttdoc">Fluctuated Predictive vs Draw.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00332">SampleSummary.h:332</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_a81be1b29e649529930276daab33f7b69"><div class="ttname"><a href="classSampleSummary.html#a81be1b29e649529930276daab33f7b69">SampleSummary::llh_drawfluc_draw_ProjectX</a></div><div class="ttdeci">std::vector&lt; double &gt; llh_drawfluc_draw_ProjectX</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00322">SampleSummary.h:322</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_a083eb13c61fe7d1b88b2ebe845312640"><div class="ttname"><a href="classSampleSummary.html#a083eb13c61fe7d1b88b2ebe845312640">SampleSummary::llh_data_draw_ProjectX</a></div><div class="ttdeci">std::vector&lt; double &gt; llh_data_draw_ProjectX</div><div class="ttdoc">Projection X (most likely muon momentum) of LLH.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00323">SampleSummary.h:323</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_a107a3073ee178eff7107ccd5f41b91c5"><div class="ttname"><a href="classSampleSummary.html#a107a3073ee178eff7107ccd5f41b91c5">SampleSummary::llh_predfluc_draw</a></div><div class="ttdeci">std::vector&lt; double &gt; llh_predfluc_draw</div><div class="ttdoc">Fluctuated Predictive vs Draw.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00299">SampleSummary.h:299</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_a1f6c2e7ed8f9024cf928da5b56054e07"><div class="ttname"><a href="classSampleSummary.html#a1f6c2e7ed8f9024cf928da5b56054e07">SampleSummary::total_llh_predfluc_pred</a></div><div class="ttdeci">double total_llh_predfluc_pred</div><div class="ttdoc">Fluctuated Predictive vs Predictive.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00354">SampleSummary.h:354</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_a22df11667306c7892f9ed3f8935a5c9e"><div class="ttname"><a href="classSampleSummary.html#a22df11667306c7892f9ed3f8935a5c9e">SampleSummary::total_llh_drawfluc_draw_ProjectX</a></div><div class="ttdeci">double total_llh_drawfluc_draw_ProjectX</div><div class="ttdoc">Fluctuated Draw vs Draw for projection X (most likely muon momentum)</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00359">SampleSummary.h:359</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_a2cb3d8dcbab49b62be3bc2a4a7e4d5f3"><div class="ttname"><a href="classSampleSummary.html#a2cb3d8dcbab49b62be3bc2a4a7e4d5f3">SampleSummary::total_llh_data_draw</a></div><div class="ttdeci">double total_llh_data_draw</div><div class="ttdoc">Data vs Draw.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00330">SampleSummary.h:330</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_a2ebe701d114669fdfcf61e1680bb144d"><div class="ttname"><a href="classSampleSummary.html#a2ebe701d114669fdfcf61e1680bb144d">SampleSummary::total_llh_rate_predfluc_draw</a></div><div class="ttdeci">double total_llh_rate_predfluc_draw</div><div class="ttdoc">Fluctuated Predictive vs Draw using Rate.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00339">SampleSummary.h:339</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_a325a83aec886a90ed6d4c96ccf573c56"><div class="ttname"><a href="classSampleSummary.html#a325a83aec886a90ed6d4c96ccf573c56">SampleSummary::llh_data_predfluc</a></div><div class="ttdeci">std::vector&lt; double &gt; llh_data_predfluc</div><div class="ttdoc">Data vs Fluctuated Predictive.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00309">SampleSummary.h:309</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_a464faf180667c999aec72c140ddb515a"><div class="ttname"><a href="classSampleSummary.html#a464faf180667c999aec72c140ddb515a">SampleSummary::llh_predfluc_pred</a></div><div class="ttdeci">std::vector&lt; double &gt; llh_predfluc_pred</div><div class="ttdoc">Fluctuated Predictive vs Predictive.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00316">SampleSummary.h:316</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_a58efe34df7c43fb40d211036e30a1b5d"><div class="ttname"><a href="classSampleSummary.html#a58efe34df7c43fb40d211036e30a1b5d">SampleSummary::total_llh_draw_pred</a></div><div class="ttdeci">double total_llh_draw_pred</div><div class="ttdoc">Draw vs Predictive.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00346">SampleSummary.h:346</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_a596fc0b5e504bf382c342e950dd7cb95"><div class="ttname"><a href="classSampleSummary.html#a596fc0b5e504bf382c342e950dd7cb95">SampleSummary::llh_drawfluc_draw</a></div><div class="ttdeci">std::vector&lt; double &gt; llh_drawfluc_draw</div><div class="ttdoc">Fluctuated Draw vs Draw.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00297">SampleSummary.h:297</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_a5a973692db89f52c19c9195ffe95c9a1"><div class="ttname"><a href="classSampleSummary.html#a5a973692db89f52c19c9195ffe95c9a1">SampleSummary::total_llh_data_draw_ProjectX</a></div><div class="ttdeci">double total_llh_data_draw_ProjectX</div><div class="ttdoc">Data vs Draw for projection X (most likely muon momentum)</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00357">SampleSummary.h:357</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_a642d0e2bb5bc0729744684a3f8bbc459"><div class="ttname"><a href="classSampleSummary.html#a642d0e2bb5bc0729744684a3f8bbc459">SampleSummary::llh_drawfluc_predfluc</a></div><div class="ttdeci">std::vector&lt; double &gt; llh_drawfluc_predfluc</div><div class="ttdoc">Fluctuated Draw vs Fluctuated Predictive.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00318">SampleSummary.h:318</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_a668c1a7ce4ef8592eae4a91ef99c60dc"><div class="ttname"><a href="classSampleSummary.html#a668c1a7ce4ef8592eae4a91ef99c60dc">SampleSummary::llh_data_draw</a></div><div class="ttdeci">std::vector&lt; double &gt; llh_data_draw</div><div class="ttdoc">Data vs Draw.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00295">SampleSummary.h:295</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_a670c890357fd77997279c83c197f989c"><div class="ttname"><a href="classSampleSummary.html#a670c890357fd77997279c83c197f989c">SampleSummary::total_llh_data_drawfluc</a></div><div class="ttdeci">double total_llh_data_drawfluc</div><div class="ttdoc">Data vs Fluctuated Draw.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00344">SampleSummary.h:344</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_a7e418146cce2c4201c3aa7e1eaad4a38"><div class="ttname"><a href="classSampleSummary.html#a7e418146cce2c4201c3aa7e1eaad4a38">SampleSummary::total_llh_drawfluc_draw</a></div><div class="ttdeci">double total_llh_drawfluc_draw</div><div class="ttdoc">Fluctuated Draw vs Draw.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00332">SampleSummary.h:332</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_a7f46ee13ef20275c5dc162196190984b"><div class="ttname"><a href="classSampleSummary.html#a7f46ee13ef20275c5dc162196190984b">SampleSummary::llh_draw_pred</a></div><div class="ttdeci">std::vector&lt; double &gt; llh_draw_pred</div><div class="ttdoc">Draw vs Predictive.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00311">SampleSummary.h:311</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_a804a117990fd1441c9e3a9d8e8d32e98"><div class="ttname"><a href="classSampleSummary.html#a804a117990fd1441c9e3a9d8e8d32e98">SampleSummary::total_llh_predfluc_draw</a></div><div class="ttdeci">double total_llh_predfluc_draw</div><div class="ttdoc">Fluctuated Predictive vs Draw.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00334">SampleSummary.h:334</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_a81be1b29e649529930276daab33f7b69"><div class="ttname"><a href="classSampleSummary.html#a81be1b29e649529930276daab33f7b69">SampleSummary::llh_drawfluc_draw_ProjectX</a></div><div class="ttdeci">std::vector&lt; double &gt; llh_drawfluc_draw_ProjectX</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00324">SampleSummary.h:324</a></div></div>
 <div class="ttc" id="aclassSampleSummary_html_a90fbcfacacf629b0b5f0de3fdab3fdfd"><div class="ttname"><a href="classSampleSummary.html#a90fbcfacacf629b0b5f0de3fdab3fdfd">SampleSummary::FastViolinFill</a></div><div class="ttdeci">void FastViolinFill(TH2D *violin, TH1D *hist_1d)</div><div class="ttdoc">KS: Fill Violin histogram with entry from a toy.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8cpp_source.html#l02597">SampleSummary.cpp:2597</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_a999cbd0982694a364f8706ca2b435d81"><div class="ttname"><a href="classSampleSummary.html#a999cbd0982694a364f8706ca2b435d81">SampleSummary::llh_data_drawfluc</a></div><div class="ttdeci">std::vector&lt; double &gt; llh_data_drawfluc</div><div class="ttdoc">Data vs Fluctuated Draw.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00305">SampleSummary.h:305</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_a9c8b444ac7f80a5af63d5b9f4a150b79"><div class="ttname"><a href="classSampleSummary.html#a9c8b444ac7f80a5af63d5b9f4a150b79">SampleSummary::total_llh_drawfluc_pred</a></div><div class="ttdeci">double total_llh_drawfluc_pred</div><div class="ttdoc">Fluctuated Draw vs Predictive.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00346">SampleSummary.h:346</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_aa27591c1aff4c4e8e25fbf9c13ae37c5"><div class="ttname"><a href="classSampleSummary.html#aa27591c1aff4c4e8e25fbf9c13ae37c5">SampleSummary::llh_rate_predfluc_draw</a></div><div class="ttdeci">std::vector&lt; double &gt; llh_rate_predfluc_draw</div><div class="ttdoc">Fluctuated Predictive vs Draw using rate only.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00302">SampleSummary.h:302</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_aaf055562efe3e5f2592942f5151ece22"><div class="ttname"><a href="classSampleSummary.html#aaf055562efe3e5f2592942f5151ece22">SampleSummary::total_llh_rate_data_draw</a></div><div class="ttdeci">double total_llh_rate_data_draw</div><div class="ttdoc">Rate Data vs Draw.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00335">SampleSummary.h:335</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_abc8205a6fddca44ed7c5b3e5c50612e7"><div class="ttname"><a href="classSampleSummary.html#abc8205a6fddca44ed7c5b3e5c50612e7">SampleSummary::llh_drawfluc_pred</a></div><div class="ttdeci">std::vector&lt; double &gt; llh_drawfluc_pred</div><div class="ttdoc">Fluctuated Draw vs Predictive.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00311">SampleSummary.h:311</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_abe225db63f8137df4b74d138ab1eb6f2"><div class="ttname"><a href="classSampleSummary.html#abe225db63f8137df4b74d138ab1eb6f2">SampleSummary::llh_datafluc_draw</a></div><div class="ttdeci">std::vector&lt; double &gt; llh_datafluc_draw</div><div class="ttdoc">Fluctuated Data vs Draw.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00318">SampleSummary.h:318</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_a999cbd0982694a364f8706ca2b435d81"><div class="ttname"><a href="classSampleSummary.html#a999cbd0982694a364f8706ca2b435d81">SampleSummary::llh_data_drawfluc</a></div><div class="ttdeci">std::vector&lt; double &gt; llh_data_drawfluc</div><div class="ttdoc">Data vs Fluctuated Draw.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00307">SampleSummary.h:307</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_a9c8b444ac7f80a5af63d5b9f4a150b79"><div class="ttname"><a href="classSampleSummary.html#a9c8b444ac7f80a5af63d5b9f4a150b79">SampleSummary::total_llh_drawfluc_pred</a></div><div class="ttdeci">double total_llh_drawfluc_pred</div><div class="ttdoc">Fluctuated Draw vs Predictive.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00348">SampleSummary.h:348</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_aa27591c1aff4c4e8e25fbf9c13ae37c5"><div class="ttname"><a href="classSampleSummary.html#aa27591c1aff4c4e8e25fbf9c13ae37c5">SampleSummary::llh_rate_predfluc_draw</a></div><div class="ttdeci">std::vector&lt; double &gt; llh_rate_predfluc_draw</div><div class="ttdoc">Fluctuated Predictive vs Draw using rate only.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00304">SampleSummary.h:304</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_aaf055562efe3e5f2592942f5151ece22"><div class="ttname"><a href="classSampleSummary.html#aaf055562efe3e5f2592942f5151ece22">SampleSummary::total_llh_rate_data_draw</a></div><div class="ttdeci">double total_llh_rate_data_draw</div><div class="ttdoc">Rate Data vs Draw.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00337">SampleSummary.h:337</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_abc8205a6fddca44ed7c5b3e5c50612e7"><div class="ttname"><a href="classSampleSummary.html#abc8205a6fddca44ed7c5b3e5c50612e7">SampleSummary::llh_drawfluc_pred</a></div><div class="ttdeci">std::vector&lt; double &gt; llh_drawfluc_pred</div><div class="ttdoc">Fluctuated Draw vs Predictive.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00313">SampleSummary.h:313</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_abe225db63f8137df4b74d138ab1eb6f2"><div class="ttname"><a href="classSampleSummary.html#abe225db63f8137df4b74d138ab1eb6f2">SampleSummary::llh_datafluc_draw</a></div><div class="ttdeci">std::vector&lt; double &gt; llh_datafluc_draw</div><div class="ttdoc">Fluctuated Data vs Draw.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00320">SampleSummary.h:320</a></div></div>
 <div class="ttc" id="aclassSampleSummary_html_ada2f0b7b9b7bb687e67023e84151610e"><div class="ttname"><a href="classSampleSummary.html#ada2f0b7b9b7bb687e67023e84151610e">SampleSummary::MakeFluctuatedHistogram</a></div><div class="ttdeci">void MakeFluctuatedHistogram(TH1D *FluctHist, TH1D *PolyHist)</div><div class="ttdoc">Make Poisson fluctuation of TH1D hist.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8cpp_source.html#l02284">SampleSummary.cpp:2284</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_adae47fb3a91f5946c7329c6e3643ae9a"><div class="ttname"><a href="classSampleSummary.html#adae47fb3a91f5946c7329c6e3643ae9a">SampleSummary::llh_rate_data_draw</a></div><div class="ttdeci">std::vector&lt; double &gt; llh_rate_data_draw</div><div class="ttdoc">Data vs Draw using rate only.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00300">SampleSummary.h:300</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_aeee48af77dc4e0beee5eab13c30f3d38"><div class="ttname"><a href="classSampleSummary.html#aeee48af77dc4e0beee5eab13c30f3d38">SampleSummary::total_llh_data_predfluc</a></div><div class="ttdeci">double total_llh_data_predfluc</div><div class="ttdoc">Data vs Fluctuated Predictive.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00340">SampleSummary.h:340</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_aef70c5ef9c8432dc42ff7f6c73c7e8d5"><div class="ttname"><a href="classSampleSummary.html#aef70c5ef9c8432dc42ff7f6c73c7e8d5">SampleSummary::llh_penalty</a></div><div class="ttdeci">double llh_penalty</div><div class="ttdoc">LLH penalty for each throw.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00325">SampleSummary.h:325</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_af92a42a666e1bfcb2dc761ffa2253b7e"><div class="ttname"><a href="classSampleSummary.html#af92a42a666e1bfcb2dc761ffa2253b7e">SampleSummary::total_llh_drawfluc_predfluc</a></div><div class="ttdeci">double total_llh_drawfluc_predfluc</div><div class="ttdoc">Fluctuated Draw vs Fluctuated Predictive.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00348">SampleSummary.h:348</a></div></div>
-<div class="ttc" id="aclassSampleSummary_html_af9e5d89095e6c6a81aedb5ea2402e3fb"><div class="ttname"><a href="classSampleSummary.html#af9e5d89095e6c6a81aedb5ea2402e3fb">SampleSummary::total_llh_datafluc_draw</a></div><div class="ttdeci">double total_llh_datafluc_draw</div><div class="ttdoc">Fluctuated Data vs Draw.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00350">SampleSummary.h:350</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_adae47fb3a91f5946c7329c6e3643ae9a"><div class="ttname"><a href="classSampleSummary.html#adae47fb3a91f5946c7329c6e3643ae9a">SampleSummary::llh_rate_data_draw</a></div><div class="ttdeci">std::vector&lt; double &gt; llh_rate_data_draw</div><div class="ttdoc">Data vs Draw using rate only.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00302">SampleSummary.h:302</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_aeee48af77dc4e0beee5eab13c30f3d38"><div class="ttname"><a href="classSampleSummary.html#aeee48af77dc4e0beee5eab13c30f3d38">SampleSummary::total_llh_data_predfluc</a></div><div class="ttdeci">double total_llh_data_predfluc</div><div class="ttdoc">Data vs Fluctuated Predictive.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00342">SampleSummary.h:342</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_aef70c5ef9c8432dc42ff7f6c73c7e8d5"><div class="ttname"><a href="classSampleSummary.html#aef70c5ef9c8432dc42ff7f6c73c7e8d5">SampleSummary::llh_penalty</a></div><div class="ttdeci">double llh_penalty</div><div class="ttdoc">LLH penalty for each throw.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00327">SampleSummary.h:327</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_af92a42a666e1bfcb2dc761ffa2253b7e"><div class="ttname"><a href="classSampleSummary.html#af92a42a666e1bfcb2dc761ffa2253b7e">SampleSummary::total_llh_drawfluc_predfluc</a></div><div class="ttdeci">double total_llh_drawfluc_predfluc</div><div class="ttdoc">Fluctuated Draw vs Fluctuated Predictive.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00350">SampleSummary.h:350</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_af9e5d89095e6c6a81aedb5ea2402e3fb"><div class="ttname"><a href="classSampleSummary.html#af9e5d89095e6c6a81aedb5ea2402e3fb">SampleSummary::total_llh_datafluc_draw</a></div><div class="ttdeci">double total_llh_datafluc_draw</div><div class="ttdoc">Fluctuated Data vs Draw.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00352">SampleSummary.h:352</a></div></div>
 <div class="ttc" id="anamespaceMaCh3Utils_html_a4c8bdeb1d34606aed192e9f1311a72f5"><div class="ttname"><a href="namespaceMaCh3Utils.html#a4c8bdeb1d34606aed192e9f1311a72f5">MaCh3Utils::PrintProgressBar</a></div><div class="ttdeci">void PrintProgressBar(const Long64_t Done, const Long64_t All)</div><div class="ttdoc">KS: Simply print progress bar.</div><div class="ttdef"><b>Definition:</b> <a href="Monitor_8cpp_source.html#l00189">Monitor.cpp:189</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -2411,7 +2413,7 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno"> 1512</span>  <span class="keyword">delete</span> TempHistogram;</div>
 <div class="line"><span class="lineno"> 1513</span>  <span class="keyword">delete</span> TempCanvas;</div>
 <div class="line"><span class="lineno"> 1514</span>}</div>
-<div class="ttc" id="aclassSampleSummary_html_aacac73b24f1e8b05d35fabe2322578e8"><div class="ttname"><a href="classSampleSummary.html#aacac73b24f1e8b05d35fabe2322578e8">SampleSummary::llh_total</a></div><div class="ttdeci">double llh_total</div><div class="ttdoc">Total LLH for the posterior predictive distribution.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00281">SampleSummary.h:281</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_aacac73b24f1e8b05d35fabe2322578e8"><div class="ttname"><a href="classSampleSummary.html#aacac73b24f1e8b05d35fabe2322578e8">SampleSummary::llh_total</a></div><div class="ttdeci">double llh_total</div><div class="ttdoc">Total LLH for the posterior predictive distribution.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00283">SampleSummary.h:283</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -3140,7 +3142,7 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno"> 1785</span>  gErrorIgnoreLevel = originalErrorLevel;</div>
 <div class="line"><span class="lineno"> 1786</span>  <a class="code hl_variable" href="classSampleSummary.html#aa7b948f290517a052f04f61dfa6af68f">Outputfile</a>-&gt;cd();</div>
 <div class="line"><span class="lineno"> 1787</span>}</div>
-<div class="ttc" id="aclassSampleSummary_html_a9ba7df41774c45a14c0a97e4accc9cc0"><div class="ttname"><a href="classSampleSummary.html#a9ba7df41774c45a14c0a97e4accc9cc0">SampleSummary::SampleNames</a></div><div class="ttdeci">std::vector&lt; std::string &gt; SampleNames</div><div class="ttdoc">name for each sample</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00185">SampleSummary.h:185</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_a9ba7df41774c45a14c0a97e4accc9cc0"><div class="ttname"><a href="classSampleSummary.html#a9ba7df41774c45a14c0a97e4accc9cc0">SampleSummary::SampleNames</a></div><div class="ttdeci">std::vector&lt; std::string &gt; SampleNames</div><div class="ttdoc">name for each sample</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00187">SampleSummary.h:187</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -3280,7 +3282,7 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">  670</span>    <a class="code hl_variable" href="classSampleSummary.html#aa2064e7455c3164ee5118a5e5162f282">Dir</a>[i] = <a class="code hl_variable" href="classSampleSummary.html#aa7b948f290517a052f04f61dfa6af68f">Outputfile</a>-&gt;mkdir((<a class="code hl_variable" href="classSampleSummary.html#a9ba7df41774c45a14c0a97e4accc9cc0">SampleNames</a>[i]).c_str());</div>
 <div class="line"><span class="lineno">  671</span>  }</div>
 <div class="line"><span class="lineno">  672</span>}</div>
-<div class="ttc" id="aclassSampleSummary_html_aa2064e7455c3164ee5118a5e5162f282"><div class="ttname"><a href="classSampleSummary.html#aa2064e7455c3164ee5118a5e5162f282">SampleSummary::Dir</a></div><div class="ttdeci">std::vector&lt; TDirectory * &gt; Dir</div><div class="ttdoc">Directory for each sample.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00288">SampleSummary.h:288</a></div></div>
+<div class="ttc" id="aclassSampleSummary_html_aa2064e7455c3164ee5118a5e5162f282"><div class="ttname"><a href="classSampleSummary.html#aa2064e7455c3164ee5118a5e5162f282">SampleSummary::Dir</a></div><div class="ttdeci">std::vector&lt; TDirectory * &gt; Dir</div><div class="ttdoc">Directory for each sample.</div><div class="ttdef"><b>Definition:</b> <a href="SampleSummary_8h_source.html#l00290">SampleSummary.h:290</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -3538,8 +3540,8 @@ template&lt;class HistType &gt; </div>
 
 <p>KS: Set likelihood type. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00049">49</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   49</span>{ <a class="code hl_variable" href="classSampleSummary.html#aafb18632bb987ae9a302d95781d5fdba">likelihood</a> = TestStat;};</div>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00051">51</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>{ <a class="code hl_variable" href="classSampleSummary.html#aafb18632bb987ae9a302d95781d5fdba">likelihood</a> = TestStat;};</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -3569,8 +3571,8 @@ template&lt;class HistType &gt; </div>
 
 <p>Set number of model params used for BIC. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00051">51</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   51</span>{ <a class="code hl_variable" href="classSampleSummary.html#a49215601479aaa99f9f64d8f7c900385">nModelParams</a> = nPars;};</div>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00053">53</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   53</span>{ <a class="code hl_variable" href="classSampleSummary.html#a49215601479aaa99f9f64d8f7c900385">nModelParams</a> = nPars;};</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -3621,7 +3623,7 @@ template&lt;class HistType &gt; </div>
 <div class="line"><span class="lineno"> 2502</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;Calculated Bayesian Information Criterion using global number of bins: {:.2f}&quot;</span>, BinBasedBIC);</div>
 <div class="line"><span class="lineno"> 2503</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;Additional info: nModelParams {} DataRate: {:.2f} BinsRate: {:.2f}&quot;</span>, <a class="code hl_variable" href="classSampleSummary.html#a49215601479aaa99f9f64d8f7c900385">nModelParams</a>, DataRate, BinsRate);</div>
 <div class="line"><span class="lineno"> 2504</span>}</div>
-<div class="ttc" id="aStatisticalUtils_8h_html_a3dbcf2e503dd81c1c26f063a7e6b3362"><div class="ttname"><a href="StatisticalUtils_8h.html#a3dbcf2e503dd81c1c26f063a7e6b3362">GetBIC</a></div><div class="ttdeci">double GetBIC(const double llh, const int data, const int nPars)</div><div class="ttdoc">Get the Bayesian Information Criterion (BIC) or Schwarz information criterion (also SIC,...</div><div class="ttdef"><b>Definition:</b> <a href="StatisticalUtils_8h_source.html#l00088">StatisticalUtils.h:88</a></div></div>
+<div class="ttc" id="aStatisticalUtils_8h_html_a3dbcf2e503dd81c1c26f063a7e6b3362"><div class="ttname"><a href="StatisticalUtils_8h.html#a3dbcf2e503dd81c1c26f063a7e6b3362">GetBIC</a></div><div class="ttdeci">double GetBIC(const double llh, const int data, const int nPars)</div><div class="ttdoc">Get the Bayesian Information Criterion (BIC) or Schwarz information criterion (also SIC,...</div><div class="ttdef"><b>Definition:</b> <a href="StatisticalUtils_8h_source.html#l00089">StatisticalUtils.h:89</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -4306,7 +4308,7 @@ template&lt;class HistType &gt; </div>
 <div class="line"><span class="lineno"> 2591</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;Effective number of parameters following WAIC formalism is equal to: {:.2f}&quot;</span>, p_WAIC);</div>
 <div class="line"><span class="lineno"> 2592</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;WAIC = {:.2f}&quot;</span>, WAIC);</div>
 <div class="line"><span class="lineno"> 2593</span>}</div>
-<div class="ttc" id="aGetPostfitParamPlots_8cpp_html_ae4842c1619a902b2761696f3849889a1"><div class="ttname"><a href="GetPostfitParamPlots_8cpp.html#ae4842c1619a902b2761696f3849889a1">nBins</a></div><div class="ttdeci">int nBins</div><div class="ttdef"><b>Definition:</b> <a href="GetPostfitParamPlots_8cpp_source.html#l00066">GetPostfitParamPlots.cpp:66</a></div></div>
+<div class="ttc" id="aGetPostfitParamPlots_8cpp_html_ae4842c1619a902b2761696f3849889a1"><div class="ttname"><a href="GetPostfitParamPlots_8cpp.html#ae4842c1619a902b2761696f3849889a1">nBins</a></div><div class="ttdeci">int nBins</div><div class="ttdef"><b>Definition:</b> <a href="GetPostfitParamPlots_8cpp_source.html#l00070">GetPostfitParamPlots.cpp:70</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -4668,7 +4670,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Distribution of beta parameters in Barlow Beeston formalisms. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00261">261</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00263">263</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -4694,7 +4696,7 @@ template&lt;class HistType &gt; </div>
 
 <p>The data histogram for the selection. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00198">198</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00200">200</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -4720,7 +4722,7 @@ template&lt;class HistType &gt; </div>
 
 <p>The data histogram for the selection X projection. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00200">200</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00202">202</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -4746,7 +4748,7 @@ template&lt;class HistType &gt; </div>
 
 <p>The data histogram for the selection Y projection. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00202">202</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00204">204</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -4772,7 +4774,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Tells Debug level to save additional histograms. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00379">379</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00381">381</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -4798,7 +4800,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Directory for each sample. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00288">288</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00290">290</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -4824,7 +4826,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Are we making Beta Histograms. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00263">263</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00265">265</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -4850,7 +4852,7 @@ template&lt;class HistType &gt; </div>
 
 <p>By mode variables. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00360">360</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00362">362</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -4876,7 +4878,7 @@ template&lt;class HistType &gt; </div>
 
 <p>bool whether to normalise each toy to have shape based p-value and pos pred distribution </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00272">272</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00274">274</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -4902,7 +4904,7 @@ template&lt;class HistType &gt; </div>
 
 <p>KS: Hacky flag to let us know if this is first toy. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00164">164</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00166">166</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -4928,7 +4930,7 @@ template&lt;class HistType &gt; </div>
 
 <p>bool whether we have Prior or Posterior Predictive </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00269">269</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00271">271</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -4954,7 +4956,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Type of likelihood for example Poisson, Barlow-Beeston or Ice Cube. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00373">373</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00375">375</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -4980,7 +4982,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Data vs Draw. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00293">293</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00295">295</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -5006,7 +5008,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Projection X (most likely muon momentum) of LLH. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00321">321</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00323">323</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -5032,7 +5034,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Data vs Fluctuated Draw. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00305">305</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00307">307</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -5058,7 +5060,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Data vs Fluctuated Predictive. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00307">307</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00309">309</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -5084,7 +5086,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Fluctuated Data vs Draw. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00318">318</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00320">320</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -5110,7 +5112,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Draw vs Predictive. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00309">309</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00311">311</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -5136,7 +5138,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Fluctuated Draw vs Draw. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00295">295</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00297">297</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -5160,7 +5162,7 @@ template&lt;class HistType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00322">322</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00324">324</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -5186,7 +5188,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Fluctuated Draw vs Predictive. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00311">311</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00313">313</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -5212,7 +5214,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Fluctuated Draw vs Fluctuated Predictive. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00316">316</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00318">318</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -5238,7 +5240,7 @@ template&lt;class HistType &gt; </div>
 
 <p>LLH penalty for each throw. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00325">325</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00327">327</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -5264,7 +5266,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Fluctuated Predictive vs Draw. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00297">297</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00299">299</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -5290,7 +5292,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Fluctuated Predictive vs Predictive. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00314">314</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00316">316</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -5316,7 +5318,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Data vs Draw using rate only. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00300">300</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00302">302</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -5342,7 +5344,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Fluctuated Predictive vs Draw using rate only. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00302">302</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00304">304</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -5368,7 +5370,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Total LLH for the posterior predictive distribution. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00281">281</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00283">283</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -5394,7 +5396,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Vector to hold the penalty term. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00177">177</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00179">179</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -5420,7 +5422,7 @@ template&lt;class HistType &gt; </div>
 
 <p>The 2D lnLhist, showing (draw vs data) and (draw vs fluct), anything above y=x axis is the p-value. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00221">221</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00223">223</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -5446,7 +5448,7 @@ template&lt;class HistType &gt; </div>
 
 <p>The 2D lnLhist, showing (draw vs data) and (draw vs fluct), using rate, anything above y=x axis is the p-value. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00226">226</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00228">228</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -5472,7 +5474,7 @@ template&lt;class HistType &gt; </div>
 
 <p>The 2D lnLHist, showing (draw vs data) and (draw vs draw fluct), anything above y=x axis is the p-value. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00223">223</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00225">225</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -5498,7 +5500,7 @@ template&lt;class HistType &gt; </div>
 
 <p>The 2D lnLHist but for ProjectionX histogram (pmu), showing (draw vs data) and (draw vs draw fluct), anything above y=x axis is the p-value. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00228">228</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00230">230</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -5524,7 +5526,7 @@ template&lt;class HistType &gt; </div>
 
 <p>The histogram containing the lnL for each throw. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00213">213</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00215">215</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -5550,7 +5552,7 @@ template&lt;class HistType &gt; </div>
 
 <p>The lnLhist for the draw vs data. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00219">219</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00221">221</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -5576,7 +5578,7 @@ template&lt;class HistType &gt; </div>
 
 <p>The lnLhist for the draw vs MC fluctuated. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00215">215</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00217">217</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -5602,7 +5604,7 @@ template&lt;class HistType &gt; </div>
 
 <p>The lnLhist for the draw vs draw fluctuated. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00217">217</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00219">219</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -5628,7 +5630,7 @@ template&lt;class HistType &gt; </div>
 
 <p>The LLH distribution in pmu cosmu for using the mean in each bin. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00238">238</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00240">240</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -5654,7 +5656,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Holds the bin-by-bin LLH for the mean posterior predictive vs the data. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00253">253</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00255">255</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -5680,7 +5682,7 @@ template&lt;class HistType &gt; </div>
 
 <p>The LLH distribution in pmu using the mean in each bin. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00243">243</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00245">245</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -5706,7 +5708,7 @@ template&lt;class HistType &gt; </div>
 
 <p>The LLH distribution in pmu cosmu for using the mode in each bin. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00240">240</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00242">242</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -5732,7 +5734,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Holds the bin-by-bin LLH for the mode posterior predictive vs the data. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00255">255</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00257">257</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -5758,7 +5760,7 @@ template&lt;class HistType &gt; </div>
 
 <p>The histogram containing the lnL (draw vs data) for each throw for each sample. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00231">231</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00233">233</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -5784,7 +5786,7 @@ template&lt;class HistType &gt; </div>
 
 <p>The histogram containing the lnL (draw vs draw fluct) for each throw for each sample. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00233">233</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00235">235</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -5810,7 +5812,7 @@ template&lt;class HistType &gt; </div>
 
 <p>The histogram containing the lnL (draw vs pred fluct) for each throw for each sample. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00235">235</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00237">237</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -5836,7 +5838,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Max Number of Bins per each sample. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00278">278</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00280">280</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -5862,7 +5864,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Vector of vectors which holds the loaded MC histograms. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00170">170</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00172">172</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -5888,7 +5890,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Vector of vectors which holds the loaded MC histograms for each mode. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00174">174</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00176">176</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -5914,7 +5916,7 @@ template&lt;class HistType &gt; </div>
 
 <p>The posterior predictive distribution in pmu cosmu using the mean. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00246">246</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00248">248</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -5940,7 +5942,7 @@ template&lt;class HistType &gt; </div>
 
 <p>The posterior predictive distribution in pmu cosmu using the mean. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00362">362</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00364">364</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -5966,7 +5968,7 @@ template&lt;class HistType &gt; </div>
 
 <p>The posterior predictive distribution in pmu cosmu using the mean after applying Barlow-Beeston Correction. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00248">248</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00250">250</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -5992,7 +5994,7 @@ template&lt;class HistType &gt; </div>
 
 <p>The posterior predictive distribution in pmu cosmu using the mode. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00250">250</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00252">252</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -6018,7 +6020,7 @@ template&lt;class HistType &gt; </div>
 
 <p>MaCh3 Modes. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00370">370</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00372">372</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -6044,7 +6046,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Number of throws by user. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00266">266</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00268">268</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -6070,7 +6072,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Number of parameters. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00376">376</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00378">378</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -6096,7 +6098,7 @@ template&lt;class HistType &gt; </div>
 
 <p>The nominal histogram for the selection. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00204">204</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00206">206</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -6122,7 +6124,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Number of samples. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00182">182</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00184">184</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -6148,7 +6150,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Number of throws. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00275">275</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00277">277</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -6174,7 +6176,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Output filename. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00286">286</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00288">288</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -6200,7 +6202,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Output filename. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00284">284</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00286">286</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -6226,7 +6228,7 @@ template&lt;class HistType &gt; </div>
 
 <p>TTree which we save useful information to. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00291">291</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00293">293</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -6252,7 +6254,7 @@ template&lt;class HistType &gt; </div>
 
 <p>The posterior predictive for the whole selection: this gets built after adding in the toys. Now an array of Th1ds, 1 for each poly bin, for each sample. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00188">188</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00190">190</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -6278,7 +6280,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Histogram which corresponds to each bin in the sample's th2poly. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00364">364</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00366">366</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -6304,7 +6306,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Holds the history of which entries have been drawn in the MCMC file. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00258">258</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00260">260</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -6330,7 +6332,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Random number generator. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00162">162</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00164">164</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -6356,7 +6358,7 @@ template&lt;class HistType &gt; </div>
 
 <p>name for each sample </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00185">185</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00187">187</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -6382,7 +6384,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Pointer to samplePDF object, mostly used to get sample names, binning etc. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00367">367</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00369">369</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -6408,7 +6410,7 @@ template&lt;class HistType &gt; </div>
 
 <p>KS: We have two methods for Poissonian fluctuation. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00167">167</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00169">169</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -6434,7 +6436,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Data vs Draw. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00328">328</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00330">330</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -6460,7 +6462,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Data vs Draw for projection X (most likely muon momentum) </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00355">355</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00357">357</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -6486,7 +6488,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Data vs Fluctuated Draw. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00342">342</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00344">344</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -6512,7 +6514,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Data vs Fluctuated Predictive. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00340">340</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00342">342</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -6538,7 +6540,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Fluctuated Data vs Draw. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00350">350</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00352">352</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -6564,7 +6566,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Draw vs Predictive. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00344">344</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00346">346</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -6590,7 +6592,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Fluctuated Draw vs Draw. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00330">330</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00332">332</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -6616,7 +6618,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Fluctuated Draw vs Draw for projection X (most likely muon momentum) </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00357">357</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00359">359</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -6642,7 +6644,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Fluctuated Draw vs Predictive. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00346">346</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00348">348</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -6668,7 +6670,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Fluctuated Draw vs Fluctuated Predictive. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00348">348</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00350">350</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -6694,7 +6696,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Fluctuated Predictive vs Draw. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00332">332</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00334">334</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -6720,7 +6722,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Fluctuated Predictive vs Predictive. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00352">352</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00354">354</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -6746,7 +6748,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Rate Data vs Draw. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00335">335</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00337">337</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -6772,7 +6774,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Fluctuated Predictive vs Draw using Rate. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00337">337</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00339">339</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -6798,7 +6800,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Posterior predictive but for X projection but as a violin plot. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00193">193</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00195">195</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -6824,7 +6826,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Posterior predictive but for Y projection but as a violin plot. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00195">195</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00197">197</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -6850,7 +6852,7 @@ template&lt;class HistType &gt; </div>
 
 <p>The posterior predictive for the whole selection: this gets built after adding in the toys. Now an array of Th1ds, 1 for each poly bin, for each sample for W2. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00190">190</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00192">192</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -6876,7 +6878,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Vector of vectors which holds the loaded W2 histograms. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00172">172</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00174">174</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -6902,7 +6904,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Pointer to the w2 histograms (for mean values). </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00208">208</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00210">210</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -6928,7 +6930,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Pointer to the w2 histograms (for mode values). </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00210">210</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00212">212</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -6954,7 +6956,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Pointer to the w2 histograms (for nominal values). </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00206">206</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00208">208</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
@@ -6980,7 +6982,7 @@ template&lt;class HistType &gt; </div>
 
 <p>Vector holding weight. </p>
 
-<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00179">179</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SampleSummary_8h_source.html#l00181">181</a> of file <a class="el" href="SampleSummary_8h_source.html">SampleSummary.h</a>.</p>
 
 </div>
 </div>
