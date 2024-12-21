@@ -146,9 +146,8 @@ Public Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class responsible for handling Principal Component Analysis (PCA) of covariance matrix. </p>
 <dl class="section see"><dt>See also</dt><dd>For more details, visit the <a href="https://github.com/mach3-software/MaCh3/wiki/03.-Eigen-Decomposition-%E2%80%90-PCA">Wiki</a>. </dd></dl>
-<dl class="section author"><dt>Author</dt><dd>Clarence Wret </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="PCAHandler_8h_source.html#l00030">30</a> of file <a class="el" href="PCAHandler_8h_source.html">PCAHandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PCAHandler_8h_source.html#l00029">29</a> of file <a class="el" href="PCAHandler_8h_source.html">PCAHandler.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aabaaecfe5909a6cffbcc0e1a385615fa" name="aabaaecfe5909a6cffbcc0e1a385615fa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aabaaecfe5909a6cffbcc0e1a385615fa">&#9670;&#160;</a></span>PCAHandler()</h2>
@@ -364,15 +363,15 @@ Public Attributes</h2></td></tr>
 <div class="ttc" id="aMaCh3Logger_8h_html_a61052119a625282d0ec6d4a97adf3ee2"><div class="ttname"><a href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a></div><div class="ttdeci">#define MACH3LOG_ERROR</div><div class="ttdef"><b>Definition:</b> <a href="MaCh3Logger_8h_source.html#l00018">MaCh3Logger.h:18</a></div></div>
 <div class="ttc" id="aMaCh3Logger_8h_html_a95fa4dffc648e4c5536c9292c2bdcac3"><div class="ttname"><a href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a></div><div class="ttdeci">#define MACH3LOG_INFO</div><div class="ttdef"><b>Definition:</b> <a href="MaCh3Logger_8h_source.html#l00016">MaCh3Logger.h:16</a></div></div>
 <div class="ttc" id="aclassMaCh3Exception_html"><div class="ttname"><a href="classMaCh3Exception.html">MaCh3Exception</a></div><div class="ttdoc">Custom exception class for MaCh3 errors.</div><div class="ttdef"><b>Definition:</b> <a href="MaCh3Exception_8h_source.html#l00012">MaCh3Exception.h:12</a></div></div>
-<div class="ttc" id="aclassPCAHandler_html_a1d9302633ed96ec57fbe26d25cbcee61"><div class="ttname"><a href="classPCAHandler.html#a1d9302633ed96ec57fbe26d25cbcee61">PCAHandler::TransferMat</a></div><div class="ttdeci">TMatrixD TransferMat</div><div class="ttdoc">Matrix used to converting from PCA base to normal base.</div><div class="ttdef"><b>Definition:</b> <a href="PCAHandler_8h_source.html#l00048">PCAHandler.h:48</a></div></div>
-<div class="ttc" id="aclassPCAHandler_html_a2924386fef0cf65215c51b4f81cdb0d1"><div class="ttname"><a href="classPCAHandler.html#a2924386fef0cf65215c51b4f81cdb0d1">PCAHandler::eigen_values_master</a></div><div class="ttdeci">std::vector&lt; double &gt; eigen_values_master</div><div class="ttdoc">Eigen values which have dimension equal to _fNumParPCA, and can be used in CorrelateSteps.</div><div class="ttdef"><b>Definition:</b> <a href="PCAHandler_8h_source.html#l00056">PCAHandler.h:56</a></div></div>
-<div class="ttc" id="aclassPCAHandler_html_a3ba9d34343ce0d0eeb4c020fa70486e2"><div class="ttname"><a href="classPCAHandler.html#a3ba9d34343ce0d0eeb4c020fa70486e2">PCAHandler::eigen_vectors</a></div><div class="ttdeci">TMatrixD eigen_vectors</div><div class="ttdoc">Eigen vectors only of params which are being decomposed.</div><div class="ttdef"><b>Definition:</b> <a href="PCAHandler_8h_source.html#l00054">PCAHandler.h:54</a></div></div>
-<div class="ttc" id="aclassPCAHandler_html_a6f6443a487bb544e6a6e458d86f35f27"><div class="ttname"><a href="classPCAHandler.html#a6f6443a487bb544e6a6e458d86f35f27">PCAHandler::TransferMatT</a></div><div class="ttdeci">TMatrixD TransferMatT</div><div class="ttdoc">Matrix used to converting from normal base to PCA base.</div><div class="ttdef"><b>Definition:</b> <a href="PCAHandler_8h_source.html#l00050">PCAHandler.h:50</a></div></div>
-<div class="ttc" id="aclassPCAHandler_html_a8d95ecb29e091e9b09c5011691516c28"><div class="ttname"><a href="classPCAHandler.html#a8d95ecb29e091e9b09c5011691516c28">PCAHandler::eigen_values</a></div><div class="ttdeci">TVectorD eigen_values</div><div class="ttdoc">Eigen value only of particles which are being decomposed.</div><div class="ttdef"><b>Definition:</b> <a href="PCAHandler_8h_source.html#l00052">PCAHandler.h:52</a></div></div>
-<div class="ttc" id="aclassPCAHandler_html_a954eeb975f1d7f9528ed7e027a54b21a"><div class="ttname"><a href="classPCAHandler.html#a954eeb975f1d7f9528ed7e027a54b21a">PCAHandler::LastPCAdpar</a></div><div class="ttdeci">int LastPCAdpar</div><div class="ttdoc">Index of the last param that is being decomposed.</div><div class="ttdef"><b>Definition:</b> <a href="PCAHandler_8h_source.html#l00063">PCAHandler.h:63</a></div></div>
-<div class="ttc" id="aclassPCAHandler_html_aa39db9118399bebcdb784fe9c9fea458"><div class="ttname"><a href="classPCAHandler.html#aa39db9118399bebcdb784fe9c9fea458">PCAHandler::nKeptPCApars</a></div><div class="ttdeci">int nKeptPCApars</div><div class="ttdoc">Total number that remained after applying PCA Threshold.</div><div class="ttdef"><b>Definition:</b> <a href="PCAHandler_8h_source.html#l00059">PCAHandler.h:59</a></div></div>
-<div class="ttc" id="aclassPCAHandler_html_afc00f628b947fd407d05790f4d0eaaec"><div class="ttname"><a href="classPCAHandler.html#afc00f628b947fd407d05790f4d0eaaec">PCAHandler::FirstPCAdpar</a></div><div class="ttdeci">int FirstPCAdpar</div><div class="ttdoc">Index of the first param that is being decomposed.</div><div class="ttdef"><b>Definition:</b> <a href="PCAHandler_8h_source.html#l00061">PCAHandler.h:61</a></div></div>
-<div class="ttc" id="aclassPCAHandler_html_afdf5f929fe9211a2ce05f6bab2b8633a"><div class="ttname"><a href="classPCAHandler.html#afdf5f929fe9211a2ce05f6bab2b8633a">PCAHandler::eigen_threshold</a></div><div class="ttdeci">double eigen_threshold</div><div class="ttdoc">CW: Threshold based on which we remove parameters in eigen base.</div><div class="ttdef"><b>Definition:</b> <a href="PCAHandler_8h_source.html#l00065">PCAHandler.h:65</a></div></div>
+<div class="ttc" id="aclassPCAHandler_html_a1d9302633ed96ec57fbe26d25cbcee61"><div class="ttname"><a href="classPCAHandler.html#a1d9302633ed96ec57fbe26d25cbcee61">PCAHandler::TransferMat</a></div><div class="ttdeci">TMatrixD TransferMat</div><div class="ttdoc">Matrix used to converting from PCA base to normal base.</div><div class="ttdef"><b>Definition:</b> <a href="PCAHandler_8h_source.html#l00047">PCAHandler.h:47</a></div></div>
+<div class="ttc" id="aclassPCAHandler_html_a2924386fef0cf65215c51b4f81cdb0d1"><div class="ttname"><a href="classPCAHandler.html#a2924386fef0cf65215c51b4f81cdb0d1">PCAHandler::eigen_values_master</a></div><div class="ttdeci">std::vector&lt; double &gt; eigen_values_master</div><div class="ttdoc">Eigen values which have dimension equal to _fNumParPCA, and can be used in CorrelateSteps.</div><div class="ttdef"><b>Definition:</b> <a href="PCAHandler_8h_source.html#l00055">PCAHandler.h:55</a></div></div>
+<div class="ttc" id="aclassPCAHandler_html_a3ba9d34343ce0d0eeb4c020fa70486e2"><div class="ttname"><a href="classPCAHandler.html#a3ba9d34343ce0d0eeb4c020fa70486e2">PCAHandler::eigen_vectors</a></div><div class="ttdeci">TMatrixD eigen_vectors</div><div class="ttdoc">Eigen vectors only of params which are being decomposed.</div><div class="ttdef"><b>Definition:</b> <a href="PCAHandler_8h_source.html#l00053">PCAHandler.h:53</a></div></div>
+<div class="ttc" id="aclassPCAHandler_html_a6f6443a487bb544e6a6e458d86f35f27"><div class="ttname"><a href="classPCAHandler.html#a6f6443a487bb544e6a6e458d86f35f27">PCAHandler::TransferMatT</a></div><div class="ttdeci">TMatrixD TransferMatT</div><div class="ttdoc">Matrix used to converting from normal base to PCA base.</div><div class="ttdef"><b>Definition:</b> <a href="PCAHandler_8h_source.html#l00049">PCAHandler.h:49</a></div></div>
+<div class="ttc" id="aclassPCAHandler_html_a8d95ecb29e091e9b09c5011691516c28"><div class="ttname"><a href="classPCAHandler.html#a8d95ecb29e091e9b09c5011691516c28">PCAHandler::eigen_values</a></div><div class="ttdeci">TVectorD eigen_values</div><div class="ttdoc">Eigen value only of particles which are being decomposed.</div><div class="ttdef"><b>Definition:</b> <a href="PCAHandler_8h_source.html#l00051">PCAHandler.h:51</a></div></div>
+<div class="ttc" id="aclassPCAHandler_html_a954eeb975f1d7f9528ed7e027a54b21a"><div class="ttname"><a href="classPCAHandler.html#a954eeb975f1d7f9528ed7e027a54b21a">PCAHandler::LastPCAdpar</a></div><div class="ttdeci">int LastPCAdpar</div><div class="ttdoc">Index of the last param that is being decomposed.</div><div class="ttdef"><b>Definition:</b> <a href="PCAHandler_8h_source.html#l00062">PCAHandler.h:62</a></div></div>
+<div class="ttc" id="aclassPCAHandler_html_aa39db9118399bebcdb784fe9c9fea458"><div class="ttname"><a href="classPCAHandler.html#aa39db9118399bebcdb784fe9c9fea458">PCAHandler::nKeptPCApars</a></div><div class="ttdeci">int nKeptPCApars</div><div class="ttdoc">Total number that remained after applying PCA Threshold.</div><div class="ttdef"><b>Definition:</b> <a href="PCAHandler_8h_source.html#l00058">PCAHandler.h:58</a></div></div>
+<div class="ttc" id="aclassPCAHandler_html_afc00f628b947fd407d05790f4d0eaaec"><div class="ttname"><a href="classPCAHandler.html#afc00f628b947fd407d05790f4d0eaaec">PCAHandler::FirstPCAdpar</a></div><div class="ttdeci">int FirstPCAdpar</div><div class="ttdoc">Index of the first param that is being decomposed.</div><div class="ttdef"><b>Definition:</b> <a href="PCAHandler_8h_source.html#l00060">PCAHandler.h:60</a></div></div>
+<div class="ttc" id="aclassPCAHandler_html_afdf5f929fe9211a2ce05f6bab2b8633a"><div class="ttname"><a href="classPCAHandler.html#afdf5f929fe9211a2ce05f6bab2b8633a">PCAHandler::eigen_threshold</a></div><div class="ttdeci">double eigen_threshold</div><div class="ttdoc">CW: Threshold based on which we remove parameters in eigen base.</div><div class="ttdef"><b>Definition:</b> <a href="PCAHandler_8h_source.html#l00064">PCAHandler.h:64</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -391,7 +390,7 @@ Public Attributes</h2></td></tr>
 
 <p>CW: Threshold based on which we remove parameters in eigen base. </p>
 
-<p class="definition">Definition at line <a class="el" href="PCAHandler_8h_source.html#l00065">65</a> of file <a class="el" href="PCAHandler_8h_source.html">PCAHandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PCAHandler_8h_source.html#l00064">64</a> of file <a class="el" href="PCAHandler_8h_source.html">PCAHandler.h</a>.</p>
 
 </div>
 </div>
@@ -409,7 +408,7 @@ Public Attributes</h2></td></tr>
 
 <p>Eigen value only of particles which are being decomposed. </p>
 
-<p class="definition">Definition at line <a class="el" href="PCAHandler_8h_source.html#l00052">52</a> of file <a class="el" href="PCAHandler_8h_source.html">PCAHandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PCAHandler_8h_source.html#l00051">51</a> of file <a class="el" href="PCAHandler_8h_source.html">PCAHandler.h</a>.</p>
 
 </div>
 </div>
@@ -427,7 +426,7 @@ Public Attributes</h2></td></tr>
 
 <p>Eigen values which have dimension equal to _fNumParPCA, and can be used in CorrelateSteps. </p>
 
-<p class="definition">Definition at line <a class="el" href="PCAHandler_8h_source.html#l00056">56</a> of file <a class="el" href="PCAHandler_8h_source.html">PCAHandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PCAHandler_8h_source.html#l00055">55</a> of file <a class="el" href="PCAHandler_8h_source.html">PCAHandler.h</a>.</p>
 
 </div>
 </div>
@@ -445,7 +444,7 @@ Public Attributes</h2></td></tr>
 
 <p>Eigen vectors only of params which are being decomposed. </p>
 
-<p class="definition">Definition at line <a class="el" href="PCAHandler_8h_source.html#l00054">54</a> of file <a class="el" href="PCAHandler_8h_source.html">PCAHandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PCAHandler_8h_source.html#l00053">53</a> of file <a class="el" href="PCAHandler_8h_source.html">PCAHandler.h</a>.</p>
 
 </div>
 </div>
@@ -463,7 +462,7 @@ Public Attributes</h2></td></tr>
 
 <p>Index of the first param that is being decomposed. </p>
 
-<p class="definition">Definition at line <a class="el" href="PCAHandler_8h_source.html#l00061">61</a> of file <a class="el" href="PCAHandler_8h_source.html">PCAHandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PCAHandler_8h_source.html#l00060">60</a> of file <a class="el" href="PCAHandler_8h_source.html">PCAHandler.h</a>.</p>
 
 </div>
 </div>
@@ -481,7 +480,7 @@ Public Attributes</h2></td></tr>
 
 <p>Index of the last param that is being decomposed. </p>
 
-<p class="definition">Definition at line <a class="el" href="PCAHandler_8h_source.html#l00063">63</a> of file <a class="el" href="PCAHandler_8h_source.html">PCAHandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PCAHandler_8h_source.html#l00062">62</a> of file <a class="el" href="PCAHandler_8h_source.html">PCAHandler.h</a>.</p>
 
 </div>
 </div>
@@ -499,7 +498,7 @@ Public Attributes</h2></td></tr>
 
 <p>Total number that remained after applying PCA Threshold. </p>
 
-<p class="definition">Definition at line <a class="el" href="PCAHandler_8h_source.html#l00059">59</a> of file <a class="el" href="PCAHandler_8h_source.html">PCAHandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PCAHandler_8h_source.html#l00058">58</a> of file <a class="el" href="PCAHandler_8h_source.html">PCAHandler.h</a>.</p>
 
 </div>
 </div>
@@ -517,7 +516,7 @@ Public Attributes</h2></td></tr>
 
 <p>Matrix used to converting from PCA base to normal base. </p>
 
-<p class="definition">Definition at line <a class="el" href="PCAHandler_8h_source.html#l00048">48</a> of file <a class="el" href="PCAHandler_8h_source.html">PCAHandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PCAHandler_8h_source.html#l00047">47</a> of file <a class="el" href="PCAHandler_8h_source.html">PCAHandler.h</a>.</p>
 
 </div>
 </div>
@@ -535,7 +534,7 @@ Public Attributes</h2></td></tr>
 
 <p>Matrix used to converting from normal base to PCA base. </p>
 
-<p class="definition">Definition at line <a class="el" href="PCAHandler_8h_source.html#l00050">50</a> of file <a class="el" href="PCAHandler_8h_source.html">PCAHandler.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PCAHandler_8h_source.html#l00049">49</a> of file <a class="el" href="PCAHandler_8h_source.html">PCAHandler.h</a>.</p>
 
 </div>
 </div>
