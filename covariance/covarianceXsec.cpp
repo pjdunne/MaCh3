@@ -265,17 +265,15 @@ XsecSplines1 covarianceXsec::GetXsecSpline(const YAML::Node& param) {
 // ********************************************
 // DB Grab the Normalisation parameters for the relevant DetID
 const std::vector<XsecNorms4> covarianceXsec::GetNormParsFromDetID(const int DetID) {
-// ********************************************
+  // ********************************************
   std::vector<XsecNorms4> returnVec;
-  int norm_counter = 0;
-  IterateOverParams(DetID,
-    [&](int i) { return GetParamType(i) == kNorm; }, // Filter condition
-    [&](auto) {
-      XsecNorms4 Temp = NormParams[norm_counter];
-      returnVec.push_back(Temp);
-      norm_counter++;
+  for (auto &pair : _fSystToGlobalSystIndexMap[SystType::kNorm]) {
+    auto &NormIndex = pair.first;
+    auto &GlobalIndex = pair.second;
+    if ((GetParDetID(GlobalIndex) & DetID)) {
+      returnVec.push_back(NormParams[NormIndex]);
     }
-  );
+  }
   return returnVec;
 }
 
