@@ -140,7 +140,7 @@ Include dependency graph for ProcessMCMC.cpp:</div>
 <area shape="rect" title=" " alt="" coords="661,372,723,397"/>
 <area shape="rect" href="Structs_8h.html" title=" " alt="" coords="939,445,1096,471"/>
 <area shape="rect" href="MaCh3Exception_8h.html" title=" " alt="" coords="445,519,651,544"/>
-<area shape="rect" href="MaCh3Logger_8h.html" title=" " alt="" coords="517,592,701,617"/>
+<area shape="rect" href="MaCh3Logger_8h.html" title="KS: Based on this https://github.com/gabime/spdlog/blob/a2b4262090fd3f005c2315dcb5be2f0f1774a005/incl..." alt="" coords="517,592,701,617"/>
 <area shape="rect" title=" " alt="" coords="349,665,408,691"/>
 <area shape="rect" title=" " alt="" coords="462,665,586,691"/>
 <area shape="rect" title=" " alt="" coords="610,665,697,691"/>
@@ -584,7 +584,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  577</span>  <span class="keywordflow">if</span>(CorrelationHist != <span class="keyword">nullptr</span>)         <span class="keyword">delete</span> CorrelationHist;</div>
 <div class="line"><span class="lineno">  578</span>}</div>
 <div class="ttc" id="aMCMCProcessor_8h_html_a82a6d79039474bc403b627437a7b97ec"><div class="ttname"><a href="MCMCProcessor_8h.html#a82a6d79039474bc403b627437a7b97ec">_UNDEF_</a></div><div class="ttdeci">#define _UNDEF_</div><div class="ttdef"><b>Definition:</b> <a href="MCMCProcessor_8h_source.html#l00004">MCMCProcessor.h:4</a></div></div>
-<div class="ttc" id="aMaCh3Logger_8h_html_a95fa4dffc648e4c5536c9292c2bdcac3"><div class="ttname"><a href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a></div><div class="ttdeci">#define MACH3LOG_INFO</div><div class="ttdef"><b>Definition:</b> <a href="MaCh3Logger_8h_source.html#l00016">MaCh3Logger.h:16</a></div></div>
+<div class="ttc" id="aMaCh3Logger_8h_html_a95fa4dffc648e4c5536c9292c2bdcac3"><div class="ttname"><a href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a></div><div class="ttdeci">#define MACH3LOG_INFO</div><div class="ttdef"><b>Definition:</b> <a href="MaCh3Logger_8h_source.html#l00017">MaCh3Logger.h:17</a></div></div>
 <div class="ttc" id="aProcessMCMC_8cpp_html_a2052da75bc58457dc290c8cbd06efe30"><div class="ttname"><a href="ProcessMCMC_8cpp.html#a2052da75bc58457dc290c8cbd06efe30">TMatrixIntoTH2D</a></div><div class="ttdeci">TH2D * TMatrixIntoTH2D(TMatrixDSym *Matrix, const std::string &amp;title)</div><div class="ttdoc">KS: Convert TMatrix to TH2D, mostly useful for making fancy plots.</div><div class="ttdef"><b>Definition:</b> <a href="ProcessMCMC_8cpp_source.html#l00594">ProcessMCMC.cpp:594</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -632,7 +632,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  400</span>                                GetFromManager&lt;bool&gt;(Settings[<span class="stringliteral">&quot;CredibleInSigmas&quot;</span>], <span class="keyword">false</span>));</div>
 <div class="line"><span class="lineno">  401</span>  }</div>
 <div class="line"><span class="lineno">  402</span>}</div>
-<div class="ttc" id="aYamlHelper_8h_html_a1a6adcb8b24bfbdcb936ced6812e1b0c"><div class="ttname"><a href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">GetFromManager</a></div><div class="ttdeci">Type GetFromManager(const YAML::Node &amp;node, Type defval)</div><div class="ttdoc">Get content of config file if node is not found take default value specified.</div><div class="ttdef"><b>Definition:</b> <a href="YamlHelper_8h_source.html#l00024">YamlHelper.h:24</a></div></div>
+<div class="ttc" id="aYamlHelper_8h_html_a1a6adcb8b24bfbdcb936ced6812e1b0c"><div class="ttname"><a href="YamlHelper_8h.html#a1a6adcb8b24bfbdcb936ced6812e1b0c">GetFromManager</a></div><div class="ttdeci">Type GetFromManager(const YAML::Node &amp;node, Type defval)</div><div class="ttdoc">Get content of config file if node is not found take default value specified.</div><div class="ttdef"><b>Definition:</b> <a href="YamlHelper_8h_source.html#l00026">YamlHelper.h:26</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -878,8 +878,8 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">   67</span>  }</div>
 <div class="line"><span class="lineno">   68</span>  <span class="keywordflow">return</span> 0;</div>
 <div class="line"><span class="lineno">   69</span>}</div>
-<div class="ttc" id="aMaCh3Logger_8h_html_a61052119a625282d0ec6d4a97adf3ee2"><div class="ttname"><a href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a></div><div class="ttdeci">#define MACH3LOG_ERROR</div><div class="ttdef"><b>Definition:</b> <a href="MaCh3Logger_8h_source.html#l00018">MaCh3Logger.h:18</a></div></div>
-<div class="ttc" id="aMaCh3Logger_8h_html_aa603c55ea73cd86d1994901227883e1e"><div class="ttname"><a href="MaCh3Logger_8h.html#aa603c55ea73cd86d1994901227883e1e">SetMaCh3LoggerFormat</a></div><div class="ttdeci">void SetMaCh3LoggerFormat()</div><div class="ttdoc">Set messaging format of the logger.</div><div class="ttdef"><b>Definition:</b> <a href="MaCh3Logger_8h_source.html#l00023">MaCh3Logger.h:23</a></div></div>
+<div class="ttc" id="aMaCh3Logger_8h_html_a61052119a625282d0ec6d4a97adf3ee2"><div class="ttname"><a href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a></div><div class="ttdeci">#define MACH3LOG_ERROR</div><div class="ttdef"><b>Definition:</b> <a href="MaCh3Logger_8h_source.html#l00019">MaCh3Logger.h:19</a></div></div>
+<div class="ttc" id="aMaCh3Logger_8h_html_aa603c55ea73cd86d1994901227883e1e"><div class="ttname"><a href="MaCh3Logger_8h.html#aa603c55ea73cd86d1994901227883e1e">SetMaCh3LoggerFormat</a></div><div class="ttdeci">void SetMaCh3LoggerFormat()</div><div class="ttdoc">Set messaging format of the logger.</div><div class="ttdef"><b>Definition:</b> <a href="MaCh3Logger_8h_source.html#l00024">MaCh3Logger.h:24</a></div></div>
 <div class="ttc" id="aProcessMCMC_8cpp_html_a52c48199a4bcad577b88768020a91041"><div class="ttname"><a href="ProcessMCMC_8cpp.html#a52c48199a4bcad577b88768020a91041">ProcessMCMC</a></div><div class="ttdeci">void ProcessMCMC(const std::string &amp;inputFile)</div><div class="ttdoc">Main function processing MCMC and Producing plots.</div><div class="ttdef"><b>Definition:</b> <a href="ProcessMCMC_8cpp_source.html#l00071">ProcessMCMC.cpp:71</a></div></div>
 <div class="ttc" id="aProcessMCMC_8cpp_html_a83be70750a728e4deae518ea3ffaf388"><div class="ttname"><a href="ProcessMCMC_8cpp.html#a83be70750a728e4deae518ea3ffaf388">MultipleProcessMCMC</a></div><div class="ttdeci">void MultipleProcessMCMC()</div><div class="ttdoc">Function producing comparison of posterior and more betwen a few MCMC chains.</div><div class="ttdef"><b>Definition:</b> <a href="ProcessMCMC_8cpp_source.html#l00153">ProcessMCMC.cpp:153</a></div></div>
 <div class="ttc" id="aProcessMCMC_8cpp_html_a8e90c1478f4be185364988cac765a163"><div class="ttname"><a href="ProcessMCMC_8cpp.html#a8e90c1478f4be185364988cac765a163">FileNames</a></div><div class="ttdeci">std::vector&lt; std::string &gt; FileNames</div><div class="ttdef"><b>Definition:</b> <a href="ProcessMCMC_8cpp_source.html#l00027">ProcessMCMC.cpp:27</a></div></div>
@@ -1076,7 +1076,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  314</span>  canvasname+=<span class="stringliteral">&quot;]&quot;</span>;</div>
 <div class="line"><span class="lineno">  315</span>  Posterior-&gt;Print(canvasname);</div>
 <div class="line"><span class="lineno">  316</span>}</div>
-<div class="ttc" id="aHistogramUtils_8cpp_html_a85463c0c6943e3d544d5fcb3f96bf18a"><div class="ttname"><a href="HistogramUtils_8cpp.html#a85463c0c6943e3d544d5fcb3f96bf18a">RemoveFitter</a></div><div class="ttdeci">void RemoveFitter(TH1D *hist, const std::string &amp;name)</div><div class="ttdoc">KS: Remove fitted TF1 from hist to make comparison easier.</div><div class="ttdef"><b>Definition:</b> <a href="HistogramUtils_8cpp_source.html#l00332">HistogramUtils.cpp:332</a></div></div>
+<div class="ttc" id="aHistogramUtils_8cpp_html_a85463c0c6943e3d544d5fcb3f96bf18a"><div class="ttname"><a href="HistogramUtils_8cpp.html#a85463c0c6943e3d544d5fcb3f96bf18a">RemoveFitter</a></div><div class="ttdeci">void RemoveFitter(TH1D *hist, const std::string &amp;name)</div><div class="ttdoc">KS: Remove fitted TF1 from hist to make comparison easier.</div><div class="ttdef"><b>Definition:</b> <a href="HistogramUtils_8cpp_source.html#l00354">HistogramUtils.cpp:354</a></div></div>
 <div class="ttc" id="aProcessMCMC_8cpp_html_af7dc6e50355636d9c3d51a627e5dfbb3"><div class="ttname"><a href="ProcessMCMC_8cpp.html#af7dc6e50355636d9c3d51a627e5dfbb3">KolmogorovSmirnovTest</a></div><div class="ttdeci">void KolmogorovSmirnovTest(const std::vector&lt; std::unique_ptr&lt; MCMCProcessor &gt; &gt; &amp;Processor, const std::unique_ptr&lt; TCanvas &gt; &amp;Posterior, const TString &amp;canvasname)</div><div class="ttdoc">KS: Perform KS test to check if two posteriors for the same parameter came from the same distribution...</div><div class="ttdef"><b>Definition:</b> <a href="ProcessMCMC_8cpp_source.html#l00609">ProcessMCMC.cpp:609</a></div></div>
 </div><!-- fragment -->
 </div>

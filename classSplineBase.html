@@ -96,9 +96,10 @@ Inheritance diagram for SplineBase:</div>
 <div class="dyncontent">
 <div class="center"><img src="classSplineBase__inherit__graph.png" border="0" usemap="#aSplineBase_inherit__map" alt="Inheritance graph"/></div>
 <map name="aSplineBase_inherit__map" id="aSplineBase_inherit__map">
-<area shape="rect" title="Base class for calculating weight from spline." alt="" coords="63,5,157,31"/>
-<area shape="rect" href="classSMonolith.html" title="Even&#45;by&#45;event class calculating response for spline parameters. It is possible to use GPU acceleratio..." alt="" coords="5,79,92,104"/>
-<area shape="rect" href="classsplineFDBase.html" title="Bin&#45;by&#45;bin class calculating response for spline parameters." alt="" coords="116,79,227,104"/>
+<area shape="rect" title="Base class for calculating weight from spline." alt="" coords="136,5,231,31"/>
+<area shape="rect" href="classPySplineBase.html" title=" " alt="" coords="5,79,116,104"/>
+<area shape="rect" href="classSMonolith.html" title="Even&#45;by&#45;event class calculating response for spline parameters. It is possible to use GPU acceleratio..." alt="" coords="140,79,227,104"/>
+<area shape="rect" href="classsplineFDBase.html" title="Bin&#45;by&#45;bin class calculating response for spline parameters." alt="" coords="251,79,361,104"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -223,7 +224,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>CPU based code which eval weight for each spline. </p>
 
-<p>Implemented in <a class="el" href="classsplineFDBase.html#a9eceab58c0aa06b58eb4e3708c00ee0e">splineFDBase</a>, and <a class="el" href="classSMonolith.html#aa36be17828281e1412a93c0e239cdbc0">SMonolith</a>.</p>
+<p>Implemented in <a class="el" href="classPySplineBase.html#a19f9f443bcc72d5d038a822a088bc036">PySplineBase</a>, <a class="el" href="classsplineFDBase.html#a9eceab58c0aa06b58eb4e3708c00ee0e">splineFDBase</a>, and <a class="el" href="classSMonolith.html#aa36be17828281e1412a93c0e239cdbc0">SMonolith</a>.</p>
 
 </div>
 </div>
@@ -252,7 +253,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>CW: This Eval should be used when using two separate x,{y,a,b,c,d} arrays to store the weights; probably the best one here! Same thing but pass parameter spline segments instead of variations. </p>
 
-<p>Implemented in <a class="el" href="classsplineFDBase.html#af6e248be25f753c85c4fbf2f3b72cf88">splineFDBase</a>, and <a class="el" href="classSMonolith.html#a3d1128bb78b165d94721407a124f516b">SMonolith</a>.</p>
+<p>Implemented in <a class="el" href="classsplineFDBase.html#af6e248be25f753c85c4fbf2f3b72cf88">splineFDBase</a>, <a class="el" href="classPySplineBase.html#ac8983b9afd657019c3fef533e91f4933">PySplineBase</a>, and <a class="el" href="classSMonolith.html#a3d1128bb78b165d94721407a124f516b">SMonolith</a>.</p>
 
 </div>
 </div>
@@ -281,7 +282,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>CW:Code used in step by step reweighting, Find Spline Segment for each param. </p>
 
-<p>Implemented in <a class="el" href="classsplineFDBase.html#ab4a852337aab961abbcaa0c9f70c88ba">splineFDBase</a>, and <a class="el" href="classSMonolith.html#a7128a7c13b10f331df8946a0a87c4b33">SMonolith</a>.</p>
+<p>Implemented in <a class="el" href="classPySplineBase.html#a0654b19ddbc23d80db808c3da65259a8">PySplineBase</a>, <a class="el" href="classsplineFDBase.html#ab4a852337aab961abbcaa0c9f70c88ba">splineFDBase</a>, and <a class="el" href="classSMonolith.html#a7128a7c13b10f331df8946a0a87c4b33">SMonolith</a>.</p>
 
 </div>
 </div>
@@ -310,7 +311,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Get class name. </p>
 
-<p>Reimplemented in <a class="el" href="classSMonolith.html#ad85cab15f5dfdd47e1123b5bd1815a05">SMonolith</a>.</p>
+<p>Reimplemented in <a class="el" href="classSMonolith.html#ad85cab15f5dfdd47e1123b5bd1815a05">SMonolith</a>, and <a class="el" href="classPySplineBase.html#a00fe8ae11d3ca09811cfcf8affd66262">PySplineBase</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="SplineBase_8h_source.html#l00039">39</a> of file <a class="el" href="SplineBase_8h_source.html">SplineBase.h</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   39</span>{<span class="keywordflow">return</span> <span class="stringliteral">&quot;SplineBase&quot;</span>;};</div>
@@ -391,11 +392,11 @@ Protected Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">   45</span>  }</div>
 <div class="line"><span class="lineno">   46</span>  <span class="comment">// The structure is now coeffs  = {a,b,c,d,e}</span></div>
 <div class="line"><span class="lineno">   47</span>}</div>
-<div class="ttc" id="aMaCh3Logger_8h_html_a61052119a625282d0ec6d4a97adf3ee2"><div class="ttname"><a href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a></div><div class="ttdeci">#define MACH3LOG_ERROR</div><div class="ttdef"><b>Definition:</b> <a href="MaCh3Logger_8h_source.html#l00018">MaCh3Logger.h:18</a></div></div>
-<div class="ttc" id="aSplineCommon_8h_html_a911160077ffa38727e0494f178ce380a"><div class="ttname"><a href="SplineCommon_8h.html#a911160077ffa38727e0494f178ce380a">_nTF1Coeff_</a></div><div class="ttdeci">#define _nTF1Coeff_</div><div class="ttdoc">KS: For TF1 we store at most 5 coefficients, we could make it more flexible but for now define it her...</div><div class="ttdef"><b>Definition:</b> <a href="SplineCommon_8h_source.html#l00017">SplineCommon.h:17</a></div></div>
+<div class="ttc" id="aMaCh3Logger_8h_html_a61052119a625282d0ec6d4a97adf3ee2"><div class="ttname"><a href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a></div><div class="ttdeci">#define MACH3LOG_ERROR</div><div class="ttdef"><b>Definition:</b> <a href="MaCh3Logger_8h_source.html#l00019">MaCh3Logger.h:19</a></div></div>
+<div class="ttc" id="aSplineCommon_8h_html_a911160077ffa38727e0494f178ce380a"><div class="ttname"><a href="SplineCommon_8h.html#a911160077ffa38727e0494f178ce380a">_nTF1Coeff_</a></div><div class="ttdeci">#define _nTF1Coeff_</div><div class="ttdoc">KS: For TF1 we store at most 5 coefficients, we could make it more flexible but for now define it her...</div><div class="ttdef"><b>Definition:</b> <a href="SplineCommon_8h_source.html#l00019">SplineCommon.h:19</a></div></div>
 <div class="ttc" id="aclassMaCh3Exception_html"><div class="ttname"><a href="classMaCh3Exception.html">MaCh3Exception</a></div><div class="ttdoc">Custom exception class for MaCh3 errors.</div><div class="ttdef"><b>Definition:</b> <a href="MaCh3Exception_8h_source.html#l00012">MaCh3Exception.h:12</a></div></div>
-<div class="ttc" id="aclassTF1__red_html_ae0385a986d12257d806ba970646d1d15"><div class="ttname"><a href="classTF1__red.html#ae0385a986d12257d806ba970646d1d15">TF1_red::GetParameter</a></div><div class="ttdeci">double GetParameter(M3::int_t Parameter)</div><div class="ttdoc">Get a parameter value.</div><div class="ttdef"><b>Definition:</b> <a href="SplineStructs_8h_source.html#l00191">SplineStructs.h:191</a></div></div>
-<div class="ttc" id="aclassTF1__red_html_af9e3b0e8d2edad0e7e08f3bf215525c9"><div class="ttname"><a href="classTF1__red.html#af9e3b0e8d2edad0e7e08f3bf215525c9">TF1_red::GetSize</a></div><div class="ttdeci">int GetSize()</div><div class="ttdoc">Get the size.</div><div class="ttdef"><b>Definition:</b> <a href="SplineStructs_8h_source.html#l00206">SplineStructs.h:206</a></div></div>
+<div class="ttc" id="aclassTF1__red_html_ae0385a986d12257d806ba970646d1d15"><div class="ttname"><a href="classTF1__red.html#ae0385a986d12257d806ba970646d1d15">TF1_red::GetParameter</a></div><div class="ttdeci">double GetParameter(M3::int_t Parameter)</div><div class="ttdoc">Get a parameter value.</div><div class="ttdef"><b>Definition:</b> <a href="SplineStructs_8h_source.html#l00193">SplineStructs.h:193</a></div></div>
+<div class="ttc" id="aclassTF1__red_html_af9e3b0e8d2edad0e7e08f3bf215525c9"><div class="ttname"><a href="classTF1__red.html#af9e3b0e8d2edad0e7e08f3bf215525c9">TF1_red::GetSize</a></div><div class="ttdeci">int GetSize()</div><div class="ttdoc">Get the size.</div><div class="ttdef"><b>Definition:</b> <a href="SplineStructs_8h_source.html#l00208">SplineStructs.h:208</a></div></div>
 <div class="ttc" id="anamespaceM3_html_adb59b8ecdc4e1b2d5d4c826a13aa7463"><div class="ttname"><a href="namespaceM3.html#adb59b8ecdc4e1b2d5d4c826a13aa7463">M3::int_t</a></div><div class="ttdeci">int int_t</div><div class="ttdef"><b>Definition:</b> <a href="Structs_8h_source.html#l00016">Structs.h:16</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -425,7 +426,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Calc total event weight. </p>
 
-<p>Implemented in <a class="el" href="classsplineFDBase.html#a1a237a8b8c3c165c82ebe15d2ca740c7">splineFDBase</a>, and <a class="el" href="classSMonolith.html#ac37ee525aa57316f652433a4e393afaf">SMonolith</a>.</p>
+<p>Implemented in <a class="el" href="classPySplineBase.html#ac7361b35ea190c2a88487f2bb6a92305">PySplineBase</a>, <a class="el" href="classsplineFDBase.html#a1a237a8b8c3c165c82ebe15d2ca740c7">splineFDBase</a>, and <a class="el" href="classSMonolith.html#ac37ee525aa57316f652433a4e393afaf">SMonolith</a>.</p>
 
 </div>
 </div>

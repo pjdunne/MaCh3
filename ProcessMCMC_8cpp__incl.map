@@ -40,7 +40,7 @@
 <area shape="rect" id="node37" title=" " alt="" coords="661,372,723,397"/>
 <area shape="rect" id="node38" href="$Structs_8h.html" title=" " alt="" coords="939,445,1096,471"/>
 <area shape="rect" id="node39" href="$MaCh3Exception_8h.html" title=" " alt="" coords="445,519,651,544"/>
-<area shape="rect" id="node41" href="$MaCh3Logger_8h.html" title=" " alt="" coords="517,592,701,617"/>
+<area shape="rect" id="node41" href="$MaCh3Logger_8h.html" title="KS: Based on this https://github.com/gabime/spdlog/blob/a2b4262090fd3f005c2315dcb5be2f0f1774a005/incl..." alt="" coords="517,592,701,617"/>
 <area shape="rect" id="node40" title=" " alt="" coords="349,665,408,691"/>
 <area shape="rect" id="node42" title=" " alt="" coords="462,665,586,691"/>
 <area shape="rect" id="node43" title=" " alt="" coords="610,665,697,691"/>

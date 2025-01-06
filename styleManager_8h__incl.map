@@ -1,6 +1,6 @@
 <map id="plotting/plottingUtils/styleManager.h" name="plotting/plottingUtils/styleManager.h">
 <area shape="rect" id="node1" title=" " alt="" coords="557,5,713,45"/>
-<area shape="rect" id="node2" href="$MaCh3Logger_8h.html" title=" " alt="" coords="197,167,381,192"/>
+<area shape="rect" id="node2" href="$MaCh3Logger_8h.html" title="KS: Based on this https://github.com/gabime/spdlog/blob/a2b4262090fd3f005c2315dcb5be2f0f1774a005/incl..." alt="" coords="197,167,381,192"/>
 <area shape="rect" id="node8" href="$YamlHelper_8h.html" title="Utility functions for handling YAML nodes." alt="" coords="617,167,787,192"/>
 <area shape="rect" id="node14" href="$MaCh3Exception_8h.html" title=" " alt="" coords="355,93,561,119"/>
 <area shape="rect" id="node16" title=" " alt="" coords="635,93,710,119"/>

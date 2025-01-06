@@ -118,7 +118,7 @@ Include dependency graph for HistogramUtils.cpp:</div>
 <area shape="rect" title=" " alt="" coords="991,225,1077,251"/>
 <area shape="rect" title=" " alt="" coords="1101,225,1161,251"/>
 <area shape="rect" href="MaCh3Exception_8h.html" title=" " alt="" coords="1186,225,1391,251"/>
-<area shape="rect" href="MaCh3Logger_8h.html" title=" " alt="" coords="1337,299,1521,324"/>
+<area shape="rect" href="MaCh3Logger_8h.html" title="KS: Based on this https://github.com/gabime/spdlog/blob/a2b4262090fd3f005c2315dcb5be2f0f1774a005/incl..." alt="" coords="1337,299,1521,324"/>
 <area shape="rect" title=" " alt="" coords="1467,225,1697,251"/>
 <area shape="rect" title=" " alt="" coords="1302,372,1361,397"/>
 <area shape="rect" title=" " alt="" coords="1124,299,1211,324"/>
@@ -161,6 +161,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a8bab8af5f0339c6ec0310ff5ea87f26d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="HistogramUtils_8cpp.html#a8bab8af5f0339c6ec0310ff5ea87f26d">PolyIntegralWidth</a> (TH2Poly *Histogram)</td></tr>
 <tr class="memdesc:a8bab8af5f0339c6ec0310ff5ea87f26d"><td class="mdescLeft">&#160;</td><td class="mdescRight">WP: Helper to calc integral of th2poly analogous to th2d integra; with option "width".  <br /></td></tr>
 <tr class="separator:a8bab8af5f0339c6ec0310ff5ea87f26d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9372bd8295f0ce1759ebf5a35106f4af"><td class="memItemLeft" align="right" valign="top">TH2Poly *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="HistogramUtils_8cpp.html#a9372bd8295f0ce1759ebf5a35106f4af">MakePolyHist</a> (const std::string &amp;name, const std::vector&lt; double &gt; &amp;BinArray_x, const std::vector&lt; double &gt; &amp;BinArray_y)</td></tr>
+<tr class="memdesc:a9372bd8295f0ce1759ebf5a35106f4af"><td class="mdescLeft">&#160;</td><td class="mdescRight">WP: Helper function to create TH2Poly histogram with uniform binning.  <br /></td></tr>
+<tr class="separator:a9372bd8295f0ce1759ebf5a35106f4af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85463c0c6943e3d544d5fcb3f96bf18a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="HistogramUtils_8cpp.html#a85463c0c6943e3d544d5fcb3f96bf18a">RemoveFitter</a> (TH1D *hist, const std::string &amp;name)</td></tr>
 <tr class="memdesc:a85463c0c6943e3d544d5fcb3f96bf18a"><td class="mdescLeft">&#160;</td><td class="mdescRight">KS: Remove fitted TF1 from hist to make comparison easier.  <br /></td></tr>
 <tr class="separator:a85463c0c6943e3d544d5fcb3f96bf18a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -218,24 +221,24 @@ Functions</h2></td></tr>
 
 <p>Recalculate Enu after Eb shift. Takes in shifted lepton momentum, lepton angle, and binding energy change, and if nu/anu. </p>
 
-<p class="definition">Definition at line <a class="el" href="HistogramUtils_8cpp_source.html#l00403">403</a> of file <a class="el" href="HistogramUtils_8cpp_source.html">HistogramUtils.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  403</span>                                                                        {</div>
-<div class="line"><span class="lineno">  404</span><span class="comment">// ***************************************************************************</span></div>
-<div class="line"><span class="lineno">  405</span>  <span class="keywordtype">double</span> mNeff = 0.93956536 - Eb / 1000.;</div>
-<div class="line"><span class="lineno">  406</span>  <span class="keywordtype">double</span> mNoth = 0.93827203;</div>
-<div class="line"><span class="lineno">  407</span> </div>
-<div class="line"><span class="lineno">  408</span>  <span class="keywordflow">if</span> (!neutrino) {</div>
-<div class="line"><span class="lineno">  409</span>    mNeff = 0.93827203 - Eb / 1000.;</div>
-<div class="line"><span class="lineno">  410</span>    mNoth = 0.93956536;</div>
-<div class="line"><span class="lineno">  411</span>  }</div>
-<div class="line"><span class="lineno">  412</span> </div>
-<div class="line"><span class="lineno">  413</span>  <span class="keywordtype">double</span> mLep = 0.10565837;</div>
-<div class="line"><span class="lineno">  414</span>  <span class="keywordtype">double</span> eLep = sqrt(PLep * PLep + mLep * mLep);</div>
-<div class="line"><span class="lineno">  415</span> </div>
-<div class="line"><span class="lineno">  416</span>  <span class="keywordtype">double</span> Enu = (2 * mNeff * eLep - mLep * mLep + mNoth * mNoth - mNeff * mNeff) /(2 * (mNeff - eLep + PLep * costh));</div>
-<div class="line"><span class="lineno">  417</span> </div>
-<div class="line"><span class="lineno">  418</span>  <span class="keywordflow">return</span> Enu;</div>
-<div class="line"><span class="lineno">  419</span>}</div>
+<p class="definition">Definition at line <a class="el" href="HistogramUtils_8cpp_source.html#l00425">425</a> of file <a class="el" href="HistogramUtils_8cpp_source.html">HistogramUtils.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  425</span>                                                                        {</div>
+<div class="line"><span class="lineno">  426</span><span class="comment">// ***************************************************************************</span></div>
+<div class="line"><span class="lineno">  427</span>  <span class="keywordtype">double</span> mNeff = 0.93956536 - Eb / 1000.;</div>
+<div class="line"><span class="lineno">  428</span>  <span class="keywordtype">double</span> mNoth = 0.93827203;</div>
+<div class="line"><span class="lineno">  429</span> </div>
+<div class="line"><span class="lineno">  430</span>  <span class="keywordflow">if</span> (!neutrino) {</div>
+<div class="line"><span class="lineno">  431</span>    mNeff = 0.93827203 - Eb / 1000.;</div>
+<div class="line"><span class="lineno">  432</span>    mNoth = 0.93956536;</div>
+<div class="line"><span class="lineno">  433</span>  }</div>
+<div class="line"><span class="lineno">  434</span> </div>
+<div class="line"><span class="lineno">  435</span>  <span class="keywordtype">double</span> mLep = 0.10565837;</div>
+<div class="line"><span class="lineno">  436</span>  <span class="keywordtype">double</span> eLep = sqrt(PLep * PLep + mLep * mLep);</div>
+<div class="line"><span class="lineno">  437</span> </div>
+<div class="line"><span class="lineno">  438</span>  <span class="keywordtype">double</span> Enu = (2 * mNeff * eLep - mLep * mLep + mNoth * mNoth - mNeff * mNeff) /(2 * (mNeff - eLep + PLep * costh));</div>
+<div class="line"><span class="lineno">  439</span> </div>
+<div class="line"><span class="lineno">  440</span>  <span class="keywordflow">return</span> Enu;</div>
+<div class="line"><span class="lineno">  441</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -279,23 +282,23 @@ Functions</h2></td></tr>
 
 <p>Recalculate Q^2 after Eb shift. Takes in shifted lepton momentum, lepton angle, and true neutrino energy. </p>
 
-<p class="definition">Definition at line <a class="el" href="HistogramUtils_8cpp_source.html#l00384">384</a> of file <a class="el" href="HistogramUtils_8cpp_source.html">HistogramUtils.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  384</span>                                                                              {</div>
-<div class="line"><span class="lineno">  385</span><span class="comment">// ***************************************************************************</span></div>
-<div class="line"><span class="lineno">  386</span>  <span class="keyword">constexpr</span> <span class="keywordtype">double</span> MLep = 0.10565837;</div>
-<div class="line"><span class="lineno">  387</span> </div>
-<div class="line"><span class="lineno">  388</span>  <span class="comment">// Caluclate muon energy</span></div>
-<div class="line"><span class="lineno">  389</span>  <span class="keywordtype">double</span> ELep = sqrt((MLep*MLep)+(PLep*PLep));</div>
-<div class="line"><span class="lineno">  390</span> </div>
-<div class="line"><span class="lineno">  391</span>  <span class="keywordtype">double</span> CosTh = (2*EnuTrue*ELep - MLep*MLep - InitialQ2)/(2*EnuTrue*PLep);</div>
-<div class="line"><span class="lineno">  392</span> </div>
-<div class="line"><span class="lineno">  393</span>  ELep = sqrt((MLep*MLep)+(PUpd*PUpd));</div>
-<div class="line"><span class="lineno">  394</span> </div>
-<div class="line"><span class="lineno">  395</span>  <span class="comment">// Calculate the new Q2</span></div>
-<div class="line"><span class="lineno">  396</span>  <span class="keywordtype">double</span> Q2Upd = -(MLep*MLep) + 2.0*EnuTrue*(ELep - PUpd*CosTh);</div>
-<div class="line"><span class="lineno">  397</span> </div>
-<div class="line"><span class="lineno">  398</span>  <span class="keywordflow">return</span> Q2Upd - InitialQ2;</div>
-<div class="line"><span class="lineno">  399</span>}</div>
+<p class="definition">Definition at line <a class="el" href="HistogramUtils_8cpp_source.html#l00406">406</a> of file <a class="el" href="HistogramUtils_8cpp_source.html">HistogramUtils.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  406</span>                                                                              {</div>
+<div class="line"><span class="lineno">  407</span><span class="comment">// ***************************************************************************</span></div>
+<div class="line"><span class="lineno">  408</span>  <span class="keyword">constexpr</span> <span class="keywordtype">double</span> MLep = 0.10565837;</div>
+<div class="line"><span class="lineno">  409</span> </div>
+<div class="line"><span class="lineno">  410</span>  <span class="comment">// Caluclate muon energy</span></div>
+<div class="line"><span class="lineno">  411</span>  <span class="keywordtype">double</span> ELep = sqrt((MLep*MLep)+(PLep*PLep));</div>
+<div class="line"><span class="lineno">  412</span> </div>
+<div class="line"><span class="lineno">  413</span>  <span class="keywordtype">double</span> CosTh = (2*EnuTrue*ELep - MLep*MLep - InitialQ2)/(2*EnuTrue*PLep);</div>
+<div class="line"><span class="lineno">  414</span> </div>
+<div class="line"><span class="lineno">  415</span>  ELep = sqrt((MLep*MLep)+(PUpd*PUpd));</div>
+<div class="line"><span class="lineno">  416</span> </div>
+<div class="line"><span class="lineno">  417</span>  <span class="comment">// Calculate the new Q2</span></div>
+<div class="line"><span class="lineno">  418</span>  <span class="keywordtype">double</span> Q2Upd = -(MLep*MLep) + 2.0*EnuTrue*(ELep - PUpd*CosTh);</div>
+<div class="line"><span class="lineno">  419</span> </div>
+<div class="line"><span class="lineno">  420</span>  <span class="keywordflow">return</span> Q2Upd - InitialQ2;</div>
+<div class="line"><span class="lineno">  421</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -345,7 +348,7 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   27</span>    <span class="keywordflow">throw</span> <a class="code hl_class" href="classMaCh3Exception.html">MaCh3Exception</a>(__FILE__, __LINE__);</div>
 <div class="line"><span class="lineno">   28</span>  }</div>
 <div class="line"><span class="lineno">   29</span>}</div>
-<div class="ttc" id="aMaCh3Logger_8h_html_a61052119a625282d0ec6d4a97adf3ee2"><div class="ttname"><a href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a></div><div class="ttdeci">#define MACH3LOG_ERROR</div><div class="ttdef"><b>Definition:</b> <a href="MaCh3Logger_8h_source.html#l00018">MaCh3Logger.h:18</a></div></div>
+<div class="ttc" id="aMaCh3Logger_8h_html_a61052119a625282d0ec6d4a97adf3ee2"><div class="ttname"><a href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a></div><div class="ttdeci">#define MACH3LOG_ERROR</div><div class="ttdef"><b>Definition:</b> <a href="MaCh3Logger_8h_source.html#l00019">MaCh3Logger.h:19</a></div></div>
 <div class="ttc" id="aclassMaCh3Exception_html"><div class="ttname"><a href="classMaCh3Exception.html">MaCh3Exception</a></div><div class="ttdoc">Custom exception class for MaCh3 errors.</div><div class="ttdef"><b>Definition:</b> <a href="MaCh3Exception_8h_source.html#l00012">MaCh3Exception.h:12</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -368,53 +371,53 @@ Functions</h2></td></tr>
 
 <p>KS: Convert TH2Poly to TH2D. </p>
 
-<p class="definition">Definition at line <a class="el" href="HistogramUtils_8cpp_source.html#l00243">243</a> of file <a class="el" href="HistogramUtils_8cpp_source.html">HistogramUtils.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  243</span>                                          {</div>
-<div class="line"><span class="lineno">  244</span><span class="comment">// ****************</span></div>
-<div class="line"><span class="lineno">  245</span>  <span class="comment">// Make the x axis from the momentum of lepton</span></div>
-<div class="line"><span class="lineno">  246</span>  TAxis* xaxis = hist-&gt;GetXaxis();</div>
-<div class="line"><span class="lineno">  247</span>  <span class="comment">// Make the y axis from the cos theta of lepton</span></div>
-<div class="line"><span class="lineno">  248</span>  TAxis* yaxis = hist-&gt;GetYaxis();</div>
-<div class="line"><span class="lineno">  249</span> </div>
-<div class="line"><span class="lineno">  250</span>  TString histname = hist-&gt;GetName();</div>
-<div class="line"><span class="lineno">  251</span>  <span class="comment">// Convert TH2D binning to TH2Poly</span></div>
-<div class="line"><span class="lineno">  252</span>  TH2Poly* poly = <span class="keyword">new</span> TH2Poly();</div>
-<div class="line"><span class="lineno">  253</span>  poly-&gt;SetName(histname);</div>
-<div class="line"><span class="lineno">  254</span>  poly-&gt;SetTitle(histname);</div>
-<div class="line"><span class="lineno">  255</span> </div>
-<div class="line"><span class="lineno">  256</span>  <span class="comment">// Copy axis titles</span></div>
-<div class="line"><span class="lineno">  257</span>  poly-&gt;GetXaxis()-&gt;SetTitle(xaxis-&gt;GetTitle());</div>
-<div class="line"><span class="lineno">  258</span>  poly-&gt;GetYaxis()-&gt;SetTitle(yaxis-&gt;GetTitle());</div>
-<div class="line"><span class="lineno">  259</span> </div>
-<div class="line"><span class="lineno">  260</span>  <span class="keywordtype">double</span> xmax, xmin, ymax, ymin;</div>
-<div class="line"><span class="lineno">  261</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> iy = 1; iy &lt;= yaxis-&gt;GetNbins(); iy++) {</div>
-<div class="line"><span class="lineno">  262</span>    ymax = yaxis-&gt;GetBinUpEdge(iy);</div>
-<div class="line"><span class="lineno">  263</span>    ymin = yaxis-&gt;GetBinLowEdge(iy);</div>
-<div class="line"><span class="lineno">  264</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ix = 1; ix &lt;= xaxis-&gt;GetNbins(); ix++) {</div>
-<div class="line"><span class="lineno">  265</span>      xmax = xaxis-&gt;GetBinUpEdge(ix);</div>
-<div class="line"><span class="lineno">  266</span>      xmin = xaxis-&gt;GetBinLowEdge(ix);</div>
-<div class="line"><span class="lineno">  267</span>      <span class="keywordtype">double</span> binofx[] = {xmin, xmax, xmax, xmin};</div>
-<div class="line"><span class="lineno">  268</span>      <span class="keywordtype">double</span> binofy[] = {ymin, ymin, ymax, ymax};</div>
-<div class="line"><span class="lineno">  269</span>      poly-&gt;AddBin(4, binofx, binofy);</div>
-<div class="line"><span class="lineno">  270</span>    }</div>
-<div class="line"><span class="lineno">  271</span>  }</div>
-<div class="line"><span class="lineno">  272</span> </div>
-<div class="line"><span class="lineno">  273</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> iy = 1; iy &lt;= yaxis-&gt;GetNbins(); iy++) {</div>
-<div class="line"><span class="lineno">  274</span>    ymax = yaxis-&gt;GetBinUpEdge(iy);</div>
-<div class="line"><span class="lineno">  275</span>    ymin = yaxis-&gt;GetBinLowEdge(iy);</div>
-<div class="line"><span class="lineno">  276</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ix = 1; ix &lt;= xaxis-&gt;GetNbins(); ix++) {</div>
-<div class="line"><span class="lineno">  277</span>      xmax = xaxis-&gt;GetBinUpEdge(ix);</div>
-<div class="line"><span class="lineno">  278</span>      xmin = xaxis-&gt;GetBinLowEdge(ix);</div>
-<div class="line"><span class="lineno">  279</span> </div>
-<div class="line"><span class="lineno">  280</span>      <span class="comment">// Get the content of the corresponding bin in TH2D and set it in TH2Poly</span></div>
-<div class="line"><span class="lineno">  281</span>      <span class="keywordtype">int</span> bin = hist-&gt;GetBin(ix, iy);</div>
-<div class="line"><span class="lineno">  282</span>      <span class="keywordtype">double</span> content = hist-&gt;GetBinContent(bin);</div>
-<div class="line"><span class="lineno">  283</span>      poly-&gt;SetBinContent(poly-&gt;FindBin((xmin + xmax) / 2, (ymin + ymax) / 2), content);</div>
-<div class="line"><span class="lineno">  284</span>    }</div>
-<div class="line"><span class="lineno">  285</span>  }</div>
-<div class="line"><span class="lineno">  286</span> </div>
-<div class="line"><span class="lineno">  287</span>  <span class="keywordflow">return</span> poly;</div>
-<div class="line"><span class="lineno">  288</span>}</div>
+<p class="definition">Definition at line <a class="el" href="HistogramUtils_8cpp_source.html#l00242">242</a> of file <a class="el" href="HistogramUtils_8cpp_source.html">HistogramUtils.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  242</span>                                          {</div>
+<div class="line"><span class="lineno">  243</span><span class="comment">// ****************</span></div>
+<div class="line"><span class="lineno">  244</span>  <span class="comment">// Make the x axis from the momentum of lepton</span></div>
+<div class="line"><span class="lineno">  245</span>  TAxis* xaxis = hist-&gt;GetXaxis();</div>
+<div class="line"><span class="lineno">  246</span>  <span class="comment">// Make the y axis from the cos theta of lepton</span></div>
+<div class="line"><span class="lineno">  247</span>  TAxis* yaxis = hist-&gt;GetYaxis();</div>
+<div class="line"><span class="lineno">  248</span> </div>
+<div class="line"><span class="lineno">  249</span>  TString histname = hist-&gt;GetName();</div>
+<div class="line"><span class="lineno">  250</span>  <span class="comment">// Convert TH2D binning to TH2Poly</span></div>
+<div class="line"><span class="lineno">  251</span>  TH2Poly* poly = <span class="keyword">new</span> TH2Poly();</div>
+<div class="line"><span class="lineno">  252</span>  poly-&gt;SetName(histname);</div>
+<div class="line"><span class="lineno">  253</span>  poly-&gt;SetTitle(histname);</div>
+<div class="line"><span class="lineno">  254</span> </div>
+<div class="line"><span class="lineno">  255</span>  <span class="comment">// Copy axis titles</span></div>
+<div class="line"><span class="lineno">  256</span>  poly-&gt;GetXaxis()-&gt;SetTitle(xaxis-&gt;GetTitle());</div>
+<div class="line"><span class="lineno">  257</span>  poly-&gt;GetYaxis()-&gt;SetTitle(yaxis-&gt;GetTitle());</div>
+<div class="line"><span class="lineno">  258</span> </div>
+<div class="line"><span class="lineno">  259</span>  <span class="keywordtype">double</span> xmax, xmin, ymax, ymin;</div>
+<div class="line"><span class="lineno">  260</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> iy = 1; iy &lt;= yaxis-&gt;GetNbins(); iy++) {</div>
+<div class="line"><span class="lineno">  261</span>    ymax = yaxis-&gt;GetBinUpEdge(iy);</div>
+<div class="line"><span class="lineno">  262</span>    ymin = yaxis-&gt;GetBinLowEdge(iy);</div>
+<div class="line"><span class="lineno">  263</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ix = 1; ix &lt;= xaxis-&gt;GetNbins(); ix++) {</div>
+<div class="line"><span class="lineno">  264</span>      xmax = xaxis-&gt;GetBinUpEdge(ix);</div>
+<div class="line"><span class="lineno">  265</span>      xmin = xaxis-&gt;GetBinLowEdge(ix);</div>
+<div class="line"><span class="lineno">  266</span>      <span class="keywordtype">double</span> binofx[] = {xmin, xmax, xmax, xmin};</div>
+<div class="line"><span class="lineno">  267</span>      <span class="keywordtype">double</span> binofy[] = {ymin, ymin, ymax, ymax};</div>
+<div class="line"><span class="lineno">  268</span>      poly-&gt;AddBin(4, binofx, binofy);</div>
+<div class="line"><span class="lineno">  269</span>    }</div>
+<div class="line"><span class="lineno">  270</span>  }</div>
+<div class="line"><span class="lineno">  271</span> </div>
+<div class="line"><span class="lineno">  272</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> iy = 1; iy &lt;= yaxis-&gt;GetNbins(); iy++) {</div>
+<div class="line"><span class="lineno">  273</span>    ymax = yaxis-&gt;GetBinUpEdge(iy);</div>
+<div class="line"><span class="lineno">  274</span>    ymin = yaxis-&gt;GetBinLowEdge(iy);</div>
+<div class="line"><span class="lineno">  275</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ix = 1; ix &lt;= xaxis-&gt;GetNbins(); ix++) {</div>
+<div class="line"><span class="lineno">  276</span>      xmax = xaxis-&gt;GetBinUpEdge(ix);</div>
+<div class="line"><span class="lineno">  277</span>      xmin = xaxis-&gt;GetBinLowEdge(ix);</div>
+<div class="line"><span class="lineno">  278</span> </div>
+<div class="line"><span class="lineno">  279</span>      <span class="comment">// Get the content of the corresponding bin in TH2D and set it in TH2Poly</span></div>
+<div class="line"><span class="lineno">  280</span>      <span class="keywordtype">int</span> bin = hist-&gt;GetBin(ix, iy);</div>
+<div class="line"><span class="lineno">  281</span>      <span class="keywordtype">double</span> content = hist-&gt;GetBinContent(bin);</div>
+<div class="line"><span class="lineno">  282</span>      poly-&gt;SetBinContent(poly-&gt;FindBin((xmin + xmax) / 2, (ymin + ymax) / 2), content);</div>
+<div class="line"><span class="lineno">  283</span>    }</div>
+<div class="line"><span class="lineno">  284</span>  }</div>
+<div class="line"><span class="lineno">  285</span> </div>
+<div class="line"><span class="lineno">  286</span>  <span class="keywordflow">return</span> poly;</div>
+<div class="line"><span class="lineno">  287</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -446,41 +449,41 @@ Functions</h2></td></tr>
 
 <p>KS: Convert TH2D to TH2Poly. </p>
 
-<p class="definition">Definition at line <a class="el" href="HistogramUtils_8cpp_source.html#l00209">209</a> of file <a class="el" href="HistogramUtils_8cpp_source.html">HistogramUtils.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  209</span>                                                         {</div>
-<div class="line"><span class="lineno">  210</span><span class="comment">// ****************</span></div>
-<div class="line"><span class="lineno">  211</span>  <span class="keywordtype">double</span> xlow, xup, ylow, yup;</div>
-<div class="line"><span class="lineno">  212</span>  std::string HistTempName = poly-&gt;GetName();</div>
-<div class="line"><span class="lineno">  213</span> </div>
-<div class="line"><span class="lineno">  214</span>  HistTempName += <span class="stringliteral">&quot;_&quot;</span>;</div>
-<div class="line"><span class="lineno">  215</span>  <span class="comment">//make the th2d</span></div>
-<div class="line"><span class="lineno">  216</span>  TH2D *hist = <span class="keyword">static_cast&lt;</span>TH2D*<span class="keyword">&gt;</span>(h2dhist-&gt;Clone());</div>
-<div class="line"><span class="lineno">  217</span>  hist-&gt;SetNameTitle(HistTempName.c_str(), HistTempName.c_str());</div>
-<div class="line"><span class="lineno">  218</span> </div>
-<div class="line"><span class="lineno">  219</span>  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> ix = 0; ix &lt; hist-&gt;GetNbinsX() + 2; ix++) {</div>
-<div class="line"><span class="lineno">  220</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> iy = 0; iy &lt; hist-&gt;GetNbinsY() + 2; iy++) {</div>
-<div class="line"><span class="lineno">  221</span>      hist-&gt;SetBinContent(ix, iy, 0);</div>
-<div class="line"><span class="lineno">  222</span>    }</div>
-<div class="line"><span class="lineno">  223</span>  }</div>
-<div class="line"><span class="lineno">  224</span>  <span class="comment">//Loop over poly bins, find the corresponding th2d and setbincontent!</span></div>
-<div class="line"><span class="lineno">  225</span>  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i&lt; poly-&gt;GetNumberOfBins(); i++){</div>
-<div class="line"><span class="lineno">  226</span>    TH2PolyBin &amp; polybin = <span class="keyword">static_cast&lt;</span>TH2PolyBin &amp;<span class="keyword">&gt;</span>(*poly-&gt;GetBins()-&gt;At(i));</div>
-<div class="line"><span class="lineno">  227</span>    xlow = polybin.GetXMin();</div>
-<div class="line"><span class="lineno">  228</span>    xup = polybin.GetXMax();</div>
-<div class="line"><span class="lineno">  229</span>    ylow = polybin.GetYMin();</div>
-<div class="line"><span class="lineno">  230</span>    yup = polybin.GetYMax();</div>
-<div class="line"><span class="lineno">  231</span>    <span class="keywordtype">int</span> xbin, ybin;</div>
-<div class="line"><span class="lineno">  232</span> </div>
-<div class="line"><span class="lineno">  233</span>    xbin = hist-&gt;GetXaxis()-&gt;FindBin(xlow+(xup-xlow)/2);</div>
-<div class="line"><span class="lineno">  234</span>    ybin = hist-&gt;GetYaxis()-&gt;FindBin(ylow+(yup-ylow)/2);</div>
-<div class="line"><span class="lineno">  235</span> </div>
-<div class="line"><span class="lineno">  236</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#afc88f0aa23c7127b2ff6e5c7ca3fa892">MACH3LOG_TRACE</a>(<span class="stringliteral">&quot;Poly bin {}, xlow: {}, xup: {}, ylow: {}, yup: {}. Finding bin for ({}, {}). Found Bin ({}, {}) with content {}. But Poly content: {}&quot;</span>,</div>
-<div class="line"><span class="lineno">  237</span>                i, xlow, xup, ylow, yup, (xlow + (xup - xlow) / 2), (ylow + (yup - ylow) / 2), xbin, ybin, polybin.GetContent(), poly-&gt;GetBinContent(i));</div>
-<div class="line"><span class="lineno">  238</span>    hist-&gt;SetBinContent(xbin, ybin, polybin.GetContent());</div>
-<div class="line"><span class="lineno">  239</span>  }</div>
-<div class="line"><span class="lineno">  240</span>  <span class="keywordflow">return</span> hist;</div>
-<div class="line"><span class="lineno">  241</span>}</div>
-<div class="ttc" id="aMaCh3Logger_8h_html_afc88f0aa23c7127b2ff6e5c7ca3fa892"><div class="ttname"><a href="MaCh3Logger_8h.html#afc88f0aa23c7127b2ff6e5c7ca3fa892">MACH3LOG_TRACE</a></div><div class="ttdeci">#define MACH3LOG_TRACE</div><div class="ttdef"><b>Definition:</b> <a href="MaCh3Logger_8h_source.html#l00014">MaCh3Logger.h:14</a></div></div>
+<p class="definition">Definition at line <a class="el" href="HistogramUtils_8cpp_source.html#l00208">208</a> of file <a class="el" href="HistogramUtils_8cpp_source.html">HistogramUtils.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  208</span>                                                         {</div>
+<div class="line"><span class="lineno">  209</span><span class="comment">// ****************</span></div>
+<div class="line"><span class="lineno">  210</span>  <span class="keywordtype">double</span> xlow, xup, ylow, yup;</div>
+<div class="line"><span class="lineno">  211</span>  std::string HistTempName = poly-&gt;GetName();</div>
+<div class="line"><span class="lineno">  212</span> </div>
+<div class="line"><span class="lineno">  213</span>  HistTempName += <span class="stringliteral">&quot;_&quot;</span>;</div>
+<div class="line"><span class="lineno">  214</span>  <span class="comment">//make the th2d</span></div>
+<div class="line"><span class="lineno">  215</span>  TH2D *hist = <span class="keyword">static_cast&lt;</span>TH2D*<span class="keyword">&gt;</span>(h2dhist-&gt;Clone());</div>
+<div class="line"><span class="lineno">  216</span>  hist-&gt;SetNameTitle(HistTempName.c_str(), HistTempName.c_str());</div>
+<div class="line"><span class="lineno">  217</span> </div>
+<div class="line"><span class="lineno">  218</span>  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> ix = 0; ix &lt; hist-&gt;GetNbinsX() + 2; ix++) {</div>
+<div class="line"><span class="lineno">  219</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> iy = 0; iy &lt; hist-&gt;GetNbinsY() + 2; iy++) {</div>
+<div class="line"><span class="lineno">  220</span>      hist-&gt;SetBinContent(ix, iy, 0);</div>
+<div class="line"><span class="lineno">  221</span>    }</div>
+<div class="line"><span class="lineno">  222</span>  }</div>
+<div class="line"><span class="lineno">  223</span>  <span class="comment">//Loop over poly bins, find the corresponding th2d and setbincontent!</span></div>
+<div class="line"><span class="lineno">  224</span>  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i&lt; poly-&gt;GetNumberOfBins(); i++){</div>
+<div class="line"><span class="lineno">  225</span>    TH2PolyBin &amp; polybin = <span class="keyword">static_cast&lt;</span>TH2PolyBin &amp;<span class="keyword">&gt;</span>(*poly-&gt;GetBins()-&gt;At(i));</div>
+<div class="line"><span class="lineno">  226</span>    xlow = polybin.GetXMin();</div>
+<div class="line"><span class="lineno">  227</span>    xup = polybin.GetXMax();</div>
+<div class="line"><span class="lineno">  228</span>    ylow = polybin.GetYMin();</div>
+<div class="line"><span class="lineno">  229</span>    yup = polybin.GetYMax();</div>
+<div class="line"><span class="lineno">  230</span>    <span class="keywordtype">int</span> xbin, ybin;</div>
+<div class="line"><span class="lineno">  231</span> </div>
+<div class="line"><span class="lineno">  232</span>    xbin = hist-&gt;GetXaxis()-&gt;FindBin(xlow+(xup-xlow)/2);</div>
+<div class="line"><span class="lineno">  233</span>    ybin = hist-&gt;GetYaxis()-&gt;FindBin(ylow+(yup-ylow)/2);</div>
+<div class="line"><span class="lineno">  234</span> </div>
+<div class="line"><span class="lineno">  235</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#afc88f0aa23c7127b2ff6e5c7ca3fa892">MACH3LOG_TRACE</a>(<span class="stringliteral">&quot;Poly bin {}, xlow: {}, xup: {}, ylow: {}, yup: {}. Finding bin for ({}, {}). Found Bin ({}, {}) with content {}. But Poly content: {}&quot;</span>,</div>
+<div class="line"><span class="lineno">  236</span>                i, xlow, xup, ylow, yup, (xlow + (xup - xlow) / 2), (ylow + (yup - ylow) / 2), xbin, ybin, polybin.GetContent(), poly-&gt;GetBinContent(i));</div>
+<div class="line"><span class="lineno">  237</span>    hist-&gt;SetBinContent(xbin, ybin, polybin.GetContent());</div>
+<div class="line"><span class="lineno">  238</span>  }</div>
+<div class="line"><span class="lineno">  239</span>  <span class="keywordflow">return</span> hist;</div>
+<div class="line"><span class="lineno">  240</span>}</div>
+<div class="ttc" id="aMaCh3Logger_8h_html_afc88f0aa23c7127b2ff6e5c7ca3fa892"><div class="ttname"><a href="MaCh3Logger_8h.html#afc88f0aa23c7127b2ff6e5c7ca3fa892">MACH3LOG_TRACE</a></div><div class="ttdeci">#define MACH3LOG_TRACE</div><div class="ttdef"><b>Definition:</b> <a href="MaCh3Logger_8h_source.html#l00015">MaCh3Logger.h:15</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -534,36 +537,103 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A <code>TGraphAsymmErrors</code> object that visualizes the sigma variation of spectra, showing confidence intervals between different sigma shifts. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="HistogramUtils_8cpp_source.html#l00342">342</a> of file <a class="el" href="HistogramUtils_8cpp_source.html">HistogramUtils.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  342</span>                                                                                                                             {</div>
-<div class="line"><span class="lineno">  343</span><span class="comment">// *************************</span></div>
-<div class="line"><span class="lineno">  344</span>  TGraphAsymmErrors *var = <span class="keyword">new</span> TGraphAsymmErrors(sigmaArrayCentr);</div>
-<div class="line"><span class="lineno">  345</span>  var-&gt;SetNameTitle((title).c_str(), (title).c_str());</div>
-<div class="line"><span class="lineno">  346</span> </div>
-<div class="line"><span class="lineno">  347</span>  <span class="comment">// Need to draw TGraphs to set axes labels</span></div>
-<div class="line"><span class="lineno">  348</span>  var-&gt;Draw(<span class="stringliteral">&quot;AP&quot;</span>);</div>
-<div class="line"><span class="lineno">  349</span>  var-&gt;GetXaxis()-&gt;SetTitle(sigmaArrayCentr-&gt;GetXaxis()-&gt;GetTitle());</div>
-<div class="line"><span class="lineno">  350</span>  var-&gt;GetYaxis()-&gt;SetTitle(<span class="stringliteral">&quot;Number of events/bin&quot;</span>);</div>
-<div class="line"><span class="lineno">  351</span> </div>
-<div class="line"><span class="lineno">  352</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> m = 0; m &lt; var-&gt;GetN(); ++m)</div>
-<div class="line"><span class="lineno">  353</span>  {</div>
-<div class="line"><span class="lineno">  354</span>    <span class="keywordtype">double</span> xlow = sigmaArrayLeft-&gt;GetBinContent(m+1);</div>
-<div class="line"><span class="lineno">  355</span>    <span class="keywordtype">double</span> xhigh = sigmaArrayRight-&gt;GetBinContent(m+1);</div>
-<div class="line"><span class="lineno">  356</span>    <span class="keywordtype">double</span> xtemp;</div>
-<div class="line"><span class="lineno">  357</span> </div>
-<div class="line"><span class="lineno">  358</span>    <span class="comment">// Figure out which variation is larger so we set the error correctly</span></div>
-<div class="line"><span class="lineno">  359</span>    <span class="keywordflow">if</span> (xlow &gt; xhigh)</div>
-<div class="line"><span class="lineno">  360</span>    {</div>
-<div class="line"><span class="lineno">  361</span>      xtemp = xlow;</div>
-<div class="line"><span class="lineno">  362</span>      xlow = xhigh;</div>
-<div class="line"><span class="lineno">  363</span>      xhigh = xtemp;</div>
-<div class="line"><span class="lineno">  364</span>    }</div>
-<div class="line"><span class="lineno">  365</span> </div>
-<div class="line"><span class="lineno">  366</span>    var-&gt;SetPointEYhigh(m, xhigh - var-&gt;GetY()[m]);</div>
-<div class="line"><span class="lineno">  367</span>    var-&gt;SetPointEYlow(m, var-&gt;GetY()[m] - xlow);</div>
-<div class="line"><span class="lineno">  368</span>  }</div>
-<div class="line"><span class="lineno">  369</span>  <span class="keywordflow">return</span> var;</div>
-<div class="line"><span class="lineno">  370</span>}</div>
+<p class="definition">Definition at line <a class="el" href="HistogramUtils_8cpp_source.html#l00364">364</a> of file <a class="el" href="HistogramUtils_8cpp_source.html">HistogramUtils.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  364</span>                                                                                                                             {</div>
+<div class="line"><span class="lineno">  365</span><span class="comment">// *************************</span></div>
+<div class="line"><span class="lineno">  366</span>  TGraphAsymmErrors *var = <span class="keyword">new</span> TGraphAsymmErrors(sigmaArrayCentr);</div>
+<div class="line"><span class="lineno">  367</span>  var-&gt;SetNameTitle((title).c_str(), (title).c_str());</div>
+<div class="line"><span class="lineno">  368</span> </div>
+<div class="line"><span class="lineno">  369</span>  <span class="comment">// Need to draw TGraphs to set axes labels</span></div>
+<div class="line"><span class="lineno">  370</span>  var-&gt;Draw(<span class="stringliteral">&quot;AP&quot;</span>);</div>
+<div class="line"><span class="lineno">  371</span>  var-&gt;GetXaxis()-&gt;SetTitle(sigmaArrayCentr-&gt;GetXaxis()-&gt;GetTitle());</div>
+<div class="line"><span class="lineno">  372</span>  var-&gt;GetYaxis()-&gt;SetTitle(<span class="stringliteral">&quot;Number of events/bin&quot;</span>);</div>
+<div class="line"><span class="lineno">  373</span> </div>
+<div class="line"><span class="lineno">  374</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> m = 0; m &lt; var-&gt;GetN(); ++m)</div>
+<div class="line"><span class="lineno">  375</span>  {</div>
+<div class="line"><span class="lineno">  376</span>    <span class="keywordtype">double</span> xlow = sigmaArrayLeft-&gt;GetBinContent(m+1);</div>
+<div class="line"><span class="lineno">  377</span>    <span class="keywordtype">double</span> xhigh = sigmaArrayRight-&gt;GetBinContent(m+1);</div>
+<div class="line"><span class="lineno">  378</span>    <span class="keywordtype">double</span> xtemp;</div>
+<div class="line"><span class="lineno">  379</span> </div>
+<div class="line"><span class="lineno">  380</span>    <span class="comment">// Figure out which variation is larger so we set the error correctly</span></div>
+<div class="line"><span class="lineno">  381</span>    <span class="keywordflow">if</span> (xlow &gt; xhigh)</div>
+<div class="line"><span class="lineno">  382</span>    {</div>
+<div class="line"><span class="lineno">  383</span>      xtemp = xlow;</div>
+<div class="line"><span class="lineno">  384</span>      xlow = xhigh;</div>
+<div class="line"><span class="lineno">  385</span>      xhigh = xtemp;</div>
+<div class="line"><span class="lineno">  386</span>    }</div>
+<div class="line"><span class="lineno">  387</span> </div>
+<div class="line"><span class="lineno">  388</span>    var-&gt;SetPointEYhigh(m, xhigh - var-&gt;GetY()[m]);</div>
+<div class="line"><span class="lineno">  389</span>    var-&gt;SetPointEYlow(m, var-&gt;GetY()[m] - xlow);</div>
+<div class="line"><span class="lineno">  390</span>  }</div>
+<div class="line"><span class="lineno">  391</span>  <span class="keywordflow">return</span> var;</div>
+<div class="line"><span class="lineno">  392</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9372bd8295f0ce1759ebf5a35106f4af" name="a9372bd8295f0ce1759ebf5a35106f4af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9372bd8295f0ce1759ebf5a35106f4af">&#9670;&#160;</a></span>MakePolyHist()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TH2Poly * MakePolyHist </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>BinArray_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>BinArray_y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>WP: Helper function to create TH2Poly histogram with uniform binning. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>This will be tittle of output histogram </td></tr>
+    <tr><td class="paramname">BinArray_x</td><td>Bin edges for X axis </td></tr>
+    <tr><td class="paramname">BinArray_y</td><td>Bin edges for Y axis </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="HistogramUtils_8cpp_source.html#l00330">330</a> of file <a class="el" href="HistogramUtils_8cpp_source.html">HistogramUtils.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  330</span>                                                                                                                       {</div>
+<div class="line"><span class="lineno">  331</span><span class="comment">// *********************</span></div>
+<div class="line"><span class="lineno">  332</span>  TH2Poly* poly = <span class="keyword">new</span> TH2Poly();</div>
+<div class="line"><span class="lineno">  333</span>  poly-&gt;SetName(name.c_str());</div>
+<div class="line"><span class="lineno">  334</span>  poly-&gt;SetTitle(name.c_str());</div>
+<div class="line"><span class="lineno">  335</span>  <span class="keywordtype">double</span> xmax, xmin, ymax, ymin;</div>
+<div class="line"><span class="lineno">  336</span>  <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> iy = 0; iy &lt; BinArray_y.size()-1; iy++)</div>
+<div class="line"><span class="lineno">  337</span>  {</div>
+<div class="line"><span class="lineno">  338</span>    ymax = BinArray_y[iy+1];</div>
+<div class="line"><span class="lineno">  339</span>    ymin = BinArray_y[iy];</div>
+<div class="line"><span class="lineno">  340</span>    <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ix = 0; ix &lt; BinArray_x.size()-1; ix++)</div>
+<div class="line"><span class="lineno">  341</span>    {</div>
+<div class="line"><span class="lineno">  342</span>      xmax = BinArray_x[ix+1];</div>
+<div class="line"><span class="lineno">  343</span>      xmin = BinArray_x[ix];</div>
+<div class="line"><span class="lineno">  344</span>      <span class="keywordtype">double</span> binofx[] = {xmin, xmax, xmax, xmin};</div>
+<div class="line"><span class="lineno">  345</span>      <span class="keywordtype">double</span> binofy[] = {ymin, ymin, ymax, ymax};</div>
+<div class="line"><span class="lineno">  346</span>      poly-&gt;AddBin(4,binofx,binofy);</div>
+<div class="line"><span class="lineno">  347</span>    }</div>
+<div class="line"><span class="lineno">  348</span>  }</div>
+<div class="line"><span class="lineno">  349</span>  <span class="keywordflow">return</span> poly;</div>
+<div class="line"><span class="lineno">  350</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -617,19 +687,19 @@ Functions</h2></td></tr>
 
 <p>WP: Helper to Normalise histograms. </p>
 
-<p class="definition">Definition at line <a class="el" href="HistogramUtils_8cpp_source.html#l00197">197</a> of file <a class="el" href="HistogramUtils_8cpp_source.html">HistogramUtils.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  197</span>                                           {</div>
-<div class="line"><span class="lineno">  198</span><span class="comment">// ****************</span></div>
-<div class="line"><span class="lineno">  199</span>  TH2Poly* HistCopy = <span class="keyword">static_cast&lt;</span>TH2Poly*<span class="keyword">&gt;</span>(Histogram-&gt;Clone());</div>
-<div class="line"><span class="lineno">  200</span>  <span class="keywordtype">double</span> IntegralWidth = <a class="code hl_function" href="HistogramUtils_8cpp.html#a8bab8af5f0339c6ec0310ff5ea87f26d">PolyIntegralWidth</a>(HistCopy);</div>
-<div class="line"><span class="lineno">  201</span>  HistCopy = <a class="code hl_function" href="HistogramUtils_8cpp.html#a61d8f295d13a5fe82a552c08d42c8bfa">PolyScaleWidth</a>(HistCopy, IntegralWidth);</div>
-<div class="line"><span class="lineno">  202</span>  std::string title = std::string(HistCopy-&gt;GetName())+<span class="stringliteral">&quot;_norm&quot;</span>;</div>
-<div class="line"><span class="lineno">  203</span>  HistCopy-&gt;SetNameTitle(title.c_str(), title.c_str());</div>
-<div class="line"><span class="lineno">  204</span> </div>
-<div class="line"><span class="lineno">  205</span>  <span class="keywordflow">return</span> HistCopy;</div>
-<div class="line"><span class="lineno">  206</span>}</div>
-<div class="ttc" id="aHistogramUtils_8cpp_html_a61d8f295d13a5fe82a552c08d42c8bfa"><div class="ttname"><a href="HistogramUtils_8cpp.html#a61d8f295d13a5fe82a552c08d42c8bfa">PolyScaleWidth</a></div><div class="ttdeci">TH2Poly * PolyScaleWidth(TH2Poly *Histogram, double scale)</div><div class="ttdoc">WP: Helper to scale th2poly analogous to th2d scale with option &quot;width&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="HistogramUtils_8cpp_source.html#l00292">HistogramUtils.cpp:292</a></div></div>
-<div class="ttc" id="aHistogramUtils_8cpp_html_a8bab8af5f0339c6ec0310ff5ea87f26d"><div class="ttname"><a href="HistogramUtils_8cpp.html#a8bab8af5f0339c6ec0310ff5ea87f26d">PolyIntegralWidth</a></div><div class="ttdeci">double PolyIntegralWidth(TH2Poly *Histogram)</div><div class="ttdoc">WP: Helper to calc integral of th2poly analogous to th2d integra; with option &quot;width&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="HistogramUtils_8cpp_source.html#l00312">HistogramUtils.cpp:312</a></div></div>
+<p class="definition">Definition at line <a class="el" href="HistogramUtils_8cpp_source.html#l00196">196</a> of file <a class="el" href="HistogramUtils_8cpp_source.html">HistogramUtils.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  196</span>                                           {</div>
+<div class="line"><span class="lineno">  197</span><span class="comment">// ****************</span></div>
+<div class="line"><span class="lineno">  198</span>  TH2Poly* HistCopy = <span class="keyword">static_cast&lt;</span>TH2Poly*<span class="keyword">&gt;</span>(Histogram-&gt;Clone());</div>
+<div class="line"><span class="lineno">  199</span>  <span class="keywordtype">double</span> IntegralWidth = <a class="code hl_function" href="HistogramUtils_8cpp.html#a8bab8af5f0339c6ec0310ff5ea87f26d">PolyIntegralWidth</a>(HistCopy);</div>
+<div class="line"><span class="lineno">  200</span>  HistCopy = <a class="code hl_function" href="HistogramUtils_8cpp.html#a61d8f295d13a5fe82a552c08d42c8bfa">PolyScaleWidth</a>(HistCopy, IntegralWidth);</div>
+<div class="line"><span class="lineno">  201</span>  std::string title = std::string(HistCopy-&gt;GetName())+<span class="stringliteral">&quot;_norm&quot;</span>;</div>
+<div class="line"><span class="lineno">  202</span>  HistCopy-&gt;SetNameTitle(title.c_str(), title.c_str());</div>
+<div class="line"><span class="lineno">  203</span> </div>
+<div class="line"><span class="lineno">  204</span>  <span class="keywordflow">return</span> HistCopy;</div>
+<div class="line"><span class="lineno">  205</span>}</div>
+<div class="ttc" id="aHistogramUtils_8cpp_html_a61d8f295d13a5fe82a552c08d42c8bfa"><div class="ttname"><a href="HistogramUtils_8cpp.html#a61d8f295d13a5fe82a552c08d42c8bfa">PolyScaleWidth</a></div><div class="ttdeci">TH2Poly * PolyScaleWidth(TH2Poly *Histogram, double scale)</div><div class="ttdoc">WP: Helper to scale th2poly analogous to th2d scale with option &quot;width&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="HistogramUtils_8cpp_source.html#l00291">HistogramUtils.cpp:291</a></div></div>
+<div class="ttc" id="aHistogramUtils_8cpp_html_a8bab8af5f0339c6ec0310ff5ea87f26d"><div class="ttname"><a href="HistogramUtils_8cpp.html#a8bab8af5f0339c6ec0310ff5ea87f26d">PolyIntegralWidth</a></div><div class="ttdeci">double PolyIntegralWidth(TH2Poly *Histogram)</div><div class="ttdoc">WP: Helper to calc integral of th2poly analogous to th2d integra; with option &quot;width&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="HistogramUtils_8cpp_source.html#l00311">HistogramUtils.cpp:311</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -686,24 +756,24 @@ Functions</h2></td></tr>
 
 <p>WP: Helper to calc integral of th2poly analogous to th2d integra; with option "width". </p>
 
-<p class="definition">Definition at line <a class="el" href="HistogramUtils_8cpp_source.html#l00312">312</a> of file <a class="el" href="HistogramUtils_8cpp_source.html">HistogramUtils.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  312</span>                                             {</div>
-<div class="line"><span class="lineno">  313</span><span class="comment">// ****************</span></div>
-<div class="line"><span class="lineno">  314</span>  <span class="keywordtype">double</span> integral = 0;</div>
-<div class="line"><span class="lineno">  315</span>  <span class="keywordtype">double</span> xlow, xup, ylow, yup, area;</div>
-<div class="line"><span class="lineno">  316</span> </div>
-<div class="line"><span class="lineno">  317</span>  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt; Histogram-&gt;GetNumberOfBins()+1; i++)</div>
-<div class="line"><span class="lineno">  318</span>  {</div>
-<div class="line"><span class="lineno">  319</span>    TH2PolyBin* bin = <span class="keyword">static_cast&lt;</span>TH2PolyBin*<span class="keyword">&gt;</span>(Histogram-&gt;GetBins()-&gt;At(i - 1));</div>
-<div class="line"><span class="lineno">  320</span>    xlow = bin-&gt;GetXMin();</div>
-<div class="line"><span class="lineno">  321</span>    xup = bin-&gt;GetXMax();</div>
-<div class="line"><span class="lineno">  322</span>    ylow = bin-&gt;GetYMin();</div>
-<div class="line"><span class="lineno">  323</span>    yup = bin-&gt;GetYMax();</div>
-<div class="line"><span class="lineno">  324</span>    area = (xup-xlow)*(yup-ylow);</div>
-<div class="line"><span class="lineno">  325</span>    integral += Histogram-&gt;GetBinContent(i)*area;</div>
-<div class="line"><span class="lineno">  326</span>  }</div>
-<div class="line"><span class="lineno">  327</span>  <span class="keywordflow">return</span> integral;</div>
-<div class="line"><span class="lineno">  328</span>}</div>
+<p class="definition">Definition at line <a class="el" href="HistogramUtils_8cpp_source.html#l00311">311</a> of file <a class="el" href="HistogramUtils_8cpp_source.html">HistogramUtils.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  311</span>                                             {</div>
+<div class="line"><span class="lineno">  312</span><span class="comment">// ****************</span></div>
+<div class="line"><span class="lineno">  313</span>  <span class="keywordtype">double</span> integral = 0;</div>
+<div class="line"><span class="lineno">  314</span>  <span class="keywordtype">double</span> xlow, xup, ylow, yup, area;</div>
+<div class="line"><span class="lineno">  315</span> </div>
+<div class="line"><span class="lineno">  316</span>  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt; Histogram-&gt;GetNumberOfBins()+1; i++)</div>
+<div class="line"><span class="lineno">  317</span>  {</div>
+<div class="line"><span class="lineno">  318</span>    TH2PolyBin* bin = <span class="keyword">static_cast&lt;</span>TH2PolyBin*<span class="keyword">&gt;</span>(Histogram-&gt;GetBins()-&gt;At(i - 1));</div>
+<div class="line"><span class="lineno">  319</span>    xlow = bin-&gt;GetXMin();</div>
+<div class="line"><span class="lineno">  320</span>    xup = bin-&gt;GetXMax();</div>
+<div class="line"><span class="lineno">  321</span>    ylow = bin-&gt;GetYMin();</div>
+<div class="line"><span class="lineno">  322</span>    yup = bin-&gt;GetYMax();</div>
+<div class="line"><span class="lineno">  323</span>    area = (xup-xlow)*(yup-ylow);</div>
+<div class="line"><span class="lineno">  324</span>    integral += Histogram-&gt;GetBinContent(i)*area;</div>
+<div class="line"><span class="lineno">  325</span>  }</div>
+<div class="line"><span class="lineno">  326</span>  <span class="keywordflow">return</span> integral;</div>
+<div class="line"><span class="lineno">  327</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -859,69 +929,68 @@ Functions</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="HistogramUtils_8cpp_source.html#l00129">129</a> of file <a class="el" href="HistogramUtils_8cpp_source.html">HistogramUtils.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  129</span>                                                                                                                   {</div>
 <div class="line"><span class="lineno">  130</span><span class="comment">// **************************************************</span></div>
-<div class="line"><span class="lineno">  131</span> </div>
-<div class="line"><span class="lineno">  132</span>  TH1D* hProjY = <span class="keyword">new</span> TH1D((TempName+<span class="stringliteral">&quot;_y&quot;</span>).c_str(),(TempName+<span class="stringliteral">&quot;_y&quot;</span>).c_str(),<span class="keywordtype">int</span>(ybins.size()-1),&amp;ybins[0]);</div>
-<div class="line"><span class="lineno">  133</span>  <span class="comment">//KS: Temp Histogram to store error, use double as this is thread safe</span></div>
-<div class="line"><span class="lineno">  134</span>  std::vector&lt;double&gt; hProjY_Error(hProjY-&gt;GetXaxis()-&gt;GetNbins() + 1, 0.0);</div>
-<div class="line"><span class="lineno">  135</span>  <span class="keywordtype">double</span> ylow, yup, frac = 0.;</div>
-<div class="line"><span class="lineno">  136</span> </div>
-<div class="line"><span class="lineno">  137</span>  <span class="comment">//loop over bins in the poly</span></div>
-<div class="line"><span class="lineno">  138</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; static_cast&lt;TH2Poly*&gt;(poly)-&gt;GetNumberOfBins(); i++)</div>
-<div class="line"><span class="lineno">  139</span>  {</div>
-<div class="line"><span class="lineno">  140</span>    <span class="comment">//get bin and its edges</span></div>
-<div class="line"><span class="lineno">  141</span>    TH2PolyBin* bin = <span class="keyword">static_cast&lt;</span>TH2PolyBin*<span class="keyword">&gt;</span>(<span class="keyword">static_cast&lt;</span>TH2Poly*<span class="keyword">&gt;</span>(poly)-&gt;GetBins()-&gt;At(i));</div>
-<div class="line"><span class="lineno">  142</span>    ylow = bin-&gt;GetYMin();</div>
-<div class="line"><span class="lineno">  143</span>    yup = bin-&gt;GetYMax();</div>
-<div class="line"><span class="lineno">  144</span> </div>
-<div class="line"><span class="lineno">  145</span>    <span class="comment">//Loop over projected bins, find fraction of poly bin in each</span></div>
-<div class="line"><span class="lineno">  146</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> dy = 0; dy &lt; int(ybins.size()); dy++)</div>
-<div class="line"><span class="lineno">  147</span>    {</div>
-<div class="line"><span class="lineno">  148</span>      <span class="keywordflow">if</span>(ybins[dy+1]&lt;=ylow || ybins[dy] &gt;= yup)</div>
-<div class="line"><span class="lineno">  149</span>      {</div>
-<div class="line"><span class="lineno">  150</span>        frac = 0;</div>
-<div class="line"><span class="lineno">  151</span>      }</div>
-<div class="line"><span class="lineno">  152</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span>(ybins[dy] &lt;= ylow &amp;&amp; ybins[dy+1] &gt;= yup)</div>
-<div class="line"><span class="lineno">  153</span>      {</div>
-<div class="line"><span class="lineno">  154</span>        frac = 1;</div>
-<div class="line"><span class="lineno">  155</span>      }</div>
-<div class="line"><span class="lineno">  156</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span>(ybins[dy] &lt;= ylow &amp;&amp; ybins[dy+1] &lt;= yup)</div>
-<div class="line"><span class="lineno">  157</span>      {</div>
-<div class="line"><span class="lineno">  158</span>        frac = (ybins[dy+1]-ylow)/(yup-ylow);</div>
-<div class="line"><span class="lineno">  159</span>      }</div>
-<div class="line"><span class="lineno">  160</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span>(ybins[dy] &gt;= ylow &amp;&amp; ybins[dy+1] &gt;= yup)</div>
-<div class="line"><span class="lineno">  161</span>      {</div>
-<div class="line"><span class="lineno">  162</span>        frac = (yup-ybins[dy])/(yup-ylow);</div>
-<div class="line"><span class="lineno">  163</span>      }</div>
-<div class="line"><span class="lineno">  164</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span>(ybins[dy] &gt;= ylow &amp;&amp; ybins[dy+1] &lt;= yup)</div>
-<div class="line"><span class="lineno">  165</span>      {</div>
-<div class="line"><span class="lineno">  166</span>        frac = (ybins[dy+1]-ybins[dy])/(yup-ylow);</div>
-<div class="line"><span class="lineno">  167</span>      }</div>
-<div class="line"><span class="lineno">  168</span>      <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  169</span>      {</div>
-<div class="line"><span class="lineno">  170</span>        frac = 0;</div>
-<div class="line"><span class="lineno">  171</span>      }</div>
-<div class="line"><span class="lineno">  172</span>      hProjY-&gt;SetBinContent(dy+1,hProjY-&gt;GetBinContent(dy+1)+frac*bin-&gt;GetContent());</div>
-<div class="line"><span class="lineno">  173</span>      <span class="comment">//KS: Follow ROOT implementation and sum up the variance</span></div>
-<div class="line"><span class="lineno">  174</span>      <span class="keywordflow">if</span>(computeErrors)</div>
-<div class="line"><span class="lineno">  175</span>      {</div>
-<div class="line"><span class="lineno">  176</span>        <span class="comment">//KS: TH2PolyBin doesn&#39;t have GetError so we have to use TH2Poly,</span></div>
-<div class="line"><span class="lineno">  177</span>        <span class="comment">//but numbering of GetBinError is different than GetBins...</span></div>
-<div class="line"><span class="lineno">  178</span>        <span class="keyword">const</span> <span class="keywordtype">double</span> Temp_Err = frac*<span class="keyword">static_cast&lt;</span>TH2Poly*<span class="keyword">&gt;</span>(poly)-&gt;GetBinError(i+1)*frac*<span class="keyword">static_cast&lt;</span>TH2Poly*<span class="keyword">&gt;</span>(poly)-&gt;GetBinError(i+1);</div>
-<div class="line"><span class="lineno">  179</span>        hProjY_Error[dy+1] += Temp_Err;</div>
-<div class="line"><span class="lineno">  180</span>      }</div>
-<div class="line"><span class="lineno">  181</span>    }</div>
-<div class="line"><span class="lineno">  182</span>  }</div>
-<div class="line"><span class="lineno">  183</span>  <span class="comment">//KS: The error is sqrt(summed variance)) https://root.cern.ch/doc/master/TH2_8cxx_source.html#l02266</span></div>
-<div class="line"><span class="lineno">  184</span>  <span class="keywordflow">if</span>(computeErrors)</div>
-<div class="line"><span class="lineno">  185</span>  {</div>
-<div class="line"><span class="lineno">  186</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt;= hProjY-&gt;GetXaxis()-&gt;GetNbins(); ++i)</div>
-<div class="line"><span class="lineno">  187</span>    {</div>
-<div class="line"><span class="lineno">  188</span>      <span class="keyword">const</span> <span class="keywordtype">double</span> Error = std::sqrt(hProjY_Error[i]);</div>
-<div class="line"><span class="lineno">  189</span>      hProjY-&gt;SetBinError(i, Error);</div>
-<div class="line"><span class="lineno">  190</span>    }</div>
-<div class="line"><span class="lineno">  191</span>  }</div>
-<div class="line"><span class="lineno">  192</span>  <span class="keywordflow">return</span> hProjY;</div>
-<div class="line"><span class="lineno">  193</span>} <span class="comment">// end project poly Y function</span></div>
+<div class="line"><span class="lineno">  131</span>  TH1D* hProjY = <span class="keyword">new</span> TH1D((TempName+<span class="stringliteral">&quot;_y&quot;</span>).c_str(),(TempName+<span class="stringliteral">&quot;_y&quot;</span>).c_str(),<span class="keywordtype">int</span>(ybins.size()-1),&amp;ybins[0]);</div>
+<div class="line"><span class="lineno">  132</span>  <span class="comment">//KS: Temp Histogram to store error, use double as this is thread safe</span></div>
+<div class="line"><span class="lineno">  133</span>  std::vector&lt;double&gt; hProjY_Error(hProjY-&gt;GetXaxis()-&gt;GetNbins() + 1, 0.0);</div>
+<div class="line"><span class="lineno">  134</span>  <span class="keywordtype">double</span> ylow, yup, frac = 0.;</div>
+<div class="line"><span class="lineno">  135</span> </div>
+<div class="line"><span class="lineno">  136</span>  <span class="comment">//loop over bins in the poly</span></div>
+<div class="line"><span class="lineno">  137</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; static_cast&lt;TH2Poly*&gt;(poly)-&gt;GetNumberOfBins(); i++)</div>
+<div class="line"><span class="lineno">  138</span>  {</div>
+<div class="line"><span class="lineno">  139</span>    <span class="comment">//get bin and its edges</span></div>
+<div class="line"><span class="lineno">  140</span>    TH2PolyBin* bin = <span class="keyword">static_cast&lt;</span>TH2PolyBin*<span class="keyword">&gt;</span>(<span class="keyword">static_cast&lt;</span>TH2Poly*<span class="keyword">&gt;</span>(poly)-&gt;GetBins()-&gt;At(i));</div>
+<div class="line"><span class="lineno">  141</span>    ylow = bin-&gt;GetYMin();</div>
+<div class="line"><span class="lineno">  142</span>    yup = bin-&gt;GetYMax();</div>
+<div class="line"><span class="lineno">  143</span> </div>
+<div class="line"><span class="lineno">  144</span>    <span class="comment">//Loop over projected bins, find fraction of poly bin in each</span></div>
+<div class="line"><span class="lineno">  145</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> dy = 0; dy &lt; int(ybins.size()); dy++)</div>
+<div class="line"><span class="lineno">  146</span>    {</div>
+<div class="line"><span class="lineno">  147</span>      <span class="keywordflow">if</span>(ybins[dy+1]&lt;=ylow || ybins[dy] &gt;= yup)</div>
+<div class="line"><span class="lineno">  148</span>      {</div>
+<div class="line"><span class="lineno">  149</span>        frac = 0;</div>
+<div class="line"><span class="lineno">  150</span>      }</div>
+<div class="line"><span class="lineno">  151</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span>(ybins[dy] &lt;= ylow &amp;&amp; ybins[dy+1] &gt;= yup)</div>
+<div class="line"><span class="lineno">  152</span>      {</div>
+<div class="line"><span class="lineno">  153</span>        frac = 1;</div>
+<div class="line"><span class="lineno">  154</span>      }</div>
+<div class="line"><span class="lineno">  155</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span>(ybins[dy] &lt;= ylow &amp;&amp; ybins[dy+1] &lt;= yup)</div>
+<div class="line"><span class="lineno">  156</span>      {</div>
+<div class="line"><span class="lineno">  157</span>        frac = (ybins[dy+1]-ylow)/(yup-ylow);</div>
+<div class="line"><span class="lineno">  158</span>      }</div>
+<div class="line"><span class="lineno">  159</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span>(ybins[dy] &gt;= ylow &amp;&amp; ybins[dy+1] &gt;= yup)</div>
+<div class="line"><span class="lineno">  160</span>      {</div>
+<div class="line"><span class="lineno">  161</span>        frac = (yup-ybins[dy])/(yup-ylow);</div>
+<div class="line"><span class="lineno">  162</span>      }</div>
+<div class="line"><span class="lineno">  163</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span>(ybins[dy] &gt;= ylow &amp;&amp; ybins[dy+1] &lt;= yup)</div>
+<div class="line"><span class="lineno">  164</span>      {</div>
+<div class="line"><span class="lineno">  165</span>        frac = (ybins[dy+1]-ybins[dy])/(yup-ylow);</div>
+<div class="line"><span class="lineno">  166</span>      }</div>
+<div class="line"><span class="lineno">  167</span>      <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  168</span>      {</div>
+<div class="line"><span class="lineno">  169</span>        frac = 0;</div>
+<div class="line"><span class="lineno">  170</span>      }</div>
+<div class="line"><span class="lineno">  171</span>      hProjY-&gt;SetBinContent(dy+1,hProjY-&gt;GetBinContent(dy+1)+frac*bin-&gt;GetContent());</div>
+<div class="line"><span class="lineno">  172</span>      <span class="comment">//KS: Follow ROOT implementation and sum up the variance</span></div>
+<div class="line"><span class="lineno">  173</span>      <span class="keywordflow">if</span>(computeErrors)</div>
+<div class="line"><span class="lineno">  174</span>      {</div>
+<div class="line"><span class="lineno">  175</span>        <span class="comment">//KS: TH2PolyBin doesn&#39;t have GetError so we have to use TH2Poly,</span></div>
+<div class="line"><span class="lineno">  176</span>        <span class="comment">//but numbering of GetBinError is different than GetBins...</span></div>
+<div class="line"><span class="lineno">  177</span>        <span class="keyword">const</span> <span class="keywordtype">double</span> Temp_Err = frac*<span class="keyword">static_cast&lt;</span>TH2Poly*<span class="keyword">&gt;</span>(poly)-&gt;GetBinError(i+1)*frac*<span class="keyword">static_cast&lt;</span>TH2Poly*<span class="keyword">&gt;</span>(poly)-&gt;GetBinError(i+1);</div>
+<div class="line"><span class="lineno">  178</span>        hProjY_Error[dy+1] += Temp_Err;</div>
+<div class="line"><span class="lineno">  179</span>      }</div>
+<div class="line"><span class="lineno">  180</span>    }</div>
+<div class="line"><span class="lineno">  181</span>  }</div>
+<div class="line"><span class="lineno">  182</span>  <span class="comment">//KS: The error is sqrt(summed variance)) https://root.cern.ch/doc/master/TH2_8cxx_source.html#l02266</span></div>
+<div class="line"><span class="lineno">  183</span>  <span class="keywordflow">if</span>(computeErrors)</div>
+<div class="line"><span class="lineno">  184</span>  {</div>
+<div class="line"><span class="lineno">  185</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt;= hProjY-&gt;GetXaxis()-&gt;GetNbins(); ++i)</div>
+<div class="line"><span class="lineno">  186</span>    {</div>
+<div class="line"><span class="lineno">  187</span>      <span class="keyword">const</span> <span class="keywordtype">double</span> Error = std::sqrt(hProjY_Error[i]);</div>
+<div class="line"><span class="lineno">  188</span>      hProjY-&gt;SetBinError(i, Error);</div>
+<div class="line"><span class="lineno">  189</span>    }</div>
+<div class="line"><span class="lineno">  190</span>  }</div>
+<div class="line"><span class="lineno">  191</span>  <span class="keywordflow">return</span> hProjY;</div>
+<div class="line"><span class="lineno">  192</span>} <span class="comment">// end project poly Y function</span></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -953,24 +1022,24 @@ Functions</h2></td></tr>
 
 <p>WP: Helper to scale th2poly analogous to th2d scale with option "width". </p>
 
-<p class="definition">Definition at line <a class="el" href="HistogramUtils_8cpp_source.html#l00292">292</a> of file <a class="el" href="HistogramUtils_8cpp_source.html">HistogramUtils.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  292</span>                                                          {</div>
-<div class="line"><span class="lineno">  293</span><span class="comment">// ****************</span></div>
-<div class="line"><span class="lineno">  294</span>  TH2Poly* HistCopy = <span class="keyword">static_cast&lt;</span>TH2Poly*<span class="keyword">&gt;</span>(Histogram-&gt;Clone());</div>
-<div class="line"><span class="lineno">  295</span>  <span class="keywordtype">double</span> xlow, xup, ylow, yup, area;</div>
-<div class="line"><span class="lineno">  296</span> </div>
-<div class="line"><span class="lineno">  297</span>  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt; HistCopy-&gt;GetNumberOfBins()+1; i++)</div>
-<div class="line"><span class="lineno">  298</span>  {</div>
-<div class="line"><span class="lineno">  299</span>    TH2PolyBin* bin = <span class="keyword">static_cast&lt;</span>TH2PolyBin*<span class="keyword">&gt;</span>(Histogram-&gt;GetBins()-&gt;At(i - 1));</div>
-<div class="line"><span class="lineno">  300</span>    xlow = bin-&gt;GetXMin();</div>
-<div class="line"><span class="lineno">  301</span>    xup = bin-&gt;GetXMax();</div>
-<div class="line"><span class="lineno">  302</span>    ylow = bin-&gt;GetYMin();</div>
-<div class="line"><span class="lineno">  303</span>    yup = bin-&gt;GetYMax();</div>
-<div class="line"><span class="lineno">  304</span>    area = (xup-xlow)*(yup-ylow);</div>
-<div class="line"><span class="lineno">  305</span>    HistCopy-&gt;SetBinContent(i, Histogram-&gt;GetBinContent(i)/(area*scale));</div>
-<div class="line"><span class="lineno">  306</span>  }</div>
-<div class="line"><span class="lineno">  307</span>  <span class="keywordflow">return</span> HistCopy;</div>
-<div class="line"><span class="lineno">  308</span>}</div>
+<p class="definition">Definition at line <a class="el" href="HistogramUtils_8cpp_source.html#l00291">291</a> of file <a class="el" href="HistogramUtils_8cpp_source.html">HistogramUtils.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  291</span>                                                          {</div>
+<div class="line"><span class="lineno">  292</span><span class="comment">// ****************</span></div>
+<div class="line"><span class="lineno">  293</span>  TH2Poly* HistCopy = <span class="keyword">static_cast&lt;</span>TH2Poly*<span class="keyword">&gt;</span>(Histogram-&gt;Clone());</div>
+<div class="line"><span class="lineno">  294</span>  <span class="keywordtype">double</span> xlow, xup, ylow, yup, area;</div>
+<div class="line"><span class="lineno">  295</span> </div>
+<div class="line"><span class="lineno">  296</span>  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt; HistCopy-&gt;GetNumberOfBins()+1; i++)</div>
+<div class="line"><span class="lineno">  297</span>  {</div>
+<div class="line"><span class="lineno">  298</span>    TH2PolyBin* bin = <span class="keyword">static_cast&lt;</span>TH2PolyBin*<span class="keyword">&gt;</span>(Histogram-&gt;GetBins()-&gt;At(i - 1));</div>
+<div class="line"><span class="lineno">  299</span>    xlow = bin-&gt;GetXMin();</div>
+<div class="line"><span class="lineno">  300</span>    xup = bin-&gt;GetXMax();</div>
+<div class="line"><span class="lineno">  301</span>    ylow = bin-&gt;GetYMin();</div>
+<div class="line"><span class="lineno">  302</span>    yup = bin-&gt;GetYMax();</div>
+<div class="line"><span class="lineno">  303</span>    area = (xup-xlow)*(yup-ylow);</div>
+<div class="line"><span class="lineno">  304</span>    HistCopy-&gt;SetBinContent(i, Histogram-&gt;GetBinContent(i)/(area*scale));</div>
+<div class="line"><span class="lineno">  305</span>  }</div>
+<div class="line"><span class="lineno">  306</span>  <span class="keywordflow">return</span> HistCopy;</div>
+<div class="line"><span class="lineno">  307</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1002,15 +1071,15 @@ Functions</h2></td></tr>
 
 <p>KS: Remove fitted TF1 from hist to make comparison easier. </p>
 
-<p class="definition">Definition at line <a class="el" href="HistogramUtils_8cpp_source.html#l00332">332</a> of file <a class="el" href="HistogramUtils_8cpp_source.html">HistogramUtils.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  332</span>                                                     {</div>
-<div class="line"><span class="lineno">  333</span><span class="comment">// *********************</span></div>
-<div class="line"><span class="lineno">  334</span>  TList *listOfFunctions = hist-&gt;GetListOfFunctions();</div>
-<div class="line"><span class="lineno">  335</span>  TF1 *fitter = <span class="keyword">dynamic_cast&lt;</span>TF1*<span class="keyword">&gt;</span>(listOfFunctions-&gt;FindObject(name.c_str()));</div>
-<div class="line"><span class="lineno">  336</span> </div>
-<div class="line"><span class="lineno">  337</span>  listOfFunctions-&gt;Remove(fitter);</div>
-<div class="line"><span class="lineno">  338</span>  <span class="keyword">delete</span> fitter;</div>
-<div class="line"><span class="lineno">  339</span>}</div>
+<p class="definition">Definition at line <a class="el" href="HistogramUtils_8cpp_source.html#l00354">354</a> of file <a class="el" href="HistogramUtils_8cpp_source.html">HistogramUtils.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  354</span>                                                     {</div>
+<div class="line"><span class="lineno">  355</span><span class="comment">// *********************</span></div>
+<div class="line"><span class="lineno">  356</span>  TList *listOfFunctions = hist-&gt;GetListOfFunctions();</div>
+<div class="line"><span class="lineno">  357</span>  TF1 *fitter = <span class="keyword">dynamic_cast&lt;</span>TF1*<span class="keyword">&gt;</span>(listOfFunctions-&gt;FindObject(name.c_str()));</div>
+<div class="line"><span class="lineno">  358</span> </div>
+<div class="line"><span class="lineno">  359</span>  listOfFunctions-&gt;Remove(fitter);</div>
+<div class="line"><span class="lineno">  360</span>  <span class="keyword">delete</span> fitter;</div>
+<div class="line"><span class="lineno">  361</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1032,15 +1101,15 @@ Functions</h2></td></tr>
 
 <p>DB Get the Cherenkov momentum threshold in MeV. </p>
 
-<p class="definition">Definition at line <a class="el" href="HistogramUtils_8cpp_source.html#l00374">374</a> of file <a class="el" href="HistogramUtils_8cpp_source.html">HistogramUtils.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  374</span>                                                 {</div>
-<div class="line"><span class="lineno">  375</span><span class="comment">// ****************</span></div>
-<div class="line"><span class="lineno">  376</span>  <span class="keyword">constexpr</span> <span class="keywordtype">double</span> refractiveIndex = 1.334; <span class="comment">//DB From https://github.com/fiTQun/fiTQun/blob/646cf9c8ba3d4f7400bcbbde029d5ca15513a3bf/fiTQun_shared.cc#L757</span></div>
-<div class="line"><span class="lineno">  377</span>  <span class="keywordtype">double</span> mass =  <a class="code hl_function" href="namespaceMaCh3Utils.html#a1b305c72615a48a89e74a9c3ded69c02">MaCh3Utils::GetMassFromPDG</a>(PDG)*1e3;</div>
-<div class="line"><span class="lineno">  378</span>  <span class="keywordtype">double</span> momentumThreshold = mass/sqrt(refractiveIndex*refractiveIndex-1.);</div>
-<div class="line"><span class="lineno">  379</span>  <span class="keywordflow">return</span> momentumThreshold;</div>
-<div class="line"><span class="lineno">  380</span>}</div>
-<div class="ttc" id="anamespaceMaCh3Utils_html_a1b305c72615a48a89e74a9c3ded69c02"><div class="ttname"><a href="namespaceMaCh3Utils.html#a1b305c72615a48a89e74a9c3ded69c02">MaCh3Utils::GetMassFromPDG</a></div><div class="ttdeci">double GetMassFromPDG(const int PDG)</div><div class="ttdoc">Return mass for given PDG.</div><div class="ttdef"><b>Definition:</b> <a href="Structs_8h_source.html#l00465">Structs.h:465</a></div></div>
+<p class="definition">Definition at line <a class="el" href="HistogramUtils_8cpp_source.html#l00396">396</a> of file <a class="el" href="HistogramUtils_8cpp_source.html">HistogramUtils.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  396</span>                                                 {</div>
+<div class="line"><span class="lineno">  397</span><span class="comment">// ****************</span></div>
+<div class="line"><span class="lineno">  398</span>  <span class="keyword">constexpr</span> <span class="keywordtype">double</span> refractiveIndex = 1.334; <span class="comment">//DB From https://github.com/fiTQun/fiTQun/blob/646cf9c8ba3d4f7400bcbbde029d5ca15513a3bf/fiTQun_shared.cc#L757</span></div>
+<div class="line"><span class="lineno">  399</span>  <span class="keywordtype">double</span> mass =  <a class="code hl_function" href="namespaceMaCh3Utils.html#a1b305c72615a48a89e74a9c3ded69c02">MaCh3Utils::GetMassFromPDG</a>(PDG)*1e3;</div>
+<div class="line"><span class="lineno">  400</span>  <span class="keywordtype">double</span> momentumThreshold = mass/sqrt(refractiveIndex*refractiveIndex-1.);</div>
+<div class="line"><span class="lineno">  401</span>  <span class="keywordflow">return</span> momentumThreshold;</div>
+<div class="line"><span class="lineno">  402</span>}</div>
+<div class="ttc" id="anamespaceMaCh3Utils_html_a1b305c72615a48a89e74a9c3ded69c02"><div class="ttname"><a href="namespaceMaCh3Utils.html#a1b305c72615a48a89e74a9c3ded69c02">MaCh3Utils::GetMassFromPDG</a></div><div class="ttdeci">double GetMassFromPDG(const int PDG)</div><div class="ttdoc">Return mass for given PDG.</div><div class="ttdef"><b>Definition:</b> <a href="Structs_8h_source.html#l00474">Structs.h:474</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

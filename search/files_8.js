@@ -8,7 +8,7 @@ var searchData=
   ['mach3modes_2eh_5',['MaCh3Modes.h',['../MaCh3Modes_8h.html',1,'']]],
   ['mach3splineslinkdef_2eh_6',['MaCh3SplinesLinkDef.h',['../MaCh3SplinesLinkDef_8h.html',1,'']]],
   ['mainpage_2emd_7',['mainpage.md',['../mainpage_8md.html',1,'']]],
-  ['manager_2ecpp_8',['manager.cpp',['../manager_8cpp.html',1,'']]],
+  ['manager_2ecpp_8',['manager.cpp',['../manager_2manager_8cpp.html',1,'(Global Namespace)'],['../python_2manager_8cpp.html',1,'(Global Namespace)']]],
   ['manager_2eh_9',['manager.h',['../manager_8h.html',1,'']]],
   ['matrixplotter_2ecpp_10',['MatrixPlotter.cpp',['../MatrixPlotter_8cpp.html',1,'']]],
   ['mcmc_2ecpp_11',['mcmc.cpp',['../mcmc_8cpp.html',1,'']]],

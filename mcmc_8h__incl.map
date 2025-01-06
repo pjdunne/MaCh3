@@ -22,7 +22,7 @@
 <area shape="rect" id="node17" title=" " alt="" coords="3167,592,3270,617"/>
 <area shape="rect" id="node18" title=" " alt="" coords="2781,592,2841,617"/>
 <area shape="rect" id="node19" href="$MaCh3Exception_8h.html" title=" " alt="" coords="3556,592,3761,617"/>
-<area shape="rect" id="node20" href="$MaCh3Logger_8h.html" title=" " alt="" coords="3657,665,3841,691"/>
+<area shape="rect" id="node20" href="$MaCh3Logger_8h.html" title="KS: Based on this https://github.com/gabime/spdlog/blob/a2b4262090fd3f005c2315dcb5be2f0f1774a005/incl..." alt="" coords="3657,665,3841,691"/>
 <area shape="rect" id="node23" href="$YamlHelper_8h.html" title="Utility functions for handling YAML nodes." alt="" coords="3557,519,3726,544"/>
 <area shape="rect" id="node24" href="$Monitor_8h.html" title="System and monitoring utilities for printing system information and status updates." alt="" coords="3497,445,3642,471"/>
 <area shape="rect" id="node27" href="$MaCh3Modes_8h.html" title=" " alt="" coords="3644,372,3828,397"/>

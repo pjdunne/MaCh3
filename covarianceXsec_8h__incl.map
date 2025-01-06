@@ -6,7 +6,7 @@
 <area shape="rect" id="node35" href="$CovarianceUtils_8h.html" title=" " alt="" coords="2577,225,2789,251"/>
 <area shape="rect" id="node49" href="$AdaptiveMCMCHandler_8h.html" title=" " alt="" coords="1587,152,1845,177"/>
 <area shape="rect" id="node50" href="$PCAHandler_8h.html" title=" " alt="" coords="1870,152,2055,177"/>
-<area shape="rect" id="node4" href="$MaCh3Logger_8h.html" title=" " alt="" coords="907,592,1091,617"/>
+<area shape="rect" id="node4" href="$MaCh3Logger_8h.html" title="KS: Based on this https://github.com/gabime/spdlog/blob/a2b4262090fd3f005c2315dcb5be2f0f1774a005/incl..." alt="" coords="907,592,1091,617"/>
 <area shape="rect" id="node23" href="$MaCh3Exception_8h.html" title=" " alt="" coords="1453,519,1659,544"/>
 <area shape="rect" id="node26" href="$YamlHelper_8h.html" title="Utility functions for handling YAML nodes." alt="" coords="1818,445,1987,471"/>
 <area shape="rect" id="node30" href="$Monitor_8h.html" title="System and monitoring utilities for printing system information and status updates." alt="" coords="1466,372,1611,397"/>

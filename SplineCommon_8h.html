@@ -98,17 +98,19 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="SplineCommon_8h__dep__incl.png" border="0" usemap="#asplines_2SplineCommon_8hdep" alt=""/></div>
 <map name="asplines_2SplineCommon_8hdep" id="asplines_2SplineCommon_8hdep">
-<area shape="rect" title="Contains definitions for spline coefficients and structure used in both CPU and GPU code." alt="" coords="398,5,581,31"/>
-<area shape="rect" href="SplineBase_8h.html" title=" " alt="" coords="313,79,469,104"/>
-<area shape="rect" href="gpuSplineUtils_8cuh.html" title="MaCh3 event&#45;by&#45;event cross&#45;section spline code." alt="" coords="546,79,739,104"/>
-<area shape="rect" href="SplineBase_8cpp.html" title=" " alt="" coords="5,152,176,177"/>
-<area shape="rect" href="SplineMonolith_8h.html" title=" " alt="" coords="200,152,381,177"/>
-<area shape="rect" href="splineFDBase_8h.html" title=" " alt="" coords="405,152,579,177"/>
-<area shape="rect" href="SplineMonolith_8cpp.html" title=" " alt="" coords="154,225,350,251"/>
-<area shape="rect" href="samplePDFFDBase_8h.html" title=" " alt="" coords="374,225,610,251"/>
-<area shape="rect" href="splineFDBase_8cpp.html" title=" " alt="" coords="634,225,822,251"/>
-<area shape="rect" href="samplePDFFDBase_8cpp.html" title=" " alt="" coords="367,299,617,324"/>
-<area shape="rect" href="gpuSplineUtils_8cu.html" title=" " alt="" coords="603,152,789,177"/>
+<area shape="rect" title="Contains definitions for spline coefficients and structure used in both CPU and GPU code." alt="" coords="362,5,545,31"/>
+<area shape="rect" href="SplineBase_8h.html" title=" " alt="" coords="277,79,433,104"/>
+<area shape="rect" href="gpuSplineUtils_8cuh.html" title="MaCh3 event&#45;by&#45;event cross&#45;section spline code." alt="" coords="559,79,753,104"/>
+<area shape="rect" href="splines_8cpp.html" title=" " alt="" coords="5,225,149,251"/>
+<area shape="rect" href="SplineBase_8cpp.html" title=" " alt="" coords="69,152,240,177"/>
+<area shape="rect" href="SplineMonolith_8h.html" title=" " alt="" coords="264,152,445,177"/>
+<area shape="rect" href="splineFDBase_8h.html" title=" " alt="" coords="469,152,643,177"/>
+<area shape="rect" href="SplineMonolith_8cpp.html" title=" " alt="" coords="218,225,414,251"/>
+<area shape="rect" href="samplePDFFDBase_8h.html" title=" " alt="" coords="438,225,674,251"/>
+<area shape="rect" href="splineFDBase_8cpp.html" title=" " alt="" coords="698,225,886,251"/>
+<area shape="rect" href="samplePDF_8cpp.html" title=" " alt="" coords="353,299,524,324"/>
+<area shape="rect" href="samplePDFFDBase_8cpp.html" title=" " alt="" coords="548,299,799,324"/>
+<area shape="rect" href="gpuSplineUtils_8cu.html" title=" " alt="" coords="667,152,853,177"/>
 </map>
 </div>
 </div>
@@ -143,7 +145,9 @@ Enumerations</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Contains definitions for spline coefficients and structure used in both CPU and GPU code. </p>
-<p>This file includes macros and enums for defining spline coefficients. It is designed to be compatible with older CUDA versions, so be cautious when adding new features or including other headers. </p>
+<p>This file includes macros and enums for defining spline coefficients. It is designed to be compatible with older CUDA versions, so be cautious when adding new features or including other headers. </p><dl class="section author"><dt>Author</dt><dd>Clarence Wret </dd>
+<dd>
+Kamil Skwarczynski </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="SplineCommon_8h_source.html">SplineCommon.h</a>.</p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
@@ -159,7 +163,7 @@ Enumerations</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SplineCommon_8h_source.html#l00011">11</a> of file <a class="el" href="SplineCommon_8h_source.html">SplineCommon.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SplineCommon_8h_source.html#l00013">13</a> of file <a class="el" href="SplineCommon_8h_source.html">SplineCommon.h</a>.</p>
 
 </div>
 </div>
@@ -177,7 +181,7 @@ Enumerations</h2></td></tr>
 
 <p>KS: We store coefficients {y,b,c,d} in one array one by one, this is only to define it once rather then insert "4" all over the code. </p>
 
-<p class="definition">Definition at line <a class="el" href="SplineCommon_8h_source.html#l00015">15</a> of file <a class="el" href="SplineCommon_8h_source.html">SplineCommon.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SplineCommon_8h_source.html#l00017">17</a> of file <a class="el" href="SplineCommon_8h_source.html">SplineCommon.h</a>.</p>
 
 </div>
 </div>
@@ -195,7 +199,7 @@ Enumerations</h2></td></tr>
 
 <p>KS: For TF1 we store at most 5 coefficients, we could make it more flexible but for now define it here to make future changes easier to track. </p>
 
-<p class="definition">Definition at line <a class="el" href="SplineCommon_8h_source.html#l00017">17</a> of file <a class="el" href="SplineCommon_8h_source.html">SplineCommon.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SplineCommon_8h_source.html#l00019">19</a> of file <a class="el" href="SplineCommon_8h_source.html">SplineCommon.h</a>.</p>
 
 </div>
 </div>
@@ -224,17 +228,17 @@ Enumerations</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="SplineCommon_8h_source.html#l00020">20</a> of file <a class="el" href="SplineCommon_8h_source.html">SplineCommon.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   21</span>{</div>
-<div class="line"><span class="lineno">   22</span>  <a class="code hl_enumvalue" href="SplineCommon_8h.html#aac6312c7a4c683e6d016d9fccdc7d7c0a9e87d802f64d8929291c58eeb0eb16e6">kCoeffY</a> = 0, </div>
-<div class="line"><span class="lineno">   23</span>  <a class="code hl_enumvalue" href="SplineCommon_8h.html#aac6312c7a4c683e6d016d9fccdc7d7c0a546352c58e328d9b57692a033eee8a42">kCoeffB</a> = 1, </div>
-<div class="line"><span class="lineno">   24</span>  <a class="code hl_enumvalue" href="SplineCommon_8h.html#aac6312c7a4c683e6d016d9fccdc7d7c0af73b429597449e82d2920f69d03cef36">kCoeffC</a> = 2, </div>
-<div class="line"><span class="lineno">   25</span>  <a class="code hl_enumvalue" href="SplineCommon_8h.html#aac6312c7a4c683e6d016d9fccdc7d7c0a82b4ea363cc5a4b0429efcc46582769d">kCoeffD</a> = 3  </div>
-<div class="line"><span class="lineno">   26</span>};</div>
-<div class="ttc" id="aSplineCommon_8h_html_aac6312c7a4c683e6d016d9fccdc7d7c0a546352c58e328d9b57692a033eee8a42"><div class="ttname"><a href="SplineCommon_8h.html#aac6312c7a4c683e6d016d9fccdc7d7c0a546352c58e328d9b57692a033eee8a42">kCoeffB</a></div><div class="ttdeci">@ kCoeffB</div><div class="ttdoc">Coefficient B.</div><div class="ttdef"><b>Definition:</b> <a href="SplineCommon_8h_source.html#l00023">SplineCommon.h:23</a></div></div>
-<div class="ttc" id="aSplineCommon_8h_html_aac6312c7a4c683e6d016d9fccdc7d7c0a82b4ea363cc5a4b0429efcc46582769d"><div class="ttname"><a href="SplineCommon_8h.html#aac6312c7a4c683e6d016d9fccdc7d7c0a82b4ea363cc5a4b0429efcc46582769d">kCoeffD</a></div><div class="ttdeci">@ kCoeffD</div><div class="ttdoc">Coefficient D.</div><div class="ttdef"><b>Definition:</b> <a href="SplineCommon_8h_source.html#l00026">SplineCommon.h:25</a></div></div>
-<div class="ttc" id="aSplineCommon_8h_html_aac6312c7a4c683e6d016d9fccdc7d7c0a9e87d802f64d8929291c58eeb0eb16e6"><div class="ttname"><a href="SplineCommon_8h.html#aac6312c7a4c683e6d016d9fccdc7d7c0a9e87d802f64d8929291c58eeb0eb16e6">kCoeffY</a></div><div class="ttdeci">@ kCoeffY</div><div class="ttdoc">Coefficient Y.</div><div class="ttdef"><b>Definition:</b> <a href="SplineCommon_8h_source.html#l00022">SplineCommon.h:22</a></div></div>
-<div class="ttc" id="aSplineCommon_8h_html_aac6312c7a4c683e6d016d9fccdc7d7c0af73b429597449e82d2920f69d03cef36"><div class="ttname"><a href="SplineCommon_8h.html#aac6312c7a4c683e6d016d9fccdc7d7c0af73b429597449e82d2920f69d03cef36">kCoeffC</a></div><div class="ttdeci">@ kCoeffC</div><div class="ttdoc">Coefficient C.</div><div class="ttdef"><b>Definition:</b> <a href="SplineCommon_8h_source.html#l00024">SplineCommon.h:24</a></div></div>
+<p class="definition">Definition at line <a class="el" href="SplineCommon_8h_source.html#l00022">22</a> of file <a class="el" href="SplineCommon_8h_source.html">SplineCommon.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   23</span>{</div>
+<div class="line"><span class="lineno">   24</span>  <a class="code hl_enumvalue" href="SplineCommon_8h.html#aac6312c7a4c683e6d016d9fccdc7d7c0a9e87d802f64d8929291c58eeb0eb16e6">kCoeffY</a> = 0, </div>
+<div class="line"><span class="lineno">   25</span>  <a class="code hl_enumvalue" href="SplineCommon_8h.html#aac6312c7a4c683e6d016d9fccdc7d7c0a546352c58e328d9b57692a033eee8a42">kCoeffB</a> = 1, </div>
+<div class="line"><span class="lineno">   26</span>  <a class="code hl_enumvalue" href="SplineCommon_8h.html#aac6312c7a4c683e6d016d9fccdc7d7c0af73b429597449e82d2920f69d03cef36">kCoeffC</a> = 2, </div>
+<div class="line"><span class="lineno">   27</span>  <a class="code hl_enumvalue" href="SplineCommon_8h.html#aac6312c7a4c683e6d016d9fccdc7d7c0a82b4ea363cc5a4b0429efcc46582769d">kCoeffD</a> = 3  </div>
+<div class="line"><span class="lineno">   28</span>};</div>
+<div class="ttc" id="aSplineCommon_8h_html_aac6312c7a4c683e6d016d9fccdc7d7c0a546352c58e328d9b57692a033eee8a42"><div class="ttname"><a href="SplineCommon_8h.html#aac6312c7a4c683e6d016d9fccdc7d7c0a546352c58e328d9b57692a033eee8a42">kCoeffB</a></div><div class="ttdeci">@ kCoeffB</div><div class="ttdoc">Coefficient B.</div><div class="ttdef"><b>Definition:</b> <a href="SplineCommon_8h_source.html#l00025">SplineCommon.h:25</a></div></div>
+<div class="ttc" id="aSplineCommon_8h_html_aac6312c7a4c683e6d016d9fccdc7d7c0a82b4ea363cc5a4b0429efcc46582769d"><div class="ttname"><a href="SplineCommon_8h.html#aac6312c7a4c683e6d016d9fccdc7d7c0a82b4ea363cc5a4b0429efcc46582769d">kCoeffD</a></div><div class="ttdeci">@ kCoeffD</div><div class="ttdoc">Coefficient D.</div><div class="ttdef"><b>Definition:</b> <a href="SplineCommon_8h_source.html#l00028">SplineCommon.h:27</a></div></div>
+<div class="ttc" id="aSplineCommon_8h_html_aac6312c7a4c683e6d016d9fccdc7d7c0a9e87d802f64d8929291c58eeb0eb16e6"><div class="ttname"><a href="SplineCommon_8h.html#aac6312c7a4c683e6d016d9fccdc7d7c0a9e87d802f64d8929291c58eeb0eb16e6">kCoeffY</a></div><div class="ttdeci">@ kCoeffY</div><div class="ttdoc">Coefficient Y.</div><div class="ttdef"><b>Definition:</b> <a href="SplineCommon_8h_source.html#l00024">SplineCommon.h:24</a></div></div>
+<div class="ttc" id="aSplineCommon_8h_html_aac6312c7a4c683e6d016d9fccdc7d7c0af73b429597449e82d2920f69d03cef36"><div class="ttname"><a href="SplineCommon_8h.html#aac6312c7a4c683e6d016d9fccdc7d7c0af73b429597449e82d2920f69d03cef36">kCoeffC</a></div><div class="ttdeci">@ kCoeffC</div><div class="ttdoc">Coefficient C.</div><div class="ttdef"><b>Definition:</b> <a href="SplineCommon_8h_source.html#l00026">SplineCommon.h:26</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

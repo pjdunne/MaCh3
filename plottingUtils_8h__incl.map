@@ -1,6 +1,6 @@
 <map id="plotting/plottingUtils/plottingUtils.h" name="plotting/plottingUtils/plottingUtils.h">
 <area shape="rect" id="node1" title=" " alt="" coords="1485,5,1641,45"/>
-<area shape="rect" id="node2" href="$MaCh3Logger_8h.html" title=" " alt="" coords="171,167,355,192"/>
+<area shape="rect" id="node2" href="$MaCh3Logger_8h.html" title="KS: Based on this https://github.com/gabime/spdlog/blob/a2b4262090fd3f005c2315dcb5be2f0f1774a005/incl..." alt="" coords="171,167,355,192"/>
 <area shape="rect" id="node4" title=" " alt="" coords="515,240,595,265"/>
 <area shape="rect" id="node8" href="$MaCh3Exception_8h.html" title=" " alt="" coords="363,93,569,119"/>
 <area shape="rect" id="node10" title=" " alt="" coords="643,93,729,119"/>
