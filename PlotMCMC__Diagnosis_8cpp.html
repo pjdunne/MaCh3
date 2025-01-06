@@ -406,7 +406,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  201</span> </div>
 <div class="line"><span class="lineno">  202</span>                <span class="keywordflow">if</span> (std::string(subkey-&gt;GetClassName()) != <span class="stringliteral">&quot;TH1D&quot;</span>) <span class="keywordflow">continue</span>;</div>
 <div class="line"><span class="lineno">  203</span>                    std::cout&lt;&lt;name.c_str()&lt;&lt;std::endl;</div>
-<div class="line"><span class="lineno">  204</span>                    TH1D* blarb = (TH1D*)infile[ik]-&gt;Get(name.c_str())-&gt;Clone();</div>
+<div class="line"><span class="lineno">  204</span>                    TH1D* blarb = (TH1D*)infile[ik]-&gt;<a class="code hl_function" href="YamlHelper_8h.html#ab5a40370dca062f6b2c87fabece7db27">Get</a>(name.c_str())-&gt;Clone();</div>
 <div class="line"><span class="lineno">  205</span>                    <span class="comment">//KS: Some fixe pramas can go crazy</span></div>
 <div class="line"><span class="lineno">  206</span>                    <span class="keywordflow">if</span>(TMath::IsNaN(blarb-&gt;GetBinContent(1))) <span class="keywordflow">continue</span>;</div>
 <div class="line"><span class="lineno">  207</span>                    <span class="comment">//KS: This is unfortunately hardcoded, need to find better way to write this </span></div>
@@ -437,6 +437,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  232</span>}</div>
 <div class="ttc" id="aGetPostfitParamPlots_8cpp_html_ab2b28d9b5fd61ee45bbdfa307b969241"><div class="ttname"><a href="GetPostfitParamPlots_8cpp.html#ab2b28d9b5fd61ee45bbdfa307b969241">PlotColor</a></div><div class="ttdeci">Color_t PlotColor[]</div><div class="ttdef"><b>Definition:</b> <a href="GetPostfitParamPlots_8cpp_source.html#l00079">GetPostfitParamPlots.cpp:79</a></div></div>
 <div class="ttc" id="aPlotMCMC__Diagnosis_8cpp_html_a81b2565c9b974c6f11088cef1c422bb3"><div class="ttname"><a href="PlotMCMC__Diagnosis_8cpp.html#a81b2565c9b974c6f11088cef1c422bb3">GetMinimumInRange</a></div><div class="ttdeci">double GetMinimumInRange(TH1D *hist, double minRange, double maxRange)</div><div class="ttdef"><b>Definition:</b> <a href="PlotMCMC__Diagnosis_8cpp_source.html#l00235">PlotMCMC_Diagnosis.cpp:235</a></div></div>
+<div class="ttc" id="aYamlHelper_8h_html_ab5a40370dca062f6b2c87fabece7db27"><div class="ttname"><a href="YamlHelper_8h.html#ab5a40370dca062f6b2c87fabece7db27">Get</a></div><div class="ttdeci">Type Get(const YAML::Node &amp;node, const std::string File, const int Line)</div><div class="ttdoc">Get content of config file.</div><div class="ttdef"><b>Definition:</b> <a href="YamlHelper_8h_source.html#l00257">YamlHelper.h:257</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
