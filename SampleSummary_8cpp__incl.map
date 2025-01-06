@@ -1,52 +1,52 @@
 <map id="mcmc/SampleSummary.cpp" name="mcmc/SampleSummary.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="1029,5,1232,31"/>
-<area shape="rect" id="node2" href="$SampleSummary_8h.html" title=" " alt="" coords="1037,79,1225,104"/>
-<area shape="rect" id="node3" title=" " alt="" coords="199,225,278,251"/>
-<area shape="rect" id="node4" href="$samplePDFBase_8h.html" title=" " alt="" coords="377,152,596,177"/>
-<area shape="rect" id="node26" href="$StatisticalUtils_8h.html" title="Utility functions for statistical interpretations in MaCh3." alt="" coords="3428,225,3601,251"/>
-<area shape="rect" id="node29" href="$MCMCProcessor_8h.html" title=" " alt="" coords="1707,152,1890,177"/>
-<area shape="rect" id="node5" title=" " alt="" coords="5,225,80,251"/>
-<area shape="rect" id="node6" title=" " alt="" coords="653,225,723,251"/>
-<area shape="rect" id="node7" title=" " alt="" coords="105,225,175,251"/>
-<area shape="rect" id="node8" title=" " alt="" coords="302,225,373,251"/>
-<area shape="rect" id="node9" title=" " alt="" coords="747,225,821,251"/>
-<area shape="rect" id="node10" title=" " alt="" coords="954,445,1019,471"/>
-<area shape="rect" id="node11" title=" " alt="" coords="845,225,949,251"/>
-<area shape="rect" id="node12" title=" " alt="" coords="549,225,629,251"/>
-<area shape="rect" id="node13" href="$Structs_8h.html" title=" " alt="" coords="2977,372,3135,397"/>
-<area shape="rect" id="node25" href="$manager_8h.html" title=" " alt="" coords="2979,299,3133,324"/>
-<area shape="rect" id="node14" title=" " alt="" coords="3295,445,3369,471"/>
-<area shape="rect" id="node15" title=" " alt="" coords="3197,445,3270,471"/>
-<area shape="rect" id="node16" title=" " alt="" coords="3393,445,3473,471"/>
-<area shape="rect" id="node17" title=" " alt="" coords="3498,445,3561,471"/>
-<area shape="rect" id="node18" title=" " alt="" coords="3585,445,3660,471"/>
-<area shape="rect" id="node19" title=" " alt="" coords="2724,445,2767,471"/>
-<area shape="rect" id="node20" title=" " alt="" coords="2791,445,2833,471"/>
-<area shape="rect" id="node21" title=" " alt="" coords="2858,445,2982,471"/>
-<area shape="rect" id="node22" title=" " alt="" coords="3007,445,3089,471"/>
-<area shape="rect" id="node23" title=" " alt="" coords="3113,445,3172,471"/>
-<area shape="rect" id="node24" title=" " alt="" coords="1827,445,1930,471"/>
-<area shape="rect" id="node27" title=" " alt="" coords="3177,299,3263,324"/>
-<area shape="rect" id="node28" title=" " alt="" coords="3287,299,3350,324"/>
-<area shape="rect" id="node30" title=" " alt="" coords="1075,225,1154,251"/>
-<area shape="rect" id="node31" title=" " alt="" coords="1179,225,1240,251"/>
-<area shape="rect" id="node32" title=" " alt="" coords="1265,225,1362,251"/>
-<area shape="rect" id="node33" title=" " alt="" coords="1386,225,1473,251"/>
-<area shape="rect" id="node34" title=" " alt="" coords="1497,225,1586,251"/>
-<area shape="rect" id="node35" title=" " alt="" coords="1611,225,1680,251"/>
-<area shape="rect" id="node36" title=" " alt="" coords="1705,225,1794,251"/>
-<area shape="rect" id="node37" title=" " alt="" coords="1818,225,1878,251"/>
-<area shape="rect" id="node38" title=" " alt="" coords="1902,225,1962,251"/>
-<area shape="rect" id="node39" title=" " alt="" coords="1986,225,2105,251"/>
-<area shape="rect" id="node40" title=" " alt="" coords="2129,225,2223,251"/>
-<area shape="rect" id="node41" title=" " alt="" coords="2247,225,2321,251"/>
-<area shape="rect" id="node42" title=" " alt="" coords="2345,225,2420,251"/>
-<area shape="rect" id="node43" title=" " alt="" coords="2445,225,2555,251"/>
-<area shape="rect" id="node44" title=" " alt="" coords="2580,225,2649,251"/>
-<area shape="rect" id="node45" title=" " alt="" coords="2674,225,2753,251"/>
-<area shape="rect" id="node46" title=" " alt="" coords="2777,225,2841,251"/>
-<area shape="rect" id="node47" title=" " alt="" coords="2866,225,2979,251"/>
-<area shape="rect" id="node48" title=" " alt="" coords="3003,225,3090,251"/>
-<area shape="rect" id="node49" title=" " alt="" coords="3114,225,3273,251"/>
-<area shape="rect" id="node50" title=" " alt="" coords="3297,225,3404,251"/>
+<area shape="rect" id="node1" title=" " alt="" coords="961,5,1163,31"/>
+<area shape="rect" id="node2" href="$SampleSummary_8h.html" title=" " alt="" coords="968,79,1156,104"/>
+<area shape="rect" id="node3" title=" " alt="" coords="872,225,951,251"/>
+<area shape="rect" id="node4" href="$samplePDFBase_8h.html" title=" " alt="" coords="378,152,597,177"/>
+<area shape="rect" id="node27" href="$StatisticalUtils_8h.html" title="Utility functions for statistical interpretations in MaCh3." alt="" coords="1026,225,1199,251"/>
+<area shape="rect" id="node30" href="$MCMCProcessor_8h.html" title=" " alt="" coords="1983,152,2165,177"/>
+<area shape="rect" id="node5" title=" " alt="" coords="298,225,373,251"/>
+<area shape="rect" id="node6" title=" " alt="" coords="650,225,719,251"/>
+<area shape="rect" id="node7" title=" " alt="" coords="5,225,76,251"/>
+<area shape="rect" id="node8" title=" " alt="" coords="152,225,223,251"/>
+<area shape="rect" id="node9" title=" " alt="" coords="551,225,626,251"/>
+<area shape="rect" id="node10" title=" " alt="" coords="431,445,496,471"/>
+<area shape="rect" id="node11" title=" " alt="" coords="743,225,847,251"/>
+<area shape="rect" id="node12" title=" " alt="" coords="447,225,527,251"/>
+<area shape="rect" id="node13" href="$Structs_8h.html" title=" " alt="" coords="802,372,959,397"/>
+<area shape="rect" id="node25" href="$HistogramUtils_8h.html" title=" " alt="" coords="1379,299,1590,324"/>
+<area shape="rect" id="node26" href="$manager_8h.html" title=" " alt="" coords="751,299,904,324"/>
+<area shape="rect" id="node14" title=" " alt="" coords="1107,445,1182,471"/>
+<area shape="rect" id="node15" title=" " alt="" coords="844,445,917,471"/>
+<area shape="rect" id="node16" title=" " alt="" coords="1206,445,1286,471"/>
+<area shape="rect" id="node17" title=" " alt="" coords="1311,445,1373,471"/>
+<area shape="rect" id="node18" title=" " alt="" coords="1009,445,1083,471"/>
+<area shape="rect" id="node19" title=" " alt="" coords="942,445,985,471"/>
+<area shape="rect" id="node20" title=" " alt="" coords="521,445,563,471"/>
+<area shape="rect" id="node21" title=" " alt="" coords="588,445,712,471"/>
+<area shape="rect" id="node22" title=" " alt="" coords="737,445,819,471"/>
+<area shape="rect" id="node23" title=" " alt="" coords="2519,445,2621,471"/>
+<area shape="rect" id="node24" title=" " alt="" coords="1896,445,1956,471"/>
+<area shape="rect" id="node28" title=" " alt="" coords="1030,299,1115,324"/>
+<area shape="rect" id="node29" title=" " alt="" coords="1191,299,1253,324"/>
+<area shape="rect" id="node31" title=" " alt="" coords="2557,225,2636,251"/>
+<area shape="rect" id="node32" title=" " alt="" coords="2661,225,2722,251"/>
+<area shape="rect" id="node33" title=" " alt="" coords="2747,225,2844,251"/>
+<area shape="rect" id="node34" title=" " alt="" coords="2868,225,2955,251"/>
+<area shape="rect" id="node35" title=" " alt="" coords="2979,225,3068,251"/>
+<area shape="rect" id="node36" title=" " alt="" coords="3093,225,3162,251"/>
+<area shape="rect" id="node37" title=" " alt="" coords="3187,225,3276,251"/>
+<area shape="rect" id="node38" title=" " alt="" coords="3300,225,3360,251"/>
+<area shape="rect" id="node39" title=" " alt="" coords="3384,225,3503,251"/>
+<area shape="rect" id="node40" title=" " alt="" coords="3578,225,3671,251"/>
+<area shape="rect" id="node41" title=" " alt="" coords="1274,225,1349,251"/>
+<area shape="rect" id="node42" title=" " alt="" coords="1373,225,1447,251"/>
+<area shape="rect" id="node43" title=" " alt="" coords="1472,225,1583,251"/>
+<area shape="rect" id="node44" title=" " alt="" coords="1607,225,1677,251"/>
+<area shape="rect" id="node45" title=" " alt="" coords="1701,225,1780,251"/>
+<area shape="rect" id="node46" title=" " alt="" coords="1805,225,1869,251"/>
+<area shape="rect" id="node47" title=" " alt="" coords="1893,225,2007,251"/>
+<area shape="rect" id="node48" title=" " alt="" coords="2031,225,2117,251"/>
+<area shape="rect" id="node49" title=" " alt="" coords="2141,225,2300,251"/>
+<area shape="rect" id="node50" title=" " alt="" coords="2325,225,2431,251"/>
 </map>

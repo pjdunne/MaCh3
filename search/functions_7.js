@@ -97,7 +97,7 @@ var searchData=
   ['getmach3modename_94',['GetMaCh3ModeName',['../classMaCh3Modes.html#abf4ac35511787907bc16ae26aa6c2a15',1,'MaCh3Modes']]],
   ['getmach3modes_95',['GetMaCh3Modes',['../classsamplePDFBase.html#ad7ab324d8b7ac73f92ef6a8d74b9dc72',1,'samplePDFBase::GetMaCh3Modes()'],['../classmanager.html#a297a81517f0a46bda90f42b211e42cf5',1,'manager::GetMaCh3Modes()']]],
   ['getmach3version_96',['GetMaCh3Version',['../namespaceMaCh3Utils.html#a554e8effb3e55b4ba4d10dd06920a27a',1,'MaCh3Utils']]],
-  ['getmassfrompdg_97',['GetMassFromPDG',['../namespaceMaCh3Utils.html#a86d34372bb55524024fbdadd65834967',1,'MaCh3Utils']]],
+  ['getmassfrompdg_97',['GetMassFromPDG',['../namespaceMaCh3Utils.html#a1b305c72615a48a89e74a9c3ded69c02',1,'MaCh3Utils']]],
   ['getmcmcentry_98',['getMCMCentry',['../classMaCh3Plotting_1_1InputManager.html#a2d43d7f24dc43efec668d9118e0267e7',1,'MaCh3Plotting::InputManager']]],
   ['getmcmcvalue_99',['getMCMCvalue',['../classMaCh3Plotting_1_1InputManager.html#ac8e8538fd3ae525cb707f2ed1e869e8e',1,'MaCh3Plotting::InputManager']]],
   ['getmcstatllh_100',['GetMCStatLLH',['../classmanager.html#a149d43d444a7492187d0051c531923bd',1,'manager']]],

@@ -3,7 +3,7 @@ var searchData=
   ['fardetectorcoreinfo_0',['FarDetectorCoreInfo',['../structFarDetectorCoreInfo.html#af23ea652c2a9f02a95abfbbb8ad23dbf',1,'FarDetectorCoreInfo::FarDetectorCoreInfo(FarDetectorCoreInfo const &amp;other)=delete'],['../structFarDetectorCoreInfo.html#a5d1e4bb50975815690e27efbbff4bc4f',1,'FarDetectorCoreInfo::FarDetectorCoreInfo(FarDetectorCoreInfo &amp;&amp;other)=default'],['../structFarDetectorCoreInfo.html#ae5a8e3fda9efc70984adab5fff97123c',1,'FarDetectorCoreInfo::FarDetectorCoreInfo()']]],
   ['fastsplineinfo_1',['FastSplineInfo',['../structFastSplineInfo.html#aa24d249adfbca006f9544a704f29faf7',1,'FastSplineInfo']]],
   ['fastviolinfill_2',['FastViolinFill',['../classSampleSummary.html#a90fbcfacacf629b0b5f0de3fdab3fdfd',1,'SampleSummary']]],
-  ['file_5fexists_3',['file_exists',['../Structs_8h.html#afbf5ccf44bc187caa268d4d158f4e5f6',1,'Structs.h']]],
+  ['file_5fexists_3',['file_exists',['../HistogramUtils_8h.html#afbf5ccf44bc187caa268d4d158f4e5f6',1,'HistogramUtils.h']]],
   ['fill1dhist_4',['fill1DHist',['../classsamplePDFFDBase.html#a5e7379b053537e46a8416cdf17f368fc',1,'samplePDFFDBase::fill1DHist()'],['../classsamplePDFBase.html#a2d2c952d825cec64d8aaddc34f38f9f5',1,'samplePDFBase::fill1DHist()=0']]],
   ['fill2dhist_5',['fill2DHist',['../classsamplePDFBase.html#a2e0a8020401ab3bfc713ad9e06df9dfc',1,'samplePDFBase::fill2DHist()'],['../classsamplePDFFDBase.html#a5bdaf812ba043022d39aed41a0e23984',1,'samplePDFFDBase::fill2DHist()']]],
   ['fillarray_6',['fillArray',['../classsamplePDFFDBase.html#a0d6150d9e001bd6df8732bf2fd7480b9',1,'samplePDFFDBase']]],

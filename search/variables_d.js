@@ -22,7 +22,7 @@ var searchData=
   ['nkeptpcapars_19',['nKeptPCApars',['../classPCAHandler.html#aa39db9118399bebcdb784fe9c9fea458',1,'PCAHandler']]],
   ['nknots_20',['nKnots',['../classSMonolith.html#afc0e3d1eafd575cf7628319a66925d5b',1,'SMonolith']]],
   ['nknots_5farr_21',['nKnots_arr',['../structSplineMonoStruct.html#a398e0212915793852137384a3406b37f',1,'SplineMonoStruct']]],
-  ['nknowndetids_22',['nKnownDetIDs',['../namespaceMaCh3Utils.html#a24bdf4d0354265aecdd2b7e357a3c64b',1,'MaCh3Utils']]],
+  ['nknowndetids_22',['nKnownDetIDs',['../namespaceMaCh3Utils.html#aab7f576a31d84edca65700697865aa41',1,'MaCh3Utils']]],
   ['nmcmcentries_23',['nMCMCentries',['../structMaCh3Plotting_1_1InputFile.html#ae00097a495ed0cc29a0858e1918fb9f7',1,'MaCh3Plotting::InputFile']]],
   ['nmodelparams_24',['nModelParams',['../classSampleSummary.html#a49215601479aaa99f9f64d8f7c900385',1,'SampleSummary']]],
   ['nmodes_25',['NModes',['../classMaCh3Modes.html#a3bde53f0145673d99b9866b3fb5dcbaf',1,'MaCh3Modes']]],

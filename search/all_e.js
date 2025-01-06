@@ -14,7 +14,7 @@ var searchData=
   ['outputsuffix_11',['OutputSuffix',['../classMCMCProcessor.html#aa34b50ce33fb2cb7d9e9ef2d9f2f67c1',1,'MCMCProcessor']]],
   ['outputtree_12',['OutputTree',['../classSampleSummary.html#a78eb4766cc8b4758b909b6ce9113a56e',1,'SampleSummary']]],
   ['outtree_13',['outTree',['../classFitterBase.html#aed2032b9c4a4f2248abe548f54f8dcc8',1,'FitterBase']]],
-  ['overflowintegral_14',['OverflowIntegral',['../Structs_8cpp.html#a34345b88bcd0e45db5612d58a972a154',1,'OverflowIntegral(TH2Poly *poly):&#160;Structs.cpp'],['../Structs_8h.html#a34345b88bcd0e45db5612d58a972a154',1,'OverflowIntegral(TH2Poly *poly):&#160;Structs.cpp']]],
+  ['overflowintegral_14',['OverflowIntegral',['../HistogramUtils_8cpp.html#a34345b88bcd0e45db5612d58a972a154',1,'OverflowIntegral(TH2Poly *poly):&#160;HistogramUtils.cpp'],['../HistogramUtils_8h.html#a34345b88bcd0e45db5612d58a972a154',1,'OverflowIntegral(TH2Poly *poly):&#160;HistogramUtils.cpp']]],
   ['overrideconfig_15',['OverrideConfig',['../YamlHelper_8h.html#a269e230f4f26b824c65a4c7a1472e07b',1,'OverrideConfig(YAML::Node node, std::string const &amp;key, TValue val):&#160;YamlHelper.h'],['../YamlHelper_8h.html#a55f0b8c6b5d52b5c269ce26c7d3853f5',1,'OverrideConfig(YAML::Node node, std::string const &amp;key, Args... args):&#160;YamlHelper.h']]],
   ['overridesettings_16',['OverrideSettings',['../classmanager.html#a27d6193b03ee0400af4ddc91af114a35',1,'manager']]]
 ];

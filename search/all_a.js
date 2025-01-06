@@ -28,7 +28,7 @@ var searchData=
   ['kndpar_25',['kNDPar',['../MCMCProcessor_8h.html#acd2848273413543fe14936252942c20ba4ac215e1a6cd9e776ec0a230f62a0bb4',1,'MCMCProcessor.h']]],
   ['knfiletypes_26',['kNFileTypes',['../namespaceMaCh3Plotting.html#a4152b51a260d6a18f41b3a22aa2a6b75a061b376dc1c0bdc2e7a434852b9924ee',1,'MaCh3Plotting']]],
   ['knorm_27',['kNorm',['../Structs_8h.html#affc27d8b7b82d3713f45af17873fde2fa085cb29127b1cf7b1ddd429ff4440b17',1,'Structs.h']]],
-  ['knowndetidsmap_28',['KnownDetIDsMap',['../namespaceMaCh3Utils.html#ab58c07d7176a31b58fe4c1fb0c81fd10',1,'MaCh3Utils::KnownDetIDsMap()'],['../namespaceMaCh3Utils.html#ad70f340fe7d2128586d54797f6501514',1,'MaCh3Utils::KnownDetIDsMap({ {0, 1}, {1, 8}, {2, 16}, {3, 32}, {4, 64}, {5, 128}, {6, 256}, {7, 512}, })']]],
+  ['knowndetidsmap_28',['KnownDetIDsMap',['../namespaceMaCh3Utils.html#ab8ce63d18fe4673e2c6b199776935f9f',1,'MaCh3Utils']]],
   ['knparameterenum_29',['kNParameterEnum',['../MCMCProcessor_8h.html#acd2848273413543fe14936252942c20babd8035289bbe1770c6cb4d4d3e9d1b5a',1,'MCMCProcessor.h']]],
   ['knteststatistics_30',['kNTestStatistics',['../Structs_8h.html#a960da89e33ac45a56f7bbfac3068dc67a1459dbcc0f1b68b266cf0ddc37c34aee',1,'Structs.h']]],
   ['knue_31',['kNue',['../Structs_8h.html#a0dfdd8cf84b8fa3495e9e5e520fe6cd2aab024bd4737ec207f00dcd86a5d05908',1,'Structs.h']]],

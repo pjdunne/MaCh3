@@ -13,7 +13,7 @@ var searchData=
   ['fdparameters_10',['FDParameters',['../GetPostfitParamPlots_8cpp.html#a15657a5f07a9fde98fc9210b7ae80f9e',1,'GetPostfitParamPlots.cpp']]],
   ['fdparametersstartingpos_11',['FDParametersStartingPos',['../GetPostfitParamPlots_8cpp.html#a6dfe886b2ff4881ee2434479a9028985',1,'GetPostfitParamPlots.cpp']]],
   ['file_12',['file',['../structMaCh3Plotting_1_1InputFile.html#a11c074dd45647dd2957987f8b55f9d73',1,'MaCh3Plotting::InputFile']]],
-  ['file_5fexists_13',['file_exists',['../Structs_8h.html#afbf5ccf44bc187caa268d4d158f4e5f6',1,'Structs.h']]],
+  ['file_5fexists_13',['file_exists',['../HistogramUtils_8h.html#afbf5ccf44bc187caa268d4d158f4e5f6',1,'HistogramUtils.h']]],
   ['filename_14',['fileName',['../structMaCh3Plotting_1_1InputFile.html#a076134d08d2b54e29e76431a42267a52',1,'MaCh3Plotting::InputFile']]],
   ['filename_15',['FileName',['../classmanager.html#a1004958d1431ff607c08fa795b5953b7',1,'manager']]],
   ['filenames_16',['FileNames',['../ProcessMCMC_8cpp.html#a8e90c1478f4be185364988cac765a163',1,'ProcessMCMC.cpp']]],
