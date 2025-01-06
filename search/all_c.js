@@ -56,7 +56,7 @@ var searchData=
   ['makeposdef_53',['MakePosDef',['../classcovarianceBase.html#ae2850c8e2f2d4acfe322b0ebe65b07cf',1,'covarianceBase']]],
   ['makepostfit_54',['MakePostfit',['../classMCMCProcessor.html#a8667510132aa01395520f028287f511b',1,'MCMCProcessor']]],
   ['makepredictive_55',['MakePredictive',['../classSampleSummary.html#a44baf8959ced974c9a0b8ae640c336bd',1,'SampleSummary']]],
-  ['makeprefit_56',['MakePrefit',['../classMCMCProcessor.html#a03267ff95cb0f4dab0882db852893768',1,'MCMCProcessor']]],
+  ['makeprefit_56',['MakePrefit',['../classMCMCProcessor.html#a7627041b5ea3e1bbe038046ebb71a5dc',1,'MCMCProcessor']]],
   ['makeratio_57',['makeRatio',['../GetPostfitParamPlots_8cpp.html#a832c42b3026f68415157d43337c79b01',1,'GetPostfitParamPlots.cpp']]],
   ['makesplitsamplellhscancomparisons_58',['makeSplitSampleLLHScanComparisons',['../PlotLLH_8cpp.html#aba66b76d718d14f91d609a25345999a4',1,'PlotLLH.cpp']]],
   ['makesuboptimality_59',['MakeSubOptimality',['../classMCMCProcessor.html#afac304b884238cc3624f5471b43f1a7e',1,'MCMCProcessor']]],

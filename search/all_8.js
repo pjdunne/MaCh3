@@ -17,7 +17,7 @@ var searchData=
   ['histogramutils_2eh_14',['HistogramUtils.h',['../HistogramUtils_8h.html',1,'']]],
   ['horncurrents_15',['horncurrents',['../structXsecNorms4.html#ad9b663a9fe71c5b3feb844179bba8822',1,'XsecNorms4']]],
   ['hpost_16',['hpost',['../classMCMCProcessor.html#a795f661ed1ba8b8ae54c41fde5fb9496',1,'MCMCProcessor']]],
-  ['hpost2d_17',['hpost2D',['../classMCMCProcessor.html#a0ddcfa4ba1e4dcdea366d88decc64391',1,'MCMCProcessor']]],
+  ['hpost2d_17',['hpost2D',['../classMCMCProcessor.html#ac924273ef73ef60a5f6e8a166918bb31',1,'MCMCProcessor']]],
   ['hviolin_18',['hviolin',['../classMCMCProcessor.html#a556988f03b24e3af33e9a29b23d2b1e2',1,'MCMCProcessor']]],
   ['hviolin_5fprior_19',['hviolin_prior',['../classMCMCProcessor.html#a25d79f451d5d584c3e7ef0e1423e5e8e',1,'MCMCProcessor']]]
 ];
