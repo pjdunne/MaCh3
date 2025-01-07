@@ -106,7 +106,7 @@ var searchData=
   ['getmcmcentry_103',['getMCMCentry',['../classMaCh3Plotting_1_1InputManager.html#a2d43d7f24dc43efec668d9118e0267e7',1,'MaCh3Plotting::InputManager']]],
   ['getmcmcvalue_104',['getMCMCvalue',['../classMaCh3Plotting_1_1InputManager.html#ac8e8538fd3ae525cb707f2ed1e869e8e',1,'MaCh3Plotting::InputManager']]],
   ['getmcstatllh_105',['GetMCStatLLH',['../classmanager.html#a149d43d444a7492187d0051c531923bd',1,'manager']]],
-  ['getminimuminrange_106',['GetMinimumInRange',['../PlotMCMC__Diagnosis_8cpp.html#a81b2565c9b974c6f11088cef1c422bb3',1,'PlotMCMC_Diagnosis.cpp']]],
+  ['getminimuminrange_106',['GetMinimumInRange',['../PlotMCMCDiag_8cpp.html#a81b2565c9b974c6f11088cef1c422bb3',1,'PlotMCMCDiag.cpp']]],
   ['getmode_107',['GetMode',['../classMaCh3Modes.html#a21af1738d7b145f08d76aa0c163e0486',1,'MaCh3Modes']]],
   ['getmodeerror_108',['GetModeError',['../classSampleSummary.html#a1ed7c379dc433cb1dc3b71eb7aec9713',1,'SampleSummary']]],
   ['getmodefromgenerator_109',['GetModeFromGenerator',['../classMaCh3Modes.html#af71ed4d7189fade519630fd265712cc7',1,'MaCh3Modes']]],

@@ -41,7 +41,7 @@ var searchData=
   ['drawratiostack_38',['drawRatioStack',['../PlotLLH_8cpp.html#a22a044e77ac75863b8962c3a38b95ef7',1,'PlotLLH.cpp']]],
   ['draws_39',['Draws',['../RHat__HighMem_8cpp.html#a9adc829d645affbb93eff1775ab7c0c6',1,'RHat_HighMem.cpp']]],
   ['drawsfolded_40',['DrawsFolded',['../RHat__HighMem_8cpp.html#a7e7fe290fda4362be54b8cf5d56fea51',1,'RHat_HighMem.cpp']]],
-  ['dummyfile_41',['DUMMYFILE',['../PlotMCMC__Diagnosis_8cpp.html#aff052b2c086f67396715402e80de5fd7',1,'PlotMCMC_Diagnosis.cpp']]],
+  ['dummyfile_41',['DUMMYFILE',['../PlotMCMCDiag_8cpp.html#aff052b2c086f67396715402e80de5fd7',1,'PlotMCMCDiag.cpp']]],
   ['dump_42',['Dump',['../structMaCh3Plotting_1_1InputFile.html#a0897b76fdbfc674ed94da1d2b4adb0a2',1,'MaCh3Plotting::InputFile']]],
   ['dumpmatrixtofile_43',['DumpMatrixToFile',['../classcovarianceXsec.html#a5cffa7b3221e1a49706ea8a9fe0f826c',1,'covarianceXsec']]]
 ];
