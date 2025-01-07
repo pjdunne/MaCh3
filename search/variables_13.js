@@ -8,7 +8,7 @@ var searchData=
   ['uniquesystnames_5',['UniqueSystNames',['../classsplineFDBase.html#aacf850f4ec22e4f7338f243999ecc7dd',1,'splineFDBase']]],
   ['uniquesystnknots_6',['UniqueSystNKnots',['../classsplineFDBase.html#a176d42bb137d3c8c3771eb1a4a8440c8',1,'splineFDBase']]],
   ['uniquesystxpts_7',['UniqueSystXPts',['../classsplineFDBase.html#a5112a1bbd658d3a90c6a785c12aebf34',1,'splineFDBase']]],
-  ['unity_8',['Unity',['../classcovarianceBase.html#a7682c3de33ae5b23b23e070dc0a3f778',1,'covarianceBase::Unity()'],['../Structs_8h.html#af282c9643db452708e6cae4e213eacc9',1,'Unity():&#160;Structs.h']]],
+  ['unity_8',['Unity',['../Structs_8h.html#af282c9643db452708e6cae4e213eacc9',1,'Structs.h']]],
   ['unity_5ff_9',['Unity_F',['../Structs_8h.html#a65c0b13ca003051c963cc01cce55f938',1,'Structs.h']]],
   ['unity_5fint_10',['Unity_Int',['../Structs_8h.html#af04db200cf7876375837c136c89916a0',1,'Structs.h']]],
   ['uppercut_11',['UpperCut',['../classMCMCProcessor.html#a840c686f15f419c0156df01c4ed62931',1,'MCMCProcessor']]],

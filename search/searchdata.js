@@ -10,7 +10,7 @@ var indexSectionsWithContent =
   7: "fknprst",
   8: "k",
   9: "_cm",
-  10: "p",
+  10: "ps",
   11: "bdmpt"
 };
 
