@@ -81,6 +81,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classcovarianceOsc-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">covarianceOsc Class Reference</div></div>
@@ -422,6 +423,40 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a61936f5c39ad7902624222fc49ad1362 inherit pub_methods_classcovarianceBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter to return a copy of the YAML node.  <br /></td></tr>
 <tr class="separator:a61936f5c39ad7902624222fc49ad1362 inherit pub_methods_classcovarianceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a47b9395eec166e9809254bc5c99a2aeb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcovarianceOsc.html#a47b9395eec166e9809254bc5c99a2aeb">CircularPrior</a> (const int i, const double LowBound, const double UpBound)</td></tr>
+<tr class="memdesc:a47b9395eec166e9809254bc5c99a2aeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">HW :: This method is a tad hacky but modular arithmetic gives me a headache.  <br /></td></tr>
+<tr class="separator:a47b9395eec166e9809254bc5c99a2aeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classcovarianceBase"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classcovarianceBase')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classcovarianceBase.html">covarianceBase</a></td></tr>
+<tr class="memitem:a2960c489f6aafdb5a2291e1a48b14e9a inherit pro_methods_classcovarianceBase"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcovarianceBase.html#a2960c489f6aafdb5a2291e1a48b14e9a">init</a> (std::string name, std::string file)</td></tr>
+<tr class="memdesc:a2960c489f6aafdb5a2291e1a48b14e9a inherit pro_methods_classcovarianceBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialisation of the class using matrix from root file.  <br /></td></tr>
+<tr class="separator:a2960c489f6aafdb5a2291e1a48b14e9a inherit pro_methods_classcovarianceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acec1e1c7fd83d21e1ad55a03acfeb8c4 inherit pro_methods_classcovarianceBase"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcovarianceBase.html#acec1e1c7fd83d21e1ad55a03acfeb8c4">init</a> (const std::vector&lt; std::string &gt; &amp;YAMLFile)</td></tr>
+<tr class="memdesc:acec1e1c7fd83d21e1ad55a03acfeb8c4 inherit pro_methods_classcovarianceBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialisation of the class using config.  <br /></td></tr>
+<tr class="separator:acec1e1c7fd83d21e1ad55a03acfeb8c4 inherit pro_methods_classcovarianceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75b5553823335bb82026ff46369fb67e inherit pro_methods_classcovarianceBase"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcovarianceBase.html#a75b5553823335bb82026ff46369fb67e">ReserveMemory</a> (const int <a class="el" href="GetPenaltyTerm_8cpp.html#a439227feff9d7f55384e8780cfc2eb82">size</a>)</td></tr>
+<tr class="memdesc:a75b5553823335bb82026ff46369fb67e inherit pro_methods_classcovarianceBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise vectors with parameters information.  <br /></td></tr>
+<tr class="separator:a75b5553823335bb82026ff46369fb67e inherit pro_methods_classcovarianceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2850c8e2f2d4acfe322b0ebe65b07cf inherit pro_methods_classcovarianceBase"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcovarianceBase.html#ae2850c8e2f2d4acfe322b0ebe65b07cf">MakePosDef</a> (TMatrixDSym *cov=nullptr)</td></tr>
+<tr class="memdesc:ae2850c8e2f2d4acfe322b0ebe65b07cf inherit pro_methods_classcovarianceBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make matrix positive definite by adding small values to diagonal, necessary for inverting matrix.  <br /></td></tr>
+<tr class="separator:ae2850c8e2f2d4acfe322b0ebe65b07cf inherit pro_methods_classcovarianceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a709e1c6c58618cf65400eef1741cc7 inherit pro_methods_classcovarianceBase"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcovarianceBase.html#a8a709e1c6c58618cf65400eef1741cc7">makeClosestPosDef</a> (TMatrixDSym *cov)</td></tr>
+<tr class="memdesc:a8a709e1c6c58618cf65400eef1741cc7 inherit pro_methods_classcovarianceBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">HW: Finds closest possible positive definite matrix in Frobenius Norm ||.||_frob Where ||X||_frob=sqrt[sum_ij(x_ij^2)] (basically just turns an n,n matrix into vector in n^2 space then does Euclidean norm)  <br /></td></tr>
+<tr class="separator:a8a709e1c6c58618cf65400eef1741cc7 inherit pro_methods_classcovarianceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a651f5ecd8973918d5683606a607fa88c inherit pro_methods_classcovarianceBase"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcovarianceBase.html#a651f5ecd8973918d5683606a607fa88c">TransferToPCA</a> ()</td></tr>
+<tr class="memdesc:a651f5ecd8973918d5683606a607fa88c inherit pro_methods_classcovarianceBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transfer param values from normal base to PCA base.  <br /></td></tr>
+<tr class="separator:a651f5ecd8973918d5683606a607fa88c inherit pro_methods_classcovarianceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65ac4956a782b01768f445732522a450 inherit pro_methods_classcovarianceBase"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcovarianceBase.html#a65ac4956a782b01768f445732522a450">TransferToParam</a> ()</td></tr>
+<tr class="memdesc:a65ac4956a782b01768f445732522a450 inherit pro_methods_classcovarianceBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transfer param values from PCA base to normal base.  <br /></td></tr>
+<tr class="separator:a65ac4956a782b01768f445732522a450 inherit pro_methods_classcovarianceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ab3d89b7fe6103ae6f750c984bcefc8 inherit pro_methods_classcovarianceBase"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcovarianceBase.html#a5ab3d89b7fe6103ae6f750c984bcefc8">setThrowMatrixFromFile</a> (const std::string &amp;matrix_file_name, const std::string &amp;matrix_name, const std::string &amp;means_name)</td></tr>
+<tr class="memdesc:a5ab3d89b7fe6103ae6f750c984bcefc8 inherit pro_methods_classcovarianceBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">sets throw matrix from a file  <br /></td></tr>
+<tr class="separator:a5ab3d89b7fe6103ae6f750c984bcefc8 inherit pro_methods_classcovarianceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50ce8ebb96ebd64190dc37e4bf950a9b inherit pro_methods_classcovarianceBase"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcovarianceBase.html#a50ce8ebb96ebd64190dc37e4bf950a9b">updateAdaptiveCovariance</a> ()</td></tr>
+<tr class="memdesc:a50ce8ebb96ebd64190dc37e4bf950a9b inherit pro_methods_classcovarianceBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to update adaptive MCMC <a class="el" href="citelist.html#CITEREF_haario2001adaptive">[10]</a>.  <br /></td></tr>
+<tr class="separator:a50ce8ebb96ebd64190dc37e4bf950a9b inherit pro_methods_classcovarianceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a9a36ac8acc5baad4b41ff0fe53958100"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcovarianceOsc.html#a9a36ac8acc5baad4b41ff0fe53958100">flipdelM</a></td></tr>
@@ -554,37 +589,6 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:ab3833dc51a81afc9dca7c3dcbb107af7 inherit pro_attribs_classcovarianceBase"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classadaptive__mcmc_1_1AdaptiveMCMCHandler.html">adaptive_mcmc::AdaptiveMCMCHandler</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcovarianceBase.html#ab3833dc51a81afc9dca7c3dcbb107af7">AdaptiveHandler</a></td></tr>
 <tr class="memdesc:ab3833dc51a81afc9dca7c3dcbb107af7 inherit pro_attribs_classcovarianceBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct containing information about adaption.  <br /></td></tr>
 <tr class="separator:ab3833dc51a81afc9dca7c3dcbb107af7 inherit pro_attribs_classcovarianceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pro_methods_classcovarianceBase"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classcovarianceBase')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classcovarianceBase.html">covarianceBase</a></td></tr>
-<tr class="memitem:a2960c489f6aafdb5a2291e1a48b14e9a inherit pro_methods_classcovarianceBase"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcovarianceBase.html#a2960c489f6aafdb5a2291e1a48b14e9a">init</a> (std::string name, std::string file)</td></tr>
-<tr class="memdesc:a2960c489f6aafdb5a2291e1a48b14e9a inherit pro_methods_classcovarianceBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialisation of the class using matrix from root file.  <br /></td></tr>
-<tr class="separator:a2960c489f6aafdb5a2291e1a48b14e9a inherit pro_methods_classcovarianceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acec1e1c7fd83d21e1ad55a03acfeb8c4 inherit pro_methods_classcovarianceBase"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcovarianceBase.html#acec1e1c7fd83d21e1ad55a03acfeb8c4">init</a> (const std::vector&lt; std::string &gt; &amp;YAMLFile)</td></tr>
-<tr class="memdesc:acec1e1c7fd83d21e1ad55a03acfeb8c4 inherit pro_methods_classcovarianceBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialisation of the class using config.  <br /></td></tr>
-<tr class="separator:acec1e1c7fd83d21e1ad55a03acfeb8c4 inherit pro_methods_classcovarianceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a75b5553823335bb82026ff46369fb67e inherit pro_methods_classcovarianceBase"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcovarianceBase.html#a75b5553823335bb82026ff46369fb67e">ReserveMemory</a> (const int <a class="el" href="GetPenaltyTerm_8cpp.html#a439227feff9d7f55384e8780cfc2eb82">size</a>)</td></tr>
-<tr class="memdesc:a75b5553823335bb82026ff46369fb67e inherit pro_methods_classcovarianceBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise vectors with parameters information.  <br /></td></tr>
-<tr class="separator:a75b5553823335bb82026ff46369fb67e inherit pro_methods_classcovarianceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2850c8e2f2d4acfe322b0ebe65b07cf inherit pro_methods_classcovarianceBase"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcovarianceBase.html#ae2850c8e2f2d4acfe322b0ebe65b07cf">MakePosDef</a> (TMatrixDSym *cov=nullptr)</td></tr>
-<tr class="memdesc:ae2850c8e2f2d4acfe322b0ebe65b07cf inherit pro_methods_classcovarianceBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make matrix positive definite by adding small values to diagonal, necessary for inverting matrix.  <br /></td></tr>
-<tr class="separator:ae2850c8e2f2d4acfe322b0ebe65b07cf inherit pro_methods_classcovarianceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a709e1c6c58618cf65400eef1741cc7 inherit pro_methods_classcovarianceBase"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcovarianceBase.html#a8a709e1c6c58618cf65400eef1741cc7">makeClosestPosDef</a> (TMatrixDSym *cov)</td></tr>
-<tr class="memdesc:a8a709e1c6c58618cf65400eef1741cc7 inherit pro_methods_classcovarianceBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">HW: Finds closest possible positive definite matrix in Frobenius Norm ||.||_frob Where ||X||_frob=sqrt[sum_ij(x_ij^2)] (basically just turns an n,n matrix into vector in n^2 space then does Euclidean norm)  <br /></td></tr>
-<tr class="separator:a8a709e1c6c58618cf65400eef1741cc7 inherit pro_methods_classcovarianceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a651f5ecd8973918d5683606a607fa88c inherit pro_methods_classcovarianceBase"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcovarianceBase.html#a651f5ecd8973918d5683606a607fa88c">TransferToPCA</a> ()</td></tr>
-<tr class="memdesc:a651f5ecd8973918d5683606a607fa88c inherit pro_methods_classcovarianceBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transfer param values from normal base to PCA base.  <br /></td></tr>
-<tr class="separator:a651f5ecd8973918d5683606a607fa88c inherit pro_methods_classcovarianceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65ac4956a782b01768f445732522a450 inherit pro_methods_classcovarianceBase"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcovarianceBase.html#a65ac4956a782b01768f445732522a450">TransferToParam</a> ()</td></tr>
-<tr class="memdesc:a65ac4956a782b01768f445732522a450 inherit pro_methods_classcovarianceBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transfer param values from PCA base to normal base.  <br /></td></tr>
-<tr class="separator:a65ac4956a782b01768f445732522a450 inherit pro_methods_classcovarianceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ab3d89b7fe6103ae6f750c984bcefc8 inherit pro_methods_classcovarianceBase"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcovarianceBase.html#a5ab3d89b7fe6103ae6f750c984bcefc8">setThrowMatrixFromFile</a> (const std::string &amp;matrix_file_name, const std::string &amp;matrix_name, const std::string &amp;means_name)</td></tr>
-<tr class="memdesc:a5ab3d89b7fe6103ae6f750c984bcefc8 inherit pro_methods_classcovarianceBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">sets throw matrix from a file  <br /></td></tr>
-<tr class="separator:a5ab3d89b7fe6103ae6f750c984bcefc8 inherit pro_methods_classcovarianceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50ce8ebb96ebd64190dc37e4bf950a9b inherit pro_methods_classcovarianceBase"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcovarianceBase.html#a50ce8ebb96ebd64190dc37e4bf950a9b">updateAdaptiveCovariance</a> ()</td></tr>
-<tr class="memdesc:a50ce8ebb96ebd64190dc37e4bf950a9b inherit pro_methods_classcovarianceBase"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to update adaptive MCMC <a class="el" href="citelist.html#CITEREF_haario2001adaptive">[10]</a>.  <br /></td></tr>
-<tr class="separator:a50ce8ebb96ebd64190dc37e4bf950a9b inherit pro_methods_classcovarianceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class responsible for handling of neutrino oscillation parameters. </p>
@@ -683,11 +687,11 @@ Asher Kaboth </dd></dl>
 <div class="ttc" id="aclasscovarianceBase_html_a973671386a2f8ea924f25f8f5404654c"><div class="ttname"><a href="classcovarianceBase.html#a973671386a2f8ea924f25f8f5404654c">covarianceBase::_fFancyNames</a></div><div class="ttdeci">std::vector&lt; std::string &gt; _fFancyNames</div><div class="ttdoc">Fancy name for example rather than xsec_0 it is MAQE, useful for human reading.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceBase_8h_source.html#l00456">covarianceBase.h:456</a></div></div>
 <div class="ttc" id="aclasscovarianceBase_html_ac5d922f1a4163b38ebc7a3ef21eec376"><div class="ttname"><a href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">covarianceBase::_fNumPar</a></div><div class="ttdeci">int _fNumPar</div><div class="ttdoc">Number of systematic parameters.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceBase_8h_source.html#l00460">covarianceBase.h:460</a></div></div>
 <div class="ttc" id="aclasscovarianceBase_html_ae70f51df3976975b2dc78fd3bfc28b65"><div class="ttname"><a href="classcovarianceBase.html#ae70f51df3976975b2dc78fd3bfc28b65">covarianceBase::_fCurrVal</a></div><div class="ttdeci">std::vector&lt; double &gt; _fCurrVal</div><div class="ttdoc">Current value of the parameter.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceBase_8h_source.html#l00464">covarianceBase.h:464</a></div></div>
-<div class="ttc" id="aclasscovarianceOsc_html_a5f554c455622a351015fa782e9933801"><div class="ttname"><a href="classcovarianceOsc.html#a5f554c455622a351015fa782e9933801">covarianceOsc::kDeltaM23</a></div><div class="ttdeci">int kDeltaM23</div><div class="ttdoc">There is special treatment for DeltaM23, therefore store enum keeping track when to apply special tre...</div><div class="ttdef"><b>Definition:</b> <a href="covarianceOsc_8h_source.html#l00030">covarianceOsc.h:30</a></div></div>
-<div class="ttc" id="aclasscovarianceOsc_html_a6f098e51551a6d175cce56027ddfd31f"><div class="ttname"><a href="classcovarianceOsc.html#a6f098e51551a6d175cce56027ddfd31f">covarianceOsc::Print</a></div><div class="ttdeci">void Print()</div><div class="ttdoc">KS: Print all useful information's after initialization.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceOsc_8cpp_source.html#l00073">covarianceOsc.cpp:73</a></div></div>
-<div class="ttc" id="aclasscovarianceOsc_html_a9a36ac8acc5baad4b41ff0fe53958100"><div class="ttname"><a href="classcovarianceOsc.html#a9a36ac8acc5baad4b41ff0fe53958100">covarianceOsc::flipdelM</a></div><div class="ttdeci">bool flipdelM</div><div class="ttdoc">Do we flip DeltaM23 or not.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceOsc_8h_source.html#l00026">covarianceOsc.h:26</a></div></div>
-<div class="ttc" id="aclasscovarianceOsc_html_ac4068139be51a4426706d4ddf4bf930d"><div class="ttname"><a href="classcovarianceOsc.html#ac4068139be51a4426706d4ddf4bf930d">covarianceOsc::kDeltaCP</a></div><div class="ttdeci">int kDeltaCP</div><div class="ttdoc">There is special treatment for delta CP, therefore store enum keeping track when to apply special tre...</div><div class="ttdef"><b>Definition:</b> <a href="covarianceOsc_8h_source.html#l00028">covarianceOsc.h:28</a></div></div>
-<div class="ttc" id="aclasscovarianceOsc_html_ae065d9a3c633bfcef6915b2b86d3e209"><div class="ttname"><a href="classcovarianceOsc.html#ae065d9a3c633bfcef6915b2b86d3e209">covarianceOsc::kSinTheta23</a></div><div class="ttdeci">int kSinTheta23</div><div class="ttdoc">Enum for special treatment of sin(theta23).</div><div class="ttdef"><b>Definition:</b> <a href="covarianceOsc_8h_source.html#l00032">covarianceOsc.h:32</a></div></div>
+<div class="ttc" id="aclasscovarianceOsc_html_a5f554c455622a351015fa782e9933801"><div class="ttname"><a href="classcovarianceOsc.html#a5f554c455622a351015fa782e9933801">covarianceOsc::kDeltaM23</a></div><div class="ttdeci">int kDeltaM23</div><div class="ttdoc">There is special treatment for DeltaM23, therefore store enum keeping track when to apply special tre...</div><div class="ttdef"><b>Definition:</b> <a href="covarianceOsc_8h_source.html#l00033">covarianceOsc.h:33</a></div></div>
+<div class="ttc" id="aclasscovarianceOsc_html_a6f098e51551a6d175cce56027ddfd31f"><div class="ttname"><a href="classcovarianceOsc.html#a6f098e51551a6d175cce56027ddfd31f">covarianceOsc::Print</a></div><div class="ttdeci">void Print()</div><div class="ttdoc">KS: Print all useful information's after initialization.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceOsc_8cpp_source.html#l00079">covarianceOsc.cpp:79</a></div></div>
+<div class="ttc" id="aclasscovarianceOsc_html_a9a36ac8acc5baad4b41ff0fe53958100"><div class="ttname"><a href="classcovarianceOsc.html#a9a36ac8acc5baad4b41ff0fe53958100">covarianceOsc::flipdelM</a></div><div class="ttdeci">bool flipdelM</div><div class="ttdoc">Do we flip DeltaM23 or not.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceOsc_8h_source.html#l00029">covarianceOsc.h:29</a></div></div>
+<div class="ttc" id="aclasscovarianceOsc_html_ac4068139be51a4426706d4ddf4bf930d"><div class="ttname"><a href="classcovarianceOsc.html#ac4068139be51a4426706d4ddf4bf930d">covarianceOsc::kDeltaCP</a></div><div class="ttdeci">int kDeltaCP</div><div class="ttdoc">There is special treatment for delta CP, therefore store enum keeping track when to apply special tre...</div><div class="ttdef"><b>Definition:</b> <a href="covarianceOsc_8h_source.html#l00031">covarianceOsc.h:31</a></div></div>
+<div class="ttc" id="aclasscovarianceOsc_html_ae065d9a3c633bfcef6915b2b86d3e209"><div class="ttname"><a href="classcovarianceOsc.html#ae065d9a3c633bfcef6915b2b86d3e209">covarianceOsc::kSinTheta23</a></div><div class="ttdeci">int kSinTheta23</div><div class="ttdoc">Enum for special treatment of sin(theta23).</div><div class="ttdef"><b>Definition:</b> <a href="covarianceOsc_8h_source.html#l00035">covarianceOsc.h:35</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -725,6 +729,61 @@ Asher Kaboth </dd></dl>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a47b9395eec166e9809254bc5c99a2aeb" name="a47b9395eec166e9809254bc5c99a2aeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47b9395eec166e9809254bc5c99a2aeb">&#9670;&#160;</a></span>CircularPrior()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void covarianceOsc::CircularPrior </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>LowBound</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>UpBound</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>HW :: This method is a tad hacky but modular arithmetic gives me a headache. </p>
+<dl class="section author"><dt>Author</dt><dd>Henry Wallace </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="covarianceOsc_8cpp_source.html#l00068">68</a> of file <a class="el" href="covarianceOsc_8cpp_source.html">covarianceOsc.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   68</span>                                                                                              {</div>
+<div class="line"><span class="lineno">   69</span><span class="comment">// *************************************</span></div>
+<div class="line"><span class="lineno">   70</span>  <span class="keywordflow">if</span>(<a class="code hl_variable" href="classcovarianceBase.html#a12f0eb31a5ef48b014baa11d4ab919e9">_fPropVal</a>[index] &gt; UpBound) {</div>
+<div class="line"><span class="lineno">   71</span>    <a class="code hl_variable" href="classcovarianceBase.html#a12f0eb31a5ef48b014baa11d4ab919e9">_fPropVal</a>[index] = LowBound + std::fmod(<a class="code hl_variable" href="classcovarianceBase.html#a12f0eb31a5ef48b014baa11d4ab919e9">_fPropVal</a>[index], UpBound);</div>
+<div class="line"><span class="lineno">   72</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="classcovarianceBase.html#a12f0eb31a5ef48b014baa11d4ab919e9">_fPropVal</a>[index] &lt; LowBound) {</div>
+<div class="line"><span class="lineno">   73</span>    <a class="code hl_variable" href="classcovarianceBase.html#a12f0eb31a5ef48b014baa11d4ab919e9">_fPropVal</a>[index] = UpBound + std::fmod(<a class="code hl_variable" href="classcovarianceBase.html#a12f0eb31a5ef48b014baa11d4ab919e9">_fPropVal</a>[index], UpBound);</div>
+<div class="line"><span class="lineno">   74</span>  }</div>
+<div class="line"><span class="lineno">   75</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a6f098e51551a6d175cce56027ddfd31f" name="a6f098e51551a6d175cce56027ddfd31f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6f098e51551a6d175cce56027ddfd31f">&#9670;&#160;</a></span>Print()</h2>
 
@@ -742,20 +801,20 @@ Asher Kaboth </dd></dl>
 
 <p>KS: Print all useful information's after initialization. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceOsc_8cpp_source.html#l00073">73</a> of file <a class="el" href="covarianceOsc_8cpp_source.html">covarianceOsc.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   73</span>                          {</div>
-<div class="line"><span class="lineno">   74</span><span class="comment">// *************************************</span></div>
-<div class="line"><span class="lineno">   75</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;Number of pars: {}&quot;</span>, <a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>);</div>
-<div class="line"><span class="lineno">   76</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;Current: {} parameters:&quot;</span>, <a class="code hl_variable" href="classcovarianceBase.html#a26618d3f5633b33ce20e38ce8261b3ee">matrixName</a>);</div>
-<div class="line"><span class="lineno">   77</span> </div>
-<div class="line"><span class="lineno">   78</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;{:&lt;5} | {:&lt;25} | {:&lt;10} | {:&lt;15} | {:&lt;15} | {:&lt;10}&quot;</span>,</div>
-<div class="line"><span class="lineno">   79</span>                <span class="stringliteral">&quot;#&quot;</span>, <span class="stringliteral">&quot;Name&quot;</span>, <span class="stringliteral">&quot;Nom.&quot;</span>, <span class="stringliteral">&quot;IndivStepScale&quot;</span>, <span class="stringliteral">&quot;_fError&quot;</span>, <span class="stringliteral">&quot;FlatPrior&quot;</span>);</div>
-<div class="line"><span class="lineno">   80</span> </div>
-<div class="line"><span class="lineno">   81</span>  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>; i++) {</div>
-<div class="line"><span class="lineno">   82</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;{:&lt;5} | {:&lt;25} | {:&lt;10.4f} | {:&lt;15.2f} | {:&lt;15.4f} | {:&lt;10}&quot;</span>,</div>
-<div class="line"><span class="lineno">   83</span>                  i, <a class="code hl_variable" href="classcovarianceBase.html#a3e502d80fd2c30a7da4fe75a3e05b0da">_fNames</a>[i].c_str(), <a class="code hl_variable" href="classcovarianceBase.html#a7578a2cc2e8e9100fad88310a824cb1c">_fPreFitValue</a>[i], <a class="code hl_variable" href="classcovarianceBase.html#a3cda39026e336a49cef482efd4062561">_fIndivStepScale</a>[i], <a class="code hl_variable" href="classcovarianceBase.html#a34f877fc160b4a93a3aab1b3a8977858">_fError</a>[i], <a class="code hl_variable" href="classcovarianceBase.html#ad9c47deb7009bff81210f666e80012eb">_fFlatPrior</a>[i]);</div>
-<div class="line"><span class="lineno">   84</span>  }</div>
-<div class="line"><span class="lineno">   85</span>}</div>
+<p class="definition">Definition at line <a class="el" href="covarianceOsc_8cpp_source.html#l00079">79</a> of file <a class="el" href="covarianceOsc_8cpp_source.html">covarianceOsc.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   79</span>                          {</div>
+<div class="line"><span class="lineno">   80</span><span class="comment">// *************************************</span></div>
+<div class="line"><span class="lineno">   81</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;Number of pars: {}&quot;</span>, <a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>);</div>
+<div class="line"><span class="lineno">   82</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;Current: {} parameters:&quot;</span>, <a class="code hl_variable" href="classcovarianceBase.html#a26618d3f5633b33ce20e38ce8261b3ee">matrixName</a>);</div>
+<div class="line"><span class="lineno">   83</span> </div>
+<div class="line"><span class="lineno">   84</span>  <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;{:&lt;5} | {:&lt;25} | {:&lt;10} | {:&lt;15} | {:&lt;15} | {:&lt;10}&quot;</span>,</div>
+<div class="line"><span class="lineno">   85</span>                <span class="stringliteral">&quot;#&quot;</span>, <span class="stringliteral">&quot;Name&quot;</span>, <span class="stringliteral">&quot;Nom.&quot;</span>, <span class="stringliteral">&quot;IndivStepScale&quot;</span>, <span class="stringliteral">&quot;_fError&quot;</span>, <span class="stringliteral">&quot;FlatPrior&quot;</span>);</div>
+<div class="line"><span class="lineno">   86</span> </div>
+<div class="line"><span class="lineno">   87</span>  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classcovarianceBase.html#ac5d922f1a4163b38ebc7a3ef21eec376">_fNumPar</a>; i++) {</div>
+<div class="line"><span class="lineno">   88</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a>(<span class="stringliteral">&quot;{:&lt;5} | {:&lt;25} | {:&lt;10.4f} | {:&lt;15.2f} | {:&lt;15.4f} | {:&lt;10}&quot;</span>,</div>
+<div class="line"><span class="lineno">   89</span>                  i, <a class="code hl_variable" href="classcovarianceBase.html#a3e502d80fd2c30a7da4fe75a3e05b0da">_fNames</a>[i].c_str(), <a class="code hl_variable" href="classcovarianceBase.html#a7578a2cc2e8e9100fad88310a824cb1c">_fPreFitValue</a>[i], <a class="code hl_variable" href="classcovarianceBase.html#a3cda39026e336a49cef482efd4062561">_fIndivStepScale</a>[i], <a class="code hl_variable" href="classcovarianceBase.html#a34f877fc160b4a93a3aab1b3a8977858">_fError</a>[i], <a class="code hl_variable" href="classcovarianceBase.html#ad9c47deb7009bff81210f666e80012eb">_fFlatPrior</a>[i]);</div>
+<div class="line"><span class="lineno">   90</span>  }</div>
+<div class="line"><span class="lineno">   91</span>}</div>
 <div class="ttc" id="aMaCh3Logger_8h_html_a95fa4dffc648e4c5536c9292c2bdcac3"><div class="ttname"><a href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a></div><div class="ttdeci">#define MACH3LOG_INFO</div><div class="ttdef"><b>Definition:</b> <a href="MaCh3Logger_8h_source.html#l00017">MaCh3Logger.h:17</a></div></div>
 <div class="ttc" id="aclasscovarianceBase_html_a26618d3f5633b33ce20e38ce8261b3ee"><div class="ttname"><a href="classcovarianceBase.html#a26618d3f5633b33ce20e38ce8261b3ee">covarianceBase::matrixName</a></div><div class="ttdeci">std::string matrixName</div><div class="ttdoc">Name of cov matrix.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceBase_8h_source.html#l00432">covarianceBase.h:432</a></div></div>
 <div class="ttc" id="aclasscovarianceBase_html_a34f877fc160b4a93a3aab1b3a8977858"><div class="ttname"><a href="classcovarianceBase.html#a34f877fc160b4a93a3aab1b3a8977858">covarianceBase::_fError</a></div><div class="ttdeci">std::vector&lt; double &gt; _fError</div><div class="ttdoc">Prior error on the parameter.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceBase_8h_source.html#l00470">covarianceBase.h:470</a></div></div>
@@ -796,28 +855,24 @@ Asher Kaboth </dd></dl>
 <div class="line"><span class="lineno">   47</span><span class="comment">// *************************************</span></div>
 <div class="line"><span class="lineno">   48</span>  <a class="code hl_function" href="classcovarianceBase.html#a95c7ca23995af579cfa7f199833fe24a">covarianceBase::proposeStep</a>();</div>
 <div class="line"><span class="lineno">   49</span> </div>
-<div class="line"><span class="lineno">   50</span>  <span class="comment">// HW :: This method is a tad hacky but modular arithmetic gives me a headache.</span></div>
-<div class="line"><span class="lineno">   51</span>  <span class="comment">//        It should now automatically set dcp to be with [-pi, pi]</span></div>
-<div class="line"><span class="lineno">   52</span>  <span class="keywordflow">if</span>(<a class="code hl_variable" href="classcovarianceBase.html#a12f0eb31a5ef48b014baa11d4ab919e9">_fPropVal</a>[<a class="code hl_variable" href="classcovarianceOsc.html#ac4068139be51a4426706d4ddf4bf930d">kDeltaCP</a>] &gt; TMath::Pi()) {</div>
-<div class="line"><span class="lineno">   53</span>    <a class="code hl_variable" href="classcovarianceBase.html#a12f0eb31a5ef48b014baa11d4ab919e9">_fPropVal</a>[<a class="code hl_variable" href="classcovarianceOsc.html#ac4068139be51a4426706d4ddf4bf930d">kDeltaCP</a>] = -1*TMath::Pi() + std::fmod(<a class="code hl_variable" href="classcovarianceBase.html#a12f0eb31a5ef48b014baa11d4ab919e9">_fPropVal</a>[<a class="code hl_variable" href="classcovarianceOsc.html#ac4068139be51a4426706d4ddf4bf930d">kDeltaCP</a>], TMath::Pi());</div>
-<div class="line"><span class="lineno">   54</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="classcovarianceBase.html#a12f0eb31a5ef48b014baa11d4ab919e9">_fPropVal</a>[<a class="code hl_variable" href="classcovarianceOsc.html#ac4068139be51a4426706d4ddf4bf930d">kDeltaCP</a>] &lt; -TMath::Pi()) {</div>
-<div class="line"><span class="lineno">   55</span>    <a class="code hl_variable" href="classcovarianceBase.html#a12f0eb31a5ef48b014baa11d4ab919e9">_fPropVal</a>[<a class="code hl_variable" href="classcovarianceOsc.html#ac4068139be51a4426706d4ddf4bf930d">kDeltaCP</a>] = TMath::Pi() + std::fmod(<a class="code hl_variable" href="classcovarianceBase.html#a12f0eb31a5ef48b014baa11d4ab919e9">_fPropVal</a>[<a class="code hl_variable" href="classcovarianceOsc.html#ac4068139be51a4426706d4ddf4bf930d">kDeltaCP</a>], TMath::Pi());</div>
-<div class="line"><span class="lineno">   56</span>  }</div>
-<div class="line"><span class="lineno">   57</span>  </div>
-<div class="line"><span class="lineno">   58</span>  <span class="comment">// Okay now we&#39;ve done the standard steps, we can add in our nice flips</span></div>
-<div class="line"><span class="lineno">   59</span>  <span class="comment">// hierarchy flip first</span></div>
-<div class="line"><span class="lineno">   60</span>  <span class="keywordflow">if</span>(<a class="code hl_variable" href="classcovarianceBase.html#a0704c430bdc8e87fd6f03f01b2ab00df">random_number</a>[0]-&gt;Uniform() &lt; 0.5 &amp;&amp; <a class="code hl_variable" href="classcovarianceOsc.html#a9a36ac8acc5baad4b41ff0fe53958100">flipdelM</a>){</div>
-<div class="line"><span class="lineno">   61</span>    <a class="code hl_variable" href="classcovarianceBase.html#a12f0eb31a5ef48b014baa11d4ab919e9">_fPropVal</a>[<a class="code hl_variable" href="classcovarianceOsc.html#a5f554c455622a351015fa782e9933801">kDeltaM23</a>] *= -1;</div>
-<div class="line"><span class="lineno">   62</span>  }</div>
-<div class="line"><span class="lineno">   63</span>  <span class="comment">// now octant flip</span></div>
-<div class="line"><span class="lineno">   64</span>  <span class="keywordflow">if</span>(<a class="code hl_variable" href="classcovarianceBase.html#a0704c430bdc8e87fd6f03f01b2ab00df">random_number</a>[0]-&gt;Uniform() &lt; 0.5) {</div>
-<div class="line"><span class="lineno">   65</span>    <span class="comment">// flip octant around point of maximal disappearance (0.5112)</span></div>
-<div class="line"><span class="lineno">   66</span>    <span class="comment">// this ensures we move to a parameter value which has the same oscillation probability</span></div>
-<div class="line"><span class="lineno">   67</span>    <a class="code hl_variable" href="classcovarianceBase.html#a12f0eb31a5ef48b014baa11d4ab919e9">_fPropVal</a>[<a class="code hl_variable" href="classcovarianceOsc.html#ae065d9a3c633bfcef6915b2b86d3e209">kSinTheta23</a>] = 0.5112 - (<a class="code hl_variable" href="classcovarianceBase.html#a12f0eb31a5ef48b014baa11d4ab919e9">_fPropVal</a>[<a class="code hl_variable" href="classcovarianceOsc.html#ae065d9a3c633bfcef6915b2b86d3e209">kSinTheta23</a>] - 0.5112);</div>
-<div class="line"><span class="lineno">   68</span>  }</div>
-<div class="line"><span class="lineno">   69</span>}</div>
+<div class="line"><span class="lineno">   50</span>  <span class="comment">// HW It should now automatically set dcp to be with [-pi, pi]</span></div>
+<div class="line"><span class="lineno">   51</span>  <a class="code hl_function" href="classcovarianceOsc.html#a47b9395eec166e9809254bc5c99a2aeb">CircularPrior</a>(<a class="code hl_variable" href="classcovarianceOsc.html#ac4068139be51a4426706d4ddf4bf930d">kDeltaCP</a>, -TMath::Pi(), TMath::Pi());</div>
+<div class="line"><span class="lineno">   52</span> </div>
+<div class="line"><span class="lineno">   53</span>  <span class="comment">// Okay now we&#39;ve done the standard steps, we can add in our nice flips</span></div>
+<div class="line"><span class="lineno">   54</span>  <span class="comment">// hierarchy flip first</span></div>
+<div class="line"><span class="lineno">   55</span>  <span class="keywordflow">if</span>(<a class="code hl_variable" href="classcovarianceBase.html#a0704c430bdc8e87fd6f03f01b2ab00df">random_number</a>[0]-&gt;Uniform() &lt; 0.5 &amp;&amp; <a class="code hl_variable" href="classcovarianceOsc.html#a9a36ac8acc5baad4b41ff0fe53958100">flipdelM</a>){</div>
+<div class="line"><span class="lineno">   56</span>    <a class="code hl_variable" href="classcovarianceBase.html#a12f0eb31a5ef48b014baa11d4ab919e9">_fPropVal</a>[<a class="code hl_variable" href="classcovarianceOsc.html#a5f554c455622a351015fa782e9933801">kDeltaM23</a>] *= -1;</div>
+<div class="line"><span class="lineno">   57</span>  }</div>
+<div class="line"><span class="lineno">   58</span>  <span class="comment">// now octant flip</span></div>
+<div class="line"><span class="lineno">   59</span>  <span class="keywordflow">if</span>(<a class="code hl_variable" href="classcovarianceBase.html#a0704c430bdc8e87fd6f03f01b2ab00df">random_number</a>[0]-&gt;Uniform() &lt; 0.5) {</div>
+<div class="line"><span class="lineno">   60</span>    <span class="comment">// flip octant around point of maximal disappearance (0.5112)</span></div>
+<div class="line"><span class="lineno">   61</span>    <span class="comment">// this ensures we move to a parameter value which has the same oscillation probability</span></div>
+<div class="line"><span class="lineno">   62</span>    <a class="code hl_variable" href="classcovarianceBase.html#a12f0eb31a5ef48b014baa11d4ab919e9">_fPropVal</a>[<a class="code hl_variable" href="classcovarianceOsc.html#ae065d9a3c633bfcef6915b2b86d3e209">kSinTheta23</a>] = 0.5112 - (<a class="code hl_variable" href="classcovarianceBase.html#a12f0eb31a5ef48b014baa11d4ab919e9">_fPropVal</a>[<a class="code hl_variable" href="classcovarianceOsc.html#ae065d9a3c633bfcef6915b2b86d3e209">kSinTheta23</a>] - 0.5112);</div>
+<div class="line"><span class="lineno">   63</span>  }</div>
+<div class="line"><span class="lineno">   64</span>}</div>
 <div class="ttc" id="aclasscovarianceBase_html_a0704c430bdc8e87fd6f03f01b2ab00df"><div class="ttname"><a href="classcovarianceBase.html#a0704c430bdc8e87fd6f03f01b2ab00df">covarianceBase::random_number</a></div><div class="ttdeci">std::vector&lt; std::unique_ptr&lt; TRandom3 &gt; &gt; random_number</div><div class="ttdoc">KS: Set Random numbers for each thread so each thread has different seed.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceBase_8h_source.html#l00441">covarianceBase.h:441</a></div></div>
 <div class="ttc" id="aclasscovarianceBase_html_a95c7ca23995af579cfa7f199833fe24a"><div class="ttname"><a href="classcovarianceBase.html#a95c7ca23995af579cfa7f199833fe24a">covarianceBase::proposeStep</a></div><div class="ttdeci">virtual void proposeStep()</div><div class="ttdoc">Generate a new proposed state.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceBase_8cpp_source.html#l00538">covarianceBase.cpp:538</a></div></div>
+<div class="ttc" id="aclasscovarianceOsc_html_a47b9395eec166e9809254bc5c99a2aeb"><div class="ttname"><a href="classcovarianceOsc.html#a47b9395eec166e9809254bc5c99a2aeb">covarianceOsc::CircularPrior</a></div><div class="ttdeci">void CircularPrior(const int i, const double LowBound, const double UpBound)</div><div class="ttdoc">HW :: This method is a tad hacky but modular arithmetic gives me a headache.</div><div class="ttdef"><b>Definition:</b> <a href="covarianceOsc_8cpp_source.html#l00068">covarianceOsc.cpp:68</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -875,7 +930,7 @@ Asher Kaboth </dd></dl>
 
 <p>Do we flip DeltaM23 or not. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceOsc_8h_source.html#l00026">26</a> of file <a class="el" href="covarianceOsc_8h_source.html">covarianceOsc.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceOsc_8h_source.html#l00029">29</a> of file <a class="el" href="covarianceOsc_8h_source.html">covarianceOsc.h</a>.</p>
 
 </div>
 </div>
@@ -901,7 +956,7 @@ Asher Kaboth </dd></dl>
 
 <p>There is special treatment for delta CP, therefore store enum keeping track when to apply special treatment. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceOsc_8h_source.html#l00028">28</a> of file <a class="el" href="covarianceOsc_8h_source.html">covarianceOsc.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceOsc_8h_source.html#l00031">31</a> of file <a class="el" href="covarianceOsc_8h_source.html">covarianceOsc.h</a>.</p>
 
 </div>
 </div>
@@ -927,7 +982,7 @@ Asher Kaboth </dd></dl>
 
 <p>There is special treatment for DeltaM23, therefore store enum keeping track when to apply special treatment. </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceOsc_8h_source.html#l00030">30</a> of file <a class="el" href="covarianceOsc_8h_source.html">covarianceOsc.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceOsc_8h_source.html#l00033">33</a> of file <a class="el" href="covarianceOsc_8h_source.html">covarianceOsc.h</a>.</p>
 
 </div>
 </div>
@@ -953,7 +1008,7 @@ Asher Kaboth </dd></dl>
 
 <p>Enum for special treatment of sin(theta23). </p>
 
-<p class="definition">Definition at line <a class="el" href="covarianceOsc_8h_source.html#l00032">32</a> of file <a class="el" href="covarianceOsc_8h_source.html">covarianceOsc.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="covarianceOsc_8h_source.html#l00035">35</a> of file <a class="el" href="covarianceOsc_8h_source.html">covarianceOsc.h</a>.</p>
 
 </div>
 </div>

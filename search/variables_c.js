@@ -28,12 +28,12 @@ var searchData=
   ['means_5fhpd_25',['Means_HPD',['../classMCMCProcessor.html#a32657dc39a7fc0d04804f6195a3d8c3e',1,'MCMCProcessor']]],
   ['medianarr_26',['MedianArr',['../RHat__HighMem_8cpp.html#a761fd0b4a970686c00ce3e4daefd7f73',1,'RHat_HighMem.cpp']]],
   ['minuit_27',['minuit',['../classMinuitFit.html#a3f5a1b7de36ce6c55821e262b016cb19',1,'MinuitFit']]],
-  ['mode_28',['mode',['../structFarDetectorCoreInfo.html#a8e5ddbda4c271abb29952f7f123fb881',1,'FarDetectorCoreInfo']]],
-  ['mode_29',['Mode',['../classMaCh3Modes.html#a062f961a64e9b6bebf420730f9dad9ff',1,'MaCh3Modes']]],
+  ['mode_28',['Mode',['../classMaCh3Modes.html#a062f961a64e9b6bebf420730f9dad9ff',1,'MaCh3Modes']]],
+  ['mode_29',['mode',['../structFarDetectorCoreInfo.html#a8e5ddbda4c271abb29952f7f123fb881',1,'FarDetectorCoreInfo']]],
   ['modehist_30',['ModeHist',['../classSampleSummary.html#a9b21ff74bb8ebd7c3af2c24e02f3d7dc',1,'SampleSummary']]],
   ['modemap_31',['ModeMap',['../classMaCh3Modes.html#a52a226378736541ece3830f53ac851c3',1,'MaCh3Modes']]],
-  ['modes_32',['modes',['../structXsecNorms4.html#ad0632d5a94a37ee5ce297698abadd844',1,'XsecNorms4']]],
-  ['modes_33',['Modes',['../classSampleSummary.html#a6593fed9709673a6910f96adc88fc8f2',1,'SampleSummary::Modes()'],['../classFitterBase.html#a004cb6e6168032d9280ce3db912f1a43',1,'FitterBase::Modes()'],['../classsamplePDFBase.html#ab4ce7691212fdc86570b98d58a333ddf',1,'samplePDFBase::Modes()'],['../classmanager.html#ab30ad812780ee2152b72f942b7b91dec',1,'manager::Modes()']]],
+  ['modes_32',['Modes',['../classSampleSummary.html#a6593fed9709673a6910f96adc88fc8f2',1,'SampleSummary::Modes()'],['../classFitterBase.html#a004cb6e6168032d9280ce3db912f1a43',1,'FitterBase::Modes()'],['../classsamplePDFBase.html#ab4ce7691212fdc86570b98d58a333ddf',1,'samplePDFBase::Modes()'],['../classmanager.html#ab30ad812780ee2152b72f942b7b91dec',1,'manager::Modes()']]],
+  ['modes_33',['modes',['../structXsecNorms4.html#ad0632d5a94a37ee5ce297698abadd844',1,'XsecNorms4']]],
   ['monolithindex_34',['MonolithIndex',['../classsplineFDBase.html#addec38a8493974ccc3ee16931d5b794a',1,'splineFDBase']]],
   ['monolithsize_35',['MonolithSize',['../classsplineFDBase.html#ad1fefa7f796f2a28a69f5336f5777bce',1,'splineFDBase']]]
 ];
