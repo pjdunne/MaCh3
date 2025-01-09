@@ -44,7 +44,7 @@ IsTrue(CUDAProb3Linear_ENABLED USE_CUDAProb3Linear)
 IsTrue(CUDAProb3_ENABLED USE_CUDAProb3)
 IsTrue(ProbGPULinear_ENABLED USE_ProbGPULinear)
 IsTrue(Prob3ppLinear_ENABLED USE_Prob3ppLinear)
-IsTrue(NuFastLinear_ENABLED USE_NuFastLiner)
+IsTrue(NuFastLinear_ENABLED USE_NuFastLinear)
 IsTrue(OscProb_ENABLED USE_OscProb)
 
 #Also additional flags
@@ -81,7 +81,7 @@ CPMAddPackage(
     "UseCUDAProb3 ${USE_CUDAProb3}"
     "UseProbGPULinear ${USE_ProbGPULinear}"
     "UseProb3ppLinear ${USE_Prob3ppLinear}"
-    "UseNuFASTLinear  ${USE_NuFastLiner}"
+    "UseNuFASTLinear  ${USE_NuFastLinear}"
     "UseOscProb ${USE_OscProb}"
 
     "NuOscillator_Compiler_Flags ${cpu_compile_options_string}"
