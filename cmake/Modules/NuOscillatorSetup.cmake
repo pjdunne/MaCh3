@@ -7,6 +7,7 @@ DefineEnabledRequiredSwitch(ProbGPULinear_ENABLED FALSE)
 DefineEnabledRequiredSwitch(Prob3ppLinear_ENABLED FALSE)
 DefineEnabledRequiredSwitch(NuFastLinear_ENABLED FALSE)
 DefineEnabledRequiredSwitch(OscProb_ENABLED FALSE)
+DefineEnabledRequiredSwitch(NuSQUIDSLinear_ENABLED FALSE)
 
 #KS: If all Oscillators are turned off then enable CUDAProb3Linear_ENABLED
 if (NOT CUDAProb3Linear_ENABLED AND
@@ -14,7 +15,8 @@ if (NOT CUDAProb3Linear_ENABLED AND
     NOT ProbGPULinear_ENABLED AND
     NOT Prob3ppLinear_ENABLED AND
     NOT NuFastLinear_ENABLED AND
-    NOT OscProb_ENABLED)
+    NOT OscProb_ENABLED AND
+    NOT NuSQUIDSLinear_ENABLED)
     set(NuFastLinear_ENABLED TRUE)
 endif()
 
@@ -38,6 +40,9 @@ endif()
 if(OscProb_ENABLED)
   LIST(APPEND MaCh3_Oscillator_ENABLED "OscProb")
 endif()
+if(NuSQUIDSLinear_ENABLED)
+  LIST(APPEND MaCh3_Oscillator_ENABLED "NuSQUIDSLinear")
+endif()
 
 #NuOscillator uses 1/0 instead of true/false thus use conversion
 IsTrue(CUDAProb3Linear_ENABLED USE_CUDAProb3Linear)
@@ -46,6 +51,7 @@ IsTrue(ProbGPULinear_ENABLED USE_ProbGPULinear)
 IsTrue(Prob3ppLinear_ENABLED USE_Prob3ppLinear)
 IsTrue(NuFastLinear_ENABLED USE_NuFastLinear)
 IsTrue(OscProb_ENABLED USE_OscProb)
+IsTrue(NuSQUIDSLinear_ENABLED USE_NuSQUIDSLinear)
 
 #Also additional flags
 IsTrue(MaCh3_GPU_ENABLED DAN_USE_GPU)
@@ -70,7 +76,7 @@ CPMAddPackage(
   NAME NuOscillator
     VERSION 1.0.3
     GITHUB_REPOSITORY "dbarrow257/NuOscillator"
-    GIT_TAG "v1.0.3"
+    GIT_TAG "feature_NuSQUIDS"
     GIT_SHALLOW YES
     OPTIONS
     "UseGPU ${DAN_USE_GPU}"
@@ -83,6 +89,7 @@ CPMAddPackage(
     "UseProb3ppLinear ${USE_Prob3ppLinear}"
     "UseNuFASTLinear  ${USE_NuFastLinear}"
     "UseOscProb ${USE_OscProb}"
+    "UseNuSQUIDSLinear ${USE_NuSQUIDSLinear}"
 
     "NuOscillator_Compiler_Flags ${cpu_compile_options_string}"
     "CMAKE_CUDA_ARCHITECTURES ${CMAKE_CUDA_ARCHITECTURES_STRING}"
