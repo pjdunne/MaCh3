@@ -84,6 +84,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">YamlHelper.h File Reference</div></div>
 </div><!--header-->
@@ -182,6 +183,12 @@ This graph shows which files directly or indirectly include this file:</div>
 </div>
 <p><a href="YamlHelper_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ad802d5a5acdc16a796b21af74f6f5f59"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="YamlHelper_8h.html#ad802d5a5acdc16a796b21af74f6f5f59">M3OpenConfig</a>(filename)&#160;&#160;&#160;<a class="el" href="YamlHelper_8h.html#a7d9483510cc8dcf165dc9e13f85a7e3e">LoadYamlConfig</a>((filename), __FILE__, __LINE__)</td></tr>
+<tr class="memdesc:ad802d5a5acdc16a796b21af74f6f5f59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to simplify calling LoadYaml with file and line info.  <br /></td></tr>
+<tr class="separator:ad802d5a5acdc16a796b21af74f6f5f59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a2ec5eac7a7a860300203a9c418e802ee"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
@@ -243,6 +250,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a1247d9088f9521c2758d1d7c21dcfa87"><td class="memTemplItemLeft" align="right" valign="top">Type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="YamlHelper_8h.html#a1247d9088f9521c2758d1d7c21dcfa87">GetFromManager</a> (const YAML::Node &amp;node, Type defval, const std::string File=&quot;&quot;, const int Line=1)</td></tr>
 <tr class="memdesc:a1247d9088f9521c2758d1d7c21dcfa87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get content of config file if node is not found take default value specified.  <br /></td></tr>
 <tr class="separator:a1247d9088f9521c2758d1d7c21dcfa87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d9483510cc8dcf165dc9e13f85a7e3e"><td class="memItemLeft" align="right" valign="top">YAML::Node&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="YamlHelper_8h.html#a7d9483510cc8dcf165dc9e13f85a7e3e">LoadYamlConfig</a> (const std::string &amp;filename, const std::string &amp;File, const int Line)</td></tr>
+<tr class="memdesc:a7d9483510cc8dcf165dc9e13f85a7e3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open YAML file.  <br /></td></tr>
+<tr class="separator:a7d9483510cc8dcf165dc9e13f85a7e3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Utility functions for handling YAML nodes. </p>
@@ -251,7 +261,30 @@ Functions</h2></td></tr>
 Luke Pickering </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="YamlHelper_8h_source.html">YamlHelper.h</a>.</p>
-</div><h2 class="groupheader">Function Documentation</h2>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ad802d5a5acdc16a796b21af74f6f5f59" name="ad802d5a5acdc16a796b21af74f6f5f59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad802d5a5acdc16a796b21af74f6f5f59">&#9670;&#160;</a></span>M3OpenConfig</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define M3OpenConfig</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">filename</td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="YamlHelper_8h.html#a7d9483510cc8dcf165dc9e13f85a7e3e">LoadYamlConfig</a>((filename), __FILE__, __LINE__)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Macro to simplify calling LoadYaml with file and line info. </p>
+
+<p class="definition">Definition at line <a class="el" href="YamlHelper_8h_source.html#l00318">318</a> of file <a class="el" href="YamlHelper_8h_source.html">YamlHelper.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
 <a id="ad2340a340fd6649a6d220abc16d4757b" name="ad2340a340fd6649a6d220abc16d4757b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad2340a340fd6649a6d220abc16d4757b">&#9670;&#160;</a></span>CheckNodeExists()</h2>
 
@@ -749,6 +782,70 @@ template&lt;typename Type &gt; </div>
 <div class="line"><span class="lineno">  297</span>    }</div>
 <div class="line"><span class="lineno">  298</span>  }</div>
 <div class="line"><span class="lineno">  299</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7d9483510cc8dcf165dc9e13f85a7e3e" name="a7d9483510cc8dcf165dc9e13f85a7e3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d9483510cc8dcf165dc9e13f85a7e3e">&#9670;&#160;</a></span>LoadYamlConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">YAML::Node LoadYamlConfig </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>File</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>Line</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Open YAML file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>name of filename to open </td></tr>
+    <tr><td class="paramname">File</td><td>name of file where function is called </td></tr>
+    <tr><td class="paramname">Line</td><td>number where function is called </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="YamlHelper_8h_source.html#l00306">306</a> of file <a class="el" href="YamlHelper_8h_source.html">YamlHelper.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  306</span>                                                                                                 {</div>
+<div class="line"><span class="lineno">  307</span><span class="comment">// **********************</span></div>
+<div class="line"><span class="lineno">  308</span>  <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">  309</span>    <span class="keywordflow">return</span> YAML::LoadFile(filename);</div>
+<div class="line"><span class="lineno">  310</span>  } <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::exception&amp; e) {</div>
+<div class="line"><span class="lineno">  311</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a>(<span class="stringliteral">&quot;{}&quot;</span>, e.what());</div>
+<div class="line"><span class="lineno">  312</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a>(<span class="stringliteral">&quot;Can&#39;t open file {}&quot;</span>, filename);</div>
+<div class="line"><span class="lineno">  313</span>    <span class="keywordflow">throw</span> <a class="code hl_class" href="classMaCh3Exception.html">MaCh3Exception</a>(File, Line);</div>
+<div class="line"><span class="lineno">  314</span>  }</div>
+<div class="line"><span class="lineno">  315</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
