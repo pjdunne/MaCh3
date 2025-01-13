@@ -27,7 +27,7 @@
 <area shape="rect" id="node41" href="$CovarianceUtils_8h.html" title=" " alt="" coords="1166,372,1378,397"/>
 <area shape="rect" id="node48" href="$AdaptiveMCMCHandler_8h.html" title=" " alt="" coords="1479,299,1737,324"/>
 <area shape="rect" id="node49" href="$PCAHandler_8h.html" title=" " alt="" coords="1269,299,1454,324"/>
-<area shape="rect" id="node34" href="$MaCh3Exception_8h.html" title=" " alt="" coords="2161,665,2367,691"/>
+<area shape="rect" id="node29" href="$MaCh3Exception_8h.html" title=" " alt="" coords="2161,665,2367,691"/>
 <area shape="rect" id="node37" href="$YamlHelper_8h.html" title="Utility functions for handling YAML nodes." alt="" coords="2039,592,2209,617"/>
 <area shape="rect" id="node38" href="$Monitor_8h.html" title="System and monitoring utilities for printing system information and status updates." alt="" coords="1941,519,2086,544"/>
 <area shape="rect" id="node39" href="$MaCh3Modes_8h.html" title=" " alt="" coords="2229,445,2413,471"/>
@@ -36,13 +36,13 @@
 <area shape="rect" id="node26" title=" " alt="" coords="672,665,715,691"/>
 <area shape="rect" id="node27" title=" " alt="" coords="739,665,781,691"/>
 <area shape="rect" id="node28" title=" " alt="" coords="806,665,930,691"/>
-<area shape="rect" id="node29" title=" " alt="" coords="955,665,1037,691"/>
-<area shape="rect" id="node30" title=" " alt="" coords="1983,665,2086,691"/>
-<area shape="rect" id="node31" title=" " alt="" coords="1061,665,1120,691"/>
-<area shape="rect" id="node32" title=" " alt="" coords="1145,665,1231,691"/>
-<area shape="rect" id="node33" title=" " alt="" coords="1255,665,1315,691"/>
+<area shape="rect" id="node31" title=" " alt="" coords="955,665,1037,691"/>
+<area shape="rect" id="node32" title=" " alt="" coords="1983,665,2086,691"/>
+<area shape="rect" id="node33" title=" " alt="" coords="1061,665,1120,691"/>
+<area shape="rect" id="node34" title=" " alt="" coords="1145,665,1231,691"/>
+<area shape="rect" id="node35" title=" " alt="" coords="1255,665,1315,691"/>
 <area shape="rect" id="node36" title=" " alt="" coords="1339,665,1570,691"/>
-<area shape="rect" id="node35" title=" " alt="" coords="2221,739,2307,764"/>
+<area shape="rect" id="node30" title=" " alt="" coords="2221,739,2307,764"/>
 <area shape="rect" id="node42" title=" " alt="" coords="1300,445,1391,471"/>
 <area shape="rect" id="node43" title=" " alt="" coords="1415,445,1537,471"/>
 <area shape="rect" id="node44" title=" " alt="" coords="1561,445,1652,471"/>

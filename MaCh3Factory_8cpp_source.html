@@ -30,7 +30,7 @@ MathJax.Hub.Config({
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="mach3logo_small.png"/></td>
   <td id="projectalign">
-   <div id="projectname">MaCh3<span id="projectnumber">&#160;1.3.2</span>
+   <div id="projectname">MaCh3<span id="projectnumber">&#160;1.3.3</span>
    </div>
    <div id="projectbrief">Reference Guide</div>
   </td>
@@ -89,39 +89,38 @@ $(function() {
 <a href="MaCh3Factory_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// MaCh3 includes</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="MaCh3Factory_8h.html">mcmc/MaCh3Factory.h</a>&quot;</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// ********************************************</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="MaCh3Factory_8cpp.html#a126d15eeabecd1e4ab67422784a9f84a">    6</a></span>std::unique_ptr&lt;FitterBase&gt; <a class="code hl_function" href="MaCh3Factory_8cpp.html#a126d15eeabecd1e4ab67422784a9f84a">MaCh3FitterFactory</a>(<a class="code hl_class" href="classmanager.html">manager</a> *fitMan) {</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">// ********************************************</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>  std::unique_ptr&lt;FitterBase&gt; MaCh3Fitter = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>  <span class="keyword">auto</span> Algorithm = GetFromManager&lt;std::string&gt;(fitMan-&gt;<a class="code hl_function" href="classmanager.html#ab3999cc856ede72b37f68bdb28bd5520">raw</a>()[<span class="stringliteral">&quot;General&quot;</span>][<span class="stringliteral">&quot;FittingAlgorithm&quot;</span>], <span class="stringliteral">&quot;MCMC&quot;</span>);</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>  <span class="keywordflow">if</span>(Algorithm == <span class="stringliteral">&quot;MCMC&quot;</span>) {</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    MaCh3Fitter = std::make_unique&lt;mcmc&gt;(fitMan);</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (Algorithm == <span class="stringliteral">&quot;PSO&quot;</span>) {</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    MaCh3Fitter = std::make_unique&lt;PSO&gt;(fitMan);</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (Algorithm == <span class="stringliteral">&quot;Minuit2&quot;</span>) {</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">    #ifdef MaCh3_MINUIT2</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    MaCh3Fitter = std::make_unique&lt;MinuitFit&gt;(fitMan);</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">    #else</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a>(<span class="stringliteral">&quot;Trying to use Minuit2 however MaCh3 was compiled without Minuit2 support&quot;</span>);</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordflow">throw</span> <a class="code hl_class" href="classMaCh3Exception.html">MaCh3Exception</a>(__FILE__ , __LINE__ );</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">    #endif</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a>(<span class="stringliteral">&quot;You want to use algorithm {}, I don&#39;t recognize it, sry&quot;</span>, Algorithm);</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordflow">throw</span> <a class="code hl_class" href="classMaCh3Exception.html">MaCh3Exception</a>(__FILE__ , __LINE__ );</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  }</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  <span class="keywordflow">return</span> MaCh3Fitter;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>}</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">// ********************************************</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="MaCh3Factory_8cpp.html#a37464d72da10c4e30eba841888416f40">   31</a></span><a class="code hl_class" href="classcovarianceXsec.html">covarianceXsec</a>* <a class="code hl_function" href="MaCh3Factory_8cpp.html#a37464d72da10c4e30eba841888416f40">MaCh3CovarianceFactory</a>(<a class="code hl_class" href="classmanager.html">manager</a> *FitManager, <span class="keyword">const</span> std::string&amp; PreFix) {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">// ********************************************</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  <span class="keywordflow">return</span> MaCh3CovarianceFactory&lt;covarianceXsec&gt;(FitManager, PreFix);</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>}</div>
-<div class="ttc" id="aMaCh3Factory_8cpp_html_a126d15eeabecd1e4ab67422784a9f84a"><div class="ttname"><a href="MaCh3Factory_8cpp.html#a126d15eeabecd1e4ab67422784a9f84a">MaCh3FitterFactory</a></div><div class="ttdeci">std::unique_ptr&lt; FitterBase &gt; MaCh3FitterFactory(manager *fitMan)</div><div class="ttdef"><b>Definition:</b> <a href="MaCh3Factory_8cpp_source.html#l00006">MaCh3Factory.cpp:6</a></div></div>
-<div class="ttc" id="aMaCh3Factory_8cpp_html_a37464d72da10c4e30eba841888416f40"><div class="ttname"><a href="MaCh3Factory_8cpp.html#a37464d72da10c4e30eba841888416f40">MaCh3CovarianceFactory</a></div><div class="ttdeci">covarianceXsec * MaCh3CovarianceFactory(manager *FitManager, const std::string &amp;PreFix)</div><div class="ttdef"><b>Definition:</b> <a href="MaCh3Factory_8cpp_source.html#l00031">MaCh3Factory.cpp:31</a></div></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// ********************************************</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="MaCh3Factory_8cpp.html#a126d15eeabecd1e4ab67422784a9f84a">    5</a></span>std::unique_ptr&lt;FitterBase&gt; <a class="code hl_function" href="MaCh3Factory_8cpp.html#a126d15eeabecd1e4ab67422784a9f84a">MaCh3FitterFactory</a>(<a class="code hl_class" href="classmanager.html">manager</a> *fitMan) {</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">// ********************************************</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>  std::unique_ptr&lt;FitterBase&gt; MaCh3Fitter = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>  <span class="keyword">auto</span> Algorithm = GetFromManager&lt;std::string&gt;(fitMan-&gt;<a class="code hl_function" href="classmanager.html#ab3999cc856ede72b37f68bdb28bd5520">raw</a>()[<span class="stringliteral">&quot;General&quot;</span>][<span class="stringliteral">&quot;FittingAlgorithm&quot;</span>], <span class="stringliteral">&quot;MCMC&quot;</span>);</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>  <span class="keywordflow">if</span>(Algorithm == <span class="stringliteral">&quot;MCMC&quot;</span>) {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    MaCh3Fitter = std::make_unique&lt;mcmc&gt;(fitMan);</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (Algorithm == <span class="stringliteral">&quot;PSO&quot;</span>) {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    MaCh3Fitter = std::make_unique&lt;PSO&gt;(fitMan);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (Algorithm == <span class="stringliteral">&quot;Minuit2&quot;</span>) {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">    #ifdef MaCh3_MINUIT2</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    MaCh3Fitter = std::make_unique&lt;MinuitFit&gt;(fitMan);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">    #else</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a>(<span class="stringliteral">&quot;Trying to use Minuit2 however MaCh3 was compiled without Minuit2 support&quot;</span>);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordflow">throw</span> <a class="code hl_class" href="classMaCh3Exception.html">MaCh3Exception</a>(__FILE__ , __LINE__ );</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">    #endif</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a>(<span class="stringliteral">&quot;You want to use algorithm {}, I don&#39;t recognize it, sry&quot;</span>, Algorithm);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordflow">throw</span> <a class="code hl_class" href="classMaCh3Exception.html">MaCh3Exception</a>(__FILE__ , __LINE__ );</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  }</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  <span class="keywordflow">return</span> MaCh3Fitter;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>}</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">// ********************************************</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="MaCh3Factory_8cpp.html#a37464d72da10c4e30eba841888416f40">   30</a></span><a class="code hl_class" href="classcovarianceXsec.html">covarianceXsec</a>* <a class="code hl_function" href="MaCh3Factory_8cpp.html#a37464d72da10c4e30eba841888416f40">MaCh3CovarianceFactory</a>(<a class="code hl_class" href="classmanager.html">manager</a> *FitManager, <span class="keyword">const</span> std::string&amp; PreFix) {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">// ********************************************</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  <span class="keywordflow">return</span> MaCh3CovarianceFactory&lt;covarianceXsec&gt;(FitManager, PreFix);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>}</div>
+<div class="ttc" id="aMaCh3Factory_8cpp_html_a126d15eeabecd1e4ab67422784a9f84a"><div class="ttname"><a href="MaCh3Factory_8cpp.html#a126d15eeabecd1e4ab67422784a9f84a">MaCh3FitterFactory</a></div><div class="ttdeci">std::unique_ptr&lt; FitterBase &gt; MaCh3FitterFactory(manager *fitMan)</div><div class="ttdef"><b>Definition:</b> <a href="MaCh3Factory_8cpp_source.html#l00005">MaCh3Factory.cpp:5</a></div></div>
+<div class="ttc" id="aMaCh3Factory_8cpp_html_a37464d72da10c4e30eba841888416f40"><div class="ttname"><a href="MaCh3Factory_8cpp.html#a37464d72da10c4e30eba841888416f40">MaCh3CovarianceFactory</a></div><div class="ttdeci">covarianceXsec * MaCh3CovarianceFactory(manager *FitManager, const std::string &amp;PreFix)</div><div class="ttdef"><b>Definition:</b> <a href="MaCh3Factory_8cpp_source.html#l00030">MaCh3Factory.cpp:30</a></div></div>
 <div class="ttc" id="aMaCh3Factory_8h_html"><div class="ttname"><a href="MaCh3Factory_8h.html">MaCh3Factory.h</a></div></div>
 <div class="ttc" id="aMaCh3Logger_8h_html_a61052119a625282d0ec6d4a97adf3ee2"><div class="ttname"><a href="MaCh3Logger_8h.html#a61052119a625282d0ec6d4a97adf3ee2">MACH3LOG_ERROR</a></div><div class="ttdeci">#define MACH3LOG_ERROR</div><div class="ttdef"><b>Definition:</b> <a href="MaCh3Logger_8h_source.html#l00019">MaCh3Logger.h:19</a></div></div>
 <div class="ttc" id="aclassMaCh3Exception_html"><div class="ttname"><a href="classMaCh3Exception.html">MaCh3Exception</a></div><div class="ttdoc">Custom exception class for MaCh3 errors.</div><div class="ttdef"><b>Definition:</b> <a href="MaCh3Exception_8h_source.html#l00012">MaCh3Exception.h:12</a></div></div>

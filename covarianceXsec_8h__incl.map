@@ -7,7 +7,7 @@
 <area shape="rect" id="node49" href="$AdaptiveMCMCHandler_8h.html" title=" " alt="" coords="1390,152,1649,177"/>
 <area shape="rect" id="node50" href="$PCAHandler_8h.html" title=" " alt="" coords="1674,152,1859,177"/>
 <area shape="rect" id="node4" href="$MaCh3Logger_8h.html" title="KS: Based on this https://github.com/gabime/spdlog/blob/a2b4262090fd3f005c2315dcb5be2f0f1774a005/incl..." alt="" coords="1337,592,1521,617"/>
-<area shape="rect" id="node23" href="$MaCh3Exception_8h.html" title=" " alt="" coords="1964,519,2169,544"/>
+<area shape="rect" id="node17" href="$MaCh3Exception_8h.html" title=" " alt="" coords="1964,519,2169,544"/>
 <area shape="rect" id="node26" href="$YamlHelper_8h.html" title="Utility functions for handling YAML nodes." alt="" coords="1542,445,1711,471"/>
 <area shape="rect" id="node31" href="$Monitor_8h.html" title="System and monitoring utilities for printing system information and status updates." alt="" coords="1706,372,1851,397"/>
 <area shape="rect" id="node34" href="$MaCh3Modes_8h.html" title=" " alt="" coords="1525,299,1709,324"/>
@@ -22,14 +22,14 @@
 <area shape="rect" id="node14" title=" " alt="" coords="26,519,69,544"/>
 <area shape="rect" id="node15" title=" " alt="" coords="93,519,136,544"/>
 <area shape="rect" id="node16" title=" " alt="" coords="160,519,284,544"/>
-<area shape="rect" id="node17" title=" " alt="" coords="309,519,392,544"/>
-<area shape="rect" id="node18" title=" " alt="" coords="1288,519,1391,544"/>
-<area shape="rect" id="node19" title=" " alt="" coords="2402,519,2467,544"/>
-<area shape="rect" id="node20" title=" " alt="" coords="416,519,474,544"/>
-<area shape="rect" id="node21" title=" " alt="" coords="499,519,586,544"/>
-<area shape="rect" id="node22" title=" " alt="" coords="610,519,670,544"/>
+<area shape="rect" id="node19" title=" " alt="" coords="309,519,392,544"/>
+<area shape="rect" id="node20" title=" " alt="" coords="1288,519,1391,544"/>
+<area shape="rect" id="node21" title=" " alt="" coords="2402,519,2467,544"/>
+<area shape="rect" id="node22" title=" " alt="" coords="416,519,474,544"/>
+<area shape="rect" id="node23" title=" " alt="" coords="499,519,586,544"/>
+<area shape="rect" id="node24" title=" " alt="" coords="610,519,670,544"/>
 <area shape="rect" id="node25" title=" " alt="" coords="694,519,924,544"/>
-<area shape="rect" id="node24" title=" " alt="" coords="1935,592,2022,617"/>
+<area shape="rect" id="node18" title=" " alt="" coords="1935,592,2022,617"/>
 <area shape="rect" id="node27" title=" " alt="" coords="1616,519,1693,544"/>
 <area shape="rect" id="node28" title=" " alt="" coords="2244,519,2326,544"/>
 <area shape="rect" id="node29" title=" " alt="" coords="1718,519,1783,544"/>

@@ -30,7 +30,7 @@ MathJax.Hub.Config({
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="mach3logo_small.png"/></td>
   <td id="projectalign">
-   <div id="projectname">MaCh3<span id="projectnumber">&#160;1.3.2</span>
+   <div id="projectname">MaCh3<span id="projectnumber">&#160;1.3.3</span>
    </div>
    <div id="projectbrief">Reference Guide</div>
   </td>
@@ -255,7 +255,7 @@ Private Attributes</h2></td></tr>
 <div class="textblock"><p>The main class to be used in plotting scripts. </p>
 <p>When it comes to plotting, this guys in charge, the main man, the head honcho, the big cheese. If it's a plot you need, this is the guy you call. You just call him in your scripts and let him and his goons <a class="el" href="classMaCh3Plotting_1_1StyleManager.html">StyleManager</a>, and <a class="el" href="classMaCh3Plotting_1_1InputManager.html" title="This guy talks to the input files and is intended to smooth over the fact that our OA fitters use suc...">InputManager</a> worry about the details, no questions asked. This class handles all the command line inputs and manages the other managers. Intention with this class is that you should be able to create one from your custom plotting script, then from that, be able to get all manner of inputs from the <a class="el" href="classMaCh3Plotting_1_1InputManager.html" title="This guy talks to the input files and is intended to smooth over the fact that our OA fitters use suc...">InputManager</a> contained within, and set any style options you like from the <a class="el" href="classMaCh3Plotting_1_1StyleManager.html">StyleManager</a>. Also a hopefully not too distant dream is to wrap this up in python so it is usable in .py scripts to take advantage of nice existing plotting libraries for e.g. MCMC plotting. </p><dl class="section author"><dt>Author</dt><dd>Ewan Miller </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00038">38</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00033">33</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aa94590f322dcf7cd1130d8165378c7f5" name="aa94590f322dcf7cd1130d8165378c7f5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa94590f322dcf7cd1130d8165378c7f5">&#9670;&#160;</a></span>PlottingManager() <span class="overload">[1/2]</span></h2>
@@ -280,8 +280,8 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">    6</span>  <span class="comment">// set config file name</span></div>
 <div class="line"><span class="lineno">    7</span>  <a class="code hl_variable" href="classMaCh3Plotting_1_1PlottingManager.html#a390f806466cadac1548160c89f2c2e6d">_configFileName</a> = <a class="code hl_variable" href="classMaCh3Plotting_1_1PlottingManager.html#a1947b4f022707ef6f570787ec62ba90c">DEFAULT_PLOTTING_CONFIG</a>;</div>
 <div class="line"><span class="lineno">    8</span>}</div>
-<div class="ttc" id="aclassMaCh3Plotting_1_1PlottingManager_html_a1947b4f022707ef6f570787ec62ba90c"><div class="ttname"><a href="classMaCh3Plotting_1_1PlottingManager.html#a1947b4f022707ef6f570787ec62ba90c">MaCh3Plotting::PlottingManager::DEFAULT_PLOTTING_CONFIG</a></div><div class="ttdeci">const std::string DEFAULT_PLOTTING_CONFIG</div><div class="ttdef"><b>Definition:</b> <a href="plottingManager_8h_source.html#l00051">plottingManager.h:51</a></div></div>
-<div class="ttc" id="aclassMaCh3Plotting_1_1PlottingManager_html_a390f806466cadac1548160c89f2c2e6d"><div class="ttname"><a href="classMaCh3Plotting_1_1PlottingManager.html#a390f806466cadac1548160c89f2c2e6d">MaCh3Plotting::PlottingManager::_configFileName</a></div><div class="ttdeci">std::string _configFileName</div><div class="ttdef"><b>Definition:</b> <a href="plottingManager_8h_source.html#l00171">plottingManager.h:171</a></div></div>
+<div class="ttc" id="aclassMaCh3Plotting_1_1PlottingManager_html_a1947b4f022707ef6f570787ec62ba90c"><div class="ttname"><a href="classMaCh3Plotting_1_1PlottingManager.html#a1947b4f022707ef6f570787ec62ba90c">MaCh3Plotting::PlottingManager::DEFAULT_PLOTTING_CONFIG</a></div><div class="ttdeci">const std::string DEFAULT_PLOTTING_CONFIG</div><div class="ttdef"><b>Definition:</b> <a href="plottingManager_8h_source.html#l00046">plottingManager.h:46</a></div></div>
+<div class="ttc" id="aclassMaCh3Plotting_1_1PlottingManager_html_a390f806466cadac1548160c89f2c2e6d"><div class="ttname"><a href="classMaCh3Plotting_1_1PlottingManager.html#a390f806466cadac1548160c89f2c2e6d">MaCh3Plotting::PlottingManager::_configFileName</a></div><div class="ttdeci">std::string _configFileName</div><div class="ttdef"><b>Definition:</b> <a href="plottingManager_8h_source.html#l00166">plottingManager.h:166</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -341,10 +341,10 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00069">69</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   69</span>                     {</div>
-<div class="line"><span class="lineno">   70</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a4db4657acad5c79ac4bbb66a9d1c5905">MACH3LOG_DEBUG</a>(<span class="stringliteral">&quot;##### Deleting PlottingManager Instance #####&quot;</span>);</div>
-<div class="line"><span class="lineno">   71</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00064">64</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   64</span>                     {</div>
+<div class="line"><span class="lineno">   65</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a4db4657acad5c79ac4bbb66a9d1c5905">MACH3LOG_DEBUG</a>(<span class="stringliteral">&quot;##### Deleting PlottingManager Instance #####&quot;</span>);</div>
+<div class="line"><span class="lineno">   66</span>  }</div>
 <div class="ttc" id="aMaCh3Logger_8h_html_a4db4657acad5c79ac4bbb66a9d1c5905"><div class="ttname"><a href="MaCh3Logger_8h.html#a4db4657acad5c79ac4bbb66a9d1c5905">MACH3LOG_DEBUG</a></div><div class="ttdeci">#define MACH3LOG_DEBUG</div><div class="ttdef"><b>Definition:</b> <a href="MaCh3Logger_8h_source.html#l00016">MaCh3Logger.h:16</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -401,9 +401,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00156">156</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  156</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classMaCh3Plotting_1_1PlottingManager.html#a329ea5735ec605624867435d512ed16d">_drawGrid</a>; }</div>
-<div class="ttc" id="aclassMaCh3Plotting_1_1PlottingManager_html_a329ea5735ec605624867435d512ed16d"><div class="ttname"><a href="classMaCh3Plotting_1_1PlottingManager.html#a329ea5735ec605624867435d512ed16d">MaCh3Plotting::PlottingManager::_drawGrid</a></div><div class="ttdeci">bool _drawGrid</div><div class="ttdef"><b>Definition:</b> <a href="plottingManager_8h_source.html#l00189">plottingManager.h:189</a></div></div>
+<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00151">151</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  151</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classMaCh3Plotting_1_1PlottingManager.html#a329ea5735ec605624867435d512ed16d">_drawGrid</a>; }</div>
+<div class="ttc" id="aclassMaCh3Plotting_1_1PlottingManager_html_a329ea5735ec605624867435d512ed16d"><div class="ttname"><a href="classMaCh3Plotting_1_1PlottingManager.html#a329ea5735ec605624867435d512ed16d">MaCh3Plotting::PlottingManager::_drawGrid</a></div><div class="ttdeci">bool _drawGrid</div><div class="ttdef"><b>Definition:</b> <a href="plottingManager_8h_source.html#l00184">plottingManager.h:184</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -430,9 +430,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00133">133</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  133</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classMaCh3Plotting_1_1PlottingManager.html#a8fabd7cbc31aa1f9ed15f0b0d3201c81">_extraDrawOptions</a>; }</div>
-<div class="ttc" id="aclassMaCh3Plotting_1_1PlottingManager_html_a8fabd7cbc31aa1f9ed15f0b0d3201c81"><div class="ttname"><a href="classMaCh3Plotting_1_1PlottingManager.html#a8fabd7cbc31aa1f9ed15f0b0d3201c81">MaCh3Plotting::PlottingManager::_extraDrawOptions</a></div><div class="ttdeci">std::string _extraDrawOptions</div><div class="ttdef"><b>Definition:</b> <a href="plottingManager_8h_source.html#l00184">plottingManager.h:184</a></div></div>
+<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00128">128</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  128</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classMaCh3Plotting_1_1PlottingManager.html#a8fabd7cbc31aa1f9ed15f0b0d3201c81">_extraDrawOptions</a>; }</div>
+<div class="ttc" id="aclassMaCh3Plotting_1_1PlottingManager_html_a8fabd7cbc31aa1f9ed15f0b0d3201c81"><div class="ttname"><a href="classMaCh3Plotting_1_1PlottingManager.html#a8fabd7cbc31aa1f9ed15f0b0d3201c81">MaCh3Plotting::PlottingManager::_extraDrawOptions</a></div><div class="ttdeci">std::string _extraDrawOptions</div><div class="ttdef"><b>Definition:</b> <a href="plottingManager_8h_source.html#l00179">plottingManager.h:179</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -460,9 +460,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00131">131</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  131</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classMaCh3Plotting_1_1PlottingManager.html#a57361998964918a9834a3c2536dc6692">_fileLabels</a>[i]; }</div>
-<div class="ttc" id="aclassMaCh3Plotting_1_1PlottingManager_html_a57361998964918a9834a3c2536dc6692"><div class="ttname"><a href="classMaCh3Plotting_1_1PlottingManager.html#a57361998964918a9834a3c2536dc6692">MaCh3Plotting::PlottingManager::_fileLabels</a></div><div class="ttdeci">std::vector&lt; std::string &gt; _fileLabels</div><div class="ttdef"><b>Definition:</b> <a href="plottingManager_8h_source.html#l00179">plottingManager.h:179</a></div></div>
+<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00126">126</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  126</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classMaCh3Plotting_1_1PlottingManager.html#a57361998964918a9834a3c2536dc6692">_fileLabels</a>[i]; }</div>
+<div class="ttc" id="aclassMaCh3Plotting_1_1PlottingManager_html_a57361998964918a9834a3c2536dc6692"><div class="ttname"><a href="classMaCh3Plotting_1_1PlottingManager.html#a57361998964918a9834a3c2536dc6692">MaCh3Plotting::PlottingManager::_fileLabels</a></div><div class="ttdeci">std::vector&lt; std::string &gt; _fileLabels</div><div class="ttdef"><b>Definition:</b> <a href="plottingManager_8h_source.html#l00174">plottingManager.h:174</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -489,8 +489,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00148">148</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  148</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classMaCh3Plotting_1_1PlottingManager.html#a57361998964918a9834a3c2536dc6692">_fileLabels</a>; }</div>
+<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00143">143</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  143</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classMaCh3Plotting_1_1PlottingManager.html#a57361998964918a9834a3c2536dc6692">_fileLabels</a>; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -518,9 +518,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00129">129</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  129</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classMaCh3Plotting_1_1PlottingManager.html#a5c04051d76dca0ba9b0500a0e8529d6e">_fileNames</a>[i]; }</div>
-<div class="ttc" id="aclassMaCh3Plotting_1_1PlottingManager_html_a5c04051d76dca0ba9b0500a0e8529d6e"><div class="ttname"><a href="classMaCh3Plotting_1_1PlottingManager.html#a5c04051d76dca0ba9b0500a0e8529d6e">MaCh3Plotting::PlottingManager::_fileNames</a></div><div class="ttdeci">std::vector&lt; std::string &gt; _fileNames</div><div class="ttdef"><b>Definition:</b> <a href="plottingManager_8h_source.html#l00178">plottingManager.h:178</a></div></div>
+<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00124">124</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  124</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classMaCh3Plotting_1_1PlottingManager.html#a5c04051d76dca0ba9b0500a0e8529d6e">_fileNames</a>[i]; }</div>
+<div class="ttc" id="aclassMaCh3Plotting_1_1PlottingManager_html_a5c04051d76dca0ba9b0500a0e8529d6e"><div class="ttname"><a href="classMaCh3Plotting_1_1PlottingManager.html#a5c04051d76dca0ba9b0500a0e8529d6e">MaCh3Plotting::PlottingManager::_fileNames</a></div><div class="ttdeci">std::vector&lt; std::string &gt; _fileNames</div><div class="ttdef"><b>Definition:</b> <a href="plottingManager_8h_source.html#l00173">plottingManager.h:173</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -547,8 +547,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00146">146</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  146</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classMaCh3Plotting_1_1PlottingManager.html#a5c04051d76dca0ba9b0500a0e8529d6e">_fileNames</a>; }</div>
+<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00141">141</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  141</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classMaCh3Plotting_1_1PlottingManager.html#a5c04051d76dca0ba9b0500a0e8529d6e">_fileNames</a>; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -575,8 +575,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00150">150</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  150</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classMaCh3Plotting_1_1PlottingManager.html#a5c04051d76dca0ba9b0500a0e8529d6e">_fileNames</a>.size(); }</div>
+<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00145">145</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  145</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classMaCh3Plotting_1_1PlottingManager.html#a5c04051d76dca0ba9b0500a0e8529d6e">_fileNames</a>.size(); }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -621,9 +621,9 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The specified value for the option. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00123">123</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  123</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classMaCh3Plotting_1_1PlottingManager.html#a9304b66768eea558854d652a9beddbf1">_execOptions</a>[option].as&lt;T&gt;(); }</div>
-<div class="ttc" id="aclassMaCh3Plotting_1_1PlottingManager_html_a9304b66768eea558854d652a9beddbf1"><div class="ttname"><a href="classMaCh3Plotting_1_1PlottingManager.html#a9304b66768eea558854d652a9beddbf1">MaCh3Plotting::PlottingManager::_execOptions</a></div><div class="ttdeci">YAML::Node _execOptions</div><div class="ttdef"><b>Definition:</b> <a href="plottingManager_8h_source.html#l00175">plottingManager.h:175</a></div></div>
+<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00118">118</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  118</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classMaCh3Plotting_1_1PlottingManager.html#a9304b66768eea558854d652a9beddbf1">_execOptions</a>[option].as&lt;T&gt;(); }</div>
+<div class="ttc" id="aclassMaCh3Plotting_1_1PlottingManager_html_a9304b66768eea558854d652a9beddbf1"><div class="ttname"><a href="classMaCh3Plotting_1_1PlottingManager.html#a9304b66768eea558854d652a9beddbf1">MaCh3Plotting::PlottingManager::_execOptions</a></div><div class="ttdeci">YAML::Node _execOptions</div><div class="ttdef"><b>Definition:</b> <a href="plottingManager_8h_source.html#l00170">plottingManager.h:170</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -651,8 +651,8 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00124">124</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  124</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classMaCh3Plotting_1_1PlottingManager.html#a9304b66768eea558854d652a9beddbf1">_execOptions</a>[option]; }</div>
+<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00119">119</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  119</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classMaCh3Plotting_1_1PlottingManager.html#a9304b66768eea558854d652a9beddbf1">_execOptions</a>[option]; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -682,9 +682,9 @@ template&lt;typename T &gt; </div>
 <p>Get the straight up output file name with no bells or whistles, just the file extension. </p>
 <dl class="section return"><dt>Returns</dt><dd>The straight up output file name. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00138">138</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  138</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classMaCh3Plotting_1_1PlottingManager.html#a362e5a4b44a17e5548d0301c2fb43a0a">_outputName</a>; }</div>
-<div class="ttc" id="aclassMaCh3Plotting_1_1PlottingManager_html_a362e5a4b44a17e5548d0301c2fb43a0a"><div class="ttname"><a href="classMaCh3Plotting_1_1PlottingManager.html#a362e5a4b44a17e5548d0301c2fb43a0a">MaCh3Plotting::PlottingManager::_outputName</a></div><div class="ttdeci">std::string _outputName</div><div class="ttdef"><b>Definition:</b> <a href="plottingManager_8h_source.html#l00183">plottingManager.h:183</a></div></div>
+<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00133">133</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  133</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classMaCh3Plotting_1_1PlottingManager.html#a362e5a4b44a17e5548d0301c2fb43a0a">_outputName</a>; }</div>
+<div class="ttc" id="aclassMaCh3Plotting_1_1PlottingManager_html_a362e5a4b44a17e5548d0301c2fb43a0a"><div class="ttname"><a href="classMaCh3Plotting_1_1PlottingManager.html#a362e5a4b44a17e5548d0301c2fb43a0a">MaCh3Plotting::PlottingManager::_outputName</a></div><div class="ttdeci">std::string _outputName</div><div class="ttdef"><b>Definition:</b> <a href="plottingManager_8h_source.html#l00178">plottingManager.h:178</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -755,9 +755,9 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00154">154</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  154</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classMaCh3Plotting_1_1PlottingManager.html#ae937b126847fd1b42e45dd5705970972">_plotRatios</a>; }</div>
-<div class="ttc" id="aclassMaCh3Plotting_1_1PlottingManager_html_ae937b126847fd1b42e45dd5705970972"><div class="ttname"><a href="classMaCh3Plotting_1_1PlottingManager.html#ae937b126847fd1b42e45dd5705970972">MaCh3Plotting::PlottingManager::_plotRatios</a></div><div class="ttdeci">bool _plotRatios</div><div class="ttdef"><b>Definition:</b> <a href="plottingManager_8h_source.html#l00188">plottingManager.h:188</a></div></div>
+<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00149">149</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  149</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classMaCh3Plotting_1_1PlottingManager.html#ae937b126847fd1b42e45dd5705970972">_plotRatios</a>; }</div>
+<div class="ttc" id="aclassMaCh3Plotting_1_1PlottingManager_html_ae937b126847fd1b42e45dd5705970972"><div class="ttname"><a href="classMaCh3Plotting_1_1PlottingManager.html#ae937b126847fd1b42e45dd5705970972">MaCh3Plotting::PlottingManager::_plotRatios</a></div><div class="ttdeci">bool _plotRatios</div><div class="ttdef"><b>Definition:</b> <a href="plottingManager_8h_source.html#l00183">plottingManager.h:183</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -784,9 +784,9 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00152">152</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  152</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classMaCh3Plotting_1_1PlottingManager.html#ac58348de30d8854fe70371ba377d6b2d">_splitBySample</a>; }</div>
-<div class="ttc" id="aclassMaCh3Plotting_1_1PlottingManager_html_ac58348de30d8854fe70371ba377d6b2d"><div class="ttname"><a href="classMaCh3Plotting_1_1PlottingManager.html#ac58348de30d8854fe70371ba377d6b2d">MaCh3Plotting::PlottingManager::_splitBySample</a></div><div class="ttdeci">bool _splitBySample</div><div class="ttdef"><b>Definition:</b> <a href="plottingManager_8h_source.html#l00187">plottingManager.h:187</a></div></div>
+<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00147">147</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  147</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classMaCh3Plotting_1_1PlottingManager.html#ac58348de30d8854fe70371ba377d6b2d">_splitBySample</a>; }</div>
+<div class="ttc" id="aclassMaCh3Plotting_1_1PlottingManager_html_ac58348de30d8854fe70371ba377d6b2d"><div class="ttname"><a href="classMaCh3Plotting_1_1PlottingManager.html#ac58348de30d8854fe70371ba377d6b2d">MaCh3Plotting::PlottingManager::_splitBySample</a></div><div class="ttdeci">bool _splitBySample</div><div class="ttdef"><b>Definition:</b> <a href="plottingManager_8h_source.html#l00182">plottingManager.h:182</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -878,11 +878,11 @@ template&lt;typename T &gt; </div>
 <div class="line"><span class="lineno">   61</span>    <a class="code hl_variable" href="classMaCh3Plotting_1_1PlottingManager.html#a6253de91263e8078a41f6bca9bfc31d8">_inputMan</a>-&gt;addFile(fileName);</div>
 <div class="line"><span class="lineno">   62</span>  }</div>
 <div class="line"><span class="lineno">   63</span>}</div>
-<div class="ttc" id="aclassMaCh3Plotting_1_1PlottingManager_html_a2e234f2546aa3eb2c7d97e2f28024511"><div class="ttname"><a href="classMaCh3Plotting_1_1PlottingManager.html#a2e234f2546aa3eb2c7d97e2f28024511">MaCh3Plotting::PlottingManager::DEFAULT_STYLE_CONFIG</a></div><div class="ttdeci">const std::string DEFAULT_STYLE_CONFIG</div><div class="ttdef"><b>Definition:</b> <a href="plottingManager_8h_source.html#l00046">plottingManager.h:46</a></div></div>
-<div class="ttc" id="aclassMaCh3Plotting_1_1PlottingManager_html_a59d9e05c0590931aa260d81cd97bf3e4"><div class="ttname"><a href="classMaCh3Plotting_1_1PlottingManager.html#a59d9e05c0590931aa260d81cd97bf3e4">MaCh3Plotting::PlottingManager::DEFAULT_TRANSLATION_CONFIG</a></div><div class="ttdeci">const std::string DEFAULT_TRANSLATION_CONFIG</div><div class="ttdef"><b>Definition:</b> <a href="plottingManager_8h_source.html#l00041">plottingManager.h:41</a></div></div>
-<div class="ttc" id="aclassMaCh3Plotting_1_1PlottingManager_html_a6253de91263e8078a41f6bca9bfc31d8"><div class="ttname"><a href="classMaCh3Plotting_1_1PlottingManager.html#a6253de91263e8078a41f6bca9bfc31d8">MaCh3Plotting::PlottingManager::_inputMan</a></div><div class="ttdeci">std::unique_ptr&lt; InputManager &gt; _inputMan</div><div class="ttdef"><b>Definition:</b> <a href="plottingManager_8h_source.html#l00193">plottingManager.h:193</a></div></div>
-<div class="ttc" id="aclassMaCh3Plotting_1_1PlottingManager_html_aadb74532f93bd6f7ccb2a5928b772163"><div class="ttname"><a href="classMaCh3Plotting_1_1PlottingManager.html#aadb74532f93bd6f7ccb2a5928b772163">MaCh3Plotting::PlottingManager::_plottingConfig</a></div><div class="ttdeci">YAML::Node _plottingConfig</div><div class="ttdef"><b>Definition:</b> <a href="plottingManager_8h_source.html#l00173">plottingManager.h:173</a></div></div>
-<div class="ttc" id="aclassMaCh3Plotting_1_1PlottingManager_html_ad1519621bfc57eace55e228f3d7f9515"><div class="ttname"><a href="classMaCh3Plotting_1_1PlottingManager.html#ad1519621bfc57eace55e228f3d7f9515">MaCh3Plotting::PlottingManager::_styleMan</a></div><div class="ttdeci">std::unique_ptr&lt; StyleManager &gt; _styleMan</div><div class="ttdef"><b>Definition:</b> <a href="plottingManager_8h_source.html#l00192">plottingManager.h:192</a></div></div>
+<div class="ttc" id="aclassMaCh3Plotting_1_1PlottingManager_html_a2e234f2546aa3eb2c7d97e2f28024511"><div class="ttname"><a href="classMaCh3Plotting_1_1PlottingManager.html#a2e234f2546aa3eb2c7d97e2f28024511">MaCh3Plotting::PlottingManager::DEFAULT_STYLE_CONFIG</a></div><div class="ttdeci">const std::string DEFAULT_STYLE_CONFIG</div><div class="ttdef"><b>Definition:</b> <a href="plottingManager_8h_source.html#l00041">plottingManager.h:41</a></div></div>
+<div class="ttc" id="aclassMaCh3Plotting_1_1PlottingManager_html_a59d9e05c0590931aa260d81cd97bf3e4"><div class="ttname"><a href="classMaCh3Plotting_1_1PlottingManager.html#a59d9e05c0590931aa260d81cd97bf3e4">MaCh3Plotting::PlottingManager::DEFAULT_TRANSLATION_CONFIG</a></div><div class="ttdeci">const std::string DEFAULT_TRANSLATION_CONFIG</div><div class="ttdef"><b>Definition:</b> <a href="plottingManager_8h_source.html#l00036">plottingManager.h:36</a></div></div>
+<div class="ttc" id="aclassMaCh3Plotting_1_1PlottingManager_html_a6253de91263e8078a41f6bca9bfc31d8"><div class="ttname"><a href="classMaCh3Plotting_1_1PlottingManager.html#a6253de91263e8078a41f6bca9bfc31d8">MaCh3Plotting::PlottingManager::_inputMan</a></div><div class="ttdeci">std::unique_ptr&lt; InputManager &gt; _inputMan</div><div class="ttdef"><b>Definition:</b> <a href="plottingManager_8h_source.html#l00188">plottingManager.h:188</a></div></div>
+<div class="ttc" id="aclassMaCh3Plotting_1_1PlottingManager_html_aadb74532f93bd6f7ccb2a5928b772163"><div class="ttname"><a href="classMaCh3Plotting_1_1PlottingManager.html#aadb74532f93bd6f7ccb2a5928b772163">MaCh3Plotting::PlottingManager::_plottingConfig</a></div><div class="ttdeci">YAML::Node _plottingConfig</div><div class="ttdef"><b>Definition:</b> <a href="plottingManager_8h_source.html#l00168">plottingManager.h:168</a></div></div>
+<div class="ttc" id="aclassMaCh3Plotting_1_1PlottingManager_html_ad1519621bfc57eace55e228f3d7f9515"><div class="ttname"><a href="classMaCh3Plotting_1_1PlottingManager.html#ad1519621bfc57eace55e228f3d7f9515">MaCh3Plotting::PlottingManager::_styleMan</a></div><div class="ttdeci">std::unique_ptr&lt; StyleManager &gt; _styleMan</div><div class="ttdef"><b>Definition:</b> <a href="plottingManager_8h_source.html#l00187">plottingManager.h:187</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -911,8 +911,8 @@ template&lt;typename T &gt; </div>
 
 <p>Get the <a class="el" href="classMaCh3Plotting_1_1InputManager.html" title="This guy talks to the input files and is intended to smooth over the fact that our OA fitters use suc...">InputManager</a> contained within this <a class="el" href="classMaCh3Plotting_1_1PlottingManager.html" title="The main class to be used in plotting scripts.">PlottingManager</a>, for doing input related things. </p>
 
-<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00167">167</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  167</span>{ <span class="keywordflow">return</span> *<a class="code hl_variable" href="classMaCh3Plotting_1_1PlottingManager.html#a6253de91263e8078a41f6bca9bfc31d8">_inputMan</a>; }</div>
+<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00162">162</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  162</span>{ <span class="keywordflow">return</span> *<a class="code hl_variable" href="classMaCh3Plotting_1_1PlottingManager.html#a6253de91263e8078a41f6bca9bfc31d8">_inputMan</a>; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1023,7 +1023,7 @@ template&lt;typename T &gt; </div>
 <div class="line">unnamed options are treated as files to be processed</div>
 <div class="ttc" id="aProcessMCMC_8cpp_html_a13056efd080ab16304b6f7be0ebf0a61"><div class="ttname"><a href="ProcessMCMC_8cpp.html#a13056efd080ab16304b6f7be0ebf0a61">config</a></div><div class="ttdeci">std::string config</div><div class="ttdef"><b>Definition:</b> <a href="ProcessMCMC_8cpp_source.html#l00029">ProcessMCMC.cpp:29</a></div></div>
 <div class="ttc" id="aclassMaCh3Plotting_1_1PlottingManager_html_aca16d73c24fb74500a49efd77d474b05"><div class="ttname"><a href="classMaCh3Plotting_1_1PlottingManager.html#aca16d73c24fb74500a49efd77d474b05">MaCh3Plotting::PlottingManager::parseFileLabels</a></div><div class="ttdeci">void parseFileLabels(std::string labelString, std::vector&lt; std::string &gt; &amp;labelVec)</div><div class="ttdoc">Parse string of labels into a vector of strings.</div><div class="ttdef"><b>Definition:</b> <a href="plottingManager_8cpp_source.html#l00247">plottingManager.cpp:247</a></div></div>
-<div class="ttc" id="aclassMaCh3Plotting_1_1PlottingManager_html_afcde3593be0894c7c1dbef6fa9055dee"><div class="ttname"><a href="classMaCh3Plotting_1_1PlottingManager.html#afcde3593be0894c7c1dbef6fa9055dee">MaCh3Plotting::PlottingManager::input</a></div><div class="ttdeci">const InputManager &amp; input()</div><div class="ttdoc">Get the InputManager contained within this PlottingManager, for doing input related things.</div><div class="ttdef"><b>Definition:</b> <a href="plottingManager_8h_source.html#l00167">plottingManager.h:167</a></div></div>
+<div class="ttc" id="aclassMaCh3Plotting_1_1PlottingManager_html_afcde3593be0894c7c1dbef6fa9055dee"><div class="ttname"><a href="classMaCh3Plotting_1_1PlottingManager.html#afcde3593be0894c7c1dbef6fa9055dee">MaCh3Plotting::PlottingManager::input</a></div><div class="ttdeci">const InputManager &amp; input()</div><div class="ttdoc">Get the InputManager contained within this PlottingManager, for doing input related things.</div><div class="ttdef"><b>Definition:</b> <a href="plottingManager_8h_source.html#l00162">plottingManager.h:162</a></div></div>
 <div class="ttc" id="aclassmanager_html"><div class="ttname"><a href="classmanager.html">manager</a></div><div class="ttdoc">The manager class is responsible for managing configurations and settings.</div><div class="ttdef"><b>Definition:</b> <a href="manager_8h_source.html#l00018">manager.h:18</a></div></div>
 </div><!-- fragment --> <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000023">Todo:</a></b></dt><dd>make this able to return any un-parsed arguments so that user can specify their own arguments for use in their plotting scripts </dd></dl>
 
@@ -1109,7 +1109,7 @@ template&lt;typename T &gt; </div>
 <div class="ttc" id="aMaCh3Logger_8h_html_a95fa4dffc648e4c5536c9292c2bdcac3"><div class="ttname"><a href="MaCh3Logger_8h.html#a95fa4dffc648e4c5536c9292c2bdcac3">MACH3LOG_INFO</a></div><div class="ttdeci">#define MACH3LOG_INFO</div><div class="ttdef"><b>Definition:</b> <a href="MaCh3Logger_8h_source.html#l00017">MaCh3Logger.h:17</a></div></div>
 <div class="ttc" id="aclassMaCh3Exception_html"><div class="ttname"><a href="classMaCh3Exception.html">MaCh3Exception</a></div><div class="ttdoc">Custom exception class for MaCh3 errors.</div><div class="ttdef"><b>Definition:</b> <a href="MaCh3Exception_8h_source.html#l00012">MaCh3Exception.h:12</a></div></div>
 <div class="ttc" id="aclassMaCh3Plotting_1_1PlottingManager_html_a20fbe3c9673f14adb46d3cd8919e306d"><div class="ttname"><a href="classMaCh3Plotting_1_1PlottingManager.html#a20fbe3c9673f14adb46d3cd8919e306d">MaCh3Plotting::PlottingManager::initialise</a></div><div class="ttdeci">void initialise()</div><div class="ttdoc">initalise this PlottingManager.</div><div class="ttdef"><b>Definition:</b> <a href="plottingManager_8cpp_source.html#l00025">plottingManager.cpp:25</a></div></div>
-<div class="ttc" id="aclassMaCh3Plotting_1_1PlottingManager_html_a3cd2734e72a6247826e566057367e3a6"><div class="ttname"><a href="classMaCh3Plotting_1_1PlottingManager.html#a3cd2734e72a6247826e566057367e3a6">MaCh3Plotting::PlottingManager::_defaultFileLabels</a></div><div class="ttdeci">std::vector&lt; std::string &gt; _defaultFileLabels</div><div class="ttdef"><b>Definition:</b> <a href="plottingManager_8h_source.html#l00180">plottingManager.h:180</a></div></div>
+<div class="ttc" id="aclassMaCh3Plotting_1_1PlottingManager_html_a3cd2734e72a6247826e566057367e3a6"><div class="ttname"><a href="classMaCh3Plotting_1_1PlottingManager.html#a3cd2734e72a6247826e566057367e3a6">MaCh3Plotting::PlottingManager::_defaultFileLabels</a></div><div class="ttdeci">std::vector&lt; std::string &gt; _defaultFileLabels</div><div class="ttdef"><b>Definition:</b> <a href="plottingManager_8h_source.html#l00175">plottingManager.h:175</a></div></div>
 <div class="ttc" id="aclassMaCh3Plotting_1_1PlottingManager_html_a8910c157ce1ec6698f3bacdf521789ff"><div class="ttname"><a href="classMaCh3Plotting_1_1PlottingManager.html#a8910c157ce1ec6698f3bacdf521789ff">MaCh3Plotting::PlottingManager::usage</a></div><div class="ttdeci">void usage()</div><div class="ttdoc">Print a usage message for the current executable.</div><div class="ttdef"><b>Definition:</b> <a href="plottingManager_8cpp_source.html#l00186">plottingManager.cpp:186</a></div></div>
 <div class="ttc" id="aclassMaCh3Plotting_1_1PlottingManager_html_acd4e91fc8920cec0fb43064f067a48ff"><div class="ttname"><a href="classMaCh3Plotting_1_1PlottingManager.html#acd4e91fc8920cec0fb43064f067a48ff">MaCh3Plotting::PlottingManager::setOutFileName</a></div><div class="ttdeci">void setOutFileName(std::string fileName)</div><div class="ttdoc">Parse and set the output file name, if extension specified, check its one root supports,...</div><div class="ttdef"><b>Definition:</b> <a href="plottingManager_8cpp_source.html#l00197">plottingManager.cpp:197</a></div></div>
 </div><!-- fragment -->
@@ -1147,17 +1147,17 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00082">82</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   82</span>                                                        {</div>
-<div class="line"><span class="lineno">   83</span>    std::vector&lt;char *&gt; charVec;</div>
-<div class="line"><span class="lineno">   84</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a4db4657acad5c79ac4bbb66a9d1c5905">MACH3LOG_DEBUG</a>(<span class="stringliteral">&quot;Parsing Inputs :: was given vector:&quot;</span>);</div>
-<div class="line"><span class="lineno">   85</span>    <span class="keywordflow">for</span>( <span class="keyword">const</span> std::string &amp;arg : argv ) </div>
-<div class="line"><span class="lineno">   86</span>    {</div>
-<div class="line"><span class="lineno">   87</span>      charVec.push_back( <span class="keyword">const_cast&lt;</span><span class="keywordtype">char</span> *<span class="keyword">&gt;</span>(arg.c_str()) );</div>
-<div class="line"><span class="lineno">   88</span>      <a class="code hl_define" href="MaCh3Logger_8h.html#a4db4657acad5c79ac4bbb66a9d1c5905">MACH3LOG_DEBUG</a>(<span class="stringliteral">&quot;  - {}&quot;</span>, arg );</div>
-<div class="line"><span class="lineno">   89</span>    }</div>
-<div class="line"><span class="lineno">   90</span>    <a class="code hl_function" href="classMaCh3Plotting_1_1PlottingManager.html#a6abd05428a9f8827c67a22bd6f8ffce3">parseInputs</a>(<span class="keywordtype">int</span>(argv.size()), charVec.data());</div>
-<div class="line"><span class="lineno">   91</span>  }</div>
+<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00077">77</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   77</span>                                                        {</div>
+<div class="line"><span class="lineno">   78</span>    std::vector&lt;char *&gt; charVec;</div>
+<div class="line"><span class="lineno">   79</span>    <a class="code hl_define" href="MaCh3Logger_8h.html#a4db4657acad5c79ac4bbb66a9d1c5905">MACH3LOG_DEBUG</a>(<span class="stringliteral">&quot;Parsing Inputs :: was given vector:&quot;</span>);</div>
+<div class="line"><span class="lineno">   80</span>    <span class="keywordflow">for</span>( <span class="keyword">const</span> std::string &amp;arg : argv ) </div>
+<div class="line"><span class="lineno">   81</span>    {</div>
+<div class="line"><span class="lineno">   82</span>      charVec.push_back( <span class="keyword">const_cast&lt;</span><span class="keywordtype">char</span> *<span class="keyword">&gt;</span>(arg.c_str()) );</div>
+<div class="line"><span class="lineno">   83</span>      <a class="code hl_define" href="MaCh3Logger_8h.html#a4db4657acad5c79ac4bbb66a9d1c5905">MACH3LOG_DEBUG</a>(<span class="stringliteral">&quot;  - {}&quot;</span>, arg );</div>
+<div class="line"><span class="lineno">   84</span>    }</div>
+<div class="line"><span class="lineno">   85</span>    <a class="code hl_function" href="classMaCh3Plotting_1_1PlottingManager.html#a6abd05428a9f8827c67a22bd6f8ffce3">parseInputs</a>(<span class="keywordtype">int</span>(argv.size()), charVec.data());</div>
+<div class="line"><span class="lineno">   86</span>  }</div>
 <div class="ttc" id="aclassMaCh3Plotting_1_1PlottingManager_html_a6abd05428a9f8827c67a22bd6f8ffce3"><div class="ttname"><a href="classMaCh3Plotting_1_1PlottingManager.html#a6abd05428a9f8827c67a22bd6f8ffce3">MaCh3Plotting::PlottingManager::parseInputs</a></div><div class="ttdeci">void parseInputs(int argc, char *const *argv)</div><div class="ttdoc">Parse command line arguments.</div><div class="ttdef"><b>Definition:</b> <a href="plottingManager_8cpp_source.html#l00092">plottingManager.cpp:92</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -1273,8 +1273,8 @@ template&lt;typename T &gt; </div>
 
 <p>Get the <a class="el" href="classMaCh3Plotting_1_1StyleManager.html">StyleManager</a> contained within this <a class="el" href="classMaCh3Plotting_1_1PlottingManager.html" title="The main class to be used in plotting scripts.">PlottingManager</a>, for doing style related things. </p>
 
-<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00163">163</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  163</span>{ <span class="keywordflow">return</span> *<a class="code hl_variable" href="classMaCh3Plotting_1_1PlottingManager.html#ad1519621bfc57eace55e228f3d7f9515">_styleMan</a>; }</div>
+<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00158">158</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  158</span>{ <span class="keywordflow">return</span> *<a class="code hl_variable" href="classMaCh3Plotting_1_1PlottingManager.html#ad1519621bfc57eace55e228f3d7f9515">_styleMan</a>; }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1325,7 +1325,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00171">171</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00166">166</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
 
 </div>
 </div>
@@ -1349,7 +1349,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00180">180</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00175">175</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
 
 </div>
 </div>
@@ -1373,7 +1373,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00189">189</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00184">184</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
 
 </div>
 </div>
@@ -1397,7 +1397,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00175">175</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00170">170</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
 
 </div>
 </div>
@@ -1421,7 +1421,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00184">184</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00179">179</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
 
 </div>
 </div>
@@ -1445,7 +1445,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00179">179</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00174">174</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
 
 </div>
 </div>
@@ -1469,7 +1469,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00178">178</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00173">173</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
 
 </div>
 </div>
@@ -1493,7 +1493,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00193">193</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00188">188</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
 
 </div>
 </div>
@@ -1517,7 +1517,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00183">183</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00178">178</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
 
 </div>
 </div>
@@ -1541,7 +1541,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00188">188</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00183">183</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
 
 </div>
 </div>
@@ -1565,7 +1565,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00173">173</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00168">168</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
 
 </div>
 </div>
@@ -1589,7 +1589,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00187">187</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00182">182</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
 
 </div>
 </div>
@@ -1613,7 +1613,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00192">192</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00187">187</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
 
 </div>
 </div>
@@ -1633,7 +1633,7 @@ template&lt;typename T &gt; </div>
 <div class="line">      <span class="stringliteral">&quot;/plotting/PlottingConfig.yaml&quot;</span></div>
 </div><!-- fragment --><p>The default plotting config config to use when instantiating new <a class="el" href="classMaCh3Plotting_1_1PlottingManager.html" title="The main class to be used in plotting scripts.">PlottingManager</a> objects. </p>
 
-<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00051">51</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00046">46</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
 
 </div>
 </div>
@@ -1653,7 +1653,7 @@ template&lt;typename T &gt; </div>
 <div class="line">      <span class="stringliteral">&quot;/plotting/StyleConfig.yaml&quot;</span></div>
 </div><!-- fragment --><p>The default style config config to be used by <a class="el" href="classMaCh3Plotting_1_1PlottingManager.html" title="The main class to be used in plotting scripts.">PlottingManager</a> instances when instantiating the <a class="el" href="classMaCh3Plotting_1_1StyleManager.html">StyleManager</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00046">46</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00041">41</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
 
 </div>
 </div>
@@ -1673,7 +1673,7 @@ template&lt;typename T &gt; </div>
 <div class="line">      <span class="stringliteral">&quot;/plotting/universalTranslator.yaml&quot;</span></div>
 </div><!-- fragment --><p>The default translation config to be used by <a class="el" href="classMaCh3Plotting_1_1PlottingManager.html" title="The main class to be used in plotting scripts.">PlottingManager</a> instances when instantiating the <a class="el" href="classMaCh3Plotting_1_1InputManager.html" title="This guy talks to the input files and is intended to smooth over the fact that our OA fitters use suc...">InputManager</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00041">41</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plottingManager_8h_source.html#l00036">36</a> of file <a class="el" href="plottingManager_8h_source.html">plottingManager.h</a>.</p>
 
 </div>
 </div>

@@ -12,7 +12,7 @@
 <area shape="rect" id="node47" href="$AdaptiveMCMCHandler_8h.html" title=" " alt="" coords="1152,225,1411,251"/>
 <area shape="rect" id="node48" href="$PCAHandler_8h.html" title=" " alt="" coords="942,225,1127,251"/>
 <area shape="rect" id="node7" href="$MaCh3Logger_8h.html" title="KS: Based on this https://github.com/gabime/spdlog/blob/a2b4262090fd3f005c2315dcb5be2f0f1774a005/incl..." alt="" coords="501,665,685,691"/>
-<area shape="rect" id="node26" href="$MaCh3Exception_8h.html" title=" " alt="" coords="72,592,277,617"/>
+<area shape="rect" id="node20" href="$MaCh3Exception_8h.html" title=" " alt="" coords="72,592,277,617"/>
 <area shape="rect" id="node28" href="$YamlHelper_8h.html" title="Utility functions for handling YAML nodes." alt="" coords="206,519,375,544"/>
 <area shape="rect" id="node29" href="$Monitor_8h.html" title="System and monitoring utilities for printing system information and status updates." alt="" coords="403,445,549,471"/>
 <area shape="rect" id="node32" href="$MaCh3Modes_8h.html" title=" " alt="" coords="144,372,328,397"/>
@@ -27,12 +27,12 @@
 <area shape="rect" id="node17" title=" " alt="" coords="1068,592,1111,617"/>
 <area shape="rect" id="node18" title=" " alt="" coords="1135,592,1177,617"/>
 <area shape="rect" id="node19" title=" " alt="" coords="1202,592,1326,617"/>
-<area shape="rect" id="node20" title=" " alt="" coords="1351,592,1433,617"/>
-<area shape="rect" id="node21" title=" " alt="" coords="603,592,706,617"/>
-<area shape="rect" id="node22" title=" " alt="" coords="2250,592,2315,617"/>
-<area shape="rect" id="node23" title=" " alt="" coords="1457,592,1516,617"/>
-<area shape="rect" id="node24" title=" " alt="" coords="1541,592,1627,617"/>
-<area shape="rect" id="node25" title=" " alt="" coords="1651,592,1711,617"/>
+<area shape="rect" id="node21" title=" " alt="" coords="1351,592,1433,617"/>
+<area shape="rect" id="node22" title=" " alt="" coords="603,592,706,617"/>
+<area shape="rect" id="node23" title=" " alt="" coords="2250,592,2315,617"/>
+<area shape="rect" id="node24" title=" " alt="" coords="1457,592,1516,617"/>
+<area shape="rect" id="node25" title=" " alt="" coords="1541,592,1627,617"/>
+<area shape="rect" id="node26" title=" " alt="" coords="1651,592,1711,617"/>
 <area shape="rect" id="node27" title=" " alt="" coords="1735,592,1966,617"/>
 <area shape="rect" id="node30" title=" " alt="" coords="603,519,672,544"/>
 <area shape="rect" id="node31" title=" " alt="" coords="697,519,807,544"/>

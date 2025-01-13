@@ -6,7 +6,7 @@
 <area shape="rect" id="node5" href="$SplineBase_8h.html" title=" " alt="" coords="607,152,763,177"/>
 <area shape="rect" id="node23" href="$SplineStructs_8h.html" title="Contains structures and helper functions for handling spline representations of systematic parameters..." alt="" coords="1133,225,1302,251"/>
 <area shape="rect" id="node27" href="$Structs_8h.html" title=" " alt="" coords="1517,739,1675,764"/>
-<area shape="rect" id="node33" title=" " alt="" coords="2615,812,2697,837"/>
+<area shape="rect" id="node35" title=" " alt="" coords="2615,812,2697,837"/>
 <area shape="rect" id="node50" href="$SplineMonolith_8h.html" title=" " alt="" coords="999,79,1180,104"/>
 <area shape="rect" id="node6" title=" " alt="" coords="597,739,662,764"/>
 <area shape="rect" id="node7" title=" " alt="" coords="700,812,775,837"/>
@@ -33,7 +33,7 @@
 <area shape="rect" id="node45" href="$CovarianceUtils_8h.html" title=" " alt="" coords="722,519,934,544"/>
 <area shape="rect" id="node47" href="$AdaptiveMCMCHandler_8h.html" title=" " alt="" coords="844,445,1103,471"/>
 <area shape="rect" id="node48" href="$PCAHandler_8h.html" title=" " alt="" coords="1127,445,1313,471"/>
-<area shape="rect" id="node38" href="$MaCh3Exception_8h.html" title=" " alt="" coords="849,812,1055,837"/>
+<area shape="rect" id="node33" href="$MaCh3Exception_8h.html" title=" " alt="" coords="849,812,1055,837"/>
 <area shape="rect" id="node41" href="$YamlHelper_8h.html" title="Utility functions for handling YAML nodes." alt="" coords="1135,739,1305,764"/>
 <area shape="rect" id="node42" href="$Monitor_8h.html" title="System and monitoring utilities for printing system information and status updates." alt="" coords="974,665,1119,691"/>
 <area shape="rect" id="node43" href="$MaCh3Modes_8h.html" title=" " alt="" coords="897,592,1081,617"/>
@@ -42,11 +42,11 @@
 <area shape="rect" id="node30" title=" " alt="" coords="2481,812,2524,837"/>
 <area shape="rect" id="node31" title=" " alt="" coords="2548,812,2591,837"/>
 <area shape="rect" id="node32" title=" " alt="" coords="1747,812,1871,837"/>
-<area shape="rect" id="node34" title=" " alt="" coords="1431,812,1534,837"/>
-<area shape="rect" id="node35" title=" " alt="" coords="1896,812,1955,837"/>
-<area shape="rect" id="node36" title=" " alt="" coords="1979,812,2066,837"/>
-<area shape="rect" id="node37" title=" " alt="" coords="2090,812,2150,837"/>
+<area shape="rect" id="node36" title=" " alt="" coords="1431,812,1534,837"/>
+<area shape="rect" id="node37" title=" " alt="" coords="1896,812,1955,837"/>
+<area shape="rect" id="node38" title=" " alt="" coords="1979,812,2066,837"/>
+<area shape="rect" id="node39" title=" " alt="" coords="2090,812,2150,837"/>
 <area shape="rect" id="node40" title=" " alt="" coords="2226,812,2457,837"/>
-<area shape="rect" id="node39" title=" " alt="" coords="850,885,937,911"/>
+<area shape="rect" id="node34" title=" " alt="" coords="850,885,937,911"/>
 <area shape="rect" id="node46" title=" " alt="" coords="783,592,873,617"/>
 </map>
