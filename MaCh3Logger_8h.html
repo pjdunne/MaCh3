@@ -393,27 +393,40 @@ template&lt;typename Func , typename LogFunc , typename... Args&gt; </div>
 <div class="line"><span class="lineno">   63</span>  <span class="comment">// Create a stringstream to capture the output</span></div>
 <div class="line"><span class="lineno">   64</span>  std::stringstream sss;</div>
 <div class="line"><span class="lineno">   65</span>  <span class="comment">// Save the original stream buffers</span></div>
-<div class="line"><span class="lineno">   66</span>  std::streambuf* coutBuf = std::cout.rdbuf();</div>
-<div class="line"><span class="lineno">   67</span>  std::streambuf* cerrBuf = std::cerr.rdbuf();</div>
+<div class="line"><span class="lineno">   66</span>  std::streambuf* coutBuf = <span class="keyword">nullptr</span>;</div>
+<div class="line"><span class="lineno">   67</span>  std::streambuf* cerrBuf = <span class="keyword">nullptr</span>;</div>
 <div class="line"><span class="lineno">   68</span> </div>
-<div class="line"><span class="lineno">   69</span>  <span class="comment">// Redirect std::cout and std::cerr to the stringstream buffer</span></div>
-<div class="line"><span class="lineno">   70</span>  std::cout.rdbuf(sss.rdbuf());</div>
-<div class="line"><span class="lineno">   71</span>  std::cerr.rdbuf(sss.rdbuf());</div>
-<div class="line"><span class="lineno">   72</span> </div>
-<div class="line"><span class="lineno">   73</span>  <span class="comment">// Call the provided function</span></div>
-<div class="line"><span class="lineno">   74</span>  func(std::forward&lt;Args&gt;(args)...);</div>
-<div class="line"><span class="lineno">   75</span> </div>
-<div class="line"><span class="lineno">   76</span>  <span class="comment">// Restore the original stream buffers</span></div>
-<div class="line"><span class="lineno">   77</span>  std::cout.rdbuf(coutBuf);</div>
-<div class="line"><span class="lineno">   78</span>  std::cerr.rdbuf(cerrBuf);</div>
-<div class="line"><span class="lineno">   79</span> </div>
-<div class="line"><span class="lineno">   80</span>  std::string line;</div>
-<div class="line"><span class="lineno">   81</span>  <span class="keywordflow">while</span> (std::getline(sss, line))</div>
-<div class="line"><span class="lineno">   82</span>  {</div>
-<div class="line"><span class="lineno">   83</span>    <span class="keyword">auto</span> formatted_message = fmt::format(<span class="stringliteral">&quot;[{}] {}&quot;</span>, LibName, line);</div>
-<div class="line"><span class="lineno">   84</span>    logFunction(formatted_message);</div>
-<div class="line"><span class="lineno">   85</span>  }</div>
-<div class="line"><span class="lineno">   86</span>}</div>
+<div class="line"><span class="lineno">   69</span>  <span class="comment">// This should be rare but in case buffers no longer exist ignore</span></div>
+<div class="line"><span class="lineno">   70</span>  <span class="keywordflow">if</span> (std::cout.rdbuf() &amp;&amp; std::cerr.rdbuf()) {</div>
+<div class="line"><span class="lineno">   71</span>    coutBuf = std::cout.rdbuf();  <span class="comment">// Save original cout buffer</span></div>
+<div class="line"><span class="lineno">   72</span>    cerrBuf = std::cerr.rdbuf();  <span class="comment">// Save original cerr buffer</span></div>
+<div class="line"><span class="lineno">   73</span> </div>
+<div class="line"><span class="lineno">   74</span>    <span class="comment">// Redirect std::cout and std::cerr to the stringstream buffer</span></div>
+<div class="line"><span class="lineno">   75</span>    std::cout.rdbuf(sss.rdbuf());</div>
+<div class="line"><span class="lineno">   76</span>    std::cerr.rdbuf(sss.rdbuf());</div>
+<div class="line"><span class="lineno">   77</span>  }</div>
+<div class="line"><span class="lineno">   78</span> </div>
+<div class="line"><span class="lineno">   79</span>  <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">   80</span>    <span class="comment">// Call the provided function</span></div>
+<div class="line"><span class="lineno">   81</span>    func(std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><span class="lineno">   82</span> </div>
+<div class="line"><span class="lineno">   83</span>    <span class="comment">// Restore the original stream buffers</span></div>
+<div class="line"><span class="lineno">   84</span>    <span class="keywordflow">if</span> (coutBuf) std::cout.rdbuf(coutBuf);</div>
+<div class="line"><span class="lineno">   85</span>    <span class="keywordflow">if</span> (cerrBuf) std::cerr.rdbuf(cerrBuf);</div>
+<div class="line"><span class="lineno">   86</span> </div>
+<div class="line"><span class="lineno">   87</span>    std::string line;</div>
+<div class="line"><span class="lineno">   88</span>    <span class="keywordflow">while</span> (std::getline(sss, line))</div>
+<div class="line"><span class="lineno">   89</span>    {</div>
+<div class="line"><span class="lineno">   90</span>      <span class="keyword">auto</span> formatted_message = fmt::format(<span class="stringliteral">&quot;[{}] {}&quot;</span>, LibName, line);</div>
+<div class="line"><span class="lineno">   91</span>      logFunction(formatted_message);</div>
+<div class="line"><span class="lineno">   92</span>    }</div>
+<div class="line"><span class="lineno">   93</span>  } <span class="keywordflow">catch</span> (...) {</div>
+<div class="line"><span class="lineno">   94</span>    <span class="comment">// Restore the original buffers in case of an exception</span></div>
+<div class="line"><span class="lineno">   95</span>    std::cout.rdbuf(coutBuf);</div>
+<div class="line"><span class="lineno">   96</span>    std::cerr.rdbuf(cerrBuf);</div>
+<div class="line"><span class="lineno">   97</span>    <span class="keywordflow">throw</span>;</div>
+<div class="line"><span class="lineno">   98</span>  }</div>
+<div class="line"><span class="lineno">   99</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
