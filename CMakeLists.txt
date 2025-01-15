@@ -143,9 +143,19 @@ endif()
 
 if(USE_FPGA)
   target_compile_options(MaCh3CompilerOptions INTERFACE
+    -qactypes
     -DFPGA_EMULATOR
     -DUSE_FPGA              # preprocessor directive to switch on FPGA code
   )
+  if(WIN32)
+    # add qactypes for Windows
+    set(QACTYPES "-Qactypes")
+    # This is a Windows-specific flag that enables exception handling in host code
+    set(WIN_FLAG "/EHsc")
+  else()
+    # add qactypes for Linux
+    set(QACTYPES "-qactypes")
+  endif()
 endif()
 
 #KS: If Debug is not defined disable it by default

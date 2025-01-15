@@ -1,6 +1,110 @@
 #include "SplineMonolith.h"
 #ifdef USE_FPGA
+#include <sycl/ext/intel/experimental/task_sequence.hpp>
 #include <sycl/ext/intel/fpga_extensions.hpp>
+#include <sycl/ext/intel/ac_types/ac_int.hpp>
+#include <sycl/sycl.hpp>
+
+// Forward declare the kernel names in the global scope.
+// This FPGA best practice reduces name mangling in the optimization reports.
+class IDOptimized;
+
+// Minimum capacity of a pipe.
+// Set to 0 to allow the compiler to save area if possible.
+constexpr size_t kPipeMinCapacity = 0;
+
+// Pipes
+
+class IDPipeAB;
+using PipeAB = sycl::ext::intel::pipe<IDPipeAB,        // An identifier for the pipe
+                                      float,           // The type of data in the pipe
+                                      kPipeMinCapacity // The capacity of the pipe
+                                      >;
+
+
+//*********************************************************
+[[intel::use_stall_enable_clusters]] 
+void FPGACalcSplineWeights(int NSplines_valid, int *param_n_knots, short *segments, float *coeff_many, float *coeff_x, float *vals) {
+//*********************************************************
+
+  // //int _nCoeff_,
+  // //int _max_knots, 
+  // int *param_n_knots, 
+  // int *segments, 
+  // float *coeff_many, 
+  // float *coeff_x, 
+  // float *vals
+
+  [[intel::fpga_memory("BLOCK_RAM")]] std::array<int, 100> segments_bram;
+
+  [[intel::max_replicates(4)]] std::array<float, 100> vals_bram;
+
+  //#pragma unroll
+  for (int i = 0; i < 100; i++) {
+    segments_bram[i] = segments[i];
+    vals_bram[i] = vals[i];
+  }
+
+  [[intel::initiation_interval(1)]]
+  for (size_t splineNum = 0; splineNum < NSplines_valid; splineNum++) {
+
+    ac_int<8, false> Param = param_n_knots[2*splineNum]; // Param range 10e2
+    ac_int<8, false> segment = segments_bram[Param]; // segments range 10e2
+
+    // KS: Segment for coeff_x is simply parameter*max knots + segment as each
+    // parameters has the same spacing
+    ac_int<8, false> segment_X = Param; //* _max_knots + segment;
+
+    // KS: Find knot position in out monolithical structure
+    ac_int<16, false> CurrentKnotPos = param_n_knots[2*splineNum+1] + segment; // omitting nCoeff for now
+    //nKnots_arr[splineNum] * _nCoeff_ + segment * _nCoeff_;
+
+    // possibly combine nKnots_arr and  paramNo_arr
+
+    std::array<float, 4> fX;
+
+    #pragma unroll
+    for (unsigned int knotPos = 0; knotPos < 4; knotPos++) {
+
+      fX[knotPos] = coeff_many[CurrentKnotPos+knotPos];
+      // coeff_many = n_splines * n_knots -> large!
+
+    }
+
+    const float dx = vals_bram[Param] - coeff_x[segment_X];
+
+    //  optimizations:
+    // combine nknots and paramno as a single object to FPGA DDR
+    // store segments on chip
+    // store coeff_many on FPGA DDR
+
+    float a = dx * fX[3] + fX[2];
+    float b = dx * a + fX[1];
+    float c = dx * b + fX[0];
+    // write to pipe
+    PipeAB::write(c);
+  }
+}
+
+//*********************************************************
+//KS: Calc total event weight on CPU
+[[intel::use_stall_enable_clusters]]
+void FPGAModifyWeights(int NSplines_valid, float *cpu_total_weights){
+//*********************************************************
+  [[intel::initiation_interval(1)]]
+  for (size_t i = 0; i < NSplines_valid / 4; i++) {
+
+    float sum = 0;
+
+    for (size_t a = 0; a < 4; a++) {
+      float tmp = PipeAB::read();
+      sum += tmp;
+    }
+
+    cpu_total_weights[i] = sum;
+  }
+}
+
 #endif
 #ifdef CUDA
 #include "splines/gpuSplineUtils.cuh"
@@ -103,9 +207,10 @@ void SMonolith::PrepareForGPU(std::vector<std::vector<TResponseFunction_red*> > 
       auto selector = sycl::default_selector{};
     #endif
 
-    queue = sycl::queue(selector);
+    queue = sycl::queue(selector);//, fpga_tools::exception_handler, sycl::property::queue::enable_profiling{});
     //queue = sycl::queue(sycl::default_selector{});
-    segments = sycl::malloc_shared<short int>(nParams, queue);
+    //segments = sycl::malloc_shared<short int>(nParams, queue);
+    segments = sycl::malloc_host<short int>(nParams, queue);
     vals = sycl::malloc_shared<float>(nParams, queue);
   #else
     segments = new short int[nParams]();
@@ -620,8 +725,9 @@ void SMonolith::LoadSplineFile(std::string FileName) {
   #else
     auto selector = sycl::default_selector{};
   #endif
-  queue = sycl::queue(selector);
-  segments = sycl::malloc_shared<short int>(nParams, queue);
+  queue = sycl::queue(selector);//, fpga_tools::exception_handler, sycl::property::queue::enable_profiling{});
+  //segments = sycl::malloc_shared<short int>(nParams, queue);
+  segments = sycl::malloc_host<short int>(nParams, queue);
   vals = sycl::malloc_shared<float>(nParams, queue);
 #else
   segments = new short int[nParams]();
@@ -1039,12 +1145,66 @@ void SMonolith::Evaluate() {
   // Find the spline segments
   FindSplineSegment();
 
-  //KS: Huge MP loop over all valid splines
-  CalcSplineWeights();
+  #ifdef USE_FPGA
+    int Nsegments = 10;
+    for (int i = 0; i < NSplines_valid; i++) {
+      cpu_spline_handler->param_n_knots[2*i] = i % Nsegments;
+      cpu_spline_handler->param_n_knots[2*i+1] = i % Nsegments;
+      cpu_spline_handler->coeff_many[i] = i % Nsegments;
+      cpu_spline_handler->coeff_x[i] = i % Nsegments;
+    }
 
-  //KS: Huge MP loop over all events calculating total weight
-  ModifyWeights();
+    for (int i = 0; i < nParams; i++) {
+          segments[i] = 1;
+          vals[i] = 1;
 
+    }
+
+
+    for (int i = 0; i < NSplines_valid / 4; i++) {
+      cpu_total_weights[i] = 1;
+    }
+
+
+    struct OptimizedKernel {
+      unsigned int NSplines_valid;
+      int *param_n_knots;
+      short *segments;
+      float *coeff_many;
+      float *coeff_x;
+      float *vals;
+
+      float *cpu_total_weights;
+      void operator()() const {
+        sycl::ext::intel::experimental::task_sequence<FPGACalcSplineWeights> task_a;
+        sycl::ext::intel::experimental::task_sequence<FPGAModifyWeights> task_b;
+
+        task_a.async(NSplines_valid,
+                     param_n_knots,
+                     segments,
+                     coeff_many,
+                     coeff_x,
+                     vals);
+        task_b.async(NSplines_valid, cpu_total_weights);
+      }
+    };
+    // Call the kernel
+    auto e = queue.single_task<IDOptimized>(OptimizedKernel{NSplines_valid,
+                                                            cpu_spline_handler->param_n_knots,
+                                                            segments,
+                                                            cpu_spline_handler->coeff_many,
+                                                            cpu_spline_handler->coeff_x,
+                                                            vals,
+                                                            cpu_total_weights});
+
+    e.wait();
+  #else
+    //KS: Huge MP loop over all valid splines
+    CalcSplineWeights();
+
+    //KS: Huge MP loop over all events calculating total weight
+    ModifyWeights();
+  #endif
   return;
 }
 #endif
