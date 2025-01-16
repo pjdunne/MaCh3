@@ -47,7 +47,7 @@ var searchData=
   ['getenabledmcmcchain_44',['getEnabledMCMCchain',['../classMaCh3Plotting_1_1InputManager.html#aeac58645b18dbc0784adc4b44ee0b33b',1,'MaCh3Plotting::InputManager']]],
   ['geterror_45',['GetError',['../group__Setters.html#ga8302ee285a54445832506fcd0a1bf274',1,'covarianceBase']]],
   ['geteventsplines_46',['GetEventSplines',['../classsplineFDBase.html#aa6395bf5a4506f584661b36fbc32b3ca',1,'splineFDBase']]],
-  ['geteventweight_47',['GetEventWeight',['../classsamplePDFFDBase.html#aee401f3eef806ee7d824f7a304e33912',1,'samplePDFFDBase']]],
+  ['geteventweight_47',['GetEventWeight',['../classsamplePDFFDBase.html#a1b5a95bfad60e1f630f62a712721a198',1,'samplePDFFDBase']]],
   ['getfdcov_48',['GetFDCov',['../classMCMCProcessor.html#ab831ff0257b1f3137e1711df115a8b8d',1,'MCMCProcessor']]],
   ['getfile_49',['getFile',['../classMaCh3Plotting_1_1InputManager.html#a2f8f94ca3b6e0d2b34c75dee24b81e49',1,'MaCh3Plotting::InputManager']]],
   ['getfilelabel_50',['getFileLabel',['../classMaCh3Plotting_1_1PlottingManager.html#ac3180484af4d04aa7a0febd1cda99c54',1,'MaCh3Plotting::PlottingManager']]],
