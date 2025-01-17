@@ -1,8 +1,9 @@
 <map id="manager/MaCh3Logger.h" name="manager/MaCh3Logger.h">
-<area shape="rect" id="node1" title="KS: Based on this https://github.com/gabime/spdlog/blob/a2b4262090fd3f005c2315dcb5be2f0f1774a005/incl..." alt="" coords="203,5,387,31"/>
+<area shape="rect" id="node1" title="KS: Based on this https://github.com/gabime/spdlog/blob/a2b4262090fd3f005c2315dcb5be2f0f1774a005/incl..." alt="" coords="255,5,439,31"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,79,129,104"/>
 <area shape="rect" id="node3" title=" " alt="" coords="154,79,234,104"/>
 <area shape="rect" id="node4" title=" " alt="" coords="258,79,333,104"/>
 <area shape="rect" id="node5" title=" " alt="" coords="357,79,444,104"/>
 <area shape="rect" id="node6" title=" " alt="" coords="469,79,527,104"/>
+<area shape="rect" id="node7" title=" " alt="" coords="552,79,639,104"/>
 </map>
